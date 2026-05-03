@@ -1,237 +1,26 @@
-<!doctype html>
-<html lang="de">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lokalevents</title>
-
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-
-<style>
-html,body,#map{
-  margin:0;
-  height:100%;
-  font-family:-apple-system,Arial;
-}
-
-.top{
-  position:absolute;
-  top:20px;
-  left:12px;
-  right:12px;
-  background:white;
-  padding:14px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,.15);
-  z-index:1000;
-}
-
-.top h1{
-  margin:0;
-  font-size:42px;
-}
-
-.top div{
-  font-size:20px;
-  font-weight:600;
-}
-
-.cards{
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:20px;
-  display:flex;
-  gap:12px;
-  overflow-x:auto;
-  padding:0 14px;
-  z-index:1000;
-}
-
-.card{
-  min-width:230px;
-  background:white;
-  border-radius:20px;
-  padding:14px;
-  box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
-
-.card h3{
-  margin:0;
-  font-size:24px;
-}
-
-.card p{
-  margin:6px 0 0;
-  color:#666;
-  font-size:18px;
-  font-weight:600;
-}
-
-.sheet{
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:-100%;
-  background:white;
-  padding:20px;
-  border-radius:26px 26px 0 0;
-  box-shadow:0 -10px 30px rgba(0,0,0,.2);
-  transition:.3s;
-  z-index:2000;
-}
-
-.sheet.open{
-  bottom:0;
-}
-
-.sheet h2{
-  margin:0 0 10px;
-  font-size:30px;
-}
-
-.sheet p{
-  font-size:18px;
-  color:#555;
-  line-height:1.4;
-}
-
-.close{
-  margin-top:16px;
-  background:#007aff;
-  color:white;
-  padding:14px;
-  border-radius:14px;
-  text-align:center;
-  font-weight:700;
-}
-</style>
-</head>
-
-<body>
-
-<div id="map"></div>
-
-<div class="top">
-  <h1>Lokalevents</h1>
-  <div id="headerDate">Kirchheim unter Teck · Radius 50 km</div>
-</div>
-
-<div class="cards">
-
-  <div class="card" onclick="openSheet('Markt Kirchheim','Kirchheim unter Teck','2 km')">
-    <h3>Markt Kirchheim</h3>
-    <p id="date1"></p>
-  </div>
-
-  <div class="card" onclick="openSheet('Stadtfest Nürtingen','Nürtingen','18 km')">
-    <h3>Stadtfest Nürtingen</h3>
-    <p id="date2"></p>
-  </div>
-
-  <div class="card" onclick="openSheet('Festival Stuttgart','Stuttgart','36 km')">
-    <h3>Festival Stuttgart</h3>
-    <p id="date3"></p>
-  </div>
-
-</div>
-
-<div class="sheet" id="sheet">
-  <h2 id="sheetTitle">Event</h2>
-  <p id="sheetText">Details</p>
-  <div class="close" onclick="closeSheet()">Schließen</div>
-</div>
-
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-<script>
-
-const center = [48.6468, 9.4538];
-
-const map = L.map('map').setView(center, 9);
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-  maxZoom:19
-}).addTo(map);
-
-L.circle(center,{
-  radius:50000,
-  color:'#007aff',
-  fillColor:'#007aff',
-  fillOpacity:0.12
-}).addTo(map);
-
-function getSundayText(){
-
-  const today = new Date();
-  const day = today.getDay();
-
-  let diff = 0;
-
-  if(day !== 0){
-    diff = 7 - day;
+const EVENTS = [
+  {
+    title: "Markt Kirchheim",
+    place: "Kirchheim unter Teck",
+    distance: "2 km",
+    lat: 48.6468,
+    lng: 9.4538,
+    description: "Lokaler Markt im Zentrum."
+  },
+  {
+    title: "Stadtfest Nürtingen",
+    place: "Nürtingen",
+    distance: "18 km",
+    lat: 48.6259,
+    lng: 9.3420,
+    description: "Innenstadtfest mit Musik und Essen."
+  },
+  {
+    title: "Festival Stuttgart",
+    place: "Stuttgart",
+    distance: "36 km",
+    lat: 48.7758,
+    lng: 9.1829,
+    description: "Größeres Event in Stuttgart."
   }
-
-  const sunday = new Date(today);
-  sunday.setDate(today.getDate() + diff);
-
-  return sunday.toLocaleDateString("de-DE",{
-    weekday:"long",
-    day:"numeric",
-    month:"long"
-  });
-}
-
-const sundayText = getSundayText();
-
-document.getElementById("headerDate").innerText =
-  "Kirchheim unter Teck · " + sundayText + " · Radius 50 km";
-
-document.getElementById("date1").innerText =
-  sundayText + " · 2 km";
-
-document.getElementById("date2").innerText =
-  sundayText + " · 18 km";
-
-document.getElementById("date3").innerText =
-  sundayText + " · 36 km";
-
-function openSheet(title,place,distance){
-
-  document.getElementById("sheetTitle").innerText = title;
-
-  document.getElementById("sheetText").innerHTML =
-    sundayText + "<br>" +
-    place + "<br>" +
-    distance + " entfernt<br><br>" +
-    "Demo-Event für deine Lokalevents App.";
-
-  document.getElementById("sheet").classList.add("open");
-}
-
-function closeSheet(){
-  document.getElementById("sheet").classList.remove("open");
-}
-
-L.marker([48.6468,9.4538])
-.addTo(map)
-.on("click",()=>{
-  openSheet("Markt Kirchheim","Kirchheim unter Teck","2 km");
-});
-
-L.marker([48.6259,9.3420])
-.addTo(map)
-.on("click",()=>{
-  openSheet("Stadtfest Nürtingen","Nürtingen","18 km");
-});
-
-L.marker([48.7758,9.1829])
-.addTo(map)
-.on("click",()=>{
-  openSheet("Festival Stuttgart","Stuttgart","36 km");
-});
-
-</script>
-
-</body>
-</html>
+];
