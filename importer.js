@@ -5,6 +5,8 @@ import fs from "fs";
 const SOURCE_URL =
   "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltungen-heute/";
 
+const HOME = [48.6468, 9.4538];
+
 const KNOWN_COORDS = {
   "Kirchheim unter Teck": [48.6468, 9.4538],
   "Nürtingen": [48.6259, 9.3420],
@@ -12,12 +14,12 @@ const KNOWN_COORDS = {
   "Stuttgart": [48.7758, 9.1829],
   "Ludwigsburg": [48.8941, 9.1955],
   "Tübingen": [48.5216, 9.0576],
-  "Karlsruhe": [49.0069, 8.4037],
-  "Heilbronn": [49.1427, 9.2109],
-  "Baden-Baden": [48.7606, 8.2398],
-  "Sinsheim": [49.2529, 8.8787],
-  "Östringen": [49.2191, 8.7119]
+  "Heilbronn": [49.1427, 9.2109]
 };
+
+function log(msg) {
+  console.log("➡️ " + msg);
+}
 
 function distanceKm(lat1, lon1, lat2, lon2) {
   const R = 6371;
@@ -33,76 +35,113 @@ function distanceKm(lat1, lon1, lat2, lon2) {
   return Math.round(R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
 }
 
-function getNextSundayText() {
-  const today = new Date();
-  const day = today.getDay();
-  const diff = day === 0 ? 0 : 7 - day;
-
-  const sunday = new Date(today);
-  sunday.setDate(today.getDate() + diff);
-
-  return sunday.toLocaleDateString("de-DE", {
-    weekday: "long",
-    day: "numeric",
-    month: "long"
-  });
-}
-
-const HOME = [48.6468, 9.4538];
-
 async function run() {
-  const res = await fetch(SOURCE_URL);
-  const html = await res.text();
-  const $ = cheerio.load(html);
+  try {
+    log("Importer gestartet");
+    log("Quelle: " + SOURCE_URL);
 
-  const text = $("body").text();
-  const lines = text
-    .split("\\n")
-    .map(l => l.trim())
-    .filter(Boolean);
+    const res = await fetch(SOURCE_URL);
 
-  const events = [];
+    log("HTTP Status: " + res.status);
 
-  for (let i = 0; i < lines.length; i++) {
-    const dateMatch = lines[i].match(/\\d{2}\\.\\d{2}\\.\\d{4}/);
+    if (!res.ok) {
+      throw new Error("Website konnte nicht geladen werden");
+    }
 
-    if (!dateMatch) continue;
+    const html = await res.text();
 
-    const time = lines[i];
-    const locationLine = lines[i - 1] || "";
-    const title = lines[i - 2] || "";
+    log("HTML Länge: " + html.length + " Zeichen");
 
-    if (!locationLine.includes("|")) continue;
+    const $ = cheerio.load(html);
+    const bodyText = $("body").text();
 
-    const parts = locationLine.split("|");
-    const category = parts[0].trim();
-    const place = parts[1].trim();
+    log("Text Länge: " + bodyText.length + " Zeichen");
 
-    const coords = KNOWN_COORDS[place];
-    if (!coords) continue;
+    const lines = bodyText
+      .split("\n")
+      .map(l => l.trim())
+      .filter(Boolean);
 
-    const distance = distanceKm(HOME[0], HOME[1], coords[0], coords[1]);
+    log("Zeilen gefunden: " + lines.length);
 
-    if (distance > 50) continue;
-
-    events.push({
-      title,
-      place,
-      distance: distance + " km",
-      lat: coords[0],
-      lng: coords[1],
-      description: category + " · " + time,
-      date: getNextSundayText()
+    console.log("🔍 Erste 30 Zeilen:");
+    lines.slice(0, 30).forEach((line, i) => {
+      console.log(i + ": " + line);
     });
-  }
 
-  const output =
+    const events = [];
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+
+      const hasDate = /\d{2}\.\d{2}\.\d{4}/.test(line);
+
+      if (!hasDate) continue;
+
+      const title = lines[i - 2] || "";
+      const locationLine = lines[i - 1] || "";
+      const time = line;
+
+      console.log("📌 Kandidat:");
+      console.log("Titel:", title);
+      console.log("Ort/Kategorie:", locationLine);
+      console.log("Zeit:", time);
+
+      if (!locationLine.includes("|")) {
+        console.log("⚠️ Übersprungen: kein Orttrenner |");
+        continue;
+      }
+
+      const parts = locationLine.split("|");
+      const category = parts[0].trim();
+      const place = parts[1].trim();
+
+      if (!KNOWN_COORDS[place]) {
+        console.log("⚠️ Ort nicht bekannt:", place);
+        continue;
+      }
+
+      const coords = KNOWN_COORDS[place];
+
+      const distance = distanceKm(
+        HOME[0],
+        HOME[1],
+        coords[0],
+        coords[1]
+      );
+
+      if (distance > 50) {
+        console.log("⚠️ Zu weit weg:", place, distance + " km");
+        continue;
+      }
+
+      events.push({
+        title,
+        place,
+        distance: distance + " km",
+        lat: coords[0],
+        lng: coords[1],
+        description: category + " · " + time,
+        date: "Sonntag"
+      });
+    }
+
+    log("Events im Radius gefunden: " + events.length);
+
+    const output =
 `const EVENTS = ${JSON.stringify(events, null, 2)};
 `;
 
-  fs.writeFileSync("events.js", output);
+    fs.writeFileSync("events.js", output);
 
-  console.log("events.js geschrieben:", events.length, "Events");
+    log("events.js wurde geschrieben");
+    log("Importer fertig ✅");
+
+  } catch (err) {
+    console.error("❌ IMPORTER FEHLER:");
+    console.error(err);
+    process.exit(1);
+  }
 }
 
 run();
