@@ -60,6 +60,28 @@ input[type="range"]{
   width:100%;
 }
 
+#refreshBtn{
+  margin-top:10px;
+  width:100%;
+  border:none;
+  background:#007aff;
+  color:white;
+  padding:12px 16px;
+  border-radius:14px;
+  font-size:15px;
+  font-weight:700;
+}
+
+#refreshBtn:disabled{
+  opacity:.55;
+}
+
+#importStatus{
+  margin-top:8px;
+  font-size:13px;
+  color:#666;
+}
+
 .cards{
   position:absolute;
   bottom:14px;
