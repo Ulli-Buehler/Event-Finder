@@ -22,6 +22,8 @@ const statusText = document.getElementById("status");
 const radiusSlider = document.getElementById("radiusSlider");
 const radiusLabel = document.getElementById("radiusLabel");
 const dateSelect = document.getElementById("dateSelect");
+const refreshBtn = document.getElementById("refreshBtn");
+const importStatus = document.getElementById("importStatus");
 
 const markers = [];
 
@@ -157,6 +159,24 @@ function render(){
     `;
   }
 }
+
+refreshBtn.onclick = () => {
+  refreshBtn.disabled = true;
+
+  let seconds = 0;
+  importStatus.innerText = "🔄 Aktualisierung läuft ... 0s";
+
+  const timer = setInterval(() => {
+    seconds++;
+    importStatus.innerText = "🔄 Aktualisierung läuft ... " + seconds + "s";
+  }, 1000);
+
+  setTimeout(() => {
+    clearInterval(timer);
+    importStatus.innerText = "✅ Neu geladen";
+    location.reload();
+  }, 15000);
+};
 
 radiusSlider.oninput = () => {
   radiusKm = Number(radiusSlider.value);
