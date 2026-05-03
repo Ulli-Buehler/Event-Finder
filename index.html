@@ -1,31 +1,126 @@
-const EVENTS = [
-  {
-    title: "Markt Kirchheim",
-    place: "Kirchheim unter Teck",
-    distance: "2 km",
-    lat: 48.6468,
-    lng: 9.4538,
-    description: "Lokaler Markt mit regionalen Produkten.",
-    date: "Sonntag"
-  },
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-  {
-    title: "Stadtfest Nürtingen",
-    place: "Nürtingen",
-    distance: "18 km",
-    lat: 48.6259,
-    lng: 9.3420,
-    description: "Innenstadtfest mit Musik und Essen.",
-    date: "Sonntag"
-  },
+<title>Lokalevents</title>
 
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<style>
+html,body{
+  margin:0;
+  height:100%;
+  font-family:-apple-system,Arial;
+}
+
+#map{
+  height:100%;
+  width:100%;
+}
+
+.top{
+  position:absolute;
+  top:12px;
+  left:12px;
+  right:12px;
+  z-index:1000;
+  background:white;
+  padding:18px;
+  border-radius:24px;
+  box-shadow:0 8px 30px rgba(0,0,0,.15);
+}
+
+.top h1{
+  margin:0;
+  font-size:32px;
+}
+
+.top p{
+  margin:4px 0 0;
+  font-size:18px;
+}
+
+.cards{
+  position:absolute;
+  bottom:14px;
+  left:0;
+  right:0;
+  display:flex;
+  gap:12px;
+  overflow-x:auto;
+  padding:0 14px;
+  z-index:1000;
+}
+
+.card{
+  min-width:260px;
+  background:white;
+  border-radius:24px;
+  padding:18px;
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.card h2{
+  margin:0 0 8px;
+  font-size:22px;
+}
+
+.card p{
+  margin:0;
+  color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<div id="map"></div>
+
+<div class="top">
+  <h1>Lokalevents</h1>
+  <p>Kirchheim unter Teck • Radius 50 km</p>
+</div>
+
+<div class="cards" id="cards"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="events.js"></script>
+
+<script>
+
+const map = L.map('map').setView([48.65,9.45],9);
+
+L.tileLayer(
+  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   {
-    title: "Festival Stuttgart",
-    place: "Stuttgart",
-    distance: "36 km",
-    lat: 48.7758,
-    lng: 9.1829,
-    description: "Großes Festival mit Live Bands.",
-    date: "Sonntag"
+    attribution:'© OpenStreetMap'
   }
-];
+).addTo(map);
+
+L.circle([48.65,9.45],{
+  radius:50000,
+  color:'#007aff',
+  fillColor:'#007aff',
+  fillOpacity:0.1
+}).addTo(map);
+
+const cards = document.getElementById("cards");
+
+EVENTS.forEach(event => {
+
+  L.marker([event.lat,event.lng]).addTo(map);
+
+  cards.innerHTML += `
+    <div class="card">
+      <h2>${event.title}</h2>
+      <p>${event.date} • ${event.distance}</p>
+    </div>
+  `;
+});
+
+</script>
+
+</body>
+</html>
