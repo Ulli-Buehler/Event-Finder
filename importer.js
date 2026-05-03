@@ -2,6 +2,8 @@ import fetch from "node-fetch";
 import * as cheerio from "cheerio";
 import fs from "fs";
 
+console.time("Import Dauer");
+
 const SOURCE_URL =
   "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltungen-heute/";
 
@@ -144,4 +146,6 @@ async function run() {
   }
 }
 
-run();
+run().finally(() => {
+  console.timeEnd("Import Dauer");
+});
