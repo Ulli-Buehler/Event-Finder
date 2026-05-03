@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "import": "node importer.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {}
+}
