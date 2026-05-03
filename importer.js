@@ -16,7 +16,14 @@ const KNOWN_COORDS = {
   "Stuttgart": [48.7758, 9.1829],
   "Ludwigsburg": [48.8941, 9.1955],
   "Tübingen": [48.5216, 9.0576],
-  "Heilbronn": [49.1427, 9.2109]
+  "Heilbronn": [49.1427, 9.2109],
+
+  "Eislingen/Fils": [48.6955, 9.7063],
+  "Rechberghausen": [48.7303, 9.6436],
+  "Göppingen": [48.7054, 9.6512],
+  "Geislingen an der Steige": [48.6217, 9.8306],
+  "Bad Boll": [48.6374, 9.6150],
+  "Lichtenwald": [48.7475, 9.4781]
 };
 
 function log(msg) {
@@ -25,6 +32,7 @@ function log(msg) {
 
 function distanceKm(lat1, lon1, lat2, lon2) {
   const R = 6371;
+
   const dLat = (lat2 - lat1) * Math.PI / 180;
   const dLon = (lon2 - lon1) * Math.PI / 180;
 
@@ -34,7 +42,9 @@ function distanceKm(lat1, lon1, lat2, lon2) {
     Math.cos(lat2 * Math.PI / 180) *
     Math.sin(dLon / 2) ** 2;
 
-  return Math.round(R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
+  return Math.round(
+    R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+  );
 }
 
 async function run() {
@@ -55,6 +65,7 @@ async function run() {
     log("HTML Länge: " + html.length + " Zeichen");
 
     const $ = cheerio.load(html);
+
     const bodyText = $("body").text();
 
     log("Text Länge: " + bodyText.length + " Zeichen");
@@ -67,6 +78,7 @@ async function run() {
     log("Zeilen gefunden: " + lines.length);
 
     console.log("🔍 Erste 30 Zeilen:");
+
     lines.slice(0, 30).forEach((line, i) => {
       console.log(i + ": " + line);
     });
@@ -95,6 +107,7 @@ async function run() {
       }
 
       const parts = locationLine.split("|");
+
       const category = parts[0].trim();
       const place = parts[1].trim();
 
@@ -142,6 +155,7 @@ async function run() {
   } catch (err) {
     console.error("❌ IMPORTER FEHLER:");
     console.error(err);
+
     process.exit(1);
   }
 }
