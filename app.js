@@ -1,5 +1,5 @@
 let userPos = [48.65, 9.45];
-let radiusKm = 50;
+let radiusKm = 35;
 let dateMode = "sunday";
 
 const map = L.map("map").setView(userPos, 9);
