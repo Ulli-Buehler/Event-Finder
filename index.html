@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lokalevents</title>
+
+<style>
+body{
+margin:0;
+font-family:-apple-system,Arial;
+background:#eef3f8;
+overflow:hidden;
+}
+
+.top{
+position:absolute;
+top:20px;
+left:12px;
+right:12px;
+background:white;
+padding:14px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.radius{
+position:absolute;
+width:320px;
+height:320px;
+border-radius:50%;
+border:4px solid #007aff;
+background:rgba(0,122,255,.08);
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+}
+
+.pin{
+position:absolute;
+width:28px;
+height:28px;
+background:#007aff;
+border-radius:50%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+<h1 style="margin:0">Lokalevents</h1>
+<div>Kirchheim unter Teck · Radius 50 km</div>
+</div>
+
+<div class="radius"></div>
+
+<div class="pin" style="left:58%;top:40%"></div>
+<div class="pin" style="left:38%;top:58%"></div>
+<div class="pin" style="left:68%;top:64%"></div>
+
+</body>
+</html>
