@@ -25,6 +25,9 @@ const dateSelect = document.getElementById("dateSelect");
 const refreshBtn = document.getElementById("refreshBtn");
 const importStatus = document.getElementById("importStatus");
 
+radiusSlider.value = 35;
+radiusLabel.innerText = "35 km";
+
 const markers = [];
 
 const sheet = document.createElement("div");
@@ -78,7 +81,7 @@ function openSheet(event){
 
   document.getElementById("sheet-info").innerHTML = `
     <strong>${event.place}</strong><br>
-    ${event.date} · ${event.distance}<br><br>
+    ${event.date} · ${event.realDistance} km<br><br>
     ${event.description || "Keine Beschreibung vorhanden."}
   `;
 
@@ -160,22 +163,44 @@ function render(){
   }
 }
 
-refreshBtn.onclick = () => {
+refreshBtn.onclick = async () => {
   refreshBtn.disabled = true;
 
   let seconds = 0;
-  importStatus.innerText = "🔄 Aktualisierung läuft ... 0s";
+  importStatus.innerText = "🔄 Import wird gestartet ... 0s";
 
   const timer = setInterval(() => {
     seconds++;
-    importStatus.innerText = "🔄 Aktualisierung läuft ... " + seconds + "s";
+    importStatus.innerText =
+      "🔄 Import läuft ... " + seconds + "s";
   }, 1000);
 
-  setTimeout(() => {
+  try {
+    const response = await fetch("/api/trigger-import", {
+      method: "POST"
+    });
+
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.error || "Import konnte nicht gestartet werden");
+    }
+
+    importStatus.innerText =
+      "✅ Import gestartet. Neue Daten kommen gleich ...";
+
+    setTimeout(() => {
+      clearInterval(timer);
+      location.reload();
+    }, 20000);
+
+  } catch (err) {
     clearInterval(timer);
-    importStatus.innerText = "✅ Neu geladen";
-    location.reload();
-  }, 15000);
+    importStatus.innerText =
+      "❌ Fehler beim Starten: " + err.message;
+
+    refreshBtn.disabled = false;
+  }
 };
 
 radiusSlider.oninput = () => {
