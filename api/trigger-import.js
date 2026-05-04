@@ -1,46 +1,36 @@
 export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({
-      ok: false,
-      error: "Nur POST erlaubt"
-    });
-  }
+  try {
+    const response = await fetch(
+      "https://api.github.com/repos/Ulli-Buehler/Event-Finder/actions/workflows/import.yml/dispatches",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+          Accept: "application/vnd.github+json",
+        },
+        body: JSON.stringify({
+          ref: "main",
+        }),
+      }
+    );
 
-  const token = process.env.GITHUB_TOKEN;
+    if (!response.ok) {
+      const text = await response.text();
 
-  if (!token) {
-    return res.status(500).json({
-      ok: false,
-      error: "GITHUB_TOKEN fehlt in Vercel"
-    });
-  }
-
-  const response = await fetch(
-    "https://api.github.com/repos/Ulli-Buehler/Event-Finder/actions/workflows/import.yml/dispatches",
-    {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${token}`,
-        "Accept": "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2022-11-28"
-      },
-      body: JSON.stringify({
-        ref: "main"
-      })
+      return res.status(500).json({
+        success: false,
+        error: text,
+      });
     }
-  );
 
-  if (!response.ok) {
-    const text = await response.text();
+    return res.status(200).json({
+      success: true,
+    });
 
-    return res.status(response.status).json({
-      ok: false,
-      error: text
+  } catch (err) {
+    return res.status(500).json({
+      success: false,
+      error: err.message,
     });
   }
-
-  return res.status(200).json({
-    ok: true,
-    message: "Import gestartet"
-  });
 }
