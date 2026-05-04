@@ -6,7 +6,6 @@ const URL =
 
 const TARGET_DATE = "10.05.2026";
 const HOME = [48.6167, 9.45];
-const MAX_KM = 50;
 
 const COORDS = {
   "Dettingen Teck": [48.6167, 9.45],
@@ -40,7 +39,6 @@ function clean(text) {
 
 function distanceKm(a, b) {
   const R = 6371;
-
   const dLat = (b[0] - a[0]) * Math.PI / 180;
   const dLon = (b[1] - a[1]) * Math.PI / 180;
 
@@ -50,9 +48,7 @@ function distanceKm(a, b) {
       Math.cos(b[0] * Math.PI / 180) *
       Math.sin(dLon / 2) ** 2;
 
-  return Math.round(
-    R * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1 - x))
-  );
+  return Math.round(R * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1 - x)));
 }
 
 function extractPlace(description) {
@@ -64,10 +60,7 @@ async function run() {
   log("Import gestartet");
   log("Quelle: " + URL);
 
-  const browser = await chromium.launch({
-    headless: true
-  });
-
+  const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
 
   await page.goto(URL, {
@@ -76,7 +69,6 @@ async function run() {
   });
 
   const text = await page.locator("body").innerText();
-
   await browser.close();
 
   const lines = text
@@ -98,32 +90,11 @@ async function run() {
     if (!title || !description.includes("|")) continue;
 
     const place = extractPlace(description);
-    const coords = COORDS[place];
-
-    if (!coords) {
-      log("⚠️ Ort ohne Koordinaten übersprungen: " + place);
-      continue;
-    }
-
+    const coords = COORDS[place] || HOME;
     const distance = distanceKm(HOME, coords);
 
-    if (distance > MAX_KM) {
-      log(
-        "⚠️ Zu weit weg: " +
-          title +
-          " / " +
-          place +
-          " / " +
-          distance +
-          " km"
-      );
-      continue;
-    }
-
     const key = title + "|" + place + "|" + dateLine;
-
     if (seen.has(key)) continue;
-
     seen.add(key);
 
     events.push({
@@ -136,24 +107,10 @@ async function run() {
       lng: coords[1]
     });
 
-    log(
-      "✅ Event: " +
-        title +
-        " / " +
-        place +
-        " / " +
-        distance +
-        " km"
-    );
+    log("✅ Event: " + title + " / " + place + " / " + distance + " km");
   }
 
   log("Events gefunden: " + events.length);
-
-  if (events.length === 0) {
-    throw new Error(
-      "Keine Events gefunden — events-preview.js bleibt unverändert"
-    );
-  }
 
   fs.writeFileSync(
     "events-preview.js",
