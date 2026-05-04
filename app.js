@@ -1,6 +1,6 @@
 let userPos = [48.65, 9.45];
 let radiusKm = 35;
-let dateMode = "sunday";
+let dateMode = "all";
 
 const map = L.map("map").setView(userPos, 9);
 
@@ -27,6 +27,7 @@ const importStatus = document.getElementById("importStatus");
 
 radiusSlider.value = 35;
 radiusLabel.innerText = "35 km";
+dateSelect.value = "all";
 
 const markers = [];
 
@@ -167,12 +168,18 @@ refreshBtn.onclick = async () => {
   refreshBtn.disabled = true;
 
   let seconds = 0;
-  importStatus.innerText = "🔄 Import wird gestartet ... 0s";
+  importStatus.innerText = "🔄 Import wird gestartet ...";
 
   const timer = setInterval(() => {
     seconds++;
-    importStatus.innerText =
-      "🔄 Import läuft ... " + seconds + "s";
+
+    if(seconds < 20){
+      importStatus.innerText = "🔄 Import gestartet ... GitHub verarbeitet (" + seconds + "s)";
+    } else if(seconds < 60){
+      importStatus.innerText = "⏳ Import läuft noch ... bitte warten (" + seconds + "s)";
+    } else {
+      importStatus.innerText = "🔄 Fast fertig ... App lädt gleich neu (" + seconds + "s)";
+    }
   }, 1000);
 
   try {
@@ -187,12 +194,13 @@ refreshBtn.onclick = async () => {
     }
 
     importStatus.innerText =
-      "✅ Import gestartet. Neue Daten kommen gleich ...";
+      "✅ Import gestartet. GitHub verarbeitet jetzt die Events ...";
 
     setTimeout(() => {
+      importStatus.innerText = "🔄 Neue Daten werden geladen ...";
       clearInterval(timer);
       location.reload();
-    }, 20000);
+    }, 75000);
 
   } catch (err) {
     clearInterval(timer);
