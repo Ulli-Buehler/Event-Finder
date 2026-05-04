@@ -67,12 +67,19 @@ function eventEmoji(event) {
 }
 
 function matchesDate(event) {
-  const d = (event.date || "").toLowerCase();
+  const d = ((event.date || "") + " " + (event.description || "")).toLowerCase();
 
   if (dateMode === "all") return true;
   if (dateMode === "today") return d.includes("heute");
   if (dateMode === "tomorrow") return d.includes("morgen");
-  if (dateMode === "sunday") return d.includes("sonntag");
+
+  if (dateMode === "sunday") {
+    return (
+      d.includes("sonntag") ||
+      d.includes("10.05.2026") ||
+      d.includes("10.5.2026")
+    );
+  }
 
   return true;
 }
