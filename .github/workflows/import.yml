@@ -3,9 +3,6 @@ name: Import Events
 on:
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
   import:
     runs-on: ubuntu-latest
@@ -23,7 +20,7 @@ jobs:
         run: npm install
 
       - name: Playwright Browser installieren
-        run: npx playwright install chromium
+        run: npx playwright install --with-deps chromium
 
       - name: Importer starten
         run: node importer.js
@@ -33,8 +30,9 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add events.js
+          git add .
+          git status
 
-          git diff --cached --quiet || git commit -m "Automatischer Event Import"
+          git commit -m "Automatischer Event Import" || echo "Keine Änderungen"
 
           git push
