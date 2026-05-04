@@ -1,25 +1,21 @@
 name: Import Events
 
 on:
-  schedule:
-    - cron: "0 6 * * *"
   workflow_dispatch:
-
-concurrency:
-  group: import-events
-  cancel-in-progress: true
-
-permissions:
-  contents: write
 
 jobs:
   import:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
+
+    permissions:
+      contents: write
 
     steps:
       - name: Repository laden
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Node installieren
         uses: actions/setup-node@v4
@@ -27,7 +23,7 @@ jobs:
           node-version: 20
 
       - name: Pakete installieren
-        run: npm install --prefer-offline --no-audit --no-fund
+        run: npm install
 
       - name: Importer starten
         run: node importer.js
@@ -35,13 +31,12 @@ jobs:
       - name: Änderungen committen
         run: |
           git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config user.email "github-actions@github.com"
 
-          git add events.js
+          git pull origin main --rebase
 
-          if git diff --cached --quiet; then
-            echo "Keine Änderungen"
-          else
-            git commit -m "Automatischer Event Import"
-            git push
-          fi
+          git add .
+
+          git diff --cached --quiet || git commit -m "Automatischer Event Import"
+
+          git push
