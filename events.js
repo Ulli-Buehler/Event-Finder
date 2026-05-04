@@ -1,18 +1,10 @@
 const EVENTS = [
   {
-    title: "Frühlingsmarkt Eislingen",
-    place: "Eislingen",
-    date: "Sonntag",
-    description: "Markt im Umkreis",
-    lat: 48.6955,
-    lng: 9.7063,
-  },
-  {
-    title: "Dorffest Rechberghausen",
-    place: "Rechberghausen",
-    date: "Sonntag",
-    description: "Fest im Umkreis",
-    lat: 48.7303,
-    lng: 9.6436,
+    "title": "Apfelfest",
+    "place": "Dettingen unter Teck",
+    "date": "11.10.2026, 11:00 - 17:00 Uhr",
+    "description": "Apfelfest: Vielfalt entdecken – von der Streuobstwiese bis ins Glas",
+    "lat": 48.6167,
+    "lng": 9.45
   }
 ];
