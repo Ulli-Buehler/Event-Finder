@@ -15,7 +15,7 @@ const page = await browser.newPage();
 let EVENTS = [];
 
 for (let pageNum = 1; pageNum <= 11; pageNum++) {
-  let url =
+  const url =
     pageNum === 1
       ? START_URL
       : `https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/${pageNum}/?post_type=event&ort=Dettingen%20Teck&umkreis=30&region&von=2026-05-10&bis=2026-05-10`;
@@ -38,15 +38,19 @@ for (let pageNum = 1; pageNum <= 11; pageNum++) {
       const title =
         card.querySelector("h2, h3")?.innerText?.trim() || "";
 
-      const text = card.innerText;
-
       if (!title) return;
+
+      const text = card.innerText.trim();
+      const lines = text
+        .split("\n")
+        .map((l) => l.trim())
+        .filter(Boolean);
 
       items.push({
         title,
         place: "Dettingen Teck",
-        date: text.split("\n")[1] || "",
-        description: text,
+        date: lines[1] || "",
+        description: lines.join(" | "),
         lat: 48.6167,
         lng: 9.45,
       });
@@ -60,14 +64,15 @@ for (let pageNum = 1; pageNum <= 11; pageNum++) {
   EVENTS.push(...events);
 }
 
-console.log("➡️ Gesamt:", EVENTS.length);
+console.log(`➡️ Gesamt: ${EVENTS.length}`);
 
 const output =
   "const EVENTS = " +
   JSON.stringify(EVENTS, null, 2) +
   ";";
 
-fs.writeFileSync("events-preview.js", output);
+// WICHTIG: echter Repo-Pfad
+fs.writeFileSync("./events-preview.js", output);
 
 console.log("➡️ events-preview.js geschrieben");
 
