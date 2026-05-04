@@ -11,28 +11,48 @@ const SOURCE_URL =
 
 const DEFAULT_COORDS = [48.6167, 9.45];
 
-const ALLOWED_CATEGORIES = ["Märkte", "Feste"];
+const BAD_WORDS = [
+  "auto-generated",
+  "cookie",
+  "javascript",
+  "veranstaltungen baden-württemberg veranstaltungen",
+  "premium-werbeplatz",
+  "supporttests",
+  "sessionstorage",
+  "uint32array",
+  "function"
+];
 
 function cleanText(text) {
   return text
     .replace(/\s+/g, " ")
-    .replace(/auto-generated.*$/i, "")
+    .replace(/\n/g, " ")
     .trim();
 }
 
+function looksBad(text) {
+  const t = text.toLowerCase();
+
+  return BAD_WORDS.some(w => t.includes(w));
+}
+
 async function run() {
-  log("Echter Import gestartet");
-  log("Quelle: " + SOURCE_URL);
+  log("Importer gestartet");
 
   const res = await fetch(SOURCE_URL);
+
   if (!res.ok) {
-    throw new Error("Quelle nicht erreichbar: " + res.status);
+    throw new Error("Quelle nicht erreichbar");
   }
 
   const html = await res.text();
+
   const $ = cheerio.load(html);
 
-  $("script, style, noscript, svg").remove();
+  $("script").remove();
+  $("style").remove();
+  $("noscript").remove();
+  $("svg").remove();
 
   const text = cleanText($("body").text());
 
@@ -44,37 +64,38 @@ async function run() {
   const events = [];
   const seen = new Set();
 
-  for (let i = 0; i < parts.length; i++) {
-    const category = parts[i];
+  for (let i = 0; i < parts.length - 2; i++) {
+    const title = parts[i];
+    const dateText = parts[i + 1];
 
-    if (!ALLOWED_CATEGORIES.includes(category)) continue;
+    if (looksBad(title)) continue;
 
-    const title = parts[i + 1] || "";
-    const dateText = parts[i + 2] || "";
+    if (title.length < 6) continue;
 
-    if (!title) continue;
     if (!/\d{2}\.\d{2}\.\d{4}/.test(dateText)) continue;
 
-    const key = title + "|" + dateText;
+    const key = title + dateText;
+
     if (seen.has(key)) continue;
+
     seen.add(key);
 
     events.push({
       title,
       place: "Dettingen unter Teck",
       date: dateText,
-      description: category + " · " + dateText,
+      description: title,
       lat: DEFAULT_COORDS[0],
       lng: DEFAULT_COORDS[1]
     });
 
-    log("✅ Event übernommen: " + title + " / " + dateText);
+    log("✅ Event: " + title);
   }
 
   log("Events gefunden: " + events.length);
 
   if (events.length === 0) {
-    throw new Error("Keine Events gefunden — events.js bleibt unverändert");
+    throw new Error("Keine Events gefunden");
   }
 
   fs.writeFileSync(
@@ -86,7 +107,7 @@ async function run() {
 }
 
 run().catch(err => {
-  console.error("❌ IMPORTER FEHLER:");
+  console.error("❌ FEHLER:");
   console.error(err);
   process.exit(1);
 });
