@@ -22,6 +22,9 @@ jobs:
       - name: Pakete installieren
         run: npm install
 
+      - name: Playwright Browser installieren
+        run: npx playwright install chromium
+
       - name: Importer starten
         run: node importer.js
 
@@ -34,4 +37,5 @@ jobs:
 
           git diff --cached --quiet || git commit -m "Automatischer Event Import"
 
-          git push 
+          git pull --rebase origin main
+          git push
