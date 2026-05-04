@@ -1,12 +1,13 @@
 import { chromium } from "playwright";
 import fs from "fs";
 
-const URL =
+const BASE_URL =
   "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/?post_type=event&ort=Dettingen+Teck&umkreis=30&region=&von=2026-05-10&bis=2026-05-10";
 
 const TARGET_DATE = "10.05.2026";
 const HOME = [48.6167, 9.45];
 const MAX_KM = 50;
+const MAX_PAGES = 12;
 
 const COORDS = {
   "Dettingen Teck": [48.6167, 9.45],
@@ -20,14 +21,17 @@ const COORDS = {
   "Ludwigsburg": [48.8941, 9.1955],
   "Göppingen": [48.7054, 9.6512],
   "Esslingen": [48.7433, 9.3201],
-  "Pfullendorf": [47.9267, 9.2578],
-  "Schwäbisch Hall": [49.1122, 9.7373],
-  "Bad Saulgau": [48.0167, 9.5000],
-  "Radolfzell am Bodensee": [47.7419, 8.9700],
-  "Eppingen": [49.1365, 8.9123],
-  "Sinsheim": [49.2529, 8.8787],
-  "Ravensburg": [47.7811, 9.6136],
-  "Endingen": [48.1422, 7.7000]
+  "Esslingen am Neckar": [48.7433, 9.3201],
+  "Plochingen": [48.7107, 9.4196],
+  "Wendlingen am Neckar": [48.6712, 9.3763],
+  "Wernau": [48.6932, 9.4152],
+  "Ebersbach an der Fils": [48.7167, 9.5333],
+  "Uhingen": [48.704, 9.5862],
+  "Eislingen": [48.6955, 9.7063],
+  "Eislingen/Fils": [48.6955, 9.7063],
+  "Rechberghausen": [48.7303, 9.6436],
+  "Schorndorf": [48.8054, 9.5272],
+  "Stuttgart": [48.7758, 9.1829]
 };
 
 function log(text) {
@@ -52,77 +56,99 @@ function distanceKm(a, b) {
   return Math.round(R * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1 - x)));
 }
 
+function pageUrl(page) {
+  if (page === 1) return BASE_URL;
+  return BASE_URL + "&sf_paged=" + page;
+}
+
 function extractPlace(description) {
   const parts = description.split("|");
   return clean(parts[parts.length - 1]);
 }
 
-async function run() {
-  log("Playwright Import gestartet");
-  log("Quelle: " + URL);
+async function readPage(page, browser) {
+  const url = pageUrl(page);
+  log("Lade Seite " + page + ": " + url);
 
-  const browser = await chromium.launch({ headless: true });
-  const page = await browser.newPage();
+  const tab = await browser.newPage();
 
-  await page.goto(URL, {
+  await tab.goto(url, {
     waitUntil: "networkidle",
     timeout: 60000
   });
 
-  const text = await page.locator("body").innerText();
-  await browser.close();
+  const text = await tab.locator("body").innerText();
 
-  const lines = text
+  await tab.close();
+
+  return text
     .split("\n")
     .map(clean)
     .filter(Boolean);
+}
+
+async function run() {
+  log("Import gestartet");
+
+  const browser = await chromium.launch({ headless: true });
 
   const events = [];
   const seen = new Set();
 
-  for (let i = 0; i < lines.length; i++) {
-    const dateLine = lines[i];
+  for (let page = 1; page <= MAX_PAGES; page++) {
+    const lines = await readPage(page, browser);
 
-    if (!dateLine.includes(TARGET_DATE)) continue;
+    let foundOnPage = 0;
 
-    const title = lines[i - 2] || "";
-    const description = lines[i - 1] || "";
+    for (let i = 0; i < lines.length; i++) {
+      const dateLine = lines[i];
 
-    if (!title || !description.includes("|")) continue;
+      if (!dateLine.includes(TARGET_DATE)) continue;
 
-    const place = extractPlace(description);
-    const coords = COORDS[place];
+      const title = lines[i - 2] || "";
+      const description = lines[i - 1] || "";
 
-    if (!coords) {
-      log("⚠️ Ort ohne Koordinaten übersprungen: " + place);
-      continue;
+      if (!title || !description.includes("|")) continue;
+
+      const place = extractPlace(description);
+      const coords = COORDS[place];
+
+      if (!coords) {
+        log("⚠️ Ort ohne Koordinaten: " + place);
+        continue;
+      }
+
+      const distance = distanceKm(HOME, coords);
+
+      if (distance > MAX_KM) {
+        continue;
+      }
+
+      const key = title + "|" + place + "|" + dateLine;
+
+      if (seen.has(key)) continue;
+      seen.add(key);
+
+      events.push({
+        title,
+        place,
+        date: TARGET_DATE,
+        description,
+        distance: distance + " km",
+        lat: coords[0],
+        lng: coords[1]
+      });
+
+      foundOnPage++;
+      log("✅ Event: " + title + " / " + place + " / " + distance + " km");
     }
 
-    const distance = distanceKm(HOME, coords);
-
-    if (distance > MAX_KM) {
-      log("⚠️ Zu weit weg: " + title + " / " + place + " / " + distance + " km");
-      continue;
-    }
-
-    const key = title + "|" + place + "|" + dateLine;
-    if (seen.has(key)) continue;
-    seen.add(key);
-
-    events.push({
-      title,
-      place,
-      date: TARGET_DATE,
-      description,
-      distance: distance + " km",
-      lat: coords[0],
-      lng: coords[1]
-    });
-
-    log("✅ Event: " + title + " / " + place + " / " + distance + " km");
+    log("Seite " + page + ": " + foundOnPage + " Events übernommen");
   }
 
-  log("Events gefunden: " + events.length);
+  await browser.close();
+
+  log("Events gesamt: " + events.length);
 
   if (events.length === 0) {
     throw new Error("Keine Events gefunden — events.js bleibt unverändert");
