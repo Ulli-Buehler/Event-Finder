@@ -4,41 +4,43 @@ import fs from "fs";
 const START_URL =
   "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/?post_type=event&ort=Dettingen%20Teck&umkreis=30&region&von=2026-05-10&bis=2026-05-10";
 
-console.log("➡️ Import gestartet");
-
-const browser = await chromium.launch({
-  headless: true,
-});
-
-const page = await browser.newPage();
-
-let EVENTS = [];
+const COORDS = {
+  "Dettingen Teck": [48.6167, 9.45],
+  "Pfullendorf": [47.9267, 9.2578],
+  "Ludwigsburg": [48.8941, 9.1955],
+  "Schwäbisch Hall": [49.1122, 9.7373],
+  "Tübingen": [48.5216, 9.0576],
+  "Frickenhausen": [48.5935, 9.3608],
+  "Bad Saulgau": [48.0167, 9.5],
+  "Weilheim an der Teck": [48.6156, 9.5375],
+  "Radolfzell am Bodensee": [47.7419, 8.97],
+  "Eppingen": [49.1365, 8.9123],
+  "Reutlingen": [48.4914, 9.2043],
+  "Sinsheim": [49.2529, 8.8787],
+  "Göppingen": [48.7054, 9.6512],
+  "Ravensburg": [47.7811, 9.6136],
+  "Endingen": [48.1422, 7.7],
+  "Wolfach": [48.2933, 8.2156]
+};
 
 function extractPlace(text) {
-  const parts = text
-    .split("|")
-    .map((p) => p.trim())
-    .filter(Boolean);
+  const parts = text.split("|").map(p => p.trim()).filter(Boolean);
 
-  for (const part of parts) {
-    if (
-      part.length > 2 &&
-      !part.match(/^\d/) &&
-      !part.includes("Märkte") &&
-      !part.includes("Details") &&
-      !part.includes("MAY") &&
-      !part.includes("JUN") &&
-      !part.includes("JUL") &&
-      !part.includes("AUG") &&
-      !part.includes("SEP") &&
-      !part.includes("OKT")
-    ) {
-      return part;
+  for (let i = 0; i < parts.length; i++) {
+    if (/\d{2}\.\d{2}\.\d{4}/.test(parts[i])) {
+      return parts[i - 1] || "Unbekannt";
     }
   }
 
   return "Unbekannt";
 }
+
+console.log("➡️ Import gestartet");
+
+const browser = await chromium.launch({ headless: true });
+const page = await browser.newPage();
+
+let EVENTS = [];
 
 for (let pageNum = 1; pageNum <= 11; pageNum++) {
   const url =
@@ -50,45 +52,50 @@ for (let pageNum = 1; pageNum <= 11; pageNum++) {
 
   await page.goto(url, {
     waitUntil: "domcontentloaded",
-    timeout: 60000,
+    timeout: 60000
   });
 
   await page.waitForTimeout(3000);
 
   const events = await page.evaluate(() => {
     const items = [];
-
     const cards = document.querySelectorAll("article");
 
-    cards.forEach((card) => {
-      const title =
-        card.querySelector("h2, h3")?.innerText?.trim() || "";
-
+    cards.forEach(card => {
+      const title = card.querySelector("h2, h3")?.innerText?.trim() || "";
       if (!title) return;
 
       const text = card.innerText.trim();
 
       items.push({
         title,
-        raw: text,
+        raw: text
       });
     });
 
     return items;
   });
 
-  const cleaned = events.map((event) => {
-    const place = extractPlace(event.raw);
+  const cleaned = events
+    .map(event => {
+      const place = extractPlace(event.raw);
+      const coords = COORDS[place];
 
-    return {
-      title: event.title,
-      place,
-      date: "Sonntag",
-      description: event.raw,
-      lat: 48.6167 + (Math.random() - 0.5) * 0.4,
-      lng: 9.45 + (Math.random() - 0.5) * 0.4,
-    };
-  });
+      if (!coords) {
+        console.log("⚠️ Ort ohne Koordinaten übersprungen:", place);
+        return null;
+      }
+
+      return {
+        title: event.title,
+        place,
+        date: "Sonntag",
+        description: event.raw,
+        lat: coords[0],
+        lng: coords[1]
+      };
+    })
+    .filter(Boolean);
 
   console.log(`➡️ Seite ${pageNum}: ${cleaned.length} Events`);
 
