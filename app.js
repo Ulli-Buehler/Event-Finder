@@ -101,6 +101,15 @@ function clearMarkers() {
   markers.length = 0;
 }
 
+function hasValidCoords(event) {
+  return (
+    typeof event.lat === "number" &&
+    typeof event.lng === "number" &&
+    !isNaN(event.lat) &&
+    !isNaN(event.lng)
+  );
+}
+
 function render() {
   cards.innerHTML = "";
   clearMarkers();
@@ -113,6 +122,7 @@ function render() {
   statusText.innerText = "Radius " + radiusKm + " km";
 
   const visibleEvents = EVENTS
+    .filter(hasValidCoords)
     .map(event => {
       const realDistance = distanceKm(
         userPos[0],
