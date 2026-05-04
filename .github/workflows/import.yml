@@ -3,19 +3,16 @@ name: Import Events
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   import:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-
     steps:
       - name: Repository laden
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0
 
       - name: Node installieren
         uses: actions/setup-node@v4
@@ -33,9 +30,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git pull origin main --rebase
-
-          git add .
+          git add events.js
 
           git diff --cached --quiet || git commit -m "Automatischer Event Import"
 
