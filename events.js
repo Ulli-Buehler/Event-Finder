@@ -5,7 +5,7 @@ const EVENTS = [
     date: "Sonntag",
     description: "Markt im Umkreis",
     lat: 48.6955,
-    lng: 9.7063
+    lng: 9.7063,
   },
   {
     title: "Dorffest Rechberghausen",
@@ -13,6 +13,6 @@ const EVENTS = [
     date: "Sonntag",
     description: "Fest im Umkreis",
     lat: 48.7303,
-    lng: 9.6436
+    lng: 9.6436,
   }
 ];
