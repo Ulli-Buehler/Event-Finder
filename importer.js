@@ -1,154 +1,74 @@
 import { chromium } from "playwright";
 import fs from "fs";
 
-const URL =
-  "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/?post_type=event&ort=Dettingen+Teck&umkreis=50";
+const START_URL =
+  "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/?post_type=event&ort=Dettingen%20Teck&umkreis=30&region&von=2026-05-10&bis=2026-05-10";
 
-const HOME = [48.6167, 9.45];
+console.log("➡️ Import gestartet");
 
-const COORDS = {
-  "Dettingen Teck": [48.6167, 9.45],
-  "Dettingen unter Teck": [48.6167, 9.45],
-  "Kirchheim unter Teck": [48.6468, 9.4538],
-  "Weilheim an der Teck": [48.6156, 9.5375],
-  "Frickenhausen": [48.5935, 9.3608],
-  "Nürtingen": [48.6259, 9.3420],
-  "Tübingen": [48.5216, 9.0576],
-  "Reutlingen": [48.4914, 9.2043],
-  "Ludwigsburg": [48.8941, 9.1955],
-  "Göppingen": [48.7054, 9.6512],
-  "Esslingen": [48.7433, 9.3201],
-  "Pfullendorf": [47.9267, 9.2578],
-  "Schwäbisch Hall": [49.1122, 9.7373],
-  "Bad Saulgau": [48.0167, 9.5],
-  "Radolfzell am Bodensee": [47.7419, 8.97],
-  "Eppingen": [49.1365, 8.9123],
-  "Sinsheim": [49.2529, 8.8787],
-  "Ravensburg": [47.7811, 9.6136],
-  "Endingen": [48.1422, 7.7]
-};
+const browser = await chromium.launch({
+  headless: true,
+});
 
-function log(text) {
-  console.log("➡️ " + text);
-}
+const page = await browser.newPage();
 
-function clean(text) {
-  return String(text || "")
-    .replace(/\s+/g, " ")
-    .trim();
-}
+let EVENTS = [];
 
-function distanceKm(a, b) {
-  const R = 6371;
+for (let pageNum = 1; pageNum <= 11; pageNum++) {
+  let url =
+    pageNum === 1
+      ? START_URL
+      : `https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/${pageNum}/?post_type=event&ort=Dettingen%20Teck&umkreis=30&region&von=2026-05-10&bis=2026-05-10`;
 
-  const dLat = (b[0] - a[0]) * Math.PI / 180;
-  const dLon = (b[1] - a[1]) * Math.PI / 180;
+  console.log("➡️ Lade:", url);
 
-  const x =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos(a[0] * Math.PI / 180) *
-      Math.cos(b[0] * Math.PI / 180) *
-      Math.sin(dLon / 2) ** 2;
-
-  return Math.round(
-    R * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1 - x))
-  );
-}
-
-function extractPlace(description) {
-  const parts = description.split("|");
-  return clean(parts[parts.length - 1]);
-}
-
-async function run() {
-  log("Import gestartet");
-  log("Quelle: " + URL);
-
-  const browser = await chromium.launch({
-    headless: true
+  await page.goto(url, {
+    waitUntil: "domcontentloaded",
+    timeout: 60000,
   });
 
-  const page = await browser.newPage();
+  await page.waitForTimeout(3000);
 
-  await page.goto(URL, {
-    waitUntil: "networkidle",
-    timeout: 60000
-  });
+  const events = await page.evaluate(() => {
+    const items = [];
 
-  const text = await page.locator("body").innerText();
+    const cards = document.querySelectorAll("article");
 
-  await browser.close();
+    cards.forEach((card) => {
+      const title =
+        card.querySelector("h2, h3")?.innerText?.trim() || "";
 
-  const lines = text
-    .split("\n")
-    .map(clean)
-    .filter(Boolean);
+      const text = card.innerText;
 
-  const events = [];
-  const seen = new Set();
+      if (!title) return;
 
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-
-    const looksLikeDate =
-      /\d{2}\.\d{2}\.\d{4}/.test(line);
-
-    if (!looksLikeDate) continue;
-
-    const title = lines[i - 2] || "";
-    const description = lines[i - 1] || "";
-
-    if (!title) continue;
-    if (!description.includes("|")) continue;
-
-    const place = extractPlace(description);
-
-    const coords =
-      COORDS[place] || HOME;
-
-    const distance =
-      distanceKm(HOME, coords);
-
-    const key =
-      title + "|" + place + "|" + line;
-
-    if (seen.has(key)) continue;
-
-    seen.add(key);
-
-    events.push({
-      title,
-      place,
-      date: line,
-      description,
-      distance: distance + " km",
-      lat: coords[0],
-      lng: coords[1]
+      items.push({
+        title,
+        place: "Dettingen Teck",
+        date: text.split("\n")[1] || "",
+        description: text,
+        lat: 48.6167,
+        lng: 9.45,
+      });
     });
 
-    log(
-      "✅ Event: " +
-        title +
-        " / " +
-        place +
-        " / " +
-        distance +
-        " km"
-    );
-  }
+    return items;
+  });
 
-  log("Events gefunden: " + events.length);
+  console.log(`➡️ Seite ${pageNum}: ${events.length} Events`);
 
-  fs.writeFileSync(
-    "events-preview.js",
-    `const EVENTS = ${JSON.stringify(events, null, 2)};`
-  );
-
-  log("events-preview.js geschrieben");
+  EVENTS.push(...events);
 }
 
-run().catch(err => {
-  console.error("❌ IMPORTER FEHLER:");
-  console.error(err);
-  process.exit(1);
-});
+console.log("➡️ Gesamt:", EVENTS.length);
+
+const output =
+  "const EVENTS = " +
+  JSON.stringify(EVENTS, null, 2) +
+  ";";
+
+fs.writeFileSync("events-preview.js", output);
+
+console.log("➡️ events-preview.js geschrieben");
+
+await browser.close();
