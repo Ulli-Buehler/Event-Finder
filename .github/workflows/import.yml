@@ -37,5 +37,4 @@ jobs:
 
           git diff --cached --quiet || git commit -m "Automatischer Event Import"
 
-          git pull --rebase origin main
           git push
