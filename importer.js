@@ -178,6 +178,7 @@ const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage();
 
 const EVENTS = [];
+const SKIPPED_EVENTS = [];
 
 for (let pageNum = 1; pageNum <= 11; pageNum++) {
   const url =
@@ -227,13 +228,24 @@ for (let pageNum = 1; pageNum <= 11; pageNum++) {
     const parsed = parseRawEvent(item.raw, item.title);
 
     if (!parsed.title || !parsed.dateStart || !parsed.place) {
-      console.log("⚠️ Übersprungen:", parsed.title || "ohne Titel");
+      SKIPPED_EVENTS.push({
+        reason: "missing_required_fields",
+        parsed,
+        detailsUrl: item.detailsUrl,
+        raw: item.raw
+      });
       continue;
     }
 
     const coords = await geocode(parsed.place);
 
     if (!coords) {
+      SKIPPED_EVENTS.push({
+        reason: "geocode_failed",
+        parsed,
+        detailsUrl: item.detailsUrl,
+        raw: item.raw
+      });
       continue;
     }
 
@@ -248,13 +260,20 @@ for (let pageNum = 1; pageNum <= 11; pageNum++) {
 
 await browser.close();
 
-const output =
+const eventsOutput =
   "const EVENTS = " +
   JSON.stringify(EVENTS, null, 2) +
   ";";
 
-fs.writeFileSync("./events.js", output);
-fs.writeFileSync("./events-preview.js", output);
+const skippedOutput =
+  "const SKIPPED_EVENTS = " +
+  JSON.stringify(SKIPPED_EVENTS, null, 2) +
+  ";";
 
-console.log("➡️ Gesamt:", EVENTS.length);
-console.log("➡️ events.js und events-preview.js geschrieben");
+fs.writeFileSync("./events.js", eventsOutput);
+fs.writeFileSync("./events-preview.js", eventsOutput);
+fs.writeFileSync("./skipped-events.js", skippedOutput);
+
+console.log("➡️ Gesamt importiert:", EVENTS.length);
+console.log("➡️ Übersprungen:", SKIPPED_EVENTS.length);
+console.log("➡️ events.js, events-preview.js und skipped-events.js geschrieben");
