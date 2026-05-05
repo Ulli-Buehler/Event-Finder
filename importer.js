@@ -1,52 +1,235 @@
 import { chromium } from "playwright";
+import fs from "fs";
 
-const URL =
+const START_URL =
   "https://www.veranstaltung-baden-wuerttemberg.de/?post_type=event&kategorie=&ort=&region=&von=&bis=";
 
-console.log("➡️ Debug gestartet");
+const GEO_CACHE_FILE = "./geo-cache.json";
+
+let geoCache = {};
+
+if (fs.existsSync(GEO_CACHE_FILE)) {
+  geoCache = JSON.parse(fs.readFileSync(GEO_CACHE_FILE, "utf8"));
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function toIsoDate(text) {
+  const match = text.match(/(\d{2})\.(\d{2})\.(\d{4})/);
+  if (!match) return null;
+  return `${match[3]}-${match[2]}-${match[1]}`;
+}
+
+function monthLabel(isoDate) {
+  if (!isoDate) return "";
+
+  const month = isoDate.split("-")[1];
+
+  const map = {
+    "01": "JAN",
+    "02": "FEB",
+    "03": "MAR",
+    "04": "APR",
+    "05": "MAY",
+    "06": "JUN",
+    "07": "JUL",
+    "08": "AUG",
+    "09": "SEP",
+    "10": "OCT",
+    "11": "NOV",
+    "12": "DEC"
+  };
+
+  return map[month] || "";
+}
+
+function parseDateLine(line) {
+  let dateText = line.trim();
+  let timeText = "";
+
+  if (dateText.includes(",")) {
+    const parts = dateText.split(",");
+    dateText = parts[0].trim();
+    timeText = parts.slice(1).join(",").trim();
+  }
+
+  let dateStart = null;
+  let dateEnd = null;
+
+  if (dateText.includes(" - ")) {
+    const parts = dateText.split(" - ");
+    dateStart = toIsoDate(parts[0]);
+    dateEnd = toIsoDate(parts[1]);
+  } else {
+    dateStart = toIsoDate(dateText);
+    dateEnd = dateStart;
+  }
+
+  return {
+    dateText,
+    timeText,
+    dateStart,
+    dateEnd,
+    date: monthLabel(dateStart)
+  };
+}
+
+function parseRawEvent(raw) {
+  const lines = raw
+    .split("\n")
+    .map(line => line.trim())
+    .filter(Boolean);
+
+  const category = lines[2] || "";
+  const title = lines[3] || "";
+
+  let place = "Unbekannt";
+  let categoryLine = "";
+
+  for (const line of lines) {
+    if (line.includes("|")) {
+      categoryLine = line;
+      const parts = line.split("|").map(p => p.trim());
+      place = parts[1] || "Unbekannt";
+      break;
+    }
+  }
+
+  let dateLine = "";
+
+  for (const line of lines) {
+    if (/\d{2}\.\d{2}\.\d{4}/.test(line)) {
+      dateLine = line;
+      break;
+    }
+  }
+
+  const dateInfo = parseDateLine(dateLine);
+
+  return {
+    title,
+    category,
+    place,
+    categoryLine,
+    ...dateInfo,
+    description: raw
+  };
+}
+
+async function geocode(place) {
+  if (!place || place === "Unbekannt") return null;
+
+  if (geoCache[place]) {
+    return geoCache[place];
+  }
+
+  console.log("🌍 Geocode:", place);
+
+  const url =
+    "https://nominatim.openstreetmap.org/search?format=json&limit=1&q=" +
+    encodeURIComponent(place + ", Baden-Württemberg, Deutschland");
+
+  const response = await fetch(url, {
+    headers: {
+      "User-Agent": "Event-Finder/1.0"
+    }
+  });
+
+  const data = await response.json();
+
+  await sleep(1200);
+
+  if (!data || !data[0]) {
+    console.log("⚠️ Keine Koordinaten:", place);
+    return null;
+  }
+
+  const coords = {
+    lat: Number(data[0].lat),
+    lng: Number(data[0].lon)
+  };
+
+  geoCache[place] = coords;
+
+  fs.writeFileSync(
+    GEO_CACHE_FILE,
+    JSON.stringify(geoCache, null, 2)
+  );
+
+  return coords;
+}
+
+console.log("➡️ Import gestartet");
 
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage();
 
-await page.goto(URL, {
-  waitUntil: "networkidle",
-  timeout: 60000
-});
+const EVENTS = [];
 
-await page.waitForTimeout(5000);
+for (let pageNum = 1; pageNum <= 11; pageNum++) {
+  const url =
+    pageNum === 1
+      ? START_URL
+      : `https://www.veranstaltung-baden-wuerttemberg.de/page/${pageNum}/?post_type=event&kategorie=&ort=&region=&von=&bis=`;
 
-const html = await page.content();
-const text = await page.locator("body").innerText();
+  console.log("➡️ Lade:", url);
 
-console.log("HTML Länge:", html.length);
-console.log("Text Länge:", text.length);
+  await page.goto(url, {
+    waitUntil: "networkidle",
+    timeout: 60000
+  });
 
-const keywords = [
-  "Landpartie",
-  "Märkte",
-  "Ludwigsburg",
-  "event",
-  "Veranstaltungen gefunden"
-];
+  await page.waitForTimeout(2000);
 
-for (const word of keywords) {
-  console.log("---- SUCHE:", word, "----");
+  const rawEvents = await page.evaluate(() => {
+    const items = [];
 
-  const indexHtml = html.indexOf(word);
-  console.log("HTML Index:", indexHtml);
+    document.querySelectorAll("article.event-card").forEach(card => {
+      const raw = card.innerText.trim();
 
-  if (indexHtml >= 0) {
-    console.log(html.slice(Math.max(0, indexHtml - 500), indexHtml + 1000));
-  }
+      if (!raw) return;
 
-  const indexText = text.indexOf(word);
-  console.log("TEXT Index:", indexText);
+      items.push(raw);
+    });
 
-  if (indexText >= 0) {
-    console.log(text.slice(Math.max(0, indexText - 500), indexText + 1000));
+    return items;
+  });
+
+  console.log(`➡️ Seite ${pageNum}: ${rawEvents.length} Events`);
+
+  for (const raw of rawEvents) {
+    const parsed = parseRawEvent(raw);
+
+    if (!parsed.title || !parsed.dateStart || !parsed.place) {
+      console.log("⚠️ Übersprungen:", parsed.title || "ohne Titel");
+      continue;
+    }
+
+    const coords = await geocode(parsed.place);
+
+    if (!coords) {
+      continue;
+    }
+
+    EVENTS.push({
+      ...parsed,
+      lat: coords.lat,
+      lng: coords.lng
+    });
   }
 }
 
 await browser.close();
 
-throw new Error("Debug beendet — keine Dateien geschrieben");
+const output =
+  "const EVENTS = " +
+  JSON.stringify(EVENTS, null, 2) +
+  ";";
+
+fs.writeFileSync("./events.js", output);
+fs.writeFileSync("./events-preview.js", output);
+
+console.log("➡️ Gesamt:", EVENTS.length);
+console.log("➡️ events.js und events-preview.js geschrieben");
