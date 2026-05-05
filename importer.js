@@ -22,10 +22,13 @@ function randomCoord() {
 }
 
 function extractPlace(text) {
-  const cleaned = text.replace(/\n/g, " ");
+  const cleaned = text
+    .replace(/\n/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 
   const match = cleaned.match(
-    /Märkte\s*\|\s*([^|]+)\s*\|\s*\d{2}\.\d{2}\.\d{4}/i
+    /Märkte\s*\|\s*([^|0-9]+)/
   );
 
   if (match && match[1]) {
@@ -93,7 +96,6 @@ for (let pageNum = 1; pageNum <= 11; pageNum++) {
 
   for (const event of events) {
     const place = extractPlace(event.raw);
-
     const coords = randomCoord();
 
     EVENTS.push({
