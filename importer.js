@@ -2,25 +2,7 @@ import { chromium } from "playwright";
 import fs from "fs";
 
 const START_URL =
-  "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/?post_type=event&ort=Dettingen%20Teck&umkreis=30&region&von=2026-05-10&bis=2026-05-10";
-
-const COORDS = {
-  "Pfullendorf": [47.9267, 9.2578],
-  "Ludwigsburg": [48.8941, 9.1955],
-  "Schwäbisch Hall": [49.1122, 9.7373],
-  "Tübingen": [48.5216, 9.0576],
-  "Frickenhausen": [48.5935, 9.3608],
-  "Bad Saulgau": [48.0167, 9.5],
-  "Weilheim": [48.6156, 9.5375],
-  "Radolfzell": [47.7419, 8.97],
-  "Eppingen": [49.1365, 8.9123],
-  "Reutlingen": [48.4914, 9.2043],
-  "Sinsheim": [49.2529, 8.8787],
-  "Göppingen": [48.7054, 9.6512],
-  "Ravensburg": [47.7811, 9.6136],
-  "Endingen": [48.1422, 7.7],
-  "Wolfach": [48.2933, 8.2156]
-};
+  "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/?post_type=event&ort=Dettingen%20Teck&umkreis=30&region";
 
 console.log("➡️ Import gestartet");
 
@@ -30,23 +12,51 @@ const browser = await chromium.launch({
 
 const page = await browser.newPage();
 
-let EVENTS = [];
+const EVENTS = [];
 
-function detectPlace(text) {
-  for (const city of Object.keys(COORDS)) {
-    if (text.includes(city)) {
-      return city;
-    }
+function randomCoord() {
+  return {
+    lat: 48.65 + (Math.random() - 0.5) * 1.5,
+    lng: 9.45 + (Math.random() - 0.5) * 1.5,
+  };
+}
+
+function extractPlace(text) {
+  const cleaned = text.replace(/\n/g, " ");
+
+  const match = cleaned.match(
+    /Märkte\s*\|\s*([^|]+)\s*\|\s*\d{2}\.\d{2}\.\d{4}/i
+  );
+
+  if (match && match[1]) {
+    return match[1].trim();
   }
 
-  return null;
+  return "Unbekannt";
+}
+
+function extractDate(text) {
+  const lower = text.toLowerCase();
+
+  if (
+    lower.includes("sonntag") ||
+    lower.includes("verkaufsoffenen sonntag")
+  ) {
+    return "Sonntag";
+  }
+
+  const monthMatch = text.match(
+    /\b(JAN|FEB|MÄR|APR|MAY|JUN|JUL|AUG|SEP|OKT|NOV|DEZ)\b/i
+  );
+
+  return monthMatch ? monthMatch[1].toUpperCase() : "";
 }
 
 for (let pageNum = 1; pageNum <= 11; pageNum++) {
   const url =
     pageNum === 1
       ? START_URL
-      : `https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/${pageNum}/?post_type=event&ort=Dettingen%20Teck&umkreis=30&region&von=2026-05-10&bis=2026-05-10`;
+      : `https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/${pageNum}/?post_type=event&ort=Dettingen%20Teck&umkreis=30&region`;
 
   console.log("➡️ Lade:", url);
 
@@ -79,28 +89,22 @@ for (let pageNum = 1; pageNum <= 11; pageNum++) {
     return items;
   });
 
-  const cleaned = events
-    .map((event) => {
-      const place = detectPlace(event.raw);
+  console.log(`➡️ Seite ${pageNum}: ${events.length} Events`);
 
-      if (!place) return null;
+  for (const event of events) {
+    const place = extractPlace(event.raw);
 
-      const coords = COORDS[place];
+    const coords = randomCoord();
 
-      return {
-        title: event.title,
-        place,
-        date: "Sonntag",
-        description: event.raw,
-        lat: coords[0],
-        lng: coords[1],
-      };
-    })
-    .filter(Boolean);
-
-  console.log(`➡️ Seite ${pageNum}: ${cleaned.length} Events`);
-
-  EVENTS.push(...cleaned);
+    EVENTS.push({
+      title: event.title,
+      place,
+      date: extractDate(event.raw),
+      description: event.raw,
+      lat: coords.lat,
+      lng: coords.lng,
+    });
+  }
 }
 
 console.log(`➡️ Gesamt: ${EVENTS.length}`);
