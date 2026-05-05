@@ -3,45 +3,120 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Event Rohdaten Debug</title>
+  <title>Event Debug</title>
+
   <style>
     body {
       font-family: system-ui, sans-serif;
-      padding: 16px;
       background: #f4f4f4;
+      padding: 16px;
     }
+
     .event {
       background: white;
-      border-radius: 12px;
-      padding: 14px;
-      margin-bottom: 14px;
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 16px;
     }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
     pre {
       white-space: pre-wrap;
       word-break: break-word;
-      font-family: ui-monospace, monospace;
+      background: #eee;
+      padding: 12px;
+      border-radius: 10px;
       font-size: 13px;
+    }
+
+    .ok {
+      color: green;
+      font-weight: bold;
+    }
+
+    .bad {
+      color: red;
+      font-weight: bold;
     }
   </style>
 </head>
+
 <body>
-  <h1>Event Rohdaten Debug</h1>
+  <h1>Event Debug</h1>
+
+  <p id="count"></p>
+
   <div id="out"></div>
 
-  <script src="events.js"></script>
+  <script src="events-preview.js"></script>
+
   <script>
     const out = document.getElementById("out");
+    const count = document.getElementById("count");
 
-    EVENTS.slice(0, 20).forEach((event, index) => {
+    count.innerText = "Events geladen: " + EVENTS.length;
+
+    EVENTS.slice(0, 30).forEach((event, index) => {
       const div = document.createElement("div");
       div.className = "event";
 
+      const dateOk =
+        event.dateStart &&
+        event.dateEnd &&
+        event.dateText;
+
       div.innerHTML = `
         <h2>${index + 1}. ${event.title}</h2>
-        <p><strong>place:</strong> ${event.place}</p>
+
+        <p><strong>Ort:</strong> ${event.place}</p>
         <p><strong>date:</strong> ${event.date}</p>
-        <p><strong>lat/lng:</strong> ${event.lat}, ${event.lng}</p>
-        <h3>description/raw</h3>
+
+        <p>
+          <strong>dateStart:</strong>
+          <span class="${event.dateStart ? "ok" : "bad"}">
+            ${event.dateStart || "FEHLT"}
+          </span>
+        </p>
+
+        <p>
+          <strong>dateEnd:</strong>
+          <span class="${event.dateEnd ? "ok" : "bad"}">
+            ${event.dateEnd || "FEHLT"}
+          </span>
+        </p>
+
+        <p>
+          <strong>dateText:</strong>
+          <span class="${event.dateText ? "ok" : "bad"}">
+            ${event.dateText || "FEHLT"}
+          </span>
+        </p>
+
+        <p>
+          <strong>timeText:</strong>
+          ${event.timeText || "-"}
+        </p>
+
+        <p>
+          <strong>lat/lng:</strong>
+          ${event.lat}, ${event.lng}
+        </p>
+
+        <p>
+          <strong>Status:</strong>
+          <span class="${dateOk ? "ok" : "bad"}">
+            ${dateOk ? "Datum erkannt" : "Datum unvollständig"}
+          </span>
+        </p>
+
+        <h3>Rohdaten</h3>
         <pre>${event.description}</pre>
       `;
 
