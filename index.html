@@ -3,9 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Lokalevents</title>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet/dist/leaflet.css">
+
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,30 +18,58 @@
 
 <div class="top">
   <h1>Lokalevents</h1>
-  <p id="status">Kirchheim unter Teck • Radius 50 km</p>
+
+  <p id="status">
+    Kirchheim unter Teck • Radius 50 km
+  </p>
 
   <div class="controls">
+
     <select id="dateSelect">
       <option value="today">Heute</option>
-<option value="tomorrow">Morgen</option>
-<option value="sunday">Kommender Sonntag</option>
-<option value="all" selected>Alle Events</option>
+
+      <option value="tomorrow">
+        Morgen
+      </option>
+
+      <option value="sunday">
+        Kommender Sonntag
+      </option>
+
+      <option value="all" selected>
+        Alle Events
+      </option>
     </select>
 
     <div class="radius-control">
       <span id="radiusLabel">50 km</span>
-      <input id="radiusSlider" type="range" min="5" max="100" value="50">
+
+      <input
+        id="radiusSlider"
+        type="range"
+        min="5"
+        max="100"
+        value="50"
+      >
     </div>
+
   </div>
 
-  <button id="refreshBtn">🔄 Events aktualisieren</button>
-  <div id="importStatus">Bereit</div>
+  <button id="refreshBtn">
+    🔄 Events aktualisieren
+  </button>
+
+  <div id="importStatus">
+    Bereit
+  </div>
 </div>
 
 <div class="cards" id="cards"></div>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="events-preview.js"></script>
+
+<script src="events.js"></script>
+
 <script src="app.js"></script>
 
 </body>
