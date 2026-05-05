@@ -2,76 +2,79 @@ const fs = require("fs");
 
 async function run() {
 
-  const response = await fetch(
-    "https://www.veranstaltungen-bw.de/"
-  );
+  const url =
+    "https://www.veranstaltung-baden-wuerttemberg.de/?post_type=event&kategorie=&ort=&region=&von=&bis=";
+
+  console.log("lade events...");
+
+  const response = await fetch(url);
 
   const html = await response.text();
 
-  const eventBlocks =
+  const blocks =
     html.split('class="event-item"');
 
   const EVENTS = [];
 
-  for (const block of eventBlocks) {
+  for (const block of blocks) {
 
     try {
 
       const title =
-        extract(block, 'title="', '"') ||
-        extract(block, "<h3>", "</h3>");
+        cleanup(
+          extract(block, 'title="', '"')
+        );
 
-      const place =
-        extract(block, 'event-location">', "<") ||
-        "Unbekannt";
+      if (!title) continue;
 
-      const rawText =
-        cleanup(stripHtml(block));
+      const raw =
+        cleanup(
+          stripHtml(block)
+        );
 
-      const dateInfo =
-        parseDateInfo(rawText);
+      const parsed =
+        parseEvent(raw);
 
-      const coords =
-        fakeGeo(place);
+      const geo =
+        fakeGeo(parsed.place);
 
       EVENTS.push({
-        title: cleanup(title),
-        place: cleanup(place),
+
+        title,
+
+        place:
+          parsed.place,
 
         date:
-          dateInfo.label ||
-
-        "",
+          parsed.label,
 
         dateStart:
-          dateInfo.start ||
-
-        null,
+          parsed.dateStart,
 
         dateEnd:
-          dateInfo.end ||
-
-        null,
+          parsed.dateEnd,
 
         dateText:
-          dateInfo.dateText ||
-
-        "",
+          parsed.dateText,
 
         timeText:
-          dateInfo.timeText ||
+          parsed.timeText,
 
-        "",
+        description:
+          raw,
 
-        description: rawText,
+        lat:
+          geo.lat,
 
-        lat: coords.lat,
-        lng: coords.lng
+        lng:
+          geo.lng
       });
 
     } catch (err) {
 
-      console.log("skip event");
+      console.log(
+        "skip event"
+      );
 
     }
   }
@@ -88,107 +91,107 @@ async function run() {
   );
 }
 
-function extract(text, start, end) {
-
-  const s = text.indexOf(start);
-
-  if (s === -1) return "";
-
-  const from = s + start.length;
-
-  const e = text.indexOf(end, from);
-
-  if (e === -1) return "";
-
-  return text.substring(from, e);
-}
-
-function stripHtml(html) {
-
-  return html
-    .replace(/<br\s*\/?>/gi, "\n")
-    .replace(/<\/p>/gi, "\n")
-    .replace(/<\/div>/gi, "\n")
-    .replace(/<[^>]+>/g, " ");
-}
-
-function cleanup(text) {
-
-  return text
-    .replace(/\s+\n/g, "\n")
-    .replace(/\n\s+/g, "\n")
-    .replace(/\n+/g, "\n")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function parseDateInfo(text) {
+function parseEvent(text) {
 
   const lines =
     text
       .split("\n")
-      .map(l => l.trim())
+      .map(v => v.trim())
       .filter(Boolean);
 
+  let place = "Unbekannt";
+
   let dateText = "";
+
   let timeText = "";
 
   for (const line of lines) {
 
     if (
-      /\d{2}\.\d{2}\.\d{4}/.test(line)
+      line.includes("|")
     ) {
 
-      dateText = line;
+      const parts =
+        line.split("|");
 
-      if (line.includes(",")) {
+      place =
+        cleanup(
+          parts[1] || ""
+        );
 
-        const parts = line.split(",");
+    }
 
-        dateText = parts[0].trim();
+    if (
+      /\d{2}\.\d{2}\.\d{4}/
+      .test(line)
+    ) {
+
+      if (
+        line.includes(",")
+      ) {
+
+        const split =
+          line.split(",");
+
+        dateText =
+          split[0].trim();
 
         timeText =
-          parts
+          split
             .slice(1)
             .join(",")
             .trim();
+
+      } else {
+
+        dateText =
+          line.trim();
       }
 
       break;
     }
   }
 
-  let start = null;
-  let end = null;
+  let dateStart = null;
 
-  if (dateText.includes(" - ")) {
+  let dateEnd = null;
+
+  if (
+    dateText.includes(" - ")
+  ) {
 
     const parts =
       dateText.split(" - ");
 
-    start =
+    dateStart =
       convertDate(parts[0]);
 
-    end =
+    dateEnd =
       convertDate(parts[1]);
 
-  } else if (dateText) {
+  } else {
 
-    start =
+    dateStart =
       convertDate(dateText);
 
-    end =
+    dateEnd =
       convertDate(dateText);
   }
 
   return {
-    label:
-      monthLabel(start),
 
-    start,
-    end,
+    place,
+
     dateText,
-    timeText
+
+    timeText,
+
+    dateStart,
+
+    dateEnd,
+
+    label:
+      monthLabel(dateStart)
   };
 }
 
@@ -211,7 +214,8 @@ function monthLabel(date) {
   const month =
     date.split("-")[1];
 
-  const names = {
+  const map = {
+
     "01": "JAN",
     "02": "FEB",
     "03": "MAR",
@@ -226,7 +230,53 @@ function monthLabel(date) {
     "12": "DEC"
   };
 
-  return names[month] || "";
+  return map[month] || "";
+}
+
+function extract(
+  text,
+  start,
+  end
+) {
+
+  const s =
+    text.indexOf(start);
+
+  if (s === -1)
+    return "";
+
+  const from =
+    s + start.length;
+
+  const e =
+    text.indexOf(end, from);
+
+  if (e === -1)
+    return "";
+
+  return text.substring(
+    from,
+    e
+  );
+}
+
+function stripHtml(html) {
+
+  return html
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<\/p>/gi, "\n")
+    .replace(/<\/div>/gi, "\n")
+    .replace(/<[^>]+>/g, " ");
+}
+
+function cleanup(text) {
+
+  return text
+    .replace(/\s+\n/g, "\n")
+    .replace(/\n\s+/g, "\n")
+    .replace(/\n+/g, "\n")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function fakeGeo(place) {
@@ -251,14 +301,11 @@ function fakeGeo(place) {
     "Schwäbisch Hall":
       { lat: 49.1124, lng: 9.7371 },
 
-    "Bad Saulgau":
-      { lat: 48.0158, lng: 9.5010 },
+    "Überlingen am Bodensee":
+      { lat: 47.7667, lng: 9.1667 },
 
     "Wolfach":
-      { lat: 48.2950, lng: 8.2150 },
-
-    "Überlingen am Bodensee":
-      { lat: 47.7667, lng: 9.1667 }
+      { lat: 48.2950, lng: 8.2150 }
   };
 
   if (map[place]) {
