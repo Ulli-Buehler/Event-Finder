@@ -1,59 +1,47 @@
 import { chromium } from "playwright";
 
-const url =
-  "https://www.veranstaltung-baden-wuerttemberg.de/?post_type=event&kategorie=&ort=&region=&von=&bis=";
+async function run() {
 
-const browser =
-  await chromium.launch({
+  const browser = await chromium.launch({
     headless: true
   });
 
-const page =
-  await browser.newPage();
+  const page = await browser.newPage();
 
-await page.goto(url, {
-  waitUntil: "domcontentloaded"
-});
+  page.on("response", async (response) => {
 
-await page.waitForTimeout(3000);
+    const url = response.url();
 
-const data =
-  await page.evaluate(() => {
+    if (
+      url.includes("api") ||
+      url.includes("event") ||
+      url.includes("json") ||
+      url.includes("wp-json")
+    ) {
 
-    const result = [];
+      console.log("\n=== RESPONSE ===");
+      console.log(url);
 
-    const all =
-      document.querySelectorAll("*");
+      try {
+        const text = await response.text();
 
-    all.forEach(el => {
-
-      const text =
-        el.innerText?.trim();
-
-      if (
-        text &&
-        text.includes("Märkte |")
-      ) {
-
-        result.push({
-
-          tag:
-            el.tagName,
-
-          class:
-            el.className,
-
-          text:
-            text.slice(0, 500)
-        });
+        console.log(text.slice(0, 2000));
+      } catch (e) {
+        console.log("cannot read");
       }
-    });
-
-    return result;
+    }
   });
 
-console.log(
-  JSON.stringify(data, null, 2)
-);
+  await page.goto(
+    "https://www.veranstaltung-baden-wuerttemberg.de/?post_type=event&kategorie=&ort=&region=&von=&bis=",
+    {
+      waitUntil: "networkidle"
+    }
+  );
 
-await browser.close();
+  await page.waitForTimeout(10000);
+
+  await browser.close();
+}
+
+run();
