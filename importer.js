@@ -4,21 +4,19 @@ import fs from "fs";
 const START_URL =
   "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/?post_type=event&ort=Dettingen%20Teck&umkreis=30&region";
 
+const GEO_CACHE_FILE = "./geo-cache.json";
+const EVENTS_FILE = "./events.js";
+
 console.log("➡️ Import gestartet");
 
-const browser = await chromium.launch({
-  headless: true,
-});
+let geoCache = {};
 
-const page = await browser.newPage();
+if (fs.existsSync(GEO_CACHE_FILE)) {
+  geoCache = JSON.parse(fs.readFileSync(GEO_CACHE_FILE, "utf8"));
+}
 
-const EVENTS = [];
-
-function randomCoord() {
-  return {
-    lat: 48.65 + (Math.random() - 0.5) * 1.5,
-    lng: 9.45 + (Math.random() - 0.5) * 1.5,
-  };
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function extractPlace(text) {
@@ -27,9 +25,7 @@ function extractPlace(text) {
     .replace(/\s+/g, " ")
     .trim();
 
-  const match = cleaned.match(
-    /Märkte\s*\|\s*([^|0-9]+)/
-  );
+  const match = cleaned.match(/Märkte\s*\|\s*([^|0-9]+)/);
 
   if (match && match[1]) {
     return match[1].trim();
@@ -39,21 +35,60 @@ function extractPlace(text) {
 }
 
 function extractDate(text) {
-  const lower = text.toLowerCase();
-
-  if (
-    lower.includes("sonntag") ||
-    lower.includes("verkaufsoffenen sonntag")
-  ) {
-    return "Sonntag";
-  }
-
   const monthMatch = text.match(
-    /\b(JAN|FEB|MÄR|APR|MAY|JUN|JUL|AUG|SEP|OKT|NOV|DEZ)\b/i
+    /\b(JAN|FEB|MÄR|APR|MAY|JUN|JUL|AUG|SEP|OCT|OKT|NOV|DEZ)\b/i
   );
 
   return monthMatch ? monthMatch[1].toUpperCase() : "";
 }
+
+async function geocodePlace(place) {
+  if (!place || place === "Unbekannt") return null;
+
+  if (geoCache[place]) {
+    return geoCache[place];
+  }
+
+  console.log("🌍 Geocode:", place);
+
+  const url =
+    "https://nominatim.openstreetmap.org/search?format=json&limit=1&q=" +
+    encodeURIComponent(place + ", Baden-Württemberg, Deutschland");
+
+  const response = await fetch(url, {
+    headers: {
+      "User-Agent": "Event-Finder/1.0"
+    }
+  });
+
+  const data = await response.json();
+
+  await sleep(1100);
+
+  if (!data || !data[0]) {
+    console.log("⚠️ Keine Koordinaten:", place);
+    return null;
+  }
+
+  const coords = {
+    lat: Number(data[0].lat),
+    lng: Number(data[0].lon)
+  };
+
+  geoCache[place] = coords;
+
+  fs.writeFileSync(GEO_CACHE_FILE, JSON.stringify(geoCache, null, 2));
+
+  return coords;
+}
+
+const browser = await chromium.launch({
+  headless: true
+});
+
+const page = await browser.newPage();
+
+const EVENTS = [];
 
 for (let pageNum = 1; pageNum <= 11; pageNum++) {
   const url =
@@ -65,38 +100,37 @@ for (let pageNum = 1; pageNum <= 11; pageNum++) {
 
   await page.goto(url, {
     waitUntil: "domcontentloaded",
-    timeout: 60000,
+    timeout: 60000
   });
 
   await page.waitForTimeout(3000);
 
-  const events = await page.evaluate(() => {
+  const rawEvents = await page.evaluate(() => {
     const items = [];
-
     const cards = document.querySelectorAll("article");
 
-    cards.forEach((card) => {
+    cards.forEach(card => {
       const title =
         card.querySelector("h2, h3")?.innerText?.trim() || "";
 
       if (!title) return;
 
-      const text = card.innerText.trim();
-
       items.push({
         title,
-        raw: text,
+        raw: card.innerText.trim()
       });
     });
 
     return items;
   });
 
-  console.log(`➡️ Seite ${pageNum}: ${events.length} Events`);
+  console.log(`➡️ Seite ${pageNum}: ${rawEvents.length} Events`);
 
-  for (const event of events) {
+  for (const event of rawEvents) {
     const place = extractPlace(event.raw);
-    const coords = randomCoord();
+    const coords = await geocodePlace(place);
+
+    if (!coords) continue;
 
     EVENTS.push({
       title: event.title,
@@ -104,10 +138,12 @@ for (let pageNum = 1; pageNum <= 11; pageNum++) {
       date: extractDate(event.raw),
       description: event.raw,
       lat: coords.lat,
-      lng: coords.lng,
+      lng: coords.lng
     });
   }
 }
+
+await browser.close();
 
 console.log(`➡️ Gesamt: ${EVENTS.length}`);
 
@@ -116,8 +152,6 @@ const output =
   JSON.stringify(EVENTS, null, 2) +
   ";";
 
-fs.writeFileSync("./events.js", output);
+fs.writeFileSync(EVENTS_FILE, output);
 
 console.log("➡️ events.js geschrieben");
-
-await browser.close();
