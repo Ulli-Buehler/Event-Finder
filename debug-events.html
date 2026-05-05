@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Event Rohdaten Debug</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      padding: 16px;
+      background: #f4f4f4;
+    }
+    .event {
+      background: white;
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: ui-monospace, monospace;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Event Rohdaten Debug</h1>
+  <div id="out"></div>
+
+  <script src="events.js"></script>
+  <script>
+    const out = document.getElementById("out");
+
+    EVENTS.slice(0, 20).forEach((event, index) => {
+      const div = document.createElement("div");
+      div.className = "event";
+
+      div.innerHTML = `
+        <h2>${index + 1}. ${event.title}</h2>
+        <p><strong>place:</strong> ${event.place}</p>
+        <p><strong>date:</strong> ${event.date}</p>
+        <p><strong>lat/lng:</strong> ${event.lat}, ${event.lng}</p>
+        <h3>description/raw</h3>
+        <pre>${event.description}</pre>
+      `;
+
+      out.appendChild(div);
+    });
+  </script>
+</body>
+</html>
