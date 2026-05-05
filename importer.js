@@ -76,14 +76,14 @@ function parseDateLine(line) {
   };
 }
 
-function parseRawEvent(raw) {
+function parseRawEvent(raw, fallbackTitle) {
   const lines = raw
     .split("\n")
     .map(line => line.trim())
     .filter(Boolean);
 
   const category = lines[2] || "";
-  const title = lines[3] || "";
+  const title = lines[3] || fallbackTitle || "";
 
   let place = "Unbekannt";
   let categoryLine = "";
@@ -98,15 +98,25 @@ function parseRawEvent(raw) {
   }
 
   let dateLine = "";
+  let dateLineIndex = -1;
 
-  for (const line of lines) {
-    if (/\d{2}\.\d{2}\.\d{4}/.test(line)) {
-      dateLine = line;
+  for (let i = 0; i < lines.length; i++) {
+    if (/\d{2}\.\d{2}\.\d{4}/.test(lines[i])) {
+      dateLine = lines[i];
+      dateLineIndex = i;
       break;
     }
   }
 
   const dateInfo = parseDateLine(dateLine);
+
+  let summary = "";
+
+  if (dateLineIndex >= 0) {
+    const afterDate = lines.slice(dateLineIndex + 1);
+    const useful = afterDate.filter(line => line !== "Details");
+    summary = useful.join("\n").trim();
+  }
 
   return {
     title,
@@ -114,6 +124,7 @@ function parseRawEvent(raw) {
     place,
     categoryLine,
     ...dateInfo,
+    summary,
     description: raw
   };
 }
@@ -191,7 +202,20 @@ for (let pageNum = 1; pageNum <= 11; pageNum++) {
 
       if (!raw) return;
 
-      items.push(raw);
+      const title =
+        card.querySelector("h2, h3")?.innerText?.trim() || "";
+
+      const detailsLink =
+        Array.from(card.querySelectorAll("a"))
+          .find(a => a.innerText.trim().toLowerCase().includes("details"));
+
+      const detailsUrl = detailsLink ? detailsLink.href : "";
+
+      items.push({
+        raw,
+        title,
+        detailsUrl
+      });
     });
 
     return items;
@@ -199,8 +223,8 @@ for (let pageNum = 1; pageNum <= 11; pageNum++) {
 
   console.log(`➡️ Seite ${pageNum}: ${rawEvents.length} Events`);
 
-  for (const raw of rawEvents) {
-    const parsed = parseRawEvent(raw);
+  for (const item of rawEvents) {
+    const parsed = parseRawEvent(item.raw, item.title);
 
     if (!parsed.title || !parsed.dateStart || !parsed.place) {
       console.log("⚠️ Übersprungen:", parsed.title || "ohne Titel");
@@ -215,6 +239,7 @@ for (let pageNum = 1; pageNum <= 11; pageNum++) {
 
     EVENTS.push({
       ...parsed,
+      detailsUrl: item.detailsUrl,
       lat: coords.lat,
       lng: coords.lng
     });
