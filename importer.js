@@ -1,221 +1,99 @@
-const fs = require("fs");
+import { chromium } from "playwright";
+import fs from "fs";
 
-async function run() {
+const START_URL =
+  "https://www.veranstaltung-baden-wuerttemberg.de/?post_type=event&kategorie=&ort=&region=&von=&bis=";
 
-  const url =
-    "https://www.veranstaltung-baden-wuerttemberg.de/?post_type=event&kategorie=&ort=&region=&von=&bis=";
+const GEO_CACHE_FILE = "./geo-cache.json";
 
-  console.log("lade events...");
+let geoCache = {};
 
-  const response = await fetch(url);
-
-  const html = await response.text();
-
-  const blocks =
-    html.split('class="event-item"');
-
-  const EVENTS = [];
-
-  for (const block of blocks) {
-
-    try {
-
-      const title =
-        cleanup(
-          extract(block, 'title="', '"')
-        );
-
-      if (!title) continue;
-
-      const raw =
-        cleanup(
-          stripHtml(block)
-        );
-
-      const parsed =
-        parseEvent(raw);
-
-      const geo =
-        fakeGeo(parsed.place);
-
-      EVENTS.push({
-
-        title,
-
-        place:
-          parsed.place,
-
-        date:
-          parsed.label,
-
-        dateStart:
-          parsed.dateStart,
-
-        dateEnd:
-          parsed.dateEnd,
-
-        dateText:
-          parsed.dateText,
-
-        timeText:
-          parsed.timeText,
-
-        description:
-          raw,
-
-        lat:
-          geo.lat,
-
-        lng:
-          geo.lng
-      });
-
-    } catch (err) {
-
-      console.log(
-        "skip event"
-      );
-
-    }
-  }
-
-  fs.writeFileSync(
-    "./events-preview.js",
-    "const EVENTS = " +
-    JSON.stringify(EVENTS, null, 2)
-  );
-
-  console.log(
-    "events:",
-    EVENTS.length
-  );
+if (fs.existsSync(GEO_CACHE_FILE)) {
+  geoCache = JSON.parse(fs.readFileSync(GEO_CACHE_FILE, "utf8"));
 }
 
-function parseEvent(text) {
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-  const lines =
-    text
-      .split("\n")
-      .map(v => v.trim())
-      .filter(Boolean);
+function parseEvent(raw, title) {
+  const lines = raw
+    .split("\n")
+    .map(l => l.trim())
+    .filter(Boolean);
 
   let place = "Unbekannt";
-
   let dateText = "";
-
   let timeText = "";
 
   for (const line of lines) {
-
-    if (
-      line.includes("|")
-    ) {
-
-      const parts =
-        line.split("|");
-
-      place =
-        cleanup(
-          parts[1] || ""
-        );
-
+    if (line.includes("|")) {
+      const parts = line.split("|").map(p => p.trim());
+      if (parts.length >= 2) {
+        place = parts[1];
+      }
     }
 
-    if (
-      /\d{2}\.\d{2}\.\d{4}/
-      .test(line)
-    ) {
-
-      if (
-        line.includes(",")
-      ) {
-
-        const split =
-          line.split(",");
-
-        dateText =
-          split[0].trim();
-
-        timeText =
-          split
-            .slice(1)
-            .join(",")
-            .trim();
-
+    if (/\d{2}\.\d{2}\.\d{4}/.test(line)) {
+      if (line.includes(",")) {
+        const parts = line.split(",");
+        dateText = parts[0].trim();
+        timeText = parts.slice(1).join(",").trim();
       } else {
-
-        dateText =
-          line.trim();
+        dateText = line.trim();
       }
-
       break;
     }
   }
 
-  let dateStart = null;
-
-  let dateEnd = null;
-
-  if (
-    dateText.includes(" - ")
-  ) {
-
-    const parts =
-      dateText.split(" - ");
-
-    dateStart =
-      convertDate(parts[0]);
-
-    dateEnd =
-      convertDate(parts[1]);
-
-  } else {
-
-    dateStart =
-      convertDate(dateText);
-
-    dateEnd =
-      convertDate(dateText);
-  }
+  const { dateStart, dateEnd } = parseDateRange(dateText);
 
   return {
-
+    title,
     place,
-
-    dateText,
-
-    timeText,
-
+    date: monthLabel(dateStart),
     dateStart,
-
     dateEnd,
-
-    label:
-      monthLabel(dateStart)
+    dateText,
+    timeText,
+    description: raw
   };
 }
 
-function convertDate(text) {
+function parseDateRange(dateText) {
+  if (!dateText) {
+    return { dateStart: null, dateEnd: null };
+  }
 
-  const m =
-    text.match(
-      /(\d{2})\.(\d{2})\.(\d{4})/
-    );
+  if (dateText.includes(" - ")) {
+    const parts = dateText.split(" - ");
+    return {
+      dateStart: toIsoDate(parts[0]),
+      dateEnd: toIsoDate(parts[1])
+    };
+  }
 
+  const single = toIsoDate(dateText);
+
+  return {
+    dateStart: single,
+    dateEnd: single
+  };
+}
+
+function toIsoDate(text) {
+  const m = text.match(/(\d{2})\.(\d{2})\.(\d{4})/);
   if (!m) return null;
 
   return `${m[3]}-${m[2]}-${m[1]}`;
 }
 
 function monthLabel(date) {
-
   if (!date) return "";
 
-  const month =
-    date.split("-")[1];
+  const month = date.split("-")[1];
 
   const map = {
-
     "01": "JAN",
     "02": "FEB",
     "03": "MAR",
@@ -233,89 +111,111 @@ function monthLabel(date) {
   return map[month] || "";
 }
 
-function extract(
-  text,
-  start,
-  end
-) {
+async function geocode(place) {
+  if (!place || place === "Unbekannt") return null;
 
-  const s =
-    text.indexOf(start);
-
-  if (s === -1)
-    return "";
-
-  const from =
-    s + start.length;
-
-  const e =
-    text.indexOf(end, from);
-
-  if (e === -1)
-    return "";
-
-  return text.substring(
-    from,
-    e
-  );
-}
-
-function stripHtml(html) {
-
-  return html
-    .replace(/<br\s*\/?>/gi, "\n")
-    .replace(/<\/p>/gi, "\n")
-    .replace(/<\/div>/gi, "\n")
-    .replace(/<[^>]+>/g, " ");
-}
-
-function cleanup(text) {
-
-  return text
-    .replace(/\s+\n/g, "\n")
-    .replace(/\n\s+/g, "\n")
-    .replace(/\n+/g, "\n")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function fakeGeo(place) {
-
-  const map = {
-
-    "Kirchheim unter Teck":
-      { lat: 48.6463, lng: 9.4538 },
-
-    "Weilheim an der Teck":
-      { lat: 48.6154, lng: 9.5383 },
-
-    "Göppingen":
-      { lat: 48.7035, lng: 9.6526 },
-
-    "Tübingen":
-      { lat: 48.5216, lng: 9.0576 },
-
-    "Reutlingen":
-      { lat: 48.4914, lng: 9.2043 },
-
-    "Schwäbisch Hall":
-      { lat: 49.1124, lng: 9.7371 },
-
-    "Überlingen am Bodensee":
-      { lat: 47.7667, lng: 9.1667 },
-
-    "Wolfach":
-      { lat: 48.2950, lng: 8.2150 }
-  };
-
-  if (map[place]) {
-    return map[place];
+  if (geoCache[place]) {
+    return geoCache[place];
   }
 
-  return {
-    lat: 48.6463,
-    lng: 9.4538
+  console.log("🌍 Geocode:", place);
+
+  const url =
+    "https://nominatim.openstreetmap.org/search?format=json&limit=1&q=" +
+    encodeURIComponent(place + ", Baden-Württemberg, Deutschland");
+
+  const response = await fetch(url, {
+    headers: {
+      "User-Agent": "Event-Finder/1.0"
+    }
+  });
+
+  const data = await response.json();
+
+  await sleep(1200);
+
+  if (!data || !data[0]) {
+    console.log("⚠️ Keine Koordinaten:", place);
+    return null;
+  }
+
+  const coords = {
+    lat: Number(data[0].lat),
+    lng: Number(data[0].lon)
   };
+
+  geoCache[place] = coords;
+
+  fs.writeFileSync(GEO_CACHE_FILE, JSON.stringify(geoCache, null, 2));
+
+  return coords;
 }
 
-run();
+console.log("➡️ Import gestartet");
+
+const browser = await chromium.launch({ headless: true });
+const page = await browser.newPage();
+
+const EVENTS = [];
+
+for (let pageNum = 1; pageNum <= 11; pageNum++) {
+  const url =
+    pageNum === 1
+      ? START_URL
+      : `https://www.veranstaltung-baden-wuerttemberg.de/page/${pageNum}/?post_type=event&kategorie=&ort=&region=&von=&bis=`;
+
+  console.log("➡️ Lade:", url);
+
+  await page.goto(url, {
+    waitUntil: "domcontentloaded",
+    timeout: 60000
+  });
+
+  await page.waitForTimeout(2000);
+
+  const rawEvents = await page.evaluate(() => {
+    const items = [];
+    const cards = document.querySelectorAll("article");
+
+    cards.forEach(card => {
+      const title =
+        card.querySelector("h2, h3")?.innerText?.trim() || "";
+
+      if (!title) return;
+
+      const raw = card.innerText.trim();
+
+      items.push({ title, raw });
+    });
+
+    return items;
+  });
+
+  console.log(`➡️ Seite ${pageNum}: ${rawEvents.length} Events`);
+
+  for (const item of rawEvents) {
+    const parsed = parseEvent(item.raw, item.title);
+    const coords = await geocode(parsed.place);
+
+    if (!coords) continue;
+
+    EVENTS.push({
+      ...parsed,
+      lat: coords.lat,
+      lng: coords.lng
+    });
+  }
+}
+
+await browser.close();
+
+const output =
+  "const EVENTS = " +
+  JSON.stringify(EVENTS, null, 2) +
+  ";";
+
+fs.writeFileSync("./events.js", output);
+fs.writeFileSync("./events-preview.js", output);
+
+console.log("➡️ Gesamt:", EVENTS.length);
+console.log("➡️ events.js und events-preview.js geschrieben");
