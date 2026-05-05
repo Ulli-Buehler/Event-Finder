@@ -228,8 +228,8 @@ const EVENTS = [
     "place": "Rosenfeld",
     "date": "JUN",
     "description": "13\nJUN\nMärkte\nUrsulamarkt mit Flohmarkt\n\nMärkte | Rosenfeld\n\n 13.06.2026\n\nDetails",
-    "lat": 48.2863842,
-    "lng": 8.7232519
+    "lat": 48.2880909,
+    "lng": 8.7233324
   },
   {
     "title": "Naturparkmarkt",
@@ -364,8 +364,8 @@ const EVENTS = [
     "place": "Kehl",
     "date": "JUL",
     "description": "14\nJUL\nMärkte\nAltstadt-Antikmarkt\n\nMärkte | Kehl\n\n 14.07.2026\n\nDetails",
-    "lat": 48.5733977,
-    "lng": 7.8114002
+    "lat": 48.5728929,
+    "lng": 7.8109768
   },
   {
     "title": "Pforzheimer Gruschtelmarkt",
@@ -716,8 +716,8 @@ const EVENTS = [
     "place": "Bad Schussenried",
     "date": "SEP",
     "description": "27\nSEP\nMärkte\nCittaslow – Tag mit verkaufsoffenem Sonntag\n\nMärkte | Bad Schussenried\n\n 27.09.2026, 12:00 - 17:00 Uhr\n\nDetails",
-    "lat": 48.0086558,
-    "lng": 9.6541299
+    "lat": 48.0047363,
+    "lng": 9.6561098
   },
   {
     "title": "Herbstmarkt Sielmingen",
@@ -908,8 +908,8 @@ const EVENTS = [
     "place": "Pfullendorf",
     "date": "OCT",
     "description": "18\nOCT\nMärkte\nVerkaufsoffener Sonntag in Pfullendorf\n\nMärkte | Pfullendorf\n\n 18.10.2026, 13:00 - 18:00 Uhr\n\nOb in der Innenstadt, im Linzgau Center, an der Otterswanger Straße oder im Seepark-Center – die Einzelhändler locken mit attraktiven Angeboten.\n\nDetails",
-    "lat": 47.9232677,
-    "lng": 9.2500203
+    "lat": 47.924349,
+    "lng": 9.2559822
   },
   {
     "title": "Verkaufsoffener Sonntag in der Innenstadt",
@@ -980,8 +980,8 @@ const EVENTS = [
     "place": "Wertheim",
     "date": "NOV",
     "description": "08\nNOV\nMärkte\nBauernmarkt\n\nMärkte | Wertheim\n\n 08.11.2026\n\nDetails",
-    "lat": 49.741955,
-    "lng": 9.52596
+    "lat": 49.7599825,
+    "lng": 9.5166598
   },
   {
     "title": "Martinimarkt",
@@ -1004,16 +1004,16 @@ const EVENTS = [
     "place": "Bad Wurzach",
     "date": "NOV",
     "description": "12\nNOV\nMärkte\nMartinimarkt\n\nMärkte | Bad Wurzach\n\n 12.11.2026\n\nDetails",
-    "lat": 47.9084031,
-    "lng": 9.8966021
+    "lat": 47.9074506,
+    "lng": 9.9066335
   },
   {
     "title": "Martinimarkt",
     "place": "Mühlacker",
     "date": "NOV",
     "description": "14\nNOV\nMärkte\nMartinimarkt\n\nMärkte | Mühlacker\n\n 14.11.2026\n\nDetails",
-    "lat": 48.9487402,
-    "lng": 8.8592103
+    "lat": 48.9466697,
+    "lng": 8.8413323
   },
   {
     "title": "Wintermarkt",
@@ -1116,8 +1116,8 @@ const EVENTS = [
     "place": "Pfullendorf",
     "date": "",
     "description": "14\nDEC\nMärkte\nNikolausmarkt\n\nMärkte | Pfullendorf\n\n 14.12.2026\n\nDetails",
-    "lat": 47.9232677,
-    "lng": 9.2500203
+    "lat": 47.924349,
+    "lng": 9.2559822
   },
   {
     "title": "Wintermarkt Schluchsee",
@@ -1156,8 +1156,8 @@ const EVENTS = [
     "place": "Pfullendorf",
     "date": "MAY",
     "description": "04\nMAY\nMärkte\nMaimarkt\n\nMärkte | Pfullendorf\n\n 04.05.2027\n\nDetails",
-    "lat": 47.9232677,
-    "lng": 9.2500203
+    "lat": 47.924349,
+    "lng": 9.2559822
   },
   {
     "title": "Flohmarkt",
