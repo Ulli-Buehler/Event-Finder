@@ -1,13 +1,5 @@
 const EVENTS = [
   {
-    "title": "Maimarkt",
-    "place": "Pfullendorf",
-    "date": "Sonntag",
-    "description": "04\nMAY\nMärkte\nMaimarkt\n\nMärkte | Pfullendorf\n\n 04.05.2026\n\nDetails",
-    "lat": 47.9267,
-    "lng": 9.2578
-  },
-  {
     "title": "Landpartie Schloss Monrepos",
     "place": "Ludwigsburg",
     "date": "Sonntag",
@@ -222,5 +214,13 @@ const EVENTS = [
     "description": "11\nAPR\nMärkte\nVerkaufsoffener Sonntag “See(h)reise”\n\nMärkte | Radolfzell am Bodensee\n\n 11.04.2027, 12:30 - 17:30 Uhr\n\nDer erste verkaufsoffene Sonntag des Jahres steht in Radolfzell stets unter dem Motto \"See(h)reise\".\n\nDetails",
     "lat": 47.7419,
     "lng": 8.97
+  },
+  {
+    "title": "Maimarkt",
+    "place": "Pfullendorf",
+    "date": "Sonntag",
+    "description": "04\nMAY\nMärkte\nMaimarkt\n\nMärkte | Pfullendorf\n\n 04.05.2027\n\nDetails",
+    "lat": 47.9267,
+    "lng": 9.2578
   }
 ];
