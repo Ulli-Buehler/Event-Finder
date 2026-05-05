@@ -1,157 +1,274 @@
-import { chromium } from "playwright";
-import fs from "fs";
+const fs = require("fs");
 
-const START_URL =
-  "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/?post_type=event&ort=Dettingen%20Teck&umkreis=30&region";
+async function run() {
 
-const GEO_CACHE_FILE = "./geo-cache.json";
-const EVENTS_FILE = "./events.js";
-
-console.log("➡️ Import gestartet");
-
-let geoCache = {};
-
-if (fs.existsSync(GEO_CACHE_FILE)) {
-  geoCache = JSON.parse(fs.readFileSync(GEO_CACHE_FILE, "utf8"));
-}
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-function extractPlace(text) {
-  const cleaned = text
-    .replace(/\n/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-
-  const match = cleaned.match(/Märkte\s*\|\s*([^|0-9]+)/);
-
-  if (match && match[1]) {
-    return match[1].trim();
-  }
-
-  return "Unbekannt";
-}
-
-function extractDate(text) {
-  const monthMatch = text.match(
-    /\b(JAN|FEB|MÄR|APR|MAY|JUN|JUL|AUG|SEP|OCT|OKT|NOV|DEZ)\b/i
+  const response = await fetch(
+    "https://www.veranstaltungen-bw.de/"
   );
 
-  return monthMatch ? monthMatch[1].toUpperCase() : "";
+  const html = await response.text();
+
+  const eventBlocks =
+    html.split('class="event-item"');
+
+  const EVENTS = [];
+
+  for (const block of eventBlocks) {
+
+    try {
+
+      const title =
+        extract(block, 'title="', '"') ||
+        extract(block, "<h3>", "</h3>");
+
+      const place =
+        extract(block, 'event-location">', "<") ||
+        "Unbekannt";
+
+      const rawText =
+        cleanup(stripHtml(block));
+
+      const dateInfo =
+        parseDateInfo(rawText);
+
+      const coords =
+        fakeGeo(place);
+
+      EVENTS.push({
+        title: cleanup(title),
+        place: cleanup(place),
+
+        date:
+          dateInfo.label ||
+
+        "",
+
+        dateStart:
+          dateInfo.start ||
+
+        null,
+
+        dateEnd:
+          dateInfo.end ||
+
+        null,
+
+        dateText:
+          dateInfo.dateText ||
+
+        "",
+
+        timeText:
+          dateInfo.timeText ||
+
+        "",
+
+        description: rawText,
+
+        lat: coords.lat,
+        lng: coords.lng
+      });
+
+    } catch (err) {
+
+      console.log("skip event");
+
+    }
+  }
+
+  fs.writeFileSync(
+    "./events-preview.js",
+    "const EVENTS = " +
+    JSON.stringify(EVENTS, null, 2)
+  );
+
+  console.log(
+    "events:",
+    EVENTS.length
+  );
 }
 
-async function geocodePlace(place) {
-  if (!place || place === "Unbekannt") return null;
+function extract(text, start, end) {
 
-  if (geoCache[place]) {
-    return geoCache[place];
-  }
+  const s = text.indexOf(start);
 
-  console.log("🌍 Geocode:", place);
+  if (s === -1) return "";
 
-  const url =
-    "https://nominatim.openstreetmap.org/search?format=json&limit=1&q=" +
-    encodeURIComponent(place + ", Baden-Württemberg, Deutschland");
+  const from = s + start.length;
 
-  const response = await fetch(url, {
-    headers: {
-      "User-Agent": "Event-Finder/1.0"
+  const e = text.indexOf(end, from);
+
+  if (e === -1) return "";
+
+  return text.substring(from, e);
+}
+
+function stripHtml(html) {
+
+  return html
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<\/p>/gi, "\n")
+    .replace(/<\/div>/gi, "\n")
+    .replace(/<[^>]+>/g, " ");
+}
+
+function cleanup(text) {
+
+  return text
+    .replace(/\s+\n/g, "\n")
+    .replace(/\n\s+/g, "\n")
+    .replace(/\n+/g, "\n")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function parseDateInfo(text) {
+
+  const lines =
+    text
+      .split("\n")
+      .map(l => l.trim())
+      .filter(Boolean);
+
+  let dateText = "";
+  let timeText = "";
+
+  for (const line of lines) {
+
+    if (
+      /\d{2}\.\d{2}\.\d{4}/.test(line)
+    ) {
+
+      dateText = line;
+
+      if (line.includes(",")) {
+
+        const parts = line.split(",");
+
+        dateText = parts[0].trim();
+
+        timeText =
+          parts
+            .slice(1)
+            .join(",")
+            .trim();
+      }
+
+      break;
     }
-  });
-
-  const data = await response.json();
-
-  await sleep(1100);
-
-  if (!data || !data[0]) {
-    console.log("⚠️ Keine Koordinaten:", place);
-    return null;
   }
 
-  const coords = {
-    lat: Number(data[0].lat),
-    lng: Number(data[0].lon)
+  let start = null;
+  let end = null;
+
+  if (dateText.includes(" - ")) {
+
+    const parts =
+      dateText.split(" - ");
+
+    start =
+      convertDate(parts[0]);
+
+    end =
+      convertDate(parts[1]);
+
+  } else if (dateText) {
+
+    start =
+      convertDate(dateText);
+
+    end =
+      convertDate(dateText);
+  }
+
+  return {
+    label:
+      monthLabel(start),
+
+    start,
+    end,
+    dateText,
+    timeText
+  };
+}
+
+function convertDate(text) {
+
+  const m =
+    text.match(
+      /(\d{2})\.(\d{2})\.(\d{4})/
+    );
+
+  if (!m) return null;
+
+  return `${m[3]}-${m[2]}-${m[1]}`;
+}
+
+function monthLabel(date) {
+
+  if (!date) return "";
+
+  const month =
+    date.split("-")[1];
+
+  const names = {
+    "01": "JAN",
+    "02": "FEB",
+    "03": "MAR",
+    "04": "APR",
+    "05": "MAY",
+    "06": "JUN",
+    "07": "JUL",
+    "08": "AUG",
+    "09": "SEP",
+    "10": "OCT",
+    "11": "NOV",
+    "12": "DEC"
   };
 
-  geoCache[place] = coords;
-
-  fs.writeFileSync(GEO_CACHE_FILE, JSON.stringify(geoCache, null, 2));
-
-  return coords;
+  return names[month] || "";
 }
 
-const browser = await chromium.launch({
-  headless: true
-});
+function fakeGeo(place) {
 
-const page = await browser.newPage();
+  const map = {
 
-const EVENTS = [];
+    "Kirchheim unter Teck":
+      { lat: 48.6463, lng: 9.4538 },
 
-for (let pageNum = 1; pageNum <= 11; pageNum++) {
-  const url =
-    pageNum === 1
-      ? START_URL
-      : `https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/${pageNum}/?post_type=event&ort=Dettingen%20Teck&umkreis=30&region`;
+    "Weilheim an der Teck":
+      { lat: 48.6154, lng: 9.5383 },
 
-  console.log("➡️ Lade:", url);
+    "Göppingen":
+      { lat: 48.7035, lng: 9.6526 },
 
-  await page.goto(url, {
-    waitUntil: "domcontentloaded",
-    timeout: 60000
-  });
+    "Tübingen":
+      { lat: 48.5216, lng: 9.0576 },
 
-  await page.waitForTimeout(3000);
+    "Reutlingen":
+      { lat: 48.4914, lng: 9.2043 },
 
-  const rawEvents = await page.evaluate(() => {
-    const items = [];
-    const cards = document.querySelectorAll("article");
+    "Schwäbisch Hall":
+      { lat: 49.1124, lng: 9.7371 },
 
-    cards.forEach(card => {
-      const title =
-        card.querySelector("h2, h3")?.innerText?.trim() || "";
+    "Bad Saulgau":
+      { lat: 48.0158, lng: 9.5010 },
 
-      if (!title) return;
+    "Wolfach":
+      { lat: 48.2950, lng: 8.2150 },
 
-      items.push({
-        title,
-        raw: card.innerText.trim()
-      });
-    });
+    "Überlingen am Bodensee":
+      { lat: 47.7667, lng: 9.1667 }
+  };
 
-    return items;
-  });
-
-  console.log(`➡️ Seite ${pageNum}: ${rawEvents.length} Events`);
-
-  for (const event of rawEvents) {
-    const place = extractPlace(event.raw);
-    const coords = await geocodePlace(place);
-
-    if (!coords) continue;
-
-    EVENTS.push({
-      title: event.title,
-      place,
-      date: extractDate(event.raw),
-      description: event.raw,
-      lat: coords.lat,
-      lng: coords.lng
-    });
+  if (map[place]) {
+    return map[place];
   }
+
+  return {
+    lat: 48.6463,
+    lng: 9.4538
+  };
 }
 
-await browser.close();
-
-console.log(`➡️ Gesamt: ${EVENTS.length}`);
-
-const output =
-  "const EVENTS = " +
-  JSON.stringify(EVENTS, null, 2) +
-  ";";
-
-fs.writeFileSync(EVENTS_FILE, output);
-
-console.log("➡️ events.js geschrieben");
+run();
