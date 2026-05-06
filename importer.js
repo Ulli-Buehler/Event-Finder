@@ -1,3 +1,5 @@
+const MAX_PAGES_FALLBACK = 11;
+
 import { chromium } from "playwright";
 import fs from "fs";
 
