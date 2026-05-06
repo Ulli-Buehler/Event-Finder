@@ -1,14 +1,18 @@
 // importer.js
-// CSV -> events.js mit Geocoding + korrekten Koordinaten
+// Playwright Importer + Geocoding + events.js Generator
 
 import fs from "fs";
-import path from "path";
-import csv from "csv-parser";
+import { chromium } from "playwright";
 
-const INPUT = "./data/events.csv";
 const OUTPUT = "./src/data/events.js";
 
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const SOURCES = [
+  "https://www.wasgehtapp.de/events",
+];
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 async function geocode(address) {
   try {
@@ -29,17 +33,17 @@ async function geocode(address) {
     const data = await res.json();
 
     if (!data?.length) {
-      console.log("❌ Kein Treffer:", address);
-      return { lat: null, lng: null };
+      return {
+        lat: null,
+        lng: null,
+      };
     }
 
     return {
       lat: Number(data[0].lat),
       lng: Number(data[0].lon),
     };
-  } catch (e) {
-    console.log("❌ Geocode Fehler:", address, e.message);
-
+  } catch {
     return {
       lat: null,
       lng: null,
@@ -47,104 +51,129 @@ async function geocode(address) {
   }
 }
 
-function normalize(row) {
-  const title = row.title || row.name || "";
-  const date = row.date || "";
-  const city = row.city || "";
-  const venue = row.venue || "";
-  const street = row.street || "";
-  const zip = row.zip || "";
-  const country = row.country || "Deutschland";
+async function scrapePage(page) {
+  return await page.evaluate(() => {
+    const cards = [...document.querySelectorAll("article, .event, .card")];
 
-  const address = [street, zip, city, country]
-    .filter(Boolean)
-    .join(", ");
+    return cards.map((el, index) => {
+      const text = (sel) =>
+        el.querySelector(sel)?.textContent?.trim() || "";
 
-  return {
-    id:
-      row.id ||
-      title
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-|-$/g, ""),
+      const attr = (sel, a) =>
+        el.querySelector(sel)?.getAttribute(a) || "";
 
-    title,
-    date,
-    city,
-    venue,
-    street,
-    zip,
-    country,
-    address,
+      const title =
+        text("h1") ||
+        text("h2") ||
+        text("h3");
 
-    image:
-      row.image ||
-      "/images/default.jpg",
+      const city =
+        text(".city") ||
+        text(".location");
 
-    url: row.url || "",
-    category: row.category || "Event",
-  };
+      const venue =
+        text(".venue");
+
+      const street =
+        text(".street");
+
+      const zip =
+        text(".zip");
+
+      const date =
+        text("time") ||
+        text(".date");
+
+      const image =
+        attr("img", "src");
+
+      const url =
+        attr("a", "href");
+
+      return {
+        id: `event-${index + 1}`,
+        title,
+        city,
+        venue,
+        street,
+        zip,
+        date,
+        image,
+        url,
+      };
+    });
+  });
 }
 
 async function run() {
-  const rows = [];
-
-  await new Promise((resolve, reject) => {
-    fs.createReadStream(INPUT)
-      .pipe(csv())
-      .on("data", (row) => rows.push(normalize(row)))
-      .on("end", resolve)
-      .on("error", reject);
+  const browser = await chromium.launch({
+    headless: true,
   });
 
-  console.log(`📦 ${rows.length} Events geladen`);
+  const page = await browser.newPage();
 
-  const finalEvents = [];
+  const events = [];
 
-  for (let i = 0; i < rows.length; i++) {
-    const ev = rows[i];
+  for (const source of SOURCES) {
+    console.log("🌍", source);
 
-    console.log(`📍 ${i + 1}/${rows.length}: ${ev.title}`);
-
-    const geo = await geocode(ev.address);
-
-    finalEvents.push({
-      ...ev,
-      lat: geo.lat,
-      lng: geo.lng,
+    await page.goto(source, {
+      waitUntil: "networkidle",
+      timeout: 60000,
     });
 
-    await sleep(1100); // Nominatim Rate Limit
+    const scraped = await scrapePage(page);
+
+    for (const ev of scraped) {
+      const address = [
+        ev.street,
+        ev.zip,
+        ev.city,
+        "Deutschland",
+      ]
+        .filter(Boolean)
+        .join(", ");
+
+      const geo = await geocode(address);
+
+      events.push({
+        ...ev,
+        address,
+        lat: geo.lat,
+        lng: geo.lng,
+      });
+
+      console.log(
+        "📍",
+        ev.title,
+        geo.lat,
+        geo.lng
+      );
+
+      await sleep(1100);
+    }
   }
+
+  await browser.close();
 
   const content =
     `export const events = ` +
-    JSON.stringify(finalEvents, null, 2) +
+    JSON.stringify(events, null, 2) +
     `;\n`;
 
-  fs.mkdirSync(path.dirname(OUTPUT), { recursive: true });
+  fs.mkdirSync("./src/data", {
+    recursive: true,
+  });
 
-  fs.writeFileSync(OUTPUT, content, "utf8");
-
-  console.log("✅ events.js erzeugt:", OUTPUT);
-
-  const missing = finalEvents.filter(
-    (e) => e.lat === null || e.lng === null
+  fs.writeFileSync(
+    OUTPUT,
+    content,
+    "utf8"
   );
 
   console.log(
-    `📍 Mit Koordinaten: ${finalEvents.length - missing.length}`
+    `✅ ${events.length} Events gespeichert`
   );
-
-  console.log(`❌ Ohne Koordinaten: ${missing.length}`);
-
-  if (missing.length) {
-    console.log("\nFehlende Koordinaten:");
-
-    missing.forEach((m) => {
-      console.log("-", m.title, "|", m.address);
-    });
-  }
 }
 
 run();
