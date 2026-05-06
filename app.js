@@ -1,4 +1,4 @@
-console.log("APP VERSION: collapsible-category-menu-v1")
+console.log("APP VERSION: stable-clean-v1");
 
 let userPos = [48.6167, 9.45];
 let radiusKm = 30;
@@ -26,9 +26,12 @@ function nextSundayIso() {
 
 const map = L.map("map").setView(userPos, 9);
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: "© OpenStreetMap"
-}).addTo(map);
+L.tileLayer(
+  "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  {
+    attribution: "© OpenStreetMap"
+  }
+).addTo(map);
 
 let radiusCircle = L.circle(userPos, {
   radius: radiusKm * 1000,
@@ -85,7 +88,7 @@ function distanceKm(lat1, lon1, lat2, lon2) {
   const R = 6371;
 
   const dLat = (lat2 - lat1) * Math.PI / 180;
-  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const dLon = (lat2 - lat1) * Math.PI / 180;
 
   const a =
     Math.sin(dLat / 2) ** 2 +
@@ -94,7 +97,10 @@ function distanceKm(lat1, lon1, lat2, lon2) {
     Math.sin(dLon / 2) ** 2;
 
   return Math.round(
-    R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+    R * 2 * Math.atan2(
+      Math.sqrt(a),
+      Math.sqrt(1 - a)
+    )
   );
 }
 
@@ -174,7 +180,9 @@ function matchesCategory(event) {
 
 function clearMarkers() {
 
-  markers.forEach(m => map.removeLayer(m));
+  markers.forEach(marker => {
+    map.removeLayer(marker);
+  });
 
   markers.length = 0;
 }
@@ -201,7 +209,7 @@ function openSheet(event) {
     `<strong>${event.place || "Ohne Standort"}</strong>`;
 
   document.getElementById("sheet-date").innerHTML =
-    `${formatDate(event)}${event.realDistanceText ? " • " + event.realDistanceText : ""}`;
+    `${formatDate(event)} • ${event.realDistanceText}`;
 
   document.getElementById("sheet-description").innerText =
     event.summary ||
@@ -226,14 +234,17 @@ function render() {
 
   radiusKm = Number(radiusSlider.value);
 
-  radiusLabel.innerText = radiusKm + " km";
+  radiusLabel.innerText =
+    radiusKm + " km";
 
   statusText.innerText =
     "Radius " + radiusKm + " km";
 
   radiusCircle.setLatLng(userPos);
 
-  radiusCircle.setRadius(radiusKm * 1000);
+  radiusCircle.setRadius(
+    radiusKm * 1000
+  );
 
   userMarker.setLatLng(userPos);
 
@@ -262,7 +273,8 @@ function render() {
         ...event,
         hasLocation: true,
         realDistance,
-        realDistanceText: realDistance + " km"
+        realDistanceText:
+          realDistance + " km"
       };
     })
 
@@ -272,81 +284,92 @@ function render() {
 
     .filter(event => {
 
-      if (!event.hasLocation) return true;
+      if (!event.hasLocation) {
+        return true;
+      }
 
-      return event.realDistance <= radiusKm;
+      return (
+        event.realDistance <= radiusKm
+      );
     })
 
     .sort((a, b) => {
 
-      if (!a.hasLocation && b.hasLocation) return 1;
+      if (!a.hasLocation && b.hasLocation) {
+        return 1;
+      }
 
-      if (a.hasLocation && !b.hasLocation) return -1;
+      if (a.hasLocation && !b.hasLocation) {
+        return -1;
+      }
 
-      if (!a.hasLocation && !b.hasLocation) return 0;
+      if (!a.hasLocation && !b.hasLocation) {
+        return 0;
+      }
 
       return a.realDistance - b.realDistance;
     });
 
-  const existingCounter =
-    document.getElementById("eventCounter");
+  const oldCounter =
+    document.getElementById(
+      "eventCounter"
+    );
 
-  if (existingCounter) {
-    existingCounter.remove();
+  if (oldCounter) {
+    oldCounter.remove();
   }
 
-  const existingCategoryBar =
-    document.querySelector(".category-bar");
+  const oldToggle =
+    document.querySelector(
+      ".category-toggle"
+    );
 
-  if (existingCategoryBar) {
-    existingCategoryBar.remove();
+  if (oldToggle) {
+    oldToggle.remove();
   }
 
-  const existingToggle =
-    document.querySelector(".category-toggle");
+  const oldBar =
+    document.querySelector(
+      ".category-bar"
+    );
 
-  if (existingToggle) {
-    existingToggle.remove();
+  if (oldBar) {
+    oldBar.remove();
   }
 
-  const counter = document.createElement("div");
+  const counter =
+    document.createElement("div");
 
   counter.id = "eventCounter";
 
-  counter.className = "event-counter";
+  counter.className =
+    "event-meta";
 
   counter.innerText =
     `${visibleEvents.length} von ${EVENTS.length} Events sichtbar`;
 
   top.appendChild(counter);
 
-  const allCategories = [
-    ...new Set(
-      EVENTS
-        .map(e => e.category)
-        .filter(Boolean)
-    )
-  ].sort();
-
-  const toggleButton =
+  const toggle =
     document.createElement("button");
 
-  toggleButton.className =
+  toggle.className =
     "category-toggle";
 
-  toggleButton.innerText =
+  toggle.innerText =
     categoriesOpen
       ? "Kategorien ausblenden"
       : "Kategorien anzeigen";
 
-  toggleButton.onclick = () => {
+  toggle.onclick = () => {
 
-    categoriesOpen = !categoriesOpen;
+    categoriesOpen =
+      !categoriesOpen;
 
     render();
   };
 
-  top.appendChild(toggleButton);
+  top.appendChild(toggle);
 
   if (categoriesOpen) {
 
@@ -356,7 +379,16 @@ function render() {
     categoryBar.className =
       "category-bar";
 
-    allCategories.forEach(category => {
+    const categories =
+      [
+        ...new Set(
+          EVENTS
+            .map(e => e.category)
+            .filter(Boolean)
+        )
+      ].sort();
+
+    categories.forEach(category => {
 
       const btn =
         document.createElement("button");
@@ -373,9 +405,16 @@ function render() {
         if (
           ACTIVE_CATEGORIES.has(category)
         ) {
-          ACTIVE_CATEGORIES.delete(category);
+
+          ACTIVE_CATEGORIES.delete(
+            category
+          );
+
         } else {
-          ACTIVE_CATEGORIES.add(category);
+
+          ACTIVE_CATEGORIES.add(
+            category
+          );
         }
 
         render();
@@ -391,14 +430,15 @@ function render() {
 
     if (event.hasLocation) {
 
-      const marker = L.marker([
-        event.lat,
-        event.lng
-      ])
+      const marker =
+        L.marker([
+          event.lat,
+          event.lng
+        ])
         .addTo(map)
-        .on("click", () =>
-          openSheet(event)
-        );
+        .on("click", () => {
+          openSheet(event);
+        });
 
       markers.push(marker);
     }
@@ -411,8 +451,9 @@ function render() {
         ? "card"
         : "card no-location";
 
-    card.onclick = () =>
+    card.onclick = () => {
       openSheet(event);
+    };
 
     card.innerHTML = `
       <div class="card-image">
@@ -425,15 +466,17 @@ function render() {
           ${event.title || "Event"}
         </h2>
 
-        <p>
+        <p class="card-category">
           ${event.category || ""}
-          <br>
+        </p>
 
+        <p class="card-place">
           ${event.place || "Ohne Standort"}
-          ${event.realDistanceText ? " • " + event.realDistanceText : ""}
+          •
+          ${event.realDistanceText}
+        </p>
 
-          <br>
-
+        <p class="card-date">
           ${formatDate(event)}
         </p>
 
@@ -474,12 +517,15 @@ refreshBtn.onclick = async () => {
 
   try {
 
-    await fetch("/api/trigger-import", {
-      method: "POST"
-    });
+    await fetch(
+      "/api/trigger-import",
+      {
+        method: "POST"
+      }
+    );
 
     importStatus.innerText =
-      "✅ Import gestartet. Bitte kurz warten und neu laden.";
+      "✅ Import gestartet";
 
   } catch (err) {
 
@@ -494,7 +540,8 @@ radiusSlider.oninput = render;
 
 dateSelect.onchange = () => {
 
-  dateMode = dateSelect.value;
+  dateMode =
+    dateSelect.value;
 
   render();
 };
