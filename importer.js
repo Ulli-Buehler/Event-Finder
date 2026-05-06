@@ -1,5 +1,3 @@
-importer.js komplett ersetzen:
-
 import { chromium } from "playwright";
 import fs from "fs";
 const START_URL =
