@@ -83,6 +83,19 @@ function renderCategoryButtons() {
 
 const markers = [];
 
+
+const ACTIVE_CATEGORIES = new Set([
+  "Feste",
+  "Märkte"
+]);
+
+const eventMeta = document.createElement("div");
+eventMeta.className = "event-meta";
+importStatus.insertAdjacentElement("afterend", eventMeta);
+
+const categoryBar = document.createElement("div");
+categoryBar.className = "category-bar";
+eventMeta.insertAdjacentElement("afterend", categoryBar);
 const sheet = document.createElement("div");
 
 sheet.className = "sheet";
