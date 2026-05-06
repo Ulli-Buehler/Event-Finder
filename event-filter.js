@@ -3,5 +3,12 @@ const HIDDEN_EVENT_URLS = new Set([
 ]);
 
 function isHiddenEvent(event) {
-  return HIDDEN_EVENT_URLS.has(event.detailsUrl);
+
+  if (!event.detailsUrl) {
+    return false;
+  }
+
+  return HIDDEN_EVENT_URLS.has(
+    event.detailsUrl.trim()
+  );
 }
