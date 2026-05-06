@@ -1,3 +1,5 @@
+console.log("APP VERSION: categories-30km-200max-v1");
+
 let userPos = [48.6167, 9.45];
 let radiusKm = 30;
 let dateMode = "all";
@@ -247,6 +249,7 @@ function render() {
     .filter(matchesCategory)
     .filter(event => {
       if (!event.hasLocation) return true;
+
       return event.realDistance <= radiusKm;
     })
     .sort((a, b) => {
