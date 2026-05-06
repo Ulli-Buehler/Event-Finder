@@ -1,654 +1,332 @@
-{
-  "Ludwigsburg": {
-    "lat": 48.8953937,
-    "lng": 9.1895147
-  },
-  "Schwäbisch Hall": {
-    "lat": 49.1124305,
-    "lng": 9.7371246
-  },
-  "Tübingen": {
-    "lat": 48.5203263,
-    "lng": 9.053596
-  },
-  "Frickenhausen": {
-    "lat": 48.5935116,
-    "lng": 9.3603596
-  },
-  "Bad Saulgau": {
-    "lat": 48.0158071,
-    "lng": 9.5010309
-  },
-  "Weilheim an der Teck": {
-    "lat": 48.6153949,
-    "lng": 9.5383156
-  },
-  "Radolfzell am Bodensee": {
-    "lat": 47.7372802,
-    "lng": 8.9702755
-  },
-  "Eppingen": {
-    "lat": 49.1369473,
-    "lng": 8.90956
-  },
-  "Reutlingen": {
-    "lat": 48.4919508,
-    "lng": 9.2114144
-  },
-  "Sinsheim": {
-    "lat": 49.2531222,
-    "lng": 8.8769914
-  },
-  "Göppingen": {
-    "lat": 48.7031377,
-    "lng": 9.6541116
-  },
-  "Ravensburg": {
-    "lat": 47.7811014,
-    "lng": 9.612468
-  },
-  "Endingen": {
-    "lat": 48.1411284,
-    "lng": 7.703099
-  },
-  "Hausach": {
-    "lat": 48.2836305,
-    "lng": 8.174972
-  },
-  "Wolfach": {
-    "lat": 48.2985845,
-    "lng": 8.222608
-  },
-  "Dischingen": {
-    "lat": 48.6986742,
-    "lng": 10.3570233
-  },
-  "Löwenstein": {
-    "lat": 49.0953123,
-    "lng": 9.3809489
-  },
-  "Trossingen": {
-    "lat": 48.07506,
-    "lng": 8.6362987
-  },
-  "Vogtsburg im Kaiserstuhl": {
-    "lat": 48.0826236,
-    "lng": 7.6236716
-  },
-  "Ettlingen": {
-    "lat": 48.9414188,
-    "lng": 8.4076347
-  },
-  "Waiblingen": {
-    "lat": 48.8325659,
-    "lng": 9.3163822
-  },
-  "Oberndorf am Neckar": {
-    "lat": 48.2908613,
-    "lng": 8.5711222
-  },
-  "Dettingen an der Erms": {
-    "lat": 48.5289138,
-    "lng": 9.346093
-  },
-  "Ulm/Neu-Ulm": {
-    "lat": 48.3901,
-    "lng": 9.98614
-  },
-  "Sipplingen": {
-    "lat": 47.7966525,
-    "lng": 9.0967997
-  },
-  "Rosenfeld": {
-    "lat": 48.2880909,
-    "lng": 8.7233324
-  },
-  "Calw": {
-    "lat": 48.7142691,
-    "lng": 8.7397624
-  },
-  "Altheim": {
-    "lat": 48.5808015,
-    "lng": 10.0271338
-  },
-  "Kirchberg an der Jagst": {
-    "lat": 49.2044838,
-    "lng": 9.9817296
-  },
-  "Sindelfingen": {
-    "lat": 48.7084162,
-    "lng": 9.0035455
-  },
-  "Plüderhausen": {
-    "lat": 48.7937467,
-    "lng": 9.6025045
-  },
-  "Schönau im Schwarzwald": {
-    "lat": 47.7861792,
-    "lng": 7.8933977
-  },
-  "Bad Wimpfen": {
-    "lat": 49.2303439,
-    "lng": 9.1621599
-  },
-  "Stuttgart": {
-    "lat": 48.7784485,
-    "lng": 9.1800132
-  },
-  "Villingen-Schwenningen": {
-    "lat": 48.063152,
-    "lng": 8.4929618
-  },
-  "Immenstaad am Bodensee": {
-    "lat": 47.6658914,
-    "lng": 9.3676364
-  },
-  "Bretten": {
-    "lat": 49.0366265,
-    "lng": 8.7068077
-  },
-  "Aalen": {
-    "lat": 48.8375607,
-    "lng": 10.0929593
-  },
-  "Kehl": {
-    "lat": 48.5728929,
-    "lng": 7.8109768
-  },
-  "Pforzheim": {
-    "lat": 48.890934,
-    "lng": 8.7025509
-  },
-  "Isny im Allgäu": {
-    "lat": 47.7031269,
-    "lng": 10.0697593
-  },
-  "Wolfegg": {
-    "lat": 47.8294848,
-    "lng": 9.7893371
-  },
-  "Fichtenberg": {
-    "lat": 48.986167,
-    "lng": 9.7122996
-  },
-  "Blaufelden": {
-    "lat": 49.2970043,
-    "lng": 9.9737329
-  },
-  "Nellingen": {
-    "lat": 48.542181,
-    "lng": 9.7911953
-  },
-  "Emmendingen": {
-    "lat": 48.1206565,
-    "lng": 7.850993
-  },
-  "Bietigheim-Bissingen": {
-    "lat": 48.9493243,
-    "lng": 9.1364229
-  },
-  "Rechberghausen": {
-    "lat": 48.7304982,
-    "lng": 9.6441203
-  },
-  "Zwiefalten": {
-    "lat": 48.2331643,
-    "lng": 9.4614966
-  },
-  "Mosbach": {
-    "lat": 49.3521085,
-    "lng": 9.1460205
-  },
-  "Uhldingen-Mühlhofen": {
-    "lat": 47.7348858,
-    "lng": 9.2400277
-  },
-  "Überlingen": {
-    "lat": 47.7664456,
-    "lng": 9.1605106
-  },
-  "Neckargemünd": {
-    "lat": 49.3954054,
-    "lng": 8.7965893
-  },
-  "Furtwangen": {
-    "lat": 48.0512198,
-    "lng": 8.2073776
-  },
-  "Langenburg": {
-    "lat": 49.2531928,
-    "lng": 9.8477788
-  },
-  "Esslingen am Neckar": {
-    "lat": 48.7427584,
-    "lng": 9.3071685
-  },
-  "Pfedelbach": {
-    "lat": 49.1781,
-    "lng": 9.505
-  },
-  "Egenhausen": {
-    "lat": 48.5654316,
-    "lng": 8.6176923
-  },
-  "Güglingen": {
-    "lat": 49.0668087,
-    "lng": 8.9999838
-  },
-  "Sigmaringen": {
-    "lat": 48.0869139,
-    "lng": 9.2165039
-  },
-  "Heubach": {
-    "lat": 48.7888674,
-    "lng": 9.9345819
-  },
-  "Leibertingen": {
-    "lat": 48.0438891,
-    "lng": 9.0125683
-  },
-  "Ühlingen-Birkendorf": {
-    "lat": 47.7252375,
-    "lng": 8.301544
-  },
-  "Grafenhausen": {
-    "lat": 47.7744797,
-    "lng": 8.2606207
-  },
-  "Welzheim": {
-    "lat": 48.8749241,
-    "lng": 9.6347406
-  },
-  "Trochtelfingen": {
-    "lat": 48.307755,
-    "lng": 9.2448375
-  },
-  "Filderstadt": {
-    "lat": 48.6664,
-    "lng": 9.2199647
-  },
-  "Schutterwald": {
-    "lat": 48.4563397,
-    "lng": 7.8840188
-  },
-  "Munderkingen": {
-    "lat": 48.2358225,
-    "lng": 9.6441788
-  },
-  "Müllheim": {
-    "lat": 47.810102,
-    "lng": 7.5995606
-  },
-  "Bad Schussenried": {
-    "lat": 48.0047363,
-    "lng": 9.6561098
-  },
-  "Kandern": {
-    "lat": 47.714697,
-    "lng": 7.6610865
-  },
-  "Münsingen": {
-    "lat": 48.4128592,
-    "lng": 9.4947894
-  },
-  "Ostfildern": {
-    "lat": 48.7178603,
-    "lng": 9.2630693
-  },
-  "Ebhausen-Rotfelden": {
-    "lat": 48.6064129,
-    "lng": 8.6983224
-  },
-  "Murrhardt": {
-    "lat": 48.9797657,
-    "lng": 9.5794661
-  },
-  "Ulm": {
-    "lat": 48.3984968,
-    "lng": 9.9912458
-  },
-  "Ehingen (Donau)": {
-    "lat": 48.2828519,
-    "lng": 9.7262175
-  },
-  "Meckenbeuren": {
-    "lat": 47.6999205,
-    "lng": 9.560628
-  },
-  "Laufenburg (Baden)": {
-    "lat": 47.5671976,
-    "lng": 8.0599414
-  },
-  "Gechingen": {
-    "lat": 48.6952903,
-    "lng": 8.8288715
-  },
-  "Schramberg": {
-    "lat": 48.225478,
-    "lng": 8.3852168
-  },
-  "Heilbronn": {
-    "lat": 49.142291,
-    "lng": 9.218655
-  },
-  "Burladingen": {
-    "lat": 48.2892852,
-    "lng": 9.1134689
-  },
-  "Gengenbach": {
-    "lat": 48.4035425,
-    "lng": 8.0153059
-  },
-  "Östringen": {
-    "lat": 49.2187372,
-    "lng": 8.7102268
-  },
-  "Überlingen am Bodensee": {
-    "lat": 47.7664456,
-    "lng": 9.1605106
-  },
-  "Pfullendorf": {
-    "lat": 47.924349,
-    "lng": 9.2559822
-  },
-  "Donaueschingen": {
-    "lat": 47.9534194,
-    "lng": 8.4959257
-  },
-  "Nürtingen": {
-    "lat": 48.6265854,
-    "lng": 9.3365463
-  },
-  "Kürnbach": {
-    "lat": 49.0775127,
-    "lng": 8.8456259
-  },
-  "Laichingen": {
-    "lat": 48.4896773,
-    "lng": 9.6861474
-  },
-  "Herbolzheim": {
-    "lat": 48.2212923,
-    "lng": 7.7777553
-  },
-  "Eschenbach": {
-    "lat": 48.6622903,
-    "lng": 9.676742
-  },
-  "Wertheim": {
-    "lat": 49.7599825,
-    "lng": 9.5166598
-  },
-  "Gerlingen": {
-    "lat": 48.7983947,
-    "lng": 9.0624386
-  },
-  "Bad Wurzach": {
-    "lat": 47.9074506,
-    "lng": 9.9066335
-  },
-  "Mühlacker": {
-    "lat": 48.9466697,
-    "lng": 8.8413323
-  },
-  "Wehingen": {
-    "lat": 48.1484878,
-    "lng": 8.7933022
-  },
-  "Mengen": {
-    "lat": 48.0498964,
-    "lng": 9.3321246
-  },
-  "Hornberg": {
-    "lat": 48.2128411,
-    "lng": 8.2316356
-  },
-  "Rielasingen-Worblingen": {
-    "lat": 47.729588,
-    "lng": 8.8453483
-  },
-  "Schopfheim": {
-    "lat": 47.6500525,
-    "lng": 7.8216997
-  },
-  "Hüfingen": {
-    "lat": 47.9269484,
-    "lng": 8.4892187
-  },
-  "Schluchsee": {
-    "lat": 47.8185928,
-    "lng": 8.177035
-  },
-  "Kirchheim unter Teck": {
-    "lat": 48.6480545,
-    "lng": 9.4510227
-  },
-  "Lonsee": {
-    "lat": 48.5432227,
-    "lng": 9.9167965
-  },
-  "Bad Urach": {
-    "lat": 48.4937953,
-    "lng": 9.3978845
-  },
-  "Neuhausen ob Eck": {
-    "lat": 47.9713008,
-    "lng": 8.9284465
-  },
-  "Ellwangen": {
-    "lat": 48.9615975,
-    "lng": 10.131975
-  },
-  "Waldkirch": {
-    "lat": 48.0939396,
-    "lng": 7.9610142
-  },
-  "Allensbach": {
-    "lat": 47.7168668,
-    "lng": 9.0687005
-  },
-  "Ottenhöfen im Schwarzwald": {
-    "lat": 48.5658379,
-    "lng": 8.1521367
-  },
-  "Tuttlingen": {
-    "lat": 47.9844315,
-    "lng": 8.8186606
-  },
-  "Worms": {
-    "lat": 49.5057503,
-    "lng": 8.5075773
-  },
-  "Heilbronn-Innenstadt": {
-    "lat": 49.1388695,
-    "lng": 9.2186679
-  },
-  "Karlsruhe": {
-    "lat": 49.0068705,
-    "lng": 8.4034195
-  },
-  "Bad Krozingen": {
-    "lat": 47.9159087,
-    "lng": 7.6999845
-  },
-  "Schwetzingen": {
-    "lat": 49.3832919,
-    "lng": 8.5735135
-  },
-  "Breisach": {
-    "lat": 48.026872,
-    "lng": 7.5894944
-  },
-  "Elzach": {
-    "lat": 48.1738732,
-    "lng": 8.0713324
-  },
-  "Dormettingen": {
-    "lat": 48.2385691,
-    "lng": 8.773398
-  },
-  "Bad Schönborn": {
-    "lat": 49.210803,
-    "lng": 8.6548779
-  },
-  "Schwarzwaldregion Belchen": {
-    "lat": 47.7867901,
-    "lng": 7.8936999
-  },
-  "Konstanz": {
-    "lat": 47.659216,
-    "lng": 9.1750718
-  },
-  "Baiersbronn": {
-    "lat": 48.5069519,
-    "lng": 8.3720124
-  },
-  "Allensbach-Hegne": {
-    "lat": 47.7073256,
-    "lng": 9.0914316
-  },
-  "Vogtsbauernhof": {
-    "lat": 48.2719975,
-    "lng": 8.1971784
-  },
-  "Waldkirch-Buchholz": {
-    "lat": 48.0821014,
-    "lng": 7.9166354
-  },
-  "Zaberfeld": {
-    "lat": 49.0581972,
-    "lng": 8.9266871
-  },
-  "Seebach": {
-    "lat": 48.5762423,
-    "lng": 8.1711181
-  },
-  "Öhningen": {
-    "lat": 47.6617131,
-    "lng": 8.8873571
-  },
-  "Gaienhofen": {
-    "lat": 47.6821346,
-    "lng": 8.9818583
-  },
-  "Stadt Konstanz": {
-    "lat": 47.6605267,
-    "lng": 9.164694
-  },
-  "Maulbronn": {
-    "lat": 48.9986948,
-    "lng": 8.8038083
-  },
-  "Dobel": {
-    "lat": 48.7969905,
-    "lng": 8.4936307
-  },
-  "Eberbach": {
-    "lat": 49.4635303,
-    "lng": 8.9855203
-  },
-  "Mai": {
-    "lat": 48.4925709,
-    "lng": 9.399983
-  },
-  "Immenstaad": {
-    "lat": 47.6048795,
-    "lng": 9.531927
-  },
-  "Friedrichshafen": {
-    "lat": 47.6500279,
-    "lng": 9.4800858
-  },
-  "Öhringen": {
-    "lat": 49.2005034,
-    "lng": 9.5024397
-  },
-  "Wangen im Allgäu": {
-    "lat": 47.6856552,
-    "lng": 9.8342247
-  },
-  "Tettnang": {
-    "lat": 47.6716558,
-    "lng": 9.5891158
-  },
-  "Illmensee": {
-    "lat": 47.864499,
-    "lng": 9.3766192
-  },
-  "Nonnenhorn": {
-    "lat": 47.6046208,
-    "lng": 9.5316534
-  },
-  "Bruchsal": {
-    "lat": 49.124118,
-    "lng": 8.5980244
-  },
-  "Wasserburg (Bodensee)": {
-    "lat": 47.6045609,
-    "lng": 9.5316769
-  },
-  "Unterjesingen": {
-    "lat": 48.5267277,
-    "lng": 8.9796759
-  },
-  "Singen": {
-    "lat": 47.7617515,
-    "lng": 8.8348709
-  },
-  "Bernau im Schwarzwald": {
-    "lat": 47.8057268,
-    "lng": 8.0345882
-  },
-  "Forbach": {
-    "lat": 48.6790385,
-    "lng": 8.3594916
-  },
-  "Menningen": {
-    "lat": 48.0080449,
-    "lng": 9.1607499
-  },
-  "Hockenheim": {
-    "lat": 49.3188892,
-    "lng": 8.5475467
-  },
-  "Hinterzarten": {
-    "lat": 47.9063718,
-    "lng": 8.103622
-  },
-  "Herrischried": {
-    "lat": 47.6665531,
-    "lng": 8.0006455
-  },
-  "Cleebronn": {
-    "lat": 49.0446069,
-    "lng": 9.0381355
-  },
-  "Sternenfels": {
-    "lat": 49.0499637,
-    "lng": 8.8510968
-  },
-  "Schliengen": {
-    "lat": 47.7556795,
-    "lng": 7.5770906
-  },
-  "Burladingen-Hörschwag": {
-    "lat": 48.3158323,
-    "lng": 9.1979962
-  },
-  "Donaubergland": {
-    "lat": 48.1129533,
-    "lng": 8.8906795
-  },
-  "Sasbachwalden": {
-    "lat": 48.6186096,
-    "lng": 8.1280222
-  },
-  "Weilheim/Teck": {
-    "lat": 48.6205216,
-    "lng": 9.5351863
-  },
-  "Schömberg": {
-    "lat": 48.211058,
-    "lng": 8.7604633
-  }
+import { chromium } from "playwright";
+import fs from "fs";
+
+const START_URL =
+  "https://www.veranstaltung-baden-wuerttemberg.de/?post_type=event&kategorie=&ort=&region=&von=&bis=";
+
+const BASE_PAGE_URL =
+  "https://www.veranstaltung-baden-wuerttemberg.de/page";
+
+const GEO_CACHE_FILE = "./geo-cache.json";
+
+const MAX_PAGES_FALLBACK = 600;
+const PAGE_DELAY_MS = 1200;
+
+let geoCache = {};
+
+if (fs.existsSync(GEO_CACHE_FILE)) {
+  geoCache = JSON.parse(
+    fs.readFileSync(GEO_CACHE_FILE, "utf8")
+  );
 }
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function toIsoDate(text) {
+  const match = text.match(/(\d{2})\.(\d{2})\.(\d{4})/);
+  if (!match) return null;
+  return `${match[3]}-${match[2]}-${match[1]}`;
+}
+
+function monthLabel(isoDate) {
+  if (!isoDate) return "";
+
+  const month = isoDate.split("-")[1];
+
+  const map = {
+    "01": "JAN",
+    "02": "FEB",
+    "03": "MAR",
+    "04": "APR",
+    "05": "MAY",
+    "06": "JUN",
+    "07": "JUL",
+    "08": "AUG",
+    "09": "SEP",
+    "10": "OCT",
+    "11": "NOV",
+    "12": "DEC"
+  };
+
+  return map[month] || "";
+}
+
+function parseDateLine(line) {
+  let dateText = line.trim();
+  let timeText = "";
+
+  if (dateText.includes(",")) {
+    const parts = dateText.split(",");
+    dateText = parts[0].trim();
+    timeText = parts.slice(1).join(",").trim();
+  }
+
+  let dateStart = null;
+  let dateEnd = null;
+
+  if (dateText.includes(" - ")) {
+    const parts = dateText.split(" - ");
+    dateStart = toIsoDate(parts[0]);
+    dateEnd = toIsoDate(parts[1]);
+  } else {
+    dateStart = toIsoDate(dateText);
+    dateEnd = dateStart;
+  }
+
+  return {
+    dateText,
+    timeText,
+    dateStart,
+    dateEnd,
+    date: monthLabel(dateStart)
+  };
+}
+
+function parseRawEvent(raw, fallbackTitle) {
+  const lines = raw
+    .split("\n")
+    .map(line => line.trim())
+    .filter(Boolean);
+
+  const day = lines[0] || "";
+  const month = lines[1] || "";
+  const category = lines[2] || "";
+  const title = lines[3] || fallbackTitle || "";
+
+  let place = "Unbekannt";
+  let categoryLine = "";
+
+  const expectedPrefix = category + " |";
+
+  for (const line of lines) {
+    if (line.startsWith(expectedPrefix)) {
+      categoryLine = line;
+
+      const parts = line
+        .split("|")
+        .map(p => p.trim());
+
+      place = parts[1] || "Unbekannt";
+      break;
+    }
+  }
+
+  let dateLine = "";
+  let dateLineIndex = -1;
+
+  for (let i = 0; i < lines.length; i++) {
+    if (/\d{2}\.\d{2}\.\d{4}/.test(lines[i])) {
+      dateLine = lines[i];
+      dateLineIndex = i;
+      break;
+    }
+  }
+
+  const dateInfo = parseDateLine(dateLine);
+
+  let summary = "";
+
+  if (dateLineIndex >= 0) {
+    const afterDate = lines.slice(dateLineIndex + 1);
+    const useful = afterDate.filter(line => line !== "Details");
+    summary = useful.join("\n").trim();
+  }
+
+  return {
+    title,
+    category,
+    place,
+    categoryLine,
+    day,
+    month,
+    ...dateInfo,
+    summary,
+    description: raw
+  };
+}
+
+function getCachedCoords(place) {
+  if (!place || place === "Unbekannt") {
+    return null;
+  }
+
+  return geoCache[place] || null;
+}
+
+function pageUrl(pageNum) {
+  if (pageNum === 1) {
+    return START_URL;
+  }
+
+  return `${BASE_PAGE_URL}/${pageNum}/?post_type=event&kategorie=&ort=&region=&von=&bis=`;
+}
+
+async function detectMaxPages(page) {
+  const maxPages = await page.evaluate(() => {
+    const text = document.body.innerText || "";
+    const matches = text.match(/\b\d+\b/g) || [];
+
+    const numbers = matches
+      .map(n => Number(n))
+      .filter(n => Number.isInteger(n));
+
+    const likelyPages = numbers.filter(n => n > 1 && n < 2000);
+
+    if (!likelyPages.length) {
+      return null;
+    }
+
+    return Math.max(...likelyPages);
+  });
+
+  if (!maxPages || maxPages < 2) {
+    return MAX_PAGES_FALLBACK;
+  }
+
+  return maxPages;
+}
+
+console.log("➡️ Import gestartet");
+console.log("➡️ Geocoding-Modus: nur Cache, keine Live-Abfragen");
+
+const browser = await chromium.launch({
+  headless: true
+});
+
+const page = await browser.newPage();
+
+const EVENTS = [];
+const SKIPPED_EVENTS = [];
+const MISSING_GEO_PLACES = new Set();
+
+let maxPages = null;
+
+for (
+  let pageNum = 1;
+  pageNum <= (maxPages || MAX_PAGES_FALLBACK);
+  pageNum++
+) {
+  const url = pageUrl(pageNum);
+
+  console.log("➡️ Lade:", url);
+
+  await page.goto(url, {
+    waitUntil: "networkidle",
+    timeout: 60000
+  });
+
+  await page.waitForTimeout(PAGE_DELAY_MS);
+
+  if (pageNum === 1) {
+    maxPages = await detectMaxPages(page);
+    console.log("➡️ Gefundene Seiten:", maxPages);
+  }
+
+  const rawEvents = await page.evaluate(() => {
+    const items = [];
+
+    document.querySelectorAll("article.event-card").forEach(card => {
+      const raw = card.innerText.trim();
+
+      if (!raw) return;
+
+      const title =
+        card.querySelector("h2, h3")?.innerText?.trim() || "";
+
+      const detailsLink =
+        Array.from(card.querySelectorAll("a"))
+          .find(a =>
+            a.innerText.trim().toLowerCase().includes("details")
+          );
+
+      const detailsUrl =
+        detailsLink ? detailsLink.href : "";
+
+      items.push({
+        raw,
+        title,
+        detailsUrl
+      });
+    });
+
+    return items;
+  });
+
+  console.log(`➡️ Seite ${pageNum}: ${rawEvents.length} Events`);
+
+  if (rawEvents.length === 0) {
+    console.log("➡️ Keine Events mehr gefunden. Import stoppt.");
+    break;
+  }
+
+  for (const item of rawEvents) {
+    const parsed = parseRawEvent(item.raw, item.title);
+
+    if (!parsed.title || !parsed.dateStart) {
+      SKIPPED_EVENTS.push({
+        reason: "missing_required_fields",
+        parsed,
+        detailsUrl: item.detailsUrl,
+        raw: item.raw
+      });
+
+      continue;
+    }
+
+    const coords = getCachedCoords(parsed.place);
+
+    if (!coords && parsed.place && parsed.place !== "Unbekannt") {
+      MISSING_GEO_PLACES.add(parsed.place);
+    }
+
+    EVENTS.push({
+      ...parsed,
+      detailsUrl: item.detailsUrl,
+      lat: coords ? coords.lat : null,
+      lng: coords ? coords.lng : null,
+      locationQuality: coords ? "cached" : "missing_or_invalid"
+    });
+
+    if (!coords) {
+      SKIPPED_EVENTS.push({
+        reason: "missing_geocode_but_imported",
+        parsed,
+        detailsUrl: item.detailsUrl,
+        raw: item.raw
+      });
+    }
+  }
+
+  console.log("➡️ Zwischenstand:", EVENTS.length, "Events");
+
+  await sleep(300);
+}
+
+await browser.close();
+
+const eventsOutput =
+  "const EVENTS = " +
+  JSON.stringify(EVENTS, null, 2) +
+  ";";
+
+const skippedOutput =
+  "const SKIPPED_EVENTS = " +
+  JSON.stringify(SKIPPED_EVENTS, null, 2) +
+  ";";
+
+const missingGeoOutput =
+  "const MISSING_GEO_PLACES = " +
+  JSON.stringify([...MISSING_GEO_PLACES].sort(), null, 2) +
+  ";";
+
+fs.writeFileSync("./events.js", eventsOutput);
+fs.writeFileSync("./events-preview.js", eventsOutput);
+fs.writeFileSync("./skipped-events.js", skippedOutput);
+fs.writeFileSync("./missing-geo-places.js", missingGeoOutput);
+
+console.log("➡️ Gesamt importiert:", EVENTS.length);
+console.log("➡️ Ohne gültige Koordinaten:", SKIPPED_EVENTS.length);
+console.log("➡️ Orte ohne Cache:", MISSING_GEO_PLACES.size);
+console.log("➡️ events.js, events-preview.js, skipped-events.js und missing-geo-places.js geschrieben");
