@@ -20,12 +20,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
 
       - name: Pakete installieren
-        run: npm install
+        run: npm ci
+
+      - name: Playwright Cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-chromium-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            playwright-chromium-${{ runner.os }}-
 
       - name: Playwright Browser installieren
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install chromium
 
       - name: Importer starten
         run: node importer.js
