@@ -14,9 +14,9 @@ const EVENTS = [
     "summary": "Vortrag und Einführung in die Geheimnisse des Brotbackens mit Bäckermeister Christian Milles",
     "description": "06\nMAY\nTradition\nVom Mehl zum Brot\n\nTradition | Dormettingen\n\n 06.05.2026, 18:30 Uhr\n\nVortrag und Einführung in die Geheimnisse des Brotbackens mit Bäckermeister Christian Milles \n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vom-mehl-zum-brot/",
-    "lat": 48.2385691,
-    "lng": 8.773398,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Chill mal! Wasser, Wein & Kunst",
@@ -33,9 +33,9 @@ const EVENTS = [
     "summary": "Das neue Genussevent im Kneippgarten beim Haus des Gastes.",
     "description": "06\nMAY\nFeste\nChill mal! Wasser, Wein & Kunst\n\nFeste | Bad Schönborn\n\n 06.05.2026, 17:00 - 20:00 Uhr\n\nDas neue Genussevent im Kneippgarten beim Haus des Gastes.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/chill-mal-wasser-wein-kunst/",
-    "lat": 49.210803,
-    "lng": 8.6548779,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Kirchturmbesteigung",
@@ -52,9 +52,9 @@ const EVENTS = [
     "summary": "Kirchturmbesteigung der Mariä-Himmelfahrt-Kirche in Schönau im Schwarzwald, dem Münster des Wiesentals.",
     "description": "06\nMAY\nKultur\nKirchturmbesteigung\n\nKultur | Schwarzwaldregion Belchen\n\n 06.05.2026, 17:00 - 18:00 Uhr\n\nKirchturmbesteigung der Mariä-Himmelfahrt-Kirche in Schönau im Schwarzwald, dem Münster des Wiesentals.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kirchturmbesteigung/",
-    "lat": 47.7867901,
-    "lng": 7.8936999,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Führung für Blinde und Sehbehinderte",
@@ -71,9 +71,9 @@ const EVENTS = [
     "summary": "Blinde und sehbehinderte Menschen haben die Möglichkeit, Konstanz mit allen Sinnen zu erleben, zu riechen, zu hören, zu fühlen, ja, zu „begreifen“. Im Hafen geben…",
     "description": "06\nMAY\nKultur\nFührung für Blinde und Sehbehinderte\n\nKultur | Konstanz\n\n 06.05.2026, 10:30 - 12:00 Uhr\n\nBlinde und sehbehinderte Menschen haben die Möglichkeit, Konstanz mit allen Sinnen zu erleben, zu riechen, zu hören, zu fühlen, ja, zu „begreifen“. Im Hafen geben…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fuhrung-fur-blinde-und-sehbehinderte/",
-    "lat": 47.659216,
-    "lng": 9.1750718,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Busausfahrt – Waldulmer Winzergenossenschaft Kappelrodeck",
@@ -90,9 +90,9 @@ const EVENTS = [
     "summary": "Ausflugsfahrt",
     "description": "06\nMAY\nFeste\nBusausfahrt – Waldulmer Winzergenossenschaft Kappelrodeck\n\nFeste | Baiersbronn\n\n 06.05.2026, 13:45 - 17:45 Uhr\n\nAusflugsfahrt\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/busausfahrt-waldulmer-winzergenossenschaft-kappelrodeck/",
-    "lat": 48.5069519,
-    "lng": 8.3720124,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Heilklimawanderung",
@@ -109,9 +109,9 @@ const EVENTS = [
     "summary": "Geführte Wanderung",
     "description": "06\nMAY\nFeste\nHeilklimawanderung\n\nFeste | Baiersbronn\n\n 06.05.2026, 10:10 - 13:10 Uhr\n\nGeführte Wanderung\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/heilklimawanderung/",
-    "lat": 48.5069519,
-    "lng": 8.3720124,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Märchen erleben für Jung und Alt",
@@ -128,9 +128,9 @@ const EVENTS = [
     "summary": "Familien- und Kinderveranstaltung",
     "description": "06\nMAY\nFeste\nMärchen erleben für Jung und Alt\n\nFeste | Baiersbronn\n\n 06.05.2026, 15:00 - 16:30 Uhr\n\nFamilien- und Kinderveranstaltung\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/marchen-erleben-fur-jung-und-alt/",
-    "lat": 48.5069519,
-    "lng": 8.3720124,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Summer Spirit – Kloster Hegne erleben",
@@ -147,9 +147,9 @@ const EVENTS = [
     "summary": "Ausflug zum Kloster Hegne bei Konstanz",
     "description": "06\nMAY\nFeste\nSummer Spirit – Kloster Hegne erleben\n\nFeste | Allensbach-Hegne\n\n 06.05.2026, 11:00 - 19:00 Uhr\n\nAusflug zum Kloster Hegne bei Konstanz\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/summer-spirit-kloster-hegne-erleben/",
-    "lat": 47.7073256,
-    "lng": 9.0914316,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Alte Zimmermannskunst",
@@ -166,9 +166,9 @@ const EVENTS = [
     "summary": "Zimmererlehrlinge lernen alte Zimmermannskunst",
     "description": "06\nMAY\nFeste\nAlte Zimmermannskunst\n\nFeste | Vogtsbauernhof\n\n 06.05.2026, 10:00 - 15:00 Uhr\n\nZimmererlehrlinge lernen alte Zimmermannskunst \n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/alte-zimmermannskunst/",
-    "lat": 48.2719975,
-    "lng": 8.1971784,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Mittwochs im Museum – „Matthias Waßer“",
@@ -185,9 +185,9 @@ const EVENTS = [
     "summary": "Matthias Waßer ist weit mehr als ein Gitarrist – er ist ein Klangkünstler und Geschichtenerzähler auf sechs Saiten.",
     "description": "06\nMAY\nKonzerte\nMittwochs im Museum – „Matthias Waßer“\n\nKonzerte | Wolfach\n\n 06.05.2026, 19:00 Uhr\n\nMatthias Waßer ist weit mehr als ein Gitarrist – er ist ein Klangkünstler und Geschichtenerzähler auf sechs Saiten.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mittwochs-im-museum-matthias-waser/",
-    "lat": 48.2985845,
-    "lng": 8.222608,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Vieruni",
@@ -204,9 +204,9 @@ const EVENTS = [
     "summary": "A Capella Konzert mit Vieruni",
     "description": "06\nMAY\nKonzerte\nVieruni\n\nKonzerte | Ellwangen\n\n 06.05.2026, 19:00 - 21:00 Uhr\n\nA Capella Konzert mit Vieruni\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vieruni/",
-    "lat": 48.9615975,
-    "lng": 10.131975,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "AlbArt – Das Atelier für (D)eine Kreative Auszeit",
@@ -223,9 +223,9 @@ const EVENTS = [
     "summary": "",
     "description": "06\nMAY\nKultur\nAlbArt – Das Atelier für (D)eine Kreative Auszeit\n\nKultur | Münsingen\n\n 06.05.2026, 16:00 - 17:30 Uhr\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/albart-das-atelier-fur-deine-kreative-auszeit/",
-    "lat": 48.4128592,
-    "lng": 9.4947894,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Geführte E-Bike Panorama-Tour am Überlinger See",
@@ -242,9 +242,9 @@ const EVENTS = [
     "summary": "Genießen Sie tolle Aussichten und herrliche Naturlandschaften auf der geführten E-Bike Panorama-Tour am Überlinger See.",
     "description": "06\nMAY\nAktiv unterwegs\nGeführte E-Bike Panorama-Tour am Überlinger See\n\nAktiv unterwegs | Uhldingen-Mühlhofen\n\n 06.05.2026 - 28.10.2026, 10:30 Uhr\n\nGenießen Sie tolle Aussichten und herrliche Naturlandschaften auf der geführten E-Bike Panorama-Tour am Überlinger See. \n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gefuhrte-e-bike-panorama-tour-am-uberlinger-see/",
-    "lat": 47.7348858,
-    "lng": 9.2400277,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Soul & Sip: Wokout.Yoga.Wein",
@@ -261,9 +261,9 @@ const EVENTS = [
     "summary": "Workout.Yoga.Wein — eine besondere Mischung aus Bewegung, Entspannung und Genuss.",
     "description": "06\nMAY\nFeste\nSoul & Sip: Wokout.Yoga.Wein\n\nFeste | Waldkirch-Buchholz\n\n 06.05.2026, 15:00 - 15:45 Uhr\n\nWorkout.Yoga.Wein — eine besondere Mischung aus Bewegung, Entspannung und Genuss.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/soul-sip-wokout-yoga-wein/",
-    "lat": 48.0821014,
-    "lng": 7.9166354,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Beats & Burger",
@@ -280,9 +280,9 @@ const EVENTS = [
     "summary": "Von 17.30 bis 22.00 Uhr könnt Ihr bei perfekten Beats in entspannter Atmosphäre den Feierabend genießen.",
     "description": "06\nMAY\nEssen und Trinken\nBeats & Burger\n\nEssen und Trinken | Pfullendorf\n\n 06.05.2026, 17:30 - 22:00 Uhr\n\nVon 17.30 bis 22.00 Uhr könnt Ihr bei perfekten Beats in entspannter Atmosphäre den Feierabend genießen.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/beats-burger/",
-    "lat": 47.924349,
-    "lng": 9.2559822,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Künstlerresidenz Dilsberg: Lesung María Elísabet Bragadóttir",
@@ -299,9 +299,9 @@ const EVENTS = [
     "summary": "Die isländische Schriftstellerin María Elísabet Bragadóttir wird vom 13. April bis 13. Juli 2026 im Kommandantenhaus Dilsberg wohnen und arbeiten. Lesungen in Heidelberg und im…",
     "description": "06\nMAY\nFeste\nKünstlerresidenz Dilsberg: Lesung María Elísabet Bragadóttir\n\nFeste | Neckargemünd\n\n 06.05.2026, 19:30 Uhr\n\nDie isländische Schriftstellerin María Elísabet Bragadóttir wird vom 13. April bis 13. Juli 2026 im Kommandantenhaus Dilsberg wohnen und arbeiten. Lesungen in Heidelberg und im…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kunstlerresidenz-dilsberg-lesung-maria-elisabet-bragadottir/",
-    "lat": 49.3954054,
-    "lng": 8.7965893,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Jäger der Dunkelheit – Fledermäuse im Naturpark Ausstellungseröffnung im Naturparkzentrum",
@@ -318,9 +318,9 @@ const EVENTS = [
     "summary": "Ausstellungseröffung im Naturparkzentrum Stromberg-Heuchelberg",
     "description": "06\nMAY\nFeste\nJäger der Dunkelheit – Fledermäuse im Naturpark Ausstellungseröffnung im Naturparkzentrum\n\nFeste | Zaberfeld\n\n 06.05.2026, 16:00 Uhr\n\nAusstellungseröffung im Naturparkzentrum Stromberg-Heuchelberg\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/jager-der-dunkelheit-fledermause-im-naturpark-ausstellungseroffnung-im-naturparkzentrum/",
-    "lat": 49.0581972,
-    "lng": 8.9266871,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Theater HERZeigen: Das kleine Lumpenkasperle",
@@ -337,9 +337,9 @@ const EVENTS = [
     "summary": "Kindertheater in der Stadtbibliothek",
     "description": "06\nMAY\nKultur für Kinder\nTheater HERZeigen: Das kleine Lumpenkasperle\n\nKultur für Kinder | Tuttlingen\n\n 06.05.2026, 14:30 Uhr\n\nKindertheater in der Stadtbibliothek\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/theater-herzeigen-das-kleine-lumpenkasperle/",
-    "lat": 47.9844315,
-    "lng": 8.8186606,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Buhnefronze-Mühle – Besichtigung",
@@ -356,9 +356,9 @@ const EVENTS = [
     "summary": "Besichtigung der neu restaurierten, historischen Mühle. Ohne Anmeldung. Als ehemalige Hofmühle des Schnurrenhofes fristete das Kleinod einen jahrzehnte langen Dornröschenschlaf. Urkundlich wurde sie erstmals 1839…",
     "description": "06\nMAY\nFeste\nBuhnefronze-Mühle – Besichtigung\n\nFeste | Seebach\n\n 06.05.2026 - 21.10.2026, 18:00 - 19:00 Uhr\n\nBesichtigung der neu restaurierten, historischen Mühle. Ohne Anmeldung. Als ehemalige Hofmühle des Schnurrenhofes fristete das Kleinod einen jahrzehnte langen Dornröschenschlaf. Urkundlich wurde sie erstmals 1839…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/buhnefronze-muhle-besichtigung/",
-    "lat": 48.5762423,
-    "lng": 8.1711181,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "SUP-Tour “Sundowner” oder “Sunrise”",
@@ -375,9 +375,9 @@ const EVENTS = [
     "summary": "Erlebe einen besonderen Sonnenuntergang oder Sonnenaufgang auf dem See! Geführte und begleitete SUNDOWNER/SUNRISE Tour am Untersee! 05:30/07:30h Treffen in Wangen Strandbad für Sunrise 18:00/18:30h Treffen in…",
     "description": "06\nMAY\nSportveranstaltung\nSUP-Tour “Sundowner” oder “Sunrise”\n\nSportveranstaltung | Öhningen\n\n 06.05.2026 - 30.09.2026, 18:30 - 20:30 Uhr\n\nErlebe einen besonderen Sonnenuntergang oder Sonnenaufgang auf dem See! Geführte und begleitete SUNDOWNER/SUNRISE Tour am Untersee! 05:30/07:30h Treffen in Wangen Strandbad für Sunrise 18:00/18:30h Treffen in…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sup-tour-sundowner-oder-sunrise/",
-    "lat": 47.6617131,
-    "lng": 8.8873571,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Musikerfahrt mit “Schlegele Kings” auf der MS Seestern",
@@ -394,9 +394,9 @@ const EVENTS = [
     "summary": "Mit den \"Schlegele Kings\" live an Bord führt diese besondere Erlebnisfahrt in die schönsten Seeteile des Untersees",
     "description": "06\nMAY\nFeste\nMusikerfahrt mit “Schlegele Kings” auf der MS Seestern\n\nFeste | Gaienhofen\n\n 06.05.2026, 18:30 - 21:00 Uhr\n\nMit den \"Schlegele Kings\" live an Bord führt diese besondere Erlebnisfahrt in die schönsten Seeteile des Untersees\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/musikerfahrt-mit-schlegele-kings-auf-der-ms-seestern/",
-    "lat": 47.6821346,
-    "lng": 8.9818583,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Wer war die schöne Emmi Hepp? – Zu einem Portrait von Otto Dix, 1939",
@@ -413,9 +413,9 @@ const EVENTS = [
     "summary": "Vortrag mit Bildern von Elisabeth Schraut",
     "description": "06\nMAY\nFeste\nWer war die schöne Emmi Hepp? – Zu einem Portrait von Otto Dix, 1939\n\nFeste | Gaienhofen\n\n 06.05.2026 - 30.08.2026, 19:00 - 20:00 Uhr\n\nVortrag mit Bildern von Elisabeth Schraut\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wer-war-die-schone-emmi-hepp-zu-einem-portrait-von-otto-dix-1939/",
-    "lat": 47.6821346,
-    "lng": 8.9818583,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Schwetzinger SWR Festspiele: Blaue Nacht",
@@ -432,9 +432,9 @@ const EVENTS = [
     "summary": "Der Soloklarinettist der Wiener Philharmoniker, Daniel Ottensamer, lädt mit seinem Trio ein zu einer erlebnisreichen musikalischen Reise.",
     "description": "06\nMAY\nKonzerte\nSchwetzinger SWR Festspiele: Blaue Nacht\n\nKonzerte | Schwetzingen\n\n 06.05.2026, 19:30 Uhr\n\nDer Soloklarinettist der Wiener Philharmoniker, Daniel Ottensamer, lädt mit seinem Trio ein zu einer erlebnisreichen musikalischen Reise.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schwetzinger-swr-festspiele-blaue-nacht/",
-    "lat": 49.3832919,
-    "lng": 8.5735135,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Lord of the Dance",
@@ -451,9 +451,9 @@ const EVENTS = [
     "summary": "Sie ist die spektakulärste und erfolgreichste, tourende Tanzshow der Geschichte und 2026 feiert sie fulminant ihr 30-jähriges Jubiläum: „Lord of the Dance“! Im Frühjahr 2026…",
     "description": "06\nMAY\nKultur\nLord of the Dance\n\nKultur | Heilbronn\n\n 06.05.2026, 20:00 Uhr\n\nSie ist die spektakulärste und erfolgreichste, tourende Tanzshow der Geschichte und 2026 feiert sie fulminant ihr 30-jähriges Jubiläum: „Lord of the Dance“! Im Frühjahr 2026…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/lord-of-the-dance-2/",
-    "lat": 49.142291,
-    "lng": 9.218655,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Der zerbrochne Krug",
@@ -470,9 +470,9 @@ const EVENTS = [
     "summary": "Lustspiel von Heinrich von Kleist, mit einem anderen Ausgang von Maria Milisavljević",
     "description": "06\nMAY\nKultur\nDer zerbrochne Krug\n\nKultur | Karlsruhe\n\n 06.05.2026, 19:30 - 21:15 Uhr\n\nLustspiel von Heinrich von Kleist, mit einem anderen Ausgang von Maria Milisavljević\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/der-zerbrochne-krug-10/",
-    "lat": 49.0068705,
-    "lng": 8.4034195,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Der Bau",
@@ -489,9 +489,9 @@ const EVENTS = [
     "summary": "von Franz Kafka | Livehörspiel",
     "description": "06\nMAY\nKultur\nDer Bau\n\nKultur | Karlsruhe\n\n 06.05.2026, 19:30 - 20:30 Uhr\n\nvon Franz Kafka | Livehörspiel\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/der-bau/",
-    "lat": 49.0068705,
-    "lng": 8.4034195,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Thema des Monats – Unser Welterbe – Die Pfahlbauten zwischen Sehnsuchtsort und Zukunftsvision",
@@ -508,9 +508,9 @@ const EVENTS = [
     "summary": "Thema des Monats - Unser Welterbe - Die Pfahlbauten zwischen Sehnsuchtsort und Zukunftsvision",
     "description": "06\nMAY\nFeste\nThema des Monats – Unser Welterbe – Die Pfahlbauten zwischen Sehnsuchtsort und Zukunftsvision\n\nFeste | Stadt Konstanz\n\n 06.05.2026, 19:00 - 20:30 Uhr\n\nThema des Monats - Unser Welterbe - Die Pfahlbauten zwischen Sehnsuchtsort und Zukunftsvision\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/thema-des-monats-unser-welterbe-die-pfahlbauten-zwischen-sehnsuchtsort-und-zukunftsvision/",
-    "lat": 47.6605267,
-    "lng": 9.164694,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Das Villinger Ausnahmetalent Hans Kraut – Bildhauer, Töpfer und Unternehmer in der Renaissance",
@@ -527,9 +527,9 @@ const EVENTS = [
     "summary": "Das Villinger Ausnahmetalent Hans Kraut - Bildhauer, Töpfer und Unternehmer in der RenaissanceVortrag von Dr. Harald Rosmanitz, Partenstein Eintritt frei",
     "description": "06\nMAY\nFeste\nDas Villinger Ausnahmetalent Hans Kraut – Bildhauer, Töpfer und Unternehmer in der Renaissance\n\nFeste | Villingen-Schwenningen\n\n 06.05.2026, 19:00 Uhr\n\nDas Villinger Ausnahmetalent Hans Kraut - Bildhauer, Töpfer und Unternehmer in der RenaissanceVortrag von Dr. Harald Rosmanitz, Partenstein Eintritt frei\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vortrag-im-beleitprogramm-der-sonderausstellung-ausgepackt-schatze-aus-der-sammlung/",
-    "lat": 48.063152,
-    "lng": 8.4929618,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Konzert – Kat Baloun & Frostbites",
@@ -546,9 +546,9 @@ const EVENTS = [
     "summary": "Blues-Konzert im ChaBah Kandern",
     "description": "06\nMAY\nFeste\nKonzert – Kat Baloun & Frostbites\n\nFeste | Kandern\n\n 06.05.2026, 20:30 Uhr\n\nBlues-Konzert im ChaBah Kandern\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/konzert-kat-baloun-frostbites/",
-    "lat": 47.714697,
-    "lng": 7.6610865,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Veranstaltung Test",
@@ -584,9 +584,9 @@ const EVENTS = [
     "summary": "Die Spannweite der Motive reicht von der eigenen Neugier, dem Interesse der Mitinhaber, dem Reporting gegenüber Kapitalgebern bis hin zu strategischen Überlegungen bei Übergaben und…",
     "description": "06\nMAY\nFeste\nUnternehmenswert steigern, Unternehmensnachfolge planen.\n\nFeste | Sigmaringen\n\n 06.05.2026, 18:30 - 20:00 Uhr\n\nDie Spannweite der Motive reicht von der eigenen Neugier, dem Interesse der Mitinhaber, dem Reporting gegenüber Kapitalgebern bis hin zu strategischen Überlegungen bei Übergaben und…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/unternehmenswert-steigern-unternehmensnachfolge-planen/",
-    "lat": 48.0869139,
-    "lng": 9.2165039,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "BergFest – WeinAfterWork",
@@ -603,9 +603,9 @@ const EVENTS = [
     "summary": "BergFest -WeinAfterWork -  Maulbronner Eilfingerberg!Genießt den Sommer von seiner schönsten Seit: Jeden Mittwoch von 18:00–22:00 Uhr, Mai bis August, laden wir euch zum WeinAfterWork am…",
     "description": "06\nMAY\nEssen und Trinken\nBergFest – WeinAfterWork\n\nEssen und Trinken | Maulbronn\n\n 06.05.2026 - 02.09.2026, 18:00 - 22:00 Uhr\n\nBergFest -WeinAfterWork -  Maulbronner Eilfingerberg!Genießt den Sommer von seiner schönsten Seit: Jeden Mittwoch von 18:00–22:00 Uhr, Mai bis August, laden wir euch zum WeinAfterWork am…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bergfest-weinafterwork/",
-    "lat": 48.9986948,
-    "lng": 8.8038083,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Geführte Spazierwanderung rund um Dobel",
@@ -622,9 +622,9 @@ const EVENTS = [
     "summary": "Herzliche Einladung zur geführten Spazier-Wanderung im Heilklima! Die Tour ist etwa 5 km und führt rund um Dobel.",
     "description": "06\nMAY\nAktiv unterwegs\nGeführte Spazierwanderung rund um Dobel\n\nAktiv unterwegs | Dobel\n\n 06.05.2026, 13:15 - 15:15 Uhr\n\nHerzliche Einladung zur geführten Spazier-Wanderung im Heilklima! Die Tour ist etwa 5 km und führt rund um Dobel.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gefuhrte-spazierwanderung-rund-um-dobel/",
-    "lat": 48.7969905,
-    "lng": 8.4936307,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "KOMMUNALES KINO: “Ungeduld des Herzens”",
@@ -660,9 +660,9 @@ const EVENTS = [
     "summary": "Die Entwicklung zum Menschsein (\"Werden und Vergehen\") steht im Mittelpunkt des neuen Werkes \"Der Weg\" des Calwer Künstlers Lothar Hudy. Die acht Skulpturen stellen den…",
     "description": "06\nMAY\nAusstellung\nLothar Hudy: Der Weg (Vernissage)\n\nAusstellung | Calw\n\n 06.05.2026, 16:00 Uhr\n\nDie Entwicklung zum Menschsein (\"Werden und Vergehen\") steht im Mittelpunkt des neuen Werkes \"Der Weg\" des Calwer Künstlers Lothar Hudy. Die acht Skulpturen stellen den…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/lothar-hudy-der-weg-vernissage/",
-    "lat": 48.7142691,
-    "lng": 8.7397624,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Let’s Talk About Recht: (Un)abhängige Justiz – wie schützen wir unsere Gerichte?",
@@ -679,9 +679,9 @@ const EVENTS = [
     "summary": "Am Mittwoch, 06. Mai 2026, am Karlsruher Standort der Stiftung ForumRecht geht es um die angreifbare Unabhängigkeit der Justiz. Die Gewährleistung der richterlichen Unabhängigkeit ist eine…",
     "description": "06\nMAY\nFeste\nLet’s Talk About Recht: (Un)abhängige Justiz – wie schützen wir unsere Gerichte?\n\nFeste | Karlsruhe\n\n 06.05.2026, 19:00 - 21:00 Uhr\n\nAm Mittwoch, 06. Mai 2026, am Karlsruher Standort der Stiftung ForumRecht geht es um die angreifbare Unabhängigkeit der Justiz. Die Gewährleistung der richterlichen Unabhängigkeit ist eine…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/lets-talk-about-recht-unabhangige-justiz-wie-schutzen-wir-unsere-gerichte/",
-    "lat": 49.0068705,
-    "lng": 8.4034195,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Pop-Up-Ausstellung „Recht – Spielregeln des Alltags“",
@@ -698,9 +698,9 @@ const EVENTS = [
     "summary": "Wo begegnet uns Recht im Alltag – und wie beeinflusst es unser Leben? Ob beim Mieten einer Wohnung, am Arbeitsplatz, im Straßenverkehr oder  innerhalb der Familie:…",
     "description": "06\nMAY\nAusstellung\nPop-Up-Ausstellung „Recht – Spielregeln des Alltags“\n\nAusstellung | Karlsruhe\n\n 06.05.2026 - 25.05.2026\n\nWo begegnet uns Recht im Alltag – und wie beeinflusst es unser Leben? Ob beim Mieten einer Wohnung, am Arbeitsplatz, im Straßenverkehr oder  innerhalb der Familie:…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/pop-up-ausstellung-recht-spielregeln-des-alltags/",
-    "lat": 49.0068705,
-    "lng": 8.4034195,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Länderkundevortrag: Vietnam",
@@ -717,9 +717,9 @@ const EVENTS = [
     "summary": "Lassen Sie sich von den beindruckenden Landschaften und der kulturellen Vietnams im Länderkundevortrag von PD Dr. Harald Borger faszinieren und inspirieren.",
     "description": "06\nMAY\nFeste\nLänderkundevortrag: Vietnam\n\nFeste | Tuttlingen\n\n 06.05.2026, 19:30 - 21:00 Uhr\n\nLassen Sie sich von den beindruckenden Landschaften und der kulturellen Vietnams im Länderkundevortrag von PD Dr. Harald Borger faszinieren und inspirieren.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/landerkundevortrag-vietnam/",
-    "lat": 47.9844315,
-    "lng": 8.8186606,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Sonderführung durch die Ausstellung Hartmut Tramer im Rathaus",
@@ -736,9 +736,9 @@ const EVENTS = [
     "summary": "Kurator Claus Petschmann führt durch den Ausstellungsteil im Rathaus Eberbach",
     "description": "06\nMAY\nFeste\nSonderführung durch die Ausstellung Hartmut Tramer im Rathaus\n\nFeste | Eberbach\n\n 06.05.2026, 08:30 - 09:30 Uhr\n\nKurator Claus Petschmann führt durch den Ausstellungsteil im Rathaus Eberbach\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sonderfuhrung-durch-die-ausstellung-hartmut-tramer-im-rathaus/",
-    "lat": 49.4635303,
-    "lng": 8.9855203,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Afterwork Baden-Baden @ RIZZI | Mai",
@@ -774,9 +774,9 @@ const EVENTS = [
     "summary": "Mit den Kunsthäppchen lädt das Kunstmuseum Karlsruhe einmal im Monat zu einem offenen Gespräch am Nachmittag ein.",
     "description": "06\nMAY\nKultur\n„Wer bestimmt den Kanon? – Frauen in der Kunst neu betrachtet“ mit Dr. Claudia Pohl\n\nKultur | Karlsruhe\n\n 06.05.2026, 15:00 - 15:45 Uhr\n\nMit den Kunsthäppchen lädt das Kunstmuseum Karlsruhe einmal im Monat zu einem offenen Gespräch am Nachmittag ein. \n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wer-bestimmt-den-kanon-frauen-in-der-kunst-neu-betrachtet-mit-dr-claudia-pohl/",
-    "lat": 49.0068705,
-    "lng": 8.4034195,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Benefizkonzert der Deutsch-Französischen Brigade",
@@ -793,9 +793,9 @@ const EVENTS = [
     "summary": "06. Mai 2026, 18:00 Uhr  Eintritt frei, freiwillige Spende",
     "description": "06\nMAY\nKonzerte\nBenefizkonzert der Deutsch-Französischen Brigade\n\nKonzerte | Müllheim\n\n 06.05.2026, 18:00 Uhr\n\n06. Mai 2026, 18:00 Uhr  Eintritt frei, freiwillige Spende \n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/benefizkonzert-der-deutsch-franzosischen-brigade/",
-    "lat": 47.810102,
-    "lng": 7.5995606,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Kuratorinnen-Führung “Kindheit im Elztal”",
@@ -812,9 +812,9 @@ const EVENTS = [
     "summary": "Kinderwagen, Poesiealben, Gameboy und Actionfiguren – zahlreiche persönliche Gegenstände erzählen in der Ausstellung „Kindheit im Elztal“ von dieser besonderen Lebensphase.",
     "description": "06\nMAY\nKultur\nKuratorinnen-Führung “Kindheit im Elztal”\n\nKultur | Waldkirch\n\n 06.05.2026, 18:00 - 20:00 Uhr\n\nKinderwagen, Poesiealben, Gameboy und Actionfiguren – zahlreiche persönliche Gegenstände erzählen in der Ausstellung „Kindheit im Elztal“ von dieser besonderen Lebensphase. \n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kuratorinnen-fuhrung-kindheit-im-elztal/",
-    "lat": 48.0939396,
-    "lng": 7.9610142,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Die Meinungsfreiheit hochhalten – Kabarett mit Arnulf Rating",
@@ -831,9 +831,9 @@ const EVENTS = [
     "summary": "Als Beitrag zur Woche der Meinungsfreiheit (3.5. – 10.5.) veranstaltet die Stadtbibliothek in Zusammenarbeit mit der Bücherinsel einen Kabarettabend mit dem Berliner Autor und Kleinkünstler…",
     "description": "06\nMAY\nKultur\nDie Meinungsfreiheit hochhalten – Kabarett mit Arnulf Rating\n\nKultur | Schwetzingen\n\n 06.05.2026, 19:00 - 12:00 Uhr\n\nAls Beitrag zur Woche der Meinungsfreiheit (3.5. – 10.5.) veranstaltet die Stadtbibliothek in Zusammenarbeit mit der Bücherinsel einen Kabarettabend mit dem Berliner Autor und Kleinkünstler…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/die-meinungsfreiheit-hochhalten-kabarett-mit-arnulf-rating/",
-    "lat": 49.3832919,
-    "lng": 8.5735135,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Landpartie Schloss Monrepos",
@@ -850,9 +850,9 @@ const EVENTS = [
     "summary": "",
     "description": "07\nMAY\nMärkte\nLandpartie Schloss Monrepos\n\nMärkte | Ludwigsburg\n\n 07.05.2026 - 10.05.2026\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/landpartie-schloss-monrepos/",
-    "lat": 48.8953937,
-    "lng": 9.1895147,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Aquayoga im Aquastaad",
@@ -869,9 +869,9 @@ const EVENTS = [
     "summary": "Yoga auf dem BeBoard kombiniert sanfte Bewegungen auf dem Wasser mit Übungen zur Stärkung, Dehnung und inneren Ruhe.",
     "description": "07\nMAY\nSportveranstaltung\nAquayoga im Aquastaad\n\nSportveranstaltung | Immenstaad\n\n 07.05.2026 - 03.09.2026, 19:00 - 20:00 Uhr\n\nYoga auf dem BeBoard kombiniert sanfte Bewegungen auf dem Wasser mit Übungen zur Stärkung, Dehnung und inneren Ruhe. \n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/aquayoga-im-aquastaad/",
-    "lat": 47.6048795,
-    "lng": 9.531927,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Besuch im Heimatmuseum Klösterle",
@@ -888,9 +888,9 @@ const EVENTS = [
     "summary": "Das Heimatmuseum Klösterle beherbergt alte Schriften, Urkunden, Geräte und Gebrauchsgegenstände aus der Region.",
     "description": "07\nMAY\nKultur\nBesuch im Heimatmuseum Klösterle\n\nKultur | Schwarzwaldregion Belchen\n\n 07.05.2026 - 24.09.2026, 16:00 - 18:00 Uhr\n\nDas Heimatmuseum Klösterle beherbergt alte Schriften, Urkunden, Geräte und Gebrauchsgegenstände aus der Region.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/besuch-im-heimatmuseum-klosterle/",
-    "lat": 47.7867901,
-    "lng": 7.8936999,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Explore Science – Erfindungen & Entdeckungen",
@@ -907,9 +907,9 @@ const EVENTS = [
     "summary": "Die Veranstaltung, die Kinder und Jugendliche jedes Jahr zu Entdecken und Experimentieren einlädt, findet unter dem diesjährigen Motto „Erfindungen und Entdeckungen“ statt. Spannende Mitmachaktionen, Workshops und…",
     "description": "07\nMAY\nKultur für Kinder\nExplore Science – Erfindungen & Entdeckungen\n\nKultur für Kinder | Friedrichshafen\n\n 07.05.2026 - 08.05.2026, 09:00 - 16:00 Uhr\n\nDie Veranstaltung, die Kinder und Jugendliche jedes Jahr zu Entdecken und Experimentieren einlädt, findet unter dem diesjährigen Motto „Erfindungen und Entdeckungen“ statt. Spannende Mitmachaktionen, Workshops und…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/explore-science-erfindungen-entdeckungen/",
-    "lat": 47.6500279,
-    "lng": 9.4800858,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "NEU:„Bierseelig“ – Eine Radtour zu Brauereistätten in Konstanz",
@@ -926,9 +926,9 @@ const EVENTS = [
     "summary": "Mehr als 16 Brauereistätten seit 1700: Die größte Stadt der Vierländerregion Bodensee hat eine überraschend große Bier-Historie, die bei dieser geführten Tour genauer beleuchtet wird.…",
     "description": "07\nMAY\nAktiv unterwegs\nNEU:„Bierseelig“ – Eine Radtour zu Brauereistätten in Konstanz\n\nAktiv unterwegs | Konstanz\n\n 07.05.2026, 13:30 - 16:30 Uhr\n\nMehr als 16 Brauereistätten seit 1700: Die größte Stadt der Vierländerregion Bodensee hat eine überraschend große Bier-Historie, die bei dieser geführten Tour genauer beleuchtet wird.…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/neubierseelig-eine-radtour-zu-brauereistatten-in-konstanz/",
-    "lat": 47.659216,
-    "lng": 9.1750718,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Baiersbronner Schätze: Waldhonig- und Fichtenspitzeneis",
@@ -945,9 +945,9 @@ const EVENTS = [
     "summary": "Geführte Wanderung mit Verköstigung",
     "description": "07\nMAY\nFeste\nBaiersbronner Schätze: Waldhonig- und Fichtenspitzeneis\n\nFeste | Baiersbronn\n\n 07.05.2026, 10:00 - 15:00 Uhr\n\nGeführte Wanderung mit Verköstigung\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/baiersbronner-schatze-waldhonig-und-fichtenspitzeneis/",
-    "lat": 48.5069519,
-    "lng": 8.3720124,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Nachmittagsrunde",
@@ -964,9 +964,9 @@ const EVENTS = [
     "summary": "Geführte Mountainbike-Tour",
     "description": "07\nMAY\nFeste\nNachmittagsrunde\n\nFeste | Baiersbronn\n\n 07.05.2026, 15:00 - 18:00 Uhr\n\nGeführte Mountainbike-Tour\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/nachmittagsrunde/",
-    "lat": 48.5069519,
-    "lng": 8.3720124,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Busausfahrt – Alpirsbacher Klosterbräu",
@@ -983,9 +983,9 @@ const EVENTS = [
     "summary": "Ausflugsfahrt",
     "description": "07\nMAY\nFeste\nBusausfahrt – Alpirsbacher Klosterbräu\n\nFeste | Baiersbronn\n\n 07.05.2026, 13:45 - 17:45 Uhr\n\nAusflugsfahrt\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/busausfahrt-alpirsbacher-klosterbrau/",
-    "lat": 48.5069519,
-    "lng": 8.3720124,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Florian Schroeder – „Endlich glücklich“",
@@ -1002,9 +1002,9 @@ const EVENTS = [
     "summary": "Bislang wussten viele Menschen nicht, wo Florian Schroeder steht. Jetzt weiß er es selbst nicht mehr. Aber eines weiß er: Er ist glücklich damit. Und…",
     "description": "07\nMAY\nFeste\nFlorian Schroeder – „Endlich glücklich“\n\nFeste | Öhringen\n\n 07.05.2026, 20:00 Uhr\n\nBislang wussten viele Menschen nicht, wo Florian Schroeder steht. Jetzt weiß er es selbst nicht mehr. Aber eines weiß er: Er ist glücklich damit. Und…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/florian-schroeder-endlich-glucklich/",
-    "lat": 49.2005034,
-    "lng": 9.5024397,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Stadtspaziergang Öhringen: Nachhaltig inspiriert",
@@ -1021,9 +1021,9 @@ const EVENTS = [
     "summary": "Erlebe Öhringen bei einem spannenden Stadtspaziergang.",
     "description": "07\nMAY\nKultur\nStadtspaziergang Öhringen: Nachhaltig inspiriert\n\nKultur | Öhringen\n\n 07.05.2026, 17:30 - 18:30 Uhr\n\nErlebe Öhringen bei einem spannenden Stadtspaziergang.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtspaziergang-ohringen-nachhaltig-inspiriert/",
-    "lat": 49.2005034,
-    "lng": 9.5024397,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Wellness anno dazumal… – eine Zeitreise durch die Geschichte von Wangen – Führung",
@@ -1040,9 +1040,9 @@ const EVENTS = [
     "summary": "Bei dieser Führung erfahren Sie, was man im Mittelalter unter Wellness verstand und welch seltene Schätze sich in den einzelnen Museen der Wangener Museumslandschaft verbergen.…",
     "description": "07\nMAY\nKultur\nWellness anno dazumal… – eine Zeitreise durch die Geschichte von Wangen – Führung\n\nKultur | Wangen im Allgäu\n\n 07.05.2026, 14:30 - 16:00 Uhr\n\nBei dieser Führung erfahren Sie, was man im Mittelalter unter Wellness verstand und welch seltene Schätze sich in den einzelnen Museen der Wangener Museumslandschaft verbergen.…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wellness-anno-dazumal-eine-zeitreise-durch-die-geschichte-von-wangen-fuhrung/",
-    "lat": 47.6856552,
-    "lng": 9.8342247,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Kebyart – Lebendiges Barockschloss Tettnang",
@@ -1059,9 +1059,9 @@ const EVENTS = [
     "summary": "Als Ensemble in Residence begleitet Keybart das Bodenseefestival über mehrere Wochen hinweg. In Tettnang ist das Saxophonquartett mit „Fantasias in Time: Four Centuries, Four Parts\" zu Gast.…",
     "description": "07\nMAY\nFeste\nKebyart – Lebendiges Barockschloss Tettnang\n\nFeste | Tettnang\n\n 07.05.2026, 19:30 Uhr\n\nAls Ensemble in Residence begleitet Keybart das Bodenseefestival über mehrere Wochen hinweg. In Tettnang ist das Saxophonquartett mit „Fantasias in Time: Four Centuries, Four Parts\" zu Gast.…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kebyart-lebendiges-barockschloss-tettnang/",
-    "lat": 47.6716558,
-    "lng": 9.5891158,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Gartensprechstunde mit SWR Gartenexperte Volker Kugel",
@@ -1078,9 +1078,9 @@ const EVENTS = [
     "summary": "Gartensprechstunde mit SWR Gartenexperte Volker Kugel",
     "description": "07\nMAY\nFeste\nGartensprechstunde mit SWR Gartenexperte Volker Kugel\n\nFeste | Ellwangen\n\n 07.05.2026, 13:30 - 15:00 Uhr\n\nGartensprechstunde mit SWR Gartenexperte Volker Kugel\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gartensprechstunde-mit-swr-gartenexperte-volker-kugel/",
-    "lat": 48.9615975,
-    "lng": 10.131975,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "WUHBIDU Rockt die Landesgartenschau",
@@ -1097,9 +1097,9 @@ const EVENTS = [
     "summary": "WUhbidU Rockt die Landesgartenschau",
     "description": "07\nMAY\nKonzerte\nWUHBIDU Rockt die Landesgartenschau\n\nKonzerte | Ellwangen\n\n 07.05.2026, 16:00 - 19:00 Uhr\n\nWUhbidU Rockt die Landesgartenschau\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wuhbidu-rockt-die-landesgartenschau/",
-    "lat": 48.9615975,
-    "lng": 10.131975,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Vortrag: Karl der Große (748-814). Gründergestalt Europas oder Gewaltherrscher?",
@@ -1116,9 +1116,9 @@ const EVENTS = [
     "summary": "Mit Prof. Dr. Matthias Becher (Universität Bonn)",
     "description": "07\nMAY\nFeste\nVortrag: Karl der Große (748-814). Gründergestalt Europas oder Gewaltherrscher?\n\nFeste | Münsingen\n\n 07.05.2026, 19:00 - 21:00 Uhr\n\nMit Prof. Dr. Matthias Becher (Universität Bonn)\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vortrag-karl-der-grose-748-814-grundergestalt-europas-oder-gewaltherrscher/",
-    "lat": 48.4128592,
-    "lng": 9.4947894,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Pilgern auf dem Ulrikaweg: Kloster Sießen – Illmensee",
@@ -1135,9 +1135,9 @@ const EVENTS = [
     "summary": "Das gemeinsame Pilgern auf dem Ulrikaweg ist eine jährliche Tradition geworden, die immer um das Fest der seligen Schwester Ulrika Nisch (08. Mai) die Möglichkeit…",
     "description": "07\nMAY\nAktiv unterwegs\nPilgern auf dem Ulrikaweg: Kloster Sießen – Illmensee\n\nAktiv unterwegs | Illmensee\n\n 07.05.2026\n\nDas gemeinsame Pilgern auf dem Ulrikaweg ist eine jährliche Tradition geworden, die immer um das Fest der seligen Schwester Ulrika Nisch (08. Mai) die Möglichkeit…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/pilgern-auf-dem-ulrikaweg-kloster-siesen-illmensee/",
-    "lat": 47.864499,
-    "lng": 9.3766192,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Nachmittagskino mit dem Film “EPiC: Elvis Presley in Concert”",
@@ -1154,9 +1154,9 @@ const EVENTS = [
     "summary": "... gut mit öffentlichen Verkehrsmitteln zu erreichen",
     "description": "07\nMAY\nFeste\nNachmittagskino mit dem Film “EPiC: Elvis Presley in Concert”\n\nFeste | Schramberg\n\n 07.05.2026, 14:30 - 16:30 Uhr\n\n... gut mit öffentlichen Verkehrsmitteln zu erreichen\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/nachmittagskino-mit-dem-film-epic-elvis-presley-in-concert/",
-    "lat": 48.225478,
-    "lng": 8.3852168,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Brennereibesichtigung: Eine spannende Führung durch die Sipplinger Kleinbrennerei Arno Biller",
@@ -1173,9 +1173,9 @@ const EVENTS = [
     "summary": "Entdecken Sie die Kunst der Brennerei in der Sipplinger Kleinbrennerei Arno Biller",
     "description": "07\nMAY\nFeste\nBrennereibesichtigung: Eine spannende Führung durch die Sipplinger Kleinbrennerei Arno Biller\n\nFeste | Sipplingen\n\n 07.05.2026, 19:00 - 20:00 Uhr\n\nEntdecken Sie die Kunst der Brennerei in der Sipplinger Kleinbrennerei Arno Biller \n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/brennereibesichtigung-eine-spannende-fuhrung-durch-die-sipplinger-kleinbrennerei-arno-biller/",
-    "lat": 47.7966525,
-    "lng": 9.0967997,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Obst Genuss Tour",
@@ -1192,9 +1192,9 @@ const EVENTS = [
     "summary": "Nonnenhorner Bauern geben Einblicke in den Obst- und Weinanbau in unserer Region und laden zu einer kleinen Verkostung ein.",
     "description": "07\nMAY\nAktiv unterwegs\nObst Genuss Tour\n\nAktiv unterwegs | Nonnenhorn\n\n 07.05.2026 - 10.09.2026, 17:00 - 18:30 Uhr\n\nNonnenhorner Bauern geben Einblicke in den Obst- und Weinanbau in unserer Region und laden zu einer kleinen Verkostung ein.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/obst-genuss-tour/",
-    "lat": 47.6046208,
-    "lng": 9.5316534,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Abendkonzert auf dem Schäfflerplatz",
@@ -1211,9 +1211,9 @@ const EVENTS = [
     "summary": "Abendkonzert mit wöchentlich wechselnden Musikvereinen bei jeder Witterung! Bei schönem wetter auf dem Schäfflerplatz und bei Regen in der Stedi Halle.",
     "description": "07\nMAY\nKonzerte\nAbendkonzert auf dem Schäfflerplatz\n\nKonzerte | Nonnenhorn\n\n 07.05.2026 - 24.09.2026, 20:00 - 21:00 Uhr\n\nAbendkonzert mit wöchentlich wechselnden Musikvereinen bei jeder Witterung! Bei schönem wetter auf dem Schäfflerplatz und bei Regen in der Stedi Halle.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/abendkonzert-auf-dem-schafflerplatz/",
-    "lat": 47.6046208,
-    "lng": 9.5316534,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Marianne Schätzle im Haus Linzgau",
@@ -1230,9 +1230,9 @@ const EVENTS = [
     "summary": "Kabarett aus dem Ländle: „ES ISCH WIES ISCH“",
     "description": "07\nMAY\nKultur\nMarianne Schätzle im Haus Linzgau\n\nKultur | Pfullendorf\n\n 07.05.2026, 20:00 Uhr\n\nKabarett aus dem Ländle: „ES ISCH WIES ISCH“\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/marianne-schatzle-im-haus-linzgau/",
-    "lat": 47.924349,
-    "lng": 9.2559822,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "After Work Atrium 2026",
@@ -1249,9 +1249,9 @@ const EVENTS = [
     "summary": "",
     "description": "07\nMAY\nFeste\nAfter Work Atrium 2026\n\nFeste | Bruchsal\n\n 07.05.2026, 18:00 - 22:00 Uhr\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/after-work-atrium-2026/",
-    "lat": 49.124118,
-    "lng": 8.5980244,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Spargel-Gourmet-Menü",
@@ -1325,9 +1325,9 @@ const EVENTS = [
     "summary": "Führung durch den Beerengarten vom Obst- und Ferienhof Marschall mit Besichtigung der Brennerei und Verkostung der regionalen Produkte.",
     "description": "07\nMAY\nAktiv unterwegs\nObstbauführung\n\nAktiv unterwegs | Wasserburg (Bodensee)\n\n 07.05.2026 - 28.10.2026, 17:00 - 18:30 Uhr\n\nFührung durch den Beerengarten vom Obst- und Ferienhof Marschall mit Besichtigung der Brennerei und Verkostung der regionalen Produkte.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/obstbaufuhrung/",
-    "lat": 47.6045609,
-    "lng": 9.5316769,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Führung durch den Japanischen Garten",
@@ -1344,9 +1344,9 @@ const EVENTS = [
     "summary": "Gärtnermeister Philipp Kercher, von der Firma Fautz, führt durch den Garten und gibt spannende Einblicke in Gestaltung, Pflege und Philosophie.",
     "description": "07\nMAY\nAktiv unterwegs\nFührung durch den Japanischen Garten\n\nAktiv unterwegs | Bad Krozingen\n\n 07.05.2026, 16:00 - 17:00 Uhr\n\nGärtnermeister Philipp Kercher, von der Firma Fautz, führt durch den Garten und gibt spannende Einblicke in Gestaltung, Pflege und Philosophie.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fuhrung-durch-den-japanischen-garten/",
-    "lat": 47.9159087,
-    "lng": 7.6999845,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Führung durch den Duft- und Kräutergarten",
@@ -1363,9 +1363,9 @@ const EVENTS = [
     "summary": "Maria Weiß bietet eine Führung durch den liebevoll angelegten Duft- und Kräutergarten an.",
     "description": "07\nMAY\nAktiv unterwegs\nFührung durch den Duft- und Kräutergarten\n\nAktiv unterwegs | Bad Krozingen\n\n 07.05.2026, 10:30 - 11:30 Uhr\n\nMaria Weiß bietet eine Führung durch den liebevoll angelegten Duft- und Kräutergarten an.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fuhrung-durch-den-duft-und-krautergarten/",
-    "lat": 47.9159087,
-    "lng": 7.6999845,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Besenwirtschaft Maichle",
@@ -1382,9 +1382,9 @@ const EVENTS = [
     "summary": "Am Festplatz Unterjesingen, direkt an der neuen Kelter, lädt Familie Maichle zum Weinbesen mit Weinen aus den Unterjesinger Weinbergen ein.",
     "description": "07\nMAY\nEssen und Trinken\nBesenwirtschaft Maichle\n\nEssen und Trinken | Unterjesingen\n\n 07.05.2026 - 09.05.2026, 15:30 Uhr\n\nAm Festplatz Unterjesingen, direkt an der neuen Kelter, lädt Familie Maichle zum Weinbesen mit Weinen aus den Unterjesinger Weinbergen ein.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/besenwirtschaft-maichle/",
-    "lat": 48.5267277,
-    "lng": 8.9796759,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Leichte Stadtführung durch Singen",
@@ -1401,9 +1401,9 @@ const EVENTS = [
     "summary": "Stadtführung durch Singen in Leichter Sprache. Auch für Alle mit kognitiver Beeinträchtigung geeignet.",
     "description": "07\nMAY\nKultur\nLeichte Stadtführung durch Singen\n\nKultur | Singen\n\n 07.05.2026, 17:00 - 18:15 Uhr\n\nStadtführung durch Singen in Leichter Sprache. Auch für Alle mit kognitiver Beeinträchtigung geeignet.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/leichte-stadtfuhrung-durch-singen/",
-    "lat": 47.7617515,
-    "lng": 8.8348709,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Vortrag Windenergie im Spannungsfeld zwischen Naturschutz und Energiewende",
@@ -1420,9 +1420,9 @@ const EVENTS = [
     "summary": "Julius Schmidt vom Dialogforum Energiewende und Naturschutz (BUND/NABU BW) zeigt die wichtigsten Umweltauswirkungen von Windenergieanlagen und fragt, wie neue Systeme und Maßnahmen zu verantwortungsvollem Betrieb…",
     "description": "07\nMAY\nFeste\nVortrag Windenergie im Spannungsfeld zwischen Naturschutz und Energiewende\n\nFeste | Tuttlingen\n\n 07.05.2026, 19:00 - 20:30 Uhr\n\nJulius Schmidt vom Dialogforum Energiewende und Naturschutz (BUND/NABU BW) zeigt die wichtigsten Umweltauswirkungen von Windenergieanlagen und fragt, wie neue Systeme und Maßnahmen zu verantwortungsvollem Betrieb…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vortrag-windenergie-im-spannungsfeld-zwischen-naturschutz-und-energiewende/",
-    "lat": 47.9844315,
-    "lng": 8.8186606,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Die Ökonomie des Hasses – Folgen rechtspopulistischer Politik",
@@ -1439,9 +1439,9 @@ const EVENTS = [
     "summary": "Ein wirtschaftlicher Blick auf die Auswirkungen rechtspopulistischer Politik und Wege, demokratische Stabilität zu stärken.",
     "description": "07\nMAY\nFeste\nDie Ökonomie des Hasses – Folgen rechtspopulistischer Politik\n\nFeste | Calw\n\n 07.05.2026, 19:30 - 21:00 Uhr\n\n Ein wirtschaftlicher Blick auf die Auswirkungen rechtspopulistischer Politik und Wege, demokratische Stabilität zu stärken. \n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/die-okonomie-des-hasses-folgen-rechtspopulistischer-politik/",
-    "lat": 48.7142691,
-    "lng": 8.7397624,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Hanami I Kirschblütenfest im Restaurant bachofer",
@@ -1458,9 +1458,9 @@ const EVENTS = [
     "summary": "Genussvolle Reise durch Japan: Premium-Sake-Verkostung mit Yoshiko Ueno-Müller, Master of Sake Tasting aus Tokio und Jörg Müller vom Feinkosthandel \"Ueno-Gourmet\". Begleitet von einem progressiven 8-Gang-bachofer-Menü.",
     "description": "07\nMAY\nEssen und Trinken\nHanami I Kirschblütenfest im Restaurant bachofer\n\nEssen und Trinken | Waiblingen\n\n 07.05.2026, 18:30 Uhr\n\nGenussvolle Reise durch Japan: Premium-Sake-Verkostung mit Yoshiko Ueno-Müller, Master of Sake Tasting aus Tokio und Jörg Müller vom Feinkosthandel \"Ueno-Gourmet\". Begleitet von einem progressiven 8-Gang-bachofer-Menü.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/hanami-i-kirschblutenfest-im-restaurant-bachofer/",
-    "lat": 48.8325659,
-    "lng": 9.3163822,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Ufm Rhy Tour mit dem SUP",
@@ -1477,9 +1477,9 @@ const EVENTS = [
     "summary": "SUP-Tour „Ufm Rhy“   Geführte und begleitete Big SUP und/oder SUP Tour vom Bodensee/Untersee (Wangen) Strandbad aus auf dem Hochrhein entlang über Stein am Rhein bis…",
     "description": "07\nMAY\nSportveranstaltung\nUfm Rhy Tour mit dem SUP\n\nSportveranstaltung | Öhningen\n\n 07.05.2026 - 24.09.2026, 09:00 - 15:00 Uhr\n\nSUP-Tour „Ufm Rhy“   Geführte und begleitete Big SUP und/oder SUP Tour vom Bodensee/Untersee (Wangen) Strandbad aus auf dem Hochrhein entlang über Stein am Rhein bis…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/ufm-rhy-tour-mit-dem-sup/",
-    "lat": 47.6617131,
-    "lng": 8.8873571,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Geführte Handwerksrunde im Weierle",
@@ -1496,9 +1496,9 @@ const EVENTS = [
     "summary": "Entdecke die einzigartige und echte Handwerkskunst bei einer geführten Wanderung durch den Ortsteil Weierle",
     "description": "07\nMAY\nAktiv unterwegs\nGeführte Handwerksrunde im Weierle\n\nAktiv unterwegs | Bernau im Schwarzwald\n\n 07.05.2026, 10:00 - 13:00 Uhr\n\nEntdecke die einzigartige und echte Handwerkskunst bei einer geführten Wanderung durch den Ortsteil Weierle\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gefuhrte-handwerksrunde-im-weierle/",
-    "lat": 47.8057268,
-    "lng": 8.0345882,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Anbau, Ernte und Lagerung von Tafeläpfeln aus Streuobstwiesen",
@@ -1534,9 +1534,9 @@ const EVENTS = [
     "summary": "",
     "description": "07\nMAY\nFeste\nSeniorenfahrt mit Kaffee und Kuchen auf der MS Seestern\n\nFeste | Gaienhofen\n\n 07.05.2026, 14:00 - 16:00 Uhr\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/seniorenfahrt-mit-kaffee-und-kuchen-auf-der-ms-seestern/",
-    "lat": 47.6821346,
-    "lng": 8.9818583,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Schwetzinger SWR Festspiele: Zeitlos herzzerreißend",
@@ -1553,9 +1553,9 @@ const EVENTS = [
     "summary": "Alte Musik und ein zeitloses Thema: Residenzkünstlerin Dorothee Oberlinger und Countertenor Andreas Scholl befragen musikalisch die Liebe.",
     "description": "07\nMAY\nKonzerte\nSchwetzinger SWR Festspiele: Zeitlos herzzerreißend\n\nKonzerte | Schwetzingen\n\n 07.05.2026, 19:30 Uhr\n\nAlte Musik und ein zeitloses Thema: Residenzkünstlerin Dorothee Oberlinger und Countertenor Andreas Scholl befragen musikalisch die Liebe.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schwetzinger-swr-festspiele-zeitlos-herzzerreisend/",
-    "lat": 49.3832919,
-    "lng": 8.5735135,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Vernissage: 16. Schwetzinger Schülerausstellung: “Bunt wird bunter”",
@@ -1572,9 +1572,9 @@ const EVENTS = [
     "summary": "Die 16. Ausgabe der jährlichen Schwetzinger Schülerausstellung firmiert 2026 unter dem Motto \"Bunt wird bunter\"",
     "description": "07\nMAY\nAusstellung\nVernissage: 16. Schwetzinger Schülerausstellung: “Bunt wird bunter”\n\nAusstellung | Schwetzingen\n\n 07.05.2026, 11:00 - 12:00 Uhr\n\nDie 16. Ausgabe der jährlichen Schwetzinger Schülerausstellung firmiert 2026 unter dem Motto \"Bunt wird bunter\"\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vernissage-16-schwetzinger-schulerausstellung-bunt-wird-bunter/",
-    "lat": 49.3832919,
-    "lng": 8.5735135,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "16. Schwetzinger Schülerausstellung: “Bunt wird bunter”",
@@ -1591,9 +1591,9 @@ const EVENTS = [
     "summary": "Die 16. Ausgabe der jährlichen Schwetzinger Schülerausstellung firmiert 2026 unter dem Motto \"Bunt wird bunter\"",
     "description": "07\nMAY\nAusstellung\n16. Schwetzinger Schülerausstellung: “Bunt wird bunter”\n\nAusstellung | Schwetzingen\n\n 07.05.2026 - 21.05.2026\n\nDie 16. Ausgabe der jährlichen Schwetzinger Schülerausstellung firmiert 2026 unter dem Motto \"Bunt wird bunter\"\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/16-schwetzinger-schulerausstellung-bunt-wird-bunter/",
-    "lat": 49.3832919,
-    "lng": 8.5735135,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Panel Discussion – Local Climate and Environment Action",
@@ -1610,9 +1610,9 @@ const EVENTS = [
     "summary": "High level public debate exploring how EU climate action and local and individual initiatives inform and influence one another in order to build a sustainable…",
     "description": "07\nMAY\nFeste\nPanel Discussion – Local Climate and Environment Action\n\nFeste | Heilbronn\n\n 07.05.2026, 18:00 - 20:00 Uhr\n\nHigh level public debate exploring how EU climate action and local and individual initiatives inform and influence one another in order to build a sustainable…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/panel-discussion-local-climate-and-environment-action/",
-    "lat": 49.142291,
-    "lng": 9.218655,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Diamond Dogs – Livemusik auf der Burg",
@@ -1629,9 +1629,9 @@ const EVENTS = [
     "summary": "Die \"Hausband\" der Burg spielt von Mai bis September jeden Donnerstag ab 19:30 Uhr auf der Burgterrasse.",
     "description": "07\nMAY\nFeste\nDiamond Dogs – Livemusik auf der Burg\n\nFeste | Wertheim\n\n 07.05.2026, 19:30 - 22:00 Uhr\n\nDie \"Hausband\" der Burg spielt von Mai bis September jeden Donnerstag ab 19:30 Uhr auf der Burgterrasse.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/diamond-dogs-livemusik-auf-der-burg/",
-    "lat": 49.7599825,
-    "lng": 9.5166598,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Den Bergkamm entlang",
@@ -1648,9 +1648,9 @@ const EVENTS = [
     "summary": "Anspruchsvolle Tour von Forbach über Bermersbach und die Rote Lache nach Gernsbach",
     "description": "07\nMAY\nAktiv unterwegs\nDen Bergkamm entlang\n\nAktiv unterwegs | Forbach\n\n 07.05.2026, 10:00 - 15:00 Uhr\n\nAnspruchsvolle Tour von Forbach über Bermersbach und die Rote Lache nach Gernsbach\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/den-bergkamm-entlang/",
-    "lat": 48.6790385,
-    "lng": 8.3594916,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Weinbrenner und seine Erben",
@@ -1667,9 +1667,9 @@ const EVENTS = [
     "summary": "Friedrich Weinbrenner prägte das Karlsruher Stadtbild nachhaltig. Auch Architekten wie Berckmüller, Durm und Billing reagierten auf sein Werk. Begleiten Sie uns zu ihren Grabstätten und…",
     "description": "07\nMAY\nKultur\nWeinbrenner und seine Erben\n\nKultur | Karlsruhe\n\n 07.05.2026, 14:00 - 16:00 Uhr\n\nFriedrich Weinbrenner prägte das Karlsruher Stadtbild nachhaltig. Auch Architekten wie Berckmüller, Durm und Billing reagierten auf sein Werk. Begleiten Sie uns zu ihren Grabstätten und…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinbrenner-und-seine-erben/",
-    "lat": 49.0068705,
-    "lng": 8.4034195,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Riesen Probleme",
@@ -1686,9 +1686,9 @@ const EVENTS = [
     "summary": "Die Regeln mach nicht ich",
     "description": "07\nMAY\nFeste\nRiesen Probleme\n\nFeste | Karlsruhe\n\n 07.05.2026, 11:00 - 12:00 Uhr\n\nDie Regeln mach nicht ich\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/riesen-probleme-2/",
-    "lat": 49.0068705,
-    "lng": 8.4034195,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Dialogues des Carmélites (Zum letzten Mal)",
@@ -1705,9 +1705,9 @@ const EVENTS = [
     "summary": "Oper in drei Akten von Francis Poulenc",
     "description": "07\nMAY\nFeste\nDialogues des Carmélites (Zum letzten Mal)\n\nFeste | Karlsruhe\n\n 07.05.2026, 19:30 - 22:30 Uhr\n\nOper in drei Akten von Francis Poulenc\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/dialogues-des-carmelites-9/",
-    "lat": 49.0068705,
-    "lng": 8.4034195,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "B2Run Karlsruhe 2026",
@@ -1724,9 +1724,9 @@ const EVENTS = [
     "summary": "Der große Firmenlauf am BBBank Wildpark!",
     "description": "07\nMAY\nSportveranstaltung\nB2Run Karlsruhe 2026\n\nSportveranstaltung | Karlsruhe\n\n 07.05.2026\n\nDer große Firmenlauf am BBBank Wildpark!\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/b2run-karlsruhe-2026/",
-    "lat": 49.0068705,
-    "lng": 8.4034195,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Einfach tanzen!",
@@ -1743,9 +1743,9 @@ const EVENTS = [
     "summary": "Catch, Carry, Release! Tanzworkshop mit Paul Calderone",
     "description": "07\nMAY\nFeste\nEinfach tanzen!\n\nFeste | Karlsruhe\n\n 07.05.2026, 18:45 - 19:45 Uhr\n\nCatch, Carry, Release! Tanzworkshop mit Paul Calderone\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/einfach-tanzen/",
-    "lat": 49.0068705,
-    "lng": 8.4034195,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Hauskonzert im Brahmshaus",
@@ -1781,9 +1781,9 @@ const EVENTS = [
     "summary": "Kulinarischer Abend",
     "description": "07\nMAY\nFeste\nWinzer, Wein & Kulinarik\n\nFeste | Baiersbronn\n\n 07.05.2026, 18:30 Uhr\n\nKulinarischer Abend\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/winzer-wein-kulinarik/",
-    "lat": 48.5069519,
-    "lng": 8.3720124,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Einladung zur offenen Probe",
@@ -1800,9 +1800,9 @@ const EVENTS = [
     "summary": "Der Gemischte Chor Menningen/Baden e.V. lädt alle Interessierten zu einer offenen Probe ein. Einfach reinsetzen, zuhören oder mitmachen alles ganz unverbindlich. Wir freuen uns auf…",
     "description": "07\nMAY\nFeste\nEinladung zur offenen Probe\n\nFeste | Menningen\n\n 07.05.2026, 20:00 Uhr\n\nDer Gemischte Chor Menningen/Baden e.V. lädt alle Interessierten zu einer offenen Probe ein. Einfach reinsetzen, zuhören oder mitmachen alles ganz unverbindlich. Wir freuen uns auf…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/einladung-zur-offenen-probe/",
-    "lat": 48.0080449,
-    "lng": 9.1607499,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Der Besondere Film: Agent of Happiness",
@@ -1819,9 +1819,9 @@ const EVENTS = [
     "summary": "Nicht verpassen!Der Besondere FilmJeden zweiten Donnerstag zeigen wir ausgewählte und anspruchsvolle Arthouse-Filme im Kino Kandern.",
     "description": "07\nMAY\nFeste\nDer Besondere Film: Agent of Happiness\n\nFeste | Kandern\n\n 07.05.2026, 20:15 Uhr\n\nNicht verpassen!Der Besondere FilmJeden zweiten Donnerstag zeigen wir ausgewählte und anspruchsvolle Arthouse-Filme im Kino Kandern.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/der-besondere-film-agent-of-happiness/",
-    "lat": 47.714697,
-    "lng": 7.6610865,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Konzert: Clemens Bittlinger",
@@ -1838,9 +1838,9 @@ const EVENTS = [
     "summary": "Clemens Bittlinger spielt jedes Jahr über 100 Konzerte in ganz Deutschland. 2026 kommt er endlich nach Kandern!",
     "description": "07\nMAY\nFeste\nKonzert: Clemens Bittlinger\n\nFeste | Kandern\n\n 07.05.2026, 19:00 Uhr\n\nClemens Bittlinger spielt jedes Jahr über 100 Konzerte in ganz Deutschland. 2026 kommt er endlich nach Kandern!\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/konzert-clemens-bittlinger/",
-    "lat": 47.714697,
-    "lng": 7.6610865,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Bücherbärchen-Vorlesegeschichte „Der Maulwurf und die Suche nach der Stille“",
@@ -1857,9 +1857,9 @@ const EVENTS = [
     "summary": "Vorleseveranstaltung mit einer Bilderbuchgeschichte für Kinder von 4-6 Jahren.",
     "description": "07\nMAY\nFeste\nBücherbärchen-Vorlesegeschichte „Der Maulwurf und die Suche nach der Stille“\n\nFeste | Sigmaringen\n\n 07.05.2026, 16:00 - 16:35 Uhr\n\nVorleseveranstaltung mit einer Bilderbuchgeschichte für Kinder von 4-6 Jahren.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bucherbarchen-vorlesegeschichte-der-maulwurf-und-die-suche-nach-der-stille/",
-    "lat": 48.0869139,
-    "lng": 9.2165039,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Radreisen im Baltikum: Ein Erfahrungsbericht",
@@ -1876,9 +1876,9 @@ const EVENTS = [
     "summary": "Mit dem Fahrrad durchs Baltikum - ein spannender Reisebericht im ADFC Fahrradbüro",
     "description": "07\nMAY\nFeste\nRadreisen im Baltikum: Ein Erfahrungsbericht\n\nFeste | Karlsruhe\n\n 07.05.2026, 19:00 Uhr\n\nMit dem Fahrrad durchs Baltikum - ein spannender Reisebericht im ADFC Fahrradbüro\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/radreisen-im-baltikum-ein-erfahrungsbericht/",
-    "lat": 49.0068705,
-    "lng": 8.4034195,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "KI-Symposium",
@@ -1895,9 +1895,9 @@ const EVENTS = [
     "summary": "An der Hochschule Albstadt-Sigmaringen findet am Donnerstag, 7. Mai, das dritte KI-Symposium mit hochkarätigen Rednerinnen und Rednern statt.",
     "description": "07\nMAY\nFeste\nKI-Symposium\n\nFeste | Sigmaringen\n\n 07.05.2026, 17:00 - 20:00 Uhr\n\nAn der Hochschule Albstadt-Sigmaringen findet am Donnerstag, 7. Mai, das dritte KI-Symposium mit hochkarätigen Rednerinnen und Rednern statt.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/ki-symposium/",
-    "lat": 48.0869139,
-    "lng": 9.2165039,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Die Bar Danach. Himmlisch!",
@@ -1914,9 +1914,9 @@ const EVENTS = [
     "summary": "Eine Stückentwicklung des Theaterexperimentierclubs",
     "description": "07\nMAY\nKultur\nDie Bar Danach. Himmlisch!\n\nKultur | Burladingen\n\n 07.05.2026, 19:30 Uhr\n\nEine Stückentwicklung des Theaterexperimentierclubs\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/die-bar-danach-himmlisch/",
-    "lat": 48.2892852,
-    "lng": 9.1134689,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "GenerationPlus Digital: Für Einsteiger",
@@ -1952,9 +1952,9 @@ const EVENTS = [
     "summary": "",
     "description": "07\nMAY\nKonzerte\nLive-Musik unterm Sternenzelt – Gartengroove\n\nKonzerte | Gaienhofen\n\n 07.05.2026, 18:00 - 23:00 Uhr\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/live-musik-unterm-sternenzelt-gartengroove/",
-    "lat": 47.6821346,
-    "lng": 8.9818583,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "DOUBLE TAKE | Installation und Objekte | Künstlerinnengespräch mit Hanna Woll & Anika Hirt",
@@ -1971,9 +1971,9 @@ const EVENTS = [
     "summary": "Künstlerinnengespräch mit Hanna Woll & Anika Hirt:\"Der Ursprung und die grundlegende Form sind Sphären. Das Material: Luft, Folie, Glas und Licht. Das Produkt: eine Landschaft,…",
     "description": "07\nMAY\nAusstellung\nDOUBLE TAKE | Installation und Objekte | Künstlerinnengespräch mit Hanna Woll & Anika Hirt\n\nAusstellung | Karlsruhe\n\n 07.05.2026, 17:00 - 19:00 Uhr\n\nKünstlerinnengespräch mit Hanna Woll & Anika Hirt:\"Der Ursprung und die grundlegende Form sind Sphären. Das Material: Luft, Folie, Glas und Licht. Das Produkt: eine Landschaft,…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/double-take-installation-und-objekte-kunstlerinnengesprach-mit-hanna-woll-anika-hirt/",
-    "lat": 49.0068705,
-    "lng": 8.4034195,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Nachtwächter und Nachtgeschichten",
@@ -1990,9 +1990,9 @@ const EVENTS = [
     "summary": "Begleiten Sie den Nachtwächter auf seinem Rundgang durch Wolfach.",
     "description": "07\nMAY\nKultur\nNachtwächter und Nachtgeschichten\n\nKultur | Wolfach\n\n 07.05.2026 - 26.09.2026, 21:00 Uhr\n\nBegleiten Sie den Nachtwächter auf seinem Rundgang durch Wolfach.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/nachtwachter-und-nachtgeschichten/",
-    "lat": 48.2985845,
-    "lng": 8.222608,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Senioren-Café",
@@ -2009,9 +2009,9 @@ const EVENTS = [
     "summary": "Sitzen Sie gemütlich beisammen und genießen Sie eine Tasse Kaffee und ein Stück selbstgebackenen Kuchen an der Donau",
     "description": "07\nMAY\nFeste\nSenioren-Café\n\nFeste | Sigmaringen\n\n 07.05.2026, 14:30 - 17:00 Uhr\n\nSitzen Sie gemütlich beisammen und genießen Sie eine Tasse Kaffee und ein Stück selbstgebackenen Kuchen an der Donau\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/senioren-cafe/",
-    "lat": 48.0869139,
-    "lng": 9.2165039,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Begrüßung der Kunststipendiatin Catherine Sanke",
@@ -2028,9 +2028,9 @@ const EVENTS = [
     "summary": "Die Tuttlinger Kunststipendiatin Catherine Sanke stellt sich vor - mit Begleitprogramm",
     "description": "07\nMAY\nFeste\nBegrüßung der Kunststipendiatin Catherine Sanke\n\nFeste | Tuttlingen\n\n 07.05.2026, 19:00 Uhr\n\nDie Tuttlinger Kunststipendiatin Catherine Sanke stellt sich vor - mit Begleitprogramm\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/begrusung-der-kunststipendiatin-catherine-sanke/",
-    "lat": 47.9844315,
-    "lng": 8.8186606,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Einkommensteuererklärung speziell für Ruheständler",
@@ -2047,9 +2047,9 @@ const EVENTS = [
     "summary": "Der Kurs führt sicher durch die Besonderheiten der Einkommensteuererklärung im Alter, beantwortet Fragen zu Abgabepflicht, Formulare, Altersentlastungsbetrag, Zumutbare Belastung, Rentenanpassungsbetrag und Elster-Check.",
     "description": "07\nMAY\nFeste\nEinkommensteuererklärung speziell für Ruheständler\n\nFeste | Tuttlingen\n\n 07.05.2026, 13:30 - 17:30 Uhr\n\nDer Kurs führt sicher durch die Besonderheiten der Einkommensteuererklärung im Alter, beantwortet Fragen zu Abgabepflicht, Formulare, Altersentlastungsbetrag, Zumutbare Belastung, Rentenanpassungsbetrag und Elster-Check.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/einkommensteuererklarung-speziell-fur-ruhestandler/",
-    "lat": 47.9844315,
-    "lng": 8.8186606,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "„Im Hubbuch-Archiv“ mit Ferial Nadja Karrasch",
@@ -2066,9 +2066,9 @@ const EVENTS = [
     "summary": "Museumsarbeit live! Was passiert mit einem Kunstwerk, bevor es für die Öffentlichkeit zugänglich wird?",
     "description": "07\nMAY\nKultur\n„Im Hubbuch-Archiv“ mit Ferial Nadja Karrasch\n\nKultur | Karlsruhe\n\n 07.05.2026, 17:00 - 18:00 Uhr\n\nMuseumsarbeit live! Was passiert mit einem Kunstwerk, bevor es für die Öffentlichkeit zugänglich wird?\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/im-hubbuch-archiv-mit-ferial-nadja-karrasch/",
-    "lat": 49.0068705,
-    "lng": 8.4034195,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Öffentlicher Vortrag: Moral und Moralismus in öffentlichen Debatten",
@@ -2085,9 +2085,9 @@ const EVENTS = [
     "summary": "Sind unsere öffentlichen Debatten zu moralisch aufgeladen – oder wird Moral zu Unrecht kritisiert? Der Vortrag klärt was Moralismus eigentlich ist. Ein anregender Beitrag zur…",
     "description": "07\nMAY\nFeste\nÖffentlicher Vortrag: Moral und Moralismus in öffentlichen Debatten\n\nFeste | Karlsruhe\n\n 07.05.2026, 18:00 - 19:30 Uhr\n\nSind unsere öffentlichen Debatten zu moralisch aufgeladen – oder wird Moral zu Unrecht kritisiert? Der Vortrag klärt was Moralismus eigentlich ist. Ein anregender Beitrag zur…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/offentlicher-vortrag-moral-und-moralismus-in-offentlichen-debatten/",
-    "lat": 49.0068705,
-    "lng": 8.4034195,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Muttertags-Charity-Basteln im ETTLINGER TOR Karlsruhe",
@@ -2104,9 +2104,9 @@ const EVENTS = [
     "summary": "Kreative Geschenke gestalten und benachteiligte Kinder unterstützen",
     "description": "07\nMAY\nFeste\nMuttertags-Charity-Basteln im ETTLINGER TOR Karlsruhe\n\nFeste | Karlsruhe\n\n 07.05.2026 - 08.05.2026, 12:00 - 17:00 Uhr\n\nKreative Geschenke gestalten und benachteiligte Kinder unterstützen\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/muttertags-charity-basteln-im-ettlinger-tor-karlsruhe/",
-    "lat": 49.0068705,
-    "lng": 8.4034195,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "The Bodensee Players: The Odd Couple – female version",
@@ -2123,9 +2123,9 @@ const EVENTS = [
     "summary": "English Language Theatre The Bodensee Players e.V. present a funny comedy in the English Language: The Odd Couple by Neil Simon",
     "description": "07\nMAY\nKultur\nThe Bodensee Players: The Odd Couple – female version\n\nKultur | Friedrichshafen\n\n 07.05.2026 - 16.05.2026, 20:00 Uhr\n\nEnglish Language Theatre The Bodensee Players e.V. present a funny comedy in the English Language: The Odd Couple by Neil Simon\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/the-bodensee-players-the-odd-couple-female-version/",
-    "lat": 47.6500279,
-    "lng": 9.4800858,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "ADAC Hockenheim Historic – Das Jim Clark Revival",
@@ -2142,9 +2142,9 @@ const EVENTS = [
     "summary": "",
     "description": "08\nMAY\nOldtimertreffen\nADAC Hockenheim Historic – Das Jim Clark Revival\n\nOldtimertreffen | Hockenheim\n\n 08.05.2026 - 10.05.2026\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/adac-hockenheim-historic-das-jim-clark-revival/",
-    "lat": 49.3188892,
-    "lng": 8.5475467,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "3. Schwarzwald-Buchmesse “Blätterrauschen”",
@@ -2161,9 +2161,9 @@ const EVENTS = [
     "summary": "",
     "description": "08\nMAY\nKultur\n3. Schwarzwald-Buchmesse “Blätterrauschen”\n\nKultur | Hinterzarten\n\n 08.05.2026 - 10.05.2026\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/3-schwarzwald-buchmesse-blaetterrauschen/",
-    "lat": 47.9063718,
-    "lng": 8.103622,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Ausstellung “Dein Quadratmeter Bauernkrieg”",
@@ -2199,9 +2199,9 @@ const EVENTS = [
     "summary": "Hinweis: Die Veranstaltung wurde vom 07.11.25 auf den 08.05.26 verschoben Beginn 20:00 Uhr Eintritt frei, Hutsammlung",
     "description": "08\nMAY\nKonzerte\nSöhnlins-Acoustic-Moments: AnyPhobia\n\nKonzerte | Müllheim\n\n 08.05.2026, 20:00 Uhr\n\nHinweis: Die Veranstaltung wurde vom 07.11.25 auf den 08.05.26 verschoben Beginn 20:00 Uhr Eintritt frei, Hutsammlung\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sohnlins-acoustic-moments-anyphobia/",
-    "lat": 47.810102,
-    "lng": 7.5995606,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Welttag der Esel – Eselspaziergang",
@@ -2218,9 +2218,9 @@ const EVENTS = [
     "summary": "Zum Welttag der Esel laden wir herzlich zu einem Spaziergang mit unseren zwei Eseldamen Nora und Amora durchs Museum ein.keine Voranmeldung nötig",
     "description": "08\nMAY\nFeste\nWelttag der Esel – Eselspaziergang\n\nFeste | Neuhausen ob Eck\n\n 08.05.2026, 15:00 Uhr\n\nZum Welttag der Esel laden wir herzlich zu einem Spaziergang mit unseren zwei Eseldamen Nora und Amora durchs Museum ein.keine Voranmeldung nötig\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/welttag-der-esel-eselspaziergang/",
-    "lat": 47.9713008,
-    "lng": 8.9284465,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Bücherflohmarkt beim Markttreff am Klausenhof",
@@ -2237,9 +2237,9 @@ const EVENTS = [
     "summary": "Bücher- Stöbern, schmökern, tauschen oder verkaufen – ganz ohne Anmeldung beim Markttreff am Klausenhof",
     "description": "08\nMAY\nFeste\nBücherflohmarkt beim Markttreff am Klausenhof\n\nFeste | Herrischried\n\n 08.05.2026, 13:00 - 18:00 Uhr\n\nBücher- Stöbern, schmökern, tauschen oder verkaufen – ganz ohne Anmeldung beim Markttreff am Klausenhof\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bucherflohmarkt-2/",
-    "lat": 47.6665531,
-    "lng": 8.0006455,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "WEIN.FASS.PROBE „Riesling, Baby“",
@@ -2256,9 +2256,9 @@ const EVENTS = [
     "summary": "Bei der WEIN.FASS.PROBE „Riesling, Baby!“ in Cleebronn erleben Gäste Rieslinge aus dem Fass direkt vor Ort. Verkostung, Einblicke in den Weinausbau und gemütliches Ambiente inklusive. …",
     "description": "08\nMAY\nEssen und Trinken\nWEIN.FASS.PROBE „Riesling, Baby“\n\nEssen und Trinken | Cleebronn\n\n 08.05.2026, 19:00 - 21:30 Uhr\n\nBei der WEIN.FASS.PROBE „Riesling, Baby!“ in Cleebronn erleben Gäste Rieslinge aus dem Fass direkt vor Ort. Verkostung, Einblicke in den Weinausbau und gemütliches Ambiente inklusive. …\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wein-fass-probe-riesling-baby/",
-    "lat": 49.0446069,
-    "lng": 9.0381355,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "GenussScheune Diefenbach",
@@ -2275,9 +2275,9 @@ const EVENTS = [
     "summary": "Lassen Sie im gemütlichen Ambiente der alten Kelter in Diefenbach die Woche ausklingen und genießen Sie die Vielfalt und Qualität regionaler Lebensmittel.",
     "description": "08\nMAY\nFeste\nGenussScheune Diefenbach\n\nFeste | Sternenfels\n\n 08.05.2026, 16:00 - 20:00 Uhr\n\nLassen Sie im gemütlichen Ambiente der alten Kelter in Diefenbach die Woche ausklingen und genießen Sie die Vielfalt und Qualität regionaler Lebensmittel.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/genussscheune-diefenbach/",
-    "lat": 49.0499637,
-    "lng": 8.8510968,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Athleticflow & wine | HIIT meets Yoga & wine",
@@ -2294,9 +2294,9 @@ const EVENTS = [
     "summary": "„HIIT meets Yoga“ Class auf der Dachterrasse mit Weinprobe! Was gibt es Schöneres, als mit einer einzigartigen athleticflow-Class und einer Weinprobe im Anschluss in atemberaubender…",
     "description": "08\nMAY\nSportveranstaltung\nAthleticflow & wine | HIIT meets Yoga & wine\n\nSportveranstaltung | Schliengen\n\n 08.05.2026, 18:30 - 20:30 Uhr\n\n„HIIT meets Yoga“ Class auf der Dachterrasse mit Weinprobe! Was gibt es Schöneres, als mit einer einzigartigen athleticflow-Class und einer Weinprobe im Anschluss in atemberaubender…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/athleticflow-wine-hiit-meets-yoga-wine/",
-    "lat": 47.7556795,
-    "lng": 7.5770906,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Friedensfest",
@@ -2313,9 +2313,9 @@ const EVENTS = [
     "summary": "Beim Friedensfest gibt es unter dem Motto „Es beginnt mit dir!“ tolle Aktionen und interessante Stände zu entdecken.",
     "description": "08\nMAY\nFeste\nFriedensfest\n\nFeste | Radolfzell am Bodensee\n\n 08.05.2026, 14:00 - 17:00 Uhr\n\nBeim Friedensfest gibt es unter dem Motto „Es beginnt mit dir!“ tolle Aktionen und interessante Stände zu entdecken.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/friedensfest/",
-    "lat": 47.7372802,
-    "lng": 8.9702755,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "DämmerShoppen – die Radolfzeller Innenstadt wird zum Laufsteg!",
@@ -2332,9 +2332,9 @@ const EVENTS = [
     "summary": "Die Stadt und die Aktionsgemeinschaft feiern ihr großes Jubiläum! Die Innenstadt verwandelt sich beim DämmerShoppen am 8. Mai 2026 ab 18 Uhr in einen lebendigen Laufsteg…",
     "description": "08\nMAY\nFeste\nDämmerShoppen – die Radolfzeller Innenstadt wird zum Laufsteg!\n\nFeste | Radolfzell am Bodensee\n\n 08.05.2026, 18:00 - 23:00 Uhr\n\nDie Stadt und die Aktionsgemeinschaft feiern ihr großes Jubiläum! Die Innenstadt verwandelt sich beim DämmerShoppen am 8. Mai 2026 ab 18 Uhr in einen lebendigen Laufsteg…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/dammershoppen-die-radolfzeller-innenstadt-wird-zum-laufsteg/",
-    "lat": 47.7372802,
-    "lng": 8.9702755,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Von Rittern und Burgfräulein",
@@ -2351,9 +2351,9 @@ const EVENTS = [
     "summary": "Ruinenführung",
     "description": "08\nMAY\nKultur\nVon Rittern und Burgfräulein\n\nKultur | Burladingen-Hörschwag\n\n 08.05.2026, 14:00 - 16:00 Uhr\n\nRuinenführung\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/von-rittern-und-burgfraulein/",
-    "lat": 48.3158323,
-    "lng": 9.1979962,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Singpausen- und Bläserklassennachmittag",
@@ -2370,9 +2370,9 @@ const EVENTS = [
     "summary": "Die Musikschule Burladingen lädt im Rahmen zum Jubiläumsjahr ein:",
     "description": "08\nMAY\nFeste\nSingpausen- und Bläserklassennachmittag\n\nFeste | Burladingen\n\n 08.05.2026, 14:00 Uhr\n\nDie Musikschule Burladingen lädt im Rahmen zum Jubiläumsjahr ein:\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/singpausen-und-blaserklassennachmittag/",
-    "lat": 48.2892852,
-    "lng": 9.1134689,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "ADAC Hockenheim Historic 2026",
@@ -2389,9 +2389,9 @@ const EVENTS = [
     "summary": "Die ADAC Hockenheim Historic findet jährlich zu Ehren des schottischen Formel-1-Weltmeisters Jim Clark statt. Traditionell begeistert die Veranstaltung im Frühjahr stets rund 500 Starter und…",
     "description": "08\nMAY\nFeste\nADAC Hockenheim Historic 2026\n\nFeste | Hockenheim\n\n 08.05.2026, 09:00 - 19:00 Uhr\n\nDie ADAC Hockenheim Historic findet jährlich zu Ehren des schottischen Formel-1-Weltmeisters Jim Clark statt. Traditionell begeistert die Veranstaltung im Frühjahr stets rund 500 Starter und…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/adac-hockenheim-historic-2026/",
-    "lat": 49.3188892,
-    "lng": 8.5475467,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Wunderbar wild: Wochenende für Frauen im Schwarzwald",
@@ -2408,9 +2408,9 @@ const EVENTS = [
     "summary": "Wunderbar wild ist ein Wochenende für Frauen, die drei Tage die Schwarzwad-Natur, Bewegung und Begegnung genießen wollen - voller Naturerlebnisse, geführter Wanderungen, Waldwissen und gemeinsamer…",
     "description": "08\nMAY\nAktiv unterwegs\nWunderbar wild: Wochenende für Frauen im Schwarzwald\n\nAktiv unterwegs | Dobel\n\n 08.05.2026 - 10.05.2026, 15:00 - 17:00 Uhr\n\nWunderbar wild ist ein Wochenende für Frauen, die drei Tage die Schwarzwad-Natur, Bewegung und Begegnung genießen wollen - voller Naturerlebnisse, geführter Wanderungen, Waldwissen und gemeinsamer…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wunderbar-wild-wochenende-fur-frauen-im-schwarzwald/",
-    "lat": 48.7969905,
-    "lng": 8.4936307,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Dreams in Percussion GEDRAT – MANZECCHI – ENGEL",
@@ -2427,9 +2427,9 @@ const EVENTS = [
     "summary": "Bunter Konzertabend mit GEDRAT, MANZECCHI und ENGEL: „Dreams in Percussion“. Zum 55-jährigen Bühnenjubiläum feiern sie mit Rock’n Jazz’n World, Eigenkompositionen, Tanz-Grooves, Special Guests und Gongschießen…",
     "description": "08\nMAY\nKonzerte\nDreams in Percussion GEDRAT – MANZECCHI – ENGEL\n\nKonzerte | Konstanz\n\n 08.05.2026, 20:00 Uhr\n\nBunter Konzertabend mit GEDRAT, MANZECCHI und ENGEL: „Dreams in Percussion“. Zum 55-jährigen Bühnenjubiläum feiern sie mit Rock’n Jazz’n World, Eigenkompositionen, Tanz-Grooves, Special Guests und Gongschießen…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/dreams-in-percussion-gedrat-manzecchi-engel/",
-    "lat": 47.659216,
-    "lng": 9.1750718,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Konzert mit dem Trachtenblasorchester Baiersbronn",
@@ -2446,9 +2446,9 @@ const EVENTS = [
     "summary": "Konzert",
     "description": "08\nMAY\nFeste\nKonzert mit dem Trachtenblasorchester Baiersbronn\n\nFeste | Baiersbronn\n\n 08.05.2026, 19:30 - 20:30 Uhr\n\nKonzert\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kurkonzert-mit-dem-trachtenblasorchester-baiersbronn-2/",
-    "lat": 48.5069519,
-    "lng": 8.3720124,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Wir basteln zum Muttertag",
@@ -2465,9 +2465,9 @@ const EVENTS = [
     "summary": "Kinderveranstaltung",
     "description": "08\nMAY\nFeste\nWir basteln zum Muttertag\n\nFeste | Baiersbronn\n\n 08.05.2026, 14:30 - 17:30 Uhr\n\nKinderveranstaltung\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wir-basteln-zum-muttertag/",
-    "lat": 48.5069519,
-    "lng": 8.3720124,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Gärtnern – Eine Spur wilder",
@@ -2484,9 +2484,9 @@ const EVENTS = [
     "summary": "Vortrag",
     "description": "08\nMAY\nFeste\nGärtnern – Eine Spur wilder\n\nFeste | Baiersbronn\n\n 08.05.2026, 17:30 - 19:00 Uhr\n\nVortrag\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gartnern-eine-spur-wilder/",
-    "lat": 48.5069519,
-    "lng": 8.3720124,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Köstlich Wandern",
@@ -2503,9 +2503,9 @@ const EVENTS = [
     "summary": "Geführte Wanderung",
     "description": "08\nMAY\nFeste\nKöstlich Wandern\n\nFeste | Baiersbronn\n\n 08.05.2026 - 18.12.2026, 09:45 - 15:45 Uhr\n\nGeführte Wanderung\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kostlich-wandern/",
-    "lat": 48.5069519,
-    "lng": 8.3720124,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Kutschfahrt ins romantische Tonbachtal",
@@ -2522,9 +2522,9 @@ const EVENTS = [
     "summary": "Kutschfahrt",
     "description": "08\nMAY\nFeste\nKutschfahrt ins romantische Tonbachtal\n\nFeste | Baiersbronn\n\n 08.05.2026, 11:00 - 13:00 Uhr\n\nKutschfahrt\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kutschfahrt-ins-romantische-tonbachtal/",
-    "lat": 48.5069519,
-    "lng": 8.3720124,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Halbe nach 5 – Termine 2026| Fachwerkstadt Eppingen",
@@ -2541,9 +2541,9 @@ const EVENTS = [
     "summary": "Jeden Monat eine andere Themenführung von und mit den Heimatfreunden Eppingen. Zum gemütlichen Ausklang \"eine Halbe\" von der Palmbräu.",
     "description": "08\nMAY\nKultur\nHalbe nach 5 – Termine 2026| Fachwerkstadt Eppingen\n\nKultur | Eppingen\n\n 08.05.2026, 17:30 - 19:00 Uhr\n\nJeden Monat eine andere Themenführung von und mit den Heimatfreunden Eppingen. Zum gemütlichen Ausklang \"eine Halbe\" von der Palmbräu. \n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/halbe-nach-5-termine-2026-fachwerkstadt-eppingen/",
-    "lat": 49.1369473,
-    "lng": 8.90956,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "STADTRADELN mit dem Bürgermeister",
@@ -2560,9 +2560,9 @@ const EVENTS = [
     "summary": "Einladung zur \"Sportlichen Feierabendtour\" mit Bürgermeister Thomas Geppert.",
     "description": "08\nMAY\nSportveranstaltung\nSTADTRADELN mit dem Bürgermeister\n\nSportveranstaltung | Wolfach\n\n 08.05.2026, 16:00 Uhr\n\nEinladung zur \"Sportlichen Feierabendtour\" mit Bürgermeister Thomas Geppert.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtradeln-mit-dem-burgermeister/",
-    "lat": 48.2985845,
-    "lng": 8.222608,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "175-jähriges Jubiläum Musikverein Gosheim",
@@ -2579,9 +2579,9 @@ const EVENTS = [
     "summary": "175-jähriges Jubiläum vom 8.-10. Mai im Park bei der Jurahalle in Gosheim",
     "description": "08\nMAY\nFeste\n175-jähriges Jubiläum Musikverein Gosheim\n\nFeste | Donaubergland\n\n 08.05.2026 - 10.05.2026\n\n175-jähriges Jubiläum vom 8.-10. Mai im Park bei der Jurahalle in Gosheim\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/175-jahriges-jubilaum-musikverein-gosheim/",
-    "lat": 48.1129533,
-    "lng": 8.8906795,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "GoSlowStrike",
@@ -2598,9 +2598,9 @@ const EVENTS = [
     "summary": "Goslowstrike Öko-Rock im Einklang mit der Natur",
     "description": "08\nMAY\nKonzerte\nGoSlowStrike\n\nKonzerte | Ellwangen\n\n 08.05.2026, 10:00 - 17:00 Uhr\n\nGoslowstrike Öko-Rock im Einklang mit der Natur\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/goslowstrike/",
-    "lat": 48.9615975,
-    "lng": 10.131975,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Gaia – Kunstinstallation von Luke Jerram",
@@ -2617,9 +2617,9 @@ const EVENTS = [
     "summary": "\"Ich hoffe, dass Gäste beim Besuch von Gaia die Erde wahrnehmen, als wären sie selbst im Weltraum: als wunderschönen und kostbaren Ort. Ein Ökosystem, das…",
     "description": "08\nMAY\nAusstellung\nGaia – Kunstinstallation von Luke Jerram\n\nAusstellung | Ellwangen\n\n 08.05.2026 - 19.06.2026, 09:00 - 22:00 Uhr\n\n\"Ich hoffe, dass Gäste beim Besuch von Gaia die Erde wahrnehmen, als wären sie selbst im Weltraum: als wunderschönen und kostbaren Ort. Ein Ökosystem, das…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gaia-kunstinstallation-von-luke-jerram/",
-    "lat": 48.9615975,
-    "lng": 10.131975,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Pilgern auf dem Ulrikaweg: Illmensee – Schloss Salem",
@@ -2636,9 +2636,9 @@ const EVENTS = [
     "summary": "Das gemeinsame Pilgern auf dem Ulrikaweg ist eine jährliche Tradition geworden, die immer um das Fest der seligen Schwester Ulrika Nisch (08. Mai) die Möglichkeit…",
     "description": "08\nMAY\nAktiv unterwegs\nPilgern auf dem Ulrikaweg: Illmensee – Schloss Salem\n\nAktiv unterwegs | Illmensee\n\n 08.05.2026\n\nDas gemeinsame Pilgern auf dem Ulrikaweg ist eine jährliche Tradition geworden, die immer um das Fest der seligen Schwester Ulrika Nisch (08. Mai) die Möglichkeit…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/pilgern-auf-dem-ulrikaweg-illmensee-schloss-salem/",
-    "lat": 47.864499,
-    "lng": 9.3766192,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Kinderzaubertheater",
@@ -2655,9 +2655,9 @@ const EVENTS = [
     "summary": "PHÄNOMENAL - Die verzauberte Safari Die Zaubershow für Kids und Youngsters zum Staunen, Lachen und Mitmachen.",
     "description": "08\nMAY\nKultur für Kinder\nKinderzaubertheater\n\nKultur für Kinder | Sasbachwalden\n\n 08.05.2026, 16:00 - 17:00 Uhr\n\nPHÄNOMENAL - Die verzauberte Safari Die Zaubershow für Kids und Youngsters zum Staunen, Lachen und Mitmachen. \n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kinderzaubertheater/",
-    "lat": 48.6186096,
-    "lng": 8.1280222,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Keine Angst vor Brot, Weizen & Vollkorn",
@@ -2674,9 +2674,9 @@ const EVENTS = [
     "summary": "Was unterscheidet unser biologisches Backen vom Backen in konventionellen Bäckereien?",
     "description": "08\nMAY\nFeste\nKeine Angst vor Brot, Weizen & Vollkorn\n\nFeste | Weilheim/Teck\n\n 08.05.2026, 17:30 - 19:30 Uhr\n\nWas unterscheidet unser biologisches Backen vom Backen in konventionellen Bäckereien?\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/keine-angst-vor-brot-weizen-vollkorn/",
-    "lat": 48.6205216,
-    "lng": 9.5351863,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Psychothriller “Passagier 23”",
@@ -2693,9 +2693,9 @@ const EVENTS = [
     "summary": "Psychothriller von Sebastian Fitzek. Nach dem gleichnamigen Beststeller, erschienen im Droemer Knaur Verlag München für die Bühne bearbeitet von Christian Scholze, gespielt vom Berliner Kriminaltheater…",
     "description": "08\nMAY\nKultur\nPsychothriller “Passagier 23”\n\nKultur | Schramberg\n\n 08.05.2026, 19:30 - 22:00 Uhr\n\nPsychothriller von Sebastian Fitzek. Nach dem gleichnamigen Beststeller, erschienen im Droemer Knaur Verlag München für die Bühne bearbeitet von Christian Scholze, gespielt vom Berliner Kriminaltheater…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/psychothriller-passagier-23/",
-    "lat": 48.225478,
-    "lng": 8.3852168,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Stricken im Kino mit dem Film “Monsieur Robert kennt kein Pardon”",
@@ -2712,9 +2712,9 @@ const EVENTS = [
     "summary": "Nach zwei sehr gelungenen Abenden laden wir Sie erneut ein zu unserem gemeinsamen, gemütlichen „Stricken im Kino“ ein.",
     "description": "08\nMAY\nFeste\nStricken im Kino mit dem Film “Monsieur Robert kennt kein Pardon”\n\nFeste | Schramberg\n\n 08.05.2026, 19:00 - 21:45 Uhr\n\nNach zwei sehr gelungenen Abenden laden wir Sie erneut ein zu unserem gemeinsamen, gemütlichen „Stricken im Kino“ ein.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stricken-im-kino-mit-dem-film-monsieur-robert-kennt-kein-pardon/",
-    "lat": 48.225478,
-    "lng": 8.3852168,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Kleiderkiste für Erwachsene",
@@ -2731,9 +2731,9 @@ const EVENTS = [
     "summary": "Second-Hand Fashion für Erwachsene & Party!",
     "description": "08\nMAY\nFeste\nKleiderkiste für Erwachsene\n\nFeste | Pfullendorf\n\n 08.05.2026, 19:00 - 20:30 Uhr\n\nSecond-Hand Fashion für Erwachsene & Party!\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kleiderkiste-fur-erwachsene/",
-    "lat": 47.924349,
-    "lng": 9.2559822,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Jubiläum des Weltladens",
@@ -2750,9 +2750,9 @@ const EVENTS = [
     "summary": "Der Weltladen Pfullendorf und der Verein „Ökumenischer Arbeitskreis Dritte Welt e.V.“ feiern im Jahr 2026 verschiedene Jubiläen: 45 Jahre Fairer Handel in Pfullendorf, 40 Jahre Weltladen, 20…",
     "description": "08\nMAY\nFeste\nJubiläum des Weltladens\n\nFeste | Pfullendorf\n\n 08.05.2026, 19:00 Uhr\n\nDer Weltladen Pfullendorf und der Verein „Ökumenischer Arbeitskreis Dritte Welt e.V.“ feiern im Jahr 2026 verschiedene Jubiläen: 45 Jahre Fairer Handel in Pfullendorf, 40 Jahre Weltladen, 20…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/jubilaum-des-weltladens/",
-    "lat": 47.924349,
-    "lng": 9.2559822,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Pariser Flair – Eine musikalische Stadtführung",
@@ -2788,9 +2788,9 @@ const EVENTS = [
     "summary": "Rundfahrt mit italienischen Spezialitäten",
     "description": "08\nMAY\nFeste\nSchifffahrt – Italienische Nacht\n\nFeste | Breisach\n\n 08.05.2026, 19:30 Uhr\n\nRundfahrt mit italienischen Spezialitäten\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schifffahrt-italienische-nacht/",
-    "lat": 48.026872,
-    "lng": 7.5894944,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "« Mon Bijou » visite guidée de Vieux-Brisach – en langue française",
@@ -2807,9 +2807,9 @@ const EVENTS = [
     "summary": "Les guides indépendants Stephanie Kremer & Rémy Piquet, vous emmènent dans une visite divertissante sur la colline de la cathédrale de Breisach.",
     "description": "08\nMAY\nKultur\n« Mon Bijou » visite guidée de Vieux-Brisach – en langue française\n\nKultur | Breisach\n\n 08.05.2026, 10:30 - 12:00 Uhr\n\nLes guides indépendants Stephanie Kremer & Rémy Piquet, vous emmènent dans une visite divertissante sur la colline de la cathédrale de Breisach.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mon-bijou-visite-guidee-de-vieux-brisach-en-langue-francaise/",
-    "lat": 48.026872,
-    "lng": 7.5894944,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Gedenkintervention zum 8. Mai. – Rheintorplatz",
@@ -2826,9 +2826,9 @@ const EVENTS = [
     "summary": "Gedenkintervention zum 8. Mai. und Vortrag Dr. Theresa Ehret mit Tanzperformance der Just Like Stars – JLS, Tanzgruppe der JLS der Julius-Leber-Schule.",
     "description": "08\nMAY\nFeste\nGedenkintervention zum 8. Mai. – Rheintorplatz\n\nFeste | Breisach\n\n 08.05.2026, 17:30 Uhr\n\nGedenkintervention zum 8. Mai. und Vortrag Dr. Theresa Ehret mit Tanzperformance der Just Like Stars – JLS, Tanzgruppe der JLS der Julius-Leber-Schule.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gedenken-zum-ende-des-2-weltkriegs-vor-81-jahren/",
-    "lat": 48.026872,
-    "lng": 7.5894944,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Deutscher Sekttag",
@@ -2845,9 +2845,9 @@ const EVENTS = [
     "summary": "Feiern Sie mit uns den deutschen Sekttag 2026 in der Privatsektkellerei Geldermann in Breisach am Rhein.",
     "description": "08\nMAY\nFeste\nDeutscher Sekttag\n\nFeste | Breisach\n\n 08.05.2026, 16:30 - 21:00 Uhr\n\nFeiern Sie mit uns den deutschen Sekttag 2026 in der Privatsektkellerei Geldermann in Breisach am Rhein.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/deutscher-sekttag/",
-    "lat": 48.026872,
-    "lng": 7.5894944,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "GöteborgsOperans Danskompani",
@@ -2883,9 +2883,9 @@ const EVENTS = [
     "summary": "Verteilt auf zwei Wochenenden im Mai wird jedes Jahr ein vielfältiges Programm durch die Schwarzwaldguides und Kräuterexperten auf die Beine gestellt.",
     "description": "08\nMAY\nAktiv unterwegs\nSchömberger Wildkräutertage 2026\n\nAktiv unterwegs | Schömberg\n\n 08.05.2026 - 10.05.2026\n\nVerteilt auf zwei Wochenenden im Mai wird jedes Jahr ein vielfältiges Programm durch die Schwarzwaldguides und Kräuterexperten auf die Beine gestellt.\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schomberger-wildkrautertage-2026/",
-    "lat": 48.211058,
-    "lng": 8.7604633,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Schömberger Glücksmomente",
@@ -2902,9 +2902,9 @@ const EVENTS = [
     "summary": "Von Mai bis September erwartet euch jeden 1. Freitag im Monat ein ausgelassener Abend auf dem Parkplatz des Malerbetriebs Zillinger. Ab 18 Uhr werdet ihr…",
     "description": "08\nMAY\nFeste\nSchömberger Glücksmomente\n\nFeste | Schömberg\n\n 08.05.2026\n\nVon Mai bis September erwartet euch jeden 1. Freitag im Monat ein ausgelassener Abend auf dem Parkplatz des Malerbetriebs Zillinger. Ab 18 Uhr werdet ihr…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schomberger-glucksmomente/",
-    "lat": 48.211058,
-    "lng": 8.7604633,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   },
   {
     "title": "Abendmarkt",
@@ -2921,8 +2921,8 @@ const EVENTS = [
     "summary": "Von Mai bis Oktober verwandelt sich der Lindenplatz in Wasserburg jeden ersten Freitag im Monat (im Mai und Juli 2026 am zweiten Freitag) von 17:00 Uhr…",
     "description": "08\nMAY\nEssen und Trinken\nAbendmarkt\n\nEssen und Trinken | Wasserburg (Bodensee)\n\n 08.05.2026, 17:00 - 21:00 Uhr\n\nVon Mai bis Oktober verwandelt sich der Lindenplatz in Wasserburg jeden ersten Freitag im Monat (im Mai und Juli 2026 am zweiten Freitag) von 17:00 Uhr…\n\nDetails",
     "detailsUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/abendmarkt-2/",
-    "lat": 47.6045609,
-    "lng": 9.5316769,
-    "locationQuality": "verified"
+    "lat": null,
+    "lng": null,
+    "locationQuality": "missing_or_invalid"
   }
 ];
