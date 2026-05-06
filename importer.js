@@ -10,7 +10,7 @@ const BASE_PAGE_URL =
 const GEO_CACHE_FILE = "./geo-cache.json";
 
 const MAX_PAGES = 11;
-const PAGE_DELAY_MS = 1200;
+const PAGE_DELAY_MS = 300;
 
 let geoCache = {};
 
@@ -26,9 +26,7 @@ function sleep(ms) {
 
 function toIsoDate(text) {
   const match = text.match(/(\d{2})\.(\d{2})\.(\d{4})/);
-
   if (!match) return null;
-
   return `${match[3]}-${match[2]}-${match[1]}`;
 }
 
@@ -56,32 +54,23 @@ function monthLabel(isoDate) {
 }
 
 function parseDateLine(line) {
-
   let dateText = line.trim();
   let timeText = "";
 
   if (dateText.includes(",")) {
-
     const parts = dateText.split(",");
-
     dateText = parts[0].trim();
-
-    timeText =
-      parts.slice(1).join(",").trim();
+    timeText = parts.slice(1).join(",").trim();
   }
 
   let dateStart = null;
   let dateEnd = null;
 
   if (dateText.includes(" - ")) {
-
     const parts = dateText.split(" - ");
-
     dateStart = toIsoDate(parts[0]);
     dateEnd = toIsoDate(parts[1]);
-
   } else {
-
     dateStart = toIsoDate(dateText);
     dateEnd = dateStart;
   }
@@ -96,7 +85,6 @@ function parseDateLine(line) {
 }
 
 function parseRawEvent(raw, fallbackTitle) {
-
   const lines = raw
     .split("\n")
     .map(line => line.trim())
@@ -113,9 +101,7 @@ function parseRawEvent(raw, fallbackTitle) {
   const expectedPrefix = category + " |";
 
   for (const line of lines) {
-
     if (line.startsWith(expectedPrefix)) {
-
       categoryLine = line;
 
       const parts = line
@@ -123,7 +109,6 @@ function parseRawEvent(raw, fallbackTitle) {
         .map(p => p.trim());
 
       place = parts[1] || "Unbekannt";
-
       break;
     }
   }
@@ -132,12 +117,9 @@ function parseRawEvent(raw, fallbackTitle) {
   let dateLineIndex = -1;
 
   for (let i = 0; i < lines.length; i++) {
-
     if (/\d{2}\.\d{2}\.\d{4}/.test(lines[i])) {
-
       dateLine = lines[i];
       dateLineIndex = i;
-
       break;
     }
   }
@@ -147,15 +129,9 @@ function parseRawEvent(raw, fallbackTitle) {
   let summary = "";
 
   if (dateLineIndex >= 0) {
-
-    const afterDate =
-      lines.slice(dateLineIndex + 1);
-
-    const useful =
-      afterDate.filter(line => line !== "Details");
-
-    summary =
-      useful.join("\n").trim();
+    const afterDate = lines.slice(dateLineIndex + 1);
+    const useful = afterDate.filter(line => line !== "Details");
+    summary = useful.join("\n").trim();
   }
 
   return {
@@ -172,7 +148,6 @@ function parseRawEvent(raw, fallbackTitle) {
 }
 
 function getCachedCoords(place) {
-
   if (!place || place === "Unbekannt") {
     return null;
   }
@@ -181,7 +156,6 @@ function getCachedCoords(place) {
 }
 
 function pageUrl(pageNum) {
-
   if (pageNum === 1) {
     return START_URL;
   }
@@ -203,33 +177,33 @@ const EVENTS = [];
 const SKIPPED_EVENTS = [];
 const MISSING_GEO_PLACES = new Set();
 
-for (
-  let pageNum = 1;
-  pageNum <= MAX_PAGES;
-  pageNum++
-) {
-
+for (let pageNum = 1; pageNum <= MAX_PAGES; pageNum++) {
   const url = pageUrl(pageNum);
 
   console.log("➡️ Lade:", url);
 
   await page.goto(url, {
-    waitUntil: "networkidle",
+    waitUntil: "domcontentloaded",
     timeout: 60000
   });
+
+  try {
+    await page.waitForSelector("article.event-card", {
+      timeout: 10000
+    });
+  } catch {
+    console.log("⚠️ Keine Event-Cards gefunden");
+  }
 
   await page.waitForTimeout(PAGE_DELAY_MS);
 
   const rawEvents = await page.evaluate(() => {
-
     const items = [];
 
     document
       .querySelectorAll("article.event-card")
       .forEach(card => {
-
-        const raw =
-          card.innerText.trim();
+        const raw = card.innerText.trim();
 
         if (!raw) return;
 
@@ -263,32 +237,17 @@ for (
     return items;
   });
 
-  console.log(
-    `➡️ Seite ${pageNum}: ${rawEvents.length} Events`
-  );
+  console.log(`➡️ Seite ${pageNum}: ${rawEvents.length} Events`);
 
   if (rawEvents.length === 0) {
-
-    console.log(
-      "➡️ Keine Events mehr gefunden"
-    );
-
+    console.log("➡️ Keine Events mehr gefunden");
     break;
   }
 
   for (const item of rawEvents) {
+    const parsed = parseRawEvent(item.raw, item.title);
 
-    const parsed =
-      parseRawEvent(
-        item.raw,
-        item.title
-      );
-
-    if (
-      !parsed.title ||
-      !parsed.dateStart
-    ) {
-
+    if (!parsed.title || !parsed.dateStart) {
       SKIPPED_EVENTS.push({
         reason: "missing_required_fields",
         parsed,
@@ -299,18 +258,10 @@ for (
       continue;
     }
 
-    const coords =
-      getCachedCoords(parsed.place);
+    const coords = getCachedCoords(parsed.place);
 
-    if (
-      !coords &&
-      parsed.place &&
-      parsed.place !== "Unbekannt"
-    ) {
-
-      MISSING_GEO_PLACES.add(
-        parsed.place
-      );
+    if (!coords && parsed.place && parsed.place !== "Unbekannt") {
+      MISSING_GEO_PLACES.add(parsed.place);
     }
 
     EVENTS.push({
@@ -325,7 +276,6 @@ for (
     });
 
     if (!coords) {
-
       SKIPPED_EVENTS.push({
         reason: "missing_geocode_but_imported",
         parsed,
@@ -335,13 +285,9 @@ for (
     }
   }
 
-  console.log(
-    "➡️ Zwischenstand:",
-    EVENTS.length,
-    "Events"
-  );
+  console.log("➡️ Zwischenstand:", EVENTS.length, "Events");
 
-  await sleep(300);
+  await sleep(100);
 }
 
 await browser.close();
@@ -365,41 +311,12 @@ const missingGeoOutput =
   ) +
   ";";
 
-fs.writeFileSync(
-  "./events.js",
-  eventsOutput
-);
+fs.writeFileSync("./events.js", eventsOutput);
+fs.writeFileSync("./events-preview.js", eventsOutput);
+fs.writeFileSync("./skipped-events.js", skippedOutput);
+fs.writeFileSync("./missing-geo-places.js", missingGeoOutput);
 
-fs.writeFileSync(
-  "./events-preview.js",
-  eventsOutput
-);
-
-fs.writeFileSync(
-  "./skipped-events.js",
-  skippedOutput
-);
-
-fs.writeFileSync(
-  "./missing-geo-places.js",
-  missingGeoOutput
-);
-
-console.log(
-  "➡️ Gesamt importiert:",
-  EVENTS.length
-);
-
-console.log(
-  "➡️ Ohne gültige Koordinaten:",
-  SKIPPED_EVENTS.length
-);
-
-console.log(
-  "➡️ Orte ohne Cache:",
-  MISSING_GEO_PLACES.size
-);
-
-console.log(
-  "➡️ Dateien geschrieben"
-);
+console.log("➡️ Gesamt importiert:", EVENTS.length);
+console.log("➡️ Ohne gültige Koordinaten:", SKIPPED_EVENTS.length);
+console.log("➡️ Orte ohne Cache:", MISSING_GEO_PLACES.size);
+console.log("➡️ Dateien geschrieben");
