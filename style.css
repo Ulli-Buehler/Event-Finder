@@ -92,6 +92,18 @@ input[type="range"]{
   font-weight:800;
 }
 
+.category-toggle{
+  width:100%;
+  margin-top:14px;
+  border:none;
+  background:#f2f2f7;
+  border-radius:16px;
+  padding:14px;
+  font-size:15px;
+  font-weight:700;
+  color:#007aff;
+}
+
 .category-bar{
   display:flex;
   gap:10px;
