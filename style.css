@@ -106,8 +106,12 @@ input[type="range"]{
   box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 
+.card.no-location{
+  opacity:.92;
+}
+
 .card-image{
-  height:95px;
+  height:90px;
   background:linear-gradient(135deg,#007aff,#64d2ff);
   display:flex;
   align-items:center;
@@ -117,14 +121,14 @@ input[type="range"]{
 }
 
 .card-body{
-  padding:14px;
+  padding:12px;
 }
 
 .card h2{
   margin:0 0 8px;
-  font-size:21px;
-  line-height:1.15;
-  max-height:72px;
+  font-size:19px;
+  line-height:1.1;
+  max-height:46px;
   overflow:hidden;
   word-break:break-word;
 }
@@ -132,6 +136,8 @@ input[type="range"]{
 .card p{
   margin:0;
   color:#666;
+  font-size:15px;
+  line-height:1.25;
 }
 
 .sheet{
@@ -213,10 +219,6 @@ input[type="range"]{
 .category-btn.active{
   background:#007aff;
   color:white;
-}
-
-.card.no-location{
-  opacity:.92;
 }
 
 #cards{
