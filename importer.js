@@ -1,5 +1,3 @@
-const MAX_PAGES_FALLBACK = 11;
-
 import { chromium } from "playwright";
 import fs from "fs";
 
@@ -11,9 +9,8 @@ const BASE_PAGE_URL =
 
 const GEO_CACHE_FILE = "./geo-cache.json";
 
-const MAX_PAGES_FALLBACK = 600;
-const PAGE_DELAY_MS = 2500;
-const GEOCODE_DELAY_MS = 1200;
+const MAX_PAGES = 11;
+const PAGE_DELAY_MS = 1200;
 
 let geoCache = {};
 
@@ -29,6 +26,7 @@ function sleep(ms) {
 
 function toIsoDate(text) {
   const match = text.match(/(\d{2})\.(\d{2})\.(\d{4})/);
+
   if (!match) return null;
 
   return `${match[3]}-${match[2]}-${match[1]}`;
@@ -58,23 +56,32 @@ function monthLabel(isoDate) {
 }
 
 function parseDateLine(line) {
+
   let dateText = line.trim();
   let timeText = "";
 
   if (dateText.includes(",")) {
+
     const parts = dateText.split(",");
+
     dateText = parts[0].trim();
-    timeText = parts.slice(1).join(",").trim();
+
+    timeText =
+      parts.slice(1).join(",").trim();
   }
 
   let dateStart = null;
   let dateEnd = null;
 
   if (dateText.includes(" - ")) {
+
     const parts = dateText.split(" - ");
+
     dateStart = toIsoDate(parts[0]);
     dateEnd = toIsoDate(parts[1]);
+
   } else {
+
     dateStart = toIsoDate(dateText);
     dateEnd = dateStart;
   }
@@ -89,6 +96,7 @@ function parseDateLine(line) {
 }
 
 function parseRawEvent(raw, fallbackTitle) {
+
   const lines = raw
     .split("\n")
     .map(line => line.trim())
@@ -105,7 +113,9 @@ function parseRawEvent(raw, fallbackTitle) {
   const expectedPrefix = category + " |";
 
   for (const line of lines) {
+
     if (line.startsWith(expectedPrefix)) {
+
       categoryLine = line;
 
       const parts = line
@@ -113,6 +123,7 @@ function parseRawEvent(raw, fallbackTitle) {
         .map(p => p.trim());
 
       place = parts[1] || "Unbekannt";
+
       break;
     }
   }
@@ -121,9 +132,12 @@ function parseRawEvent(raw, fallbackTitle) {
   let dateLineIndex = -1;
 
   for (let i = 0; i < lines.length; i++) {
+
     if (/\d{2}\.\d{2}\.\d{4}/.test(lines[i])) {
+
       dateLine = lines[i];
       dateLineIndex = i;
+
       break;
     }
   }
@@ -133,9 +147,15 @@ function parseRawEvent(raw, fallbackTitle) {
   let summary = "";
 
   if (dateLineIndex >= 0) {
-    const afterDate = lines.slice(dateLineIndex + 1);
-    const useful = afterDate.filter(line => line !== "Details");
-    summary = useful.join("\n").trim();
+
+    const afterDate =
+      lines.slice(dateLineIndex + 1);
+
+    const useful =
+      afterDate.filter(line => line !== "Details");
+
+    summary =
+      useful.join("\n").trim();
   }
 
   return {
@@ -151,58 +171,17 @@ function parseRawEvent(raw, fallbackTitle) {
   };
 }
 
-async function geocode(place) {
+function getCachedCoords(place) {
+
   if (!place || place === "Unbekannt") {
     return null;
   }
 
-  if (geoCache[place]) {
-    return geoCache[place];
-  }
-
-  console.log("🌍 Geocode:", place);
-
-  try {
-    const url =
-      "https://nominatim.openstreetmap.org/search?format=json&limit=1&q=" +
-      encodeURIComponent(place + ", Baden-Württemberg, Deutschland");
-
-    const response = await fetch(url, {
-      headers: {
-        "User-Agent": "Event-Finder/1.0"
-      }
-    });
-
-    const data = await response.json();
-
-    await sleep(GEOCODE_DELAY_MS);
-
-    if (!data || !data[0]) {
-      console.log("⚠️ Keine Koordinaten:", place);
-      return null;
-    }
-
-    const coords = {
-      lat: Number(data[0].lat),
-      lng: Number(data[0].lon)
-    };
-
-    geoCache[place] = coords;
-
-    fs.writeFileSync(
-      GEO_CACHE_FILE,
-      JSON.stringify(geoCache, null, 2)
-    );
-
-    return coords;
-
-  } catch (err) {
-    console.log("⚠️ Geocode Fehler:", place);
-    return null;
-  }
+  return geoCache[place] || null;
 }
 
 function pageUrl(pageNum) {
+
   if (pageNum === 1) {
     return START_URL;
   }
@@ -210,33 +189,9 @@ function pageUrl(pageNum) {
   return `${BASE_PAGE_URL}/${pageNum}/?post_type=event&kategorie=&ort=&region=&von=&bis=`;
 }
 
-async function detectMaxPages(page) {
-  const maxPages = await page.evaluate(() => {
-    const text = document.body.innerText || "";
-
-    const matches = text.match(/\b\d+\b/g) || [];
-
-    const numbers = matches
-      .map(n => Number(n))
-      .filter(n => Number.isInteger(n));
-
-    const likelyPages = numbers.filter(n => n > 1 && n < 2000);
-
-    if (!likelyPages.length) {
-      return null;
-    }
-
-    return Math.max(...likelyPages);
-  });
-
-  if (!maxPages || maxPages < 2) {
-    return MAX_PAGES_FALLBACK;
-  }
-
-  return maxPages;
-}
-
 console.log("➡️ Import gestartet");
+console.log("➡️ Schnellmodus aktiv");
+console.log("➡️ Seitenlimit:", MAX_PAGES);
 
 const browser = await chromium.launch({
   headless: true
@@ -246,10 +201,14 @@ const page = await browser.newPage();
 
 const EVENTS = [];
 const SKIPPED_EVENTS = [];
+const MISSING_GEO_PLACES = new Set();
 
-let maxPages = null;
+for (
+  let pageNum = 1;
+  pageNum <= MAX_PAGES;
+  pageNum++
+) {
 
-for (let pageNum = 1; pageNum <= (maxPages || MAX_PAGES_FALLBACK); pageNum++) {
   const url = pageUrl(pageNum);
 
   console.log("➡️ Lade:", url);
@@ -261,52 +220,75 @@ for (let pageNum = 1; pageNum <= (maxPages || MAX_PAGES_FALLBACK); pageNum++) {
 
   await page.waitForTimeout(PAGE_DELAY_MS);
 
-  if (pageNum === 1) {
-    maxPages = await detectMaxPages(page);
-    console.log("➡️ Gefundene Seiten:", maxPages);
-  }
-
   const rawEvents = await page.evaluate(() => {
+
     const items = [];
 
-    document.querySelectorAll("article.event-card").forEach(card => {
-      const raw = card.innerText.trim();
+    document
+      .querySelectorAll("article.event-card")
+      .forEach(card => {
 
-      if (!raw) return;
+        const raw =
+          card.innerText.trim();
 
-      const title =
-        card.querySelector("h2, h3")?.innerText?.trim() || "";
+        if (!raw) return;
 
-      const detailsLink =
-        Array.from(card.querySelectorAll("a"))
-          .find(a =>
-            a.innerText.trim().toLowerCase().includes("details")
-          );
+        const title =
+          card.querySelector("h2, h3")
+            ?.innerText
+            ?.trim() || "";
 
-      const detailsUrl =
-        detailsLink ? detailsLink.href : "";
+        const detailsLink =
+          Array
+            .from(card.querySelectorAll("a"))
+            .find(a =>
+              a.innerText
+                .trim()
+                .toLowerCase()
+                .includes("details")
+            );
 
-      items.push({
-        raw,
-        title,
-        detailsUrl
+        const detailsUrl =
+          detailsLink
+            ? detailsLink.href
+            : "";
+
+        items.push({
+          raw,
+          title,
+          detailsUrl
+        });
       });
-    });
 
     return items;
   });
 
-  console.log(`➡️ Seite ${pageNum}: ${rawEvents.length} Events`);
+  console.log(
+    `➡️ Seite ${pageNum}: ${rawEvents.length} Events`
+  );
 
   if (rawEvents.length === 0) {
-    console.log("➡️ Keine Events mehr gefunden. Import stoppt.");
+
+    console.log(
+      "➡️ Keine Events mehr gefunden"
+    );
+
     break;
   }
 
   for (const item of rawEvents) {
-    const parsed = parseRawEvent(item.raw, item.title);
 
-    if (!parsed.title || !parsed.dateStart) {
+    const parsed =
+      parseRawEvent(
+        item.raw,
+        item.title
+      );
+
+    if (
+      !parsed.title ||
+      !parsed.dateStart
+    ) {
+
       SKIPPED_EVENTS.push({
         reason: "missing_required_fields",
         parsed,
@@ -317,21 +299,35 @@ for (let pageNum = 1; pageNum <= (maxPages || MAX_PAGES_FALLBACK); pageNum++) {
       continue;
     }
 
-    const coords = await geocode(parsed.place);
+    const coords =
+      getCachedCoords(parsed.place);
 
-    const event = {
+    if (
+      !coords &&
+      parsed.place &&
+      parsed.place !== "Unbekannt"
+    ) {
+
+      MISSING_GEO_PLACES.add(
+        parsed.place
+      );
+    }
+
+    EVENTS.push({
       ...parsed,
       detailsUrl: item.detailsUrl,
       lat: coords ? coords.lat : null,
       lng: coords ? coords.lng : null,
-      locationQuality: coords ? "verified" : "missing_or_invalid"
-    };
-
-    EVENTS.push(event);
+      locationQuality:
+        coords
+          ? "cached"
+          : "missing_or_invalid"
+    });
 
     if (!coords) {
+
       SKIPPED_EVENTS.push({
-        reason: "geocode_failed_but_imported",
+        reason: "missing_geocode_but_imported",
         parsed,
         detailsUrl: item.detailsUrl,
         raw: item.raw
@@ -339,9 +335,13 @@ for (let pageNum = 1; pageNum <= (maxPages || MAX_PAGES_FALLBACK); pageNum++) {
     }
   }
 
-  console.log("➡️ Zwischenstand:", EVENTS.length, "Events");
+  console.log(
+    "➡️ Zwischenstand:",
+    EVENTS.length,
+    "Events"
+  );
 
-  await sleep(500);
+  await sleep(300);
 }
 
 await browser.close();
@@ -356,10 +356,50 @@ const skippedOutput =
   JSON.stringify(SKIPPED_EVENTS, null, 2) +
   ";";
 
-fs.writeFileSync("./events.js", eventsOutput);
-fs.writeFileSync("./events-preview.js", eventsOutput);
-fs.writeFileSync("./skipped-events.js", skippedOutput);
+const missingGeoOutput =
+  "const MISSING_GEO_PLACES = " +
+  JSON.stringify(
+    [...MISSING_GEO_PLACES].sort(),
+    null,
+    2
+  ) +
+  ";";
 
-console.log("➡️ Gesamt importiert:", EVENTS.length);
-console.log("➡️ Ohne gültige Koordinaten:", SKIPPED_EVENTS.length);
-console.log("➡️ events.js, events-preview.js und skipped-events.js geschrieben");
+fs.writeFileSync(
+  "./events.js",
+  eventsOutput
+);
+
+fs.writeFileSync(
+  "./events-preview.js",
+  eventsOutput
+);
+
+fs.writeFileSync(
+  "./skipped-events.js",
+  skippedOutput
+);
+
+fs.writeFileSync(
+  "./missing-geo-places.js",
+  missingGeoOutput
+);
+
+console.log(
+  "➡️ Gesamt importiert:",
+  EVENTS.length
+);
+
+console.log(
+  "➡️ Ohne gültige Koordinaten:",
+  SKIPPED_EVENTS.length
+);
+
+console.log(
+  "➡️ Orte ohne Cache:",
+  MISSING_GEO_PLACES.size
+);
+
+console.log(
+  "➡️ Dateien geschrieben"
+);
