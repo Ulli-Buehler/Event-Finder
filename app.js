@@ -1,30 +1,47 @@
-console.log("APP VERSION: collapse-stable-v1");
+console.log("APP VERSION: stable-filter-v2");
 
 let userPos = [48.6167, 9.45];
 let radiusKm = 30;
-let dateMode = "all";
-let topCollapsed = false;
+let dateMode = "sunday";
 
-const ACTIVE_CATEGORIES = new Set(["Feste", "Märkte"]);
+const ACTIVE_CATEGORIES = new Set([
+  "Feste",
+  "Märkte"
+]);
+
+function isoToday(offsetDays = 0) {
+  const d = new Date();
+  d.setDate(d.getDate() + offsetDays);
+  return d.toISOString().slice(0, 10);
+}
+
+function nextSundayIso() {
+  const d = new Date();
+  const day = d.getDay();
+  const diff = day === 0 ? 0 : 7 - day;
+  d.setDate(d.getDate() + diff);
+  return d.toISOString().slice(0, 10);
+}
 
 const map = L.map("map").setView(userPos, 9);
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: "© OpenStreetMap"
-}).addTo(map);
+L.tileLayer(
+  "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  {
+    attribution: "© OpenStreetMap"
+  }
+).addTo(map);
 
 let radiusCircle = L.circle(userPos, {
   radius: radiusKm * 1000,
   color: "#007aff",
   fillColor: "#007aff",
-  fillOpacity: 0.1
+  fillOpacity: 0.08
 }).addTo(map);
 
-let userMarker = L.marker(userPos)
+L.marker(userPos)
   .addTo(map)
   .bindPopup("Startpunkt");
-
-const topBox = document.querySelector(".top");
 
 const cards = document.getElementById("cards");
 const statusText = document.getElementById("status");
@@ -34,387 +51,194 @@ const dateSelect = document.getElementById("dateSelect");
 const refreshBtn = document.getElementById("refreshBtn");
 const importStatus = document.getElementById("importStatus");
 
-radiusSlider.min = 5;
-radiusSlider.max = 200;
-radiusSlider.value = 30;
+let markers = [];
 
-const eventMeta = document.createElement("div");
-eventMeta.className = "event-meta";
-importStatus.insertAdjacentElement("afterend", eventMeta);
-
-const categoryBar = document.createElement("div");
-categoryBar.className = "category-bar";
-eventMeta.insertAdjacentElement("afterend", categoryBar);
-
-const markers = [];
-
-const ALL_CATEGORIES = [
-  ...new Set(EVENTS.map(e => e.category).filter(Boolean))
-].sort();
-
-const sheet = document.createElement("div");
-
-sheet.className = "sheet";
-
-sheet.innerHTML = `
-  <div class="sheet-handle"></div>
-  <h2 id="sheet-title"></h2>
-  <div id="sheet-place"></div>
-  <div id="sheet-date"></div>
-  <div id="sheet-description"></div>
-  <button class="sheet-close">Schließen</button>
-`;
-
-document.body.appendChild(sheet);
-
-function hasCoords(event) {
-  return typeof event.lat === "number" && typeof event.lng === "number";
-}
-
-function distanceKm(lat1, lon1, lat2, lon2) {
+function distanceKm(a, b) {
   const R = 6371;
 
-  const dLat = (lat2 - lat1) * Math.PI / 180;
-  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const dLat = (b[0] - a[0]) * Math.PI / 180;
+  const dLon = (b[1] - a[1]) * Math.PI / 180;
 
-  const a =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos(lat1 * Math.PI / 180) *
-    Math.cos(lat2 * Math.PI / 180) *
-    Math.sin(dLon / 2) ** 2;
+  const lat1 = a[0] * Math.PI / 180;
+  const lat2 = b[0] * Math.PI / 180;
 
-  return Math.round(
-    R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
-  );
+  const x =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.sin(dLon / 2) *
+    Math.sin(dLon / 2) *
+    Math.cos(lat1) *
+    Math.cos(lat2);
+
+  return R * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1 - x));
 }
 
-function eventEmoji(event) {
-  const text =
-    ((event.title || "") + " " + (event.description || ""))
-      .toLowerCase();
+function categoryEmoji(category = "") {
+  const c = category.toLowerCase();
 
-  if (text.includes("markt")) return "🧺";
-  if (text.includes("musik")) return "🎵";
-  if (text.includes("fest")) return "🎪";
-  if (text.includes("essen")) return "🍽️";
-  if (text.includes("kultur")) return "🎭";
+  if (c.includes("markt")) return "🧺";
+  if (c.includes("essen")) return "🍔";
+  if (c.includes("musik")) return "🎵";
+  if (c.includes("konzert")) return "🎤";
+  if (c.includes("sport")) return "⚽";
+  if (c.includes("kunst")) return "🎨";
+  if (c.includes("festival")) return "🎪";
 
-  return "📍";
+  return "🎪";
 }
 
-function isoToday(offset = 0) {
-  const d = new Date();
-  d.setDate(d.getDate() + offset);
-  return d.toISOString().slice(0, 10);
-}
+function passesDateFilter(event) {
+  if (!event.date) return true;
 
-function nextSundayIso() {
-  const d = new Date();
-  const diff = d.getDay() === 0 ? 0 : 7 - d.getDay();
-  d.setDate(d.getDate() + diff);
-  return d.toISOString().slice(0, 10);
-}
-
-function dateMatches(event) {
-  if (!event.dateStart || !event.dateEnd) return true;
+  const date = event.date.slice(0, 10);
 
   if (dateMode === "today") {
-    const t = isoToday(0);
-    return event.dateStart <= t && event.dateEnd >= t;
+    return date === isoToday();
   }
 
   if (dateMode === "tomorrow") {
-    const t = isoToday(1);
-    return event.dateStart <= t && event.dateEnd >= t;
+    return date === isoToday(1);
   }
 
   if (dateMode === "sunday") {
-    const t = nextSundayIso();
-    return event.dateStart <= t && event.dateEnd >= t;
+    return date === nextSundayIso();
   }
 
   return true;
 }
 
 function clearMarkers() {
-  markers.forEach(marker => map.removeLayer(marker));
-  markers.length = 0;
+  markers.forEach(m => map.removeLayer(m));
+  markers = [];
 }
 
-function formatDate(event) {
-  if (event.dateText && event.timeText) {
-    return event.dateText + " · " + event.timeText;
-  }
-
-  return event.dateText || "";
-}
-
-function openSheet(event) {
-  document.getElementById("sheet-title").innerText =
-    event.title || "Event";
-
-  document.getElementById("sheet-place").innerHTML =
-    `<strong>${event.place || "Ort unbekannt"}</strong>`;
-
-  document.getElementById("sheet-date").innerHTML =
-    `${formatDate(event)} • ${event.realDistanceText}`;
-
-  document.getElementById("sheet-description").innerText =
-    event.summary || event.description || "Keine Beschreibung vorhanden.";
-
-  sheet.classList.add("open");
-}
-
-function closeSheet() {
-  sheet.classList.remove("open");
-}
-
-sheet.querySelector(".sheet-close").onclick = closeSheet;
-sheet.querySelector(".sheet-handle").onclick = closeSheet;
-
-function renderCategoryButtons() {
-  categoryBar.innerHTML = "";
-
-  ALL_CATEGORIES.forEach(category => {
-
-    const button = document.createElement("button");
-
-    button.className =
-      ACTIVE_CATEGORIES.has(category)
-        ? "category-btn active"
-        : "category-btn";
-
-    button.innerText = category;
-
-    button.onclick = () => {
-
-      if (ACTIVE_CATEGORIES.has(category)) {
-        ACTIVE_CATEGORIES.delete(category);
-      } else {
-        ACTIVE_CATEGORIES.add(category);
-      }
-
-      renderCategoryButtons();
-      render();
-    };
-
-    categoryBar.appendChild(button);
-  });
-}
-
-function updateCollapsedState(count) {
-
-  const controls =
-    document.querySelector(".controls");
-
-  if (topCollapsed) {
-
-    controls.style.display = "none";
-    refreshBtn.style.display = "none";
-    importStatus.style.display = "none";
-    categoryBar.style.display = "none";
-
-    eventMeta.innerHTML =
-      `<strong>${count} Events</strong>`;
-
-  } else {
-
-    controls.style.display = "";
-    refreshBtn.style.display = "";
-    importStatus.style.display = "";
-    categoryBar.style.display = "flex";
-
-    eventMeta.innerHTML =
-      `${count} von ${EVENTS.length} Events sichtbar`;
-  }
-}
-
-function render() {
-
-  cards.innerHTML = "";
+function renderEvents(events) {
 
   clearMarkers();
 
-  radiusKm = Number(radiusSlider.value);
+  cards.innerHTML = "";
 
-  radiusLabel.innerText =
-    radiusKm + " km";
-
-  statusText.innerText =
-    "Kirchheim unter Teck • Radius " +
-    radiusKm +
-    " km";
-
-  radiusCircle.setLatLng(userPos);
-
-  radiusCircle.setRadius(
-    radiusKm * 1000
+  events = events.filter(event =>
+    event.lat &&
+    event.lon
   );
 
-  userMarker.setLatLng(userPos);
+  events.forEach(event => {
+    event.distanceKm = distanceKm(
+      userPos,
+      [event.lat, event.lon]
+    );
+  });
 
-  const visibleEvents = EVENTS
+  events = events.filter(event =>
+    event.distanceKm <= radiusKm
+  );
 
-    .map(event => {
+  if (typeof isHiddenEvent === "function") {
+    events = events.filter(event => !isHiddenEvent(event));
+  }
 
-      if (!hasCoords(event)) {
+  events = events.filter(event =>
+    ACTIVE_CATEGORIES.has(event.category)
+  );
 
-        return {
-          ...event,
-          hasLocation: false,
-          realDistanceText: "Ohne Standort"
-        };
-      }
+  events = events.filter(passesDateFilter);
 
-      const dist = distanceKm(
-        userPos[0],
-        userPos[1],
-        event.lat,
-        event.lng
-      );
+  events.sort((a, b) =>
+    a.distanceKm - b.distanceKm
+  );
 
-      return {
-        ...event,
-        hasLocation: true,
-        realDistance: dist,
-        realDistanceText: dist + " km"
-      };
-    })
+  importStatus.textContent =
+    `${events.length} von ${window.events.length} Events sichtbar`;
 
-    .filter(dateMatches)
+  events.forEach(event => {
 
-    .filter(event =>
-      ACTIVE_CATEGORIES.has(event.category)
-    )
+    const marker = L.marker([
+      event.lat,
+      event.lon
+    ]).addTo(map);
 
-    .filter(event => {
+    marker.bindPopup(`
+      <b>${event.title}</b><br>
+      ${event.location || "Unbekannt"}<br>
+      ${Math.round(event.distanceKm)} km
+    `);
 
-      if (!event.hasLocation) {
-        return true;
-      }
+    markers.push(marker);
 
-      return event.realDistance <= radiusKm;
-    })
-
-    .sort((a, b) => {
-
-      if (!a.hasLocation) return 1;
-      if (!b.hasLocation) return -1;
-
-      return a.realDistance - b.realDistance;
-    });
-
-  updateCollapsedState(visibleEvents.length);
-
-  visibleEvents.forEach(event => {
-
-    if (event.hasLocation) {
-
-      const marker =
-        L.marker([event.lat, event.lng])
-          .addTo(map)
-          .on("click", () => {
-            openSheet(event);
-          });
-
-      markers.push(marker);
-    }
-
-    const card =
-      document.createElement("div");
-
+    const card = document.createElement("div");
     card.className = "card";
 
-    card.onclick = () => {
-      openSheet(event);
-    };
+    const emoji = categoryEmoji(event.category);
+
+    const distance = Math.round(event.distanceKm);
 
     card.innerHTML = `
       <div class="card-image">
-        ${eventEmoji(event)}
+        ${emoji}
       </div>
 
       <div class="card-body">
 
-        <h2>
-          ${event.title || "Event"}
-        </h2>
+        <h2>${event.title}</h2>
 
-        <p class="card-category">
+        <p>
           ${event.category || ""}
         </p>
 
-        <p class="card-place">
-          ${event.place || "Ort unbekannt"} ·
-          ${event.realDistanceText}
+        <p>
+          ${event.location || "Unbekannt"}
+          •
+          ${distance} km
         </p>
 
-        <p class="card-date">
-          ${formatDate(event)}
+        <p>
+          ${event.date || ""}
         </p>
 
       </div>
     `;
+
+    card.onclick = () => {
+      map.setView([event.lat, event.lon], 13);
+      marker.openPopup();
+    };
 
     cards.appendChild(card);
+
   });
-
-  if (visibleEvents.length === 0) {
-
-    cards.innerHTML = `
-      <div class="card">
-        <div class="card-body">
-          <h2>Keine Events gefunden</h2>
-        </div>
-      </div>
-    `;
-  }
 }
 
-refreshBtn.onclick = async () => {
+function refreshEvents() {
 
-  refreshBtn.disabled = true;
+  importStatus.textContent =
+    "Events werden geladen ...";
 
-  importStatus.innerText =
-    "🔄 Import gestartet ...";
+  renderEvents(window.events);
 
-  try {
+  importStatus.textContent =
+    "Bereit";
+}
 
-    await fetch(
-      "/api/trigger-import",
-      {
-        method: "POST"
-      }
-    );
+radiusSlider.addEventListener("input", e => {
 
-    importStatus.innerText =
-      "✅ Import gestartet";
+  radiusKm = Number(e.target.value);
 
-  } catch (err) {
+  radiusLabel.textContent =
+    `${radiusKm} km`;
 
-    importStatus.innerText =
-      "❌ Fehler";
-  }
+  statusText.textContent =
+    `Kirchheim unter Teck • Radius ${radiusKm} km`;
 
-  refreshBtn.disabled = false;
-};
+  radiusCircle.setRadius(radiusKm * 1000);
 
-radiusSlider.oninput = render;
+  refreshEvents();
+});
 
-dateSelect.onchange = () => {
+dateSelect.addEventListener("change", e => {
+  dateMode = e.target.value;
+  refreshEvents();
+});
 
-  dateMode = dateSelect.value;
+refreshBtn.addEventListener("click", refreshEvents);
 
-  render();
-};
-
-document.querySelector(".top h1").onclick = () => {
-
-  topCollapsed = !topCollapsed;
-
-  render();
-};
-
-renderCategoryButtons();
-
-render();
+refreshEvents();
