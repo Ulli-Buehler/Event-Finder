@@ -183,3 +183,42 @@ input[type="range"]{
   font-size:17px;
   font-weight:700;
 }
+
+.event-meta{
+  margin-top:8px;
+  font-size:13px;
+  font-weight:700;
+  color:#333;
+}
+
+.category-bar{
+  margin-top:8px;
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding-bottom:2px;
+}
+
+.category-btn{
+  border:none;
+  background:#f2f2f7;
+  color:#333;
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:13px;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+.category-btn.active{
+  background:#007aff;
+  color:white;
+}
+
+.card.no-location{
+  opacity:.92;
+}
+
+#cards{
+  bottom:14px;
+}
