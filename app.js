@@ -1,10 +1,28 @@
-console.log("APP VERSION: stable-mobile-v1");
+console.log("APP VERSION: collapsible-category-menu-v1")
 
 let userPos = [48.6167, 9.45];
 let radiusKm = 30;
 let dateMode = "all";
+let categoriesOpen = false;
 
-const ACTIVE_CATEGORIES = new Set(["Feste", "Märkte"]);
+const ACTIVE_CATEGORIES = new Set([
+  "Feste",
+  "Märkte"
+]);
+
+function isoToday(offsetDays = 0) {
+  const d = new Date();
+  d.setDate(d.getDate() + offsetDays);
+  return d.toISOString().slice(0, 10);
+}
+
+function nextSundayIso() {
+  const d = new Date();
+  const day = d.getDay();
+  const diff = day === 0 ? 0 : 7 - day;
+  d.setDate(d.getDate() + diff);
+  return d.toISOString().slice(0, 10);
+}
 
 const map = L.map("map").setView(userPos, 9);
 
@@ -16,7 +34,7 @@ let radiusCircle = L.circle(userPos, {
   radius: radiusKm * 1000,
   color: "#007aff",
   fillColor: "#007aff",
-  fillOpacity: 0.1
+  fillOpacity: 0.08
 }).addTo(map);
 
 let userMarker = L.marker(userPos)
@@ -30,24 +48,13 @@ const radiusLabel = document.getElementById("radiusLabel");
 const dateSelect = document.getElementById("dateSelect");
 const refreshBtn = document.getElementById("refreshBtn");
 const importStatus = document.getElementById("importStatus");
+const top = document.querySelector(".top");
 
 radiusSlider.min = 5;
 radiusSlider.max = 200;
 radiusSlider.value = 30;
 
-const eventMeta = document.createElement("div");
-eventMeta.className = "event-meta";
-importStatus.insertAdjacentElement("afterend", eventMeta);
-
-const categoryBar = document.createElement("div");
-categoryBar.className = "category-bar";
-eventMeta.insertAdjacentElement("afterend", categoryBar);
-
 const markers = [];
-
-const ALL_CATEGORIES = [
-  ...new Set(EVENTS.map(e => e.category).filter(Boolean))
-].sort();
 
 const sheet = document.createElement("div");
 
@@ -67,11 +74,14 @@ document.body.appendChild(sheet);
 function hasCoords(event) {
   return (
     typeof event.lat === "number" &&
-    typeof event.lng === "number"
+    typeof event.lng === "number" &&
+    !isNaN(event.lat) &&
+    !isNaN(event.lng)
   );
 }
 
 function distanceKm(lat1, lon1, lat2, lon2) {
+
   const R = 6371;
 
   const dLat = (lat2 - lat1) * Math.PI / 180;
@@ -89,98 +99,109 @@ function distanceKm(lat1, lon1, lat2, lon2) {
 }
 
 function eventEmoji(event) {
-  const text =
-    ((event.title || "") + " " + (event.description || ""))
-      .toLowerCase();
 
-  if (text.includes("markt")) return "🧺";
+  const text =
+    (
+      (event.title || "") +
+      " " +
+      (event.description || "")
+    ).toLowerCase();
+
+  if (
+    text.includes("markt") ||
+    text.includes("flohmarkt") ||
+    text.includes("basar")
+  ) {
+    return "🧺";
+  }
+
   if (text.includes("musik")) return "🎵";
   if (text.includes("fest")) return "🎪";
   if (text.includes("essen")) return "🍽️";
+  if (text.includes("trinken")) return "🍷";
   if (text.includes("kultur")) return "🎭";
+  if (text.includes("ausstellung")) return "🖼️";
 
   return "📍";
 }
 
-function isoToday(offset = 0) {
-  const d = new Date();
-  d.setDate(d.getDate() + offset);
-  return d.toISOString().slice(0, 10);
+function dateInRange(target, start, end) {
+
+  if (!start || !end) return false;
+
+  return target >= start && target <= end;
 }
 
-function nextSundayIso() {
-  const d = new Date();
+function matchesDate(event) {
 
-  const diff =
-    d.getDay() === 0
-      ? 0
-      : 7 - d.getDay();
-
-  d.setDate(d.getDate() + diff);
-
-  return d.toISOString().slice(0, 10);
-}
-
-function dateMatches(event) {
-  if (!event.dateStart || !event.dateEnd) {
-    return true;
-  }
+  if (dateMode === "all") return true;
 
   if (dateMode === "today") {
-    const t = isoToday(0);
-
-    return (
-      event.dateStart <= t &&
-      event.dateEnd >= t
+    return dateInRange(
+      isoToday(),
+      event.dateStart,
+      event.dateEnd
     );
   }
 
   if (dateMode === "tomorrow") {
-    const t = isoToday(1);
-
-    return (
-      event.dateStart <= t &&
-      event.dateEnd >= t
+    return dateInRange(
+      isoToday(1),
+      event.dateStart,
+      event.dateEnd
     );
   }
 
   if (dateMode === "sunday") {
-    const t = nextSundayIso();
-
-    return (
-      event.dateStart <= t &&
-      event.dateEnd >= t
+    return dateInRange(
+      nextSundayIso(),
+      event.dateStart,
+      event.dateEnd
     );
   }
 
   return true;
 }
 
+function matchesCategory(event) {
+
+  if (ACTIVE_CATEGORIES.size === 0) {
+    return true;
+  }
+
+  return ACTIVE_CATEGORIES.has(event.category);
+}
+
 function clearMarkers() {
-  markers.forEach(marker => {
-    map.removeLayer(marker);
-  });
+
+  markers.forEach(m => map.removeLayer(m));
 
   markers.length = 0;
 }
 
 function formatDate(event) {
+
   if (event.dateText && event.timeText) {
     return event.dateText + " · " + event.timeText;
   }
 
-  return event.dateText || "";
+  if (event.dateText) {
+    return event.dateText;
+  }
+
+  return event.date || "";
 }
 
 function openSheet(event) {
+
   document.getElementById("sheet-title").innerText =
     event.title || "Event";
 
   document.getElementById("sheet-place").innerHTML =
-    `<strong>${event.place || "Ort unbekannt"}</strong>`;
+    `<strong>${event.place || "Ohne Standort"}</strong>`;
 
   document.getElementById("sheet-date").innerHTML =
-    `${formatDate(event)} • ${event.realDistanceText}`;
+    `${formatDate(event)}${event.realDistanceText ? " • " + event.realDistanceText : ""}`;
 
   document.getElementById("sheet-description").innerText =
     event.summary ||
@@ -194,42 +215,8 @@ function closeSheet() {
   sheet.classList.remove("open");
 }
 
-sheet.querySelector(".sheet-close").onclick =
-  closeSheet;
-
-sheet.querySelector(".sheet-handle").onclick =
-  closeSheet;
-
-function renderCategoryButtons() {
-  categoryBar.innerHTML = "";
-
-  ALL_CATEGORIES.forEach(category => {
-
-    const button =
-      document.createElement("button");
-
-    button.className =
-      ACTIVE_CATEGORIES.has(category)
-        ? "category-btn active"
-        : "category-btn";
-
-    button.innerText = category;
-
-    button.onclick = () => {
-
-      if (ACTIVE_CATEGORIES.has(category)) {
-        ACTIVE_CATEGORIES.delete(category);
-      } else {
-        ACTIVE_CATEGORIES.add(category);
-      }
-
-      renderCategoryButtons();
-      render();
-    };
-
-    categoryBar.appendChild(button);
-  });
-}
+sheet.querySelector(".sheet-close").onclick = closeSheet;
+sheet.querySelector(".sheet-handle").onclick = closeSheet;
 
 function render() {
 
@@ -239,17 +226,14 @@ function render() {
 
   radiusKm = Number(radiusSlider.value);
 
-  radiusLabel.innerText =
-    radiusKm + " km";
+  radiusLabel.innerText = radiusKm + " km";
 
   statusText.innerText =
     "Radius " + radiusKm + " km";
 
   radiusCircle.setLatLng(userPos);
 
-  radiusCircle.setRadius(
-    radiusKm * 1000
-  );
+  radiusCircle.setRadius(radiusKm * 1000);
 
   userMarker.setLatLng(userPos);
 
@@ -262,11 +246,12 @@ function render() {
         return {
           ...event,
           hasLocation: false,
+          realDistance: null,
           realDistanceText: "Ohne Standort"
         };
       }
 
-      const dist = distanceKm(
+      const realDistance = distanceKm(
         userPos[0],
         userPos[1],
         event.lat,
@@ -276,52 +261,144 @@ function render() {
       return {
         ...event,
         hasLocation: true,
-        realDistance: dist,
-        realDistanceText: dist + " km"
+        realDistance,
+        realDistanceText: realDistance + " km"
       };
     })
 
-    .filter(dateMatches)
+    .filter(matchesDate)
 
-    .filter(event =>
-      ACTIVE_CATEGORIES.has(event.category)
-    )
+    .filter(matchesCategory)
 
     .filter(event => {
 
-      if (!event.hasLocation) {
-        return true;
-      }
+      if (!event.hasLocation) return true;
 
       return event.realDistance <= radiusKm;
     })
 
     .sort((a, b) => {
 
-      if (!a.hasLocation) return 1;
-      if (!b.hasLocation) return -1;
+      if (!a.hasLocation && b.hasLocation) return 1;
+
+      if (a.hasLocation && !b.hasLocation) return -1;
+
+      if (!a.hasLocation && !b.hasLocation) return 0;
 
       return a.realDistance - b.realDistance;
     });
 
-  eventMeta.innerText =
-    visibleEvents.length +
-    " von " +
-    EVENTS.length +
-    " Events sichtbar";
+  const existingCounter =
+    document.getElementById("eventCounter");
+
+  if (existingCounter) {
+    existingCounter.remove();
+  }
+
+  const existingCategoryBar =
+    document.querySelector(".category-bar");
+
+  if (existingCategoryBar) {
+    existingCategoryBar.remove();
+  }
+
+  const existingToggle =
+    document.querySelector(".category-toggle");
+
+  if (existingToggle) {
+    existingToggle.remove();
+  }
+
+  const counter = document.createElement("div");
+
+  counter.id = "eventCounter";
+
+  counter.className = "event-counter";
+
+  counter.innerText =
+    `${visibleEvents.length} von ${EVENTS.length} Events sichtbar`;
+
+  top.appendChild(counter);
+
+  const allCategories = [
+    ...new Set(
+      EVENTS
+        .map(e => e.category)
+        .filter(Boolean)
+    )
+  ].sort();
+
+  const toggleButton =
+    document.createElement("button");
+
+  toggleButton.className =
+    "category-toggle";
+
+  toggleButton.innerText =
+    categoriesOpen
+      ? "Kategorien ausblenden"
+      : "Kategorien anzeigen";
+
+  toggleButton.onclick = () => {
+
+    categoriesOpen = !categoriesOpen;
+
+    render();
+  };
+
+  top.appendChild(toggleButton);
+
+  if (categoriesOpen) {
+
+    const categoryBar =
+      document.createElement("div");
+
+    categoryBar.className =
+      "category-bar";
+
+    allCategories.forEach(category => {
+
+      const btn =
+        document.createElement("button");
+
+      btn.className =
+        ACTIVE_CATEGORIES.has(category)
+          ? "category-btn active"
+          : "category-btn";
+
+      btn.innerText = category;
+
+      btn.onclick = () => {
+
+        if (
+          ACTIVE_CATEGORIES.has(category)
+        ) {
+          ACTIVE_CATEGORIES.delete(category);
+        } else {
+          ACTIVE_CATEGORIES.add(category);
+        }
+
+        render();
+      };
+
+      categoryBar.appendChild(btn);
+    });
+
+    top.appendChild(categoryBar);
+  }
 
   visibleEvents.forEach(event => {
 
     if (event.hasLocation) {
 
-      const marker =
-        L.marker([event.lat, event.lng])
-
-          .addTo(map)
-
-          .on("click", () => {
-            openSheet(event);
-          });
+      const marker = L.marker([
+        event.lat,
+        event.lng
+      ])
+        .addTo(map)
+        .on("click", () =>
+          openSheet(event)
+        );
 
       markers.push(marker);
     }
@@ -329,11 +406,13 @@ function render() {
     const card =
       document.createElement("div");
 
-    card.className = "card";
+    card.className =
+      event.hasLocation
+        ? "card"
+        : "card no-location";
 
-    card.onclick = () => {
+    card.onclick = () =>
       openSheet(event);
-    };
 
     card.innerHTML = `
       <div class="card-image">
@@ -346,16 +425,15 @@ function render() {
           ${event.title || "Event"}
         </h2>
 
-        <p class="card-category">
+        <p>
           ${event.category || ""}
-        </p>
+          <br>
 
-        <p class="card-place">
-          ${event.place || "Ort unbekannt"} ·
-          ${event.realDistanceText}
-        </p>
+          ${event.place || "Ohne Standort"}
+          ${event.realDistanceText ? " • " + event.realDistanceText : ""}
 
-        <p class="card-date">
+          <br>
+
           ${formatDate(event)}
         </p>
 
@@ -369,9 +447,19 @@ function render() {
 
     cards.innerHTML = `
       <div class="card">
+
         <div class="card-body">
-          <h2>Keine Events gefunden</h2>
+
+          <h2>
+            Keine Events gefunden
+          </h2>
+
+          <p>
+            Radius oder Filter ändern.
+          </p>
+
         </div>
+
       </div>
     `;
   }
@@ -386,20 +474,17 @@ refreshBtn.onclick = async () => {
 
   try {
 
-    await fetch(
-      "/api/trigger-import",
-      {
-        method: "POST"
-      }
-    );
+    await fetch("/api/trigger-import", {
+      method: "POST"
+    });
 
     importStatus.innerText =
-      "✅ Import gestartet";
+      "✅ Import gestartet. Bitte kurz warten und neu laden.";
 
   } catch (err) {
 
     importStatus.innerText =
-      "❌ Fehler";
+      "❌ Fehler beim Starten";
   }
 
   refreshBtn.disabled = false;
@@ -413,7 +498,5 @@ dateSelect.onchange = () => {
 
   render();
 };
-
-renderCategoryButtons();
 
 render();
