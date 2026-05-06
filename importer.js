@@ -1,5 +1,6 @@
 // importer.js
 // Playwright Importer + Geocoding + events.js Generator
+// Importiert nur neue Events und ignoriert vorhandene Duplikate
 
 import fs from "fs";
 import { chromium } from "playwright";
@@ -12,6 +13,69 @@ const SOURCES = [
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function normalize(value) {
+  return String(value || "")
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+function normalizeUrl(url, sourceUrl = "") {
+  if (!url) return "";
+
+  try {
+    return new URL(url, sourceUrl).href
+      .replace(/\/$/, "")
+      .toLowerCase();
+  } catch {
+    return normalize(url);
+  }
+}
+
+function getEventKey(event) {
+  const url = normalizeUrl(event.url, event.source);
+
+  if (url) {
+    return `url:${url}`;
+  }
+
+  return [
+    "fallback",
+    normalize(event.title),
+    normalize(event.date),
+    normalize(event.city),
+    normalize(event.venue),
+  ].join("|");
+}
+
+function loadExistingEvents() {
+  if (!fs.existsSync(OUTPUT)) {
+    return [];
+  }
+
+  try {
+    const file = fs.readFileSync(OUTPUT, "utf8");
+
+    const match = file.match(/export const events = ([\s\S]*?);\s*$/);
+
+    if (!match?.[1]) {
+      return [];
+    }
+
+    const events = JSON.parse(match[1]);
+
+    if (!Array.isArray(events)) {
+      return [];
+    }
+
+    return events;
+  } catch (error) {
+    console.warn("⚠️ Vorhandene events.js konnte nicht gelesen werden.");
+    console.warn(error.message);
+    return [];
+  }
 }
 
 async function geocode(address) {
@@ -51,8 +115,8 @@ async function geocode(address) {
   }
 }
 
-async function scrapePage(page) {
-  return await page.evaluate(() => {
+async function scrapePage(page, source) {
+  return await page.evaluate((source) => {
     const cards = [...document.querySelectorAll("article, .event, .card")];
 
     return cards.map((el, index) => {
@@ -100,19 +164,39 @@ async function scrapePage(page) {
         date,
         image,
         url,
+        source,
       };
     });
-  });
+  }, source);
+}
+
+function nextEventId(events) {
+  let max = 0;
+
+  for (const event of events) {
+    const match = String(event.id || "").match(/^event-(\d+)$/);
+    if (match) {
+      max = Math.max(max, Number(match[1]));
+    }
+  }
+
+  return max + 1;
 }
 
 async function run() {
+  const existingEvents = loadExistingEvents();
+  const existingKeys = new Set(existingEvents.map(getEventKey));
+
+  console.log(`📦 ${existingEvents.length} vorhandene Events geladen`);
+
   const browser = await chromium.launch({
     headless: true,
   });
 
   const page = await browser.newPage();
 
-  const events = [];
+  const newEvents = [];
+  let nextId = nextEventId(existingEvents);
 
   for (const source of SOURCES) {
     console.log("🌍", source);
@@ -122,9 +206,16 @@ async function run() {
       timeout: 60000,
     });
 
-    const scraped = await scrapePage(page);
+    const scraped = await scrapePage(page, source);
 
     for (const ev of scraped) {
+      const key = getEventKey(ev);
+
+      if (existingKeys.has(key)) {
+        console.log("⏭️ Bereits vorhanden:", ev.title);
+        continue;
+      }
+
       const address = [
         ev.street,
         ev.zip,
@@ -136,15 +227,19 @@ async function run() {
 
       const geo = await geocode(address);
 
-      events.push({
+      const event = {
         ...ev,
+        id: `event-${nextId++}`,
         address,
         lat: geo.lat,
         lng: geo.lng,
-      });
+      };
+
+      newEvents.push(event);
+      existingKeys.add(key);
 
       console.log(
-        "📍",
+        "📍 Neu:",
         ev.title,
         geo.lat,
         geo.lng
@@ -155,6 +250,11 @@ async function run() {
   }
 
   await browser.close();
+
+  const events = [
+    ...existingEvents,
+    ...newEvents,
+  ];
 
   const content =
     `export const events = ` +
@@ -171,9 +271,8 @@ async function run() {
     "utf8"
   );
 
-  console.log(
-    `✅ ${events.length} Events gespeichert`
-  );
+  console.log(`✅ ${newEvents.length} neue Events importiert`);
+  console.log(`📦 ${events.length} Events insgesamt gespeichert`);
 }
 
 run();
