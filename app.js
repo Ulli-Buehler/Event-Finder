@@ -1,4 +1,4 @@
-console.log("APP VERSION: categories-fixed-v2");
+console.log("APP VERSION: categories-fixed-v3");
 
 let userPos = [48.6167, 9.45];
 let radiusKm = 30;
@@ -98,7 +98,7 @@ function eventEmoji(event) {
   const text =
     ((event.title || "") + " " + (event.description || "")).toLowerCase();
 
-  if (text.includes("markt")) return "🛍️";
+  if (text.includes("markt")) return "🧺";
   if (text.includes("musik")) return "🎵";
   if (text.includes("fest")) return "🎪";
   if (text.includes("essen")) return "🍽️";
