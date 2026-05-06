@@ -4,12 +4,21 @@ import fs from "fs";
 const START_URL =
   "https://www.veranstaltung-baden-wuerttemberg.de/?post_type=event&kategorie=&ort=&region=&von=&bis=";
 
+const BASE_PAGE_URL =
+  "https://www.veranstaltung-baden-wuerttemberg.de/page";
+
 const GEO_CACHE_FILE = "./geo-cache.json";
+
+const MAX_PAGES_FALLBACK = 600;
+const PAGE_DELAY_MS = 2500;
+const GEOCODE_DELAY_MS = 1200;
 
 let geoCache = {};
 
 if (fs.existsSync(GEO_CACHE_FILE)) {
-  geoCache = JSON.parse(fs.readFileSync(GEO_CACHE_FILE, "utf8"));
+  geoCache = JSON.parse(
+    fs.readFileSync(GEO_CACHE_FILE, "utf8")
+  );
 }
 
 function sleep(ms) {
@@ -164,7 +173,7 @@ async function geocode(place) {
 
     const data = await response.json();
 
-    await sleep(1200);
+    await sleep(GEOCODE_DELAY_MS);
 
     if (!data || !data[0]) {
       console.log("⚠️ Keine Koordinaten:", place);
@@ -191,6 +200,40 @@ async function geocode(place) {
   }
 }
 
+function pageUrl(pageNum) {
+  if (pageNum === 1) {
+    return START_URL;
+  }
+
+  return `${BASE_PAGE_URL}/${pageNum}/?post_type=event&kategorie=&ort=&region=&von=&bis=`;
+}
+
+async function detectMaxPages(page) {
+  const maxPages = await page.evaluate(() => {
+    const text = document.body.innerText || "";
+
+    const matches = text.match(/\b\d+\b/g) || [];
+
+    const numbers = matches
+      .map(n => Number(n))
+      .filter(n => Number.isInteger(n));
+
+    const likelyPages = numbers.filter(n => n > 1 && n < 2000);
+
+    if (!likelyPages.length) {
+      return null;
+    }
+
+    return Math.max(...likelyPages);
+  });
+
+  if (!maxPages || maxPages < 2) {
+    return MAX_PAGES_FALLBACK;
+  }
+
+  return maxPages;
+}
+
 console.log("➡️ Import gestartet");
 
 const browser = await chromium.launch({
@@ -202,11 +245,10 @@ const page = await browser.newPage();
 const EVENTS = [];
 const SKIPPED_EVENTS = [];
 
-for (let pageNum = 1; pageNum <= 11; pageNum++) {
-  const url =
-    pageNum === 1
-      ? START_URL
-      : `https://www.veranstaltung-baden-wuerttemberg.de/page/${pageNum}/?post_type=event&kategorie=&ort=&region=&von=&bis=`;
+let maxPages = null;
+
+for (let pageNum = 1; pageNum <= (maxPages || MAX_PAGES_FALLBACK); pageNum++) {
+  const url = pageUrl(pageNum);
 
   console.log("➡️ Lade:", url);
 
@@ -215,7 +257,12 @@ for (let pageNum = 1; pageNum <= 11; pageNum++) {
     timeout: 60000
   });
 
-  await page.waitForTimeout(3000);
+  await page.waitForTimeout(PAGE_DELAY_MS);
+
+  if (pageNum === 1) {
+    maxPages = await detectMaxPages(page);
+    console.log("➡️ Gefundene Seiten:", maxPages);
+  }
 
   const rawEvents = await page.evaluate(() => {
     const items = [];
@@ -234,7 +281,8 @@ for (let pageNum = 1; pageNum <= 11; pageNum++) {
             a.innerText.trim().toLowerCase().includes("details")
           );
 
-      const detailsUrl = detailsLink ? detailsLink.href : "";
+      const detailsUrl =
+        detailsLink ? detailsLink.href : "";
 
       items.push({
         raw,
@@ -247,6 +295,11 @@ for (let pageNum = 1; pageNum <= 11; pageNum++) {
   });
 
   console.log(`➡️ Seite ${pageNum}: ${rawEvents.length} Events`);
+
+  if (rawEvents.length === 0) {
+    console.log("➡️ Keine Events mehr gefunden. Import stoppt.");
+    break;
+  }
 
   for (const item of rawEvents) {
     const parsed = parseRawEvent(item.raw, item.title);
@@ -283,6 +336,10 @@ for (let pageNum = 1; pageNum <= 11; pageNum++) {
       });
     }
   }
+
+  console.log("➡️ Zwischenstand:", EVENTS.length, "Events");
+
+  await sleep(500);
 }
 
 await browser.close();
