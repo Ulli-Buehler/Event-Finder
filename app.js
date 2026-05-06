@@ -1,8 +1,9 @@
-console.log("APP VERSION: rollback-working-v2");
+console.log("APP VERSION: collapse-stable-v1");
 
 let userPos = [48.6167, 9.45];
 let radiusKm = 30;
 let dateMode = "all";
+let topCollapsed = false;
 
 const ACTIVE_CATEGORIES = new Set(["Feste", "Märkte"]);
 
@@ -22,6 +23,8 @@ let radiusCircle = L.circle(userPos, {
 let userMarker = L.marker(userPos)
   .addTo(map)
   .bindPopup("Startpunkt");
+
+const topBox = document.querySelector(".top");
 
 const cards = document.getElementById("cards");
 const statusText = document.getElementById("status");
@@ -50,7 +53,9 @@ const ALL_CATEGORIES = [
 ].sort();
 
 const sheet = document.createElement("div");
+
 sheet.className = "sheet";
+
 sheet.innerHTML = `
   <div class="sheet-handle"></div>
   <h2 id="sheet-title"></h2>
@@ -59,6 +64,7 @@ sheet.innerHTML = `
   <div id="sheet-description"></div>
   <button class="sheet-close">Schließen</button>
 `;
+
 document.body.appendChild(sheet);
 
 function hasCoords(event) {
@@ -67,6 +73,7 @@ function hasCoords(event) {
 
 function distanceKm(lat1, lon1, lat2, lon2) {
   const R = 6371;
+
   const dLat = (lat2 - lat1) * Math.PI / 180;
   const dLon = (lon2 - lon1) * Math.PI / 180;
 
@@ -76,12 +83,15 @@ function distanceKm(lat1, lon1, lat2, lon2) {
     Math.cos(lat2 * Math.PI / 180) *
     Math.sin(dLon / 2) ** 2;
 
-  return Math.round(R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
+  return Math.round(
+    R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+  );
 }
 
 function eventEmoji(event) {
   const text =
-    ((event.title || "") + " " + (event.description || "")).toLowerCase();
+    ((event.title || "") + " " + (event.description || ""))
+      .toLowerCase();
 
   if (text.includes("markt")) return "🧺";
   if (text.includes("musik")) return "🎵";
@@ -166,6 +176,7 @@ function renderCategoryButtons() {
   categoryBar.innerHTML = "";
 
   ALL_CATEGORIES.forEach(category => {
+
     const button = document.createElement("button");
 
     button.className =
@@ -176,6 +187,7 @@ function renderCategoryButtons() {
     button.innerText = category;
 
     button.onclick = () => {
+
       if (ACTIVE_CATEGORIES.has(category)) {
         ACTIVE_CATEGORIES.delete(category);
       } else {
@@ -190,21 +202,63 @@ function renderCategoryButtons() {
   });
 }
 
+function updateCollapsedState(count) {
+
+  const controls =
+    document.querySelector(".controls");
+
+  if (topCollapsed) {
+
+    controls.style.display = "none";
+    refreshBtn.style.display = "none";
+    importStatus.style.display = "none";
+    categoryBar.style.display = "none";
+
+    eventMeta.innerHTML =
+      `<strong>${count} Events</strong>`;
+
+  } else {
+
+    controls.style.display = "";
+    refreshBtn.style.display = "";
+    importStatus.style.display = "";
+    categoryBar.style.display = "flex";
+
+    eventMeta.innerHTML =
+      `${count} von ${EVENTS.length} Events sichtbar`;
+  }
+}
+
 function render() {
+
   cards.innerHTML = "";
+
   clearMarkers();
 
   radiusKm = Number(radiusSlider.value);
-  radiusLabel.innerText = radiusKm + " km";
-  statusText.innerText = "Radius " + radiusKm + " km";
+
+  radiusLabel.innerText =
+    radiusKm + " km";
+
+  statusText.innerText =
+    "Kirchheim unter Teck • Radius " +
+    radiusKm +
+    " km";
 
   radiusCircle.setLatLng(userPos);
-  radiusCircle.setRadius(radiusKm * 1000);
+
+  radiusCircle.setRadius(
+    radiusKm * 1000
+  );
+
   userMarker.setLatLng(userPos);
 
   const visibleEvents = EVENTS
+
     .map(event => {
+
       if (!hasCoords(event)) {
+
         return {
           ...event,
           hasLocation: false,
@@ -226,33 +280,54 @@ function render() {
         realDistanceText: dist + " km"
       };
     })
+
     .filter(dateMatches)
-    .filter(event => ACTIVE_CATEGORIES.has(event.category))
+
+    .filter(event =>
+      ACTIVE_CATEGORIES.has(event.category)
+    )
+
     .filter(event => {
-      if (!event.hasLocation) return true;
+
+      if (!event.hasLocation) {
+        return true;
+      }
+
       return event.realDistance <= radiusKm;
     })
+
     .sort((a, b) => {
+
       if (!a.hasLocation) return 1;
       if (!b.hasLocation) return -1;
+
       return a.realDistance - b.realDistance;
     });
 
-  eventMeta.innerText =
-    visibleEvents.length + " von " + EVENTS.length + " Events sichtbar";
+  updateCollapsedState(visibleEvents.length);
 
   visibleEvents.forEach(event => {
+
     if (event.hasLocation) {
-      const marker = L.marker([event.lat, event.lng])
-        .addTo(map)
-        .on("click", () => openSheet(event));
+
+      const marker =
+        L.marker([event.lat, event.lng])
+          .addTo(map)
+          .on("click", () => {
+            openSheet(event);
+          });
 
       markers.push(marker);
     }
 
-    const card = document.createElement("div");
+    const card =
+      document.createElement("div");
+
     card.className = "card";
-    card.onclick = () => openSheet(event);
+
+    card.onclick = () => {
+      openSheet(event);
+    };
 
     card.innerHTML = `
       <div class="card-image">
@@ -260,19 +335,24 @@ function render() {
       </div>
 
       <div class="card-body">
-        <h2>${event.title || "Event"}</h2>
+
+        <h2>
+          ${event.title || "Event"}
+        </h2>
 
         <p class="card-category">
           ${event.category || ""}
         </p>
 
         <p class="card-place">
-          ${event.place || "Ort unbekannt"} · ${event.realDistanceText}
+          ${event.place || "Ort unbekannt"} ·
+          ${event.realDistanceText}
         </p>
 
         <p class="card-date">
           ${formatDate(event)}
         </p>
+
       </div>
     `;
 
@@ -280,6 +360,7 @@ function render() {
   });
 
   if (visibleEvents.length === 0) {
+
     cards.innerHTML = `
       <div class="card">
         <div class="card-body">
@@ -291,17 +372,28 @@ function render() {
 }
 
 refreshBtn.onclick = async () => {
+
   refreshBtn.disabled = true;
-  importStatus.innerText = "🔄 Import gestartet ...";
+
+  importStatus.innerText =
+    "🔄 Import gestartet ...";
 
   try {
-    await fetch("/api/trigger-import", {
-      method: "POST"
-    });
 
-    importStatus.innerText = "✅ Import gestartet";
+    await fetch(
+      "/api/trigger-import",
+      {
+        method: "POST"
+      }
+    );
+
+    importStatus.innerText =
+      "✅ Import gestartet";
+
   } catch (err) {
-    importStatus.innerText = "❌ Fehler";
+
+    importStatus.innerText =
+      "❌ Fehler";
   }
 
   refreshBtn.disabled = false;
@@ -310,9 +402,19 @@ refreshBtn.onclick = async () => {
 radiusSlider.oninput = render;
 
 dateSelect.onchange = () => {
+
   dateMode = dateSelect.value;
+
+  render();
+};
+
+document.querySelector(".top h1").onclick = () => {
+
+  topCollapsed = !topCollapsed;
+
   render();
 };
 
 renderCategoryButtons();
+
 render();
