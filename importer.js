@@ -1,13 +1,14 @@
 // importer.js
 // Playwright Importer + Geocoding + events.js Generator
 // Importiert nur neue Events und ignoriert vorhandene Duplikate
-// Erstellt zusätzlich eine Diagnose-Datei für alle Events ohne Geokoordinaten
+// Erstellt Diagnose-Dateien für fehlende Geokoordinaten und fehlende Ortsdaten
 
 import fs from "fs";
 import { chromium } from "playwright";
 
 const OUTPUT = "./src/data/events.js";
 const MISSING_GEO_OUTPUT = "./src/data/missing-geo-events.json";
+const MISSING_LOCATION_OUTPUT = "./src/data/missing-location-events.json";
 
 const SOURCES = [
   "https://www.wasgehtapp.de/events",
@@ -68,7 +69,6 @@ function loadExistingEvents() {
 
   try {
     const file = fs.readFileSync(OUTPUT, "utf8");
-
     const match = file.match(/export const events = ([\s\S]*?);\s*$/);
 
     if (!match?.[1]) {
@@ -214,6 +214,36 @@ function findMissingGeoEvents(events) {
     }));
 }
 
+function findMissingLocationEvents(events) {
+  return events
+    .filter((event) => {
+      const city = normalize(event.city);
+      const venue = normalize(event.venue);
+
+      return (
+        !city ||
+        !venue ||
+        city === "unbekannt" ||
+        venue === "unbekannt" ||
+        venue === "ohne standort"
+      );
+    })
+    .map((event) => ({
+      id: event.id,
+      title: event.title,
+      date: event.date,
+      venue: event.venue,
+      street: event.street,
+      zip: event.zip,
+      city: event.city,
+      address: event.address,
+      lat: event.lat ?? null,
+      lng: event.lng ?? null,
+      url: event.url,
+      source: event.source,
+    }));
+}
+
 async function run() {
   const existingEvents = loadExistingEvents();
   const existingKeys = new Set(existingEvents.map(getEventKey));
@@ -288,19 +318,7 @@ async function run() {
   ];
 
   const missingGeoEvents = findMissingGeoEvents(events);
-
-  if (missingGeoEvents.length > 0) {
-    console.log("⚠️ Events ohne Geokoordinaten:");
-
-    for (const event of missingGeoEvents) {
-      console.log(event);
-    }
-  }
-
-  const content =
-    `export const events = ` +
-    JSON.stringify(events, null, 2) +
-    `;\n`;
+  const missingLocationEvents = findMissingLocationEvents(events);
 
   fs.mkdirSync("./src/data", {
     recursive: true,
@@ -308,7 +326,7 @@ async function run() {
 
   fs.writeFileSync(
     OUTPUT,
-    content,
+    `export const events = ${JSON.stringify(events, null, 2)};\n`,
     "utf8"
   );
 
@@ -318,7 +336,14 @@ async function run() {
     "utf8"
   );
 
+  fs.writeFileSync(
+    MISSING_LOCATION_OUTPUT,
+    JSON.stringify(missingLocationEvents, null, 2),
+    "utf8"
+  );
+
   console.log(`⚠️ ${missingGeoEvents.length} Events ohne Geokoordinaten`);
+  console.log(`📍 ${missingLocationEvents.length} Events mit fehlenden Ortsdaten`);
   console.log(`✅ ${newEvents.length} neue Events importiert`);
   console.log(`📦 ${events.length} Events insgesamt gespeichert`);
 }
