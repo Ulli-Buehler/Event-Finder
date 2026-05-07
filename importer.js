@@ -1,5 +1,5 @@
 // importer.js
-// Playwright Importer + Geocoding + Debug + Events Generator
+// Playwright Importer + Text-Scraping + Geocoding + events.js Generator
 
 import fs from "fs";
 import { chromium } from "playwright";
@@ -28,9 +28,7 @@ function normalizeUrl(url, sourceUrl = "") {
   if (!url) return "";
 
   try {
-    return new URL(url, sourceUrl).href
-      .replace(/\/$/, "")
-      .toLowerCase();
+    return new URL(url, sourceUrl).href.replace(/\/$/, "").toLowerCase();
   } catch {
     return normalize(url);
   }
@@ -53,26 +51,17 @@ function getEventKey(event) {
 }
 
 function loadExistingEvents() {
-  if (!fs.existsSync(OUTPUT)) {
-    return [];
-  }
+  if (!fs.existsSync(OUTPUT)) return [];
 
   try {
     const file = fs.readFileSync(OUTPUT, "utf8");
-
     const match = file.match(/export const events = ([\s\S]*?);\s*$/);
 
-    if (!match?.[1]) {
-      return [];
-    }
+    if (!match?.[1]) return [];
 
     const events = JSON.parse(match[1]);
 
-    if (!Array.isArray(events)) {
-      return [];
-    }
-
-    return events;
+    return Array.isArray(events) ? events : [];
   } catch (error) {
     console.warn("⚠️ Vorhandene events.js konnte nicht gelesen werden.");
     console.warn(error.message);
@@ -99,10 +88,7 @@ async function geocode(address) {
     const data = await res.json();
 
     if (!data?.length) {
-      return {
-        lat: null,
-        lng: null,
-      };
+      return { lat: null, lng: null };
     }
 
     return {
@@ -110,125 +96,143 @@ async function geocode(address) {
       lng: Number(data[0].lon),
     };
   } catch {
-    return {
-      lat: null,
-      lng: null,
-    };
+    return { lat: null, lng: null };
   }
 }
 
+function cleanTitle(line) {
+  return String(line || "")
+    .replace(/\s+link$/i, "")
+    .replace(/\s+\*$/i, "")
+    .trim();
+}
+
+function extractLocation(line) {
+  const clean = String(line || "")
+    .replace(/^.*?\bpin\s+/i, "")
+    .replace(/\s+favoriten.*$/i, "")
+    .replace(/\s+X.*$/i, "")
+    .trim();
+
+  const withoutDistance = clean.replace(/,\s*\d+,\d+\s*km.*$/i, "").trim();
+  const parts = withoutDistance.split(",").map((p) => p.trim()).filter(Boolean);
+
+  const venue = parts[0] || "";
+  const city = parts.length > 1 ? parts[parts.length - 1] : "";
+
+  return { venue, city };
+}
+
+function extractTime(line) {
+  const match = String(line || "").match(/(\d{1,2}:\d{2})\s*Uhr/i);
+  return match ? `${match[1]} Uhr` : "";
+}
+
+function parseEventsFromText(bodyText, source) {
+  const lines = bodyText
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  const events = [];
+  let currentSectionDate = "";
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+
+    const sectionDateMatch = line.match(/\/\s*([A-Za-zÄÖÜäöü]{2},\s*\d{2}\.\d{2}\.\d{2})/);
+    if (sectionDateMatch) {
+      currentSectionDate = sectionDateMatch[1];
+      continue;
+    }
+
+    if (
+      line.includes("Was geht in") ||
+      line.includes("Zurück") ||
+      line.includes("Vor") ||
+      line.includes("Startseite") ||
+      line.includes("Einstellungen") ||
+      line.includes("Vorschau / Tipps") ||
+      line.includes("..mehr") ||
+      line.includes("tags ") ||
+      line.length < 4
+    ) {
+      continue;
+    }
+
+    const nextLines = lines.slice(i + 1, i + 5);
+    const locationLine = nextLines.find((l) => /\bpin\b/i.test(l) && /\d{1,2}:\d{2}\s*Uhr/i.test(l));
+
+    if (!locationLine) {
+      continue;
+    }
+
+    const title = cleanTitle(line);
+
+    if (!title || title.length < 4) {
+      continue;
+    }
+
+    const description = nextLines
+      .filter((l) => l !== locationLine && !l.startsWith("tags "))
+      .join(" ")
+      .trim();
+
+    const { venue, city } = extractLocation(locationLine);
+    const time = extractTime(locationLine);
+
+    const datePrefix =
+      locationLine.match(/([A-Za-zÄÖÜäöü]{2},\s*\d{2}\.\d{2})/)?.[1] ||
+      locationLine.match(/morgen/i)?.[0] ||
+      currentSectionDate ||
+      "";
+
+    events.push({
+      id: `event-${events.length + 1}`,
+      title,
+      city,
+      venue,
+      street: "",
+      zip: "",
+      date: [datePrefix, time].filter(Boolean).join(" · "),
+      description,
+      image: "",
+      url: source,
+      source,
+    });
+  }
+
+  return events;
+}
+
 async function writeDebugPage(page) {
-  const debug = await page.evaluate(() => {
-    return {
-      title: document.title,
-      url: location.href,
-      bodyLength: document.body.innerText.length,
-      bodyPreview: document.body.innerText.slice(0, 3000),
-      selectors: {
-        article: document.querySelectorAll("article").length,
-        event: document.querySelectorAll(".event").length,
-        card: document.querySelectorAll(".card").length,
-        classEvent: document.querySelectorAll("[class*=event]").length,
-        classCard: document.querySelectorAll("[class*=card]").length,
-        time: document.querySelectorAll("time").length,
-      },
-      links: [...document.querySelectorAll("a")]
-        .slice(0, 50)
-        .map((a) => ({
-          text: a.innerText?.trim(),
-          href: a.href,
-        })),
-    };
-  });
+  const debug = await page.evaluate(() => ({
+    title: document.title,
+    url: location.href,
+    bodyLength: document.body.innerText.length,
+    bodyPreview: document.body.innerText.slice(0, 6000),
+    selectors: {
+      article: document.querySelectorAll("article").length,
+      event: document.querySelectorAll(".event").length,
+      card: document.querySelectorAll(".card").length,
+      classEvent: document.querySelectorAll("[class*=event]").length,
+      classCard: document.querySelectorAll("[class*=card]").length,
+      time: document.querySelectorAll("time").length,
+    },
+    links: [...document.querySelectorAll("a")].slice(0, 50).map((a) => ({
+      text: a.innerText?.trim(),
+      href: a.href,
+    })),
+  }));
 
-  fs.mkdirSync("./src/data", {
-    recursive: true,
-  });
+  fs.mkdirSync("./src/data", { recursive: true });
 
-  fs.writeFileSync(
-    DEBUG_FILE,
-    JSON.stringify(debug, null, 2),
-    "utf8"
-  );
+  fs.writeFileSync(DEBUG_FILE, JSON.stringify(debug, null, 2), "utf8");
 }
 
 async function scrapePage(page, source) {
-  return await page.evaluate((source) => {
-    const cards = [
-      ...document.querySelectorAll(
-        "article, .event, .card, [class*=event], [class*=card]"
-      ),
-    ];
-
-    return cards.map((el, index) => {
-      const text = (sel) =>
-        el.querySelector(sel)?.textContent?.trim() || "";
-
-      const attr = (sel, a) =>
-        el.querySelector(sel)?.getAttribute(a) || "";
-
-      const allText =
-        el.innerText
-          ?.split("\n")
-          .map((t) => t.trim())
-          .filter(Boolean) || [];
-
-      const title =
-        text("h1") ||
-        text("h2") ||
-        text("h3") ||
-        allText[0] ||
-        "";
-
-      const city =
-        text(".city") ||
-        text(".location") ||
-        allText.find((t) =>
-          t.match(
-            /(Esslingen|Göppingen|Reutlingen|Stuttgart|Kirchheim|Dettingen)/i
-          )
-        ) ||
-        "";
-
-      const venue =
-        text(".venue") ||
-        allText[1] ||
-        "";
-
-      const street =
-        text(".street");
-
-      const zip =
-        text(".zip");
-
-      const date =
-        text("time") ||
-        text(".date") ||
-        allText.find((t) =>
-          t.match(/\d{2}\.\d{2}\.\d{4}/)
-        ) ||
-        "";
-
-      const image =
-        attr("img", "src");
-
-      const url =
-        attr("a", "href");
-
-      return {
-        id: `event-${index + 1}`,
-        title,
-        city,
-        venue,
-        street,
-        zip,
-        date,
-        image,
-        url,
-        source,
-      };
-    });
-  }, source);
+  const bodyText = await page.evaluate(() => document.body.innerText);
+  return parseEventsFromText(bodyText, source);
 }
 
 function nextEventId(events) {
@@ -236,10 +240,7 @@ function nextEventId(events) {
 
   for (const event of events) {
     const match = String(event.id || "").match(/^event-(\d+)$/);
-
-    if (match) {
-      max = Math.max(max, Number(match[1]));
-    }
+    if (match) max = Math.max(max, Number(match[1]));
   }
 
   return max + 1;
@@ -247,18 +248,11 @@ function nextEventId(events) {
 
 async function run() {
   const existingEvents = loadExistingEvents();
-  const existingKeys = new Set(
-    existingEvents.map(getEventKey)
-  );
+  const existingKeys = new Set(existingEvents.map(getEventKey));
 
-  console.log(
-    `📦 ${existingEvents.length} vorhandene Events geladen`
-  );
+  console.log(`📦 ${existingEvents.length} vorhandene Events geladen`);
 
-  const browser = await chromium.launch({
-    headless: true,
-  });
-
+  const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
 
   const newEvents = [];
@@ -281,42 +275,26 @@ async function run() {
 
     const scraped = await scrapePage(page, source);
 
-    console.log(
-      `🔎 ${scraped.length} Events auf Quelle gefunden`
-    );
+    console.log(`🔎 ${scraped.length} Events auf Quelle gefunden`);
 
     if (!scraped.length) {
-      console.log(
-        `⚠️ Keine Events auf dieser Quelle gefunden: ${source}`
-      );
+      console.log(`⚠️ Keine Events auf dieser Quelle gefunden: ${source}`);
       continue;
     }
 
     for (const ev of scraped) {
-      if (!ev.title || ev.title.length < 4) {
-        continue;
-      }
-
       const key = getEventKey(ev);
 
       if (existingKeys.has(key)) {
-        console.log(
-          "⏭️ Bereits vorhanden:",
-          ev.title
-        );
+        console.log("⏭️ Bereits vorhanden:", ev.title);
         continue;
       }
 
-      const address = [
-        ev.street,
-        ev.zip,
-        ev.city,
-        "Deutschland",
-      ]
+      const address = [ev.venue, ev.city, "Deutschland"]
         .filter(Boolean)
         .join(", ");
 
-      if (!ev.city && !ev.street) {
+      if (!ev.city || !ev.venue) {
         missingLocationEvents.push(ev);
       }
 
@@ -337,12 +315,7 @@ async function run() {
       newEvents.push(event);
       existingKeys.add(key);
 
-      console.log(
-        "📍 Neu:",
-        ev.title,
-        geo.lat,
-        geo.lng
-      );
+      console.log("📍 Neu:", ev.title, geo.lat, geo.lng);
 
       await sleep(1100);
     }
@@ -350,39 +323,19 @@ async function run() {
 
   await browser.close();
 
-  if (!newEvents.length) {
-    console.log(
-      "❌ Abbruch: Scraper hat 0 Events gefunden."
-    );
-
-    console.log(
-      `📝 Debug-Datei sollte unter ${DEBUG_FILE} liegen`
-    );
-
-    console.log(
-      "events.js wird NICHT überschrieben."
-    );
-
+  if (!newEvents.length && !existingEvents.length) {
+    console.log("❌ Abbruch: Keine Events gefunden.");
+    console.log("events.js wird NICHT überschrieben.");
     return;
   }
 
-  const events = [
-    ...existingEvents,
-    ...newEvents,
-  ];
+  const events = [...existingEvents, ...newEvents];
 
-  const content =
-    `export const events = ` +
-    JSON.stringify(events, null, 2) +
-    `;\n`;
-
-  fs.mkdirSync("./src/data", {
-    recursive: true,
-  });
+  fs.mkdirSync("./src/data", { recursive: true });
 
   fs.writeFileSync(
     OUTPUT,
-    content,
+    `export const events = ${JSON.stringify(events, null, 2)};\n`,
     "utf8"
   );
 
@@ -398,21 +351,10 @@ async function run() {
     "utf8"
   );
 
-  console.log(
-    `⚠️ ${missingGeoEvents.length} Events ohne Geokoordinaten`
-  );
-
-  console.log(
-    `📍 ${missingLocationEvents.length} Events mit fehlenden Ortsdaten`
-  );
-
-  console.log(
-    `✅ ${newEvents.length} neue Events importiert`
-  );
-
-  console.log(
-    `📦 ${events.length} Events insgesamt gespeichert`
-  );
+  console.log(`⚠️ ${missingGeoEvents.length} Events ohne Geokoordinaten`);
+  console.log(`📍 ${missingLocationEvents.length} Events mit fehlenden Ortsdaten`);
+  console.log(`✅ ${newEvents.length} neue Events importiert`);
+  console.log(`📦 ${events.length} Events insgesamt gespeichert`);
 }
 
 run();
