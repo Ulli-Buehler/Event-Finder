@@ -12,7 +12,7 @@ const MISSING_GEO_OUTPUT = "./src/data/missing-geo-events.json";
 const MISSING_LOCATION_OUTPUT = "./src/data/missing-location-events.json";
 
 const SOURCES = [
-  "https://www.wasgehtapp.de/events",
+  "https://www.wasgehtapp.de/index.php",
 ];
 
 function sleep(ms) {
