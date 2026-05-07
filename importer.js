@@ -2,6 +2,7 @@
 // Playwright Importer + Geocoding + events.js Generator
 // Importiert nur neue Events und ignoriert vorhandene Duplikate
 // Mit Schreibschutz: events.js wird nie leer überschrieben
+// Debug-Version: prüft, warum aktuell keine Events gefunden werden
 
 import fs from "fs";
 import { chromium } from "playwright";
@@ -128,6 +129,30 @@ async function geocode(address) {
 
 async function scrapePage(page, source) {
   return await page.evaluate((source) => {
+    console.log("=== DEBUG START ===");
+    console.log("Titel:", document.title);
+    console.log("URL:", window.location.href);
+    console.log("Body Länge:", document.body.innerText.length);
+    console.log("Body Anfang:", document.body.innerText.slice(0, 1000));
+
+    const links = [...document.querySelectorAll("a")]
+      .slice(0, 30)
+      .map((a) => ({
+        text: a.textContent?.trim(),
+        href: a.href,
+      }));
+
+    console.log("Links:", links);
+
+    console.log("article:", document.querySelectorAll("article").length);
+    console.log(".event:", document.querySelectorAll(".event").length);
+    console.log(".card:", document.querySelectorAll(".card").length);
+    console.log("[class*='event']:", document.querySelectorAll("[class*='event']").length);
+    console.log("[class*='card']:", document.querySelectorAll("[class*='card']").length);
+    console.log("time:", document.querySelectorAll("time").length);
+
+    console.log("=== DEBUG END ===");
+
     const cards = [...document.querySelectorAll("article, .event, .card")];
 
     return cards.map((el, index) => {
@@ -267,6 +292,8 @@ async function run() {
       waitUntil: "networkidle",
       timeout: 60000,
     });
+
+    await page.waitForTimeout(3000);
 
     const scraped = await scrapePage(page, source);
     totalScraped += scraped.length;
