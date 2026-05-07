@@ -1,15 +1,216 @@
 {
-  "title": "404 Not Found",
-  "url": "https://www.wasgehtapp.de/events",
-  "bodyLength": 103,
-  "bodyPreview": "Not Found\n\nThe requested URL was not found on this server.\n\nApache Server at www.wasgehtapp.de Port 443",
+  "title": "Was geht? Wähle Deine Stadt",
+  "url": "https://www.wasgehtapp.de/staedte.php",
+  "bodyLength": 1510,
+  "bodyPreview": "Was geht in Berlin ▾ ?\nZurück  \nZurück\nVor\nJan\nFeb\nMär\nApr\nMai\nJun\nJul\nAug\nSep\nOkt\nNov\nDez\n2016\n2017\n2018\n2019\n2020\n2021\n2022\n2023\n2024\n2025\n2026\n2027\n2028\n2029\n2030\n2031\n2032\n2033\n2034\n2035\n2036\nMo\tDi\tMi\tDo\tFr\tSa\tSo\n27\t28\t29\t30\t1\t2\t3\n4\t5\t6\t7\t8\t9\t10\n11\t12\t13\t14\t15\t16\t17\n18\t19\t20\t21\t22\t23\t24\n25\t26\t27\t28\t29\t30\t31\nHeute\nNächster Tag\nhome Startseite\ngear Einstellungen\nsearch Suche\nmap Karte\nplay Medien Vorschau\nlocation Locations\nangebote Artists\neintritt_frei Werbefreier Account\ncalendar-plus Termin eintragen\nlocation Club/Bar eintragen\nkey Login\nkey Anmelden\nSuche Deine Stadt:\n \nOder wähle direkt eine Metropole:\nAachen Augsburg Berlin Bielefeld Bochum Bonn Braunschweig Bremen Chemnitz Dortmund Dresden Duisburg Düsseldorf Erfurt Essen, Ruhr Frankfurt am Main Freiburg im Breisgau Gelsenkirchen Hagen (Westfalen) Halle (Saale) Hamburg Hamm (Westfalen) Hannover Herne, Westfalen Karlsruhe (Baden) Kassel, Hessen Kiel Krefeld Köln Leipzig Leverkusen Ludwigshafen am Rhein Lübeck Magdeburg Mainz Mannheim Mönchengladbach Mülheim an der Ruhr München Münster, Westfalen Nürnberg Oberhausen Oldenburg in Oldenburg Osnabrück Rostock Saarbrücken Solingen Stuttgart Wiesbaden Wuppertal\nAllgemein\nFAQ\nFeedback / Kontakt\nStädteübersicht\nTermin-Aushang als PDF\nAPI / Datennutzung\nVeranstaltungen API (JSON)\nFür Veranstalter / Locations\nVeranstalter FAQ\nHomepage-Integration\nMediadaten / Werben\nBanner & Buttons\nWerde Promoter\nRechtliches\nImpressum\nAGB\nDatenschutz\n\n© 2010-2026 by Cyber IT\n*: beliebt, $: gesponsert\n",
   "selectors": {
     "article": 0,
     "event": 0,
     "card": 0,
-    "classEvent": 0,
+    "classEvent": 1,
     "classCard": 0,
     "time": 0
   },
-  "links": []
+  "links": [
+    {
+      "text": "",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "Was geht in",
+      "href": "https://www.wasgehtapp.de/index.php"
+    },
+    {
+      "text": "",
+      "href": "https://www.wasgehtapp.de/index.php?date=2026-05-06"
+    },
+    {
+      "text": "Zurück",
+      "href": "https://www.wasgehtapp.de/index.php?date=2026-05-07"
+    },
+    {
+      "text": "",
+      "href": "https://www.wasgehtapp.de/index.php?date=2026-05-08"
+    },
+    {
+      "text": "Zurück",
+      "href": ""
+    },
+    {
+      "text": "Vor",
+      "href": ""
+    },
+    {
+      "text": "27",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "28",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "29",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "30",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "1",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "2",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "3",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "4",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "5",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "6",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "7",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "8",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "9",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "10",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "11",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "12",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "13",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "14",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "15",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "16",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "17",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "18",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "19",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "20",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "21",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "22",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "23",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "24",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "25",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "26",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "27",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "28",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "29",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "30",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "31",
+      "href": "https://www.wasgehtapp.de/staedte.php#"
+    },
+    {
+      "text": "home Startseite",
+      "href": "https://www.wasgehtapp.de/index.php"
+    },
+    {
+      "text": "gear Einstellungen",
+      "href": "https://www.wasgehtapp.de/settings.php"
+    },
+    {
+      "text": "",
+      "href": "https://www.awin1.com/cread.php?s=2174303&v=11388&q=338578&r=396663"
+    },
+    {
+      "text": "search Suche",
+      "href": "https://www.wasgehtapp.de/suche.php"
+    },
+    {
+      "text": "map Karte",
+      "href": "https://www.wasgehtapp.de/map.php"
+    },
+    {
+      "text": "play Medien Vorschau",
+      "href": "https://www.wasgehtapp.de/medien.php"
+    },
+    {
+      "text": "location Locations",
+      "href": "https://www.wasgehtapp.de/locations.php"
+    },
+    {
+      "text": "angebote Artists",
+      "href": "https://www.wasgehtapp.de/bands.php"
+    }
+  ]
 }
