@@ -1,7 +1,7 @@
 // importer.js
 // Playwright Importer + Geocoding + events.js Generator
 // Importiert nur neue Events und ignoriert vorhandene Duplikate
-// Erstellt Diagnose-Dateien für fehlende Geokoordinaten und fehlende Ortsdaten
+// Mit Schreibschutz: events.js wird nie leer überschrieben
 
 import fs from "fs";
 import { chromium } from "playwright";
@@ -257,6 +257,7 @@ async function run() {
   const page = await browser.newPage();
 
   const newEvents = [];
+  let totalScraped = 0;
   let nextId = nextEventId(existingEvents);
 
   for (const source of SOURCES) {
@@ -268,6 +269,14 @@ async function run() {
     });
 
     const scraped = await scrapePage(page, source);
+    totalScraped += scraped.length;
+
+    console.log(`🔎 ${scraped.length} Events auf Quelle gefunden`);
+
+    if (scraped.length === 0) {
+      console.warn("⚠️ Keine Events auf dieser Quelle gefunden:", source);
+      continue;
+    }
 
     for (const ev of scraped) {
       const key = getEventKey(ev);
@@ -317,6 +326,18 @@ async function run() {
     ...newEvents,
   ];
 
+  if (totalScraped === 0) {
+    console.error("❌ Abbruch: Scraper hat 0 Events gefunden.");
+    console.error("events.js wird NICHT überschrieben.");
+    process.exit(1);
+  }
+
+  if (events.length === 0) {
+    console.error("❌ Abbruch: Es würden 0 Events gespeichert.");
+    console.error("events.js wird NICHT überschrieben.");
+    process.exit(1);
+  }
+
   const missingGeoEvents = findMissingGeoEvents(events);
   const missingLocationEvents = findMissingLocationEvents(events);
 
@@ -342,6 +363,7 @@ async function run() {
     "utf8"
   );
 
+  console.log(`🔎 ${totalScraped} Events insgesamt gescraped`);
   console.log(`⚠️ ${missingGeoEvents.length} Events ohne Geokoordinaten`);
   console.log(`📍 ${missingLocationEvents.length} Events mit fehlenden Ortsdaten`);
   console.log(`✅ ${newEvents.length} neue Events importiert`);
