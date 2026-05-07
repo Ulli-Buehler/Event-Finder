@@ -37,7 +37,7 @@ function normalizeUrl(url, sourceUrl = "") {
 function getEventKey(event) {
   const url = normalizeUrl(event.url, event.source);
 
-  if (url) {
+  if (url && url !== normalizeUrl(event.source)) {
     return `url:${url}`;
   }
 
@@ -104,7 +104,32 @@ function cleanTitle(line) {
   return String(line || "")
     .replace(/\s+link$/i, "")
     .replace(/\s+\*$/i, "")
+    .replace(/^tipp\s*/i, "")
     .trim();
+}
+
+function isBadTitle(line) {
+  const value = normalize(line);
+
+  if (!value) return true;
+  if (value.length < 4) return true;
+
+  return [
+    "key anmelden",
+    "home startseite",
+    "gear einstellungen",
+    "search suche",
+    "map karte",
+    "play medien vorschau",
+    "location locations",
+    "angebote artists",
+    "vorschau / tipps",
+    "zurück",
+    "vor",
+    "heute",
+    "nächster tag",
+    "..mehr",
+  ].some((bad) => value.includes(bad));
 }
 
 function extractLocation(line) {
@@ -112,20 +137,43 @@ function extractLocation(line) {
     .replace(/^.*?\bpin\s+/i, "")
     .replace(/\s+favoriten.*$/i, "")
     .replace(/\s+X.*$/i, "")
+    .replace(/\s+link\s*:/i, ",")
     .trim();
 
-  const withoutDistance = clean.replace(/,\s*\d+,\d+\s*km.*$/i, "").trim();
-  const parts = withoutDistance.split(",").map((p) => p.trim()).filter(Boolean);
+  const withoutTime = clean
+    .replace(/\d{1,2}:\d{2}\s*Uhr.*$/i, "")
+    .replace(/:\s*\d{1,2}:\d{2}.*$/i, "")
+    .trim();
 
-  const venue = parts[0] || "";
-  const city = parts.length > 1 ? parts[parts.length - 1] : "";
+  const withoutDistance = withoutTime
+    .replace(/,\s*\d+,\d+\s*km.*$/i, "")
+    .replace(/,\s*\d+\s*km.*$/i, "")
+    .trim();
 
-  return { venue, city };
+  const parts = withoutDistance
+    .split(",")
+    .map((p) => p.trim())
+    .filter(Boolean);
+
+  return {
+    venue: parts[0] || "",
+    city: parts.length > 1 ? parts[parts.length - 1] : "",
+  };
 }
 
-function extractTime(line) {
-  const match = String(line || "").match(/(\d{1,2}:\d{2})\s*Uhr/i);
-  return match ? `${match[1]} Uhr` : "";
+function extractDateTime(line, fallbackDate = "") {
+  const time =
+    String(line || "").match(/(\d{1,2}:\d{2})\s*Uhr/i)?.[1] ||
+    String(line || "").match(/:\s*(\d{1,2}:\d{2})/)?.[1] ||
+    "";
+
+  const date =
+    String(line || "").match(/([A-Za-zÄÖÜäöü]{2},\s*\d{2}\.\d{2})/)?.[1] ||
+    String(line || "").match(/\bmorgen\b/i)?.[0] ||
+    fallbackDate ||
+    "";
+
+  return [date, time ? `${time} Uhr` : ""].filter(Boolean).join(" · ");
 }
 
 function parseEventsFromText(bodyText, source) {
@@ -146,46 +194,46 @@ function parseEventsFromText(bodyText, source) {
       continue;
     }
 
-    if (
-      line.includes("Was geht in") ||
-      line.includes("Zurück") ||
-      line.includes("Vor") ||
-      line.includes("Startseite") ||
-      line.includes("Einstellungen") ||
-      line.includes("Vorschau / Tipps") ||
-      line.includes("..mehr") ||
-      line.includes("tags ") ||
-      line.length < 4
-    ) {
+    const isLocationTimeLine =
+      /\bpin\b/i.test(line) &&
+      (
+        /\d{1,2}:\d{2}\s*Uhr/i.test(line) ||
+        /:\s*\d{1,2}:\d{2}/.test(line)
+      );
+
+    if (!isLocationTimeLine) {
       continue;
     }
 
-    const nextLines = lines.slice(i + 1, i + 5);
-    const locationLine = nextLines.find((l) => /\bpin\b/i.test(l) && /\d{1,2}:\d{2}\s*Uhr/i.test(l));
+    let title = "";
+    let description = "";
 
-    if (!locationLine) {
+    for (let j = i - 1; j >= Math.max(0, i - 4); j--) {
+      const candidate = cleanTitle(lines[j]);
+
+      if (
+        isBadTitle(candidate) ||
+        candidate.startsWith("tags ") ||
+        /\bpin\b/i.test(candidate) ||
+        /\d{1,2}:\d{2}\s*Uhr/i.test(candidate)
+      ) {
+        continue;
+      }
+
+      if (!title) {
+        title = candidate;
+      } else {
+        description = candidate;
+        break;
+      }
+    }
+
+    if (isBadTitle(title)) {
       continue;
     }
 
-    const title = cleanTitle(line);
-
-    if (!title || title.length < 4) {
-      continue;
-    }
-
-    const description = nextLines
-      .filter((l) => l !== locationLine && !l.startsWith("tags "))
-      .join(" ")
-      .trim();
-
-    const { venue, city } = extractLocation(locationLine);
-    const time = extractTime(locationLine);
-
-    const datePrefix =
-      locationLine.match(/([A-Za-zÄÖÜäöü]{2},\s*\d{2}\.\d{2})/)?.[1] ||
-      locationLine.match(/morgen/i)?.[0] ||
-      currentSectionDate ||
-      "";
+    const { venue, city } = extractLocation(line);
+    const date = extractDateTime(line, currentSectionDate);
 
     events.push({
       id: `event-${events.length + 1}`,
@@ -194,7 +242,7 @@ function parseEventsFromText(bodyText, source) {
       venue,
       street: "",
       zip: "",
-      date: [datePrefix, time].filter(Boolean).join(" · "),
+      date,
       description,
       image: "",
       url: source,
@@ -226,7 +274,6 @@ async function writeDebugPage(page) {
   }));
 
   fs.mkdirSync("./src/data", { recursive: true });
-
   fs.writeFileSync(DEBUG_FILE, JSON.stringify(debug, null, 2), "utf8");
 }
 
@@ -270,7 +317,6 @@ async function run() {
     });
 
     await sleep(5000);
-
     await writeDebugPage(page);
 
     const scraped = await scrapePage(page, source);
