@@ -1,13 +1,13 @@
 // importer.js
 // Playwright Importer + Geocoding + events.js Generator
 // Importiert nur neue Events und ignoriert vorhandene Duplikate
-// Mit Schreibschutz: events.js wird nie leer überschrieben
-// Debug-Version: prüft, warum aktuell keine Events gefunden werden
+// Mit Schreibschutz + Debug-Datei
 
 import fs from "fs";
 import { chromium } from "playwright";
 
 const OUTPUT = "./src/data/events.js";
+const DEBUG_OUTPUT = "./src/data/debug-page.json";
 const MISSING_GEO_OUTPUT = "./src/data/missing-geo-events.json";
 const MISSING_LOCATION_OUTPUT = "./src/data/missing-location-events.json";
 
@@ -70,7 +70,10 @@ function loadExistingEvents() {
 
   try {
     const file = fs.readFileSync(OUTPUT, "utf8");
-    const match = file.match(/export const events = ([\s\S]*?);\s*$/);
+
+    const match = file.match(
+      /export const events = ([\s\S]*?);\s*$/
+    );
 
     if (!match?.[1]) {
       return [];
@@ -84,8 +87,12 @@ function loadExistingEvents() {
 
     return events;
   } catch (error) {
-    console.warn("⚠️ Vorhandene events.js konnte nicht gelesen werden.");
+    console.warn(
+      "⚠️ Vorhandene events.js konnte nicht gelesen werden."
+    );
+
     console.warn(error.message);
+
     return [];
   }
 }
@@ -128,34 +135,72 @@ async function geocode(address) {
 }
 
 async function scrapePage(page, source) {
-  return await page.evaluate((source) => {
-    console.log("=== DEBUG START ===");
-    console.log("Titel:", document.title);
-    console.log("URL:", window.location.href);
-    console.log("Body Länge:", document.body.innerText.length);
-    console.log("Body Anfang:", document.body.innerText.slice(0, 1000));
 
-    const links = [...document.querySelectorAll("a")]
-      .slice(0, 30)
+  const debug = await page.evaluate(() => {
+
+    const links = [
+      ...document.querySelectorAll("a")
+    ]
+      .slice(0, 50)
       .map((a) => ({
         text: a.textContent?.trim(),
         href: a.href,
       }));
 
-    console.log("Links:", links);
+    return {
+      title: document.title,
+      url: window.location.href,
 
-    console.log("article:", document.querySelectorAll("article").length);
-    console.log(".event:", document.querySelectorAll(".event").length);
-    console.log(".card:", document.querySelectorAll(".card").length);
-    console.log("[class*='event']:", document.querySelectorAll("[class*='event']").length);
-    console.log("[class*='card']:", document.querySelectorAll("[class*='card']").length);
-    console.log("time:", document.querySelectorAll("time").length);
+      bodyLength:
+        document.body.innerText.length,
 
-    console.log("=== DEBUG END ===");
+      bodyPreview:
+        document.body.innerText.slice(0, 3000),
 
-    const cards = [...document.querySelectorAll("article, .event, .card")];
+      selectors: {
+        article:
+          document.querySelectorAll("article").length,
 
-    return cards.map((el, index) => {
+        event:
+          document.querySelectorAll(".event").length,
+
+        card:
+          document.querySelectorAll(".card").length,
+
+        classEvent:
+          document.querySelectorAll("[class*='event']").length,
+
+        classCard:
+          document.querySelectorAll("[class*='card']").length,
+
+        time:
+          document.querySelectorAll("time").length,
+      },
+
+      links,
+    };
+  });
+
+  fs.mkdirSync("./src/data", {
+    recursive: true,
+  });
+
+  fs.writeFileSync(
+    DEBUG_OUTPUT,
+    JSON.stringify(debug, null, 2),
+    "utf8"
+  );
+
+  const cards = await page.evaluate((source) => {
+
+    const cardsFound = [
+      ...document.querySelectorAll(
+        "article, .event, .card"
+      ),
+    ];
+
+    return cardsFound.map((el, index) => {
+
       const text = (sel) =>
         el.querySelector(sel)?.textContent?.trim() || "";
 
@@ -203,17 +248,24 @@ async function scrapePage(page, source) {
         source,
       };
     });
+
   }, source);
+
+  return cards;
 }
 
 function nextEventId(events) {
   let max = 0;
 
   for (const event of events) {
-    const match = String(event.id || "").match(/^event-(\d+)$/);
+    const match = String(event.id || "")
+      .match(/^event-(\d+)$/);
 
     if (match) {
-      max = Math.max(max, Number(match[1]));
+      max = Math.max(
+        max,
+        Number(match[1])
+      );
     }
   }
 
@@ -242,8 +294,12 @@ function findMissingGeoEvents(events) {
 function findMissingLocationEvents(events) {
   return events
     .filter((event) => {
-      const city = normalize(event.city);
-      const venue = normalize(event.venue);
+
+      const city =
+        normalize(event.city);
+
+      const venue =
+        normalize(event.venue);
 
       return (
         !city ||
@@ -270,22 +326,36 @@ function findMissingLocationEvents(events) {
 }
 
 async function run() {
-  const existingEvents = loadExistingEvents();
-  const existingKeys = new Set(existingEvents.map(getEventKey));
 
-  console.log(`📦 ${existingEvents.length} vorhandene Events geladen`);
+  const existingEvents =
+    loadExistingEvents();
 
-  const browser = await chromium.launch({
-    headless: true,
-  });
+  const existingKeys =
+    new Set(
+      existingEvents.map(getEventKey)
+    );
 
-  const page = await browser.newPage();
+  console.log(
+    `📦 ${existingEvents.length} vorhandene Events geladen`
+  );
+
+  const browser =
+    await chromium.launch({
+      headless: true,
+    });
+
+  const page =
+    await browser.newPage();
 
   const newEvents = [];
+
   let totalScraped = 0;
-  let nextId = nextEventId(existingEvents);
+
+  let nextId =
+    nextEventId(existingEvents);
 
   for (const source of SOURCES) {
+
     console.log("🌍", source);
 
     await page.goto(source, {
@@ -295,21 +365,37 @@ async function run() {
 
     await page.waitForTimeout(3000);
 
-    const scraped = await scrapePage(page, source);
+    const scraped =
+      await scrapePage(page, source);
+
     totalScraped += scraped.length;
 
-    console.log(`🔎 ${scraped.length} Events auf Quelle gefunden`);
+    console.log(
+      `🔎 ${scraped.length} Events auf Quelle gefunden`
+    );
 
     if (scraped.length === 0) {
-      console.warn("⚠️ Keine Events auf dieser Quelle gefunden:", source);
+
+      console.warn(
+        "⚠️ Keine Events auf dieser Quelle gefunden:",
+        source
+      );
+
       continue;
     }
 
     for (const ev of scraped) {
-      const key = getEventKey(ev);
+
+      const key =
+        getEventKey(ev);
 
       if (existingKeys.has(key)) {
-        console.log("⏭️ Bereits vorhanden:", ev.title);
+
+        console.log(
+          "⏭️ Bereits vorhanden:",
+          ev.title
+        );
+
         continue;
       }
 
@@ -322,7 +408,8 @@ async function run() {
         .filter(Boolean)
         .join(", ");
 
-      const geo = await geocode(address);
+      const geo =
+        await geocode(address);
 
       const event = {
         ...ev,
@@ -333,6 +420,7 @@ async function run() {
       };
 
       newEvents.push(event);
+
       existingKeys.add(key);
 
       console.log(
@@ -354,19 +442,36 @@ async function run() {
   ];
 
   if (totalScraped === 0) {
-    console.error("❌ Abbruch: Scraper hat 0 Events gefunden.");
-    console.error("events.js wird NICHT überschrieben.");
+
+    console.error(
+      "❌ Abbruch: Scraper hat 0 Events gefunden."
+    );
+
+    console.error(
+      "events.js wird NICHT überschrieben."
+    );
+
     process.exit(1);
   }
 
   if (events.length === 0) {
-    console.error("❌ Abbruch: Es würden 0 Events gespeichert.");
-    console.error("events.js wird NICHT überschrieben.");
+
+    console.error(
+      "❌ Abbruch: Es würden 0 Events gespeichert."
+    );
+
+    console.error(
+      "events.js wird NICHT überschrieben."
+    );
+
     process.exit(1);
   }
 
-  const missingGeoEvents = findMissingGeoEvents(events);
-  const missingLocationEvents = findMissingLocationEvents(events);
+  const missingGeoEvents =
+    findMissingGeoEvents(events);
+
+  const missingLocationEvents =
+    findMissingLocationEvents(events);
 
   fs.mkdirSync("./src/data", {
     recursive: true,
@@ -380,21 +485,43 @@ async function run() {
 
   fs.writeFileSync(
     MISSING_GEO_OUTPUT,
-    JSON.stringify(missingGeoEvents, null, 2),
+    JSON.stringify(
+      missingGeoEvents,
+      null,
+      2
+    ),
     "utf8"
   );
 
   fs.writeFileSync(
     MISSING_LOCATION_OUTPUT,
-    JSON.stringify(missingLocationEvents, null, 2),
+    JSON.stringify(
+      missingLocationEvents,
+      null,
+      2
+    ),
     "utf8"
   );
 
-  console.log(`🔎 ${totalScraped} Events insgesamt gescraped`);
-  console.log(`⚠️ ${missingGeoEvents.length} Events ohne Geokoordinaten`);
-  console.log(`📍 ${missingLocationEvents.length} Events mit fehlenden Ortsdaten`);
-  console.log(`✅ ${newEvents.length} neue Events importiert`);
-  console.log(`📦 ${events.length} Events insgesamt gespeichert`);
+  console.log(
+    `🔎 ${totalScraped} Events insgesamt gescraped`
+  );
+
+  console.log(
+    `⚠️ ${missingGeoEvents.length} Events ohne Geokoordinaten`
+  );
+
+  console.log(
+    `📍 ${missingLocationEvents.length} Events mit fehlenden Ortsdaten`
+  );
+
+  console.log(
+    `✅ ${newEvents.length} neue Events importiert`
+  );
+
+  console.log(
+    `📦 ${events.length} Events insgesamt gespeichert`
+  );
 }
 
 run();
