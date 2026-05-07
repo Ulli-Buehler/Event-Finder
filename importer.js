@@ -1,7 +1,7 @@
 // importer.js
 // Playwright Importer + Geocoding + events.js Generator
 // Importiert nur neue Events und ignoriert vorhandene Duplikate
-// Erstellt zusätzlich eine Diagnose-Datei für fehlende Geokoordinaten
+// Erstellt zusätzlich eine Diagnose-Datei für alle Events ohne Geokoordinaten
 
 import fs from "fs";
 import { chromium } from "playwright";
@@ -34,6 +34,15 @@ function normalizeUrl(url, sourceUrl = "") {
   } catch {
     return normalize(url);
   }
+}
+
+function hasGeo(event) {
+  return (
+    typeof event.lat === "number" &&
+    typeof event.lng === "number" &&
+    !Number.isNaN(event.lat) &&
+    !Number.isNaN(event.lng)
+  );
 }
 
 function getEventKey(event) {
@@ -186,6 +195,25 @@ function nextEventId(events) {
   return max + 1;
 }
 
+function findMissingGeoEvents(events) {
+  return events
+    .filter((event) => !hasGeo(event))
+    .map((event) => ({
+      id: event.id,
+      title: event.title,
+      date: event.date,
+      venue: event.venue,
+      street: event.street,
+      zip: event.zip,
+      city: event.city,
+      address: event.address,
+      lat: event.lat ?? null,
+      lng: event.lng ?? null,
+      url: event.url,
+      source: event.source,
+    }));
+}
+
 async function run() {
   const existingEvents = loadExistingEvents();
   const existingKeys = new Set(existingEvents.map(getEventKey));
@@ -259,26 +287,13 @@ async function run() {
     ...newEvents,
   ];
 
-  const missingGeoEvents = events.filter(
-    (event) =>
-      event.lat === null ||
-      event.lng === null
-  );
+  const missingGeoEvents = findMissingGeoEvents(events);
 
   if (missingGeoEvents.length > 0) {
     console.log("⚠️ Events ohne Geokoordinaten:");
 
     for (const event of missingGeoEvents) {
-      console.log({
-        title: event.title,
-        date: event.date,
-        venue: event.venue,
-        street: event.street,
-        zip: event.zip,
-        city: event.city,
-        address: event.address,
-        url: event.url,
-      });
+      console.log(event);
     }
   }
 
@@ -303,17 +318,9 @@ async function run() {
     "utf8"
   );
 
-  console.log(
-    `⚠️ ${missingGeoEvents.length} Events ohne Geokoordinaten`
-  );
-
-  console.log(
-    `✅ ${newEvents.length} neue Events importiert`
-  );
-
-  console.log(
-    `📦 ${events.length} Events insgesamt gespeichert`
-  );
+  console.log(`⚠️ ${missingGeoEvents.length} Events ohne Geokoordinaten`);
+  console.log(`✅ ${newEvents.length} neue Events importiert`);
+  console.log(`📦 ${events.length} Events insgesamt gespeichert`);
 }
 
 run();
