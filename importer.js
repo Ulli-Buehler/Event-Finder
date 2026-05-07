@@ -30,10 +30,89 @@ function normalizeUrl(url, sourceUrl = "") {
   }
 }
 
+function cleanTitle(title) {
+  return String(title || "")
+    .replace(/\s+link$/i, "")
+    .replace(/\s+\*$/i, "")
+    .trim();
+}
+
+function isValidTitle(title) {
+  const t = cleanTitle(title);
+  const n = normalize(t);
+
+  if (!t || t.length < 5) return false;
+
+  const invalidPatterns = [
+    /^ab\s+\d+/i,
+    /^\d+\s*€$/i,
+    /^genre:/i,
+    /^de\s+\d{4}/i,
+    /^drama\s*\|/i,
+    /^komödie\s*\|/i,
+    /^action\s*\|/i,
+    /^animation\s*\|/i,
+    /^familie\s*\|/i,
+    /^fantasy\s*\|/i,
+    /^historie\s*\|/i,
+    /^horror\s*\|/i,
+    /^thriller\s*\|/i,
+    /^musik\s*\|/i,
+    /^musik\s*\//i,
+    /^dokumentarfilm\s*\|/i,
+    /^liebesfilm\s*\|/i,
+    /^abenteuer,/i,
+    /^pin\s+/i,
+    /^tags\s+/i,
+    /^\d{1,2}:\d{2}\s*uhr/i,
+  ];
+
+  if (invalidPatterns.some((regex) => regex.test(t))) {
+    return false;
+  }
+
+  const invalidContains = [
+    "fsk",
+    "regie:",
+    "darsteller:",
+    "darstellende:",
+    "schauspieler:",
+    "schauspielende:",
+    "eintritt frei",
+    "reservierung nicht möglich",
+  ];
+
+  if (invalidContains.some((bad) => n.includes(bad))) {
+    return false;
+  }
+
+  const invalidExact = [
+    "buchen",
+    "link",
+    "zurück",
+    "vor",
+    "heute",
+    "nächster tag",
+    "key anmelden",
+    "home startseite",
+    "gear einstellungen",
+    "search suche",
+    "map karte",
+    "location locations",
+    "angebote artists",
+  ];
+
+  if (invalidExact.includes(n)) {
+    return false;
+  }
+
+  return true;
+}
+
 function getEventKey(event) {
   const url = normalizeUrl(event.url, event.source);
 
-  if (url) {
+  if (url && url !== normalizeUrl(event.source)) {
     return `url:${url}`;
   }
 
@@ -53,7 +132,6 @@ function loadExistingEvents() {
 
   try {
     const file = fs.readFileSync(OUTPUT, "utf8");
-
     const match = file.match(/export const events = ([\s\S]*?);\s*$/);
 
     if (!match?.[1]) {
@@ -109,104 +187,248 @@ async function geocode(address) {
   }
 }
 
-function isValidTitle(title) {
-  if (!title) return false;
+function extractLocation(line) {
+  const raw = String(line || "");
 
-  const t = title.trim();
+  const cleaned = raw
+    .replace(/^.*?\bpin\s+/i, "")
+    .replace(/\s+favoriten.*$/i, "")
+    .replace(/\s+X.*$/i, "")
+    .replace(/\s+link\s*:/i, ",")
+    .replace(/\d{1,2}:\d{2}\s*Uhr.*$/i, "")
+    .replace(/:\s*\d{1,2}:\d{2}.*$/i, "")
+    .replace(/,\s*\d+,\d+\s*km.*$/i, "")
+    .replace(/,\s*\d+\s*km.*$/i, "")
+    .trim();
 
-  if (t.length < 6) return false;
+  const parts = cleaned
+    .split(",")
+    .map((part) => part.trim())
+    .filter(Boolean);
 
-  const blockedStarts = [
-    "ab ",
-    "genre:",
-    "drama",
-    "komödie",
-    "thriller",
-    "horror",
-    "animation",
-    "familie",
-    "action",
-    "dokumentarfilm",
-    "historie",
-    "liebesfilm",
-    "fantasy",
-    "musik /",
-    "pin ",
-    "tags ",
-  ];
+  return {
+    venue: parts[0] || "",
+    city: parts.length > 1 ? parts[parts.length - 1] : "",
+  };
+}
 
-  if (
-    blockedStarts.some((s) =>
-      t.toLowerCase().startsWith(s)
-    )
-  ) {
-    return false;
-  }
+function extractDate(line, currentSectionDate = "") {
+  const date =
+    String(line || "").match(/([A-Za-zÄÖÜäöü]{2},\s*\d{2}\.\d{2})/)?.[1] ||
+    String(line || "").match(/\bmorgen\b/i)?.[0] ||
+    currentSectionDate ||
+    "";
 
-  if (
-    t.match(/^\d{1,2}:\d{2}\s*uhr/i)
-  ) {
-    return false;
-  }
+  const time =
+    String(line || "").match(/(\d{1,2}:\d{2})\s*Uhr/i)?.[1] ||
+    String(line || "").match(/:\s*(\d{1,2}:\d{2})/)?.[1] ||
+    "";
 
-  if (
-    t.match(/^ab\s+\d+/i)
-  ) {
-    return false;
-  }
-
-  if (
-    t.includes("FSK")
-  ) {
-    return false;
-  }
-
-  if (
-    t.includes("Regie:")
-  ) {
-    return false;
-  }
-
-  if (
-    t.includes("Darsteller:")
-  ) {
-    return false;
-  }
-
-  return true;
+  return [date, time ? `${time} Uhr` : ""]
+    .filter(Boolean)
+    .join(" · ");
 }
 
 async function scrapePage(page, source) {
   return await page.evaluate((source) => {
-    const text = document.body.innerText;
+    const normalizeInside = (value) =>
+      String(value || "")
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, " ");
 
-    const lines = text
+    const cleanTitleInside = (title) =>
+      String(title || "")
+        .replace(/\s+link$/i, "")
+        .replace(/\s+\*$/i, "")
+        .trim();
+
+    const isValidTitleInside = (title) => {
+      const t = cleanTitleInside(title);
+      const n = normalizeInside(t);
+
+      if (!t || t.length < 5) return false;
+
+      const invalidPatterns = [
+        /^ab\s+\d+/i,
+        /^\d+\s*€$/i,
+        /^genre:/i,
+        /^de\s+\d{4}/i,
+        /^drama\s*\|/i,
+        /^komödie\s*\|/i,
+        /^action\s*\|/i,
+        /^animation\s*\|/i,
+        /^familie\s*\|/i,
+        /^fantasy\s*\|/i,
+        /^historie\s*\|/i,
+        /^horror\s*\|/i,
+        /^thriller\s*\|/i,
+        /^musik\s*\|/i,
+        /^musik\s*\//i,
+        /^dokumentarfilm\s*\|/i,
+        /^liebesfilm\s*\|/i,
+        /^abenteuer,/i,
+        /^pin\s+/i,
+        /^tags\s+/i,
+        /^\d{1,2}:\d{2}\s*uhr/i,
+      ];
+
+      if (invalidPatterns.some((regex) => regex.test(t))) {
+        return false;
+      }
+
+      const invalidContains = [
+        "fsk",
+        "regie:",
+        "darsteller:",
+        "darstellende:",
+        "schauspieler:",
+        "schauspielende:",
+        "eintritt frei",
+        "reservierung nicht möglich",
+      ];
+
+      if (invalidContains.some((bad) => n.includes(bad))) {
+        return false;
+      }
+
+      const invalidExact = [
+        "buchen",
+        "link",
+        "zurück",
+        "vor",
+        "heute",
+        "nächster tag",
+        "key anmelden",
+        "home startseite",
+        "gear einstellungen",
+        "search suche",
+        "map karte",
+        "location locations",
+        "angebote artists",
+      ];
+
+      if (invalidExact.includes(n)) {
+        return false;
+      }
+
+      return true;
+    };
+
+    const extractLocationInside = (line) => {
+      const raw = String(line || "");
+
+      const cleaned = raw
+        .replace(/^.*?\bpin\s+/i, "")
+        .replace(/\s+favoriten.*$/i, "")
+        .replace(/\s+X.*$/i, "")
+        .replace(/\s+link\s*:/i, ",")
+        .replace(/\d{1,2}:\d{2}\s*Uhr.*$/i, "")
+        .replace(/:\s*\d{1,2}:\d{2}.*$/i, "")
+        .replace(/,\s*\d+,\d+\s*km.*$/i, "")
+        .replace(/,\s*\d+\s*km.*$/i, "")
+        .trim();
+
+      const parts = cleaned
+        .split(",")
+        .map((part) => part.trim())
+        .filter(Boolean);
+
+      return {
+        venue: parts[0] || "",
+        city: parts.length > 1 ? parts[parts.length - 1] : "",
+      };
+    };
+
+    const extractDateInside = (line, currentSectionDate = "") => {
+      const date =
+        String(line || "").match(/([A-Za-zÄÖÜäöü]{2},\s*\d{2}\.\d{2})/)?.[1] ||
+        String(line || "").match(/\bmorgen\b/i)?.[0] ||
+        currentSectionDate ||
+        "";
+
+      const time =
+        String(line || "").match(/(\d{1,2}:\d{2})\s*Uhr/i)?.[1] ||
+        String(line || "").match(/:\s*(\d{1,2}:\d{2})/)?.[1] ||
+        "";
+
+      return [date, time ? `${time} Uhr` : ""]
+        .filter(Boolean)
+        .join(" · ");
+    };
+
+    const lines = document.body.innerText
       .split("\n")
-      .map((l) => l.trim())
+      .map((line) => line.trim())
       .filter(Boolean);
 
     const events = [];
+    let currentSectionDate = "";
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
 
-      const next = lines[i + 1] || "";
+      const sectionDateMatch = line.match(
+        /\/\s*([A-Za-zÄÖÜäöü]{2},\s*\d{2}\.\d{2}\.\d{2})/
+      );
 
-      if (
-        next.match(/\d{1,2}:\d{2}\s*Uhr/i)
-      ) {
-        events.push({
-          title: line,
-          date: next,
-          city: "",
-          venue: "",
-          street: "",
-          zip: "",
-          image: "",
-          url: source,
-          source,
-        });
+      if (sectionDateMatch) {
+        currentSectionDate = sectionDateMatch[1];
+        continue;
       }
+
+      const isLocationLine =
+        /\bpin\b/i.test(line) &&
+        (
+          /\d{1,2}:\d{2}\s*Uhr/i.test(line) ||
+          /:\s*\d{1,2}:\d{2}/.test(line)
+        );
+
+      if (!isLocationLine) {
+        continue;
+      }
+
+      let title = "";
+      let description = "";
+
+      for (let j = i - 1; j >= Math.max(0, i - 4); j--) {
+        const candidate = cleanTitleInside(lines[j]);
+
+        if (
+          !isValidTitleInside(candidate) ||
+          candidate.startsWith("tags ") ||
+          /\bpin\b/i.test(candidate) ||
+          /\d{1,2}:\d{2}\s*Uhr/i.test(candidate)
+        ) {
+          continue;
+        }
+
+        if (!title) {
+          title = candidate;
+        } else {
+          description = candidate;
+          break;
+        }
+      }
+
+      if (!isValidTitleInside(title)) {
+        continue;
+      }
+
+      const location = extractLocationInside(line);
+
+      events.push({
+        title,
+        city: location.city,
+        venue: location.venue,
+        street: "",
+        zip: "",
+        date: extractDateInside(line, currentSectionDate),
+        description,
+        image: "",
+        url: source,
+        source,
+      });
     }
 
     return events;
@@ -245,6 +467,7 @@ async function run() {
   const page = await browser.newPage();
 
   const newEvents = [];
+  const missingGeoEvents = [];
 
   let nextId = nextEventId(existingEvents);
 
@@ -266,7 +489,10 @@ async function run() {
     );
 
     for (const ev of scraped) {
+      ev.title = cleanTitle(ev.title);
+
       if (!isValidTitle(ev.title)) {
+        console.log("🚫 Übersprungen:", ev.title);
         continue;
       }
 
@@ -282,8 +508,7 @@ async function run() {
       }
 
       const address = [
-        ev.street,
-        ev.zip,
+        ev.venue,
         ev.city,
         "Deutschland",
       ]
@@ -300,6 +525,10 @@ async function run() {
         lng: geo.lng,
       };
 
+      if (geo.lat === null || geo.lng === null) {
+        missingGeoEvents.push(event);
+      }
+
       newEvents.push(event);
 
       existingKeys.add(key);
@@ -311,7 +540,7 @@ async function run() {
         geo.lng
       );
 
-      await sleep(300);
+      await sleep(1100);
     }
   }
 
@@ -322,13 +551,11 @@ async function run() {
     ...newEvents,
   ];
 
-  const missingGeo = events.filter(
-    (e) => e.lat == null || e.lng == null
-  );
-
-  console.log(
-    `⚠️ ${missingGeo.length} Events ohne Geokoordinaten`
-  );
+  if (events.length === 0) {
+    console.log("❌ Abbruch: Keine Events gefunden.");
+    console.log("events.js wird NICHT überschrieben.");
+    return;
+  }
 
   const content =
     `export const events = ` +
@@ -343,6 +570,16 @@ async function run() {
     OUTPUT,
     content,
     "utf8"
+  );
+
+  fs.writeFileSync(
+    "./src/data/missing-geo-events.json",
+    JSON.stringify(missingGeoEvents, null, 2),
+    "utf8"
+  );
+
+  console.log(
+    `⚠️ ${missingGeoEvents.length} neue Events ohne Geokoordinaten`
   );
 
   console.log(
