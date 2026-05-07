@@ -1,11 +1,13 @@
 // importer.js
 // Playwright Importer + Geocoding + events.js Generator
 // Importiert nur neue Events und ignoriert vorhandene Duplikate
+// Erstellt zusätzlich eine Diagnose-Datei für fehlende Geokoordinaten
 
 import fs from "fs";
 import { chromium } from "playwright";
 
 const OUTPUT = "./src/data/events.js";
+const MISSING_GEO_OUTPUT = "./src/data/missing-geo-events.json";
 
 const SOURCES = [
   "https://www.wasgehtapp.de/events",
@@ -175,6 +177,7 @@ function nextEventId(events) {
 
   for (const event of events) {
     const match = String(event.id || "").match(/^event-(\d+)$/);
+
     if (match) {
       max = Math.max(max, Number(match[1]));
     }
@@ -256,6 +259,29 @@ async function run() {
     ...newEvents,
   ];
 
+  const missingGeoEvents = events.filter(
+    (event) =>
+      event.lat === null ||
+      event.lng === null
+  );
+
+  if (missingGeoEvents.length > 0) {
+    console.log("⚠️ Events ohne Geokoordinaten:");
+
+    for (const event of missingGeoEvents) {
+      console.log({
+        title: event.title,
+        date: event.date,
+        venue: event.venue,
+        street: event.street,
+        zip: event.zip,
+        city: event.city,
+        address: event.address,
+        url: event.url,
+      });
+    }
+  }
+
   const content =
     `export const events = ` +
     JSON.stringify(events, null, 2) +
@@ -271,8 +297,23 @@ async function run() {
     "utf8"
   );
 
-  console.log(`✅ ${newEvents.length} neue Events importiert`);
-  console.log(`📦 ${events.length} Events insgesamt gespeichert`);
+  fs.writeFileSync(
+    MISSING_GEO_OUTPUT,
+    JSON.stringify(missingGeoEvents, null, 2),
+    "utf8"
+  );
+
+  console.log(
+    `⚠️ ${missingGeoEvents.length} Events ohne Geokoordinaten`
+  );
+
+  console.log(
+    `✅ ${newEvents.length} neue Events importiert`
+  );
+
+  console.log(
+    `📦 ${events.length} Events insgesamt gespeichert`
+  );
 }
 
 run();
