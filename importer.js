@@ -451,7 +451,11 @@ async function run() {
       "events.js wird NICHT überschrieben."
     );
 
-    process.exit(1);
+    console.log(
+      "📝 Debug-Datei sollte unter src/data/debug-page.json liegen"
+    );
+
+    return;
   }
 
   if (events.length === 0) {
@@ -464,7 +468,7 @@ async function run() {
       "events.js wird NICHT überschrieben."
     );
 
-    process.exit(1);
+    return;
   }
 
   const missingGeoEvents =
