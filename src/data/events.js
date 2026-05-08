@@ -1,4 +1,4 @@
-export const events = [
+const EVENTS = [
   {
     "title": "(Uraufführung)",
     "city": "Esslingen am Neckar",
