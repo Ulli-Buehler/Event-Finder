@@ -8,36 +8,8 @@ const SOURCE_URL =
 const OUTPUT_FILE = "./src/data/events.js";
 const MISSING_GEO_FILE = "./src/data/missing-geo-events.json";
 
-function loadExistingEvents() {
-  if (!fs.existsSync(OUTPUT_FILE)) {
-    return [];
-  }
-
-  try {
-    const content = fs.readFileSync(OUTPUT_FILE, "utf8");
-
-    const match = content.match(
-      /const EVENTS = ([\s\S]*?);\s*$/
-    );
-
-    if (!match?.[1]) {
-      return [];
-    }
-
-    const events = JSON.parse(match[1]);
-
-    return Array.isArray(events)
-      ? events
-      : [];
-  } catch {
-    return [];
-  }
-}
-
 function saveEvents(events) {
-  fs.mkdirSync("./src/data", {
-    recursive: true
-  });
+  fs.mkdirSync("./src/data", { recursive: true });
 
   fs.writeFileSync(
     OUTPUT_FILE,
@@ -47,15 +19,8 @@ function saveEvents(events) {
 }
 
 function saveMissingGeo(events) {
-  fs.mkdirSync("./src/data", {
-    recursive: true
-  });
-
-  fs.writeFileSync(
-    MISSING_GEO_FILE,
-    JSON.stringify(events, null, 2),
-    "utf8"
-  );
+  fs.mkdirSync("./src/data", { recursive: true });
+  fs.writeFileSync(MISSING_GEO_FILE, JSON.stringify(events, null, 2), "utf8");
 }
 
 function normalizeText(text) {
@@ -64,37 +29,74 @@ function normalizeText(text) {
     .trim();
 }
 
-function normalizeKey(text) {
-  return normalizeText(text)
-    .toLowerCase();
+function isBadTitle(title) {
+  const t = normalizeText(title).toLowerCase();
+
+  if (!t || t.length < 4) return true;
+
+  return [
+    "zurück",
+    "vor",
+    "heute",
+    "nächster tag",
+    "buchen",
+    "link",
+    "..mehr",
+    "key anmelden",
+    "home startseite",
+    "gear einstellungen",
+    "search suche",
+    "map karte"
+  ].includes(t);
 }
 
-function getEventKey(event) {
-  return [
-    normalizeKey(event.title),
-    normalizeKey(event.date),
-    normalizeKey(event.city),
-    normalizeKey(event.venue)
-  ].join("|");
+function extractLocation(line) {
+  const cleaned = normalizeText(line)
+    .replace(/^.*?\bpin\s+/i, "")
+    .replace(/\s+favoriten.*$/i, "")
+    .replace(/\s+X.*$/i, "")
+    .replace(/,\s*\d+,\d+\s*km.*$/i, "")
+    .replace(/,\s*\d+\s*km.*$/i, "");
+
+  const parts = cleaned
+    .split(",")
+    .map(p => p.trim())
+    .filter(Boolean);
+
+  return {
+    venue: parts[0] || "",
+    city: parts.length > 1 ? parts[parts.length - 1] : ""
+  };
+}
+
+function extractDate(line, fallbackDate = "") {
+  const date =
+    line.match(/([A-Za-zÄÖÜäöü]{2},\s*\d{2}\.\d{2}(?:\.\d{2})?)/)?.[1] ||
+    line.match(/\bmorgen\b/i)?.[0] ||
+    fallbackDate ||
+    "";
+
+  const time = line.match(/(\d{1,2}:\d{2})\s*Uhr/i)?.[1] || "";
+
+  return [date, time ? `${time} Uhr` : ""].filter(Boolean).join(" · ");
 }
 
 function buildAddress(event) {
-  const parts = [];
+  let venue = event.venue || "";
+  const city = event.city || "";
 
-  if (event.venue) {
-    parts.push(event.venue);
-  }
+  venue = venue.replace(/\(.*?\)/g, "").trim();
+  venue = venue.replace(/\s+/g, " ");
 
-  if (event.city) {
-    parts.push(event.city);
-  }
+  if (venue && city) return `${venue}, ${city}, Deutschland`;
+  if (city) return `${city}, Deutschland`;
 
-  parts.push("Deutschland");
-
-  return parts.join(", ");
+  return "";
 }
 
 async function geocode(address) {
+  if (!address) return { lat: null, lng: null };
+
   try {
     const url =
       "https://nominatim.openstreetmap.org/search?" +
@@ -104,93 +106,99 @@ async function geocode(address) {
         limit: 1
       });
 
-    const response = await fetch(url, {
+    const res = await fetch(url, {
       headers: {
         "User-Agent": "Event-Finder"
       }
     });
 
-    const data = await response.json();
+    const data = await res.json();
 
-    if (
-      Array.isArray(data) &&
-      data.length > 0
-    ) {
+    if (Array.isArray(data) && data.length > 0) {
       return {
         lat: Number(data[0].lat),
         lng: Number(data[0].lon)
       };
     }
   } catch {
-    console.log(
-      "⚠️ Geocoding Fehler:",
-      address
-    );
+    console.log("⚠️ Geocoding Fehler:", address);
   }
 
-  return {
-    lat: null,
-    lng: null
-  };
+  return { lat: null, lng: null };
 }
 
-function extractDate(line) {
-  const match = line.match(
-    /([A-Za-zÄÖÜäöü]{2},\s*\d{2}\.\d{2}(?:\.\d{2})?)\s*·\s*(\d{1,2}:\d{2}\s*Uhr)/
-  );
-
-  if (!match) {
-    return "";
-  }
-
-  return `${match[1]} · ${match[2]}`;
+function eventKey(event) {
+  return [
+    event.title,
+    event.date,
+    event.venue,
+    event.city
+  ]
+    .map(v => normalizeText(v).toLowerCase())
+    .join("|");
 }
 
-function parseEventsFromText(bodyText) {
-  const lines = bodyText
+function parseEventsFromText(text) {
+  const lines = text
     .split("\n")
     .map(line => line.trim())
     .filter(Boolean);
 
   const events = [];
+  let currentSectionDate = "";
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
 
-    const date = extractDate(line);
+    const sectionDate = line.match(
+      /\/\s*([A-Za-zÄÖÜäöü]{2},\s*\d{2}\.\d{2}\.\d{2})/
+    );
 
-    if (!date) continue;
-
-    const title =
-      normalizeText(lines[i - 2]);
-
-    const description =
-      normalizeText(lines[i - 1]);
-
-    const locationLine =
-      normalizeText(lines[i + 1]);
-
-    const locationParts =
-      locationLine
-        .split(",")
-        .map(p => p.trim());
-
-    const venue =
-      locationParts[0] || "";
-
-    const city =
-      locationParts[
-        locationParts.length - 1
-      ] || "";
-
-    if (!title || !city) {
+    if (sectionDate) {
+      currentSectionDate = sectionDate[1];
       continue;
     }
 
+    const isLocationLine =
+      /\bpin\b/i.test(line) &&
+      /\d{1,2}:\d{2}\s*Uhr/i.test(line);
+
+    if (!isLocationLine) continue;
+
+    const location = extractLocation(line);
+    const date = extractDate(line, currentSectionDate);
+
+    if (!location.venue || !date) continue;
+
+    let title = "";
+    let description = "";
+
+    for (let j = i - 1; j >= Math.max(0, i - 5); j--) {
+      const candidate = normalizeText(lines[j]);
+
+      if (
+        isBadTitle(candidate) ||
+        /\bpin\b/i.test(candidate) ||
+        /\d{1,2}:\d{2}\s*Uhr/i.test(candidate) ||
+        /^tags\s+/i.test(candidate)
+      ) {
+        continue;
+      }
+
+      if (!title) {
+        title = candidate;
+      } else {
+        description = candidate;
+        break;
+      }
+    }
+
+    if (isBadTitle(title)) continue;
+
     events.push({
       title,
-      city,
-      venue,
+      city: location.city,
+      venue: location.venue,
       street: "",
       zip: "",
       date,
@@ -205,11 +213,8 @@ function parseEventsFromText(bodyText) {
   const seen = new Set();
 
   for (const event of events) {
-    const key = getEventKey(event);
-
-    if (seen.has(key)) {
-      continue;
-    }
+    const key = eventKey(event);
+    if (seen.has(key)) continue;
 
     seen.add(key);
     unique.push(event);
@@ -221,145 +226,60 @@ function parseEventsFromText(bodyText) {
 async function scrapeEvents() {
   console.log("🌍", SOURCE_URL);
 
-  const response =
-    await fetch(SOURCE_URL);
-
-  const html =
-    await response.text();
+  const response = await fetch(SOURCE_URL);
+  const html = await response.text();
 
   const $ = cheerio.load(html);
-
-  const bodyText =
-    $("body").text();
+  const bodyText = $("body").text();
 
   return parseEventsFromText(bodyText);
 }
 
-function nextEventId(events) {
-  let max = 0;
-
-  for (const event of events) {
-    const match = String(
-      event.id || ""
-    ).match(/^event-(\d+)$/);
-
-    if (match) {
-      max = Math.max(
-        max,
-        Number(match[1])
-      );
-    }
-  }
-
-  return max + 1;
-}
-
 async function run() {
-  const existingEvents =
-    loadExistingEvents();
+  const scrapedEvents = await scrapeEvents();
 
-  const existingKeys =
-    new Set(
-      existingEvents.map(
-        getEventKey
-      )
-    );
+  console.log(`🔎 ${scrapedEvents.length} Events auf Quelle gefunden`);
 
-  console.log(
-    `📦 ${existingEvents.length} vorhandene Events geladen`
-  );
-
-  const scrapedEvents =
-    await scrapeEvents();
-
-  console.log(
-    `🔎 ${scrapedEvents.length} Events auf Quelle gefunden`
-  );
-
-  const newEvents = [];
+  const finalEvents = [];
   const missingGeoEvents = [];
 
-  let nextId =
-    nextEventId(existingEvents);
+  let id = 1;
 
   for (const event of scrapedEvents) {
-    const key =
-      getEventKey(event);
-
-    if (existingKeys.has(key)) {
-      console.log(
-        `⏭️ Bereits vorhanden: ${event.title}`
-      );
-
-      continue;
-    }
-
-    const address =
-      buildAddress(event);
-
-    const geo =
-      await geocode(address);
+    const address = buildAddress(event);
+    const geo = await geocode(address);
 
     const finalEvent = {
       ...event,
-      id: `event-${nextId++}`,
+      id: `event-${id++}`,
       address,
       lat: geo.lat,
       lng: geo.lng
     };
 
-    if (
-      finalEvent.lat === null ||
-      finalEvent.lng === null
-    ) {
-      missingGeoEvents.push(
-        finalEvent
-      );
+    if (finalEvent.lat === null || finalEvent.lng === null) {
+      missingGeoEvents.push(finalEvent);
     }
 
-    newEvents.push(finalEvent);
+    finalEvents.push(finalEvent);
 
-    existingKeys.add(key);
+    console.log(`📍 ${finalEvent.title} ${finalEvent.lat} ${finalEvent.lng}`);
 
-    console.log(
-      `📍 Neu: ${finalEvent.title}`
-    );
-
-    await new Promise(resolve =>
-      setTimeout(resolve, 1100)
-    );
+    await new Promise(resolve => setTimeout(resolve, 1100));
   }
 
-  const allEvents = [
-    ...existingEvents,
-    ...newEvents
-  ];
-
-  if (allEvents.length === 0) {
-    console.log(
-      "❌ Keine Events gefunden"
-    );
-
+  if (finalEvents.length === 0) {
+    console.log("❌ Abbruch: Keine Events gefunden.");
+    console.log("events.js wird NICHT überschrieben.");
     return;
   }
 
-  saveEvents(allEvents);
+  saveEvents(finalEvents);
+  saveMissingGeo(missingGeoEvents);
 
-  saveMissingGeo(
-    missingGeoEvents
-  );
-
-  console.log(
-    `⚠️ ${missingGeoEvents.length} neue Events ohne Geokoordinaten`
-  );
-
-  console.log(
-    `✅ ${newEvents.length} neue Events importiert`
-  );
-
-  console.log(
-    `📦 ${allEvents.length} Events insgesamt gespeichert`
-  );
+  console.log(`⚠️ ${missingGeoEvents.length} Events ohne Geokoordinaten`);
+  console.log(`✅ ${finalEvents.length} Events gespeichert`);
+  console.log("✅ src/data/events.js korrekt als const EVENTS geschrieben");
 }
 
 run();
