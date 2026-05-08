@@ -1,4 +1,4 @@
-console.log("APP VERSION: rollback-working-v7-fixed-events");
+console.log("APP VERSION: events-fix-v7");
 
 let userPos = [48.6167, 9.45];
 let radiusKm = 30;
@@ -52,6 +52,10 @@ const ALL_CATEGORIES = [
       .filter(Boolean)
   )
 ].sort();
+
+ALL_CATEGORIES.forEach(c =>
+  ACTIVE_CATEGORIES.add(c)
+);
 
 const sheet = document.createElement("div");
 
@@ -120,42 +124,22 @@ function eventEmoji(event) {
   if (text.includes("musik")) return "🎵";
   if (text.includes("fest")) return "🎪";
   if (text.includes("essen")) return "🍽️";
-  if (text.includes("kultur")) return "🎭";
+  if (text.includes("kino")) return "🎬";
+  if (text.includes("party")) return "🎉";
 
   return "📍";
 }
 
-function formatDate(event) {
-  if (
-    event.dateText &&
-    event.timeText
-  ) {
-    return (
-      event.dateText +
-      " · " +
-      event.timeText
-    );
-  }
+function clearMarkers() {
+  markers.forEach(marker => {
+    map.removeLayer(marker);
+  });
 
-  return event.date || "";
+  markers.length = 0;
 }
 
-function getPlace(event) {
-  if (event.place) {
-    return event.place;
-  }
-
-  const parts = [];
-
-  if (event.venue) {
-    parts.push(event.venue);
-  }
-
-  if (event.city) {
-    parts.push(event.city);
-  }
-
-  return parts.join(", ");
+function formatDate(event) {
+  return event.date || "";
 }
 
 function openSheet(event) {
@@ -168,7 +152,8 @@ function openSheet(event) {
     "sheet-place"
   ).innerHTML =
     `<strong>${
-      getPlace(event) ||
+      event.address ||
+      event.venue ||
       "Ort unbekannt"
     }</strong>`;
 
@@ -180,7 +165,6 @@ function openSheet(event) {
   document.getElementById(
     "sheet-description"
   ).innerText =
-    event.summary ||
     event.description ||
     "Keine Beschreibung vorhanden.";
 
@@ -234,13 +218,8 @@ function render() {
   closeSheet();
 
   cards.innerHTML = "";
-  cards.scrollLeft = 0;
 
-  markers.forEach(marker => {
-    map.removeLayer(marker);
-  });
-
-  markers.length = 0;
+  clearMarkers();
 
   radiusKm =
     Number(radiusSlider.value);
@@ -300,9 +279,7 @@ function render() {
     })
 
     .filter(event => {
-      if (
-        ACTIVE_CATEGORIES.size === 0
-      ) {
+      if (!event.category) {
         return true;
       }
 
@@ -323,13 +300,8 @@ function render() {
     })
 
     .sort((a, b) => {
-      if (!a.hasLocation) {
-        return 1;
-      }
-
-      if (!b.hasLocation) {
-        return -1;
-      }
+      if (!a.hasLocation) return 1;
+      if (!b.hasLocation) return -1;
 
       return (
         a.realDistance -
@@ -344,6 +316,7 @@ function render() {
     " Events sichtbar";
 
   visibleEvents.forEach(event => {
+
     if (event.hasLocation) {
       const marker =
         L.marker([
@@ -378,13 +351,10 @@ function render() {
           ${event.title || "Event"}
         </h2>
 
-        <p class="card-category">
-          ${event.category || ""}
-        </p>
-
         <p class="card-place">
           ${
-            getPlace(event) ||
+            event.address ||
+            event.venue ||
             "Ort unbekannt"
           }
           •
@@ -421,6 +391,7 @@ refreshBtn.onclick = async () => {
     "🔄 Import gestartet ...";
 
   try {
+
     await fetch(
       "/api/trigger-import",
       {
@@ -430,9 +401,12 @@ refreshBtn.onclick = async () => {
 
     importStatus.innerText =
       "✅ Import gestartet";
+
   } catch (err) {
+
     importStatus.innerText =
       "❌ Fehler";
+
   }
 
   refreshBtn.disabled = false;
