@@ -1,1 +1,1 @@
-    "dateText": "06.05.2026",
+    const EVENTS = [
