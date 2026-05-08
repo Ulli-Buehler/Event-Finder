@@ -1,10 +1,10 @@
-console.log("APP VERSION: rollback-working-v6-stable-layout");
+console.log("APP VERSION: rollback-working-v7-fixed-events");
 
 let userPos = [48.6167, 9.45];
 let radiusKm = 30;
 let dateMode = "all";
 
-const ACTIVE_CATEGORIES = new Set(["Feste", "Märkte"]);
+const ACTIVE_CATEGORIES = new Set();
 
 const map = L.map("map").setView(userPos, 9);
 
@@ -46,36 +46,52 @@ eventMeta.insertAdjacentElement("afterend", categoryBar);
 const markers = [];
 
 const ALL_CATEGORIES = [
-  ...new Set(EVENTS.map(e => e.category).filter(Boolean))
+  ...new Set(
+    EVENTS
+      .map(e => e.category)
+      .filter(Boolean)
+  )
 ].sort();
 
 const sheet = document.createElement("div");
+
 sheet.className = "sheet";
 
 sheet.innerHTML = `
   <div class="sheet-handle"></div>
+
   <h2 id="sheet-title"></h2>
+
   <div id="sheet-place"></div>
+
   <div id="sheet-date"></div>
+
   <div id="sheet-description"></div>
-  <button class="sheet-close">Schließen</button>
+
+  <button class="sheet-close">
+    Schließen
+  </button>
 `;
 
 document.body.appendChild(sheet);
 
 function hasCoords(event) {
-  return typeof event.lat === "number" &&
-         typeof event.lng === "number";
+  return (
+    typeof event.lat === "number" &&
+    typeof event.lng === "number"
+  );
 }
 
 function distanceKm(lat1, lon1, lat2, lon2) {
   const R = 6371;
 
   const dLat =
-    (lat2 - lat1) * Math.PI / 180;
+    (lat2 - lat1) *
+    Math.PI / 180;
 
   const dLon =
-    (lon2 - lon1) * Math.PI / 180;
+    (lon2 - lon1) *
+    Math.PI / 180;
 
   const a =
     Math.sin(dLat / 2) ** 2 +
@@ -109,81 +125,6 @@ function eventEmoji(event) {
   return "📍";
 }
 
-function isoToday(offset = 0) {
-  const d = new Date();
-
-  d.setDate(
-    d.getDate() + offset
-  );
-
-  return d
-    .toISOString()
-    .slice(0, 10);
-}
-
-function nextSundayIso() {
-  const d = new Date();
-
-  const diff =
-    d.getDay() === 0
-      ? 0
-      : 7 - d.getDay();
-
-  d.setDate(
-    d.getDate() + diff
-  );
-
-  return d
-    .toISOString()
-    .slice(0, 10);
-}
-
-function dateMatches(event) {
-  if (
-    !event.dateStart ||
-    !event.dateEnd
-  ) {
-    return true;
-  }
-
-  if (dateMode === "today") {
-    const t = isoToday(0);
-
-    return (
-      event.dateStart <= t &&
-      event.dateEnd >= t
-    );
-  }
-
-  if (dateMode === "tomorrow") {
-    const t = isoToday(1);
-
-    return (
-      event.dateStart <= t &&
-      event.dateEnd >= t
-    );
-  }
-
-  if (dateMode === "sunday") {
-    const t = nextSundayIso();
-
-    return (
-      event.dateStart <= t &&
-      event.dateEnd >= t
-    );
-  }
-
-  return true;
-}
-
-function clearMarkers() {
-  markers.forEach(marker => {
-    map.removeLayer(marker);
-  });
-
-  markers.length = 0;
-}
-
 function formatDate(event) {
   if (
     event.dateText &&
@@ -196,7 +137,25 @@ function formatDate(event) {
     );
   }
 
-  return event.dateText || "";
+  return event.date || "";
+}
+
+function getPlace(event) {
+  if (event.place) {
+    return event.place;
+  }
+
+  const parts = [];
+
+  if (event.venue) {
+    parts.push(event.venue);
+  }
+
+  if (event.city) {
+    parts.push(event.city);
+  }
+
+  return parts.join(", ");
 }
 
 function openSheet(event) {
@@ -209,7 +168,8 @@ function openSheet(event) {
     "sheet-place"
   ).innerHTML =
     `<strong>${
-      event.place || "Ort unbekannt"
+      getPlace(event) ||
+      "Ort unbekannt"
     }</strong>`;
 
   document.getElementById(
@@ -276,11 +236,11 @@ function render() {
   cards.innerHTML = "";
   cards.scrollLeft = 0;
 
-  clearMarkers();
+  markers.forEach(marker => {
+    map.removeLayer(marker);
+  });
 
-  setTimeout(() => {
-    map.invalidateSize();
-  }, 100);
+  markers.length = 0;
 
   radiusKm =
     Number(radiusSlider.value);
@@ -339,13 +299,17 @@ function render() {
       };
     })
 
-    .filter(dateMatches)
+    .filter(event => {
+      if (
+        ACTIVE_CATEGORIES.size === 0
+      ) {
+        return true;
+      }
 
-    .filter(event =>
-      ACTIVE_CATEGORIES.has(
+      return ACTIVE_CATEGORIES.has(
         event.category
-      )
-    )
+      );
+    })
 
     .filter(event => {
       if (!event.hasLocation) {
@@ -420,7 +384,7 @@ function render() {
 
         <p class="card-place">
           ${
-            event.place ||
+            getPlace(event) ||
             "Ort unbekannt"
           }
           •
