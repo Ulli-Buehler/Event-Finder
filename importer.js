@@ -1,16 +1,32 @@
 import fs from "fs";
 import fetch from "node-fetch";
-import * as cheerio from "cheerio";
+import { chromium } from "playwright";
 
 const SOURCE_URL =
   "https://www.wasgehtapp.de/index.php?geo_id=15546&ort=Dettingen%20unter%20Teck&x=9.45&y=48.6167&einwohner=5603&region=01&select_ort=1&radius=40";
 
 const OUTPUT_FILE = "./src/data/events.js";
 const MISSING_GEO_FILE = "./src/data/missing-geo-events.json";
+const DATA_DIR = "./src/data";
+
+const CATEGORY_RULES = [
+  { category: "Konzert", words: ["konzert", "live", "band", "musik", "jazz", "rock", "pop", "chor", "orchester"] },
+  { category: "Party", words: ["party", "club", "dj", "disco", "tanzen", "dance"] },
+  { category: "Bühne", words: ["theater", "bühne", "kabarett", "comedy", "show", "aufführung", "musical", "uraufführung"] },
+  { category: "Kino", words: ["kino", "film", "open air kino"] },
+  { category: "Markt", words: ["markt", "flohmarkt", "weihnachtsmarkt", "verkaufsoffen"] },
+  { category: "Sport", words: ["sport", "lauf", "turnier", "spiel", "wanderung", "rad"] },
+  { category: "Kinder", words: ["kinder", "familie", "kids", "jugend"] },
+  { category: "Vortrag", words: ["vortrag", "lesung", "führung", "kurs", "workshop", "seminar"] },
+  { category: "Fest", words: ["fest", "hocketse", "straßenfest", "stadtfest", "dorffest"] }
+];
+
+function ensureDataDir() {
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+}
 
 function saveEvents(events) {
-  fs.mkdirSync("./src/data", { recursive: true });
-
+  ensureDataDir();
   fs.writeFileSync(
     OUTPUT_FILE,
     `const EVENTS = ${JSON.stringify(events, null, 2)};\n`,
@@ -19,35 +35,118 @@ function saveEvents(events) {
 }
 
 function saveMissingGeo(events) {
-  fs.mkdirSync("./src/data", { recursive: true });
+  ensureDataDir();
   fs.writeFileSync(MISSING_GEO_FILE, JSON.stringify(events, null, 2), "utf8");
 }
 
 function normalizeText(text) {
   return String(text || "")
+    .replace(/\u00a0/g, " ")
+    .replace(/[“”]/g, '"')
+    .replace(/[‘’]/g, "'")
     .replace(/\s+/g, " ")
     .trim();
 }
 
-function isBadTitle(title) {
-  const t = normalizeText(title).toLowerCase();
+function simplifyForCompare(text) {
+  return normalizeText(text)
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
-  if (!t || t.length < 4) return true;
+function cleanTitle(title) {
+  return normalizeText(title)
+    .replace(/^[-–—•]+/, "")
+    .replace(/^(konzert|party|bühne|theater|kino|markt|sport|kinder|vortrag|lesung|fest)\s*:\s*/i, "")
+    .replace(/\s*\.\.mehr\s*$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
-  return [
+function cleanDescription(description) {
+  let d = normalizeText(description);
+
+  if (isBadTextLine(d)) return "";
+
+  return d
+    .replace(/\s*\.\.mehr\s*$/i, "")
+    .replace(/^[-–—•]+/, "")
+    .trim();
+}
+
+function isBadTextLine(text) {
+  const original = normalizeText(text);
+  const t = simplifyForCompare(original);
+
+  if (!t) return true;
+  if (t.length < 4) return true;
+
+  const exactBad = new Set([
     "zurück",
     "vor",
     "heute",
+    "morgen",
     "nächster tag",
     "buchen",
     "link",
-    "..mehr",
+    "mehr",
     "key anmelden",
     "home startseite",
     "gear einstellungen",
     "search suche",
-    "map karte"
-  ].includes(t);
+    "map karte",
+    "favoriten",
+    "anzeige",
+    "events",
+    "veranstaltungen"
+  ]);
+
+  if (exactBad.has(t)) return true;
+  if (/^\(?uraufführung\)?$/i.test(original)) return true;
+  if (/^tags\b/i.test(original)) return true;
+  if (/\bpin\b/i.test(original)) return true;
+  if (/\d{1,2}:\d{2}\s*Uhr/i.test(original)) return true;
+  if (/^\d+([,.]\d+)?\s*km$/i.test(t)) return true;
+
+  return false;
+}
+
+function isBadTitle(title) {
+  const t = cleanTitle(title);
+  const compare = simplifyForCompare(t);
+
+  if (isBadTextLine(t)) return true;
+  if (compare.length < 4) return true;
+  if (!/[a-zäöüß]/i.test(t)) return true;
+
+  return false;
+}
+
+function extractCategory(rawTitle, description = "") {
+  const full = simplifyForCompare(`${rawTitle} ${description}`);
+
+  const explicit = normalizeText(rawTitle).match(
+    /^(konzert|party|bühne|theater|kino|markt|sport|kinder|vortrag|lesung|fest)\s*:/i
+  );
+
+  if (explicit) {
+    const value = explicit[1].toLowerCase();
+
+    if (value === "theater") return "Bühne";
+    if (value === "lesung") return "Vortrag";
+
+    return value.charAt(0).toUpperCase() + value.slice(1);
+  }
+
+  for (const rule of CATEGORY_RULES) {
+    if (rule.words.some(word => full.includes(word))) {
+      return rule.category;
+    }
+  }
+
+  return "Sonstiges";
 }
 
 function extractLocation(line) {
@@ -55,12 +154,11 @@ function extractLocation(line) {
     .replace(/^.*?\bpin\s+/i, "")
     .replace(/\s+favoriten.*$/i, "")
     .replace(/\s+X.*$/i, "")
-    .replace(/,\s*\d+,\d+\s*km.*$/i, "")
-    .replace(/,\s*\d+\s*km.*$/i, "");
+    .replace(/,\s*\d+([,.]\d+)?\s*km.*$/i, "");
 
   const parts = cleaned
     .split(",")
-    .map(p => p.trim())
+    .map(part => normalizeText(part))
     .filter(Boolean);
 
   return {
@@ -82,11 +180,8 @@ function extractDate(line, fallbackDate = "") {
 }
 
 function buildAddress(event) {
-  let venue = event.venue || "";
-  const city = event.city || "";
-
-  venue = venue.replace(/\(.*?\)/g, "").trim();
-  venue = venue.replace(/\s+/g, " ");
+  const venue = normalizeText(event.venue).replace(/\(.*?\)/g, "");
+  const city = normalizeText(event.city);
 
   if (venue && city) return `${venue}, ${city}, Deutschland`;
   if (city) return `${city}, Deutschland`;
@@ -108,7 +203,7 @@ async function geocode(address) {
 
     const res = await fetch(url, {
       headers: {
-        "User-Agent": "Event-Finder"
+        "User-Agent": "Event-Finder/1.0"
       }
     });
 
@@ -128,20 +223,47 @@ async function geocode(address) {
 }
 
 function eventKey(event) {
-  return [
-    event.title,
-    event.date,
-    event.venue,
-    event.city
-  ]
-    .map(v => normalizeText(v).toLowerCase())
-    .join("|");
+  const title = simplifyForCompare(event.title)
+    .replace(/\b(open air|live|veranstaltung)\b/g, "")
+    .trim();
+
+  const day = simplifyForCompare(event.date.split("·")[0] || event.date);
+  const venue = simplifyForCompare(event.venue);
+  const city = simplifyForCompare(event.city);
+
+  return [title, day, venue, city].join("|");
+}
+
+function findPreviousContent(lines, index) {
+  let title = "";
+  let description = "";
+
+  for (let j = index - 1; j >= Math.max(0, index - 10); j--) {
+    const candidate = normalizeText(lines[j]);
+
+    if (isBadTextLine(candidate)) continue;
+
+    if (!title) {
+      title = candidate;
+      continue;
+    }
+
+    if (!description && simplifyForCompare(candidate) !== simplifyForCompare(title)) {
+      description = candidate;
+      break;
+    }
+  }
+
+  return {
+    title: cleanTitle(title),
+    description: cleanDescription(description)
+  };
 }
 
 function parseEventsFromText(text) {
   const lines = text
     .split("\n")
-    .map(line => line.trim())
+    .map(line => normalizeText(line))
     .filter(Boolean);
 
   const events = [];
@@ -160,8 +282,7 @@ function parseEventsFromText(text) {
     }
 
     const isLocationLine =
-      /\bpin\b/i.test(line) &&
-      /\d{1,2}:\d{2}\s*Uhr/i.test(line);
+      /\bpin\b/i.test(line) && /\d{1,2}:\d{2}\s*Uhr/i.test(line);
 
     if (!isLocationLine) continue;
 
@@ -170,39 +291,19 @@ function parseEventsFromText(text) {
 
     if (!location.venue || !date) continue;
 
-    let title = "";
-    let description = "";
+    const content = findPreviousContent(lines, i);
 
-    for (let j = i - 1; j >= Math.max(0, i - 5); j--) {
-      const candidate = normalizeText(lines[j]);
-
-      if (
-        isBadTitle(candidate) ||
-        /\bpin\b/i.test(candidate) ||
-        /\d{1,2}:\d{2}\s*Uhr/i.test(candidate) ||
-        /^tags\s+/i.test(candidate)
-      ) {
-        continue;
-      }
-
-      if (!title) {
-        title = candidate;
-      } else {
-        description = candidate;
-        break;
-      }
-    }
-
-    if (isBadTitle(title)) continue;
+    if (isBadTitle(content.title)) continue;
 
     events.push({
-      title,
+      title: content.title,
+      category: extractCategory(content.title, content.description),
       city: location.city,
       venue: location.venue,
       street: "",
       zip: "",
       date,
-      description,
+      description: content.description,
       image: "",
       url: SOURCE_URL,
       source: SOURCE_URL
@@ -214,6 +315,7 @@ function parseEventsFromText(text) {
 
   for (const event of events) {
     const key = eventKey(event);
+
     if (seen.has(key)) continue;
 
     seen.add(key);
@@ -224,13 +326,24 @@ function parseEventsFromText(text) {
 }
 
 async function scrapeEvents() {
-  console.log("🌍", SOURCE_URL);
+  console.log("Quelle:", SOURCE_URL);
 
-  const response = await fetch(SOURCE_URL);
-  const html = await response.text();
+  const browser = await chromium.launch({
+    headless: true
+  });
 
-  const $ = cheerio.load(html);
-  const bodyText = $("body").text();
+  const page = await browser.newPage();
+
+  await page.goto(SOURCE_URL, {
+    waitUntil: "networkidle",
+    timeout: 60000
+  });
+
+  await page.waitForTimeout(5000);
+
+  const bodyText = await page.evaluate(() => document.body.innerText);
+
+  await browser.close();
 
   return parseEventsFromText(bodyText);
 }
@@ -240,9 +353,14 @@ async function run() {
 
   console.log(`🔎 ${scrapedEvents.length} Events auf Quelle gefunden`);
 
+  if (scrapedEvents.length === 0) {
+    console.log("❌ Abbruch: Keine Events gefunden.");
+    console.log("events.js wird NICHT überschrieben.");
+    return;
+  }
+
   const finalEvents = [];
   const missingGeoEvents = [];
-
   let id = 1;
 
   for (const event of scrapedEvents) {
@@ -263,15 +381,11 @@ async function run() {
 
     finalEvents.push(finalEvent);
 
-    console.log(`📍 ${finalEvent.title} ${finalEvent.lat} ${finalEvent.lng}`);
+    console.log(
+      `${finalEvent.title} | ${finalEvent.category} | ${finalEvent.lat}, ${finalEvent.lng}`
+    );
 
     await new Promise(resolve => setTimeout(resolve, 1100));
-  }
-
-  if (finalEvents.length === 0) {
-    console.log("❌ Abbruch: Keine Events gefunden.");
-    console.log("events.js wird NICHT überschrieben.");
-    return;
   }
 
   saveEvents(finalEvents);
