@@ -1,49 +1,34 @@
-name: Import Events
+name: Event Import Debug
 
 on:
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
-  import:
+  debug-import:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Repository laden
-        uses: actions/checkout@v5
-        with:
-          persist-credentials: true
+      - name: Repository auschecken
+        uses: actions/checkout@v4
 
       - name: Node installieren
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v4
         with:
-          node-version: 24
-          cache: npm
+          node-version: 22
 
-      - name: Pakete installieren
-        run: npm ci
-
-      - name: Playwright Cache
-        uses: actions/cache@v5
-        with:
-          path: ~/.cache/ms-playwright
-          key: playwright-chromium-${{ runner.os }}
+      - name: Dependencies installieren
+        run: npm install
 
       - name: Playwright Browser installieren
-        run: npx playwright install chromium
+        run: npx playwright install --with-deps chromium
 
-      - name: Importer starten
-        # run: node importer.js
+      - name: Debug Importer starten
         run: node debug-detail-importer.js
 
-      - name: Änderungen committen
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-
-          git add .
-
-          git diff --cached --quiet || git commit -m "Auto update events"
-          git push
+      - name: Upload debug files
+        uses: actions/upload-artifact@v4
+        with:
+          name: importer-debug
+          path: |
+            debug-output.txt
+            debug-output.json
