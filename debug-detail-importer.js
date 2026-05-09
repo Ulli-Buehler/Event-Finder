@@ -18,21 +18,44 @@ function extractDetailBlock(lines) {
 
   if (startIndex === -1) return lines.slice(0, 25);
 
-  const title = lines[startIndex - 1] || "";
   const endIndex = lines.findIndex(
     (line, index) => index > startIndex && line.includes("Zum Kalender zufügen")
   );
 
-  const detailLines = lines.slice(
-    Math.max(0, startIndex - 1),
-    endIndex === -1 ? startIndex + 20 : endIndex
-  );
+  return lines
+    .slice(Math.max(0, startIndex - 1), endIndex === -1 ? startIndex + 25 : endIndex)
+    .filter(line => normalizeText(line) !== "");
+}
 
-  return detailLines.filter(line => normalizeText(line) !== "");
+function extractGeoFromUrl(url) {
+  if (!url) return null;
+
+  const decoded = decodeURIComponent(url);
+
+  const patterns = [
+    /[?&](?:q|query|ll)=(-?\d+\.\d+),\s*(-?\d+\.\d+)/i,
+    /[?&]lat=(-?\d+\.\d+).*?[?&]lon=(-?\d+\.\d+)/i,
+    /[?&]lat=(-?\d+\.\d+).*?[?&]lng=(-?\d+\.\d+)/i,
+    /@(-?\d+\.\d+),\s*(-?\d+\.\d+)/i,
+    /#map=\d+\/(-?\d+\.\d+)\/(-?\d+\.\d+)/i
+  ];
+
+  for (const pattern of patterns) {
+    const match = decoded.match(pattern);
+
+    if (match) {
+      return {
+        lat: Number(match[1]),
+        lng: Number(match[2])
+      };
+    }
+  }
+
+  return null;
 }
 
 async function run() {
-  console.log("🔎 Debug Detail Importer V3");
+  console.log("🔎 Debug Detail Importer V4");
   console.log("Quelle:", SOURCE_URL);
   console.log(`Max Events: ${MAX_EVENTS}`);
   console.log("");
@@ -86,20 +109,67 @@ async function run() {
 
       await page.waitForTimeout(1800);
 
-      const lines = await page.evaluate(() => {
-        return (document.body.innerText || "")
+      const result = await page.evaluate(() => {
+        const lines = (document.body.innerText || "")
           .split("\n")
           .map(line => line.trim())
           .filter(Boolean);
+
+        const links = Array.from(document.querySelectorAll("a"))
+          .map(a => ({
+            text: (a.innerText || a.textContent || "").trim(),
+            href: a.href || "",
+            className: a.className ? String(a.className) : "",
+            title: a.title || "",
+            ariaLabel: a.getAttribute("aria-label") || ""
+          }))
+          .filter(link => link.href);
+
+        const mapLinks = links.filter(link => {
+          const haystack = `${link.text} ${link.href} ${link.className} ${link.title} ${link.ariaLabel}`.toLowerCase();
+
+          return (
+            haystack.includes("map") ||
+            haystack.includes("karte") ||
+            haystack.includes("openstreetmap") ||
+            haystack.includes("google") ||
+            haystack.includes("maps") ||
+            link.className.includes("location")
+          );
+        });
+
+        return {
+          url: location.href,
+          lines,
+          mapLinks
+        };
       });
 
-      const detailLines = extractDetailBlock(lines);
+      const detailLines = extractDetailBlock(result.lines);
 
       console.log("Detailblock:");
-
       detailLines.forEach((line, idx) => {
         console.log(`${String(idx + 1).padStart(2, "0")}: ${normalizeText(line)}`);
       });
+
+      console.log("Map-/Location-Links:");
+
+      if (result.mapLinks.length === 0) {
+        console.log("Keine Map-Links gefunden.");
+      } else {
+        result.mapLinks.slice(0, 10).forEach((link, idx) => {
+          const geo = extractGeoFromUrl(link.href);
+
+          console.log(`${idx + 1}. Text: ${normalizeText(link.text)}`);
+          console.log(`   Class: ${link.className}`);
+          console.log(`   Href: ${link.href}`);
+          console.log(
+            `   Geo: ${
+              geo ? `lat=${geo.lat}, lng=${geo.lng}` : "keine Koordinaten im Link"
+            }`
+          );
+        });
+      }
 
       console.log("");
       await page.waitForTimeout(CLICK_DELAY_MS);
@@ -110,7 +180,7 @@ async function run() {
   }
 
   await browser.close();
-  console.log("✅ Debug-Test V3 beendet.");
+  console.log("✅ Debug-Test V4 beendet.");
 }
 
 run();
