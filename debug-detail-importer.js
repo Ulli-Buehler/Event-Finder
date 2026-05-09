@@ -13,24 +13,26 @@ function normalizeText(text) {
     .trim();
 }
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+function extractDetailBlock(lines) {
+  const startIndex = lines.findIndex(line => line === "calendar");
 
-function looksLikeEventTitle(text) {
-  const t = normalizeText(text);
+  if (startIndex === -1) return lines.slice(0, 25);
 
-  if (t.length < 8) return false;
-  if (/^(zurück|vor|jan|feb|mär|apr|mai|jun|jul|aug|sep|okt|nov|dez)$/i.test(t)) return false;
-  if (/^\d{4}$/.test(t)) return false;
-  if (/^\d{1,2}:\d{2}/.test(t)) return false;
-  if (/^\d+([,.]\d+)?\s*km$/i.test(t)) return false;
+  const title = lines[startIndex - 1] || "";
+  const endIndex = lines.findIndex(
+    (line, index) => index > startIndex && line.includes("Zum Kalender zufügen")
+  );
 
-  return true;
+  const detailLines = lines.slice(
+    Math.max(0, startIndex - 1),
+    endIndex === -1 ? startIndex + 20 : endIndex
+  );
+
+  return detailLines.filter(line => normalizeText(line) !== "");
 }
 
 async function run() {
-  console.log("🔎 Debug Detail Importer V2");
+  console.log("🔎 Debug Detail Importer V3");
   console.log("Quelle:", SOURCE_URL);
   console.log(`Max Events: ${MAX_EVENTS}`);
   console.log("");
@@ -54,57 +56,15 @@ async function run() {
 
   await page.waitForTimeout(4000);
 
-  const candidates = await page.evaluate(() => {
-    const elements = Array.from(document.querySelectorAll("body *"));
+  const count = await page.locator(".termin.inline").count();
 
-    return elements
-      .map((el, index) => {
-        const rect = el.getBoundingClientRect();
-        const text = (el.innerText || el.textContent || "").trim();
-
-        return {
-          index,
-          tag: el.tagName,
-          className: el.className ? String(el.className) : "",
-          id: el.id || "",
-          text,
-          x: rect.x,
-          y: rect.y,
-          width: rect.width,
-          height: rect.height
-        };
-      })
-      .filter(item => item.text)
-      .filter(item => item.width > 100)
-      .filter(item => item.height >= 25)
-      .filter(item => item.y > 150)
-      .slice(0, 300);
-  });
-
-  const eventCandidates = candidates
-    .filter(item => looksLikeEventTitle(item.text))
-    .filter(item => !item.text.includes("Was geht in"))
-    .filter(item => !item.text.includes("Zurück"))
-    .filter(item => !item.text.includes("Vor"))
-    .slice(0, MAX_EVENTS);
-
-  console.log(`Klick-Kandidaten: ${eventCandidates.length}`);
+  console.log(`Gefundene .termin.inline Container: ${count}`);
   console.log("");
 
-  eventCandidates.forEach((item, i) => {
-    console.log(`Kandidat ${i + 1}`);
-    console.log(`Tag: ${item.tag}`);
-    console.log(`Class: ${item.className}`);
-    console.log(`Text: ${normalizeText(item.text).slice(0, 180)}`);
-    console.log(`Position: x=${Math.round(item.x)}, y=${Math.round(item.y)}, w=${Math.round(item.width)}, h=${Math.round(item.height)}`);
-    console.log("");
-  });
+  const total = Math.min(count, MAX_EVENTS);
 
-  for (let i = 0; i < eventCandidates.length; i++) {
-    const item = eventCandidates[i];
-
-    console.log(`--- Klick-Test Event ${i + 1} ---`);
-    console.log("Ausgangstext:", normalizeText(item.text).slice(0, 180));
+  for (let i = 0; i < total; i++) {
+    console.log(`--- Event ${i + 1} ---`);
 
     try {
       await page.goto(SOURCE_URL, {
@@ -114,67 +74,35 @@ async function run() {
 
       await page.waitForTimeout(2500);
 
-      const freshCandidates = await page.evaluate(() => {
-        const elements = Array.from(document.querySelectorAll("body *"));
+      const cards = page.locator(".termin.inline");
+      const card = cards.nth(i);
 
-        return elements
-          .map((el, index) => {
-            const rect = el.getBoundingClientRect();
-            const text = (el.innerText || el.textContent || "").trim();
+      const listText = normalizeText(await card.innerText());
 
-            return {
-              index,
-              text,
-              x: rect.x,
-              y: rect.y,
-              width: rect.width,
-              height: rect.height
-            };
-          })
-          .filter(item => item.text)
-          .filter(item => item.width > 100)
-          .filter(item => item.height >= 25)
-          .filter(item => item.y > 150)
-          .slice(0, 300);
-      });
+      console.log("Listenkarte:");
+      console.log(listText.slice(0, 250));
 
-      const fresh = freshCandidates
-        .filter(item => looksLikeEventTitle(item.text))
-        .filter(item => !item.text.includes("Was geht in"))
-        .filter(item => !item.text.includes("Zurück"))
-        .filter(item => !item.text.includes("Vor"))[i];
+      await card.click({ timeout: 10000 });
 
-      if (!fresh) {
-        console.log("❌ Kandidat nicht mehr gefunden");
-        console.log("");
-        continue;
-      }
+      await page.waitForTimeout(1800);
 
-      await page.mouse.click(fresh.x + fresh.width / 2, fresh.y + fresh.height / 2);
-
-      await page.waitForTimeout(2000);
-
-      const detail = await page.evaluate(() => {
-        const lines = (document.body.innerText || "")
+      const lines = await page.evaluate(() => {
+        return (document.body.innerText || "")
           .split("\n")
           .map(line => line.trim())
           .filter(Boolean);
-
-        return {
-          url: location.href,
-          lines: lines.slice(0, 40)
-        };
       });
 
-      console.log("URL nach Klick:", detail.url);
-      console.log("Erste Detail-Zeilen:");
+      const detailLines = extractDetailBlock(lines);
 
-      detail.lines.forEach((line, idx) => {
+      console.log("Detailblock:");
+
+      detailLines.forEach((line, idx) => {
         console.log(`${String(idx + 1).padStart(2, "0")}: ${normalizeText(line)}`);
       });
 
       console.log("");
-      await sleep(CLICK_DELAY_MS);
+      await page.waitForTimeout(CLICK_DELAY_MS);
     } catch (error) {
       console.log("❌ Fehler:", error.message);
       console.log("");
@@ -182,7 +110,7 @@ async function run() {
   }
 
   await browser.close();
-  console.log("✅ Debug-Test V2 beendet.");
+  console.log("✅ Debug-Test V3 beendet.");
 }
 
 run();
