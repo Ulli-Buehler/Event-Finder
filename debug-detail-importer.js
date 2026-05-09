@@ -47,49 +47,6 @@ function extractGeoFromUrl(url) {
   };
 }
 
-function extractDetailBlock(lines) {
-  const startIndex = lines.findIndex(
-    line => line === "calendar"
-  );
-
-  if (startIndex === -1) return [];
-
-  const endIndex = lines.findIndex(
-    (line, index) =>
-      index > startIndex &&
-      line.includes("Zum Kalender zufügen")
-  );
-
-  return lines.slice(
-    Math.max(0, startIndex - 1),
-    endIndex === -1 ? startIndex + 40 : endIndex
-  );
-}
-
-function extractFields(detailLines) {
-  const title = normalizeText(detailLines[0] || "");
-
-  const dateIndex = detailLines.findIndex(
-    line => line === "calendar"
-  );
-
-  const pinIndex = detailLines.findIndex(
-    line => line === "pin"
-  );
-
-  return {
-    title,
-    date:
-      dateIndex >= 0
-        ? normalizeText(detailLines[dateIndex + 1] || "")
-        : "",
-    location:
-      pinIndex >= 0
-        ? cleanLocation(detailLines[pinIndex + 1] || "")
-        : ""
-  };
-}
-
 async function waitForDetailChange(page, oldSnapshot) {
   await page.waitForFunction(
     previous => {
@@ -110,13 +67,17 @@ async function waitForDetailChange(page, oldSnapshot) {
 
 async function readActiveDetail(page) {
   return await page.evaluate(() => {
-    const lines = (document.body.innerText || "")
+    const detailBlock = document.querySelector(".detail-block"); // Use specific detail block class
+    
+    if (!detailBlock) return { lines: [], mapLinks: [] }; // Guard clause if detail block is missing
+
+    const lines = (detailBlock.innerText || "")
       .split("\n")
       .map(line => line.trim())
       .filter(Boolean);
 
     const mapLinks = Array.from(
-      document.querySelectorAll("a.map_link")
+      detailBlock.querySelectorAll("a.map_link") // Scoped to the detail block
     )
       .map(a => a.href || "")
       .filter(Boolean);
@@ -144,36 +105,24 @@ async function readEvent(page, index) {
 
   const active = await readActiveDetail(page);
 
-  const detailLines = extractDetailBlock(active.lines);
-
-  const fields = extractFields(detailLines);
-
   const lastMapLink =
     active.mapLinks.length > 0
-      ? active.mapLinks[active.mapLinks.length - 1]
+      ? active.mapLinks[active.mapLinks.length - 1] // Use the last map link
       : "";
 
   const geo = extractGeoFromUrl(lastMapLink);
 
   return {
-    ok: Boolean(
-      fields.title &&
-        fields.date &&
-        fields.location &&
-        geo
-    ),
-    title: fields.title,
-    date: fields.date,
-    location: fields.location,
+    ok: Boolean(lastMapLink && geo),
+    mapCandidates: active.mapLinks,
     geo,
-    mapLink: lastMapLink,
-    mapCandidates: active.mapLinks
+    mapLink: lastMapLink
   };
 }
 
 async function run() {
-  log("🔎 Debug Detail Importer V10");
-  log("Ziel: Geo-Fix mit letztem Map-Link prüfen");
+  log("[34m[1mDebug Detail Importer V11 - Geo-Fix[0m");
+  log("Ziel: Geo-Daten aus letzten Map-Link prüfen.");
   log(`Max Events: ${MAX_EVENTS}`);
   log("");
 
@@ -204,110 +153,62 @@ async function run() {
 
   const total = Math.min(count, MAX_EVENTS);
 
-  log(`Gefundene Container: ${count}`);
+  log(`Gefundene Events: ${count}`);
   log(`Teste Events: ${total}`);
   log("");
 
-  let okCount = 0;
-  let errorCount = 0;
-  let geoCount = 0;
-
   for (let i = 0; i < total; i++) {
     try {
+      log(`--- Event ${i + 1} ---`);
+
       const event = await readEvent(page, i);
 
-      structuredLogs.push({
-        index: i + 1,
-        ok: event.ok,
-        title: event.title,
-        date: event.date,
-        location: event.location,
-        geo: event.geo,
-        mapLink: event.mapLink,
-        mapCandidates: event.mapCandidates
-      });
-
-      if (event.ok) okCount++;
-      else errorCount++;
-
-      if (event.geo) geoCount++;
-
-      log(`--- Event ${i + 1} ---`);
-      log(`Titel: ${event.title}`);
-      log(`Datum: ${event.date}`);
-      log(`Ort: ${event.location}`);
-      log("");
-
       log("Map-Kandidaten:");
-
       event.mapCandidates.forEach((candidate, idx) => {
         const geo = extractGeoFromUrl(candidate);
 
         log(
           `${idx + 1}. ${candidate} => ${
-            geo
-              ? `${geo.lat}, ${geo.lng}`
-              : "KEINE GEO"
+            geo ? `${geo.lat}, ${geo.lng}` : "FEHLT"
           }`
         );
       });
 
-      log("");
       log(
-        `Ausgewählt: ${
-          event.geo
-            ? `${event.geo.lat}, ${event.geo.lng}`
-            : "KEINE GEO"
+        `Gewählt: ${
+          event.geo ? `${event.geo.lat}, ${event.geo.lng}` : "KEINE GEO"
         }`
       );
 
       log("");
-    } catch (error) {
-      errorCount++;
 
       structuredLogs.push({
         index: i + 1,
-        ok: false,
-        error: error.message
+        ok: event.ok,
+        geo: event.geo,
+        mapLink: event.mapLink,
+        mapCandidates: event.mapCandidates
       });
-
-      log(`--- Event ${i + 1} ---`);
+    } catch (error) {
       log(`FEHLER: ${error.message}`);
-      log("");
     }
   }
 
   await browser.close();
-
-  const duration = (
-    (Date.now() - startedAt) /
-    1000
-  ).toFixed(1);
-
-  log("========== ZUSAMMENFASSUNG ==========");
-  log(`Events getestet: ${total}`);
-  log(`OK: ${okCount}`);
-  log(`Fehler: ${errorCount}`);
-  log(`Mit Geo: ${geoCount}`);
-  log(`Dauer: ${duration}s`);
-  log("");
-  log("✅ Debug-Test V10 beendet.");
 
   fs.writeFileSync(
     "debug-output.txt",
     textLogs.join("\n"),
     "utf8"
   );
-
+  
   fs.writeFileSync(
     "debug-output.json",
     JSON.stringify(structuredLogs, null, 2),
     "utf8"
   );
 
-  console.log("");
-  console.log("📄 debug-output.txt geschrieben");
-  console.log("📄 debug-output.json geschrieben");
+  log("\u001b[32m✔ Debug abgeschlossen.\u001b[0m");
 }
 
 run();
