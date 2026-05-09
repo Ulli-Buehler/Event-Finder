@@ -1,0 +1,435 @@
+[
+  {
+    "index": 1,
+    "ok": true,
+    "title": "[Chapel] 199X Rave - 90er & 2000er Techno",
+    "date": "heute, 22:00 Uhr",
+    "location": "Chapel Krypta, Göppingen",
+    "geo": {
+      "lat": 48.7143,
+      "lng": 9.68923
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll="
+    ]
+  },
+  {
+    "index": 2,
+    "ok": true,
+    "title": "Matti Klein Soul Trio",
+    "date": "morgen, 19:30 Uhr",
+    "location": "Lindenhalle, Ehingen (Donau)",
+    "geo": {
+      "lat": 48.2815,
+      "lng": 9.72811
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll="
+    ]
+  },
+  {
+    "index": 3,
+    "ok": true,
+    "title": "Katakombenfest",
+    "date": "Sa, 16.05.2026, 20:00 Uhr (Peripherie)",
+    "location": "Sudhaus, Tübingen",
+    "geo": {
+      "lat": 48.4995,
+      "lng": 9.06461
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll="
+    ]
+  },
+  {
+    "index": 4,
+    "ok": true,
+    "title": "Theateroffensive 2025/2026",
+    "date": "Di, 19.05.2026, 20:00 Uhr",
+    "location": "Theater Tonne, Reutlingen",
+    "geo": {
+      "lat": 48.4897,
+      "lng": 9.20597
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4897,9.20597&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4897,9.20597&ll="
+    ]
+  },
+  {
+    "index": 5,
+    "ok": true,
+    "title": "Stunde der Kirchenmusik - Johannes Friederich & Ensemble",
+    "date": "Fr, 22.05.2026, 19:00 Uhr",
+    "location": "Stiftskirche, Stuttgart",
+    "geo": {
+      "lat": 48.7784,
+      "lng": 9.18919
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7784,9.18919&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4897,9.20597&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7784,9.18919&ll="
+    ]
+  },
+  {
+    "index": 6,
+    "ok": true,
+    "title": "Schule auf der Bühne",
+    "date": "heute, 10:00 Uhr (Emil-Molt-Saal)",
+    "location": "Freie Waldorfschule, Schwäbisch Gmünd",
+    "geo": {
+      "lat": 48.7875,
+      "lng": 9.82491
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7875,9.82491&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4897,9.20597&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7784,9.18919&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7875,9.82491&ll="
+    ]
+  },
+  {
+    "index": 7,
+    "ok": true,
+    "title": "Musikschule zum Anfassen",
+    "date": "heute, 10:00 Uhr",
+    "location": "Städtische Musikschule, Schwörhaus, Schwäbisch Gmünd",
+    "geo": {
+      "lat": 48.8002,
+      "lng": 9.79962
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8002,9.79962&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4897,9.20597&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7784,9.18919&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7875,9.82491&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8002,9.79962&ll="
+    ]
+  },
+  {
+    "index": 8,
+    "ok": true,
+    "title": "ALLEIN MIT DEM REST DER WELT #3",
+    "date": "heute, 11:00 Uhr",
+    "location": "Württembergische Landesbühne, Esslingen am Neckar",
+    "geo": {
+      "lat": 48.7408,
+      "lng": 9.30901
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7408,9.30901&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4897,9.20597&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7784,9.18919&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7875,9.82491&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8002,9.79962&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7408,9.30901&ll="
+    ]
+  },
+  {
+    "index": 9,
+    "ok": false,
+    "error": "page.waitForFunction: Timeout 5000ms exceeded."
+  },
+  {
+    "index": 10,
+    "ok": true,
+    "title": "Kinder-Kunst-Aktionstag: Konzert mit Sunny & Marty",
+    "date": "heute, 14:30 Uhr",
+    "location": "LABYRINTH, Stuttgart",
+    "geo": {
+      "lat": 48.7815,
+      "lng": 9.18906
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7815,9.18906&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4897,9.20597&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7784,9.18919&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7875,9.82491&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8002,9.79962&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7408,9.30901&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7815,9.18906&ll="
+    ]
+  },
+  {
+    "index": 11,
+    "ok": true,
+    "title": "Musical \"Die Rückkehr von Peter Pan\"",
+    "date": "heute, 15:00 Uhr",
+    "location": "Congress-Centrum Stadtgarten, Schwäbisch Gmünd",
+    "geo": {
+      "lat": 48.7968,
+      "lng": 9.78905
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7968,9.78905&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4897,9.20597&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7784,9.18919&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7875,9.82491&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8002,9.79962&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7408,9.30901&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7815,9.18906&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7968,9.78905&ll="
+    ]
+  },
+  {
+    "index": 12,
+    "ok": true,
+    "title": "Märchenkonzert - Jorinde und Joringel",
+    "date": "heute, 16:00 Uhr",
+    "location": "Theater La Lune, Stuttgart",
+    "geo": {
+      "lat": 48.7747,
+      "lng": 9.20318
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7747,9.20318&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4897,9.20597&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7784,9.18919&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7875,9.82491&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8002,9.79962&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7408,9.30901&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7815,9.18906&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7968,9.78905&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7747,9.20318&ll="
+    ]
+  },
+  {
+    "index": 13,
+    "ok": true,
+    "title": "Riddim Station - Epplehaus",
+    "date": "heute, 16:30 Uhr",
+    "location": "Epplehaus, Tübingen",
+    "geo": {
+      "lat": 48.5166,
+      "lng": 9.05888
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.5166,9.05888&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4897,9.20597&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7784,9.18919&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7875,9.82491&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8002,9.79962&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7408,9.30901&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7815,9.18906&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7968,9.78905&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7747,9.20318&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.5166,9.05888&ll="
+    ]
+  },
+  {
+    "index": 14,
+    "ok": true,
+    "title": "MW11 - leicht drüber",
+    "date": "heute, 17:00 Uhr (Beethoven-Saal)",
+    "location": "Liederhalle, Stuttgart",
+    "geo": {
+      "lat": 48.7795,
+      "lng": 9.17041
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7795,9.17041&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4897,9.20597&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7784,9.18919&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7875,9.82491&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8002,9.79962&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7408,9.30901&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7815,9.18906&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7968,9.78905&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7747,9.20318&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.5166,9.05888&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7795,9.17041&ll="
+    ]
+  },
+  {
+    "index": 15,
+    "ok": true,
+    "title": "50 Jahre Parler Bigband - Jubiläumskonzert",
+    "date": "heute, 17:00 Uhr (Festsaal)",
+    "location": "Prediger, Schwäbisch Gmünd",
+    "geo": {
+      "lat": 48.8,
+      "lng": 9.79634
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8,9.79634&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4897,9.20597&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7784,9.18919&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7875,9.82491&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8002,9.79962&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7408,9.30901&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7815,9.18906&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7968,9.78905&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7747,9.20318&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.5166,9.05888&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7795,9.17041&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8,9.79634&ll="
+    ]
+  },
+  {
+    "index": 16,
+    "ok": false,
+    "error": "page.waitForFunction: Timeout 5000ms exceeded."
+  },
+  {
+    "index": 17,
+    "ok": true,
+    "title": "Die verschwundenen Jahreszeiten - Ein musikalisches Abendteuer für Kinder",
+    "date": "heute, 17:00 Uhr (Rittersaal)",
+    "location": "Schloss Hohentübingen, Tübingen",
+    "geo": {
+      "lat": 48.5199,
+      "lng": 9.05239
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.5199,9.05239&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4897,9.20597&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7784,9.18919&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7875,9.82491&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8002,9.79962&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7408,9.30901&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7815,9.18906&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7968,9.78905&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7747,9.20318&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.5166,9.05888&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7795,9.17041&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8,9.79634&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.5199,9.05239&ll="
+    ]
+  },
+  {
+    "index": 18,
+    "ok": true,
+    "title": "Konzert der Kinderchöre - Musik von Kindern für Kinder",
+    "date": "heute, 17:00 Uhr",
+    "location": "Stadtkirche, Marbach am Neckar",
+    "geo": {
+      "lat": 48.9393,
+      "lng": 9.27045
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.9393,9.27045&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4897,9.20597&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7784,9.18919&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7875,9.82491&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8002,9.79962&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7408,9.30901&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7815,9.18906&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7968,9.78905&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7747,9.20318&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.5166,9.05888&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7795,9.17041&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8,9.79634&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.5199,9.05239&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.9393,9.27045&ll="
+    ]
+  },
+  {
+    "index": 19,
+    "ok": true,
+    "title": "Stunde der Kirchenmusik mit dem Blockflötenorchester UNBLOCKED",
+    "date": "heute, 18:00 Uhr",
+    "location": "Augustinuskirche, Schwäbisch Gmünd",
+    "geo": {
+      "lat": 48.7984,
+      "lng": 9.80273
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7984,9.80273&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4897,9.20597&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7784,9.18919&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7875,9.82491&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8002,9.79962&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7408,9.30901&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7815,9.18906&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7968,9.78905&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7747,9.20318&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.5166,9.05888&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7795,9.17041&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8,9.79634&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.5199,9.05239&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.9393,9.27045&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7984,9.80273&ll="
+    ]
+  },
+  {
+    "index": 20,
+    "ok": true,
+    "title": "Johann Sebastian Bach: h-Moll-Messe - Chor-Orchesterkonzert der Winnender Kantorei",
+    "date": "heute, 18:00 Uhr",
+    "location": "Winnenden, Schlosskirche, Winnenden",
+    "geo": {
+      "lat": 48.875,
+      "lng": 9.39714
+    },
+    "mapLink": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.875,9.39714&ll=",
+    "mapCandidates": [
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7143,9.68923&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4897,9.20597&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7784,9.18919&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7875,9.82491&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8002,9.79962&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7408,9.30901&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7815,9.18906&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7968,9.78905&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7747,9.20318&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.5166,9.05888&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7795,9.17041&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8,9.79634&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.5199,9.05239&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.9393,9.27045&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7984,9.80273&ll=",
+      "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.875,9.39714&ll="
+    ]
+  }
+]
