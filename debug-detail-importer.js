@@ -3,7 +3,7 @@ import { chromium } from "playwright";
 const SOURCE_URL =
   "https://www.wasgehtapp.de/index.php?geo_id=15546&ort=Dettingen%20unter%20Teck&x=9.45&y=48.6167&einwohner=5603&region=01&select_ort=1&radius=40";
 
-const MAX_EVENTS = 20;
+const MAX_EVENTS = 30;
 const DETAIL_TIMEOUT_MS = 5000;
 
 function normalizeText(text) {
@@ -25,7 +25,6 @@ function extractGeoFromUrl(url) {
   if (!url) return null;
 
   const decoded = decodeURIComponent(url);
-
   const match = decoded.match(
     /[?&]daddr=(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)/i
   );
@@ -76,6 +75,7 @@ async function waitForDetailChange(page, oldSnapshot) {
   await page.waitForFunction(
     previous => {
       const text = document.body.innerText || "";
+
       return (
         text.includes("calendar") &&
         text.includes("pin") &&
@@ -94,28 +94,13 @@ async function readActiveDetail(page) {
       .map(line => line.trim())
       .filter(Boolean);
 
-    const calendarIndex = lines.findIndex(line => line === "calendar");
-    const pinIndex = lines.findIndex(
-      (line, index) => index > calendarIndex && line === "pin"
-    );
-
-    const locationLine =
-      pinIndex >= 0 ? lines[pinIndex + 1] || "" : "";
-
-    const mapCandidates = Array.from(document.querySelectorAll("a.map_link"))
-      .map(a => ({
-        href: a.href || "",
-        text: (a.innerText || a.textContent || "").trim(),
-        html: a.outerHTML || ""
-      }))
-      .filter(item => item.href);
+    const mapLinks = Array.from(document.querySelectorAll("a.map_link"))
+      .map(a => a.href || "")
+      .filter(Boolean);
 
     return {
       lines,
-      calendarIndex,
-      pinIndex,
-      locationLine,
-      mapCandidates
+      mapLinks
     };
   });
 }
@@ -124,7 +109,6 @@ async function readEvent(page, index) {
   const cards = page.locator(".termin.inline");
   const card = cards.nth(index);
 
-  const listText = normalizeText(await card.innerText());
   const oldSnapshot = await page.evaluate(() => document.body.innerText || "");
 
   await card.click({ timeout: 10000 });
@@ -134,32 +118,24 @@ async function readEvent(page, index) {
   const detailLines = extractDetailBlock(active.lines);
   const fields = extractFields(detailLines);
 
-  let selectedMap = null;
-  let selectedGeo = null;
+  const lastMapLink =
+    active.mapLinks.length > 0
+      ? active.mapLinks[active.mapLinks.length - 1]
+      : "";
 
-  for (const candidate of active.mapCandidates) {
-    const geo = extractGeoFromUrl(candidate.href);
-    if (!geo) continue;
-
-    selectedMap = candidate.href;
-    selectedGeo = geo;
-    break;
-  }
+  const geo = extractGeoFromUrl(lastMapLink);
 
   return {
-    listText,
-    detailLines,
-    fields,
-    locationLine: active.locationLine,
-    mapCandidates: active.mapCandidates,
-    selectedMap,
-    selectedGeo
+    ok: Boolean(fields.title && fields.date && fields.location && geo),
+    ...fields,
+    mapLink: lastMapLink,
+    geo
   };
 }
 
 async function run() {
-  console.log("🔎 Debug Detail Importer V9");
-  console.log("Ziel: Geo passend zum aktiven Detailblock prüfen");
+  console.log("🔎 Debug Detail Importer V10");
+  console.log("Ziel: Geo-Fix mit letztem Map-Link prüfen");
   console.log(`Max Events: ${MAX_EVENTS}`);
   console.log("");
 
@@ -175,6 +151,8 @@ async function run() {
     }
   });
 
+  const startedAt = Date.now();
+
   await page.goto(SOURCE_URL, {
     waitUntil: "networkidle",
     timeout: 60000
@@ -189,44 +167,72 @@ async function run() {
   console.log(`Teste Events: ${total}`);
   console.log("");
 
+  let ok = 0;
+  let failed = 0;
+  let withGeo = 0;
+  const problems = [];
+
   for (let i = 0; i < total; i++) {
-    console.log(`--- Event ${i + 1} ---`);
-
     try {
-      const result = await readEvent(page, i);
+      const event = await readEvent(page, i);
 
-      console.log(`Titel: ${result.fields.title}`);
-      console.log(`Datum: ${result.fields.date}`);
-      console.log(`Ort: ${result.fields.location}`);
-      console.log(`LocationLine roh: ${result.locationLine}`);
+      if (event.ok) ok++;
+      else failed++;
 
-      console.log("Map-Kandidaten:");
-      result.mapCandidates.slice(0, 6).forEach((item, idx) => {
-        const geo = extractGeoFromUrl(item.href);
-        console.log(
-          `${idx + 1}. ${item.href} ${
-            geo ? `=> ${geo.lat}, ${geo.lng}` : "=> keine Geo"
-          }`
-        );
-      });
+      if (event.geo) withGeo++;
 
       console.log(
-        `Ausgewählt: ${
-          result.selectedGeo
-            ? `${result.selectedGeo.lat}, ${result.selectedGeo.lng}`
-            : "KEINE GEO"
+        `${String(i + 1).padStart(2, "0")}. ${
+          event.ok ? "OK" : "FEHLER"
+        } | ${event.title} | ${event.date} | ${event.location} | ${
+          event.geo ? `${event.geo.lat}, ${event.geo.lng}` : "KEINE GEO"
         }`
       );
 
-      console.log("");
+      if (!event.ok) {
+        problems.push({
+          index: i + 1,
+          title: event.title,
+          date: event.date,
+          location: event.location,
+          mapLink: event.mapLink
+        });
+      }
     } catch (error) {
-      console.log(`FEHLER: ${error.message}`);
-      console.log("");
+      failed++;
+      problems.push({
+        index: i + 1,
+        error: error.message
+      });
+
+      console.log(
+        `${String(i + 1).padStart(2, "0")}. FEHLER | ${error.message}`
+      );
     }
   }
 
   await browser.close();
-  console.log("✅ Debug-Test V9 beendet.");
+
+  const seconds = ((Date.now() - startedAt) / 1000).toFixed(1);
+
+  console.log("");
+  console.log("========== ZUSAMMENFASSUNG ==========");
+  console.log(`Getestete Events: ${total}`);
+  console.log(`OK: ${ok}`);
+  console.log(`Fehler: ${failed}`);
+  console.log(`Mit Geo: ${withGeo}`);
+  console.log(`Dauer: ${seconds}s`);
+
+  if (problems.length > 0) {
+    console.log("");
+    console.log("Probleme:");
+    problems.forEach(problem => {
+      console.log(JSON.stringify(problem));
+    });
+  }
+
+  console.log("");
+  console.log("✅ Debug-Test V10 beendet.");
 }
 
 run();
