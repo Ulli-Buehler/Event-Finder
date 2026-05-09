@@ -1,5 +1,4 @@
 #name: Import Events
-
 run: node debug-detail-importer.js
 on:
   workflow_dispatch:
