@@ -4,11 +4,14 @@ import { chromium } from "playwright";
 const SOURCE_URL =
   "https://www.wasgehtapp.de/index.php?geo_id=15546&ort=Dettingen%20unter%20Teck&x=9.45&y=48.6167&einwohner=5603&region=01&select_ort=1&radius=40";
 
-const MAX_EVENTS = 20;
+const MAX_EVENTS = 50;
 const DETAIL_TIMEOUT_MS = 5000;
 
 const textLogs = [];
 const structuredLogs = [];
+let warningCount = 0;
+let previousGeo = null;
+let previousLocation = null;
 
 function log(line = "") {
   console.log(line);
@@ -67,9 +70,9 @@ async function waitForDetailChange(page, oldSnapshot) {
 
 async function readActiveDetail(page) {
   return await page.evaluate(() => {
-    const detailBlock = document.querySelector(".detail-block"); // Use specific detail block class
-    
-    if (!detailBlock) return { lines: [], mapLinks: [] }; // Guard clause if detail block is missing
+    const detailBlock = document.querySelector(".detail-block");
+
+    if (!detailBlock) return { lines: [], mapLinks: [] };
 
     const lines = (detailBlock.innerText || "")
       .split("\n")
@@ -77,7 +80,7 @@ async function readActiveDetail(page) {
       .filter(Boolean);
 
     const mapLinks = Array.from(
-      detailBlock.querySelectorAll("a.map_link") // Scoped to the detail block
+      detailBlock.querySelectorAll("a.map_link")
     )
       .map(a => a.href || "")
       .filter(Boolean);
@@ -107,7 +110,7 @@ async function readEvent(page, index) {
 
   const lastMapLink =
     active.mapLinks.length > 0
-      ? active.mapLinks[active.mapLinks.length - 1] // Use the last map link
+      ? active.mapLinks[active.mapLinks.length - 1]
       : "";
 
   const geo = extractGeoFromUrl(lastMapLink);
@@ -115,14 +118,16 @@ async function readEvent(page, index) {
   return {
     ok: Boolean(lastMapLink && geo),
     mapCandidates: active.mapLinks,
+    mapCandidateCount: active.mapLinks.length,
     geo,
-    mapLink: lastMapLink
+    mapLink: lastMapLink,
+    detailLines: active.lines,
   };
 }
 
 async function run() {
-  log("[34m[1mDebug Detail Importer V11 - Geo-Fix[0m");
-  log("Ziel: Geo-Daten aus letzten Map-Link prüfen.");
+  log("🔎 Debug Detail Importer V12 - Geo-Fix");
+  log("Ziel: Geo-Daten mit letztem Map-Link validieren.");
   log(`Max Events: ${MAX_EVENTS}`);
   log("");
 
@@ -157,44 +162,91 @@ async function run() {
   log(`Teste Events: ${total}`);
   log("");
 
+  let okCount = 0;
+  let errorCount = 0;
+
   for (let i = 0; i < total; i++) {
     try {
       log(`--- Event ${i + 1} ---`);
 
       const event = await readEvent(page, i);
 
-      log("Map-Kandidaten:");
-      event.mapCandidates.forEach((candidate, idx) => {
-        const geo = extractGeoFromUrl(candidate);
+      const location = event.detailLines.find(line => line.includes("Ort:")) || "Ort unbekannt";
+      const title = event.detailLines[0] || "Unbekannter Titel";
 
-        log(
-          `${idx + 1}. ${candidate} => ${
-            geo ? `${geo.lat}, ${geo.lng}` : "FEHLT"
-          }`
-        );
-      });
-
-      log(
-        `Gewählt: ${
-          event.geo ? `${event.geo.lat}, ${event.geo.lng}` : "KEINE GEO"
-        }`
-      );
-
-      log("");
+      // Detect warnings
+      let warning = "";
+      if (
+        previousGeo && 
+        previousLocation && 
+        previousGeo.lat === event.geo?.lat && 
+        previousGeo.lng === event.geo?.lng && 
+        previousLocation !== location
+      ) {
+        warning = "WARNUNG: Gleiche Geo bei anderem Ort";
+        warningCount++;
+        log(warning);
+      }
 
       structuredLogs.push({
         index: i + 1,
         ok: event.ok,
+        title,
+        date: event.detailLines.find(line => line.includes("Datum:")) || "Datum unbekannt",
+        location,
         geo: event.geo,
         mapLink: event.mapLink,
-        mapCandidates: event.mapCandidates
+        mapCandidateCount: event.mapCandidateCount,
+        warning,
       });
+
+      if (event.ok) {
+        okCount++;
+      } else {
+        errorCount++;
+      }
+
+      log(`OK: ${event.ok}`);
+      log(`Titel: ${title}`);
+      log(`Datum: ${event.detailLines.find(line => line.includes("Datum:")) || "Datum unbekannt"}`);
+      log(`Ort: ${location}`);
+      log(`Geo: ${event.geo ? `${event.geo.lat}, ${event.geo.lng}` : "Keine Geo"}`);
+      log(`Map-Link: ${event.mapLink}`);
+      log(`Map-Kandidaten: ${event.mapCandidateCount}`);
+      log("");
+
+      previousGeo = event.geo;
+      previousLocation = location;
+
     } catch (error) {
+      errorCount++;
+
+      structuredLogs.push({
+        index: i + 1,
+        ok: false,
+        error: error.message,
+      });
+
       log(`FEHLER: ${error.message}`);
+      log("");
     }
   }
 
+  const duration = Date.now() - startedAt;
+  const averageDuration = (duration / total / 1000).toFixed(2);
+
   await browser.close();
+
+  log("========== ZUSAMMENFASSUNG ==========");
+  log(`Events getestet: ${total}`);
+  log(`OK: ${okCount}`);
+  log(`Fehler: ${errorCount}`);
+  log(`Mit Geo: ${structuredLogs.filter(log => log.geo).length}`);
+  log(`Warnungen: ${warningCount}`);
+  log(`Dauer: ${(duration / 1000).toFixed(2)}s`);
+  log(`Durchschnitt pro Event: ${averageDuration}s`);
+  log("");
+  log("✔ Debug abgeschlossen.");
 
   fs.writeFileSync(
     "debug-output.txt",
@@ -207,8 +259,6 @@ async function run() {
     JSON.stringify(structuredLogs, null, 2),
     "utf8"
   );
-
-  log("\u001b[32m✔ Debug abgeschlossen.\u001b[0m");
 }
 
 run();
