@@ -4,8 +4,6 @@ const SOURCE_URL =
   "https://www.wasgehtapp.de/index.php?geo_id=15546&ort=Dettingen%20unter%20Teck&x=9.45&y=48.6167&einwohner=5603&region=01&select_ort=1&radius=40";
 
 const MAX_EVENTS = 60;
-const CLICK_WAIT_MS = 50;
-const PAUSE_MS = 0;
 
 function normalizeText(text) {
   return String(text || "")
@@ -15,7 +13,9 @@ function normalizeText(text) {
 }
 
 function extractDetailBlock(lines) {
-  const startIndex = lines.findIndex(line => line === "calendar");
+  const startIndex = lines.findIndex(
+    line => line === "calendar"
+  );
 
   if (startIndex === -1) return [];
 
@@ -28,13 +28,17 @@ function extractDetailBlock(lines) {
   return lines
     .slice(
       Math.max(0, startIndex - 1),
-      endIndex === -1 ? startIndex + 30 : endIndex
+      endIndex === -1
+        ? startIndex + 30
+        : endIndex
     )
     .filter(Boolean);
 }
 
 function extractFields(detailLines) {
-  const title = normalizeText(detailLines[0] || "");
+  const title = normalizeText(
+    detailLines[0] || ""
+  );
 
   const dateIndex = detailLines.findIndex(
     line => line === "calendar"
@@ -44,30 +48,24 @@ function extractFields(detailLines) {
     line => line === "pin"
   );
 
-  const tagsIndex = detailLines.findIndex(
-    line => line === "tags"
-  );
-
   const date =
     dateIndex >= 0
-      ? normalizeText(detailLines[dateIndex + 1] || "")
+      ? normalizeText(
+          detailLines[dateIndex + 1] || ""
+        )
       : "";
 
   const location =
     pinIndex >= 0
-      ? normalizeText(detailLines[pinIndex + 1] || "")
-      : "";
-
-  const tags =
-    tagsIndex >= 0
-      ? normalizeText(detailLines[tagsIndex + 1] || "")
+      ? normalizeText(
+          detailLines[pinIndex + 1] || ""
+        )
       : "";
 
   return {
     title,
     date,
-    location,
-    tags
+    location
   };
 }
 
@@ -77,23 +75,47 @@ function makeKey(event) {
     .trim();
 }
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+async function waitForDetailChange(
+  page,
+  oldSnapshot
+) {
+  await page.waitForFunction(
+    previous => {
+      const text = document.body.innerText || "";
+
+      return (
+        text.includes("calendar") &&
+        text !== previous
+      );
+    },
+    oldSnapshot,
+    {
+      timeout: 5000
+    }
+  );
 }
 
 async function readEvent(page, index) {
   const cards = page.locator(".termin.inline");
+
   const card = cards.nth(index);
 
   const listText = normalizeText(
     await card.innerText()
   );
 
+  const oldSnapshot = await page.evaluate(
+    () => document.body.innerText || ""
+  );
+
   await card.click({
     timeout: 10000
   });
 
-  await page.waitForTimeout(CLICK_WAIT_MS);
+  await waitForDetailChange(
+    page,
+    oldSnapshot
+  );
 
   const lines = await page.evaluate(() => {
     return (document.body.innerText || "")
@@ -102,9 +124,11 @@ async function readEvent(page, index) {
       .filter(Boolean);
   });
 
-  const detailLines = extractDetailBlock(lines);
+  const detailLines =
+    extractDetailBlock(lines);
 
-  const fields = extractFields(detailLines);
+  const fields =
+    extractFields(detailLines);
 
   return {
     ok: Boolean(
@@ -119,15 +143,18 @@ async function readEvent(page, index) {
 }
 
 async function run() {
-  console.log("🔎 Debug Detail Importer V7");
-  console.log("Ziel: schneller Import-Test");
-  console.log(`Max Events: ${MAX_EVENTS}`);
   console.log(
-    `Click-Wartezeit: ${CLICK_WAIT_MS} ms`
+    "🔎 Debug Detail Importer V8"
   );
+
   console.log(
-    `Pause zwischen Events: ${PAUSE_MS} ms`
+    "Ziel: Event-basiertes Warten statt Timeout"
   );
+
+  console.log(
+    `Max Events: ${MAX_EVENTS}`
+  );
+
   console.log("");
 
   const browser = await chromium.launch({
@@ -158,125 +185,116 @@ async function run() {
     .locator(".termin.inline")
     .count();
 
-  const total = Math.min(count, MAX_EVENTS);
-
-  console.log(
-    `Gefundene .termin.inline Container: ${count}`
+  const total = Math.min(
+    count,
+    MAX_EVENTS
   );
 
-  console.log(`Teste Container: ${total}`);
+  console.log(
+    `Gefundene Container: ${count}`
+  );
+
+  console.log(
+    `Teste Events: ${total}`
+  );
+
   console.log("");
 
   const seen = new Set();
-  const problems = [];
 
   let ok = 0;
   let duplicates = 0;
-  let unique = 0;
+  let errors = 0;
 
   const loopStartedAt = Date.now();
 
   for (let i = 0; i < total; i++) {
     try {
-      const event = await readEvent(page, i);
+      const event = await readEvent(
+        page,
+        i
+      );
 
       const key = makeKey(event);
 
-      const duplicate = seen.has(key);
-
-      if (event.ok) ok++;
-
-      if (duplicate) {
-        duplicates++;
-      }
-
-      if (!duplicate && event.ok) {
-        unique++;
-      }
+      const duplicate =
+        seen.has(key);
 
       seen.add(key);
 
+      if (duplicate) duplicates++;
+
+      if (event.ok) {
+        ok++;
+      } else {
+        errors++;
+      }
+
       console.log(
-        `${String(i + 1).padStart(2, "0")}. ${
+        `${String(i + 1).padStart(
+          2,
+          "0"
+        )}. ${
           event.ok ? "OK" : "FEHLER"
         }${duplicate ? " | DOPPELT" : ""} | ${
           event.title
-        } | ${event.date} | ${event.location}`
+        } | ${event.date} | ${
+          event.location
+        }`
       );
-
-      if (!event.ok) {
-        problems.push(
-          `#${i + 1}: unvollständige Daten`
-        );
-
-        console.log(
-          "   Liste:",
-          event.listText.slice(0, 180)
-        );
-
-        console.log(
-          "   Detail:",
-          event.detailLines
-            .slice(0, 8)
-            .join(" | ")
-        );
-      }
     } catch (error) {
-      problems.push(
-        `#${i + 1}: ${error.message}`
-      );
+      errors++;
 
       console.log(
-        `${String(i + 1).padStart(2, "0")}. FEHLER | ${
+        `${String(i + 1).padStart(
+          2,
+          "0"
+        )}. FEHLER | ${
           error.message
         }`
       );
     }
-
-    if (PAUSE_MS > 0) {
-      await sleep(PAUSE_MS);
-    }
   }
 
-  const loopSeconds = (
+  const seconds = (
     (Date.now() - loopStartedAt) /
     1000
   ).toFixed(1);
 
-  const totalSeconds = (
-    (Date.now() - totalStartedAt) /
-    1000
-  ).toFixed(1);
-
   console.log("");
+
   console.log(
     "========== ZUSAMMENFASSUNG =========="
   );
 
-  console.log(`Container getestet: ${total}`);
+  console.log(`Events: ${total}`);
+
   console.log(`OK: ${ok}`);
-  console.log(`Fehler: ${problems.length}`);
+
+  console.log(`Fehler: ${errors}`);
+
   console.log(`Dubletten: ${duplicates}`);
-  console.log(`Eindeutige Events: ${unique}`);
-  console.log(`Loop-Dauer: ${loopSeconds}s`);
 
   console.log(
-    `Gesamt-Dauer inkl. Laden: ${totalSeconds}s`
+    `Eindeutige Events: ${seen.size}`
   );
 
-  if (problems.length > 0) {
-    console.log("");
-    console.log("Probleme:");
+  console.log(`Loop-Dauer: ${seconds}s`);
 
-    problems.forEach(problem => {
-      console.log(`- ${problem}`);
-    });
-  }
+  console.log(
+    `Gesamt-Dauer: ${(
+      (Date.now() - totalStartedAt) /
+      1000
+    ).toFixed(1)}s`
+  );
 
   await browser.close();
 
   console.log("");
-  console.log("✅ Debug-Test V7 beendet.");
+
+  console.log(
+    "✅ Debug-Test V8 beendet."
+  );
 }
 
 run();
