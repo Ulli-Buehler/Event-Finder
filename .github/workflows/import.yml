@@ -35,8 +35,6 @@ jobs:
           path: |
             debug-output.txt
             debug-output.json
-            Cade/debug-output.txt
-            Cade/debug-output.json
 
       - name: Debug Dateien committen
         run: |
@@ -45,8 +43,6 @@ jobs:
 
           git add debug-output.txt
           git add debug-output.json
-          git add Cade/debug-output.txt
-          git add Cade/debug-output.json
 
           git commit -m "update debug output" || echo "Keine Änderungen"
 
