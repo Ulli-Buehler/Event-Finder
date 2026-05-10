@@ -178,6 +178,18 @@ async function readEvent(page, index) {
   };
 }
 
+function writeDebugFiles(output) {
+  const textOutput = textLog.join("\n");
+  const jsonOutput = JSON.stringify(output, null, 2);
+
+  fs.writeFileSync("./debug-output.txt", textOutput, "utf8");
+  fs.writeFileSync("./debug-output.json", jsonOutput, "utf8");
+
+  fs.mkdirSync("./Cade", { recursive: true });
+  fs.writeFileSync("./Cade/debug-output.txt", textOutput, "utf8");
+  fs.writeFileSync("./Cade/debug-output.json", jsonOutput, "utf8");
+}
+
 async function run() {
   const startedAt = Date.now();
 
@@ -419,26 +431,21 @@ async function run() {
     events: jsonEvents
   };
 
-  fs.writeFileSync("debug-output.txt", textLog.join("\n"), "utf8");
-  fs.writeFileSync("debug-output.json", JSON.stringify(output, null, 2), "utf8");
+  writeDebugFiles(output);
 
   await browser.close();
 }
 
 run().catch(error => {
   console.error(error);
-  fs.writeFileSync("debug-output.txt", String(error.stack || error), "utf8");
-  fs.writeFileSync(
-    "debug-output.json",
-    JSON.stringify(
-      {
-        fatal: true,
-        error: String(error.stack || error)
-      },
-      null,
-      2
-    ),
-    "utf8"
-  );
+
+  const output = {
+    fatal: true,
+    error: String(error.stack || error)
+  };
+
+  textLog.push(String(error.stack || error));
+  writeDebugFiles(output);
+
   process.exit(1);
 });
