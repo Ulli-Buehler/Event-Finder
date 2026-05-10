@@ -1,6 +1,6 @@
 Fast Importer Rohdaten - Wasgehtapp Übersicht V3
 Quelle: https://www.wasgehtapp.de/index.php?geo_id=15546&ort=Dettingen%20unter%20Teck&x=9.45&y=48.6167&einwohner=5603&region=01&select_ort=1&radius=40
-Events gefunden: 163
+Events gefunden: 158
 
 ========================
 
@@ -3096,11 +3096,8 @@ pin Dietrich Theater, Neu-Ulm : 17:10 Uhr
 EVENT 122
 ========================
 LINES:
-- Billie Eilish - Hit Me Hard and Soft: The Tour
+- Billie Eilish - Hit Me Hard And Soft: The Tour
 - Musik / Dokumentarfilm | 2026
-- pin Filmzentrum Bären, Böblingen : 17:00 Uhr
-- pin Staufen-Movieplex, Göppingen : 17:00 Uhr (3D)
-- pin Burgtheater, Hechingen : 17:00 Uhr
 - pin Traumpalast, Esslingen am Neckar : 17:15 Uhr
 - pin Traumpalast, Waiblingen : 17:15 Uhr
 - pin Traumpalast, Nürtingen : 17:15 Uhr
@@ -3118,10 +3115,7 @@ LINES:
 - pin Dietrich Theater, Neu-Ulm : 20:45 Uhr (3D)
 
 LINKS:
-- Billie Eilish - Hit Me Hard and Soft: The Tour => https://www.wasgehtapp.de/termin_kino.php?id=43888558
-- pin Filmzentrum Bären, Böblingen => https://www.wasgehtapp.de/location.php?id=12630
-- pin Staufen-Movieplex, Göppingen => https://www.wasgehtapp.de/location.php?id=37128
-- pin Burgtheater, Hechingen => https://www.wasgehtapp.de/location.php?id=38172
+- Billie Eilish - Hit Me Hard And Soft: The Tour => https://www.wasgehtapp.de/termin_kino.php?id=43888558
 - pin Traumpalast, Esslingen am Neckar => https://www.wasgehtapp.de/location.php?id=5828
 - pin Traumpalast, Waiblingen => https://www.wasgehtapp.de/location.php?id=5829
 - pin Traumpalast, Nürtingen => https://www.wasgehtapp.de/location.php?id=9519
@@ -3144,11 +3138,8 @@ IMAGES:
 - https://www.wasgehtapp.de/img/external.png
 
 RAW TEXT:
-Billie Eilish - Hit Me Hard and Soft: The Tour
+Billie Eilish - Hit Me Hard And Soft: The Tour
 Musik / Dokumentarfilm | 2026
-pin Filmzentrum Bären, Böblingen : 17:00 Uhr
-pin Staufen-Movieplex, Göppingen : 17:00 Uhr (3D)
-pin Burgtheater, Hechingen : 17:00 Uhr
 pin Traumpalast, Esslingen am Neckar : 17:15 Uhr
 pin Traumpalast, Waiblingen : 17:15 Uhr
 pin Traumpalast, Nürtingen : 17:15 Uhr
@@ -3345,8 +3336,6 @@ EVENT 129
 LINES:
 - Der Frosch und das Wasser
 - Komödie / Drama | 2026
-- pin Kino Atelier, Tübingen : 17:00 Uhr
-- pin Tanzatelier, Tübingen : 17:00 Uhr
 - pin Caligari, Ludwigsburg : 19:15 Uhr
 - pin Orfeo, Fellbach : 19:30 Uhr
 - pin Obscura, Ulm : 19:45 Uhr
@@ -3354,8 +3343,6 @@ LINES:
 
 LINKS:
 - Der Frosch und das Wasser => https://www.wasgehtapp.de/termin_kino.php?id=44389728
-- pin Kino Atelier, Tübingen => https://www.wasgehtapp.de/location.php?id=21280
-- pin Tanzatelier, Tübingen => https://www.wasgehtapp.de/location.php?id=46304
 - pin Caligari, Ludwigsburg => https://www.wasgehtapp.de/location.php?id=5834
 - pin Orfeo, Fellbach => https://www.wasgehtapp.de/location.php?id=5835
 - pin Obscura, Ulm => https://www.wasgehtapp.de/location.php?id=8102
@@ -3369,8 +3356,6 @@ IMAGES:
 RAW TEXT:
 Der Frosch und das Wasser
 Komödie / Drama | 2026
-pin Kino Atelier, Tübingen : 17:00 Uhr
-pin Tanzatelier, Tübingen : 17:00 Uhr
 pin Caligari, Ludwigsburg : 19:15 Uhr
 pin Orfeo, Fellbach : 19:30 Uhr
 pin Obscura, Ulm : 19:45 Uhr
@@ -3381,12 +3366,6 @@ EVENT 130
 LINES:
 - Der Super Mario Galaxy Film
 - Genre: Abenteuer, Action, Animation..
-- pin EM, Stuttgart : 17:00 Uhr
-- pin Traumpalast, Waiblingen : 17:00 Uhr   20:15 Uhr
-- pin Dietrich Theater, Neu-Ulm : 17:00 Uhr   19:30 Uhr
-- pin Traumpalast, Leonberg : 17:00 Uhr   18:00 Uhr   20:00 Uhr
-- pin Staufen-Movieplex, Göppingen : 17:00 Uhr   20:00 Uhr
-- pin Schwanen Kinos, Hechingen : 17:00 Uhr
 - pin Cinemaxx Stuttgart-Liederhalle, Stuttgart : 17:15 Uhr
 - pin Traumpalast, Esslingen am Neckar : 17:15 Uhr   20:00 Uhr
 - pin Cineplex Planie, Reutlingen : 17:15 Uhr
@@ -3395,16 +3374,14 @@ LINES:
 - pin Traumpalast, Schorndorf : 17:30 Uhr   20:15 Uhr
 - pin Traumpalast, Backnang : 17:30 Uhr
 - pin Traumpalast, Schwäbisch Gmünd : 17:45 Uhr   20:00 Uhr
+- pin Traumpalast, Leonberg : 18:00 Uhr   20:00 Uhr
+- pin Dietrich Theater, Neu-Ulm : 19:30 Uhr
+- pin Staufen-Movieplex, Göppingen : 20:00 Uhr
+- pin Traumpalast, Waiblingen : 20:15 Uhr
 - pin Traumpalast, Nürtingen : 20:30 Uhr
 
 LINKS:
 - Der Super Mario Galaxy Film => https://www.wasgehtapp.de/termin_kino.php?id=43073205
-- pin EM, Stuttgart => https://www.wasgehtapp.de/location.php?id=5821
-- pin Traumpalast, Waiblingen => https://www.wasgehtapp.de/location.php?id=5829
-- pin Dietrich Theater, Neu-Ulm => https://www.wasgehtapp.de/location.php?id=8081
-- pin Traumpalast, Leonberg => https://www.wasgehtapp.de/location.php?id=21368
-- pin Staufen-Movieplex, Göppingen => https://www.wasgehtapp.de/location.php?id=37128
-- pin Schwanen Kinos, Hechingen => https://www.wasgehtapp.de/location.php?id=38171
 - pin Cinemaxx Stuttgart-Liederhalle, Stuttgart => https://www.wasgehtapp.de/location.php?id=5823
 - pin Traumpalast, Esslingen am Neckar => https://www.wasgehtapp.de/location.php?id=5828
 - pin Cineplex Planie, Reutlingen => https://www.wasgehtapp.de/location.php?id=8092
@@ -3413,6 +3390,10 @@ LINKS:
 - pin Traumpalast, Schorndorf => https://www.wasgehtapp.de/location.php?id=25414
 - pin Traumpalast, Backnang => https://www.wasgehtapp.de/location.php?id=25415
 - pin Traumpalast, Schwäbisch Gmünd => https://www.wasgehtapp.de/location.php?id=48155
+- pin Traumpalast, Leonberg => https://www.wasgehtapp.de/location.php?id=21368
+- pin Dietrich Theater, Neu-Ulm => https://www.wasgehtapp.de/location.php?id=8081
+- pin Staufen-Movieplex, Göppingen => https://www.wasgehtapp.de/location.php?id=37128
+- pin Traumpalast, Waiblingen => https://www.wasgehtapp.de/location.php?id=5829
 - pin Traumpalast, Nürtingen => https://www.wasgehtapp.de/location.php?id=9519
 - (ohne Text) => http://www.themoviedb.org/movie/1226863?language=de
 
@@ -3423,12 +3404,6 @@ IMAGES:
 RAW TEXT:
 Der Super Mario Galaxy Film
 Genre: Abenteuer, Action, Animation..
-pin EM, Stuttgart : 17:00 Uhr
-pin Traumpalast, Waiblingen : 17:00 Uhr   20:15 Uhr
-pin Dietrich Theater, Neu-Ulm : 17:00 Uhr   19:30 Uhr
-pin Traumpalast, Leonberg : 17:00 Uhr   18:00 Uhr   20:00 Uhr
-pin Staufen-Movieplex, Göppingen : 17:00 Uhr   20:00 Uhr
-pin Schwanen Kinos, Hechingen : 17:00 Uhr
 pin Cinemaxx Stuttgart-Liederhalle, Stuttgart : 17:15 Uhr
 pin Traumpalast, Esslingen am Neckar : 17:15 Uhr   20:00 Uhr
 pin Cineplex Planie, Reutlingen : 17:15 Uhr
@@ -3437,6 +3412,10 @@ pin CinemaxX, Sindelfingen : 17:20 Uhr
 pin Traumpalast, Schorndorf : 17:30 Uhr   20:15 Uhr
 pin Traumpalast, Backnang : 17:30 Uhr
 pin Traumpalast, Schwäbisch Gmünd : 17:45 Uhr   20:00 Uhr
+pin Traumpalast, Leonberg : 18:00 Uhr   20:00 Uhr
+pin Dietrich Theater, Neu-Ulm : 19:30 Uhr
+pin Staufen-Movieplex, Göppingen : 20:00 Uhr
+pin Traumpalast, Waiblingen : 20:15 Uhr
 pin Traumpalast, Nürtingen : 20:30 Uhr
 
 EVENT 131
@@ -3444,11 +3423,6 @@ EVENT 131
 LINES:
 - Der Teufel trägt Prada 2
 - Drama / Komödie | 2026
-- pin Cinemaxx Stuttgart-Liederhalle, Stuttgart : 17:00 Uhr   20:00 Uhr   20:20 Uhr   23:00 Uhr
-- pin Filmzentrum Bären, Böblingen : 17:00 Uhr   19:00 Uhr   19:30 Uhr   20:00 Uhr
-- pin Xinedome, Ulm : 17:00 Uhr   17:45 Uhr   20:00 Uhr
-- pin Staufen-Movieplex, Göppingen : 17:00 Uhr   20:00 Uhr
-- pin Gloria Kino Center, Geislingen an der Steige : 17:00 Uhr   20:00 Uhr
 - pin CinemaxX, Sindelfingen : 17:10 Uhr   18:10 Uhr   20:00 Uhr
 - pin Kino Universum, Backnang : 17:10 Uhr   19:50 Uhr
 - pin Traumpalast, Waiblingen : 17:15 Uhr   20:30 Uhr
@@ -3463,21 +3437,21 @@ LINES:
 - pin Central-Center, Ehingen (Donau) : 17:30 Uhr   20:20 Uhr
 - pin Traumpalast, Schwäbisch Gmünd : 17:30 Uhr   20:15 Uhr
 - pin Cineplex Planie, Reutlingen : 17:45 Uhr   20:15 Uhr   20:30 Uhr
+- pin Xinedome, Ulm : 17:45 Uhr   20:00 Uhr
 - pin Delphi Arthaus Kino, Stuttgart : 18:00 Uhr   20:30 Uhr
 - pin Dietrich Theater, Neu-Ulm : 18:00 Uhr   19:45 Uhr
 - pin Gloria, Stuttgart : 18:15 Uhr   20:45 Uhr
 - pin Capitol-Filmtheater, Kornwestheim : 18:15 Uhr   19:35 Uhr
 - pin EM, Stuttgart : 19:00 Uhr
+- pin Filmzentrum Bären, Böblingen : 19:00 Uhr   19:30 Uhr   20:00 Uhr
 - pin Blaue Brücke, Tübingen : 19:30 Uhr
+- pin Cinemaxx Stuttgart-Liederhalle, Stuttgart : 20:00 Uhr   20:20 Uhr   23:00 Uhr
+- pin Staufen-Movieplex, Göppingen : 20:00 Uhr
+- pin Gloria Kino Center, Geislingen an der Steige : 20:00 Uhr
 - pin Autokino, Kornwestheim : 21:30 Uhr
 
 LINKS:
 - Der Teufel trägt Prada 2 => https://www.wasgehtapp.de/termin_kino.php?id=44973533
-- pin Cinemaxx Stuttgart-Liederhalle, Stuttgart => https://www.wasgehtapp.de/location.php?id=5823
-- pin Filmzentrum Bären, Böblingen => https://www.wasgehtapp.de/location.php?id=12630
-- pin Xinedome, Ulm => https://www.wasgehtapp.de/location.php?id=30081
-- pin Staufen-Movieplex, Göppingen => https://www.wasgehtapp.de/location.php?id=37128
-- pin Gloria Kino Center, Geislingen an der Steige => https://www.wasgehtapp.de/location.php?id=56652
 - pin CinemaxX, Sindelfingen => https://www.wasgehtapp.de/location.php?id=6802
 - pin Kino Universum, Backnang => https://www.wasgehtapp.de/location.php?id=73442
 - pin Traumpalast, Waiblingen => https://www.wasgehtapp.de/location.php?id=5829
@@ -3492,12 +3466,17 @@ LINKS:
 - pin Central-Center, Ehingen (Donau) => https://www.wasgehtapp.de/location.php?id=38702
 - pin Traumpalast, Schwäbisch Gmünd => https://www.wasgehtapp.de/location.php?id=48155
 - pin Cineplex Planie, Reutlingen => https://www.wasgehtapp.de/location.php?id=8092
+- pin Xinedome, Ulm => https://www.wasgehtapp.de/location.php?id=30081
 - pin Delphi Arthaus Kino, Stuttgart => https://www.wasgehtapp.de/location.php?id=7509
 - pin Dietrich Theater, Neu-Ulm => https://www.wasgehtapp.de/location.php?id=8081
 - pin Gloria, Stuttgart => https://www.wasgehtapp.de/location.php?id=5831
 - pin Capitol-Filmtheater, Kornwestheim => https://www.wasgehtapp.de/location.php?id=5832
 - pin EM, Stuttgart => https://www.wasgehtapp.de/location.php?id=5821
+- pin Filmzentrum Bären, Böblingen => https://www.wasgehtapp.de/location.php?id=12630
 - pin Blaue Brücke, Tübingen => https://www.wasgehtapp.de/location.php?id=81484
+- pin Cinemaxx Stuttgart-Liederhalle, Stuttgart => https://www.wasgehtapp.de/location.php?id=5823
+- pin Staufen-Movieplex, Göppingen => https://www.wasgehtapp.de/location.php?id=37128
+- pin Gloria Kino Center, Geislingen an der Steige => https://www.wasgehtapp.de/location.php?id=56652
 - pin Autokino, Kornwestheim => https://www.wasgehtapp.de/location.php?id=39264
 - (ohne Text) => http://www.themoviedb.org/movie/1314481?language=de
 
@@ -3508,11 +3487,6 @@ IMAGES:
 RAW TEXT:
 Der Teufel trägt Prada 2
 Drama / Komödie | 2026
-pin Cinemaxx Stuttgart-Liederhalle, Stuttgart : 17:00 Uhr   20:00 Uhr   20:20 Uhr   23:00 Uhr
-pin Filmzentrum Bären, Böblingen : 17:00 Uhr   19:00 Uhr   19:30 Uhr   20:00 Uhr
-pin Xinedome, Ulm : 17:00 Uhr   17:45 Uhr   20:00 Uhr
-pin Staufen-Movieplex, Göppingen : 17:00 Uhr   20:00 Uhr
-pin Gloria Kino Center, Geislingen an der Steige : 17:00 Uhr   20:00 Uhr
 pin CinemaxX, Sindelfingen : 17:10 Uhr   18:10 Uhr   20:00 Uhr
 pin Kino Universum, Backnang : 17:10 Uhr   19:50 Uhr
 pin Traumpalast, Waiblingen : 17:15 Uhr   20:30 Uhr
@@ -3527,12 +3501,17 @@ pin Traumpalast, Backnang : 17:30 Uhr   20:15 Uhr
 pin Central-Center, Ehingen (Donau) : 17:30 Uhr   20:20 Uhr
 pin Traumpalast, Schwäbisch Gmünd : 17:30 Uhr   20:15 Uhr
 pin Cineplex Planie, Reutlingen : 17:45 Uhr   20:15 Uhr   20:30 Uhr
+pin Xinedome, Ulm : 17:45 Uhr   20:00 Uhr
 pin Delphi Arthaus Kino, Stuttgart : 18:00 Uhr   20:30 Uhr
 pin Dietrich Theater, Neu-Ulm : 18:00 Uhr   19:45 Uhr
 pin Gloria, Stuttgart : 18:15 Uhr   20:45 Uhr
 pin Capitol-Filmtheater, Kornwestheim : 18:15 Uhr   19:35 Uhr
 pin EM, Stuttgart : 19:00 Uhr
+pin Filmzentrum Bären, Böblingen : 19:00 Uhr   19:30 Uhr   20:00 Uhr
 pin Blaue Brücke, Tübingen : 19:30 Uhr
+pin Cinemaxx Stuttgart-Liederhalle, Stuttgart : 20:00 Uhr   20:20 Uhr   23:00 Uhr
+pin Staufen-Movieplex, Göppingen : 20:00 Uhr
+pin Gloria Kino Center, Geislingen an der Steige : 20:00 Uhr
 pin Autokino, Kornwestheim : 21:30 Uhr
 
 EVENT 132
@@ -3610,27 +3589,6 @@ pin Burgtheater, Hechingen : 20:00 Uhr
 EVENT 135
 ========================
 LINES:
-- Ein Fast perfekter Antrag
-- Genre: Drama, Komödie, Romanze Regi..
-- pin Kinothek, Stuttgart : 17:00 Uhr
-
-LINKS:
-- Ein Fast perfekter Antrag => https://www.wasgehtapp.de/termin_kino.php?id=42471672
-- pin Kinothek, Stuttgart => https://www.wasgehtapp.de/location.php?id=5836
-- (ohne Text) => http://www.themoviedb.org/movie/1223747?language=de
-
-IMAGES:
-- https://www.wasgehtapp.de/images/termine/42471672_s.jpg
-- https://www.wasgehtapp.de/img/external.png
-
-RAW TEXT:
-Ein Fast perfekter Antrag
-Genre: Drama, Komödie, Romanze Regi..
-pin Kinothek, Stuttgart : 17:00 Uhr
-
-EVENT 136
-========================
-LINES:
 - Ein Kuchen für den Präsidenten
 - Drama | 2025
 - pin Traumpalast, Nürtingen : 17:45 Uhr
@@ -3649,7 +3607,7 @@ Ein Kuchen für den Präsidenten
 Drama | 2025
 pin Traumpalast, Nürtingen : 17:45 Uhr
 
-EVENT 137
+EVENT 136
 ========================
 LINES:
 - Für immer ein Teil von dir
@@ -3670,18 +3628,16 @@ Für immer ein Teil von dir
 Drama / Liebesfilm | 2026
 pin Burgtheater, Hechingen : 20:00 Uhr
 
-EVENT 138
+EVENT 137
 ========================
 LINES:
-- Für immer ein Teil von dir – Reminders Of Him
+- Für immer ein Teil von dir - Reminders of Him
 - Liebesfilm / Drama | 2026
-- pin Traumpalast, Leonberg : 17:00 Uhr
 - pin Dietrich Theater, Neu-Ulm : 17:20 Uhr
 - pin Gloria Kino Center, Geislingen an der Steige : 19:45 Uhr
 
 LINKS:
-- Für immer ein Teil von dir – Reminders Of Him => https://www.wasgehtapp.de/termin_kino.php?id=45025263
-- pin Traumpalast, Leonberg => https://www.wasgehtapp.de/location.php?id=21368
+- Für immer ein Teil von dir - Reminders of Him => https://www.wasgehtapp.de/termin_kino.php?id=45025263
 - pin Dietrich Theater, Neu-Ulm => https://www.wasgehtapp.de/location.php?id=8081
 - pin Gloria Kino Center, Geislingen an der Steige => https://www.wasgehtapp.de/location.php?id=56652
 - (ohne Text) => http://www.themoviedb.org/movie/1367642?language=de
@@ -3691,20 +3647,16 @@ IMAGES:
 - https://www.wasgehtapp.de/img/external.png
 
 RAW TEXT:
-Für immer ein Teil von dir – Reminders Of Him
+Für immer ein Teil von dir - Reminders of Him
 Liebesfilm / Drama | 2026
-pin Traumpalast, Leonberg : 17:00 Uhr
 pin Dietrich Theater, Neu-Ulm : 17:20 Uhr
 pin Gloria Kino Center, Geislingen an der Steige : 19:45 Uhr
 
-EVENT 139
+EVENT 138
 ========================
 LINES:
 - Glennkill: Ein Schafskrimi
 - Mystery / Krimi / Komödie / Familie..
-- pin CinemaxX, Sindelfingen : 17:00 Uhr
-- pin Central-Theater, Ludwigsburg : 17:00 Uhr
-- pin Staufen-Movieplex, Göppingen : 17:00 Uhr
 - pin Cineplex Planie, Reutlingen : 17:15 Uhr
 - pin Traumpalast, Esslingen am Neckar : 17:30 Uhr
 - pin Traumpalast, Waiblingen : 17:30 Uhr
@@ -3720,9 +3672,6 @@ LINES:
 
 LINKS:
 - Glennkill: Ein Schafskrimi => https://www.wasgehtapp.de/termin_kino.php?id=43888565
-- pin CinemaxX, Sindelfingen => https://www.wasgehtapp.de/location.php?id=6802
-- pin Central-Theater, Ludwigsburg => https://www.wasgehtapp.de/location.php?id=6903
-- pin Staufen-Movieplex, Göppingen => https://www.wasgehtapp.de/location.php?id=37128
 - pin Cineplex Planie, Reutlingen => https://www.wasgehtapp.de/location.php?id=8092
 - pin Traumpalast, Esslingen am Neckar => https://www.wasgehtapp.de/location.php?id=5828
 - pin Traumpalast, Waiblingen => https://www.wasgehtapp.de/location.php?id=5829
@@ -3744,9 +3693,6 @@ IMAGES:
 RAW TEXT:
 Glennkill: Ein Schafskrimi
 Mystery / Krimi / Komödie / Familie..
-pin CinemaxX, Sindelfingen : 17:00 Uhr
-pin Central-Theater, Ludwigsburg : 17:00 Uhr
-pin Staufen-Movieplex, Göppingen : 17:00 Uhr
 pin Cineplex Planie, Reutlingen : 17:15 Uhr
 pin Traumpalast, Esslingen am Neckar : 17:30 Uhr
 pin Traumpalast, Waiblingen : 17:30 Uhr
@@ -3760,7 +3706,7 @@ pin EM, Stuttgart : 18:00 Uhr
 pin METROPOL – Traumpalast, Stuttgart : 18:00 Uhr
 pin Atelier am Bollwerk, Stuttgart : 20:30 Uhr
 
-EVENT 140
+EVENT 139
 ========================
 LINES:
 - Holy Meat
@@ -3781,44 +3727,17 @@ Holy Meat
 Absurde Filmkomödie über Einsamkeit..
 pin Kinothek, Stuttgart : 19:30 Uhr
 
-EVENT 141
-========================
-LINES:
-- Hoppers
-- Genre: Abenteuer, Animation, Komödi..
-- pin Schwanen Kinos, Hechingen : 17:00 Uhr
-
-LINKS:
-- Hoppers => https://www.wasgehtapp.de/termin_kino.php?id=41722593
-- pin Schwanen Kinos, Hechingen => https://www.wasgehtapp.de/location.php?id=38171
-- (ohne Text) => http://www.themoviedb.org/movie/1327819?language=de
-
-IMAGES:
-- https://www.wasgehtapp.de/images/termine/41722593_s.jpg
-- https://www.wasgehtapp.de/img/external.png
-
-RAW TEXT:
-Hoppers
-Genre: Abenteuer, Animation, Komödi..
-pin Schwanen Kinos, Hechingen : 17:00 Uhr
-
-EVENT 142
+EVENT 140
 ========================
 LINES:
 - Horst Schlämmer sucht das Glück
 - Genre: Komödie Regie: Sven Unterwal..
-- pin Orfeo, Fellbach : 17:00 Uhr
-- pin Traumpalast, Schorndorf : 17:00 Uhr
-- pin Burgtheater, Hechingen : 17:00 Uhr
 - pin Traumpalast, Leonberg : 18:00 Uhr
 - pin Löwenlichtspiele, Rudersberg : 18:00 Uhr
 - pin Central-Theater, Ludwigsburg : 18:45 Uhr
 
 LINKS:
 - Horst Schlämmer sucht das Glück => https://www.wasgehtapp.de/termin_kino.php?id=43743016
-- pin Orfeo, Fellbach => https://www.wasgehtapp.de/location.php?id=5835
-- pin Traumpalast, Schorndorf => https://www.wasgehtapp.de/location.php?id=25414
-- pin Burgtheater, Hechingen => https://www.wasgehtapp.de/location.php?id=38172
 - pin Traumpalast, Leonberg => https://www.wasgehtapp.de/location.php?id=21368
 - pin Löwenlichtspiele, Rudersberg => https://www.wasgehtapp.de/location.php?id=25417
 - pin Central-Theater, Ludwigsburg => https://www.wasgehtapp.de/location.php?id=6903
@@ -3831,24 +3750,19 @@ IMAGES:
 RAW TEXT:
 Horst Schlämmer sucht das Glück
 Genre: Komödie Regie: Sven Unterwal..
-pin Orfeo, Fellbach : 17:00 Uhr
-pin Traumpalast, Schorndorf : 17:00 Uhr
-pin Burgtheater, Hechingen : 17:00 Uhr
 pin Traumpalast, Leonberg : 18:00 Uhr
 pin Löwenlichtspiele, Rudersberg : 18:00 Uhr
 pin Central-Theater, Ludwigsburg : 18:45 Uhr
 
-EVENT 143
+EVENT 141
 ========================
 LINES:
 - How To Make A Killing - Todsicheres Erbe
 - Komödie / Thriller | 2025
-- pin Traumpalast, Schwäbisch Gmünd : 17:00 Uhr
 - pin Traumpalast, Leonberg : 20:30 Uhr
 
 LINKS:
 - How To Make A Killing - Todsicheres Erbe => https://www.wasgehtapp.de/termin_kino.php?id=40923051
-- pin Traumpalast, Schwäbisch Gmünd => https://www.wasgehtapp.de/location.php?id=48155
 - pin Traumpalast, Leonberg => https://www.wasgehtapp.de/location.php?id=21368
 - (ohne Text) => http://www.themoviedb.org/movie/1210732?language=de
 
@@ -3859,10 +3773,9 @@ IMAGES:
 RAW TEXT:
 How To Make A Killing - Todsicheres Erbe
 Komödie / Thriller | 2025
-pin Traumpalast, Schwäbisch Gmünd : 17:00 Uhr
 pin Traumpalast, Leonberg : 20:30 Uhr
 
-EVENT 144
+EVENT 142
 ========================
 LINES:
 - Lee Cronin's The Mummy
@@ -3913,39 +3826,16 @@ pin Traumpalast, Backnang : 20:30 Uhr
 pin Traumpalast, Esslingen am Neckar : 20:45 Uhr
 pin Cinemaxx Stuttgart-Liederhalle, Stuttgart : 22:40 Uhr
 
-EVENT 145
-========================
-LINES:
-- Mamma Mia!
-- Komödie / Liebesfilm | 2008
-- pin Cineplex Planie, Reutlingen : 17:00 Uhr
-
-LINKS:
-- Mamma Mia! => https://www.wasgehtapp.de/termin_kino.php?id=36382700
-- pin Cineplex Planie, Reutlingen => https://www.wasgehtapp.de/location.php?id=8092
-- (ohne Text) => http://www.themoviedb.org/movie/11631?language=de
-
-IMAGES:
-- https://www.wasgehtapp.de/images/termine/36382700_s.jpg
-- https://www.wasgehtapp.de/img/external.png
-
-RAW TEXT:
-Mamma Mia!
-Komödie / Liebesfilm | 2008
-pin Cineplex Planie, Reutlingen : 17:00 Uhr
-
-EVENT 146
+EVENT 143
 ========================
 LINES:
 - Michael
 - Musik / Drama / Historie | 2025
-- pin Capitol-Filmtheater, Kornwestheim : 17:00 Uhr   17:20 Uhr   20:45 Uhr
-- pin Traumpalast, Leonberg : 17:00 Uhr   19:30 Uhr   20:00 Uhr
-- pin Blaue Brücke, Tübingen : 17:00 Uhr   19:45 Uhr
 - pin CinemaxX, Sindelfingen : 17:10 Uhr   19:15 Uhr   20:15 Uhr
 - pin Traumpalast, Esslingen am Neckar : 17:15 Uhr   20:15 Uhr
 - pin Burgtheater, Hechingen : 17:15 Uhr   20:00 Uhr
 - pin Traumpalast, Schwäbisch Gmünd : 17:15 Uhr   20:00 Uhr
+- pin Capitol-Filmtheater, Kornwestheim : 17:20 Uhr   20:45 Uhr
 - pin Dietrich Theater, Neu-Ulm : 17:25 Uhr   19:25 Uhr   20:15 Uhr
 - pin Traumpalast, Backnang : 17:30 Uhr   20:00 Uhr
 - pin Central-Center, Ehingen (Donau) : 17:30 Uhr   20:20 Uhr
@@ -3959,8 +3849,10 @@ LINES:
 - pin Cinemaxx Stuttgart-Liederhalle, Stuttgart : 19:20 Uhr   19:45 Uhr   23:10 Uhr
 - pin Corso Cinema International, Stuttgart : 19:30 Uhr
 - pin Cineplex Planie, Reutlingen : 19:30 Uhr   19:45 Uhr
+- pin Traumpalast, Leonberg : 19:30 Uhr   20:00 Uhr
 - pin Traumpalast, Schorndorf : 19:45 Uhr
 - pin Staufen-Movieplex, Göppingen : 19:45 Uhr
+- pin Blaue Brücke, Tübingen : 19:45 Uhr
 - pin Central-Theater, Ludwigsburg : 20:00 Uhr
 - pin Atelier am Bollwerk, Stuttgart : 20:15 Uhr
 - pin METROPOL – Traumpalast, Stuttgart : 20:30 Uhr
@@ -3968,13 +3860,11 @@ LINES:
 
 LINKS:
 - Michael => https://www.wasgehtapp.de/termin_kino.php?id=39559904
-- pin Capitol-Filmtheater, Kornwestheim => https://www.wasgehtapp.de/location.php?id=5832
-- pin Traumpalast, Leonberg => https://www.wasgehtapp.de/location.php?id=21368
-- pin Blaue Brücke, Tübingen => https://www.wasgehtapp.de/location.php?id=81484
 - pin CinemaxX, Sindelfingen => https://www.wasgehtapp.de/location.php?id=6802
 - pin Traumpalast, Esslingen am Neckar => https://www.wasgehtapp.de/location.php?id=5828
 - pin Burgtheater, Hechingen => https://www.wasgehtapp.de/location.php?id=38172
 - pin Traumpalast, Schwäbisch Gmünd => https://www.wasgehtapp.de/location.php?id=48155
+- pin Capitol-Filmtheater, Kornwestheim => https://www.wasgehtapp.de/location.php?id=5832
 - pin Dietrich Theater, Neu-Ulm => https://www.wasgehtapp.de/location.php?id=8081
 - pin Traumpalast, Backnang => https://www.wasgehtapp.de/location.php?id=25415
 - pin Central-Center, Ehingen (Donau) => https://www.wasgehtapp.de/location.php?id=38702
@@ -3988,8 +3878,10 @@ LINKS:
 - pin Cinemaxx Stuttgart-Liederhalle, Stuttgart => https://www.wasgehtapp.de/location.php?id=5823
 - pin Corso Cinema International, Stuttgart => https://www.wasgehtapp.de/location.php?id=5833
 - pin Cineplex Planie, Reutlingen => https://www.wasgehtapp.de/location.php?id=8092
+- pin Traumpalast, Leonberg => https://www.wasgehtapp.de/location.php?id=21368
 - pin Traumpalast, Schorndorf => https://www.wasgehtapp.de/location.php?id=25414
 - pin Staufen-Movieplex, Göppingen => https://www.wasgehtapp.de/location.php?id=37128
+- pin Blaue Brücke, Tübingen => https://www.wasgehtapp.de/location.php?id=81484
 - pin Central-Theater, Ludwigsburg => https://www.wasgehtapp.de/location.php?id=6903
 - pin Atelier am Bollwerk, Stuttgart => https://www.wasgehtapp.de/location.php?id=5827
 - pin METROPOL – Traumpalast, Stuttgart => https://www.wasgehtapp.de/location.php?id=80919
@@ -4003,13 +3895,11 @@ IMAGES:
 RAW TEXT:
 Michael
 Musik / Drama / Historie | 2025
-pin Capitol-Filmtheater, Kornwestheim : 17:00 Uhr   17:20 Uhr   20:45 Uhr
-pin Traumpalast, Leonberg : 17:00 Uhr   19:30 Uhr   20:00 Uhr
-pin Blaue Brücke, Tübingen : 17:00 Uhr   19:45 Uhr
 pin CinemaxX, Sindelfingen : 17:10 Uhr   19:15 Uhr   20:15 Uhr
 pin Traumpalast, Esslingen am Neckar : 17:15 Uhr   20:15 Uhr
 pin Burgtheater, Hechingen : 17:15 Uhr   20:00 Uhr
 pin Traumpalast, Schwäbisch Gmünd : 17:15 Uhr   20:00 Uhr
+pin Capitol-Filmtheater, Kornwestheim : 17:20 Uhr   20:45 Uhr
 pin Dietrich Theater, Neu-Ulm : 17:25 Uhr   19:25 Uhr   20:15 Uhr
 pin Traumpalast, Backnang : 17:30 Uhr   20:00 Uhr
 pin Central-Center, Ehingen (Donau) : 17:30 Uhr   20:20 Uhr
@@ -4023,19 +3913,20 @@ pin Xinedome, Ulm : 19:00 Uhr   19:45 Uhr
 pin Cinemaxx Stuttgart-Liederhalle, Stuttgart : 19:20 Uhr   19:45 Uhr   23:10 Uhr
 pin Corso Cinema International, Stuttgart : 19:30 Uhr
 pin Cineplex Planie, Reutlingen : 19:30 Uhr   19:45 Uhr
+pin Traumpalast, Leonberg : 19:30 Uhr   20:00 Uhr
 pin Traumpalast, Schorndorf : 19:45 Uhr
 pin Staufen-Movieplex, Göppingen : 19:45 Uhr
+pin Blaue Brücke, Tübingen : 19:45 Uhr
 pin Central-Theater, Ludwigsburg : 20:00 Uhr
 pin Atelier am Bollwerk, Stuttgart : 20:15 Uhr
 pin METROPOL – Traumpalast, Stuttgart : 20:30 Uhr
 pin Autokino, Kornwestheim : 21:30 Uhr
 
-EVENT 147
+EVENT 144
 ========================
 LINES:
 - Mortal Kombat 2
 - Action / Fantasy / Abenteuer | 2026
-- pin Filmzentrum Bären, Böblingen : 17:00 Uhr   20:00 Uhr
 - pin Burgtheater, Hechingen : 17:15 Uhr   20:00 Uhr
 - pin METROPOL – Traumpalast, Stuttgart : 17:15 Uhr   20:00 Uhr
 - pin Traumpalast, Leonberg : 17:30 Uhr   20:00 Uhr
@@ -4046,12 +3937,12 @@ LINES:
 - pin Traumpalast, Esslingen am Neckar : 18:00 Uhr   20:30 Uhr
 - pin Traumpalast, Schorndorf : 18:00 Uhr   20:30 Uhr
 - pin EM, Stuttgart : 19:00 Uhr   21:20 Uhr
+- pin Filmzentrum Bären, Böblingen : 20:00 Uhr
 - pin Traumpalast, Backnang : 20:15 Uhr
 - pin Central-Theater, Ludwigsburg : 20:30 Uhr
 
 LINKS:
 - Mortal Kombat 2 => https://www.wasgehtapp.de/termin_kino.php?id=41532071
-- pin Filmzentrum Bären, Böblingen => https://www.wasgehtapp.de/location.php?id=12630
 - pin Burgtheater, Hechingen => https://www.wasgehtapp.de/location.php?id=38172
 - pin METROPOL – Traumpalast, Stuttgart => https://www.wasgehtapp.de/location.php?id=80919
 - pin Traumpalast, Leonberg => https://www.wasgehtapp.de/location.php?id=21368
@@ -4062,6 +3953,7 @@ LINKS:
 - pin Traumpalast, Esslingen am Neckar => https://www.wasgehtapp.de/location.php?id=5828
 - pin Traumpalast, Schorndorf => https://www.wasgehtapp.de/location.php?id=25414
 - pin EM, Stuttgart => https://www.wasgehtapp.de/location.php?id=5821
+- pin Filmzentrum Bären, Böblingen => https://www.wasgehtapp.de/location.php?id=12630
 - pin Traumpalast, Backnang => https://www.wasgehtapp.de/location.php?id=25415
 - pin Central-Theater, Ludwigsburg => https://www.wasgehtapp.de/location.php?id=6903
 - (ohne Text) => http://www.themoviedb.org/movie/931285?language=de
@@ -4073,7 +3965,6 @@ IMAGES:
 RAW TEXT:
 Mortal Kombat 2
 Action / Fantasy / Abenteuer | 2026
-pin Filmzentrum Bären, Böblingen : 17:00 Uhr   20:00 Uhr
 pin Burgtheater, Hechingen : 17:15 Uhr   20:00 Uhr
 pin METROPOL – Traumpalast, Stuttgart : 17:15 Uhr   20:00 Uhr
 pin Traumpalast, Leonberg : 17:30 Uhr   20:00 Uhr
@@ -4084,26 +3975,27 @@ pin Traumpalast, Nürtingen : 17:45 Uhr   20:30 Uhr
 pin Traumpalast, Esslingen am Neckar : 18:00 Uhr   20:30 Uhr
 pin Traumpalast, Schorndorf : 18:00 Uhr   20:30 Uhr
 pin EM, Stuttgart : 19:00 Uhr   21:20 Uhr
+pin Filmzentrum Bären, Böblingen : 20:00 Uhr
 pin Traumpalast, Backnang : 20:15 Uhr
 pin Central-Theater, Ludwigsburg : 20:30 Uhr
 
-EVENT 148
+EVENT 145
 ========================
 LINES:
 - Mortal Kombat II
 - Action / Fantasy / Abenteuer | 2026
-- pin Dietrich Theater, Neu-Ulm : 17:00 Uhr   19:45 Uhr
 - pin CinemaxX, Sindelfingen : 17:20 Uhr   19:50 Uhr
 - pin Cinemaxx Stuttgart-Liederhalle, Stuttgart : 17:30 Uhr   19:15 Uhr   22:15 Uhr
 - pin Cineplex Planie, Reutlingen : 17:30 Uhr   20:45 Uhr
+- pin Dietrich Theater, Neu-Ulm : 19:45 Uhr
 - pin Staufen-Movieplex, Göppingen : 20:00 Uhr
 
 LINKS:
 - Mortal Kombat II => https://www.wasgehtapp.de/termin_kino.php?id=44784024
-- pin Dietrich Theater, Neu-Ulm => https://www.wasgehtapp.de/location.php?id=8081
 - pin CinemaxX, Sindelfingen => https://www.wasgehtapp.de/location.php?id=6802
 - pin Cinemaxx Stuttgart-Liederhalle, Stuttgart => https://www.wasgehtapp.de/location.php?id=5823
 - pin Cineplex Planie, Reutlingen => https://www.wasgehtapp.de/location.php?id=8092
+- pin Dietrich Theater, Neu-Ulm => https://www.wasgehtapp.de/location.php?id=8081
 - pin Staufen-Movieplex, Göppingen => https://www.wasgehtapp.de/location.php?id=37128
 - (ohne Text) => http://www.themoviedb.org/movie/931285?language=de
 
@@ -4114,18 +4006,17 @@ IMAGES:
 RAW TEXT:
 Mortal Kombat II
 Action / Fantasy / Abenteuer | 2026
-pin Dietrich Theater, Neu-Ulm : 17:00 Uhr   19:45 Uhr
 pin CinemaxX, Sindelfingen : 17:20 Uhr   19:50 Uhr
 pin Cinemaxx Stuttgart-Liederhalle, Stuttgart : 17:30 Uhr   19:15 Uhr   22:15 Uhr
 pin Cineplex Planie, Reutlingen : 17:30 Uhr   20:45 Uhr
+pin Dietrich Theater, Neu-Ulm : 19:45 Uhr
 pin Staufen-Movieplex, Göppingen : 20:00 Uhr
 
-EVENT 149
+EVENT 146
 ========================
 LINES:
 - Nachbeben
 - Drama | 2015
-- pin Traumpalast, Esslingen am Neckar : 17:00 Uhr
 - pin Kino Museum, Tübingen : 17:15 Uhr   19:15 Uhr
 - pin Traumpalast, Nürtingen : 17:15 Uhr
 - pin Traumpalast, Schwäbisch Gmünd : 17:15 Uhr
@@ -4135,7 +4026,6 @@ LINES:
 
 LINKS:
 - Nachbeben => https://www.wasgehtapp.de/termin_kino.php?id=44498298
-- pin Traumpalast, Esslingen am Neckar => https://www.wasgehtapp.de/location.php?id=5828
 - pin Kino Museum, Tübingen => https://www.wasgehtapp.de/location.php?id=4414
 - pin Traumpalast, Nürtingen => https://www.wasgehtapp.de/location.php?id=9519
 - pin Traumpalast, Schwäbisch Gmünd => https://www.wasgehtapp.de/location.php?id=48155
@@ -4151,7 +4041,6 @@ IMAGES:
 RAW TEXT:
 Nachbeben
 Drama | 2015
-pin Traumpalast, Esslingen am Neckar : 17:00 Uhr
 pin Kino Museum, Tübingen : 17:15 Uhr   19:15 Uhr
 pin Traumpalast, Nürtingen : 17:15 Uhr
 pin Traumpalast, Schwäbisch Gmünd : 17:15 Uhr
@@ -4159,15 +4048,11 @@ pin Traumpalast, Waiblingen : 17:45 Uhr
 pin Traumpalast, Leonberg : 17:45 Uhr
 pin Traumpalast, Schorndorf : 18:00 Uhr
 
-EVENT 150
+EVENT 147
 ========================
 LINES:
 - Nürnberg
 - Historie / Drama | 2025
-- pin Atelier am Bollwerk, Stuttgart : 17:00 Uhr   20:00 Uhr
-- pin Traumpalast, Esslingen am Neckar : 17:00 Uhr   20:00 Uhr
-- pin Traumpalast, Waiblingen : 17:00 Uhr   20:15 Uhr
-- pin Traumpalast, Leonberg : 17:00 Uhr   20:00 Uhr
 - pin Traumpalast, Nürtingen : 17:15 Uhr   20:30 Uhr
 - pin Traumpalast, Schwäbisch Gmünd : 17:15 Uhr   19:30 Uhr
 - pin Staufen-Movieplex, Göppingen : 19:15 Uhr
@@ -4179,18 +4064,18 @@ LINES:
 - pin Traumpalast, Schorndorf : 19:45 Uhr
 - pin Schwanen Kinos, Hechingen : 19:45 Uhr
 - pin Kamino, Reutlingen : 19:45 Uhr
+- pin Atelier am Bollwerk, Stuttgart : 20:00 Uhr
+- pin Traumpalast, Esslingen am Neckar : 20:00 Uhr
 - pin CinemaxX, Sindelfingen : 20:00 Uhr
 - pin Cineplex Planie, Reutlingen : 20:00 Uhr
+- pin Traumpalast, Leonberg : 20:00 Uhr
 - pin Brazilkino, Schwäbisch Gmünd : 20:00 Uhr
 - pin EM, Stuttgart : 20:15 Uhr
+- pin Traumpalast, Waiblingen : 20:15 Uhr
 - pin Traumpalast, Backnang : 20:15 Uhr
 
 LINKS:
 - Nürnberg => https://www.wasgehtapp.de/termin_kino.php?id=44077680
-- pin Atelier am Bollwerk, Stuttgart => https://www.wasgehtapp.de/location.php?id=5827
-- pin Traumpalast, Esslingen am Neckar => https://www.wasgehtapp.de/location.php?id=5828
-- pin Traumpalast, Waiblingen => https://www.wasgehtapp.de/location.php?id=5829
-- pin Traumpalast, Leonberg => https://www.wasgehtapp.de/location.php?id=21368
 - pin Traumpalast, Nürtingen => https://www.wasgehtapp.de/location.php?id=9519
 - pin Traumpalast, Schwäbisch Gmünd => https://www.wasgehtapp.de/location.php?id=48155
 - pin Staufen-Movieplex, Göppingen => https://www.wasgehtapp.de/location.php?id=37128
@@ -4202,10 +4087,14 @@ LINKS:
 - pin Traumpalast, Schorndorf => https://www.wasgehtapp.de/location.php?id=25414
 - pin Schwanen Kinos, Hechingen => https://www.wasgehtapp.de/location.php?id=38171
 - pin Kamino, Reutlingen => https://www.wasgehtapp.de/location.php?id=39005
+- pin Atelier am Bollwerk, Stuttgart => https://www.wasgehtapp.de/location.php?id=5827
+- pin Traumpalast, Esslingen am Neckar => https://www.wasgehtapp.de/location.php?id=5828
 - pin CinemaxX, Sindelfingen => https://www.wasgehtapp.de/location.php?id=6802
 - pin Cineplex Planie, Reutlingen => https://www.wasgehtapp.de/location.php?id=8092
+- pin Traumpalast, Leonberg => https://www.wasgehtapp.de/location.php?id=21368
 - pin Brazilkino, Schwäbisch Gmünd => https://www.wasgehtapp.de/location.php?id=48156
 - pin EM, Stuttgart => https://www.wasgehtapp.de/location.php?id=5821
+- pin Traumpalast, Waiblingen => https://www.wasgehtapp.de/location.php?id=5829
 - pin Traumpalast, Backnang => https://www.wasgehtapp.de/location.php?id=25415
 - (ohne Text) => http://www.themoviedb.org/movie/1214931?language=de
 
@@ -4216,10 +4105,6 @@ IMAGES:
 RAW TEXT:
 Nürnberg
 Historie / Drama | 2025
-pin Atelier am Bollwerk, Stuttgart : 17:00 Uhr   20:00 Uhr
-pin Traumpalast, Esslingen am Neckar : 17:00 Uhr   20:00 Uhr
-pin Traumpalast, Waiblingen : 17:00 Uhr   20:15 Uhr
-pin Traumpalast, Leonberg : 17:00 Uhr   20:00 Uhr
 pin Traumpalast, Nürtingen : 17:15 Uhr   20:30 Uhr
 pin Traumpalast, Schwäbisch Gmünd : 17:15 Uhr   19:30 Uhr
 pin Staufen-Movieplex, Göppingen : 19:15 Uhr
@@ -4231,34 +4116,17 @@ pin Filmzentrum Bären, Böblingen : 19:45 Uhr
 pin Traumpalast, Schorndorf : 19:45 Uhr
 pin Schwanen Kinos, Hechingen : 19:45 Uhr
 pin Kamino, Reutlingen : 19:45 Uhr
+pin Atelier am Bollwerk, Stuttgart : 20:00 Uhr
+pin Traumpalast, Esslingen am Neckar : 20:00 Uhr
 pin CinemaxX, Sindelfingen : 20:00 Uhr
 pin Cineplex Planie, Reutlingen : 20:00 Uhr
+pin Traumpalast, Leonberg : 20:00 Uhr
 pin Brazilkino, Schwäbisch Gmünd : 20:00 Uhr
 pin EM, Stuttgart : 20:15 Uhr
+pin Traumpalast, Waiblingen : 20:15 Uhr
 pin Traumpalast, Backnang : 20:15 Uhr
 
-EVENT 151
-========================
-LINES:
-- On the wave
-- Dokumentarfilm | 2026
-- pin Löwenlichtspiele, Rudersberg : 17:00 Uhr
-
-LINKS:
-- On the wave => https://www.wasgehtapp.de/termin_kino.php?id=43932725
-- pin Löwenlichtspiele, Rudersberg => https://www.wasgehtapp.de/location.php?id=25417
-- (ohne Text) => http://www.themoviedb.org/movie/1574297?language=de
-
-IMAGES:
-- https://www.wasgehtapp.de/images/termine/43932725_s.jpg
-- https://www.wasgehtapp.de/img/external.png
-
-RAW TEXT:
-On the wave
-Dokumentarfilm | 2026
-pin Löwenlichtspiele, Rudersberg : 17:00 Uhr
-
-EVENT 152
+EVENT 148
 ========================
 LINES:
 - Patriot
@@ -4274,12 +4142,11 @@ RAW TEXT:
 Patriot
 pin Traumpalast, Schwäbisch Gmünd : 18:00 Uhr
 
-EVENT 153
+EVENT 149
 ========================
 LINES:
 - Rose
 - Drama | 2026
-- pin Caligari, Ludwigsburg : 17:00 Uhr
 - pin Mephisto, Ulm : 17:20 Uhr   19:45 Uhr
 - pin Kamino, Reutlingen : 17:45 Uhr
 - pin Kino Museum, Tübingen : 19:45 Uhr
@@ -4287,7 +4154,6 @@ LINES:
 
 LINKS:
 - Rose => https://www.wasgehtapp.de/termin_kino.php?id=44389730
-- pin Caligari, Ludwigsburg => https://www.wasgehtapp.de/location.php?id=5834
 - pin Mephisto, Ulm => https://www.wasgehtapp.de/location.php?id=8100
 - pin Kamino, Reutlingen => https://www.wasgehtapp.de/location.php?id=39005
 - pin Kino Museum, Tübingen => https://www.wasgehtapp.de/location.php?id=4414
@@ -4301,32 +4167,12 @@ IMAGES:
 RAW TEXT:
 Rose
 Drama | 2026
-pin Caligari, Ludwigsburg : 17:00 Uhr
 pin Mephisto, Ulm : 17:20 Uhr   19:45 Uhr
 pin Kamino, Reutlingen : 17:45 Uhr
 pin Kino Museum, Tübingen : 19:45 Uhr
 pin Staufen-Movieplex, Göppingen : 20:00 Uhr
 
-EVENT 154
-========================
-LINES:
-- SEP RUF - Architekt der Moderne
-- pin Kinothek, Stuttgart : 17:00 Uhr
-
-LINKS:
-- SEP RUF - Architekt der Moderne => https://www.wasgehtapp.de/termin_kino.php?id=39881065
-- pin Kinothek, Stuttgart => https://www.wasgehtapp.de/location.php?id=5836
-- (ohne Text) => http://www.themoviedb.org/movie/1455517?language=de
-
-IMAGES:
-- https://www.wasgehtapp.de/images/termine/39881065_s.jpg
-- https://www.wasgehtapp.de/img/external.png
-
-RAW TEXT:
-SEP RUF - Architekt der Moderne
-pin Kinothek, Stuttgart : 17:00 Uhr
-
-EVENT 155
+EVENT 150
 ========================
 LINES:
 - Shelter
@@ -4347,7 +4193,7 @@ Shelter
 Action / Krimi / Thriller | 2026
 pin Dietrich Theater, Neu-Ulm : 20:15 Uhr
 
-EVENT 156
+EVENT 151
 ========================
 LINES:
 - Sportsko srce
@@ -4368,7 +4214,7 @@ Sportsko srce
 Komödie / Drama | 2026
 pin Capitol-Filmtheater, Kornwestheim : 21:55 Uhr
 
-EVENT 157
+EVENT 152
 ========================
 LINES:
 - The Devil Wears Prada 2
@@ -4389,17 +4235,15 @@ The Devil Wears Prada 2
 Drama / Komödie | 2026
 pin Corso Cinema International, Stuttgart : 17:35 Uhr   20:00 Uhr
 
-EVENT 158
+EVENT 153
 ========================
 LINES:
 - The History of Sound
 - Drama / Liebesfilm / Musik | 2025
-- pin Brazilkino, Schwäbisch Gmünd : 17:00 Uhr
 - pin Luna Lichtspieltheater, Ludwigsburg : 19:30 Uhr
 
 LINKS:
 - The History of Sound => https://www.wasgehtapp.de/termin_kino.php?id=43771272
-- pin Brazilkino, Schwäbisch Gmünd => https://www.wasgehtapp.de/location.php?id=48156
 - pin Luna Lichtspieltheater, Ludwigsburg => https://www.wasgehtapp.de/location.php?id=44598
 - (ohne Text) => http://www.themoviedb.org/movie/891584?language=de
 
@@ -4410,10 +4254,9 @@ IMAGES:
 RAW TEXT:
 The History of Sound
 Drama / Liebesfilm / Musik | 2025
-pin Brazilkino, Schwäbisch Gmünd : 17:00 Uhr
 pin Luna Lichtspieltheater, Ludwigsburg : 19:30 Uhr
 
-EVENT 159
+EVENT 154
 ========================
 LINES:
 - The Housemaid - Wenn sie wuesste
@@ -4434,7 +4277,7 @@ The Housemaid - Wenn sie wuesste
 Mystery / Thriller | 2025
 pin Central-Theater, Ludwigsburg : 18:00 Uhr
 
-EVENT 160
+EVENT 155
 ========================
 LINES:
 - TOM UND JERRY: DER VERLORENE KOMPASS
@@ -4455,7 +4298,7 @@ TOM UND JERRY: DER VERLORENE KOMPASS
 Animation / Komödie / Familie / Fan..
 pin Gloria Kino Center, Geislingen an der Steige : 17:15 Uhr
 
-EVENT 161
+EVENT 156
 ========================
 LINES:
 - Vier Fäuste für ein Halleluja
@@ -4471,7 +4314,7 @@ RAW TEXT:
 Vier Fäuste für ein Halleluja
 pin Kinothek, Stuttgart : 19:30 Uhr
 
-EVENT 162
+EVENT 157
 ========================
 LINES:
 - Whistle
@@ -4519,17 +4362,15 @@ pin Traumpalast, Schwäbisch Gmünd : 20:30 Uhr
 pin Traumpalast, Esslingen am Neckar : 20:45 Uhr
 pin EM, Stuttgart : 21:20 Uhr
 
-EVENT 163
+EVENT 158
 ========================
 LINES:
 - Woodwalkers 2
 - Fantasy / Familie | 2026
-- pin Schwanen Kinos, Hechingen : 17:00 Uhr
 - pin Filmzentrum Bären, Böblingen : 17:30 Uhr
 
 LINKS:
 - Woodwalkers 2 => https://www.wasgehtapp.de/termin_kino.php?id=42668230
-- pin Schwanen Kinos, Hechingen => https://www.wasgehtapp.de/location.php?id=38171
 - pin Filmzentrum Bären, Böblingen => https://www.wasgehtapp.de/location.php?id=12630
 - (ohne Text) => http://www.themoviedb.org/movie/1278853?language=de
 
@@ -4540,5 +4381,4 @@ IMAGES:
 RAW TEXT:
 Woodwalkers 2
 Fantasy / Familie | 2026
-pin Schwanen Kinos, Hechingen : 17:00 Uhr
 pin Filmzentrum Bären, Böblingen : 17:30 Uhr
