@@ -5,7 +5,8 @@ const SOURCE_URL =
   "https://www.wasgehtapp.de/index.php?geo_id=15546&ort=Dettingen%20unter%20Teck&x=9.45&y=48.6167&einwohner=5603&region=01&select_ort=1&radius=40";
 
 const MAX_EVENTS = 50;
-const DETAIL_TIMEOUT_MS = 8000;
+const DETAIL_TIMEOUT_MS = 5000;
+const RETRY_COUNT = 1;
 
 const textLog = [];
 const jsonEvents = [];
@@ -51,44 +52,6 @@ function geoToText(geo) {
   return geo ? `${geo.lat}, ${geo.lng}` : "";
 }
 
-function eventKey(title, date, location) {
-  return `${normalizeText(title)}|${normalizeText(date)}|${normalizeText(location)}`;
-}
-
-function extractDetailBlock(lines) {
-  const startIndex = lines.findIndex(line => line === "calendar");
-  if (startIndex === -1) return [];
-
-  const endIndex = lines.findIndex(
-    (line, index) =>
-      index > startIndex &&
-      line.includes("Zum Kalender zufügen")
-  );
-
-  return lines.slice(
-    Math.max(0, startIndex - 1),
-    endIndex === -1 ? startIndex + 40 : endIndex
-  );
-}
-
-function extractFields(detailLines) {
-  const title = normalizeText(detailLines[0] || "");
-  const dateIndex = detailLines.findIndex(line => line === "calendar");
-  const pinIndex = detailLines.findIndex(line => line === "pin");
-
-  return {
-    title,
-    date:
-      dateIndex >= 0
-        ? normalizeText(detailLines[dateIndex + 1] || "")
-        : "",
-    location:
-      pinIndex >= 0
-        ? cleanLocation(detailLines[pinIndex + 1] || "")
-        : ""
-  };
-}
-
 async function waitForDetailChange(page, oldSnapshot) {
   await page.waitForFunction(
     previous => {
@@ -116,73 +79,80 @@ async function readActiveDetail(page) {
       (line, index) => index > calendarIndex && line === "pin"
     );
 
-    const locationLine =
-      pinIndex >= 0 ? lines[pinIndex + 1] || "" : "";
+    const title = lines[calendarIndex - 1] || "";
+    const date = lines[calendarIndex + 1] || "";
+    const location = pinIndex >= 0 ? lines[pinIndex + 1] || "" : "";
 
     const mapCandidates = Array.from(document.querySelectorAll("a.map_link"))
-      .map(a => ({
-        href: a.href || "",
-        text: (a.innerText || a.textContent || "").trim(),
-        html: a.outerHTML || ""
-      }))
-      .filter(item => item.href);
+      .map(a => a.href || "")
+      .filter(Boolean);
 
     return {
-      lines,
-      calendarIndex,
-      pinIndex,
-      locationLine,
+      title,
+      date,
+      location,
       mapCandidates
     };
   });
 }
 
-async function readEvent(page, index) {
+async function tryReadEvent(page, index) {
   const cards = page.locator(".termin.inline");
   const card = cards.nth(index);
 
-  const listText = normalizeText(await card.innerText());
   const oldSnapshot = await page.evaluate(() => document.body.innerText || "");
 
   await card.click({ timeout: 10000 });
+
   await waitForDetailChange(page, oldSnapshot);
 
-  const active = await readActiveDetail(page);
-  const detailLines = extractDetailBlock(active.lines);
-  const fields = extractFields(detailLines);
+  const detail = await readActiveDetail(page);
 
-  let selectedMap = null;
-  let selectedGeo = null;
-
-  const geoCandidates = active.mapCandidates
-    .map(candidate => ({
-      href: candidate.href,
-      geo: extractGeoFromUrl(candidate.href)
+  const geoCandidates = detail.mapCandidates
+    .map(url => ({
+      url,
+      geo: extractGeoFromUrl(url)
     }))
-    .filter(candidate => candidate.geo);
+    .filter(item => item.geo);
 
-  if (geoCandidates.length > 0) {
-    const selectedCandidate = geoCandidates[geoCandidates.length - 1];
-    selectedMap = selectedCandidate.href;
-    selectedGeo = selectedCandidate.geo;
-  }
+  const selected = geoCandidates.length
+    ? geoCandidates[geoCandidates.length - 1]
+    : null;
 
   return {
-    listText,
-    detailLines,
-    fields,
-    locationLine: active.locationLine,
-    mapCandidates: active.mapCandidates,
-    selectedMap,
-    selectedGeo
+    title: normalizeText(detail.title),
+    date: normalizeText(detail.date),
+    location: cleanLocation(detail.location),
+    geo: selected?.geo || null
   };
+}
+
+async function readEvent(page, index) {
+  let lastError = null;
+
+  for (let attempt = 0; attempt <= RETRY_COUNT; attempt++) {
+    try {
+      return await tryReadEvent(page, index);
+    } catch (error) {
+      lastError = error;
+
+      await page.waitForTimeout(1000);
+
+      if (attempt < RETRY_COUNT) {
+        log(
+          `   Retry für Event ${index + 1} (${attempt + 1}/${RETRY_COUNT})`
+        );
+      }
+    }
+  }
+
+  throw lastError;
 }
 
 async function run() {
   const startedAt = Date.now();
 
-  log("🔎 Debug Detail Importer V10");
-  log("Ziel: Geo-Fix + strukturierte Logs + Zusammenfassung");
+  log("🔎 Debug Detail Importer V11 Retry");
   log(`Max Events: ${MAX_EVENTS}`);
   log("");
 
@@ -212,80 +182,33 @@ async function run() {
   log(`Teste Events: ${total}`);
   log("");
 
-  const seenKeys = new Map();
-
   for (let i = 0; i < total; i++) {
     const eventStartedAt = Date.now();
 
     try {
       const result = await readEvent(page, i);
+
       const durationMs = Date.now() - eventStartedAt;
 
-      const title = result.fields.title;
-      const date = result.fields.date;
-      const location = result.fields.location;
-      const geoText = geoToText(result.selectedGeo);
-      const key = eventKey(title, date, location);
-
-      const missing = [];
-      if (!title) missing.push("Titel");
-      if (!date) missing.push("Datum");
-      if (!location) missing.push("Ort");
-      if (!result.selectedGeo) missing.push("Geo");
-
-      const duplicateOf = seenKeys.has(key) ? seenKeys.get(key) : null;
-      if (!duplicateOf) {
-        seenKeys.set(key, i + 1);
-      }
-
-      const ok = missing.length === 0;
-
-      const eventData = {
+      jsonEvents.push({
         index: i + 1,
-        ok,
-        title,
-        date,
-        location,
-        locationLine: result.locationLine,
-        selectedGeo: result.selectedGeo,
-        selectedGeoText: geoText,
-        selectedMap: result.selectedMap,
-        mapCandidateCount: result.mapCandidates.length,
-        duplicateOf,
-        missing,
-        error: null,
+        ok: true,
+        title: result.title,
+        date: result.date,
+        location: result.location,
+        geo: result.geo,
         durationMs
-      };
-
-      jsonEvents.push(eventData);
+      });
 
       log(
-        `${String(i + 1).padStart(2, "0")}. ${ok ? "OK" : "WARNUNG"} | ${title || "?"} | ${date || "?"} | ${location || "?"} | ${geoText || "KEINE GEO"} | ${durationMs}ms`
+        `${String(i + 1).padStart(2, "0")}. OK | ${result.title} | ${result.date} | ${result.location} | ${geoToText(result.geo)} | ${durationMs}ms`
       );
-
-      if (duplicateOf) {
-        log(`   Dublette von Event ${duplicateOf}`);
-      }
-
-      if (missing.length > 0) {
-        log(`   Fehlt: ${missing.join(", ")}`);
-      }
     } catch (error) {
       const durationMs = Date.now() - eventStartedAt;
 
       jsonEvents.push({
         index: i + 1,
         ok: false,
-        title: "",
-        date: "",
-        location: "",
-        locationLine: "",
-        selectedGeo: null,
-        selectedGeoText: "",
-        selectedMap: null,
-        mapCandidateCount: 0,
-        duplicateOf: null,
-        missing: ["Event"],
         error: error.message,
         durationMs
       });
@@ -296,149 +219,35 @@ async function run() {
     }
   }
 
-  const durationMs = Date.now() - startedAt;
-
-  const okEvents = jsonEvents.filter(event => event.ok);
-  const errorEvents = jsonEvents.filter(event => event.error);
-  const warningEvents = jsonEvents.filter(
-    event => !event.ok && !event.error
-  );
-  const geoEvents = jsonEvents.filter(event => event.selectedGeo);
-  const noGeoEvents = jsonEvents.filter(event => !event.selectedGeo);
-  const duplicates = jsonEvents.filter(event => event.duplicateOf);
-  const timeoutEvents = jsonEvents.filter(event =>
-    String(event.error || "").toLowerCase().includes("timeout")
-  );
-
-  const geoByLocation = new Map();
-  const suspiciousGeo = [];
-
-  for (const event of jsonEvents) {
-    if (!event.location || !event.selectedGeoText) continue;
-
-    if (!geoByLocation.has(event.location)) {
-      geoByLocation.set(event.location, event.selectedGeoText);
-      continue;
-    }
-
-    const previousGeo = geoByLocation.get(event.location);
-    if (previousGeo !== event.selectedGeoText) {
-      suspiciousGeo.push({
-        index: event.index,
-        title: event.title,
-        location: event.location,
-        previousGeo,
-        currentGeo: event.selectedGeoText
-      });
-    }
-  }
+  const errors = jsonEvents.filter(event => !event.ok);
 
   log("");
   log("========================");
   log("DEBUG SUMMARY");
   log("========================");
   log(`Events getestet: ${total}`);
-  log(`Erfolgreich: ${okEvents.length}`);
-  log(`Warnungen: ${warningEvents.length}`);
-  log(`Fehler: ${errorEvents.length}`);
-  log(`Mit Geo: ${geoEvents.length}`);
-  log(`Ohne Geo: ${noGeoEvents.length}`);
-  log(`Dubletten: ${duplicates.length}`);
-  log(`Timeouts: ${timeoutEvents.length}`);
-  log(`Gesamtdauer: ${(durationMs / 1000).toFixed(1)}s`);
-  log(`Durchschnitt: ${(durationMs / total / 1000).toFixed(2)}s pro Event`);
-  log("");
+  log(`Erfolgreich: ${jsonEvents.length - errors.length}`);
+  log(`Fehler: ${errors.length}`);
+  log(`Gesamtdauer: ${((Date.now() - startedAt) / 1000).toFixed(1)}s`);
 
-  if (errorEvents.length > 0) {
-    log("Fehlerliste:");
-    for (const event of errorEvents) {
-      log(`- Event ${event.index}: ${event.error}`);
-    }
-    log("");
-  }
-
-  if (noGeoEvents.length > 0) {
-    log("Ohne Geo:");
-    for (const event of noGeoEvents) {
-      log(`- Event ${event.index}: ${event.title || "Unbekannt"} | ${event.location || "Ort unbekannt"}`);
-    }
-    log("");
-  }
-
-  if (duplicates.length > 0) {
-    log("Dubletten:");
-    for (const event of duplicates) {
-      log(`- Event ${event.index} ist Dublette von Event ${event.duplicateOf}: ${event.title}`);
-    }
-    log("");
-  }
-
-  if (suspiciousGeo.length > 0) {
-    log("Geo-Warnungen:");
-    for (const item of suspiciousGeo) {
-      log(
-        `- Event ${item.index}: gleicher Ort "${item.location}" aber andere Geo (${item.previousGeo} vs ${item.currentGeo})`
-      );
-    }
-    log("");
-  }
-
-  log("Plausibilitätscheck:");
-  log(noGeoEvents.length === 0 ? "✅ Keine fehlenden Geodaten" : "⚠️ Es fehlen Geodaten");
-  log(errorEvents.length === 0 ? "✅ Keine Fehler" : "⚠️ Fehler vorhanden");
-  log(timeoutEvents.length === 0 ? "✅ Keine Timeouts" : "⚠️ Timeout-Probleme vorhanden");
-  log(suspiciousGeo.length === 0 ? "✅ Gleiche Orte haben gleiche Geo" : "⚠️ Gleiche Orte mit unterschiedlicher Geo gefunden");
-  log("✅ Debug-Test beendet.");
-
-  const output = {
-    meta: {
-      version: "V10",
-      sourceUrl: SOURCE_URL,
-      maxEvents: MAX_EVENTS,
-      foundContainers: count,
-      testedEvents: total,
-      durationMs,
-      averageDurationMs: Math.round(durationMs / total)
-    },
-    summary: {
-      ok: okEvents.length,
-      warnings: warningEvents.length,
-      errors: errorEvents.length,
-      withGeo: geoEvents.length,
-      withoutGeo: noGeoEvents.length,
-      duplicates: duplicates.length,
-      timeouts: timeoutEvents.length,
-      suspiciousGeo: suspiciousGeo.length
-    },
-    problems: {
-      errors: errorEvents,
-      withoutGeo: noGeoEvents,
-      duplicates,
-      suspiciousGeo
-    },
-    events: jsonEvents
-  };
-
-  fs.writeFileSync("./debug-output.txt", textLog.join("\n"), "utf8");
-  fs.writeFileSync("./debug-output.json", JSON.stringify(output, null, 2), "utf8");
+  fs.writeFileSync("debug-output.txt", textLog.join("\n"), "utf8");
+  fs.writeFileSync(
+    "debug-output.json",
+    JSON.stringify(jsonEvents, null, 2),
+    "utf8"
+  );
 
   await browser.close();
 }
 
 run().catch(error => {
   console.error(error);
-  fs.writeFileSync("./debug-output.txt", String(error.stack || error), "utf8");
+
   fs.writeFileSync(
-    "./debug-output.json",
-    JSON.stringify(
-      {
-        fatal: true,
-        error: String(error.stack || error)
-      },
-      null,
-      2
-    ),
+    "debug-output.txt",
+    String(error.stack || error),
     "utf8"
   );
+
   process.exit(1);
 });
