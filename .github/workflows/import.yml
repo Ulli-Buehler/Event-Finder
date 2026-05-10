@@ -35,6 +35,8 @@ jobs:
           path: |
             debug-output.txt
             debug-output.json
+            fast-raw-cards.txt
+            fast-raw-cards.json
 
       - name: Debug Dateien committen
         run: |
@@ -43,7 +45,9 @@ jobs:
 
           git add debug-output.txt
           git add debug-output.json
+          git add fast-raw-cards.txt
+          git add fast-raw-cards.json
 
-          git commit -m "update debug output" || echo "Keine Änderungen"
+          git commit -m "update fast import output" || echo "Keine Änderungen"
 
           git push
