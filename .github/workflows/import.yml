@@ -23,7 +23,7 @@ jobs:
         run: npm install
 
       - name: Playwright Browser installieren
-        run: npx playwright install chromium
+        run: npx playwright install chromium --only-shell
 
       - name: Fast Importer starten
         run: node import-fast.js
