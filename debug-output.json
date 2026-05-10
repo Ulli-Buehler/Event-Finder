@@ -5,22 +5,168 @@
     "maxEvents": 50,
     "foundContainers": 206,
     "testedEvents": 50,
-    "durationMs": 37966,
-    "averageDurationMs": 759
+    "durationMs": 49634,
+    "averageDurationMs": 993
   },
   "summary": {
-    "ok": 50,
+    "ok": 46,
     "warnings": 0,
-    "errors": 0,
-    "withGeo": 50,
-    "withoutGeo": 0,
+    "errors": 4,
+    "withGeo": 46,
+    "withoutGeo": 4,
     "duplicates": 1,
-    "timeouts": 0,
+    "timeouts": 4,
     "suspiciousGeo": 0
   },
   "problems": {
-    "errors": [],
-    "withoutGeo": [],
+    "errors": [
+      {
+        "index": 7,
+        "ok": false,
+        "title": "",
+        "date": "",
+        "location": "",
+        "locationLine": "",
+        "selectedGeo": null,
+        "selectedGeoText": "",
+        "selectedMap": null,
+        "mapCandidateCount": 0,
+        "duplicateOf": null,
+        "missing": [
+          "Event"
+        ],
+        "error": "page.waitForFunction: Timeout 5000ms exceeded.",
+        "durationMs": 5056
+      },
+      {
+        "index": 14,
+        "ok": false,
+        "title": "",
+        "date": "",
+        "location": "",
+        "locationLine": "",
+        "selectedGeo": null,
+        "selectedGeoText": "",
+        "selectedMap": null,
+        "mapCandidateCount": 0,
+        "duplicateOf": null,
+        "missing": [
+          "Event"
+        ],
+        "error": "page.waitForFunction: Timeout 5000ms exceeded.",
+        "durationMs": 5089
+      },
+      {
+        "index": 23,
+        "ok": false,
+        "title": "",
+        "date": "",
+        "location": "",
+        "locationLine": "",
+        "selectedGeo": null,
+        "selectedGeoText": "",
+        "selectedMap": null,
+        "mapCandidateCount": 0,
+        "duplicateOf": null,
+        "missing": [
+          "Event"
+        ],
+        "error": "page.waitForFunction: Timeout 5000ms exceeded.",
+        "durationMs": 5076
+      },
+      {
+        "index": 42,
+        "ok": false,
+        "title": "",
+        "date": "",
+        "location": "",
+        "locationLine": "",
+        "selectedGeo": null,
+        "selectedGeoText": "",
+        "selectedMap": null,
+        "mapCandidateCount": 0,
+        "duplicateOf": null,
+        "missing": [
+          "Event"
+        ],
+        "error": "page.waitForFunction: Timeout 5000ms exceeded.",
+        "durationMs": 5031
+      }
+    ],
+    "withoutGeo": [
+      {
+        "index": 7,
+        "ok": false,
+        "title": "",
+        "date": "",
+        "location": "",
+        "locationLine": "",
+        "selectedGeo": null,
+        "selectedGeoText": "",
+        "selectedMap": null,
+        "mapCandidateCount": 0,
+        "duplicateOf": null,
+        "missing": [
+          "Event"
+        ],
+        "error": "page.waitForFunction: Timeout 5000ms exceeded.",
+        "durationMs": 5056
+      },
+      {
+        "index": 14,
+        "ok": false,
+        "title": "",
+        "date": "",
+        "location": "",
+        "locationLine": "",
+        "selectedGeo": null,
+        "selectedGeoText": "",
+        "selectedMap": null,
+        "mapCandidateCount": 0,
+        "duplicateOf": null,
+        "missing": [
+          "Event"
+        ],
+        "error": "page.waitForFunction: Timeout 5000ms exceeded.",
+        "durationMs": 5089
+      },
+      {
+        "index": 23,
+        "ok": false,
+        "title": "",
+        "date": "",
+        "location": "",
+        "locationLine": "",
+        "selectedGeo": null,
+        "selectedGeoText": "",
+        "selectedMap": null,
+        "mapCandidateCount": 0,
+        "duplicateOf": null,
+        "missing": [
+          "Event"
+        ],
+        "error": "page.waitForFunction: Timeout 5000ms exceeded.",
+        "durationMs": 5076
+      },
+      {
+        "index": 42,
+        "ok": false,
+        "title": "",
+        "date": "",
+        "location": "",
+        "locationLine": "",
+        "selectedGeo": null,
+        "selectedGeoText": "",
+        "selectedMap": null,
+        "mapCandidateCount": 0,
+        "duplicateOf": null,
+        "missing": [
+          "Event"
+        ],
+        "error": "page.waitForFunction: Timeout 5000ms exceeded.",
+        "durationMs": 5031
+      }
+    ],
     "duplicates": [
       {
         "index": 38,
@@ -35,11 +181,11 @@
         },
         "selectedGeoText": "48.2815, 9.72811",
         "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
-        "mapCandidateCount": 38,
+        "mapCandidateCount": 35,
         "duplicateOf": 1,
         "missing": [],
         "error": null,
-        "durationMs": 1092
+        "durationMs": 1083
       }
     ],
     "suspiciousGeo": []
@@ -62,7 +208,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 242
+      "durationMs": 223
     },
     {
       "index": 2,
@@ -81,7 +227,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 237
+      "durationMs": 224
     },
     {
       "index": 3,
@@ -100,7 +246,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1099
+      "durationMs": 1082
     },
     {
       "index": 4,
@@ -119,7 +265,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 233
+      "durationMs": 215
     },
     {
       "index": 5,
@@ -138,7 +284,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1100
+      "durationMs": 432
     },
     {
       "index": 6,
@@ -157,26 +303,25 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 235
+      "durationMs": 419
     },
     {
       "index": 7,
-      "ok": true,
-      "title": "Kanahi Yamashita - SICG-Festival",
-      "date": "heute, 11:00 Uhr (Kammermusiksaal)",
-      "location": "Hochschule für Musik und Darstellende Kunst , Stuttgart",
-      "locationLine": "Hochschule für Musik und Darstellende Kunst , Stuttgart map link",
-      "selectedGeo": {
-        "lat": 48.78,
-        "lng": 9.18805
-      },
-      "selectedGeoText": "48.78, 9.18805",
-      "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.78,9.18805&ll=",
-      "mapCandidateCount": 7,
+      "ok": false,
+      "title": "",
+      "date": "",
+      "location": "",
+      "locationLine": "",
+      "selectedGeo": null,
+      "selectedGeoText": "",
+      "selectedMap": null,
+      "mapCandidateCount": 0,
       "duplicateOf": null,
-      "missing": [],
-      "error": null,
-      "durationMs": 1096
+      "missing": [
+        "Event"
+      ],
+      "error": "page.waitForFunction: Timeout 5000ms exceeded.",
+      "durationMs": 5056
     },
     {
       "index": 8,
@@ -191,11 +336,11 @@
       },
       "selectedGeoText": "48.5069, 9.2038",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.5069,9.2038&ll=",
-      "mapCandidateCount": 8,
+      "mapCandidateCount": 7,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 203
+      "durationMs": 207
     },
     {
       "index": 9,
@@ -210,11 +355,11 @@
       },
       "selectedGeoText": "48.7073, 8.99412",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7073,8.99412&ll=",
-      "mapCandidateCount": 9,
+      "mapCandidateCount": 8,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1097
+      "durationMs": 187
     },
     {
       "index": 10,
@@ -229,11 +374,11 @@
       },
       "selectedGeoText": "48.9311, 8.95968",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.9311,8.95968&ll=",
-      "mapCandidateCount": 10,
+      "mapCandidateCount": 9,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 288
+      "durationMs": 1080
     },
     {
       "index": 11,
@@ -248,11 +393,11 @@
       },
       "selectedGeoText": "48.4016, 9.98614",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4016,9.98614&ll=",
-      "mapCandidateCount": 11,
+      "mapCandidateCount": 10,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1095
+      "durationMs": 221
     },
     {
       "index": 12,
@@ -267,11 +412,11 @@
       },
       "selectedGeoText": "48.7219, 9.34624",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7219,9.34624&ll=",
-      "mapCandidateCount": 12,
+      "mapCandidateCount": 11,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 201
+      "durationMs": 431
     },
     {
       "index": 13,
@@ -286,30 +431,29 @@
       },
       "selectedGeoText": "48.3976, 9.99129",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.3976,9.99129&ll=",
-      "mapCandidateCount": 13,
+      "mapCandidateCount": 12,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1106
+      "durationMs": 432
     },
     {
       "index": 14,
-      "ok": true,
-      "title": "TableTop",
-      "date": "heute, 14:00 Uhr",
-      "location": "Hexenhaus, Ulm",
-      "locationLine": "Hexenhaus, Ulm map link",
-      "selectedGeo": {
-        "lat": 48.411,
-        "lng": 9.96429
-      },
-      "selectedGeoText": "48.411, 9.96429",
-      "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.411,9.96429&ll=",
-      "mapCandidateCount": 14,
+      "ok": false,
+      "title": "",
+      "date": "",
+      "location": "",
+      "locationLine": "",
+      "selectedGeo": null,
+      "selectedGeoText": "",
+      "selectedMap": null,
+      "mapCandidateCount": 0,
       "duplicateOf": null,
-      "missing": [],
-      "error": null,
-      "durationMs": 232
+      "missing": [
+        "Event"
+      ],
+      "error": "page.waitForFunction: Timeout 5000ms exceeded.",
+      "durationMs": 5089
     },
     {
       "index": 15,
@@ -324,11 +468,11 @@
       },
       "selectedGeoText": "48.7061, 9.58463",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7061,9.58463&ll=",
-      "mapCandidateCount": 15,
+      "mapCandidateCount": 13,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1094
+      "durationMs": 210
     },
     {
       "index": 16,
@@ -343,11 +487,11 @@
       },
       "selectedGeoText": "48.4758, 8.93421",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4758,8.93421&ll=",
-      "mapCandidateCount": 16,
+      "mapCandidateCount": 14,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 201
+      "durationMs": 200
     },
     {
       "index": 17,
@@ -362,11 +506,11 @@
       },
       "selectedGeoText": "48.7651, 9.16927",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7651,9.16927&ll=",
-      "mapCandidateCount": 17,
+      "mapCandidateCount": 15,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1101
+      "durationMs": 1082
     },
     {
       "index": 18,
@@ -381,11 +525,11 @@
       },
       "selectedGeoText": "48.5182, 9.05031",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.5182,9.05031&ll=",
-      "mapCandidateCount": 18,
+      "mapCandidateCount": 16,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 204
+      "durationMs": 184
     },
     {
       "index": 19,
@@ -400,11 +544,11 @@
       },
       "selectedGeoText": "48.7795, 9.17041",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7795,9.17041&ll=",
-      "mapCandidateCount": 19,
+      "mapCandidateCount": 17,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1094
+      "durationMs": 1113
     },
     {
       "index": 20,
@@ -419,11 +563,11 @@
       },
       "selectedGeoText": "48.7795, 9.17041",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7795,9.17041&ll=",
-      "mapCandidateCount": 20,
+      "mapCandidateCount": 18,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 204
+      "durationMs": 205
     },
     {
       "index": 21,
@@ -438,11 +582,11 @@
       },
       "selectedGeoText": "48.7703, 9.16108",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7703,9.16108&ll=",
-      "mapCandidateCount": 21,
+      "mapCandidateCount": 19,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1095
+      "durationMs": 435
     },
     {
       "index": 22,
@@ -457,30 +601,29 @@
       },
       "selectedGeoText": "48.78, 9.18805",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.78,9.18805&ll=",
-      "mapCandidateCount": 22,
+      "mapCandidateCount": 20,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 203
+      "durationMs": 430
     },
     {
       "index": 23,
-      "ok": true,
-      "title": "21. Meisterkonzert",
-      "date": "heute, 17:00 Uhr",
-      "location": "Forum am Schlosspark, Ludwigsburg",
-      "locationLine": "Forum am Schlosspark, Ludwigsburg map link",
-      "selectedGeo": {
-        "lat": 48.8923,
-        "lng": 9.19486
-      },
-      "selectedGeoText": "48.8923, 9.19486",
-      "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8923,9.19486&ll=",
-      "mapCandidateCount": 23,
+      "ok": false,
+      "title": "",
+      "date": "",
+      "location": "",
+      "locationLine": "",
+      "selectedGeo": null,
+      "selectedGeoText": "",
+      "selectedMap": null,
+      "mapCandidateCount": 0,
       "duplicateOf": null,
-      "missing": [],
-      "error": null,
-      "durationMs": 1098
+      "missing": [
+        "Event"
+      ],
+      "error": "page.waitForFunction: Timeout 5000ms exceeded.",
+      "durationMs": 5076
     },
     {
       "index": 24,
@@ -495,11 +638,11 @@
       },
       "selectedGeoText": "48.4754, 8.93582",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4754,8.93582&ll=",
-      "mapCandidateCount": 24,
+      "mapCandidateCount": 21,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 219
+      "durationMs": 206
     },
     {
       "index": 25,
@@ -514,11 +657,11 @@
       },
       "selectedGeoText": "48.3936, 9.99949",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.3936,9.99949&ll=",
-      "mapCandidateCount": 25,
+      "mapCandidateCount": 22,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1096
+      "durationMs": 184
     },
     {
       "index": 26,
@@ -533,11 +676,11 @@
       },
       "selectedGeoText": "48.6547, 9.41548",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.6547,9.41548&ll=",
-      "mapCandidateCount": 26,
+      "mapCandidateCount": 23,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 204
+      "durationMs": 1083
     },
     {
       "index": 27,
@@ -552,11 +695,11 @@
       },
       "selectedGeoText": "48.7795, 9.17041",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7795,9.17041&ll=",
-      "mapCandidateCount": 27,
+      "mapCandidateCount": 24,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1096
+      "durationMs": 183
     },
     {
       "index": 28,
@@ -571,11 +714,11 @@
       },
       "selectedGeoText": "48.875, 9.39714",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.875,9.39714&ll=",
-      "mapCandidateCount": 28,
+      "mapCandidateCount": 25,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 198
+      "durationMs": 1067
     },
     {
       "index": 29,
@@ -590,11 +733,11 @@
       },
       "selectedGeoText": "48.6544, 9.21395",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.6544,9.21395&ll=",
-      "mapCandidateCount": 29,
+      "mapCandidateCount": 26,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1084
+      "durationMs": 184
     },
     {
       "index": 30,
@@ -609,11 +752,11 @@
       },
       "selectedGeoText": "48.7099, 9.00496",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7099,9.00496&ll=",
-      "mapCandidateCount": 30,
+      "mapCandidateCount": 27,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 437
+      "durationMs": 1065
     },
     {
       "index": 31,
@@ -628,11 +771,11 @@
       },
       "selectedGeoText": "48.6146, 9.355",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.6146,9.355&ll=",
-      "mapCandidateCount": 31,
+      "mapCandidateCount": 28,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 266
+      "durationMs": 184
     },
     {
       "index": 32,
@@ -647,11 +790,11 @@
       },
       "selectedGeoText": "48.4962, 9.20612",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4962,9.20612&ll=",
-      "mapCandidateCount": 32,
+      "mapCandidateCount": 29,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1100
+      "durationMs": 1070
     },
     {
       "index": 33,
@@ -666,11 +809,11 @@
       },
       "selectedGeoText": "48.7676, 9.25164",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7676,9.25164&ll=",
-      "mapCandidateCount": 33,
+      "mapCandidateCount": 30,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 232
+      "durationMs": 215
     },
     {
       "index": 34,
@@ -685,11 +828,11 @@
       },
       "selectedGeoText": "48.8301, 9.11979",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8301,9.11979&ll=",
-      "mapCandidateCount": 34,
+      "mapCandidateCount": 31,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1100
+      "durationMs": 1065
     },
     {
       "index": 35,
@@ -704,11 +847,11 @@
       },
       "selectedGeoText": "48.4, 10.003",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4,10.003&ll=",
-      "mapCandidateCount": 35,
+      "mapCandidateCount": 32,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 234
+      "durationMs": 217
     },
     {
       "index": 36,
@@ -723,11 +866,11 @@
       },
       "selectedGeoText": "48.467, 8.92013",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.467,8.92013&ll=",
-      "mapCandidateCount": 36,
+      "mapCandidateCount": 33,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1097
+      "durationMs": 1065
     },
     {
       "index": 37,
@@ -742,11 +885,11 @@
       },
       "selectedGeoText": "48.6917, 9.12352",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.6917,9.12352&ll=",
-      "mapCandidateCount": 37,
+      "mapCandidateCount": 34,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 224
+      "durationMs": 215
     },
     {
       "index": 38,
@@ -761,11 +904,11 @@
       },
       "selectedGeoText": "48.2815, 9.72811",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2815,9.72811&ll=",
-      "mapCandidateCount": 38,
+      "mapCandidateCount": 35,
       "duplicateOf": 1,
       "missing": [],
       "error": null,
-      "durationMs": 1092
+      "durationMs": 1083
     },
     {
       "index": 39,
@@ -780,11 +923,11 @@
       },
       "selectedGeoText": "48.4995, 9.06461",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
-      "mapCandidateCount": 39,
+      "mapCandidateCount": 36,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 203
+      "durationMs": 221
     },
     {
       "index": 40,
@@ -799,11 +942,11 @@
       },
       "selectedGeoText": "48.4995, 9.06461",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
-      "mapCandidateCount": 40,
+      "mapCandidateCount": 37,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1096
+      "durationMs": 431
     },
     {
       "index": 41,
@@ -818,30 +961,29 @@
       },
       "selectedGeoText": "48.8127, 9.7836",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8127,9.7836&ll=",
-      "mapCandidateCount": 41,
+      "mapCandidateCount": 38,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 239
+      "durationMs": 570
     },
     {
       "index": 42,
-      "ok": true,
-      "title": "Klassisches Sinfoniekonzert",
-      "date": "heute, 19:30 Uhr",
-      "location": "Festhalle Onstmettingen, Albstadt",
-      "locationLine": "Festhalle Onstmettingen, Albstadt map",
-      "selectedGeo": {
-        "lat": 48.2796,
-        "lng": 8.99754
-      },
-      "selectedGeoText": "48.2796, 8.99754",
-      "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2796,8.99754&ll=",
-      "mapCandidateCount": 42,
+      "ok": false,
+      "title": "",
+      "date": "",
+      "location": "",
+      "locationLine": "",
+      "selectedGeo": null,
+      "selectedGeoText": "",
+      "selectedMap": null,
+      "mapCandidateCount": 0,
       "duplicateOf": null,
-      "missing": [],
-      "error": null,
-      "durationMs": 1092
+      "missing": [
+        "Event"
+      ],
+      "error": "page.waitForFunction: Timeout 5000ms exceeded.",
+      "durationMs": 5031
     },
     {
       "index": 43,
@@ -856,11 +998,11 @@
       },
       "selectedGeoText": "48.8106, 9.17919",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8106,9.17919&ll=",
-      "mapCandidateCount": 43,
+      "mapCandidateCount": 39,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 221
+      "durationMs": 212
     },
     {
       "index": 44,
@@ -875,11 +1017,11 @@
       },
       "selectedGeoText": "48.8006, 9.21657",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8006,9.21657&ll=",
-      "mapCandidateCount": 44,
+      "mapCandidateCount": 40,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1096
+      "durationMs": 200
     },
     {
       "index": 45,
@@ -894,11 +1036,11 @@
       },
       "selectedGeoText": "48.9604, 9.1307",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.9604,9.1307&ll=",
-      "mapCandidateCount": 45,
+      "mapCandidateCount": 41,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 223
+      "durationMs": 1067
     },
     {
       "index": 46,
@@ -913,11 +1055,11 @@
       },
       "selectedGeoText": "48.8599, 9.18601",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8599,9.18601&ll=",
-      "mapCandidateCount": 46,
+      "mapCandidateCount": 42,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1094
+      "durationMs": 218
     },
     {
       "index": 47,
@@ -932,11 +1074,11 @@
       },
       "selectedGeoText": "48.7387, 9.29233",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7387,9.29233&ll=",
-      "mapCandidateCount": 47,
+      "mapCandidateCount": 43,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 234
+      "durationMs": 434
     },
     {
       "index": 48,
@@ -951,11 +1093,11 @@
       },
       "selectedGeoText": "48.9437, 8.95799",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.9437,8.95799&ll=",
-      "mapCandidateCount": 48,
+      "mapCandidateCount": 44,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1099
+      "durationMs": 1082
     },
     {
       "index": 49,
@@ -970,11 +1112,11 @@
       },
       "selectedGeoText": "48.41, 9.99481",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.41,9.99481&ll=",
-      "mapCandidateCount": 49,
+      "mapCandidateCount": 45,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 204
+      "durationMs": 216
     },
     {
       "index": 50,
@@ -989,11 +1131,11 @@
       },
       "selectedGeoText": "48.8081, 9.20091",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8081,9.20091&ll=",
-      "mapCandidateCount": 50,
+      "mapCandidateCount": 46,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1096
+      "durationMs": 1065
     }
   ]
 }
