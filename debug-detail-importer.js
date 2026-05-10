@@ -1,6 +1,6 @@
 import { chromium } from "playwright";
 import fs from "fs";
-
+ 
 const SOURCE_URL =
   "https://www.wasgehtapp.de/index.php?geo_id=15546&ort=Dettingen%20unter%20Teck&x=9.45&y=48.6167&einwohner=5603&region=01&select_ort=1&radius=40";
 
