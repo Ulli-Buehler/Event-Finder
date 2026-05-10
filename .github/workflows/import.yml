@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  debug-import:
+  fast-import:
     runs-on: ubuntu-latest
 
     permissions:
@@ -25,8 +25,8 @@ jobs:
       - name: Playwright Browser installieren
         run: npx playwright install chromium
 
-      - name: Debug Importer starten
-        run: node debug-detail-importer.js
+      - name: Fast Importer starten
+        run: node import-fast.js
 
       - name: Upload debug files
         uses: actions/upload-artifact@v4
