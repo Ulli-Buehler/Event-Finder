@@ -28,6 +28,16 @@ jobs:
       - name: Debug Importer starten
         run: node debug-detail-importer.js
 
+      - name: Upload debug files
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-files
+          path: |
+            debug-output.txt
+            debug-output.json
+            Cade/debug-output.txt
+            Cade/debug-output.json
+
       - name: Debug Dateien committen
         run: |
           git config user.name "github-actions"
@@ -35,6 +45,8 @@ jobs:
 
           git add debug-output.txt
           git add debug-output.json
+          git add Cade/debug-output.txt
+          git add Cade/debug-output.json
 
           git commit -m "update debug output" || echo "Keine Änderungen"
 
