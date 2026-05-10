@@ -137,13 +137,17 @@ async function readEvent(page, index) {
   let selectedMap = null;
   let selectedGeo = null;
 
-  for (const candidate of active.mapCandidates) {
-    const geo = extractGeoFromUrl(candidate.href);
-    if (!geo) continue;
+  const geoCandidates = active.mapCandidates
+    .map(candidate => ({
+      href: candidate.href,
+      geo: extractGeoFromUrl(candidate.href)
+    }))
+    .filter(candidate => candidate.geo);
 
-    selectedMap = candidate.href;
-    selectedGeo = geo;
-    break;
+  if (geoCandidates.length > 0) {
+    const selectedCandidate = geoCandidates[geoCandidates.length - 1];
+    selectedMap = selectedCandidate.href;
+    selectedGeo = selectedCandidate.geo;
   }
 
   return {
