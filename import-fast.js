@@ -6,6 +6,10 @@ const SOURCE_URL =
 
 const OUTPUT_TXT = "debug-output.txt";
 const OUTPUT_JSON = "debug-output.json";
+
+const FEST_MARKT_TXT = "feste-maerkte.txt";
+const FEST_MARKT_JSON = "feste-maerkte.json";
+
 const RAW_OUTPUT_TXT = "fast-raw-cards.txt";
 const RAW_OUTPUT_JSON = "fast-raw-cards.json";
 
@@ -34,7 +38,18 @@ const FEST_MARKT_WORDS = [
   "kreativmarkt",
   "wochenmarkt",
   "krämermarkt",
-  "kraemermarkt"
+  "kraemermarkt",
+  "messe"
+];
+
+const NOISE_IMAGE_PARTS = [
+  "/img/external.png",
+  "/img/loc.png",
+  "/img/loc_extern.png",
+  "/img/heart.png",
+  "/img/disable.png",
+  "/img/eintrittfrei.png",
+  "/img/kid2.png"
 ];
 
 function normalizeText(value) {
@@ -49,10 +64,20 @@ function normalizeOneLine(value) {
   return normalizeText(value).replace(/\s+/g, " ").trim();
 }
 
-function cleanText(value) {
+function removeIcons(value) {
   return normalizeOneLine(value)
     .replace(/\bpin\b/gi, "")
     .replace(/\bcalendar\b/gi, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function stripDateTimeAndDistance(value) {
+  return removeIcons(value)
+    .replace(/^(heute|morgen|übermorgen|uebermorgen),?\s*/i, "")
+    .replace(/^(Mo|Di|Mi|Do|Fr|Sa|So),\s*\d{1,2}\.\d{1,2},?\s*/i, "")
+    .replace(/^\d{1,2}\s*:\s*\d{2}\s*Uhr\s*/i, "")
+    .replace(/\s*,?\s*\d+(?:[,.]\d+)?\s*km\s*$/i, "")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -68,10 +93,22 @@ function parseTime(text) {
   return `${match[1].padStart(2, "0")}:${match[2]} Uhr`;
 }
 
-function splitCategoryTitle(text) {
-  const cleaned = cleanText(text);
+function parseDateText(text) {
+  const value = normalizeOneLine(text);
 
+  const explicitDate = value.match(/\b(Mo|Di|Mi|Do|Fr|Sa|So),\s*(\d{1,2}\.\d{1,2})/i);
+  if (explicitDate) return `${explicitDate[1]}, ${explicitDate[2]}`;
+
+  const relativeDate = value.match(/\b(heute|morgen|übermorgen|uebermorgen)\b/i);
+  if (relativeDate) return relativeDate[1];
+
+  return "";
+}
+
+function splitCategoryTitle(text) {
+  const cleaned = removeIcons(text).replace(/\s+\*$/, "").trim();
   const match = cleaned.match(/^([^:]{2,30}):\s*(.+)$/);
+
   if (!match) {
     return {
       category: "",
@@ -85,47 +122,109 @@ function splitCategoryTitle(text) {
   };
 }
 
-function isProbablyBadTitle(title) {
-  if (!title) return true;
-  if (/^\d{1,2}\s*:\s*\d{2}\s*Uhr/i.test(title)) return true;
-  if (/^pin\b/i.test(title)) return true;
-  if (/^\d+(?:[,.]\d+)?\s*km$/i.test(title)) return true;
+function parseTagsFromLine(line) {
+  const cleaned = removeIcons(line);
+
+  if (!/^tags?\s+/i.test(cleaned)) return [];
+
+  return cleaned
+    .replace(/^tags?\s+/i, "")
+    .split(",")
+    .map(tag => tag.trim())
+    .filter(Boolean);
+}
+
+function isDateLine(line) {
+  return /\b([01]?\d|2[0-3])\s*:\s*([0-5]\d)\s*Uhr\b/i.test(line);
+}
+
+function isPriceLine(line) {
+  return /\b(ab\s*)?\d+(?:[,.]\d{2})?\s*€\b/i.test(line);
+}
+
+function isMetaLine(line) {
+  const cleaned = removeIcons(line);
+
+  if (!cleaned) return true;
+  if (/^tags?\s+/i.test(cleaned)) return true;
+  if (isDateLine(cleaned)) return true;
+  if (isPriceLine(cleaned)) return true;
+
   return false;
 }
 
-function guessTitleFromLines(lines) {
-  const candidates = lines
-    .map(cleanText)
-    .filter(Boolean)
-    .filter(line => !/^So$|^Mo$|^Di$|^Mi$|^Do$|^Fr$|^Sa$/i.test(line))
-    .filter(line => !/^\d{1,2}$/.test(line))
-    .filter(line => !/^Mai$|^Juni$|^Juli$|^August$|^September$|^Oktober$|^November$|^Dezember$/i.test(line))
-    .filter(line => !/^\d{1,2}\s*:\s*\d{2}\s*Uhr/i.test(line))
-    .filter(line => !/^pin\b/i.test(line))
-    .filter(line => !/\d+(?:[,.]\d+)?\s*km$/i.test(line))
-    .filter(line => !/^€|^\d+\s*€/.test(line));
-
-  const withCategory = candidates.find(line => /^[^:]{2,30}:\s+.+/.test(line));
-  if (withCategory) return withCategory;
-
-  return candidates[0] || "";
+function extractMainImage(images) {
+  return images.find(src => {
+    return !NOISE_IMAGE_PARTS.some(noise => src.includes(noise));
+  }) || "";
 }
 
-function extractLocationFromLines(lines) {
-  const cleaned = lines.map(cleanText).filter(Boolean);
+function extractDetailUrl(links) {
+  const link = links.find(item => item.href.includes("termin_details.php"));
+  return link?.href || "";
+}
 
-  const pinLineIndex = cleaned.findIndex(line => /^pin\b/i.test(line));
-  if (pinLineIndex >= 0 && cleaned[pinLineIndex + 1]) {
-    return cleaned[pinLineIndex + 1];
-  }
+function extractLocationUrl(links) {
+  const link = links.find(item => item.href.includes("location.php"));
+  return link?.href || "";
+}
 
-  const lineWithDistance = cleaned.find(line => /\d+(?:[,.]\d+)?\s*km\b/i.test(line));
-  if (lineWithDistance) {
-    return lineWithDistance.replace(/\s*,?\s*\d+(?:[,.]\d+)?\s*km\b/i, "").trim();
-  }
+function extractExternalUrls(links) {
+  return links
+    .map(item => item.href)
+    .filter(Boolean)
+    .filter(href => !href.includes("wasgehtapp.de/termin_details.php"))
+    .filter(href => !href.includes("wasgehtapp.de/location.php"))
+    .filter(href => !href.includes("wasgehtapp.de/suche.php"));
+}
 
-  const lineWithPlace = cleaned.find(line => /,\s*[A-ZÄÖÜ][a-zäöüß]/.test(line));
-  return lineWithPlace || "";
+function extractTagLinks(links) {
+  return links
+    .filter(item => item.href.includes("suche.php?tag="))
+    .map(item => removeIcons(item.text))
+    .filter(Boolean);
+}
+
+function extractLocationFromDateLine(lines) {
+  const line = lines.find(isDateLine);
+  if (!line) return "";
+
+  return stripDateTimeAndDistance(line);
+}
+
+function extractTitleCategorySubtitle(lines, links) {
+  const cleanedLines = lines.map(removeIcons).filter(Boolean);
+
+  const detailLink = links.find(link => link.href.includes("termin_details.php"));
+  const detailLinkText = removeIcons(detailLink?.text || "");
+
+  const firstMeaningfulLine =
+    cleanedLines.find(line => !isMetaLine(line)) || "";
+
+  const titleSource = firstMeaningfulLine || detailLinkText;
+  const { category, title } = splitCategoryTitle(titleSource);
+
+  const subtitle = cleanedLines.find(line => {
+    if (!line) return false;
+    if (line === titleSource) return false;
+    if (line === title) return false;
+    if (line === detailLinkText) return false;
+    if (isMetaLine(line)) return false;
+    if (line.includes("termin_details.php")) return false;
+    return true;
+  }) || "";
+
+  return {
+    category,
+    title,
+    subtitle
+  };
+}
+
+function hasKeyword(value, word) {
+  return String(value || "")
+    .toLowerCase()
+    .includes(word.toLowerCase());
 }
 
 function isFestMarktEvent(event) {
@@ -133,21 +232,21 @@ function isFestMarktEvent(event) {
     event.category,
     event.title,
     event.subtitle,
+    event.tags.join(" "),
     event.location,
     event.rawText
-  ]
-    .join(" ")
-    .toLowerCase();
+  ].join(" ");
 
-  return FEST_MARKT_WORDS.some(word => haystack.includes(word.toLowerCase()));
+  return FEST_MARKT_WORDS.some(word => hasKeyword(haystack, word));
 }
 
 function formatEventLine(event) {
   const title = event.category ? `${event.category}: ${event.title}` : event.title;
+  const dateTime = [event.dateText, event.time].filter(Boolean).join(", ");
 
   const parts = [
     `${String(event.index).padStart(3, "0")}. ${title || "-"}`,
-    event.time || "-",
+    dateTime || "-",
     event.location || "-"
   ];
 
@@ -155,7 +254,67 @@ function formatEventLine(event) {
     parts.push(`${event.distanceKm} km`);
   }
 
+  if (event.tags.length) {
+    parts.push(`tags: ${event.tags.join(", ")}`);
+  }
+
   return parts.join(" | ");
+}
+
+function createTextReport(title, sourceUrl, events, durationSec) {
+  const lines = [];
+
+  lines.push(title);
+  lines.push(`Quelle: ${sourceUrl}`);
+  lines.push(`Events: ${events.length}`);
+  lines.push(`Dauer: ${durationSec}s`);
+  lines.push("");
+  lines.push("========================");
+
+  for (const event of events) {
+    lines.push(formatEventLine(event));
+  }
+
+  return lines.join("\n");
+}
+
+function createRawTextReport(sourceUrl, rawCards) {
+  const lines = [];
+
+  lines.push("Fast Importer Rohdaten - Wasgehtapp Übersicht V3");
+  lines.push(`Quelle: ${sourceUrl}`);
+  lines.push(`Events gefunden: ${rawCards.length}`);
+  lines.push("");
+  lines.push("========================");
+
+  for (const card of rawCards) {
+    lines.push("");
+    lines.push(`EVENT ${String(card.index).padStart(3, "0")}`);
+    lines.push("========================");
+
+    lines.push("LINES:");
+    for (const line of card.lines) {
+      lines.push(`- ${line}`);
+    }
+
+    lines.push("");
+    lines.push("LINKS:");
+    for (const link of card.links) {
+      lines.push(`- ${link.text || "(ohne Text)"} => ${link.href}`);
+    }
+
+    lines.push("");
+    lines.push("IMAGES:");
+    for (const image of card.images) {
+      lines.push(`- ${image}`);
+    }
+
+    lines.push("");
+    lines.push("RAW TEXT:");
+    lines.push(card.text || "");
+  }
+
+  return lines.join("\n");
 }
 
 async function run() {
@@ -200,11 +359,9 @@ async function run() {
         .map(img => img.currentSrc || img.src || "")
         .filter(Boolean);
 
-      const className = el.className || "";
-
       return {
         index: index + 1,
-        className,
+        className: el.className || "",
         text: el.innerText || "",
         html: el.innerHTML || "",
         lines,
@@ -215,121 +372,92 @@ async function run() {
   });
 
   const events = rawCards.map(card => {
-    const lines = card.lines || [];
     const rawText = normalizeText(card.text);
     const oneLine = normalizeOneLine(rawText);
 
-    const guessedTitle = guessTitleFromLines(lines);
-    const categoryTitle = splitCategoryTitle(guessedTitle);
+    const { category, title, subtitle } = extractTitleCategorySubtitle(
+      card.lines,
+      card.links
+    );
 
-    let title = categoryTitle.title;
-    let category = categoryTitle.category;
+    const dateLine = card.lines.find(isDateLine) || "";
+    const dateText = parseDateText(dateLine || oneLine);
+    const time = parseTime(dateLine || oneLine);
+    const location = extractLocationFromDateLine(card.lines);
+    const distanceKm = parseDistanceKm(dateLine || oneLine);
 
-    if (isProbablyBadTitle(title)) {
-      const fallback = splitCategoryTitle(oneLine);
-      title = fallback.title;
-      category = category || fallback.category;
-    }
-
-    const time = parseTime(oneLine);
-    const location = extractLocationFromLines(lines);
-    const distanceKm = parseDistanceKm(location || oneLine);
-
-    const subtitle = lines
-      .map(cleanText)
-      .filter(Boolean)
-      .find(line =>
-        line !== guessedTitle &&
-        line !== title &&
-        line !== location &&
-        !line.includes(time) &&
-        !/^\d+(?:[,.]\d+)?\s*km$/i.test(line)
-      ) || "";
+    const lineTags = card.lines.flatMap(parseTagsFromLine);
+    const linkTags = extractTagLinks(card.links);
+    const tags = Array.from(new Set([...lineTags, ...linkTags]));
 
     return {
       index: card.index,
       category,
       title,
       subtitle,
+      dateText,
       time,
       location,
       distanceKm,
-      imageUrl: card.images[0] || "",
-      links: card.links,
+      tags,
+      imageUrl: extractMainImage(card.images),
+      detailUrl: extractDetailUrl(card.links),
+      locationUrl: extractLocationUrl(card.links),
+      externalUrls: extractExternalUrls(card.links),
       rawText,
-      rawLines: lines
+      rawLines: card.lines
     };
   });
 
   const festMarktEvents = events.filter(isFestMarktEvent);
   const durationSec = ((Date.now() - startedAt) / 1000).toFixed(1);
 
-  const textLog = [];
+  const fullReportLines = [];
 
-  textLog.push("Fast Importer - Wasgehtapp Übersicht V2");
-  textLog.push(`Quelle: ${SOURCE_URL}`);
-  textLog.push(`Events gefunden: ${events.length}`);
-  textLog.push(`Feste/Märkte Treffer: ${festMarktEvents.length}`);
-  textLog.push(`Dauer: ${durationSec}s`);
-  textLog.push("");
-  textLog.push("Alle Treffer Feste/Märkte:");
-  textLog.push("========================");
+  fullReportLines.push("Fast Importer - Wasgehtapp Übersicht V3");
+  fullReportLines.push(`Quelle: ${SOURCE_URL}`);
+  fullReportLines.push(`Events gefunden: ${events.length}`);
+  fullReportLines.push(`Feste/Märkte Treffer: ${festMarktEvents.length}`);
+  fullReportLines.push(`Dauer: ${durationSec}s`);
+  fullReportLines.push("");
+  fullReportLines.push("Alle Treffer Feste/Märkte:");
+  fullReportLines.push("========================");
 
   for (const event of festMarktEvents) {
-    textLog.push(formatEventLine(event));
+    fullReportLines.push(formatEventLine(event));
   }
 
-  textLog.push("");
-  textLog.push("Alle importierten Events:");
-  textLog.push("========================");
+  fullReportLines.push("");
+  fullReportLines.push("Alle importierten Events:");
+  fullReportLines.push("========================");
 
   for (const event of events) {
-    textLog.push(formatEventLine(event));
+    fullReportLines.push(formatEventLine(event));
   }
 
-  textLog.push("");
-  textLog.push("Hinweis:");
-  textLog.push(`Rohdaten pro Event stehen zusätzlich in ${RAW_OUTPUT_TXT} und ${RAW_OUTPUT_JSON}.`);
-  textLog.push("Damit kann man prüfen, welche Infos direkt in der Listenansicht vorhanden sind.");
+  fullReportLines.push("");
+  fullReportLines.push("Erzeugte Dateien:");
+  fullReportLines.push(`- ${OUTPUT_TXT}`);
+  fullReportLines.push(`- ${OUTPUT_JSON}`);
+  fullReportLines.push(`- ${FEST_MARKT_TXT}`);
+  fullReportLines.push(`- ${FEST_MARKT_JSON}`);
+  fullReportLines.push(`- ${RAW_OUTPUT_TXT}`);
+  fullReportLines.push(`- ${RAW_OUTPUT_JSON}`);
 
-  const rawTextLog = [];
-
-  rawTextLog.push("Fast Importer Rohdaten - Wasgehtapp Übersicht V2");
-  rawTextLog.push(`Quelle: ${SOURCE_URL}`);
-  rawTextLog.push(`Events gefunden: ${rawCards.length}`);
-  rawTextLog.push("");
-  rawTextLog.push("========================");
-
-  for (const card of rawCards) {
-    rawTextLog.push("");
-    rawTextLog.push(`EVENT ${String(card.index).padStart(3, "0")}`);
-    rawTextLog.push("========================");
-    rawTextLog.push("LINES:");
-    for (const line of card.lines) {
-      rawTextLog.push(`- ${line}`);
-    }
-    rawTextLog.push("");
-    rawTextLog.push("LINKS:");
-    for (const link of card.links) {
-      rawTextLog.push(`- ${link.text || "(ohne Text)"} => ${link.href}`);
-    }
-    rawTextLog.push("");
-    rawTextLog.push("IMAGES:");
-    for (const image of card.images) {
-      rawTextLog.push(`- ${image}`);
-    }
-    rawTextLog.push("");
-    rawTextLog.push("RAW TEXT:");
-    rawTextLog.push(card.text || "");
-  }
-
-  fs.writeFileSync(OUTPUT_TXT, textLog.join("\n"), "utf8");
+  fs.writeFileSync(OUTPUT_TXT, fullReportLines.join("\n"), "utf8");
   fs.writeFileSync(OUTPUT_JSON, JSON.stringify(events, null, 2), "utf8");
 
-  fs.writeFileSync(RAW_OUTPUT_TXT, rawTextLog.join("\n"), "utf8");
+  fs.writeFileSync(
+    FEST_MARKT_TXT,
+    createTextReport("Feste/Märkte - Wasgehtapp Übersicht V3", SOURCE_URL, festMarktEvents, durationSec),
+    "utf8"
+  );
+  fs.writeFileSync(FEST_MARKT_JSON, JSON.stringify(festMarktEvents, null, 2), "utf8");
+
+  fs.writeFileSync(RAW_OUTPUT_TXT, createRawTextReport(SOURCE_URL, rawCards), "utf8");
   fs.writeFileSync(RAW_OUTPUT_JSON, JSON.stringify(rawCards, null, 2), "utf8");
 
-  console.log(textLog.join("\n"));
+  console.log(fullReportLines.join("\n"));
 
   await browser.close();
 }
