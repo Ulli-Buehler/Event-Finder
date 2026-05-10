@@ -1,6 +1,4 @@
-
 import { chromium } from "playwright";
-// Backup nach erfolgreichem Geo-Test 
 import fs from "fs";
 
 const SOURCE_URL =
@@ -20,7 +18,32 @@ function log(line = "") {
 function normalizeText(text) {
   return String(text || "")
     .replace(/\u00a0/g, " ")
-@@ -39,6 +47,14 @@ function extractGeoFromUrl(url) {
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function cleanLocation(text) {
+  return normalizeText(text)
+    .replace(/^pin\s*/i, "")
+    .replace(/\s*map\s*link\s*$/i, "")
+    .replace(/\s*map\s*$/i, "")
+    .trim();
+}
+
+function extractGeoFromUrl(url) {
+  if (!url) return null;
+
+  const decoded = decodeURIComponent(url);
+
+  const match = decoded.match(
+    /[?&]daddr=(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)/i
+  );
+
+  if (!match) return null;
+
+  return {
+    lat: Number(match[1]),
+    lng: Number(match[2])
   };
 }
 
@@ -35,14 +58,127 @@ function eventKey(title, date, location) {
 function extractDetailBlock(lines) {
   const startIndex = lines.findIndex(line => line === "calendar");
   if (startIndex === -1) return [];
-@@ -163,10 +179,12 @@ async function readEvent(page, index) {
+
+  const endIndex = lines.findIndex(
+    (line, index) =>
+      index > startIndex &&
+      line.includes("Zum Kalender zufügen")
+  );
+
+  return lines.slice(
+    Math.max(0, startIndex - 1),
+    endIndex === -1 ? startIndex + 40 : endIndex
+  );
+}
+
+function extractFields(detailLines) {
+  const title = normalizeText(detailLines[0] || "");
+  const dateIndex = detailLines.findIndex(line => line === "calendar");
+  const pinIndex = detailLines.findIndex(line => line === "pin");
+
+  return {
+    title,
+    date:
+      dateIndex >= 0
+        ? normalizeText(detailLines[dateIndex + 1] || "")
+        : "",
+    location:
+      pinIndex >= 0
+        ? cleanLocation(detailLines[pinIndex + 1] || "")
+        : ""
+  };
+}
+
+async function waitForDetailChange(page, oldSnapshot) {
+  await page.waitForFunction(
+    previous => {
+      const text = document.body.innerText || "";
+      return (
+        text.includes("calendar") &&
+        text.includes("pin") &&
+        text !== previous
+      );
+    },
+    oldSnapshot,
+    { timeout: DETAIL_TIMEOUT_MS }
+  );
+}
+
+async function readActiveDetail(page) {
+  return await page.evaluate(() => {
+    const lines = (document.body.innerText || "")
+      .split("\n")
+      .map(line => line.trim())
+      .filter(Boolean);
+
+    const calendarIndex = lines.findIndex(line => line === "calendar");
+    const pinIndex = lines.findIndex(
+      (line, index) => index > calendarIndex && line === "pin"
+    );
+
+    const locationLine =
+      pinIndex >= 0 ? lines[pinIndex + 1] || "" : "";
+
+    const mapCandidates = Array.from(document.querySelectorAll("a.map_link"))
+      .map(a => ({
+        href: a.href || "",
+        text: (a.innerText || a.textContent || "").trim(),
+        html: a.outerHTML || ""
+      }))
+      .filter(item => item.href);
+
+    return {
+      lines,
+      calendarIndex,
+      pinIndex,
+      locationLine,
+      mapCandidates
+    };
+  });
+}
+
+async function readEvent(page, index) {
+  const cards = page.locator(".termin.inline");
+  const card = cards.nth(index);
+
+  const listText = normalizeText(await card.innerText());
+  const oldSnapshot = await page.evaluate(() => document.body.innerText || "");
+
+  await card.click({ timeout: 10000 });
+  await waitForDetailChange(page, oldSnapshot);
+
+  const active = await readActiveDetail(page);
+  const detailLines = extractDetailBlock(active.lines);
+  const fields = extractFields(detailLines);
+
+  let selectedMap = null;
+  let selectedGeo = null;
+
+  const geoCandidates = active.mapCandidates
+    .map(candidate => ({
+      href: candidate.href,
+      geo: extractGeoFromUrl(candidate.href)
+    }))
+    .filter(candidate => candidate.geo);
+
+  if (geoCandidates.length > 0) {
+    const selectedCandidate = geoCandidates[geoCandidates.length - 1];
+    selectedMap = selectedCandidate.href;
+    selectedGeo = selectedCandidate.geo;
+  }
+
+  return {
+    listText,
+    detailLines,
+    fields,
+    locationLine: active.locationLine,
+    mapCandidates: active.mapCandidates,
+    selectedMap,
+    selectedGeo
+  };
 }
 
 async function run() {
-  console.log("🔎 Debug Detail Importer V9");
-  console.log("Ziel: Geo passend zum aktiven Detailblock prüfen");
-  console.log(`Max Events: ${MAX_EVENTS}`);
-  console.log("");
   const startedAt = Date.now();
 
   log("🔎 Debug Detail Importer V10");
@@ -52,13 +188,26 @@ async function run() {
 
   const browser = await chromium.launch({ headless: true });
 
-@@ -190,48 +208,237 @@ async function run() {
+  const page = await browser.newPage({
+    userAgent:
+      "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
+    viewport: {
+      width: 390,
+      height: 844,
+      isMobile: true
+    }
+  });
+
+  await page.goto(SOURCE_URL, {
+    waitUntil: "networkidle",
+    timeout: 60000
+  });
+
+  await page.waitForTimeout(3000);
+
   const count = await page.locator(".termin.inline").count();
   const total = Math.min(count, MAX_EVENTS);
 
-  console.log(`Gefundene Container: ${count}`);
-  console.log(`Teste Events: ${total}`);
-  console.log("");
   log(`Gefundene Container: ${count}`);
   log(`Teste Events: ${total}`);
   log("");
@@ -66,7 +215,6 @@ async function run() {
   const seenKeys = new Map();
 
   for (let i = 0; i < total; i++) {
-    console.log(`--- Event ${i + 1} ---`);
     const eventStartedAt = Date.now();
 
     try {
@@ -119,19 +267,6 @@ async function run() {
         log(`   Dublette von Event ${duplicateOf}`);
       }
 
-      console.log(`Titel: ${result.fields.title}`);
-      console.log(`Datum: ${result.fields.date}`);
-      console.log(`Ort: ${result.fields.location}`);
-      console.log(`LocationLine roh: ${result.locationLine}`);
-
-      console.log("Map-Kandidaten:");
-      result.mapCandidates.slice(0, 6).forEach((item, idx) => {
-        const geo = extractGeoFromUrl(item.href);
-        console.log(
-          `${idx + 1}. ${item.href} ${
-            geo ? `=> ${geo.lat}, ${geo.lng}` : "=> keine Geo"
-          }`
-        );
       if (missing.length > 0) {
         log(`   Fehlt: ${missing.join(", ")}`);
       }
@@ -155,22 +290,12 @@ async function run() {
         durationMs
       });
 
-      console.log(
-        `Ausgewählt: ${
-          result.selectedGeo
-            ? `${result.selectedGeo.lat}, ${result.selectedGeo.lng}`
-            : "KEINE GEO"
-        }`
       log(
         `${String(i + 1).padStart(2, "0")}. FEHLER | ${error.message} | ${durationMs}ms`
       );
     }
   }
 
-      console.log("");
-    } catch (error) {
-      console.log(`FEHLER: ${error.message}`);
-      console.log("");
   const durationMs = Date.now() - startedAt;
 
   const okEvents = jsonEvents.filter(event => event.ok);
@@ -298,10 +423,8 @@ async function run() {
   fs.writeFileSync("debug-output.json", JSON.stringify(output, null, 2), "utf8");
 
   await browser.close();
-  console.log("✅ Debug-Test V9 beendet.");
 }
 
-run();
 run().catch(error => {
   console.error(error);
   fs.writeFileSync("debug-output.txt", String(error.stack || error), "utf8");
