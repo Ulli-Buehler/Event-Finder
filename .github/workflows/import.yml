@@ -20,7 +20,7 @@ jobs:
         run: npm install
 
       - name: Playwright Browser installieren
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install chromium
 
       - name: Debug Importer starten
         run: node debug-detail-importer.js
