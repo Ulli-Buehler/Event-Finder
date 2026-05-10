@@ -1,7 +1,10 @@
+
 import { chromium } from "playwright";
+// Backup nach erfolgreichem Geo-Test 
 import fs from "fs";
 
-const SOURCE_URL = "https://www.wasgehtapp.de/";
+const SOURCE_URL =
+  "https://www.wasgehtapp.de/index.php?geo_id=15546&ort=Dettingen%20unter%20Teck&x=9.45&y=48.6167&einwohner=5603&region=01&select_ort=1&radius=40";
 
 const MAX_EVENTS = 50;
 const DETAIL_TIMEOUT_MS = 5000;
@@ -17,334 +20,302 @@ function log(line = "") {
 function normalizeText(text) {
   return String(text || "")
     .replace(/\u00a0/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function cleanLocation(text) {
-  return normalizeText(text)
-    .replace(/^pin\s*/i, "")
-    .replace(/\s*map\s*link\s*$/i, "")
-    .replace(/\s*map\s*$/i, "")
-    .trim();
-}
-
-function extractGeoFromUrl(url) {
-  if (!url) return null;
-
-  const match = url.match(
-    /[?&]daddr=(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)/
-  );
-
-  if (!match) return null;
-
-  return {
-    lat: Number(match[1]),
-    lng: Number(match[2]),
+@@ -39,6 +47,14 @@ function extractGeoFromUrl(url) {
   };
 }
 
-async function readActiveDetail(page) {
-  return await page.evaluate(() => {
-    const panels = [...document.querySelectorAll(".termin_detail")];
+function geoToText(geo) {
+  return geo ? `${geo.lat}, ${geo.lng}` : "";
+}
 
-    const visible = panels.find((el) => {
-      const style = window.getComputedStyle(el);
-      return (
-        style.display !== "none" &&
-        style.visibility !== "hidden" &&
-        el.innerText.trim().length > 0
-      );
-    });
+function eventKey(title, date, location) {
+  return `${normalizeText(title)}|${normalizeText(date)}|${normalizeText(location)}`;
+}
 
-    if (!visible) return null;
-
-    const title =
-      visible.querySelector("h1,h2,h3")?.innerText?.trim() || "";
-
-    const text = visible.innerText || "";
-
-    const links = [
-      ...visible.querySelectorAll("a[href*='maps.google'], a[href*='daddr=']")
-    ].map((a) => a.href);
-
-    return {
-      title,
-      text,
-      links,
-    };
-  });
+function extractDetailBlock(lines) {
+  const startIndex = lines.findIndex(line => line === "calendar");
+  if (startIndex === -1) return [];
+@@ -163,10 +179,12 @@ async function readEvent(page, index) {
 }
 
 async function run() {
-  const startTime = Date.now();
-
-  let okCount = 0;
-  let warningCount = 0;
-  let errorCount = 0;
-  let geoCount = 0;
-  let noGeoCount = 0;
-  let duplicateCount = 0;
-  let timeoutCount = 0;
-
-  const seenKeys = new Map();
+  console.log("🔎 Debug Detail Importer V9");
+  console.log("Ziel: Geo passend zum aktiven Detailblock prüfen");
+  console.log(`Max Events: ${MAX_EVENTS}`);
+  console.log("");
+  const startedAt = Date.now();
 
   log("🔎 Debug Detail Importer V10");
   log("Ziel: Geo-Fix + strukturierte Logs + Zusammenfassung");
   log(`Max Events: ${MAX_EVENTS}`);
   log("");
 
-  const browser = await chromium.launch({
-    headless: true,
-  });
+  const browser = await chromium.launch({ headless: true });
 
-  const page = await browser.newPage();
+@@ -190,48 +208,237 @@ async function run() {
+  const count = await page.locator(".termin.inline").count();
+  const total = Math.min(count, MAX_EVENTS);
 
-  await page.goto(SOURCE_URL, {
-    waitUntil: "domcontentloaded",
-    timeout: 60000,
-  });
-
-  await page.waitForTimeout(3000);
-
-  const containers = await page.$$(".termin.inline");
-
-  log(`Gefundene Container: ${containers.length}`);
-
-  const events = containers.slice(0, MAX_EVENTS);
-
-  log(`Teste Events: ${events.length}`);
+  console.log(`Gefundene Container: ${count}`);
+  console.log(`Teste Events: ${total}`);
+  console.log("");
+  log(`Gefundene Container: ${count}`);
+  log(`Teste Events: ${total}`);
   log("");
 
-  for (let i = 0; i < events.length; i++) {
-    const eventStart = Date.now();
+  const seenKeys = new Map();
+
+  for (let i = 0; i < total; i++) {
+    console.log(`--- Event ${i + 1} ---`);
+    const eventStartedAt = Date.now();
 
     try {
-      const container = events[i];
+      const result = await readEvent(page, i);
+      const durationMs = Date.now() - eventStartedAt;
 
-      await container.scrollIntoViewIfNeeded();
+      const title = result.fields.title;
+      const date = result.fields.date;
+      const location = result.fields.location;
+      const geoText = geoToText(result.selectedGeo);
+      const key = eventKey(title, date, location);
 
-      const title = normalizeText(
-        await container.$eval(".titel", (el) => el.innerText).catch(() => "")
-      );
+      const missing = [];
+      if (!title) missing.push("Titel");
+      if (!date) missing.push("Datum");
+      if (!location) missing.push("Ort");
+      if (!result.selectedGeo) missing.push("Geo");
 
-      const date = normalizeText(
-        await container.$eval(".datum", (el) => el.innerText).catch(() => "")
-      );
-
-      const location = cleanLocation(
-        await container.$eval(".ort", (el) => el.innerText).catch(() => "")
-      );
-
-      const key = `${title}|${date}|${location}`;
-
-      let duplicateOf = null;
-
-      if (seenKeys.has(key)) {
-        duplicateCount++;
-        duplicateOf = seenKeys.get(key);
-      } else {
+      const duplicateOf = seenKeys.has(key) ? seenKeys.get(key) : null;
+      if (!duplicateOf) {
         seenKeys.set(key, i + 1);
       }
 
-      await container.click();
+      const ok = missing.length === 0;
 
-      try {
-        await page.waitForFunction(() => {
-          const detail = document.querySelector(".termin_detail");
-          if (!detail) return false;
+      const eventData = {
+        index: i + 1,
+        ok,
+        title,
+        date,
+        location,
+        locationLine: result.locationLine,
+        selectedGeo: result.selectedGeo,
+        selectedGeoText: geoText,
+        selectedMap: result.selectedMap,
+        mapCandidateCount: result.mapCandidates.length,
+        duplicateOf,
+        missing,
+        error: null,
+        durationMs
+      };
 
-          const style = window.getComputedStyle(detail);
+      jsonEvents.push(eventData);
 
-          return (
-            style.display !== "none" &&
-            detail.innerText.trim().length > 0
-          );
-        }, { timeout: DETAIL_TIMEOUT_MS });
-      } catch (err) {
-        timeoutCount++;
-        throw err;
-      }
-
-      const detail = await readActiveDetail(page);
-
-      let geo = null;
-
-      if (detail?.links?.length) {
-        const lastLink = detail.links[detail.links.length - 1];
-        geo = extractGeoFromUrl(lastLink);
-      }
-
-      const duration = Date.now() - eventStart;
-
-      const status = geo ? "OK" : "WARNUNG";
-
-      if (geo) {
-        okCount++;
-        geoCount++;
-      } else {
-        warningCount++;
-        noGeoCount++;
-      }
-
-      const line =
-        `${String(i + 1).padStart(2, "0")}. ${status} | ` +
-        `${title || "Unbekannt"} | ` +
-        `${date || "Kein Datum"} | ` +
-        `${location || "Ort unbekannt"} | ` +
-        `${geo ? `${geo.lat}, ${geo.lng}` : "KEIN GEO"} | ` +
-        `${duration}ms`;
-
-      log(line);
+      log(
+        `${String(i + 1).padStart(2, "0")}. ${ok ? "OK" : "WARNUNG"} | ${title || "?"} | ${date || "?"} | ${location || "?"} | ${geoText || "KEINE GEO"} | ${durationMs}ms`
+      );
 
       if (duplicateOf) {
         log(`   Dublette von Event ${duplicateOf}`);
       }
 
+      console.log(`Titel: ${result.fields.title}`);
+      console.log(`Datum: ${result.fields.date}`);
+      console.log(`Ort: ${result.fields.location}`);
+      console.log(`LocationLine roh: ${result.locationLine}`);
+
+      console.log("Map-Kandidaten:");
+      result.mapCandidates.slice(0, 6).forEach((item, idx) => {
+        const geo = extractGeoFromUrl(item.href);
+        console.log(
+          `${idx + 1}. ${item.href} ${
+            geo ? `=> ${geo.lat}, ${geo.lng}` : "=> keine Geo"
+          }`
+        );
+      if (missing.length > 0) {
+        log(`   Fehlt: ${missing.join(", ")}`);
+      }
+    } catch (error) {
+      const durationMs = Date.now() - eventStartedAt;
+
       jsonEvents.push({
         index: i + 1,
-        status,
-        title,
-        date,
-        location,
-        geo,
-        durationMs: duration,
-        duplicateOf,
+        ok: false,
+        title: "",
+        date: "",
+        location: "",
+        locationLine: "",
+        selectedGeo: null,
+        selectedGeoText: "",
+        selectedMap: null,
+        mapCandidateCount: 0,
+        duplicateOf: null,
+        missing: ["Event"],
+        error: error.message,
+        durationMs
       });
-    } catch (err) {
-      const duration = Date.now() - eventStart;
 
-      errorCount++;
-      noGeoCount++;
-
-      const msg = normalizeText(err.message);
-
+      console.log(
+        `Ausgewählt: ${
+          result.selectedGeo
+            ? `${result.selectedGeo.lat}, ${result.selectedGeo.lng}`
+            : "KEINE GEO"
+        }`
       log(
-        `${String(i + 1).padStart(2, "0")}. FEHLER | ${msg} | ${duration}ms`
+        `${String(i + 1).padStart(2, "0")}. FEHLER | ${error.message} | ${durationMs}ms`
       );
-
-      jsonEvents.push({
-        index: i + 1,
-        status: "FEHLER",
-        error: msg,
-        durationMs: duration,
-      });
     }
   }
 
-  await browser.close();
+      console.log("");
+    } catch (error) {
+      console.log(`FEHLER: ${error.message}`);
+      console.log("");
+  const durationMs = Date.now() - startedAt;
 
-  const totalDuration = ((Date.now() - startTime) / 1000).toFixed(1);
+  const okEvents = jsonEvents.filter(event => event.ok);
+  const errorEvents = jsonEvents.filter(event => event.error);
+  const warningEvents = jsonEvents.filter(
+    event => !event.ok && !event.error
+  );
+  const geoEvents = jsonEvents.filter(event => event.selectedGeo);
+  const noGeoEvents = jsonEvents.filter(event => !event.selectedGeo);
+  const duplicates = jsonEvents.filter(event => event.duplicateOf);
+  const timeoutEvents = jsonEvents.filter(event =>
+    String(event.error || "").toLowerCase().includes("timeout")
+  );
+
+  const geoByLocation = new Map();
+  const suspiciousGeo = [];
+
+  for (const event of jsonEvents) {
+    if (!event.location || !event.selectedGeoText) continue;
+
+    if (!geoByLocation.has(event.location)) {
+      geoByLocation.set(event.location, event.selectedGeoText);
+      continue;
+    }
+
+    const previousGeo = geoByLocation.get(event.location);
+    if (previousGeo !== event.selectedGeoText) {
+      suspiciousGeo.push({
+        index: event.index,
+        title: event.title,
+        location: event.location,
+        previousGeo,
+        currentGeo: event.selectedGeoText
+      });
+    }
+  }
 
   log("");
   log("========================");
   log("DEBUG SUMMARY");
   log("========================");
-  log(`Events getestet: ${events.length}`);
-  log(`Erfolgreich: ${okCount}`);
-  log(`Warnungen: ${warningCount}`);
-  log(`Fehler: ${errorCount}`);
-  log(`Mit Geo: ${geoCount}`);
-  log(`Ohne Geo: ${noGeoCount}`);
-  log(`Dubletten: ${duplicateCount}`);
-  log(`Timeouts: ${timeoutCount}`);
-  log(`Gesamtdauer: ${totalDuration}s`);
-  log(
-    `Durchschnitt: ${
-      events.length
-        ? (Number(totalDuration) / events.length).toFixed(2)
-        : 0
-    }s pro Event`
-  );
+  log(`Events getestet: ${total}`);
+  log(`Erfolgreich: ${okEvents.length}`);
+  log(`Warnungen: ${warningEvents.length}`);
+  log(`Fehler: ${errorEvents.length}`);
+  log(`Mit Geo: ${geoEvents.length}`);
+  log(`Ohne Geo: ${noGeoEvents.length}`);
+  log(`Dubletten: ${duplicates.length}`);
+  log(`Timeouts: ${timeoutEvents.length}`);
+  log(`Gesamtdauer: ${(durationMs / 1000).toFixed(1)}s`);
+  log(`Durchschnitt: ${(durationMs / total / 1000).toFixed(2)}s pro Event`);
+  log("");
 
-  const errors = jsonEvents.filter((e) => e.status === "FEHLER");
-
-  if (errors.length) {
-    log("");
+  if (errorEvents.length > 0) {
     log("Fehlerliste:");
-
-    for (const e of errors) {
-      log(`- Event ${e.index}: ${e.error}`);
+    for (const event of errorEvents) {
+      log(`- Event ${event.index}: ${event.error}`);
     }
+    log("");
   }
 
-  const noGeo = jsonEvents.filter(
-    (e) => e.status !== "FEHLER" && !e.geo
-  );
-
-  if (noGeo.length) {
-    log("");
+  if (noGeoEvents.length > 0) {
     log("Ohne Geo:");
-
-    for (const e of noGeo) {
-      log(`- Event ${e.index}: ${e.title} | ${e.location}`);
+    for (const event of noGeoEvents) {
+      log(`- Event ${event.index}: ${event.title || "Unbekannt"} | ${event.location || "Ort unbekannt"}`);
     }
+    log("");
   }
 
-  const duplicates = jsonEvents.filter((e) => e.duplicateOf);
-
-  if (duplicates.length) {
-    log("");
+  if (duplicates.length > 0) {
     log("Dubletten:");
+    for (const event of duplicates) {
+      log(`- Event ${event.index} ist Dublette von Event ${event.duplicateOf}: ${event.title}`);
+    }
+    log("");
+  }
 
-    for (const e of duplicates) {
+  if (suspiciousGeo.length > 0) {
+    log("Geo-Warnungen:");
+    for (const item of suspiciousGeo) {
       log(
-        `- Event ${e.index} ist Dublette von Event ${e.duplicateOf}: ${e.title}`
+        `- Event ${item.index}: gleicher Ort "${item.location}" aber andere Geo (${item.previousGeo} vs ${item.currentGeo})`
       );
     }
+    log("");
   }
 
-  log("");
   log("Plausibilitätscheck:");
-
-  if (noGeoCount === 0) {
-    log("✅ Alle Events haben Geo");
-  } else {
-    log("⚠️ Es fehlen Geodaten");
-  }
-
-  if (errorCount === 0) {
-    log("✅ Keine Fehler");
-  } else {
-    log("⚠️ Fehler vorhanden");
-  }
-
-  if (timeoutCount === 0) {
-    log("✅ Keine Timeouts");
-  } else {
-    log("⚠️ Timeout-Probleme vorhanden");
-  }
-
-  log("✅ Gleiche Orte haben gleiche Geo");
+  log(noGeoEvents.length === 0 ? "✅ Keine fehlenden Geodaten" : "⚠️ Es fehlen Geodaten");
+  log(errorEvents.length === 0 ? "✅ Keine Fehler" : "⚠️ Fehler vorhanden");
+  log(timeoutEvents.length === 0 ? "✅ Keine Timeouts" : "⚠️ Timeout-Probleme vorhanden");
+  log(suspiciousGeo.length === 0 ? "✅ Gleiche Orte haben gleiche Geo" : "⚠️ Gleiche Orte mit unterschiedlicher Geo gefunden");
   log("✅ Debug-Test beendet.");
 
   const output = {
-    createdAt: new Date().toISOString(),
-    maxEvents: MAX_EVENTS,
-    summary: {
-      success: okCount,
-      warnings: warningCount,
-      errors: errorCount,
-      withGeo: geoCount,
-      withoutGeo: noGeoCount,
-      duplicates: duplicateCount,
-      timeouts: timeoutCount,
-      durationSeconds: totalDuration,
+    meta: {
+      version: "V10",
+      sourceUrl: SOURCE_URL,
+      maxEvents: MAX_EVENTS,
+      foundContainers: count,
+      testedEvents: total,
+      durationMs,
+      averageDurationMs: Math.round(durationMs / total)
     },
-    events: jsonEvents,
+    summary: {
+      ok: okEvents.length,
+      warnings: warningEvents.length,
+      errors: errorEvents.length,
+      withGeo: geoEvents.length,
+      withoutGeo: noGeoEvents.length,
+      duplicates: duplicates.length,
+      timeouts: timeoutEvents.length,
+      suspiciousGeo: suspiciousGeo.length
+    },
+    problems: {
+      errors: errorEvents,
+      withoutGeo: noGeoEvents,
+      duplicates,
+      suspiciousGeo
+    },
+    events: jsonEvents
   };
 
-  fs.writeFileSync(
-    "debug-output.txt",
-    textLog.join("\n"),
-    "utf8"
-  );
+  fs.writeFileSync("debug-output.txt", textLog.join("\n"), "utf8");
+  fs.writeFileSync("debug-output.json", JSON.stringify(output, null, 2), "utf8");
 
-  fs.writeFileSync(
-    "debug-output.json",
-    JSON.stringify(output, null, 2),
-    "utf8"
-  );
+  await browser.close();
+  console.log("✅ Debug-Test V9 beendet.");
 }
 
 run();
+run().catch(error => {
+  console.error(error);
+  fs.writeFileSync("debug-output.txt", String(error.stack || error), "utf8");
+  fs.writeFileSync(
+    "debug-output.json",
+    JSON.stringify(
+      {
+        fatal: true,
+        error: String(error.stack || error)
+      },
+      null,
+      2
+    ),
+    "utf8"
+  );
+  process.exit(1);
+});
