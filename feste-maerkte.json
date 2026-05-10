@@ -1,38 +1,11 @@
 [
   {
     "index": 2,
-    "category": "Konzert",
-    "title": "Katakombenfest",
-    "subtitle": "",
-    "dateText": "Sa, 16.05",
-    "time": "20:00 Uhr",
-    "location": "Sudhaus (Peripherie), Tübingen",
-    "distanceKm": null,
-    "tags": [
-      "rock",
-      "punk",
-      "indie",
-      "rock-n-roll"
-    ],
-    "imageUrl": "https://www.wasgehtapp.de/images/locs/3737_s.jpg",
-    "detailUrl": "https://www.wasgehtapp.de/termin_details.php?id=44177092&tipp=1&date=2026-05-16",
-    "locationUrl": "https://www.wasgehtapp.de/location.php?id=3737",
-    "externalUrls": [
-      "https://www.sudhaus-tuebingen.de/programm/details/katakombenfest-4.html",
-      "http://www.sudhaus-tuebingen.de/"
-    ],
-    "rawText": "Konzert: Katakombenfest *\ntags rock, punk, indie, rock-n-roll\nSa, 16.05, 20:00 Uhr pin Sudhaus (Peripherie), Tübingen",
-    "rawLines": [
-      "Konzert: Katakombenfest *",
-      "tags rock, punk, indie, rock-n-roll",
-      "Sa, 16.05, 20:00 Uhr   pin Sudhaus (Peripherie), Tübingen"
-    ]
-  },
-  {
-    "index": 7,
     "category": "",
     "title": "Kanahi Yamashita - SICG-Festival",
     "subtitle": "",
+    "targetDate": "2026-05-10",
+    "pageDateText": "So., 10. Mai 2026",
     "dateText": "",
     "time": "11:00 Uhr",
     "location": "Hochschule für Musik und Darstellende Kunst (Kammermusiksaal), Stuttgart",
@@ -54,10 +27,12 @@
     ]
   },
   {
-    "index": 28,
+    "index": 23,
     "category": "Johann Sebastian Bach",
     "title": "h-Moll-Messe - Chor-Orchesterkonzert der Winnender Kantorei",
     "subtitle": "Winnender Kantorei",
+    "targetDate": "2026-05-10",
+    "pageDateText": "So., 10. Mai 2026",
     "dateText": "",
     "time": "18:00 Uhr",
     "location": "Winnenden, Schlosskirche, Winnenden",
@@ -75,10 +50,12 @@
     ]
   },
   {
-    "index": 37,
+    "index": 32,
     "category": "",
     "title": "Konzerte 2025/26 - Quadro Nuevo „HAPPY Deluxe“",
     "subtitle": "",
+    "targetDate": "2026-05-10",
+    "pageDateText": "So., 10. Mai 2026",
     "dateText": "",
     "time": "19:00 Uhr",
     "location": "Sport- und Festhalle Musberg, Leinfelden-Echterdingen",
@@ -98,10 +75,12 @@
     ]
   },
   {
-    "index": 42,
+    "index": 37,
     "category": "",
     "title": "Klassisches Sinfoniekonzert",
     "subtitle": "Neue Philharmonie, Moderation: Lutz..",
+    "targetDate": "2026-05-10",
+    "pageDateText": "So., 10. Mai 2026",
     "dateText": "",
     "time": "19:30 Uhr",
     "location": "Festhalle Onstmettingen, Albstadt",
@@ -119,10 +98,12 @@
     ]
   },
   {
-    "index": 79,
+    "index": 74,
     "category": "",
     "title": "“Die Baustelle steht Kopf” – Akrobatik-Zirkus-Familien Show",
     "subtitle": "",
+    "targetDate": "2026-05-10",
+    "pageDateText": "So., 10. Mai 2026",
     "dateText": "",
     "time": "16:00 Uhr",
     "location": "Eliszis Jahrmarktstheater, Stuttgart",
@@ -145,10 +126,12 @@
     ]
   },
   {
-    "index": 84,
+    "index": 79,
     "category": "",
     "title": "Kleine Reihe 2025/2026 - \"American Dream\" musica varia ensemble",
     "subtitle": "musica varia ensemble",
+    "targetDate": "2026-05-10",
+    "pageDateText": "So., 10. Mai 2026",
     "dateText": "",
     "time": "17:00 Uhr",
     "location": "Melchior Festhalle, Neckartenzlingen",
@@ -166,10 +149,12 @@
     ]
   },
   {
-    "index": 91,
+    "index": 86,
     "category": "",
     "title": "MEMENTO MORI – Deine letzte Stunde | Böblingen - Zirkus des Horrors",
     "subtitle": "",
+    "targetDate": "2026-05-10",
+    "pageDateText": "So., 10. Mai 2026",
     "dateText": "",
     "time": "18:00 Uhr",
     "location": "Festplatz Flugfeld, Böblingen",
@@ -188,10 +173,12 @@
     ]
   },
   {
-    "index": 107,
+    "index": 102,
     "category": "",
     "title": "WE WANT YOU! Die Job- und Karrieremesse in Neu-Ulm",
     "subtitle": "",
+    "targetDate": "2026-05-10",
+    "pageDateText": "So., 10. Mai 2026",
     "dateText": "",
     "time": "10:00 Uhr",
     "location": "Ratiopharm Arena, Neu-Ulm",
