@@ -1,9 +1,7 @@
 {
-  "createdAt": "2026-05-10T05:13:09.871Z",
+  "createdAt": "2026-05-10T05:27:24.959Z",
   "maxEvents": 50,
-  "events": [],
   "summary": {
-    "eventsTested": 0,
     "success": 0,
     "warnings": 0,
     "errors": 0,
@@ -11,6 +9,7 @@
     "withoutGeo": 0,
     "duplicates": 0,
     "timeouts": 0,
-    "durationSeconds": "3.8"
-  }
+    "durationSeconds": "4.9"
+  },
+  "events": []
 }
