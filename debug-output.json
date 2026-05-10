@@ -3,25 +3,25 @@
     "version": "V10",
     "sourceUrl": "https://www.wasgehtapp.de/index.php?geo_id=15546&ort=Dettingen%20unter%20Teck&x=9.45&y=48.6167&einwohner=5603&region=01&select_ort=1&radius=40",
     "maxEvents": 50,
-    "foundContainers": 206,
+    "foundContainers": 205,
     "testedEvents": 50,
-    "durationMs": 47586,
-    "averageDurationMs": 952
+    "durationMs": 64090,
+    "averageDurationMs": 1282
   },
   "summary": {
-    "ok": 47,
+    "ok": 46,
     "warnings": 0,
-    "errors": 3,
-    "withGeo": 47,
-    "withoutGeo": 3,
+    "errors": 4,
+    "withGeo": 46,
+    "withoutGeo": 4,
     "duplicates": 1,
-    "timeouts": 3,
+    "timeouts": 4,
     "suspiciousGeo": 0
   },
   "problems": {
     "errors": [
       {
-        "index": 17,
+        "index": 8,
         "ok": false,
         "title": "",
         "date": "",
@@ -35,11 +35,11 @@
         "missing": [
           "Event"
         ],
-        "error": "page.waitForFunction: Timeout 5000ms exceeded.",
-        "durationMs": 5027
+        "error": "page.waitForFunction: Timeout 8000ms exceeded.",
+        "durationMs": 8138
       },
       {
-        "index": 27,
+        "index": 22,
         "ok": false,
         "title": "",
         "date": "",
@@ -53,11 +53,11 @@
         "missing": [
           "Event"
         ],
-        "error": "page.waitForFunction: Timeout 5000ms exceeded.",
-        "durationMs": 5022
+        "error": "page.waitForFunction: Timeout 8000ms exceeded.",
+        "durationMs": 8144
       },
       {
-        "index": 43,
+        "index": 39,
         "ok": false,
         "title": "",
         "date": "",
@@ -71,13 +71,31 @@
         "missing": [
           "Event"
         ],
-        "error": "page.waitForFunction: Timeout 5000ms exceeded.",
-        "durationMs": 5090
+        "error": "page.waitForFunction: Timeout 8000ms exceeded.",
+        "durationMs": 8122
+      },
+      {
+        "index": 47,
+        "ok": false,
+        "title": "",
+        "date": "",
+        "location": "",
+        "locationLine": "",
+        "selectedGeo": null,
+        "selectedGeoText": "",
+        "selectedMap": null,
+        "mapCandidateCount": 0,
+        "duplicateOf": null,
+        "missing": [
+          "Event"
+        ],
+        "error": "page.waitForFunction: Timeout 8000ms exceeded.",
+        "durationMs": 8141
       }
     ],
     "withoutGeo": [
       {
-        "index": 17,
+        "index": 8,
         "ok": false,
         "title": "",
         "date": "",
@@ -91,11 +109,11 @@
         "missing": [
           "Event"
         ],
-        "error": "page.waitForFunction: Timeout 5000ms exceeded.",
-        "durationMs": 5027
+        "error": "page.waitForFunction: Timeout 8000ms exceeded.",
+        "durationMs": 8138
       },
       {
-        "index": 27,
+        "index": 22,
         "ok": false,
         "title": "",
         "date": "",
@@ -109,11 +127,11 @@
         "missing": [
           "Event"
         ],
-        "error": "page.waitForFunction: Timeout 5000ms exceeded.",
-        "durationMs": 5022
+        "error": "page.waitForFunction: Timeout 8000ms exceeded.",
+        "durationMs": 8144
       },
       {
-        "index": 43,
+        "index": 39,
         "ok": false,
         "title": "",
         "date": "",
@@ -127,8 +145,26 @@
         "missing": [
           "Event"
         ],
-        "error": "page.waitForFunction: Timeout 5000ms exceeded.",
-        "durationMs": 5090
+        "error": "page.waitForFunction: Timeout 8000ms exceeded.",
+        "durationMs": 8122
+      },
+      {
+        "index": 47,
+        "ok": false,
+        "title": "",
+        "date": "",
+        "location": "",
+        "locationLine": "",
+        "selectedGeo": null,
+        "selectedGeoText": "",
+        "selectedMap": null,
+        "mapCandidateCount": 0,
+        "duplicateOf": null,
+        "missing": [
+          "Event"
+        ],
+        "error": "page.waitForFunction: Timeout 8000ms exceeded.",
+        "durationMs": 8141
       }
     ],
     "duplicates": [
@@ -149,7 +185,7 @@
         "duplicateOf": 1,
         "missing": [],
         "error": null,
-        "durationMs": 198
+        "durationMs": 467
       }
     ],
     "suspiciousGeo": []
@@ -172,7 +208,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 229
+      "durationMs": 267
     },
     {
       "index": 2,
@@ -191,7 +227,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 200
+      "durationMs": 259
     },
     {
       "index": 3,
@@ -210,7 +246,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 420
+      "durationMs": 1113
     },
     {
       "index": 4,
@@ -229,7 +265,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1060
+      "durationMs": 249
     },
     {
       "index": 5,
@@ -248,7 +284,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 200
+      "durationMs": 1112
     },
     {
       "index": 6,
@@ -267,7 +303,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1049
+      "durationMs": 227
     },
     {
       "index": 7,
@@ -286,26 +322,25 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 172
+      "durationMs": 462
     },
     {
       "index": 8,
-      "ok": true,
-      "title": "Bausinger Matinee: 100 Jahre Hermann Bausinger",
-      "date": "heute, 11:00 Uhr",
-      "location": "Stadtbibliothek, Reutlingen",
-      "locationLine": "Stadtbibliothek, Reutlingen map",
-      "selectedGeo": {
-        "lat": 48.5069,
-        "lng": 9.2038
-      },
-      "selectedGeoText": "48.5069, 9.2038",
-      "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.5069,9.2038&ll=",
-      "mapCandidateCount": 8,
+      "ok": false,
+      "title": "",
+      "date": "",
+      "location": "",
+      "locationLine": "",
+      "selectedGeo": null,
+      "selectedGeoText": "",
+      "selectedMap": null,
+      "mapCandidateCount": 0,
       "duplicateOf": null,
-      "missing": [],
-      "error": null,
-      "durationMs": 1063
+      "missing": [
+        "Event"
+      ],
+      "error": "page.waitForFunction: Timeout 8000ms exceeded.",
+      "durationMs": 8138
     },
     {
       "index": 9,
@@ -320,11 +355,11 @@
       },
       "selectedGeoText": "48.7073, 8.99412",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7073,8.99412&ll=",
-      "mapCandidateCount": 9,
+      "mapCandidateCount": 8,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 206
+      "durationMs": 244
     },
     {
       "index": 10,
@@ -339,11 +374,11 @@
       },
       "selectedGeoText": "48.9311, 8.95968",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.9311,8.95968&ll=",
-      "mapCandidateCount": 10,
+      "mapCandidateCount": 9,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1062
+      "durationMs": 305
     },
     {
       "index": 11,
@@ -358,11 +393,11 @@
       },
       "selectedGeoText": "48.4016, 9.98614",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4016,9.98614&ll=",
-      "mapCandidateCount": 11,
+      "mapCandidateCount": 10,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 215
+      "durationMs": 1113
     },
     {
       "index": 12,
@@ -377,11 +412,11 @@
       },
       "selectedGeoText": "48.7219, 9.34624",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7219,9.34624&ll=",
-      "mapCandidateCount": 12,
+      "mapCandidateCount": 11,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1067
+      "durationMs": 247
     },
     {
       "index": 13,
@@ -396,11 +431,11 @@
       },
       "selectedGeoText": "48.3976, 9.99129",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.3976,9.99129&ll=",
-      "mapCandidateCount": 13,
+      "mapCandidateCount": 12,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 201
+      "durationMs": 1101
     },
     {
       "index": 14,
@@ -415,11 +450,11 @@
       },
       "selectedGeoText": "48.411, 9.96429",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.411,9.96429&ll=",
-      "mapCandidateCount": 14,
+      "mapCandidateCount": 13,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1066
+      "durationMs": 251
     },
     {
       "index": 15,
@@ -434,11 +469,11 @@
       },
       "selectedGeoText": "48.7061, 9.58463",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7061,9.58463&ll=",
-      "mapCandidateCount": 15,
+      "mapCandidateCount": 14,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 198
+      "durationMs": 1098
     },
     {
       "index": 16,
@@ -453,29 +488,30 @@
       },
       "selectedGeoText": "48.4758, 8.93421",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4758,8.93421&ll=",
+      "mapCandidateCount": 15,
+      "duplicateOf": null,
+      "missing": [],
+      "error": null,
+      "durationMs": 215
+    },
+    {
+      "index": 17,
+      "ok": true,
+      "title": "Minizirkus Pipo",
+      "date": "heute, 16:00 Uhr",
+      "location": "Dreigroschentheater, Stuttgart",
+      "locationLine": "Dreigroschentheater, Stuttgart map link",
+      "selectedGeo": {
+        "lat": 48.7651,
+        "lng": 9.16927
+      },
+      "selectedGeoText": "48.7651, 9.16927",
+      "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7651,9.16927&ll=",
       "mapCandidateCount": 16,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1049
-    },
-    {
-      "index": 17,
-      "ok": false,
-      "title": "",
-      "date": "",
-      "location": "",
-      "locationLine": "",
-      "selectedGeo": null,
-      "selectedGeoText": "",
-      "selectedMap": null,
-      "mapCandidateCount": 0,
-      "duplicateOf": null,
-      "missing": [
-        "Event"
-      ],
-      "error": "page.waitForFunction: Timeout 5000ms exceeded.",
-      "durationMs": 5027
+      "durationMs": 1100
     },
     {
       "index": 18,
@@ -494,7 +530,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 190
+      "durationMs": 217
     },
     {
       "index": 19,
@@ -513,7 +549,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 201
+      "durationMs": 1099
     },
     {
       "index": 20,
@@ -532,7 +568,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1065
+      "durationMs": 222
     },
     {
       "index": 21,
@@ -551,26 +587,25 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 204
+      "durationMs": 473
     },
     {
       "index": 22,
-      "ok": true,
-      "title": "Studierende der Orgelklassen",
-      "date": "heute, 17:00 Uhr (Konzertsaal)",
-      "location": "Hochschule für Musik und Darstellende Kunst , Stuttgart",
-      "locationLine": "Hochschule für Musik und Darstellende Kunst , Stuttgart map link",
-      "selectedGeo": {
-        "lat": 48.78,
-        "lng": 9.18805
-      },
-      "selectedGeoText": "48.78, 9.18805",
-      "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.78,9.18805&ll=",
-      "mapCandidateCount": 21,
+      "ok": false,
+      "title": "",
+      "date": "",
+      "location": "",
+      "locationLine": "",
+      "selectedGeo": null,
+      "selectedGeoText": "",
+      "selectedMap": null,
+      "mapCandidateCount": 0,
       "duplicateOf": null,
-      "missing": [],
-      "error": null,
-      "durationMs": 1062
+      "missing": [
+        "Event"
+      ],
+      "error": "page.waitForFunction: Timeout 8000ms exceeded.",
+      "durationMs": 8144
     },
     {
       "index": 23,
@@ -585,11 +620,11 @@
       },
       "selectedGeoText": "48.8923, 9.19486",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8923,9.19486&ll=",
-      "mapCandidateCount": 22,
+      "mapCandidateCount": 21,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 211
+      "durationMs": 245
     },
     {
       "index": 24,
@@ -604,11 +639,11 @@
       },
       "selectedGeoText": "48.4754, 8.93582",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4754,8.93582&ll=",
-      "mapCandidateCount": 23,
+      "mapCandidateCount": 22,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1071
+      "durationMs": 251
     },
     {
       "index": 25,
@@ -623,11 +658,11 @@
       },
       "selectedGeoText": "48.3936, 9.99949",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.3936,9.99949&ll=",
-      "mapCandidateCount": 24,
+      "mapCandidateCount": 23,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 171
+      "durationMs": 1114
     },
     {
       "index": 26,
@@ -642,29 +677,30 @@
       },
       "selectedGeoText": "48.6547, 9.41548",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.6547,9.41548&ll=",
+      "mapCandidateCount": 24,
+      "duplicateOf": null,
+      "missing": [],
+      "error": null,
+      "durationMs": 256
+    },
+    {
+      "index": 27,
+      "ok": true,
+      "title": "George Dalaras",
+      "date": "heute, 18:00 Uhr (Hegel-Saal)",
+      "location": "Liederhalle, Stuttgart",
+      "locationLine": "Liederhalle, Stuttgart map link",
+      "selectedGeo": {
+        "lat": 48.7795,
+        "lng": 9.17041
+      },
+      "selectedGeoText": "48.7795, 9.17041",
+      "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7795,9.17041&ll=",
       "mapCandidateCount": 25,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1061
-    },
-    {
-      "index": 27,
-      "ok": false,
-      "title": "",
-      "date": "",
-      "location": "",
-      "locationLine": "",
-      "selectedGeo": null,
-      "selectedGeoText": "",
-      "selectedMap": null,
-      "mapCandidateCount": 0,
-      "duplicateOf": null,
-      "missing": [
-        "Event"
-      ],
-      "error": "page.waitForFunction: Timeout 5000ms exceeded.",
-      "durationMs": 5022
+      "durationMs": 1111
     },
     {
       "index": 28,
@@ -683,7 +719,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 210
+      "durationMs": 217
     },
     {
       "index": 29,
@@ -702,7 +738,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 170
+      "durationMs": 1098
     },
     {
       "index": 30,
@@ -721,7 +757,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1082
+      "durationMs": 454
     },
     {
       "index": 31,
@@ -740,7 +776,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 217
+      "durationMs": 249
     },
     {
       "index": 32,
@@ -759,7 +795,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 425
+      "durationMs": 1117
     },
     {
       "index": 33,
@@ -778,7 +814,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1057
+      "durationMs": 232
     },
     {
       "index": 34,
@@ -797,7 +833,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 200
+      "durationMs": 1116
     },
     {
       "index": 35,
@@ -816,7 +852,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1068
+      "durationMs": 217
     },
     {
       "index": 36,
@@ -835,7 +871,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 201
+      "durationMs": 1100
     },
     {
       "index": 37,
@@ -854,7 +890,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1065
+      "durationMs": 217
     },
     {
       "index": 38,
@@ -873,26 +909,25 @@
       "duplicateOf": 1,
       "missing": [],
       "error": null,
-      "durationMs": 198
+      "durationMs": 467
     },
     {
       "index": 39,
-      "ok": true,
-      "title": "Josh.",
-      "date": "heute, 19:30 Uhr (Saal)",
-      "location": "Sudhaus, Tübingen",
-      "locationLine": "Sudhaus, Tübingen map link",
-      "selectedGeo": {
-        "lat": 48.4995,
-        "lng": 9.06461
-      },
-      "selectedGeoText": "48.4995, 9.06461",
-      "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
-      "mapCandidateCount": 37,
+      "ok": false,
+      "title": "",
+      "date": "",
+      "location": "",
+      "locationLine": "",
+      "selectedGeo": null,
+      "selectedGeoText": "",
+      "selectedMap": null,
+      "mapCandidateCount": 0,
       "duplicateOf": null,
-      "missing": [],
-      "error": null,
-      "durationMs": 1070
+      "missing": [
+        "Event"
+      ],
+      "error": "page.waitForFunction: Timeout 8000ms exceeded.",
+      "durationMs": 8122
     },
     {
       "index": 40,
@@ -907,11 +942,11 @@
       },
       "selectedGeoText": "48.4995, 9.06461",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.4995,9.06461&ll=",
-      "mapCandidateCount": 38,
+      "mapCandidateCount": 37,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 229
+      "durationMs": 243
     },
     {
       "index": 41,
@@ -926,11 +961,11 @@
       },
       "selectedGeoText": "48.8127, 9.7836",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8127,9.7836&ll=",
-      "mapCandidateCount": 39,
+      "mapCandidateCount": 38,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 420
+      "durationMs": 251
     },
     {
       "index": 42,
@@ -945,29 +980,30 @@
       },
       "selectedGeoText": "48.2796, 8.99754",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.2796,8.99754&ll=",
+      "mapCandidateCount": 39,
+      "duplicateOf": null,
+      "missing": [],
+      "error": null,
+      "durationMs": 1115
+    },
+    {
+      "index": 43,
+      "ok": true,
+      "title": "Live",
+      "date": "heute, 20:00 Uhr (T2)",
+      "location": "Theaterhaus, Stuttgart",
+      "locationLine": "Theaterhaus, Stuttgart map link",
+      "selectedGeo": {
+        "lat": 48.8106,
+        "lng": 9.17919
+      },
+      "selectedGeoText": "48.8106, 9.17919",
+      "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8106,9.17919&ll=",
       "mapCandidateCount": 40,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 430
-    },
-    {
-      "index": 43,
-      "ok": false,
-      "title": "",
-      "date": "",
-      "location": "",
-      "locationLine": "",
-      "selectedGeo": null,
-      "selectedGeoText": "",
-      "selectedMap": null,
-      "mapCandidateCount": 0,
-      "duplicateOf": null,
-      "missing": [
-        "Event"
-      ],
-      "error": "page.waitForFunction: Timeout 5000ms exceeded.",
-      "durationMs": 5090
+      "durationMs": 218
     },
     {
       "index": 44,
@@ -986,7 +1022,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 193
+      "durationMs": 1099
     },
     {
       "index": 45,
@@ -1005,7 +1041,7 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 183
+      "durationMs": 219
     },
     {
       "index": 46,
@@ -1024,26 +1060,25 @@
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1064
+      "durationMs": 465
     },
     {
       "index": 47,
-      "ok": true,
-      "title": "Andreas Schaerer / Daniel Garcia (CH/ES)",
-      "date": "heute, 20:00 Uhr",
-      "location": "Dieselstrasse, Esslingen am Neckar",
-      "locationLine": "Dieselstrasse, Esslingen am Neckar map link",
-      "selectedGeo": {
-        "lat": 48.7387,
-        "lng": 9.29233
-      },
-      "selectedGeoText": "48.7387, 9.29233",
-      "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.7387,9.29233&ll=",
-      "mapCandidateCount": 44,
+      "ok": false,
+      "title": "",
+      "date": "",
+      "location": "",
+      "locationLine": "",
+      "selectedGeo": null,
+      "selectedGeoText": "",
+      "selectedMap": null,
+      "mapCandidateCount": 0,
       "duplicateOf": null,
-      "missing": [],
-      "error": null,
-      "durationMs": 202
+      "missing": [
+        "Event"
+      ],
+      "error": "page.waitForFunction: Timeout 8000ms exceeded.",
+      "durationMs": 8141
     },
     {
       "index": 48,
@@ -1058,11 +1093,11 @@
       },
       "selectedGeoText": "48.9437, 8.95799",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.9437,8.95799&ll=",
-      "mapCandidateCount": 45,
+      "mapCandidateCount": 44,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1072
+      "durationMs": 246
     },
     {
       "index": 49,
@@ -1077,11 +1112,11 @@
       },
       "selectedGeoText": "48.41, 9.99481",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.41,9.99481&ll=",
-      "mapCandidateCount": 46,
+      "mapCandidateCount": 45,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 196
+      "durationMs": 229
     },
     {
       "index": 50,
@@ -1096,11 +1131,11 @@
       },
       "selectedGeoText": "48.8081, 9.20091",
       "selectedMap": "maps://maps.google.com/maps?saddr=Current+Location&daddr=48.8081,9.20091&ll=",
-      "mapCandidateCount": 47,
+      "mapCandidateCount": 46,
       "duplicateOf": null,
       "missing": [],
       "error": null,
-      "durationMs": 1063
+      "durationMs": 1116
     }
   ]
 }

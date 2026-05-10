@@ -1,444 +1,94 @@
-import { chromium } from "playwright";
-import fs from "fs";
-
-const SOURCE_URL =
-  "https://www.wasgehtapp.de/index.php?geo_id=15546&ort=Dettingen%20unter%20Teck&x=9.45&y=48.6167&einwohner=5603&region=01&select_ort=1&radius=40";
-
-const MAX_EVENTS = 50;
-const DETAIL_TIMEOUT_MS = 8000;
-
-const textLog = [];
-const jsonEvents = [];
-
-function log(line = "") {
-  console.log(line);
-  textLog.push(line);
-}
-
-function normalizeText(text) {
-  return String(text || "")
-    .replace(/\u00a0/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function cleanLocation(text) {
-  return normalizeText(text)
-    .replace(/^pin\s*/i, "")
-    .replace(/\s*map\s*link\s*$/i, "")
-    .replace(/\s*map\s*$/i, "")
-    .trim();
-}
-
-function extractGeoFromUrl(url) {
-  if (!url) return null;
-
-  const decoded = decodeURIComponent(url);
-
-  const match = decoded.match(
-    /[?&]daddr=(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)/i
-  );
-
-  if (!match) return null;
-
-  return {
-    lat: Number(match[1]),
-    lng: Number(match[2])
-  };
-}
-
-function geoToText(geo) {
-  return geo ? `${geo.lat}, ${geo.lng}` : "";
-}
-
-function eventKey(title, date, location) {
-  return `${normalizeText(title)}|${normalizeText(date)}|${normalizeText(location)}`;
-}
-
-function extractDetailBlock(lines) {
-  const startIndex = lines.findIndex(line => line === "calendar");
-  if (startIndex === -1) return [];
-
-  const endIndex = lines.findIndex(
-    (line, index) =>
-      index > startIndex &&
-      line.includes("Zum Kalender zufügen")
-  );
-
-  return lines.slice(
-    Math.max(0, startIndex - 1),
-    endIndex === -1 ? startIndex + 40 : endIndex
-  );
-}
-
-function extractFields(detailLines) {
-  const title = normalizeText(detailLines[0] || "");
-  const dateIndex = detailLines.findIndex(line => line === "calendar");
-  const pinIndex = detailLines.findIndex(line => line === "pin");
-
-  return {
-    title,
-    date:
-      dateIndex >= 0
-        ? normalizeText(detailLines[dateIndex + 1] || "")
-        : "",
-    location:
-      pinIndex >= 0
-        ? cleanLocation(detailLines[pinIndex + 1] || "")
-        : ""
-  };
-}
-
-async function waitForDetailChange(page, oldSnapshot) {
-  await page.waitForFunction(
-    previous => {
-      const text = document.body.innerText || "";
-      return (
-        text.includes("calendar") &&
-        text.includes("pin") &&
-        text !== previous
-      );
-    },
-    oldSnapshot,
-    { timeout: DETAIL_TIMEOUT_MS }
-  );
-}
-
-async function readActiveDetail(page) {
-  return await page.evaluate(() => {
-    const lines = (document.body.innerText || "")
-      .split("\n")
-      .map(line => line.trim())
-      .filter(Boolean);
-
-    const calendarIndex = lines.findIndex(line => line === "calendar");
-    const pinIndex = lines.findIndex(
-      (line, index) => index > calendarIndex && line === "pin"
-    );
-
-    const locationLine =
-      pinIndex >= 0 ? lines[pinIndex + 1] || "" : "";
-
-    const mapCandidates = Array.from(document.querySelectorAll("a.map_link"))
-      .map(a => ({
-        href: a.href || "",
-        text: (a.innerText || a.textContent || "").trim(),
-        html: a.outerHTML || ""
-      }))
-      .filter(item => item.href);
-
-    return {
-      lines,
-      calendarIndex,
-      pinIndex,
-      locationLine,
-      mapCandidates
-    };
-  });
-}
-
-async function readEvent(page, index) {
-  const cards = page.locator(".termin.inline");
-  const card = cards.nth(index);
-
-  const listText = normalizeText(await card.innerText());
-  const oldSnapshot = await page.evaluate(() => document.body.innerText || "");
-
-  await card.click({ timeout: 10000 });
-  await waitForDetailChange(page, oldSnapshot);
-
-  const active = await readActiveDetail(page);
-  const detailLines = extractDetailBlock(active.lines);
-  const fields = extractFields(detailLines);
-
-  let selectedMap = null;
-  let selectedGeo = null;
-
-  const geoCandidates = active.mapCandidates
-    .map(candidate => ({
-      href: candidate.href,
-      geo: extractGeoFromUrl(candidate.href)
-    }))
-    .filter(candidate => candidate.geo);
-
-  if (geoCandidates.length > 0) {
-    const selectedCandidate = geoCandidates[geoCandidates.length - 1];
-    selectedMap = selectedCandidate.href;
-    selectedGeo = selectedCandidate.geo;
-  }
-
-  return {
-    listText,
-    detailLines,
-    fields,
-    locationLine: active.locationLine,
-    mapCandidates: active.mapCandidates,
-    selectedMap,
-    selectedGeo
-  };
-}
-
-async function run() {
-  const startedAt = Date.now();
-
-  log("🔎 Debug Detail Importer V10");
-  log("Ziel: Geo-Fix + strukturierte Logs + Zusammenfassung");
-  log(`Max Events: ${MAX_EVENTS}`);
-  log("");
-
-  const browser = await chromium.launch({ headless: true });
-
-  const page = await browser.newPage({
-    userAgent:
-      "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
-    viewport: {
-      width: 390,
-      height: 844,
-      isMobile: true
-    }
-  });
-
-  await page.goto(SOURCE_URL, {
-    waitUntil: "networkidle",
-    timeout: 60000
-  });
-
-  await page.waitForTimeout(3000);
-
-  const count = await page.locator(".termin.inline").count();
-  const total = Math.min(count, MAX_EVENTS);
-
-  log(`Gefundene Container: ${count}`);
-  log(`Teste Events: ${total}`);
-  log("");
-
-  const seenKeys = new Map();
-
-  for (let i = 0; i < total; i++) {
-    const eventStartedAt = Date.now();
-
-    try {
-      const result = await readEvent(page, i);
-      const durationMs = Date.now() - eventStartedAt;
-
-      const title = result.fields.title;
-      const date = result.fields.date;
-      const location = result.fields.location;
-      const geoText = geoToText(result.selectedGeo);
-      const key = eventKey(title, date, location);
-
-      const missing = [];
-      if (!title) missing.push("Titel");
-      if (!date) missing.push("Datum");
-      if (!location) missing.push("Ort");
-      if (!result.selectedGeo) missing.push("Geo");
-
-      const duplicateOf = seenKeys.has(key) ? seenKeys.get(key) : null;
-      if (!duplicateOf) {
-        seenKeys.set(key, i + 1);
-      }
-
-      const ok = missing.length === 0;
-
-      const eventData = {
-        index: i + 1,
-        ok,
-        title,
-        date,
-        location,
-        locationLine: result.locationLine,
-        selectedGeo: result.selectedGeo,
-        selectedGeoText: geoText,
-        selectedMap: result.selectedMap,
-        mapCandidateCount: result.mapCandidates.length,
-        duplicateOf,
-        missing,
-        error: null,
-        durationMs
-      };
-
-      jsonEvents.push(eventData);
-
-      log(
-        `${String(i + 1).padStart(2, "0")}. ${ok ? "OK" : "WARNUNG"} | ${title || "?"} | ${date || "?"} | ${location || "?"} | ${geoText || "KEINE GEO"} | ${durationMs}ms`
-      );
-
-      if (duplicateOf) {
-        log(`   Dublette von Event ${duplicateOf}`);
-      }
-
-      if (missing.length > 0) {
-        log(`   Fehlt: ${missing.join(", ")}`);
-      }
-    } catch (error) {
-      const durationMs = Date.now() - eventStartedAt;
-
-      jsonEvents.push({
-        index: i + 1,
-        ok: false,
-        title: "",
-        date: "",
-        location: "",
-        locationLine: "",
-        selectedGeo: null,
-        selectedGeoText: "",
-        selectedMap: null,
-        mapCandidateCount: 0,
-        duplicateOf: null,
-        missing: ["Event"],
-        error: error.message,
-        durationMs
-      });
-
-      log(
-        `${String(i + 1).padStart(2, "0")}. FEHLER | ${error.message} | ${durationMs}ms`
-      );
-    }
-  }
-
-  const durationMs = Date.now() - startedAt;
-
-  const okEvents = jsonEvents.filter(event => event.ok);
-  const errorEvents = jsonEvents.filter(event => event.error);
-  const warningEvents = jsonEvents.filter(
-    event => !event.ok && !event.error
-  );
-  const geoEvents = jsonEvents.filter(event => event.selectedGeo);
-  const noGeoEvents = jsonEvents.filter(event => !event.selectedGeo);
-  const duplicates = jsonEvents.filter(event => event.duplicateOf);
-  const timeoutEvents = jsonEvents.filter(event =>
-    String(event.error || "").toLowerCase().includes("timeout")
-  );
-
-  const geoByLocation = new Map();
-  const suspiciousGeo = [];
-
-  for (const event of jsonEvents) {
-    if (!event.location || !event.selectedGeoText) continue;
-
-    if (!geoByLocation.has(event.location)) {
-      geoByLocation.set(event.location, event.selectedGeoText);
-      continue;
-    }
-
-    const previousGeo = geoByLocation.get(event.location);
-    if (previousGeo !== event.selectedGeoText) {
-      suspiciousGeo.push({
-        index: event.index,
-        title: event.title,
-        location: event.location,
-        previousGeo,
-        currentGeo: event.selectedGeoText
-      });
-    }
-  }
-
-  log("");
-  log("========================");
-  log("DEBUG SUMMARY");
-  log("========================");
-  log(`Events getestet: ${total}`);
-  log(`Erfolgreich: ${okEvents.length}`);
-  log(`Warnungen: ${warningEvents.length}`);
-  log(`Fehler: ${errorEvents.length}`);
-  log(`Mit Geo: ${geoEvents.length}`);
-  log(`Ohne Geo: ${noGeoEvents.length}`);
-  log(`Dubletten: ${duplicates.length}`);
-  log(`Timeouts: ${timeoutEvents.length}`);
-  log(`Gesamtdauer: ${(durationMs / 1000).toFixed(1)}s`);
-  log(`Durchschnitt: ${(durationMs / total / 1000).toFixed(2)}s pro Event`);
-  log("");
-
-  if (errorEvents.length > 0) {
-    log("Fehlerliste:");
-    for (const event of errorEvents) {
-      log(`- Event ${event.index}: ${event.error}`);
-    }
-    log("");
-  }
-
-  if (noGeoEvents.length > 0) {
-    log("Ohne Geo:");
-    for (const event of noGeoEvents) {
-      log(`- Event ${event.index}: ${event.title || "Unbekannt"} | ${event.location || "Ort unbekannt"}`);
-    }
-    log("");
-  }
-
-  if (duplicates.length > 0) {
-    log("Dubletten:");
-    for (const event of duplicates) {
-      log(`- Event ${event.index} ist Dublette von Event ${event.duplicateOf}: ${event.title}`);
-    }
-    log("");
-  }
-
-  if (suspiciousGeo.length > 0) {
-    log("Geo-Warnungen:");
-    for (const item of suspiciousGeo) {
-      log(
-        `- Event ${item.index}: gleicher Ort "${item.location}" aber andere Geo (${item.previousGeo} vs ${item.currentGeo})`
-      );
-    }
-    log("");
-  }
-
-  log("Plausibilitätscheck:");
-  log(noGeoEvents.length === 0 ? "✅ Keine fehlenden Geodaten" : "⚠️ Es fehlen Geodaten");
-  log(errorEvents.length === 0 ? "✅ Keine Fehler" : "⚠️ Fehler vorhanden");
-  log(timeoutEvents.length === 0 ? "✅ Keine Timeouts" : "⚠️ Timeout-Probleme vorhanden");
-  log(suspiciousGeo.length === 0 ? "✅ Gleiche Orte haben gleiche Geo" : "⚠️ Gleiche Orte mit unterschiedlicher Geo gefunden");
-  log("✅ Debug-Test beendet.");
-
-  const output = {
-    meta: {
-      version: "V10",
-      sourceUrl: SOURCE_URL,
-      maxEvents: MAX_EVENTS,
-      foundContainers: count,
-      testedEvents: total,
-      durationMs,
-      averageDurationMs: Math.round(durationMs / total)
-    },
-    summary: {
-      ok: okEvents.length,
-      warnings: warningEvents.length,
-      errors: errorEvents.length,
-      withGeo: geoEvents.length,
-      withoutGeo: noGeoEvents.length,
-      duplicates: duplicates.length,
-      timeouts: timeoutEvents.length,
-      suspiciousGeo: suspiciousGeo.length
-    },
-    problems: {
-      errors: errorEvents,
-      withoutGeo: noGeoEvents,
-      duplicates,
-      suspiciousGeo
-    },
-    events: jsonEvents
-  };
-
-  fs.writeFileSync("./debug-output.txt", textLog.join("\n"), "utf8");
-  fs.writeFileSync("./debug-output.json", JSON.stringify(output, null, 2), "utf8");
-
-  await browser.close();
-}
-
-run().catch(error => {
-  console.error(error);
-  fs.writeFileSync("./debug-output.txt", String(error.stack || error), "utf8");
-  fs.writeFileSync(
-    "./debug-output.json",
-    JSON.stringify(
-      {
-        fatal: true,
-        error: String(error.stack || error)
-      },
-      null,
-      2
-    ),
-    "utf8"
-  );
-  process.exit(1);
-});
+🔎 Debug Detail Importer V10
+Ziel: Geo-Fix + strukturierte Logs + Zusammenfassung
+Max Events: 50
+
+Gefundene Container: 205
+Teste Events: 50
+
+01. OK | Matti Klein Soul Trio | heute, 19:30 Uhr | Lindenhalle, Ehingen (Donau) | 48.2815, 9.72811 | 267ms
+02. OK | Katakombenfest | Sa, 16.05.2026, 20:00 Uhr (Peripherie) | Sudhaus, Tübingen | 48.4995, 9.06461 | 259ms
+03. OK | Biyon Kattilathu: Eine Reise zum Glück | Mo, 18.05.2026, 20:00 Uhr (Großer Saal) | Stadthalle, Reutlingen | 48.4774, 9.19361 | 1113ms
+04. OK | Theateroffensive 2025/2026 | Di, 19.05.2026, 20:00 Uhr | Theater Tonne, Reutlingen | 48.4897, 9.20597 | 249ms
+05. OK | Stunde der Kirchenmusik - Johannes Friederich & Ensemble | Fr, 22.05.2026, 19:00 Uhr | Stiftskirche, Stuttgart | 48.7784, 9.18919 | 1112ms
+06. OK | Muttertags Matinée | heute, 10:30 Uhr | Evangelische Kirche Oberensingen, Nürtingen | 48.6374, 9.32601 | 227ms
+07. OK | Kanahi Yamashita - SICG-Festival | heute, 11:00 Uhr (Kammermusiksaal) | Hochschule für Musik und Darstellende Kunst , Stuttgart | 48.78, 9.18805 | 462ms
+08. FEHLER | page.waitForFunction: Timeout 8000ms exceeded. | 8138ms
+09. OK | Jazzfrühschoppen mit Linda Kyei Trio | heute, 11:00 Uhr | Pavillon am Calwer Bogen, Sindelfingen | 48.7073, 8.99412 | 244ms
+10. OK | Thomas Scheytt - Piano Solo - Klassiker des Blues & Boogie Woogie und eigene Kompositionen | heute, 11:30 Uhr | Peterskirche, Vaihingen an der Enz | 48.9311, 8.95968 | 305ms
+11. OK | Krabbelkonzert | heute, 11:30 Uhr | Theater, Ulm | 48.4016, 9.98614 | 1113ms
+12. OK | EPILOG: C-DUR | heute, 11:30 Uhr | Bechtle Verlag&Druck, Esslingen am Neckar | 48.7219, 9.34624 | 247ms
+13. OK | Punkt 12 | heute, 12:00 Uhr | Ulmer Münster, Ulm | 48.3976, 9.99129 | 1101ms
+14. OK | TableTop | heute, 14:00 Uhr | Hexenhaus, Ulm | 48.411, 9.96429 | 251ms
+15. OK | WIENER MELANGE & MEHR zum Muttertag | heute, 15:00 Uhr | Uditorium, Uhingen | 48.7061, 9.58463 | 1098ms
+16. OK | Konzert zum Muttertag im Diözesanmuseum | heute, 15:00 Uhr | Diözesanmuseum, Rottenburg am Neckar | 48.4758, 8.93421 | 215ms
+17. OK | Minizirkus Pipo | heute, 16:00 Uhr | Dreigroschentheater, Stuttgart | 48.7651, 9.16927 | 1100ms
+18. OK | Konzert BachChor Tübingen | heute, 17:00 Uhr | Stiftskirche, Tübingen | 48.5182, 9.05031 | 217ms
+19. OK | Abokonzert IV - Hensel, Mayer - LICHT IM SCHATTEN | heute, 17:00 Uhr (Beethoven-Saal) | Liederhalle, Stuttgart | 48.7795, 9.17041 | 1099ms
+20. OK | TRAFFIC STRINGS | heute, 17:00 Uhr (Mozart-Saal) | Liederhalle, Stuttgart | 48.7795, 9.17041 | 222ms
+21. OK | U25 Jam Session | heute, 17:00 Uhr | Kulturzentrum Merlin, Stuttgart | 48.7703, 9.16108 | 473ms
+22. FEHLER | page.waitForFunction: Timeout 8000ms exceeded. | 8144ms
+23. OK | 21. Meisterkonzert | heute, 17:00 Uhr | Forum am Schlosspark, Ludwigsburg | 48.8923, 9.19486 | 245ms
+24. OK | Frühjahrskonzert Sing It | heute, 17:00 Uhr | Kulturzentrum Zehntscheuer, Rottenburg am Neckar | 48.4754, 8.93582 | 251ms
+25. OK | Bläserserenade | heute, 17:00 Uhr | Petruskirche, Neu-Ulm | 48.3936, 9.99949 | 1114ms
+26. OK | Podium 2026 Musikschule Kirchheim-Teck | heute, 17:00 Uhr | Eduard-Mörike-Mehrzweckhalle, Kirchheim unter Teck | 48.6547, 9.41548 | 256ms
+27. OK | George Dalaras | heute, 18:00 Uhr (Hegel-Saal) | Liederhalle, Stuttgart | 48.7795, 9.17041 | 1111ms
+28. OK | Johann Sebastian Bach: h-Moll-Messe - Chor-Orchesterkonzert der Winnender Kantorei | heute, 18:00 Uhr | Winnenden, Schlosskirche, Winnenden | 48.875, 9.39714 | 217ms
+29. OK | „Rhythm & Swing" Konzert des Fachbereichs Jazz/Rock/Pop(Musikschule Filderstadt) | heute, 18:00 Uhr | Alte Mühle, Filderstadt | 48.6544, 9.21395 | 1098ms
+30. OK | Enigma - eine musikalische Blindverkostung | heute, 18:00 Uhr (Odeon) | SMTT - Schule für Musik Theater und Tanz, Sindelfingen | 48.7099, 9.00496 | 454ms
+31. OK | Muttertagskonzert mit den Chören des Sängerkranzes Nürtingen e.V. | heute, 18:00 Uhr | Versöhnungskirche, Nürtingen | 48.6146, 9.355 | 249ms
+32. OK | Indi(e)stinction Crippled Black Phoenix (UK) & Special Guest: Temple Fang (NL) | heute, 19:00 Uhr (Saal) | Kulturzentrum Franz.K, Reutlingen | 48.4962, 9.20612 | 1117ms
+33. OK | LVBEL C5 – FELLAS TOUR | heute, 19:00 Uhr | LKA Longhorn, Stuttgart | 48.7676, 9.25164 | 232ms
+34. OK | Die Nina Simone Story - Concert Picture Show | heute, 19:00 Uhr | Stadthalle Korntal, Korntal-Münchingen | 48.8301, 9.11979 | 1116ms
+35. OK | The Ten Tenors | heute, 19:00 Uhr (Einsteinsaal) | CongressCentrum (CCU), Ulm | 48.4, 10.003 | 217ms
+36. OK | 3 Tiny Concerts – Female Voices | heute, 19:00 Uhr | Theater Hammerschmiede, Rottenburg am Neckar | 48.467, 8.92013 | 1100ms
+37. OK | Konzerte 2025/26 - Quadro Nuevo „HAPPY Deluxe“ | heute, 19:00 Uhr | Sport- und Festhalle Musberg, Leinfelden-Echterdingen | 48.6917, 9.12352 | 217ms
+38. OK | Matti Klein Soul Trio | heute, 19:30 Uhr | Lindenhalle, Ehingen (Donau) | 48.2815, 9.72811 | 467ms
+   Dublette von Event 1
+39. FEHLER | page.waitForFunction: Timeout 8000ms exceeded. | 8122ms
+40. OK | Josh. | heute, 19:30 Uhr (Peripherie) | Sudhaus, Tübingen | 48.4995, 9.06461 | 243ms
+41. OK | Tübinger Saxophon Ensemble | heute, 19:30 Uhr | Schönblick, Schwäbisch Gmünd | 48.8127, 9.7836 | 251ms
+42. OK | Klassisches Sinfoniekonzert | heute, 19:30 Uhr | Festhalle Onstmettingen, Albstadt | 48.2796, 8.99754 | 1115ms
+43. OK | Live | heute, 20:00 Uhr (T2) | Theaterhaus, Stuttgart | 48.8106, 9.17919 | 218ms
+44. OK | SALÒ | heute, 20:00 Uhr | clubCANN, Stuttgart | 48.8006, 9.21657 | 1099ms
+45. OK | sueddeutsche kammersinfonie bietigheim - Frühjahrskonzert – „Facetten der Romantik“ | heute, 20:00 Uhr | Kronenzentrum, Bietigheim-Bissingen | 48.9604, 9.1307 | 219ms
+46. OK | SPATZ UND ENGEL | heute, 20:00 Uhr (Theatersaal) | Das K - Kultur- und Kongresszentrum, Kornwestheim | 48.8599, 9.18601 | 465ms
+47. FEHLER | page.waitForFunction: Timeout 8000ms exceeded. | 8141ms
+48. OK | MEDLZ: „Die 90er – a cappella“ | heute, 20:00 Uhr | Saal Waldorfschule, Vaihingen an der Enz | 48.9437, 8.95799 | 246ms
+49. OK | CATacombs Of Metal XXXVIII | heute, 00:00 Uhr | CAT, Ulm | 48.41, 9.99481 | 229ms
+50. OK | MARKUS KAVKA | heute, 19:00 Uhr | Im Wizemann, Stuttgart | 48.8081, 9.20091 | 1116ms
+
+========================
+DEBUG SUMMARY
+========================
+Events getestet: 50
+Erfolgreich: 46
+Warnungen: 0
+Fehler: 4
+Mit Geo: 46
+Ohne Geo: 4
+Dubletten: 1
+Timeouts: 4
+Gesamtdauer: 64.1s
+Durchschnitt: 1.28s pro Event
+
+Fehlerliste:
+- Event 8: page.waitForFunction: Timeout 8000ms exceeded.
+- Event 22: page.waitForFunction: Timeout 8000ms exceeded.
+- Event 39: page.waitForFunction: Timeout 8000ms exceeded.
+- Event 47: page.waitForFunction: Timeout 8000ms exceeded.
+
+Ohne Geo:
+- Event 8: Unbekannt | Ort unbekannt
+- Event 22: Unbekannt | Ort unbekannt
+- Event 39: Unbekannt | Ort unbekannt
+- Event 47: Unbekannt | Ort unbekannt
+
+Dubletten:
+- Event 38 ist Dublette von Event 1: Matti Klein Soul Trio
+
+Plausibilitätscheck:
+⚠️ Es fehlen Geodaten
+⚠️ Fehler vorhanden
+⚠️ Timeout-Probleme vorhanden
+✅ Gleiche Orte haben gleiche Geo
+✅ Debug-Test beendet.
