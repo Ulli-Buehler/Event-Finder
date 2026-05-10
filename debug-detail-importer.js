@@ -5,7 +5,7 @@ const SOURCE_URL =
   "https://www.wasgehtapp.de/index.php?geo_id=15546&ort=Dettingen%20unter%20Teck&x=9.45&y=48.6167&einwohner=5603&region=01&select_ort=1&radius=40";
 
 const MAX_EVENTS = 50;
-const DETAIL_TIMEOUT_MS = 5000;
+const DETAIL_TIMEOUT_MS = 8000;
 
 const textLog = [];
 const jsonEvents = [];
@@ -176,18 +176,6 @@ async function readEvent(page, index) {
     selectedMap,
     selectedGeo
   };
-}
-
-function writeDebugFiles(output) {
-  const textOutput = textLog.join("\n");
-  const jsonOutput = JSON.stringify(output, null, 2);
-
-  fs.writeFileSync("./debug-output.txt", textOutput, "utf8");
-  fs.writeFileSync("./debug-output.json", jsonOutput, "utf8");
-
-  fs.mkdirSync("./Cade", { recursive: true });
-  fs.writeFileSync("./Cade/debug-output.txt", textOutput, "utf8");
-  fs.writeFileSync("./Cade/debug-output.json", jsonOutput, "utf8");
 }
 
 async function run() {
@@ -431,21 +419,26 @@ async function run() {
     events: jsonEvents
   };
 
-  writeDebugFiles(output);
+  fs.writeFileSync("./debug-output.txt", textLog.join("\n"), "utf8");
+  fs.writeFileSync("./debug-output.json", JSON.stringify(output, null, 2), "utf8");
 
   await browser.close();
 }
 
 run().catch(error => {
   console.error(error);
-
-  const output = {
-    fatal: true,
-    error: String(error.stack || error)
-  };
-
-  textLog.push(String(error.stack || error));
-  writeDebugFiles(output);
-
+  fs.writeFileSync("./debug-output.txt", String(error.stack || error), "utf8");
+  fs.writeFileSync(
+    "./debug-output.json",
+    JSON.stringify(
+      {
+        fatal: true,
+        error: String(error.stack || error)
+      },
+      null,
+      2
+    ),
+    "utf8"
+  );
   process.exit(1);
 });
