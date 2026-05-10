@@ -1,5 +1,7 @@
 import fs from "fs";
+import { chromium } from "playwright";
 
+const SOURCE_URL = "https://www.wasgehtapp.de/";
 const MAX_EVENTS = 50;
 const DETAIL_TIMEOUT_MS = 8000;
 
@@ -37,18 +39,7 @@ function plausibleGeo(lat, lng) {
   return true;
 }
 
-const duplicates = new Map();
-
-const output = {
-  createdAt: new Date().toISOString(),
-  maxEvents: MAX_EVENTS,
-  events: jsonEvents,
-  summary: {},
-};
-
 async function run() {
-  const { chromium } = await import("playwright");
-
   const browser = await chromium.launch({
     headless: true,
   });
@@ -57,57 +48,69 @@ async function run() {
 
   const startedAt = Date.now();
 
-  log("🔎 Debug Detail Importer V11");
+  log("🔎 Debug Detail Importer V12");
   log("Ziel: Geo-Fix + strukturierte Logs + Zusammenfassung");
   log(`Max Events: ${MAX_EVENTS}`);
   log("");
 
-  await page.goto("https://www.wasgehtapp.de/", {
-    waitUntil: "domcontentloaded",
+  await page.goto(SOURCE_URL, {
+    waitUntil: "networkidle",
     timeout: DETAIL_TIMEOUT_MS,
   });
 
-  await page.waitForTimeout(2000);
+  await page.waitForTimeout(3000);
 
-  const containers = await page.locator("[data-testid='event-card']").all();
+  const cards = page.locator(".termin.inline");
 
-  log(`Gefundene Container: ${containers.length}`);
-  log(`Teste Events: ${Math.min(MAX_EVENTS, containers.length)}`);
+  const count = await cards.count();
+
+  log(`Gefundene Container: ${count}`);
+  log(`Teste Events: ${Math.min(MAX_EVENTS, count)}`);
   log("");
 
   let okCount = 0;
   let errorCount = 0;
+  let warningCount = 0;
   let geoCount = 0;
   let noGeoCount = 0;
-  let warningCount = 0;
-  let duplicateCount = 0;
   let timeoutCount = 0;
+  let duplicateCount = 0;
 
+  const duplicates = new Map();
   const failedEvents = [];
   const noGeoEvents = [];
 
-  for (let i = 0; i < Math.min(MAX_EVENTS, containers.length); i++) {
+  for (let index = 0; index < Math.min(MAX_EVENTS, count); index++) {
     const startedEvent = Date.now();
 
     try {
-      const card = containers[i];
+      const card = cards.nth(index);
 
       await card.scrollIntoViewIfNeeded();
 
       const title =
-        (await card.locator("h3").first().textContent())?.trim() ||
-        "Unbekannt";
+        (
+          await card.locator("h2,h3").first().textContent()
+        )?.trim() || "Unbekannt";
 
       const metaTexts = await card.locator("text=/Uhr/").allTextContents();
 
       const date = metaTexts[0]?.trim() || "Unbekannt";
 
+      const locationLine =
+        (
+          await card.locator(".location,.ort").first().textContent()
+        )?.trim() || "";
+
+      const location = locationLine
+        .replace(/map link/i, "")
+        .replace(/map/i, "")
+        .trim();
+
       await card.click();
 
       await page.waitForFunction(
-        () => {
-          return !!document.querySelector("a[href*='daddr=']");
-        },
+        () => !!document.querySelector("a[href*='daddr=']"),
         {
           timeout: DETAIL_TIMEOUT_MS,
         }
@@ -118,20 +121,6 @@ async function run() {
         .evaluateAll(nodes =>
           nodes.map(n => n.getAttribute("href")).filter(Boolean)
         );
-
-      const locationLine =
-        (
-          await page
-            .locator("text=/map/i")
-            .locator("..")
-            .first()
-            .textContent()
-        )?.trim() || "";
-
-      const location = locationLine
-        .replace(/map link/i, "")
-        .replace(/map/i, "")
-        .trim();
 
       let selectedGeo = null;
 
@@ -148,8 +137,10 @@ async function run() {
 
       const duration = Date.now() - startedEvent;
 
+      const duplicateKey = `${title}_${location}`;
+
       const eventData = {
-        index: i + 1,
+        index: index + 1,
         title,
         date,
         location,
@@ -158,23 +149,21 @@ async function run() {
         status: selectedGeo ? "ok" : "warning",
       };
 
-      const duplicateKey = `${title}_${location}`;
-
       if (duplicates.has(duplicateKey)) {
         duplicateCount++;
 
         eventData.duplicateOf = duplicates.get(duplicateKey);
 
         log(
-          `${String(i + 1).padStart(2, "0")}. OK | ${title} | ${date} | ${location} | ${selectedGeo?.lat}, ${selectedGeo?.lng} | ${duration}ms`
+          `${String(index + 1).padStart(2, "0")}. OK | ${title} | ${date} | ${location} | ${selectedGeo?.lat}, ${selectedGeo?.lng} | ${duration}ms`
         );
 
         log(`   Dublette von Event ${duplicates.get(duplicateKey)}`);
       } else {
-        duplicates.set(duplicateKey, i + 1);
+        duplicates.set(duplicateKey, index + 1);
 
         log(
-          `${String(i + 1).padStart(2, "0")}. OK | ${title} | ${date} | ${location} | ${selectedGeo?.lat}, ${selectedGeo?.lng} | ${duration}ms`
+          `${String(index + 1).padStart(2, "0")}. OK | ${title} | ${date} | ${location} | ${selectedGeo?.lat}, ${selectedGeo?.lng} | ${duration}ms`
         );
       }
 
@@ -186,7 +175,7 @@ async function run() {
         noGeoCount++;
 
         noGeoEvents.push({
-          index: i + 1,
+          index: index + 1,
           title,
           location,
         });
@@ -208,25 +197,25 @@ async function run() {
       }
 
       failedEvents.push({
-        index: i + 1,
+        index: index + 1,
         error: String(err),
       });
 
       noGeoEvents.push({
-        index: i + 1,
+        index: index + 1,
         title: "Unbekannt",
         location: "Ort unbekannt",
       });
 
       jsonEvents.push({
-        index: i + 1,
+        index: index + 1,
         status: "error",
         error: String(err),
         durationMs: duration,
       });
 
       log(
-        `${String(i + 1).padStart(2, "0")}. FEHLER | ${String(err).replace(/\n/g, " ")} | ${duration}ms`
+        `${String(index + 1).padStart(2, "0")}. FEHLER | ${String(err).replace(/\n/g, " ")} | ${duration}ms`
       );
 
       try {
@@ -237,24 +226,12 @@ async function run() {
 
   const totalDuration = ((Date.now() - startedAt) / 1000).toFixed(1);
 
-  output.summary = {
-    eventsTested: Math.min(MAX_EVENTS, containers.length),
-    success: okCount,
-    warnings: warningCount,
-    errors: errorCount,
-    withGeo: geoCount,
-    withoutGeo: noGeoCount,
-    duplicates: duplicateCount,
-    timeouts: timeoutCount,
-    durationSeconds: totalDuration,
-  };
-
   log("");
   log("========================");
   log("DEBUG SUMMARY");
   log("========================");
 
-  log(`Events getestet: ${Math.min(MAX_EVENTS, containers.length)}`);
+  log(`Events getestet: ${Math.min(MAX_EVENTS, count)}`);
   log(`Erfolgreich: ${okCount}`);
   log(`Warnungen: ${warningCount}`);
   log(`Fehler: ${errorCount}`);
@@ -329,6 +306,22 @@ async function run() {
 
   log("✅ Gleiche Orte haben gleiche Geo");
   log("✅ Debug-Test beendet.");
+
+  const output = {
+    createdAt: new Date().toISOString(),
+    maxEvents: MAX_EVENTS,
+    summary: {
+      success: okCount,
+      warnings: warningCount,
+      errors: errorCount,
+      withGeo: geoCount,
+      withoutGeo: noGeoCount,
+      duplicates: duplicateCount,
+      timeouts: timeoutCount,
+      durationSeconds: totalDuration,
+    },
+    events: jsonEvents,
+  };
 
   fs.writeFileSync(
     "debug-output.txt",
