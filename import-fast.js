@@ -4,87 +4,158 @@ import fs from "fs";
 const SOURCE_URL =
   "https://www.wasgehtapp.de/index.php?geo_id=15546&ort=Dettingen%20unter%20Teck&x=9.45&y=48.6167&einwohner=5603&region=01&select_ort=1&radius=40";
 
-const OUTPUT_JSON = "fast-output.json";
-const OUTPUT_TXT = "fast-output.txt";
+const OUTPUT_TXT = "debug-output.txt";
+const OUTPUT_JSON = "debug-output.json";
+const RAW_OUTPUT_TXT = "fast-raw-cards.txt";
+const RAW_OUTPUT_JSON = "fast-raw-cards.json";
 
-function normalizeText(text) {
-  return String(text || "")
+const FEST_MARKT_WORDS = [
+  "fest",
+  "feste",
+  "festival",
+  "stadtfest",
+  "dorffest",
+  "straßenfest",
+  "strassenfest",
+  "weinfest",
+  "bierfest",
+  "sommerfest",
+  "frühlingsfest",
+  "fruehlingsfest",
+  "herbstfest",
+  "jahrmarkt",
+  "markt",
+  "märkte",
+  "maerkte",
+  "flohmarkt",
+  "weihnachtsmarkt",
+  "kunstmarkt",
+  "handwerkermarkt",
+  "kreativmarkt",
+  "wochenmarkt",
+  "krämermarkt",
+  "kraemermarkt"
+];
+
+function normalizeText(value) {
+  return String(value || "")
     .replace(/\u00a0/g, " ")
+    .replace(/[ \t]+/g, " ")
+    .replace(/\n\s+/g, "\n")
+    .trim();
+}
+
+function normalizeOneLine(value) {
+  return normalizeText(value).replace(/\s+/g, " ").trim();
+}
+
+function cleanText(value) {
+  return normalizeOneLine(value)
+    .replace(/\bpin\b/gi, "")
+    .replace(/\bcalendar\b/gi, "")
     .replace(/\s+/g, " ")
     .trim();
 }
 
-function splitTitle(rawTitle) {
-  const text = normalizeText(rawTitle);
-  const match = text.match(/^([^:]+):\s*(.+)$/);
+function parseDistanceKm(text) {
+  const match = String(text || "").match(/(\d+(?:[,.]\d+)?)\s*km\b/i);
+  return match ? Number(match[1].replace(",", ".")) : null;
+}
 
+function parseTime(text) {
+  const match = String(text || "").match(/\b([01]?\d|2[0-3])\s*:\s*([0-5]\d)\s*Uhr\b/i);
+  if (!match) return "";
+  return `${match[1].padStart(2, "0")}:${match[2]} Uhr`;
+}
+
+function splitCategoryTitle(text) {
+  const cleaned = cleanText(text);
+
+  const match = cleaned.match(/^([^:]{2,30}):\s*(.+)$/);
   if (!match) {
     return {
       category: "",
-      title: text
+      title: cleaned
     };
   }
 
   return {
-    category: normalizeText(match[1]),
-    title: normalizeText(match[2])
+    category: match[1].trim(),
+    title: match[2].trim()
   };
 }
 
-function extractTime(text) {
-  const match = normalizeText(text).match(/\b\d{1,2}:\d{2}\s*Uhr\b/i);
-  return match ? match[0] : "";
+function isProbablyBadTitle(title) {
+  if (!title) return true;
+  if (/^\d{1,2}\s*:\s*\d{2}\s*Uhr/i.test(title)) return true;
+  if (/^pin\b/i.test(title)) return true;
+  if (/^\d+(?:[,.]\d+)?\s*km$/i.test(title)) return true;
+  return false;
 }
 
-function extractLocation(text) {
-  const lines = String(text || "")
-    .split("\n")
-    .map(normalizeText)
-    .filter(Boolean);
+function guessTitleFromLines(lines) {
+  const candidates = lines
+    .map(cleanText)
+    .filter(Boolean)
+    .filter(line => !/^So$|^Mo$|^Di$|^Mi$|^Do$|^Fr$|^Sa$/i.test(line))
+    .filter(line => !/^\d{1,2}$/.test(line))
+    .filter(line => !/^Mai$|^Juni$|^Juli$|^August$|^September$|^Oktober$|^November$|^Dezember$/i.test(line))
+    .filter(line => !/^\d{1,2}\s*:\s*\d{2}\s*Uhr/i.test(line))
+    .filter(line => !/^pin\b/i.test(line))
+    .filter(line => !/\d+(?:[,.]\d+)?\s*km$/i.test(line))
+    .filter(line => !/^€|^\d+\s*€/.test(line));
 
-  const timeLineIndex = lines.findIndex(line => /\b\d{1,2}:\d{2}\s*Uhr\b/i.test(line));
+  const withCategory = candidates.find(line => /^[^:]{2,30}:\s+.+/.test(line));
+  if (withCategory) return withCategory;
 
-  if (timeLineIndex < 0) return "";
+  return candidates[0] || "";
+}
 
-  const timeLine = lines[timeLineIndex];
-  const afterTime = normalizeText(
-    timeLine.replace(/^.*?\b\d{1,2}:\d{2}\s*Uhr\b/i, "")
-  );
+function extractLocationFromLines(lines) {
+  const cleaned = lines.map(cleanText).filter(Boolean);
 
-  if (afterTime) {
-    return normalizeText(afterTime.replace(/^pin\s*/i, ""));
+  const pinLineIndex = cleaned.findIndex(line => /^pin\b/i.test(line));
+  if (pinLineIndex >= 0 && cleaned[pinLineIndex + 1]) {
+    return cleaned[pinLineIndex + 1];
   }
 
-  const nextLine = lines[timeLineIndex + 1] || "";
-  return normalizeText(nextLine.replace(/^pin\s*/i, ""));
+  const lineWithDistance = cleaned.find(line => /\d+(?:[,.]\d+)?\s*km\b/i.test(line));
+  if (lineWithDistance) {
+    return lineWithDistance.replace(/\s*,?\s*\d+(?:[,.]\d+)?\s*km\b/i, "").trim();
+  }
+
+  const lineWithPlace = cleaned.find(line => /,\s*[A-ZÄÖÜ][a-zäöüß]/.test(line));
+  return lineWithPlace || "";
 }
 
-function isWantedMarketOrFestival(event) {
-  const haystack = normalizeText(
-    `${event.category} ${event.title} ${event.subtitle} ${event.location} ${event.text}`
-  ).toLowerCase();
+function isFestMarktEvent(event) {
+  const haystack = [
+    event.category,
+    event.title,
+    event.subtitle,
+    event.location,
+    event.rawText
+  ]
+    .join(" ")
+    .toLowerCase();
 
-  const wantedWords = [
-    "fest",
-    "feste",
-    "festival",
-    "markt",
-    "märkte",
-    "flohmarkt",
-    "kunstmarkt",
-    "jahrmarkt",
-    "weihnachtsmarkt",
-    "street food",
-    "hocketse",
-    "hockete",
-    "dorffest",
-    "stadtfest",
-    "frühlingsfest",
-    "sommerfest",
-    "herbstfest"
+  return FEST_MARKT_WORDS.some(word => haystack.includes(word.toLowerCase()));
+}
+
+function formatEventLine(event) {
+  const title = event.category ? `${event.category}: ${event.title}` : event.title;
+
+  const parts = [
+    `${String(event.index).padStart(3, "0")}. ${title || "-"}`,
+    event.time || "-",
+    event.location || "-"
   ];
 
-  return wantedWords.some(word => haystack.includes(word));
+  if (event.distanceKm !== null) {
+    parts.push(`${event.distanceKm} km`);
+  }
+
+  return parts.join(" | ");
 }
 
 async function run() {
@@ -111,76 +182,101 @@ async function run() {
 
   await page.waitForTimeout(3000);
 
-  const rawEvents = await page.evaluate(() => {
+  const rawCards = await page.evaluate(() => {
     return Array.from(document.querySelectorAll(".termin.inline")).map((el, index) => {
-      const image = el.querySelector("img");
-      const link = el.querySelector("a");
       const lines = (el.innerText || "")
         .split("\n")
         .map(line => line.trim())
         .filter(Boolean);
 
+      const links = Array.from(el.querySelectorAll("a"))
+        .map(a => ({
+          text: (a.innerText || "").trim(),
+          href: a.href || ""
+        }))
+        .filter(link => link.text || link.href);
+
+      const images = Array.from(el.querySelectorAll("img"))
+        .map(img => img.currentSrc || img.src || "")
+        .filter(Boolean);
+
+      const className = el.className || "";
+
       return {
         index: index + 1,
+        className,
         text: el.innerText || "",
         html: el.innerHTML || "",
         lines,
-        imageUrl: image ? image.src || "" : "",
-        detailUrl: link ? link.href || "" : ""
+        links,
+        images
       };
     });
   });
 
-  const events = rawEvents.map(raw => {
-    const firstTitleLine = raw.lines.find(line => line.includes(":")) || raw.lines[0] || "";
-    const titleParts = splitTitle(firstTitleLine);
-    const time = extractTime(raw.text);
-    const location = extractLocation(raw.text);
+  const events = rawCards.map(card => {
+    const lines = card.lines || [];
+    const rawText = normalizeText(card.text);
+    const oneLine = normalizeOneLine(rawText);
 
-    const subtitle = raw.lines.find(line => {
-      const normalized = normalizeText(line);
-      if (!normalized) return false;
-      if (normalized === firstTitleLine) return false;
-      if (/\b\d{1,2}:\d{2}\s*Uhr\b/i.test(normalized)) return false;
-      if (normalized.includes(location)) return false;
-      return true;
-    }) || "";
+    const guessedTitle = guessTitleFromLines(lines);
+    const categoryTitle = splitCategoryTitle(guessedTitle);
 
-    const event = {
-      index: raw.index,
-      category: titleParts.category,
-      title: titleParts.title,
-      subtitle: normalizeText(subtitle),
-      time,
-      location,
-      imageUrl: raw.imageUrl,
-      detailUrl: raw.detailUrl,
-      text: normalizeText(raw.text)
-    };
+    let title = categoryTitle.title;
+    let category = categoryTitle.category;
+
+    if (isProbablyBadTitle(title)) {
+      const fallback = splitCategoryTitle(oneLine);
+      title = fallback.title;
+      category = category || fallback.category;
+    }
+
+    const time = parseTime(oneLine);
+    const location = extractLocationFromLines(lines);
+    const distanceKm = parseDistanceKm(location || oneLine);
+
+    const subtitle = lines
+      .map(cleanText)
+      .filter(Boolean)
+      .find(line =>
+        line !== guessedTitle &&
+        line !== title &&
+        line !== location &&
+        !line.includes(time) &&
+        !/^\d+(?:[,.]\d+)?\s*km$/i.test(line)
+      ) || "";
 
     return {
-      ...event,
-      matchesMarketOrFestival: isWantedMarketOrFestival(event)
+      index: card.index,
+      category,
+      title,
+      subtitle,
+      time,
+      location,
+      distanceKm,
+      imageUrl: card.images[0] || "",
+      links: card.links,
+      rawText,
+      rawLines: lines
     };
   });
 
-  const filtered = events.filter(event => event.matchesMarketOrFestival);
-  const durationSeconds = ((Date.now() - startedAt) / 1000).toFixed(1);
+  const festMarktEvents = events.filter(isFestMarktEvent);
+  const durationSec = ((Date.now() - startedAt) / 1000).toFixed(1);
 
   const textLog = [];
-  textLog.push("Fast Importer - Wasgehtapp Übersicht");
+
+  textLog.push("Fast Importer - Wasgehtapp Übersicht V2");
   textLog.push(`Quelle: ${SOURCE_URL}`);
   textLog.push(`Events gefunden: ${events.length}`);
-  textLog.push(`Feste/Märkte Treffer: ${filtered.length}`);
-  textLog.push(`Dauer: ${durationSeconds}s`);
+  textLog.push(`Feste/Märkte Treffer: ${festMarktEvents.length}`);
+  textLog.push(`Dauer: ${durationSec}s`);
   textLog.push("");
   textLog.push("Alle Treffer Feste/Märkte:");
   textLog.push("========================");
 
-  for (const event of filtered) {
-    textLog.push(
-      `${String(event.index).padStart(3, "0")}. ${event.category}: ${event.title} | ${event.time} | ${event.location}`
-    );
+  for (const event of festMarktEvents) {
+    textLog.push(formatEventLine(event));
   }
 
   textLog.push("");
@@ -188,13 +284,50 @@ async function run() {
   textLog.push("========================");
 
   for (const event of events) {
-    textLog.push(
-      `${String(event.index).padStart(3, "0")}. ${event.category}: ${event.title} | ${event.time} | ${event.location}`
-    );
+    textLog.push(formatEventLine(event));
   }
 
-  fs.writeFileSync(OUTPUT_JSON, JSON.stringify({ events, filtered }, null, 2), "utf8");
+  textLog.push("");
+  textLog.push("Hinweis:");
+  textLog.push(`Rohdaten pro Event stehen zusätzlich in ${RAW_OUTPUT_TXT} und ${RAW_OUTPUT_JSON}.`);
+  textLog.push("Damit kann man prüfen, welche Infos direkt in der Listenansicht vorhanden sind.");
+
+  const rawTextLog = [];
+
+  rawTextLog.push("Fast Importer Rohdaten - Wasgehtapp Übersicht V2");
+  rawTextLog.push(`Quelle: ${SOURCE_URL}`);
+  rawTextLog.push(`Events gefunden: ${rawCards.length}`);
+  rawTextLog.push("");
+  rawTextLog.push("========================");
+
+  for (const card of rawCards) {
+    rawTextLog.push("");
+    rawTextLog.push(`EVENT ${String(card.index).padStart(3, "0")}`);
+    rawTextLog.push("========================");
+    rawTextLog.push("LINES:");
+    for (const line of card.lines) {
+      rawTextLog.push(`- ${line}`);
+    }
+    rawTextLog.push("");
+    rawTextLog.push("LINKS:");
+    for (const link of card.links) {
+      rawTextLog.push(`- ${link.text || "(ohne Text)"} => ${link.href}`);
+    }
+    rawTextLog.push("");
+    rawTextLog.push("IMAGES:");
+    for (const image of card.images) {
+      rawTextLog.push(`- ${image}`);
+    }
+    rawTextLog.push("");
+    rawTextLog.push("RAW TEXT:");
+    rawTextLog.push(card.text || "");
+  }
+
   fs.writeFileSync(OUTPUT_TXT, textLog.join("\n"), "utf8");
+  fs.writeFileSync(OUTPUT_JSON, JSON.stringify(events, null, 2), "utf8");
+
+  fs.writeFileSync(RAW_OUTPUT_TXT, rawTextLog.join("\n"), "utf8");
+  fs.writeFileSync(RAW_OUTPUT_JSON, JSON.stringify(rawCards, null, 2), "utf8");
 
   console.log(textLog.join("\n"));
 
@@ -203,5 +336,12 @@ async function run() {
 
 run().catch(error => {
   console.error(error);
+
+  fs.writeFileSync(
+    OUTPUT_TXT,
+    String(error.stack || error),
+    "utf8"
+  );
+
   process.exit(1);
 });
