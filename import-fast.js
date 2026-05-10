@@ -1,7 +1,7 @@
 import { chromium } from "playwright";
 import fs from "fs";
 
-const SOURCE_URL =
+const BASE_SOURCE_URL =
   "https://www.wasgehtapp.de/index.php?geo_id=15546&ort=Dettingen%20unter%20Teck&x=9.45&y=48.6167&einwohner=5603&region=01&select_ort=1&radius=40";
 
 const OUTPUT_TXT = "debug-output.txt";
@@ -51,6 +51,31 @@ const NOISE_IMAGE_PARTS = [
   "/img/eintrittfrei.png",
   "/img/kid2.png"
 ];
+
+function formatDateIso(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function getTargetSunday(baseDate = new Date()) {
+  const date = new Date(baseDate);
+  date.setHours(12, 0, 0, 0);
+
+  const day = date.getDay();
+  const daysUntilSunday = day === 0 ? 0 : 7 - day;
+
+  date.setDate(date.getDate() + daysUntilSunday);
+
+  return date;
+}
+
+function buildSourceUrl(targetDate) {
+  const url = new URL(BASE_SOURCE_URL);
+  url.searchParams.set("date", formatDateIso(targetDate));
+  return url.toString();
+}
 
 function normalizeText(value) {
   return String(value || "")
@@ -261,10 +286,11 @@ function formatEventLine(event) {
   return parts.join(" | ");
 }
 
-function createTextReport(title, sourceUrl, events, durationSec) {
+function createTextReport(title, sourceUrl, targetDateIso, events, durationSec) {
   const lines = [];
 
   lines.push(title);
+  lines.push(`Zieldatum: ${targetDateIso}`);
   lines.push(`Quelle: ${sourceUrl}`);
   lines.push(`Events: ${events.length}`);
   lines.push(`Dauer: ${durationSec}s`);
@@ -278,10 +304,11 @@ function createTextReport(title, sourceUrl, events, durationSec) {
   return lines.join("\n");
 }
 
-function createRawTextReport(sourceUrl, rawCards) {
+function createRawTextReport(sourceUrl, targetDateIso, rawCards) {
   const lines = [];
 
-  lines.push("Fast Importer Rohdaten - Wasgehtapp Übersicht V3");
+  lines.push("Fast Importer Rohdaten - Wasgehtapp Übersicht V4");
+  lines.push(`Zieldatum: ${targetDateIso}`);
   lines.push(`Quelle: ${sourceUrl}`);
   lines.push(`Events gefunden: ${rawCards.length}`);
   lines.push("");
@@ -320,6 +347,10 @@ function createRawTextReport(sourceUrl, rawCards) {
 async function run() {
   const startedAt = Date.now();
 
+  const targetDate = getTargetSunday();
+  const targetDateIso = formatDateIso(targetDate);
+  const sourceUrl = buildSourceUrl(targetDate);
+
   const browser = await chromium.launch({
     headless: true
   });
@@ -334,12 +365,18 @@ async function run() {
     }
   });
 
-  await page.goto(SOURCE_URL, {
+  await page.goto(sourceUrl, {
     waitUntil: "networkidle",
     timeout: 60000
   });
 
   await page.waitForTimeout(3000);
+
+  const pageDateText = await page.evaluate(() => {
+    const text = document.body.innerText || "";
+    const match = text.match(/\b(Mo|Di|Mi|Do|Fr|Sa|So)\.,\s*\d{1,2}\.\s*[A-Za-zÄÖÜäöüß]+\s*\d{4}\b/);
+    return match ? match[0] : "";
+  });
 
   const rawCards = await page.evaluate(() => {
     return Array.from(document.querySelectorAll(".termin.inline")).map((el, index) => {
@@ -395,6 +432,8 @@ async function run() {
       category,
       title,
       subtitle,
+      targetDate: targetDateIso,
+      pageDateText,
       dateText,
       time,
       location,
@@ -414,8 +453,10 @@ async function run() {
 
   const fullReportLines = [];
 
-  fullReportLines.push("Fast Importer - Wasgehtapp Übersicht V3");
-  fullReportLines.push(`Quelle: ${SOURCE_URL}`);
+  fullReportLines.push("Fast Importer - Wasgehtapp Übersicht V4");
+  fullReportLines.push(`Zieldatum: ${targetDateIso}`);
+  fullReportLines.push(`Seitendatum: ${pageDateText || "(nicht erkannt)"}`);
+  fullReportLines.push(`Quelle: ${sourceUrl}`);
   fullReportLines.push(`Events gefunden: ${events.length}`);
   fullReportLines.push(`Feste/Märkte Treffer: ${festMarktEvents.length}`);
   fullReportLines.push(`Dauer: ${durationSec}s`);
@@ -449,12 +490,18 @@ async function run() {
 
   fs.writeFileSync(
     FEST_MARKT_TXT,
-    createTextReport("Feste/Märkte - Wasgehtapp Übersicht V3", SOURCE_URL, festMarktEvents, durationSec),
+    createTextReport(
+      "Feste/Märkte - Wasgehtapp Übersicht V4",
+      sourceUrl,
+      targetDateIso,
+      festMarktEvents,
+      durationSec
+    ),
     "utf8"
   );
   fs.writeFileSync(FEST_MARKT_JSON, JSON.stringify(festMarktEvents, null, 2), "utf8");
 
-  fs.writeFileSync(RAW_OUTPUT_TXT, createRawTextReport(SOURCE_URL, rawCards), "utf8");
+  fs.writeFileSync(RAW_OUTPUT_TXT, createRawTextReport(sourceUrl, targetDateIso, rawCards), "utf8");
   fs.writeFileSync(RAW_OUTPUT_JSON, JSON.stringify(rawCards, null, 2), "utf8");
 
   console.log(fullReportLines.join("\n"));
