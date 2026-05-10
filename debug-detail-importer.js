@@ -1,267 +1,232 @@
 import { chromium } from "playwright";
-import fs from "fs";
 
 const SOURCE_URL =
   "https://www.wasgehtapp.de/index.php?geo_id=15546&ort=Dettingen%20unter%20Teck&x=9.45&y=48.6167&einwohner=5603&region=01&select_ort=1&radius=40";
 
-const MAX_EVENTS = 50;
+const MAX_EVENTS = 20;
 const DETAIL_TIMEOUT_MS = 5000;
 
-const textLog = [];
-const jsonLog = [];
-
-function log(line = "") {
-  console.log(line);
-  textLog.push(line);
+function normalizeText(text) {
+  return String(text || "")
+    .replace(/\u00a0/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
-function cleanLine(line) {
-  return String(line || "").replace(/\s+/g, " ").trim();
+function cleanLocation(text) {
+  return normalizeText(text)
+    .replace(/^pin\s*/i, "")
+    .replace(/\s*map\s*link\s*$/i, "")
+    .replace(/\s*map\s*$/i, "")
+    .trim();
 }
 
 function extractGeoFromUrl(url) {
   if (!url) return null;
 
-  const match = String(url).match(/daddr=([-0-9.]+),([-0-9.]+)/);
+  const decoded = decodeURIComponent(url);
+
+  const match = decoded.match(
+    /[?&]daddr=(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)/i
+  );
+
   if (!match) return null;
 
   return {
     lat: Number(match[1]),
-    lon: Number(match[2]),
+    lng: Number(match[2])
   };
 }
 
-function extractFieldsFromLines(lines) {
-  const clean = lines.map(cleanLine).filter(Boolean);
+function extractDetailBlock(lines) {
+  const startIndex = lines.findIndex(line => line === "calendar");
+  if (startIndex === -1) return [];
 
-  for (let i = 1; i < clean.length - 4; i++) {
-    if (clean[i] !== "calendar") continue;
+  const endIndex = lines.findIndex(
+    (line, index) =>
+      index > startIndex &&
+      line.includes("Zum Kalender zufügen")
+  );
 
-    const title = clean[i - 1];
-    const date = clean[i + 1];
+  return lines.slice(
+    Math.max(0, startIndex - 1),
+    endIndex === -1 ? startIndex + 40 : endIndex
+  );
+}
 
-    let location = "";
-    if (clean[i + 2] === "pin") {
-      location = clean[i + 3] || "";
-    }
-
-    if (!title || title.includes("Was geht")) continue;
-    if (!date) continue;
-    if (!location) continue;
-
-    location = location
-      .replace(/\s+map\s+link$/i, "")
-      .replace(/\s+map$/i, "")
-      .trim();
-
-    return {
-      title,
-      date,
-      location,
-    };
-  }
+function extractFields(detailLines) {
+  const title = normalizeText(detailLines[0] || "");
+  const dateIndex = detailLines.findIndex(line => line === "calendar");
+  const pinIndex = detailLines.findIndex(line => line === "pin");
 
   return {
-    title: "",
-    date: "",
-    location: "",
+    title,
+    date:
+      dateIndex >= 0
+        ? normalizeText(detailLines[dateIndex + 1] || "")
+        : "",
+    location:
+      pinIndex >= 0
+        ? cleanLocation(detailLines[pinIndex + 1] || "")
+        : ""
   };
+}
+
+async function waitForDetailChange(page, oldSnapshot) {
+  await page.waitForFunction(
+    previous => {
+      const text = document.body.innerText || "";
+      return (
+        text.includes("calendar") &&
+        text.includes("pin") &&
+        text !== previous
+      );
+    },
+    oldSnapshot,
+    { timeout: DETAIL_TIMEOUT_MS }
+  );
 }
 
 async function readActiveDetail(page) {
   return await page.evaluate(() => {
-    const lines = document.body.innerText
+    const lines = (document.body.innerText || "")
       .split("\n")
-      .map((line) => line.trim())
+      .map(line => line.trim())
       .filter(Boolean);
 
-    const mapLinks = Array.from(
-      document.querySelectorAll('a[href*="daddr="]')
-    ).map((a) => a.href);
+    const calendarIndex = lines.findIndex(line => line === "calendar");
+    const pinIndex = lines.findIndex(
+      (line, index) => index > calendarIndex && line === "pin"
+    );
+
+    const locationLine =
+      pinIndex >= 0 ? lines[pinIndex + 1] || "" : "";
+
+    const mapCandidates = Array.from(document.querySelectorAll("a.map_link"))
+      .map(a => ({
+        href: a.href || "",
+        text: (a.innerText || a.textContent || "").trim(),
+        html: a.outerHTML || ""
+      }))
+      .filter(item => item.href);
 
     return {
       lines,
-      mapLinks,
+      calendarIndex,
+      pinIndex,
+      locationLine,
+      mapCandidates
     };
   });
 }
 
-async function main() {
-  const startedAt = Date.now();
+async function readEvent(page, index) {
+  const cards = page.locator(".termin.inline");
+  const card = cards.nth(index);
 
-  log("🔎 Debug Detail Importer V13");
-  log("Ziel: Reparatur ohne Copilot, V10-Logik mit 50 Events");
-  log(`Max Events: ${MAX_EVENTS}`);
-  log("");
+  const listText = normalizeText(await card.innerText());
+  const oldSnapshot = await page.evaluate(() => document.body.innerText || "");
 
-  const browser = await chromium.launch({
-    headless: true,
-  });
+  await card.click({ timeout: 10000 });
+  await waitForDetailChange(page, oldSnapshot);
+
+  const active = await readActiveDetail(page);
+  const detailLines = extractDetailBlock(active.lines);
+  const fields = extractFields(detailLines);
+
+  let selectedMap = null;
+  let selectedGeo = null;
+
+  for (const candidate of active.mapCandidates) {
+    const geo = extractGeoFromUrl(candidate.href);
+    if (!geo) continue;
+
+    selectedMap = candidate.href;
+    selectedGeo = geo;
+    break;
+  }
+
+  return {
+    listText,
+    detailLines,
+    fields,
+    locationLine: active.locationLine,
+    mapCandidates: active.mapCandidates,
+    selectedMap,
+    selectedGeo
+  };
+}
+
+async function run() {
+  console.log("🔎 Debug Detail Importer V9");
+  console.log("Ziel: Geo passend zum aktiven Detailblock prüfen");
+  console.log(`Max Events: ${MAX_EVENTS}`);
+  console.log("");
+
+  const browser = await chromium.launch({ headless: true });
 
   const page = await browser.newPage({
+    userAgent:
+      "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
     viewport: {
       width: 390,
-      height: 900,
-    },
+      height: 844,
+      isMobile: true
+    }
   });
 
   await page.goto(SOURCE_URL, {
-    waitUntil: "domcontentloaded",
-    timeout: 60000,
+    waitUntil: "networkidle",
+    timeout: 60000
   });
 
-  await page.waitForSelector(".termin.inline", {
-    timeout: 20000,
-  });
+  await page.waitForTimeout(3000);
 
-  const eventCount = await page.locator(".termin.inline").count();
-  const testCount = Math.min(eventCount, MAX_EVENTS);
+  const count = await page.locator(".termin.inline").count();
+  const total = Math.min(count, MAX_EVENTS);
 
-  log(`Gefundene Events: ${eventCount}`);
-  log(`Teste Events: ${testCount}`);
-  log("");
+  console.log(`Gefundene Container: ${count}`);
+  console.log(`Teste Events: ${total}`);
+  console.log("");
 
-  let okCount = 0;
-  let errorCount = 0;
-  let geoCount = 0;
-
-  let previousLocation = "";
-  let previousGeoText = "";
-  let warningCount = 0;
-
-  for (let index = 0; index < testCount; index++) {
-    log(`--- Event ${index + 1} ---`);
+  for (let i = 0; i < total; i++) {
+    console.log(`--- Event ${i + 1} ---`);
 
     try {
-      const card = page.locator(".termin.inline").nth(index);
+      const result = await readEvent(page, i);
 
-      const beforeText = await page.evaluate(() => document.body.innerText);
+      console.log(`Titel: ${result.fields.title}`);
+      console.log(`Datum: ${result.fields.date}`);
+      console.log(`Ort: ${result.fields.location}`);
+      console.log(`LocationLine roh: ${result.locationLine}`);
 
-      await card.scrollIntoViewIfNeeded();
-      await card.click({
-        timeout: 5000,
-      });
-
-      try {
-        await page.waitForFunction(
-          (oldText) => document.body.innerText !== oldText,
-          beforeText,
-          {
-            timeout: DETAIL_TIMEOUT_MS,
-          }
+      console.log("Map-Kandidaten:");
+      result.mapCandidates.slice(0, 6).forEach((item, idx) => {
+        const geo = extractGeoFromUrl(item.href);
+        console.log(
+          `${idx + 1}. ${item.href} ${
+            geo ? `=> ${geo.lat}, ${geo.lng}` : "=> keine Geo"
+          }`
         );
-      } catch {
-        await page.waitForTimeout(500);
-      }
-
-      const active = await readActiveDetail(page);
-      const fields = extractFieldsFromLines(active.lines);
-
-      const lastMapLink =
-        active.mapLinks.length > 0
-          ? active.mapLinks[active.mapLinks.length - 1]
-          : "";
-
-      const geo = extractGeoFromUrl(lastMapLink);
-
-      const geoText = geo ? `${geo.lat}, ${geo.lon}` : "";
-      const ok = Boolean(fields.title && fields.date && fields.location && geo);
-
-      let warning = "";
-
-      if (
-        previousLocation &&
-        fields.location &&
-        previousLocation !== fields.location &&
-        previousGeoText &&
-        geoText &&
-        previousGeoText === geoText
-      ) {
-        warning = "WARNUNG: Gleiche Geo bei anderem Ort";
-        warningCount++;
-      }
-
-      if (ok) {
-        okCount++;
-      } else {
-        errorCount++;
-      }
-
-      if (geo) {
-        geoCount++;
-      }
-
-      log(`OK: ${ok}`);
-      log(`Titel: ${fields.title || "Unbekannter Titel"}`);
-      log(`Datum: ${fields.date || "Datum unbekannt"}`);
-      log(`Ort: ${fields.location || "Ort unbekannt"}`);
-      log(`Geo: ${geoText || "Keine Geo"}`);
-      log(`Map-Link: ${lastMapLink}`);
-      log(`Map-Kandidaten: ${active.mapLinks.length}`);
-
-      if (warning) {
-        log(warning);
-      }
-
-      log("");
-
-      jsonLog.push({
-        index: index + 1,
-        ok,
-        title: fields.title || null,
-        date: fields.date || null,
-        location: fields.location || null,
-        geo,
-        mapLink: lastMapLink || null,
-        mapCandidateCount: active.mapLinks.length,
-        warning: warning || null,
-        error: ok ? null : "Unvollständige Daten",
       });
 
-      if (fields.location) previousLocation = fields.location;
-      if (geoText) previousGeoText = geoText;
+      console.log(
+        `Ausgewählt: ${
+          result.selectedGeo
+            ? `${result.selectedGeo.lat}, ${result.selectedGeo.lng}`
+            : "KEINE GEO"
+        }`
+      );
+
+      console.log("");
     } catch (error) {
-      errorCount++;
-
-      log(`FEHLER: ${error.message}`);
-      log("");
-
-      jsonLog.push({
-        index: index + 1,
-        ok: false,
-        title: null,
-        date: null,
-        location: null,
-        geo: null,
-        mapLink: null,
-        mapCandidateCount: 0,
-        warning: null,
-        error: error.message,
-      });
+      console.log(`FEHLER: ${error.message}`);
+      console.log("");
     }
   }
 
-  const duration = (Date.now() - startedAt) / 1000;
-
-  log("========== ZUSAMMENFASSUNG ==========");
-  log(`Events getestet: ${testCount}`);
-  log(`OK: ${okCount}`);
-  log(`Fehler: ${errorCount}`);
-  log(`Mit Geo: ${geoCount}`);
-  log(`Warnungen: ${warningCount}`);
-  log(`Dauer: ${duration.toFixed(2)}s`);
-  log(`Durchschnitt pro Event: ${(duration / testCount).toFixed(2)}s`);
-  log("");
-  log("✔ Debug abgeschlossen.");
-
-  fs.writeFileSync("debug-output.txt", textLog.join("\n"), "utf8");
-  fs.writeFileSync("debug-output.json", JSON.stringify(jsonLog, null, 2), "utf8");
-
   await browser.close();
+  console.log("✅ Debug-Test V9 beendet.");
 }
 
-main().catch((error) => {
-  console.error(error);
-  fs.writeFileSync("debug-output.txt", String(error.stack || error), "utf8");
-  process.exit(1);
-});
+run();
