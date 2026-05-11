@@ -39,9 +39,9 @@ jobs:
           EVENTBW_MAX_PAGES_PER_CATEGORY: '40'
           EVENTBW_DETAIL_CONCURRENCY: '8'
         run: |
-          node eventbw/import-eventbw.cjs
+          node eventbw/import-eventbw.js
 
-      - name: Upload EventBW output artifact
+      - name: Upload debug artifact
         uses: actions/upload-artifact@v4
         with:
           name: eventbw-output
