@@ -2,30 +2,30 @@
 'use strict';
 
 /**
- * EventBW Phase-1 Vergleichsimporter
+ * EventBW Importer
  *
- * Ziel:
- * - EventBW-Region Stuttgart möglichst direkt spiegeln
- * - kein Radiusfilter
- * - kein Markt/Fest-Filter
- * - kein Negativfilter
- * - kein Geo-Filter
- * - nur Datum: heute Sonntag, sonst kommender Sonntag
- *
- * Richtige Quelle:
- * https://www.veranstaltung-baden-wuerttemberg.de/region/region-stuttgart/
+ * Strategie:
+ * - EventBW-eigene Suche verwenden
+ * - Kategorien direkt abfragen:
+ *   - Märkte
+ *   - Feste
+ * - Ort: Dettingen
+ * - Datum:
+ *   - wenn heute Sonntag: heute
+ *   - sonst: kommender Sonntag
+ * - kein Playwright
+ * - kein Browser
+ * - serverseitiges HTML
  *
  * Outputs:
- * - eventbw/01-raw-import.json
- * - eventbw/01-raw-import.txt
- * - eventbw/02-sonntag.json
- * - eventbw/02-sonntag.txt
  * - eventbw/debug-output.json
  * - eventbw/debug-output.txt
  * - eventbw/feste-maerkte.json
  * - eventbw/feste-maerkte.txt
- *
- * Node >= 20, no Playwright, no npm dependencies.
+ * - eventbw/01-raw-import.json
+ * - eventbw/01-raw-import.txt
+ * - eventbw/02-sonntag.json
+ * - eventbw/02-sonntag.txt
  */
 
 const fs = require('node:fs/promises');
@@ -34,12 +34,23 @@ const path = require('node:path');
 const BASE_URL = 'https://www.veranstaltung-baden-wuerttemberg.de';
 const OUT_DIR = path.resolve(process.cwd(), 'eventbw');
 
-const REGION_KEY = process.env.EVENTBW_REGION_KEY || 'region-stuttgart';
-const REGION_URL = `${BASE_URL}/region/${REGION_KEY}/`;
-
-const MAX_PAGES = Number(process.env.EVENTBW_MAX_PAGES_PER_CATEGORY || process.env.EVENTBW_MAX_PAGES || 80);
+const SEARCH_PLACE = process.env.EVENTBW_SEARCH_PLACE || 'Dettingen Teck';
+const MAX_PAGES_PER_CATEGORY = Number(process.env.EVENTBW_MAX_PAGES_PER_CATEGORY || 20);
 const FETCH_TIMEOUT_MS = Number(process.env.EVENTBW_FETCH_TIMEOUT_MS || 12000);
-const USER_AGENT = 'Mozilla/5.0 EventBW-Phase1-CompareImporter/1.1 (+https://github.com/Ulli-Buehler/Event-Finder)';
+const USER_AGENT = 'Mozilla/5.0 EventBW-SearchImporter/2.0 (+https://github.com/Ulli-Buehler/Event-Finder)';
+
+const CATEGORIES = [
+  {
+    key: 'maerkte',
+    label: 'Märkte',
+    path: '/kategorie/maerkte/',
+  },
+  {
+    key: 'feste',
+    label: 'Feste',
+    path: '/kategorie/feste/',
+  },
+];
 
 function decodeHtml(s) {
   return String(s || '')
@@ -80,23 +91,6 @@ function normalizeText(s) {
     .trim();
 }
 
-function parseDateRange(value) {
-  const text = cleanText(value);
-  const matches = [...text.matchAll(/(\d{2})\.(\d{2})\.(\d{4})/g)];
-
-  const startDate = matches[0] ? `${matches[0][3]}-${matches[0][2]}-${matches[0][1]}` : null;
-  const endDate = matches[1] ? `${matches[1][3]}-${matches[1][2]}-${matches[1][1]}` : startDate;
-
-  const timeMatch = text.match(/,\s*([^,]+?Uhr)/i);
-
-  return {
-    raw: text,
-    startDate,
-    endDate,
-    time: timeMatch ? cleanText(timeMatch[1]) : '',
-  };
-}
-
 function berlinDateParts() {
   const parts = new Intl.DateTimeFormat('en-CA', {
     timeZone: 'Europe/Berlin',
@@ -128,6 +122,23 @@ function targetSundayIso() {
   date.setUTCDate(date.getUTCDate() + addDays);
 
   return date.toISOString().slice(0, 10);
+}
+
+function parseDateRange(value) {
+  const text = cleanText(value);
+  const matches = [...text.matchAll(/(\d{2})\.(\d{2})\.(\d{4})/g)];
+
+  const startDate = matches[0] ? `${matches[0][3]}-${matches[0][2]}-${matches[0][1]}` : null;
+  const endDate = matches[1] ? `${matches[1][3]}-${matches[1][2]}-${matches[1][1]}` : startDate;
+
+  const timeMatch = text.match(/,\s*([^,]+?Uhr)/i);
+
+  return {
+    raw: text,
+    startDate,
+    endDate,
+    time: timeMatch ? cleanText(timeMatch[1]) : '',
+  };
 }
 
 function compareIso(a, b) {
@@ -177,44 +188,50 @@ function absoluteUrl(href) {
   }
 }
 
-function pageUrl(page) {
-  return page === 1 ? REGION_URL : `${REGION_URL}page/${page}/`;
+function buildSearchUrl(category, targetDate, page = 1) {
+  const basePath = page === 1
+    ? category.path
+    : `${category.path}page/${page}/`;
+
+  const url = new URL(basePath, BASE_URL);
+
+  url.searchParams.set('post_type', 'event');
+  url.searchParams.set('ort', SEARCH_PLACE);
+  url.searchParams.set('region', '');
+  url.searchParams.set('von', targetDate);
+  url.searchParams.set('bis', targetDate);
+
+  return url.toString();
 }
 
-function guessCategory(text) {
-  const m = text.match(/\b(Feste|Märkte|Maerkte|Konzerte|Ausstellungen|Führungen|Fuehrungen|Theater|Sport|Kinder|Brauchtum|Kultur)\b/i);
+function extractCount(html) {
+  const text = cleanText(html);
+  const m = text.match(/(\d+)\s+Veranstaltungen gefunden/i)
+    || text.match(/(\d+)\s+aktuelle/i);
 
-  if (!m) return '';
-
-  return cleanText(m[1]).replace('Maerkte', 'Märkte').replace('Fuehrungen', 'Führungen');
+  return m ? Number(m[1]) : null;
 }
 
-function extractCityFromText(text, category, dateRaw) {
+function extractCity(text, categoryLabel, dateRaw) {
   let city = '';
 
-  if (category && dateRaw) {
-    const escapedCategory = category.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  if (categoryLabel && dateRaw) {
+    const escapedCategory = categoryLabel.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const escapedDate = dateRaw.slice(0, 10).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-
     const re = new RegExp(`${escapedCategory}\\s*\\|\\s*([^\\n|]+?)\\s+${escapedDate}`, 'i');
     const m = text.match(re);
-
-    if (m) {
-      city = cleanText(m[1]);
-    }
+    if (m) city = cleanText(m[1]);
   }
 
   if (!city) {
-    const generic = text.match(/(?:Feste|Märkte|Maerkte|Konzerte|Ausstellungen|Führungen|Fuehrungen|Theater|Sport|Kinder|Brauchtum|Kultur)\s*\|\s*([^0-9|]+?)\s+\d{2}\.\d{2}\.\d{4}/i);
-    if (generic) {
-      city = cleanText(generic[1]);
-    }
+    const generic = text.match(/(?:Feste|Märkte|Maerkte)\s*\|\s*([^0-9|]+?)\s+\d{2}\.\d{2}\.\d{4}/i);
+    if (generic) city = cleanText(generic[1]);
   }
 
   return city;
 }
 
-function extractEventsFromListHtml(html, page) {
+function extractEventsFromHtml(html, category, page, searchUrl) {
   const beforePagination = html.split(/<h2[^>]*>\s*Posts pagination\s*<\/h2>/i)[0] || html;
   const h3Re = /<h3[^>]*>\s*<a\s+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>\s*<\/h3>/gi;
   const matches = [...beforePagination.matchAll(h3Re)];
@@ -234,13 +251,12 @@ function extractEventsFromListHtml(html, page) {
     const dateRaw = dateMatch ? cleanText(dateMatch[0]) : '';
     const dateRange = parseDateRange(dateRaw);
 
-    const category = guessCategory(blockText);
-    const city = extractCityFromText(blockText, category, dateRaw);
+    const city = extractCity(blockText, category.label, dateRaw);
 
     const teaser = cleanText(
       blockText
         .replace(title, '')
-        .replace(category, '')
+        .replace(category.label, '')
         .replace(city, '')
         .replace(dateRaw, '')
         .replace('Details', '')
@@ -250,10 +266,12 @@ function extractEventsFromListHtml(html, page) {
 
     events.push({
       source: 'eventbw',
-      importPhase: 'phase1-region-stuttgart-no-filters',
+      category: category.label,
+      categoryKey: category.key,
+      searchPlace: SEARCH_PLACE,
+      searchUrl,
       page,
       title,
-      category,
       city,
       dateRaw: dateRange.raw,
       startDate: dateRange.startDate,
@@ -273,7 +291,7 @@ function dedupeEvents(events) {
   const out = [];
 
   for (const event of events) {
-    const key = normalizeText(`${event.title}|${event.startDate}|${event.url}`);
+    const key = normalizeText(`${event.title}|${event.categoryKey}|${event.startDate}|${event.url}`);
 
     if (seen.has(key)) continue;
 
@@ -284,23 +302,66 @@ function dedupeEvents(events) {
   return out;
 }
 
+async function collectCategory(category, targetDate) {
+  const pages = [];
+  const events = [];
+
+  for (let page = 1; page <= MAX_PAGES_PER_CATEGORY; page++) {
+    const searchUrl = buildSearchUrl(category, targetDate, page);
+
+    try {
+      const html = await fetchHtml(searchUrl);
+      const pageEvents = extractEventsFromHtml(html, category, page, searchUrl);
+      const reportedCount = page === 1 ? extractCount(html) : null;
+
+      pages.push({
+        category: category.key,
+        page,
+        url: searchUrl,
+        ok: true,
+        reportedCount,
+        parsedCount: pageEvents.length,
+      });
+
+      if (!pageEvents.length) break;
+
+      events.push(...pageEvents);
+
+      if (reportedCount !== null && events.length >= reportedCount) break;
+    } catch (err) {
+      pages.push({
+        category: category.key,
+        page,
+        url: searchUrl,
+        ok: false,
+        error: String(err.message || err),
+      });
+      break;
+    }
+  }
+
+  return {
+    pages,
+    events,
+  };
+}
+
 function eventsToText(title, events, meta) {
   const lines = [];
 
   lines.push(title);
-  lines.push(`Quelle: ${REGION_URL}`);
-  lines.push(`Region: ${REGION_KEY}`);
+  lines.push(`Ort/Suche: ${SEARCH_PLACE}`);
   lines.push(`Zieldatum: ${meta.targetDate}`);
   lines.push(`Treffer: ${events.length}`);
   lines.push('');
 
   for (const [i, e] of events.entries()) {
     lines.push(`${i + 1}. ${e.title}`);
-    lines.push(`   Kategorie: ${e.category || 'unbekannt'}`);
+    lines.push(`   Kategorie: ${e.category}`);
     lines.push(`   Ort: ${e.city || 'unbekannt'}`);
     lines.push(`   Datum: ${e.startDate || 'unbekannt'}${e.endDate && e.endDate !== e.startDate ? ` - ${e.endDate}` : ''}${e.time ? ` | ${e.time}` : ''}`);
     if (e.teaser) lines.push(`   Text: ${e.teaser}`);
-    lines.push(`   Seite: ${e.page}`);
+    lines.push(`   Suchseite: ${e.searchUrl}`);
     lines.push(`   URL: ${e.url}`);
     lines.push('');
   }
@@ -308,24 +369,29 @@ function eventsToText(title, events, meta) {
   return lines.join('\n');
 }
 
-function summaryToText(meta) {
+function summaryToText(meta, pages) {
   return [
-    'EventBW Phase-1 Debug Import',
+    'EventBW Direct Search Import',
     '',
-    `Quelle: ${REGION_URL}`,
-    `Region: ${REGION_KEY}`,
+    `Ort/Suche: ${SEARCH_PLACE}`,
     `Zieldatum: ${meta.targetDate}`,
     '',
-    'Filter:',
-    '- Region Stuttgart: JA',
-    '- Datum Sonntag: JA für 02-sonntag/feste-maerkte',
-    '- Radiusfilter: NEIN',
-    '- Markt/Fest-Filter: NEIN',
-    '- Negativfilter: NEIN',
-    '- Geofilter: NEIN',
+    'Suchstrategie:',
+    '- EventBW eigene Kategorie-Suche',
+    '- Kategorie Märkte',
+    '- Kategorie Feste',
+    '- Datum von/bis identisch',
+    '- Ort Dettingen',
+    '- kein Radiusfilter',
+    '- kein eigener Markt/Fest-Filter',
+    '- kein Negativfilter',
+    '- kein Geofilter',
     '',
     'Counts:',
     JSON.stringify(meta.counts, null, 2),
+    '',
+    'Pages:',
+    JSON.stringify(pages, null, 2),
     '',
   ].join('\n');
 }
@@ -336,103 +402,76 @@ async function main() {
 
   await fs.mkdir(OUT_DIR, { recursive: true });
 
-  const pages = [];
+  const allPages = [];
   const collected = [];
 
-  for (let page = 1; page <= MAX_PAGES; page++) {
-    const url = pageUrl(page);
-
-    try {
-      const html = await fetchHtml(url);
-      const events = extractEventsFromListHtml(html, page);
-
-      pages.push({
-        page,
-        url,
-        ok: true,
-        count: events.length,
-      });
-
-      if (!events.length) break;
-
-      collected.push(...events);
-
-      const pageDates = events
-        .map(e => e.startDate)
-        .filter(Boolean)
-        .sort();
-
-      const minDate = pageDates[0] || null;
-      const maxDate = pageDates[pageDates.length - 1] || null;
-
-      if (minDate && compareIso(minDate, targetDate) > 0) {
-        break;
-      }
-
-      if (maxDate && compareIso(maxDate, targetDate) > 0 && events.every(e => e.startDate && compareIso(e.startDate, targetDate) > 0)) {
-        break;
-      }
-    } catch (err) {
-      pages.push({
-        page,
-        url,
-        ok: false,
-        error: String(err.message || err),
-      });
-      break;
-    }
+  for (const category of CATEGORIES) {
+    const result = await collectCategory(category, targetDate);
+    allPages.push(...result.pages);
+    collected.push(...result.events);
   }
 
   const rawEvents = dedupeEvents(collected);
   const sundayEvents = rawEvents.filter(e => eventTouchesDate(e, targetDate));
 
+  const finalEvents = sundayEvents.sort((a, b) => {
+    const c = a.category.localeCompare(b.category, 'de');
+    if (c !== 0) return c;
+    return a.title.localeCompare(b.title, 'de');
+  });
+
   const meta = {
     source: BASE_URL,
-    regionKey: REGION_KEY,
-    regionUrl: REGION_URL,
+    searchPlace: SEARCH_PLACE,
     targetDate,
     startedAt,
     finishedAt: new Date().toISOString(),
     filters: {
-      regionStuttgart: true,
-      sundayOnlyForFinal: true,
+      eventbwCategorySearch: true,
+      categories: CATEGORIES.map(c => c.key),
+      dateFromTo: true,
+      place: SEARCH_PLACE,
       radius: false,
-      marketFestival: false,
+      ownMarketFestivalFilter: false,
       negative: false,
       geo: false,
     },
     counts: {
-      pages: pages.length,
+      pages: allPages.length,
       rawCollectedIncludingDuplicates: collected.length,
       rawUnique: rawEvents.length,
       sunday: sundayEvents.length,
+      final: finalEvents.length,
+      maerkte: finalEvents.filter(e => e.categoryKey === 'maerkte').length,
+      feste: finalEvents.filter(e => e.categoryKey === 'feste').length,
     },
   };
 
   const debug = {
     meta,
-    pages,
+    pages: allPages,
     rawEvents,
     sundayEvents,
+    finalEvents,
   };
 
   await fs.writeFile(path.join(OUT_DIR, '01-raw-import.json'), JSON.stringify({ meta, events: rawEvents }, null, 2), 'utf8');
-  await fs.writeFile(path.join(OUT_DIR, '01-raw-import.txt'), eventsToText('01 RAW IMPORT - Region Stuttgart ohne Filter', rawEvents, meta), 'utf8');
+  await fs.writeFile(path.join(OUT_DIR, '01-raw-import.txt'), eventsToText('01 RAW IMPORT - EventBW Suche Märkte + Feste', rawEvents, meta), 'utf8');
 
   await fs.writeFile(path.join(OUT_DIR, '02-sonntag.json'), JSON.stringify({ meta, events: sundayEvents }, null, 2), 'utf8');
-  await fs.writeFile(path.join(OUT_DIR, '02-sonntag.txt'), eventsToText('02 SONNTAG - Region Stuttgart ohne Markt/Fest/Radiusfilter', sundayEvents, meta), 'utf8');
+  await fs.writeFile(path.join(OUT_DIR, '02-sonntag.txt'), eventsToText('02 SONNTAG - EventBW Suche ohne eigene Filter', sundayEvents, meta), 'utf8');
 
   await fs.writeFile(path.join(OUT_DIR, 'debug-output.json'), JSON.stringify(debug, null, 2), 'utf8');
-  await fs.writeFile(path.join(OUT_DIR, 'debug-output.txt'), summaryToText(meta), 'utf8');
+  await fs.writeFile(path.join(OUT_DIR, 'debug-output.txt'), summaryToText(meta, allPages), 'utf8');
 
-  await fs.writeFile(path.join(OUT_DIR, 'feste-maerkte.json'), JSON.stringify({ meta, events: sundayEvents }, null, 2), 'utf8');
-  await fs.writeFile(path.join(OUT_DIR, 'feste-maerkte.txt'), eventsToText('PHASE 1 FINAL - noch ungefilterte Sonntagstreffer', sundayEvents, meta), 'utf8');
+  await fs.writeFile(path.join(OUT_DIR, 'feste-maerkte.json'), JSON.stringify({ meta, events: finalEvents }, null, 2), 'utf8');
+  await fs.writeFile(path.join(OUT_DIR, 'feste-maerkte.txt'), eventsToText('EventBW Feste/Märkte - direkte Suche', finalEvents, meta), 'utf8');
 
-  console.log(`EventBW Phase 1 done.`);
-  console.log(`Region: ${REGION_URL}`);
+  console.log(`EventBW direct search import done.`);
+  console.log(`Place: ${SEARCH_PLACE}`);
   console.log(`Target date: ${targetDate}`);
   console.log(`Raw unique: ${rawEvents.length}`);
-  console.log(`Sunday: ${sundayEvents.length}`);
+  console.log(`Final: ${finalEvents.length}`);
 }
 
 main().catch(err => {
