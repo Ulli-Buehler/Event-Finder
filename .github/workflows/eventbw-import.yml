@@ -46,6 +46,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: eventbw-output
+          if-no-files-found: warn
           path: |
             eventbw/debug-output.json
             eventbw/debug-output.txt
@@ -56,10 +57,20 @@ jobs:
 
       - name: Commit updated EventBW outputs
         run: |
-          if [[ -n "$(git status --porcelain eventbw/debug-output.json eventbw/debug-output.txt eventbw/feste-maerkte.json eventbw/feste-maerkte.txt eventbw/geo-debug.json eventbw/geo-debug.txt)" ]]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add eventbw/debug-output.json eventbw/debug-output.txt eventbw/feste-maerkte.json eventbw/feste-maerkte.txt eventbw/geo-debug.json eventbw/geo-debug.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add eventbw/debug-output.json eventbw/debug-output.txt eventbw/feste-maerkte.json eventbw/feste-maerkte.txt
+
+          if [[ -f eventbw/geo-debug.json ]]; then
+            git add eventbw/geo-debug.json
+          fi
+
+          if [[ -f eventbw/geo-debug.txt ]]; then
+            git add eventbw/geo-debug.txt
+          fi
+
+          if [[ -n "$(git status --porcelain)" ]]; then
             git commit -m "Update EventBW import outputs"
             git push
           else
