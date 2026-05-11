@@ -12,6 +12,9 @@
  * - kein Geo-Filter
  * - nur Datum: heute Sonntag, sonst kommender Sonntag
  *
+ * Richtige Quelle:
+ * https://www.veranstaltung-baden-wuerttemberg.de/region/region-stuttgart/
+ *
  * Outputs:
  * - eventbw/01-raw-import.json
  * - eventbw/01-raw-import.txt
@@ -31,12 +34,12 @@ const path = require('node:path');
 const BASE_URL = 'https://www.veranstaltung-baden-wuerttemberg.de';
 const OUT_DIR = path.resolve(process.cwd(), 'eventbw');
 
-const REGION_KEY = process.env.EVENTBW_REGION_KEY || 'stuttgart';
+const REGION_KEY = process.env.EVENTBW_REGION_KEY || 'region-stuttgart';
 const REGION_URL = `${BASE_URL}/region/${REGION_KEY}/`;
 
 const MAX_PAGES = Number(process.env.EVENTBW_MAX_PAGES_PER_CATEGORY || process.env.EVENTBW_MAX_PAGES || 80);
 const FETCH_TIMEOUT_MS = Number(process.env.EVENTBW_FETCH_TIMEOUT_MS || 12000);
-const USER_AGENT = 'Mozilla/5.0 EventBW-Phase1-CompareImporter/1.0 (+https://github.com/Ulli-Buehler/Event-Finder)';
+const USER_AGENT = 'Mozilla/5.0 EventBW-Phase1-CompareImporter/1.1 (+https://github.com/Ulli-Buehler/Event-Finder)';
 
 function decodeHtml(s) {
   return String(s || '')
