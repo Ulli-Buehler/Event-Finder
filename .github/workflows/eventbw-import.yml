@@ -8,7 +8,7 @@ on:
         required: false
         type: string
       radius_km:
-        description: Radius um Dettingen unter Teck
+        description: Aktuell in Phase 1 nicht genutzt
         required: false
         default: '40'
         type: string
@@ -36,9 +36,9 @@ jobs:
         env:
           EVENTBW_TARGET_DATE: ${{ inputs.target_date }}
           EVENTBW_RADIUS_KM: ${{ inputs.radius_km || '40' }}
-          EVENTBW_MAX_PAGES_PER_CATEGORY: '40'
-          EVENTBW_DETAIL_CONCURRENCY: '8'
-          EVENTBW_GEOCODE_CONCURRENCY: '3'
+          EVENTBW_REGION_KEY: 'stuttgart'
+          EVENTBW_MAX_PAGES: '80'
+          EVENTBW_MAX_PAGES_PER_CATEGORY: '80'
         run: |
           node eventbw/import-eventbw.cjs
 
@@ -48,6 +48,10 @@ jobs:
           name: eventbw-output
           if-no-files-found: warn
           path: |
+            eventbw/01-raw-import.json
+            eventbw/01-raw-import.txt
+            eventbw/02-sonntag.json
+            eventbw/02-sonntag.txt
             eventbw/debug-output.json
             eventbw/debug-output.txt
             eventbw/feste-maerkte.json
@@ -60,15 +64,22 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add eventbw/debug-output.json eventbw/debug-output.txt eventbw/feste-maerkte.json eventbw/feste-maerkte.txt
-
-          if [[ -f eventbw/geo-debug.json ]]; then
-            git add eventbw/geo-debug.json
-          fi
-
-          if [[ -f eventbw/geo-debug.txt ]]; then
-            git add eventbw/geo-debug.txt
-          fi
+          for file in \
+            eventbw/01-raw-import.json \
+            eventbw/01-raw-import.txt \
+            eventbw/02-sonntag.json \
+            eventbw/02-sonntag.txt \
+            eventbw/debug-output.json \
+            eventbw/debug-output.txt \
+            eventbw/feste-maerkte.json \
+            eventbw/feste-maerkte.txt \
+            eventbw/geo-debug.json \
+            eventbw/geo-debug.txt
+          do
+            if [[ -f "$file" ]]; then
+              git add "$file"
+            fi
+          done
 
           if [[ -n "$(git status --porcelain)" ]]; then
             git commit -m "Update EventBW import outputs"
