@@ -37,7 +37,7 @@ jobs:
           EVENTBW_TARGET_DATE: ${{ inputs.target_date }}
           EVENTBW_RADIUS_KM: ${{ inputs.radius_km || '40' }}
           EVENTBW_SEARCH_PLACE: 'Dettingen Teck'
-          EVENTBW_MAX_PAGES_PER_CATEGORY: '20'
+          EVENTBW_MAX_PAGES_PER_CATEGORY: '30'
         run: |
           node eventbw/import-eventbw.cjs
 
