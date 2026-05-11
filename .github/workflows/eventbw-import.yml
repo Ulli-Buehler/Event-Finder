@@ -2,25 +2,63 @@ name: EventBW Import
 
 on:
   workflow_dispatch:
+    inputs:
+      target_date:
+        description: Optionales Zieldatum YYYY-MM-DD; leer = heute Sonntag sonst kommender Sonntag
+        required: false
+        type: string
+      radius_km:
+        description: Radius um Dettingen unter Teck
+        required: false
+        default: '40'
+        type: string
+  schedule:
+    - cron: '15 5 * * *'
+
+permissions:
+  contents: write
 
 jobs:
   eventbw-import:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
+    timeout-minutes: 5
 
     steps:
-      - name: Repository auschecken
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Node installieren
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: '20'
 
-      - name: Dependencies installieren
-        run: npm install
+      - name: Run EventBW importer
+        env:
+          EVENTBW_TARGET_DATE: ${{ inputs.target_date }}
+          EVENTBW_RADIUS_KM: ${{ inputs.radius_km || '40' }}
+          EVENTBW_MAX_PAGES_PER_CATEGORY: '40'
+          EVENTBW_DETAIL_CONCURRENCY: '8'
+        run: |
+          node eventbw/import-eventbw.js
 
-      - name: EventBW Importer starten
-        run: node eventbw/import-eventbw.js
+      - name: Upload debug artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: eventbw-output
+          path: |
+            eventbw/debug-output.json
+            eventbw/debug-output.txt
+            eventbw/feste-maerkte.json
+            eventbw/feste-maerkte.txt
+
+      - name: Commit updated EventBW outputs
+        run: |
+          if [[ -n "$(git status --porcelain eventbw/debug-output.json eventbw/debug-output.txt eventbw/feste-maerkte.json eventbw/feste-maerkte.txt)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add eventbw/debug-output.json eventbw/debug-output.txt eventbw/feste-maerkte.json eventbw/feste-maerkte.txt
+            git commit -m "Update EventBW import outputs"
+            git push
+          else
+            echo "No EventBW output changes."
+          fi
