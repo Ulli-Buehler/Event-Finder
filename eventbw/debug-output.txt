@@ -1,92 +1,21 @@
-EventBW Feste/Märkte rund um Dettingen unter Teck
+EventBW Phase-1 Debug Import
+
+Quelle: https://www.veranstaltung-baden-wuerttemberg.de/region/stuttgart/
+Region: stuttgart
 Zieldatum: 2026-05-17
-Radius: 40 km
-Treffer: 11
 
-1. Schäfertage mit Schäfermarkt
-   Feste | Beuren | 6.3 km
-   2026-05-16 - 2026-05-17 | 11:00 - 17:00 Uhr
-   Ort: Freilichtmuseum Beuren Beuren
-   | Mitmachaktionen und ein Schäfermarkt schaffen ein abwechslungsreiches Angebot für die ganze Familie. Das Baden und Scheren der Schafe und die Vorführungen mit Hütehunden sind besondere... 16 May Feste
-   https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schafertage-mit-schafermarkt/
+Filter:
+- Region Stuttgart: JA
+- Datum Sonntag: JA für 02-sonntag/feste-maerkte
+- Radiusfilter: NEIN
+- Markt/Fest-Filter: NEIN
+- Negativfilter: NEIN
+- Geofilter: NEIN
 
-2. GardenLife
-   Märkte | Reutlingen | 23 km
-   2026-05-14 - 2026-05-17
-   Ort: Pomologie Alteburgstr. 6 72764 Reutlingen
-   | 14 May Märkte
-   https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gardenlife/
-
-3. Boxberger Maimarkt
-   Feste | Boxberg | Distanz unbekannt
-   2026-05-13 - 2026-05-17 | 17:00 - 23:59 Uhr
-   Ort: Umpfertalhalle Seebuckel 20 97944 Boxberg
-   | Der Boxberger Maimarkt findet vom 13. bis 17. Mai 2026 statt und bietet ein vielseitiges Programm für alle Altersgruppen. 13 May Feste
-   https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/boxberger-maimarkt/
-
-4. Boxberger Maimarkt 2026
-   Feste | Boxberg | Distanz unbekannt
-   2026-05-13 - 2026-05-17 | 17:00 - 23:59 Uhr
-   Ort: Umpfertalhalle Seebuckel 20 97944 Boxberg
-   | Der Boxberger Maimarkt bietet ein buntes Rahmenprogramm für Groß und Klein, mit Festhallenbetrieb, zahlreichen Schaustellern und Markthändlern. Neben dem Herzstück des Festes, das offizielle Marktbier,... 13 May Feste
-   https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/boxberger-maimarkt-2026/
-
-5. Dorffest Willaringen
-   Feste | Rickenbach | Distanz unbekannt
-   2026-05-16 - 2026-05-18
-   Ort: Bei der Gemeindehalle Willaringen Willaringen 18 79736 Rickenbach
-   | 16 May Feste
-   https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/dorffest-willaringen/
-
-6. Eberbacher Frühling
-   Feste | Eberbach | Distanz unbekannt
-   2026-05-15 - 2026-05-17
-   Ort: Altstadt Eberbach Leopoldsplatz 1 69412 Eberbach
-   | Am Wochenende nach Christi Himmelfahrt lockt ein traditionsreiches Altstadtfest zahlreiche Besucherinnen und Besucher nach Eberbach: der Eberbacher Frühling. Es bietet viele Aktivitäten für Groß und Klein und eine... 15 May Feste
-   https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/eberbacher-fruhling/
-
-7. Muttertagsmarkt
-   Märkte | Hausach | Distanz unbekannt
-   2026-05-17
-   Ort: Hausach
-   | 20 May Märkte
-   https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/muttertagsmarkt/
-
-8. Naturpark-Markt Neckargemünd
-   Feste | Naturpark Neckartal-Odenwald | Distanz unbekannt
-   2026-05-17 | 11:00 - 18:00 Uhr
-   Ort: Neckargemünd Naturpark Neckartal-Odenwald
-   | Regional. Echt. Natürlich. Auf den Naturpark-Märkten entdecken Sie Köstlichkeiten und Handwerk direkt aus dem Naturpark Neckartal-Odenwald. Treffen Sie Erzeuger, genießen Sie Vielfalt – erleben Sie... 17 May Feste
-   https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturpark-markt-neckargemund/
-
-9. Sinsheimer Fohlenmarkt
-   Märkte | Sinsheim | Distanz unbekannt
-   2026-05-14 - 2026-05-17
-   Ort: Festgelände am Freibad Schwimmbadweg 74889 Sinsheim
-   | 15 May Märkte
-   https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sinsheimer-fohlenmarkt/
-
-10. Sommerfest des Imkervereins Kirnbach
-   Feste | Wolfach | Distanz unbekannt
-   2026-05-17 | 10:30 Uhr
-   Ort: Vereinsbienenhaus Wolfach
-   | Mit Gottesdienst und anschließend vielfältiger Bewirtung. 17 May Feste
-   https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommerfest-des-imkervereins-kirnbach/
-
-11. Stadtfest Kehler Messdi
-   Feste | Kehl | Distanz unbekannt
-   2026-05-14 - 2026-05-17
-   Ort: Festplatz Läger Hauptstr. 2 77694 Kehl
-   | 14 May Feste
-   https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtfest-kehler-messdi/
-
-
-DEBUG COUNTS
+Counts:
 {
-  "collected": 336,
-  "dateFiltered": 98,
-  "typeFilteredBeforeDetails": 11,
-  "regionCandidates": 11,
-  "detailed": 11,
-  "final": 11
+  "pages": 1,
+  "rawCollectedIncludingDuplicates": 0,
+  "rawUnique": 0,
+  "sunday": 0
 }
