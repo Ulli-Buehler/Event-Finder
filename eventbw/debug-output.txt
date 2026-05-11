@@ -1,7 +1,7 @@
 EventBW Phase-1 Debug Import
 
-Quelle: https://www.veranstaltung-baden-wuerttemberg.de/region/stuttgart/
-Region: stuttgart
+Quelle: https://www.veranstaltung-baden-wuerttemberg.de/region/region-stuttgart/
+Region: region-stuttgart
 Zieldatum: 2026-05-17
 
 Filter:
@@ -14,8 +14,8 @@ Filter:
 
 Counts:
 {
-  "pages": 1,
-  "rawCollectedIncludingDuplicates": 0,
-  "rawUnique": 0,
+  "pages": 2,
+  "rawCollectedIncludingDuplicates": 28,
+  "rawUnique": 28,
   "sunday": 0
 }

@@ -1,11 +1,11 @@
 {
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
-    "regionKey": "stuttgart",
-    "regionUrl": "https://www.veranstaltung-baden-wuerttemberg.de/region/stuttgart/",
+    "regionKey": "region-stuttgart",
+    "regionUrl": "https://www.veranstaltung-baden-wuerttemberg.de/region/region-stuttgart/",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-11T16:45:42.170Z",
-    "finishedAt": "2026-05-11T16:45:43.307Z",
+    "startedAt": "2026-05-11T16:53:38.658Z",
+    "finishedAt": "2026-05-11T16:53:39.385Z",
     "filters": {
       "regionStuttgart": true,
       "sundayOnlyForFinal": true,
@@ -15,9 +15,9 @@
       "geo": false
     },
     "counts": {
-      "pages": 1,
-      "rawCollectedIncludingDuplicates": 0,
-      "rawUnique": 0,
+      "pages": 2,
+      "rawCollectedIncludingDuplicates": 28,
+      "rawUnique": 28,
       "sunday": 0
     }
   },
