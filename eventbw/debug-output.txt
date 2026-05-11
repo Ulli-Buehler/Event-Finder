@@ -16,15 +16,15 @@ Suchstrategie:
 
 Counts:
 {
-  "pages": 42,
-  "rawCollectedIncludingDuplicates": 561,
-  "rawUnique": 561,
-  "localDateFiltered": 98,
-  "final": 98,
+  "pages": 27,
+  "rawCollectedIncludingDuplicates": 337,
+  "rawUnique": 337,
+  "localDateFiltered": 37,
+  "final": 37,
   "maerkte": 3,
-  "feste": 95,
-  "withTime": 80,
-  "withoutTime": 18
+  "feste": 34,
+  "withTime": 23,
+  "withoutTime": 14
 }
 
 Pages:
@@ -240,128 +240,7 @@ Pages:
     "category": "feste",
     "page": 15,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/15/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 16,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 17,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/17/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 18,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 19,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 20,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 21,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 22,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 23,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 24,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/24/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 25,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/25/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 26,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/26/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 27,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/27/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 28,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/28/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 29,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/29/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 30,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/30/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
+    "ok": false,
+    "error": "This operation was aborted"
   }
 ]
