@@ -1,0 +1,26 @@
+name: EventBW Import
+
+on:
+  workflow_dispatch:
+
+jobs:
+  eventbw-import:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Node installieren
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Dependencies installieren
+        run: npm install
+
+      - name: EventBW Importer starten
+        run: node eventbw/import-eventbw.js
