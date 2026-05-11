@@ -21,7 +21,7 @@ permissions:
 jobs:
   eventbw-import:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 8
 
     steps:
       - name: Checkout
@@ -38,10 +38,11 @@ jobs:
           EVENTBW_RADIUS_KM: ${{ inputs.radius_km || '40' }}
           EVENTBW_MAX_PAGES_PER_CATEGORY: '40'
           EVENTBW_DETAIL_CONCURRENCY: '8'
+          EVENTBW_GEOCODE_CONCURRENCY: '3'
         run: |
-          node eventbw/import-eventbw.js
+          node eventbw/import-eventbw.cjs
 
-      - name: Upload debug artifact
+      - name: Upload EventBW output artifact
         uses: actions/upload-artifact@v4
         with:
           name: eventbw-output
@@ -50,13 +51,15 @@ jobs:
             eventbw/debug-output.txt
             eventbw/feste-maerkte.json
             eventbw/feste-maerkte.txt
+            eventbw/geo-debug.json
+            eventbw/geo-debug.txt
 
       - name: Commit updated EventBW outputs
         run: |
-          if [[ -n "$(git status --porcelain eventbw/debug-output.json eventbw/debug-output.txt eventbw/feste-maerkte.json eventbw/feste-maerkte.txt)" ]]; then
+          if [[ -n "$(git status --porcelain eventbw/debug-output.json eventbw/debug-output.txt eventbw/feste-maerkte.json eventbw/feste-maerkte.txt eventbw/geo-debug.json eventbw/geo-debug.txt)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add eventbw/debug-output.json eventbw/debug-output.txt eventbw/feste-maerkte.json eventbw/feste-maerkte.txt
+            git add eventbw/debug-output.json eventbw/debug-output.txt eventbw/feste-maerkte.json eventbw/feste-maerkte.txt eventbw/geo-debug.json eventbw/geo-debug.txt
             git commit -m "Update EventBW import outputs"
             git push
           else
