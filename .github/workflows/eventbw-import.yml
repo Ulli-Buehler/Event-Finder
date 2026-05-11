@@ -36,7 +36,7 @@ jobs:
         env:
           EVENTBW_TARGET_DATE: ${{ inputs.target_date }}
           EVENTBW_RADIUS_KM: ${{ inputs.radius_km || '40' }}
-          EVENTBW_REGION_KEY: 'stuttgart'
+          EVENTBW_REGION_KEY: 'region-stuttgart'
           EVENTBW_MAX_PAGES: '80'
           EVENTBW_MAX_PAGES_PER_CATEGORY: '80'
         run: |
