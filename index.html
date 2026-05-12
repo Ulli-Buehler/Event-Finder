@@ -17,7 +17,7 @@
 
   <link
     rel="stylesheet"
-    href="style.css?v=7002"
+    href="style.css?v=8001"
   />
 </head>
 
@@ -30,7 +30,7 @@
     <h1>Lokalevents</h1>
 
     <p id="status">
-      Kirchheim unter Teck • Radius 30 km
+      EventBW Märkte/Feste
     </p>
 
     <div class="controls">
@@ -38,7 +38,7 @@
       <select id="dateSelect">
 
         <option value="all">
-          Alle Events
+          Alle geladenen Events
         </option>
 
         <option value="today">
@@ -49,8 +49,8 @@
           Morgen
         </option>
 
-        <option value="sunday">
-          Kommender Sonntag
+        <option value="sunday" selected>
+          Zieldatum / Sonntag
         </option>
 
       </select>
@@ -58,15 +58,15 @@
       <div class="radius-control">
 
         <div id="radiusLabel">
-          30 km
+          40 km
         </div>
 
         <input
           type="range"
           id="radiusSlider"
           min="5"
-          max="200"
-          value="30"
+          max="120"
+          value="40"
         />
 
       </div>
@@ -90,11 +90,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-  <script src="src/data/events.js?v=7002"></script>
-
-  <script src="event-filter.js?v=7002"></script>
-
-  <script src="app.js?v=7002"></script>
+  <script src="app.js?v=8001"></script>
 
 </body>
 </html>
