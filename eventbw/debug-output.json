@@ -3,8 +3,8 @@
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "searchPlace": "Dettingen Teck",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-12T02:10:58.172Z",
-    "finishedAt": "2026-05-12T02:14:04.409Z",
+    "startedAt": "2026-05-12T02:24:06.360Z",
+    "finishedAt": "2026-05-12T02:27:31.618Z",
     "maxPagesPerCategory": 300,
     "filters": {
       "eventbwCategorySearch": true,
@@ -84760,13 +84760,13 @@
     }
   ],
   "geoKmScan": {
-    "generatedAt": "2026-05-12T02:14:04.408Z",
+    "generatedAt": "2026-05-12T02:27:31.617Z",
     "note": "Debug scan only: checks raw HTML for possible geo/km data without parsing or calculating distance.",
     "listGeoKmScans": [
       {
         "name": "list-maerkte-page1.html",
         "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-        "length": 110188,
+        "length": 110186,
         "hits": [
           {
             "pattern": "lat",
@@ -84780,7 +84780,7 @@
           },
           {
             "pattern": "google",
-            "index": 108286,
+            "index": 108284,
             "snippet": "; //# sourceURL=https://www.veranstaltung-baden-wuerttemberg.de/wp-includes/js/wp-emoji-loader.min.js window['gtag_enable_tcf_support'] = false; window.dataLayer = window.dataLayer || []; function gtag(){ dataLayer.push(arguments); } gtag('set', 'dYWVlZG', true); gtag('set', 'ads_data_redaction', false); gtag("
           },
           {
@@ -84798,7 +84798,7 @@
       {
         "name": "list-feste-page1.html",
         "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-        "length": 112625,
+        "length": 112623,
         "hits": [
           {
             "pattern": "lat",
@@ -84812,7 +84812,7 @@
           },
           {
             "pattern": "google",
-            "index": 110723,
+            "index": 110721,
             "snippet": "; //# sourceURL=https://www.veranstaltung-baden-wuerttemberg.de/wp-includes/js/wp-emoji-loader.min.js window['gtag_enable_tcf_support'] = false; window.dataLayer = window.dataLayer || []; function gtag(){ dataLayer.push(arguments); } gtag('set', 'dYWVlZG', true); gtag('set', 'ads_data_redaction', false); gtag("
           },
           {
