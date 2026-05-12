@@ -11,11 +11,12 @@
  * Ablauf:
  * 1. alle Märkte/Feste aus den Listenseiten laden
  * 2. Datum lokal filtern
- * 3. Ort lokal filtern
+ * 3. alle Events am Zieldatum geocodieren
+ * 4. Webseite filtert danach live über Radius
  *
  * Keine Detailseiten.
- * Keine Geodaten.
- * Keine km-Berechnung.
+ * Geo nur für Zieldatum-Events.
+ * km-Berechnung passiert im Browser.
  */
 
 const fs = require('node:fs/promises');
@@ -34,10 +35,9 @@ const CATEGORIES = [
 ];
 
 /**
- * Grober regionaler Ortsfilter rund um Dettingen unter Teck.
- * Noch KEIN harter 30-km-Radiusfilter.
- * Ziel: offensichtliche Fern-Treffer entfernen, aber lieber etwas zu viel behalten.
- * Der exakte Radius kommt später über Geo + distanceKm.
+ * Grobe regionale Ortsliste bleibt nur noch für Debug/Statistik erhalten.
+ * Die finale Ausgabe enthält jetzt alle Events am Zieldatum mit Geo.
+ * Der echte Radiusfilter passiert live im Browser.
  */
 const REGIONAL_CITIES = [
   // Zentrum / Teck
@@ -531,8 +531,9 @@ function summaryToText(meta, pages, cityStatsForTargetDate) {
     '',
     'Filter:',
     '- Datumsfilter: lokal',
-    '- Ortsfilter: lokal per Ortsliste',
-    '- Geo/km: noch nicht',
+    '- Ortsfilter: nicht final angewendet',
+    '- Geo: für alle Zieldatum-Events',
+    '- km/Radius: live im Browser',
     '',
     `Zieldatum: ${meta.targetDate}`,
     '',
@@ -654,9 +655,7 @@ async function main() {
   const rawEvents = sortEvents(dedupeEvents(collected));
   const targetDateEvents = sortEvents(rawEvents.filter(event => touchesDate(event, targetDate)));
   const regionalEvents = await enrichEventsWithGeo(
-    sortEvents(
-      targetDateEvents.filter(event => isRegionalCity(event.city))
-    )
+    sortEvents(targetDateEvents)
   );
 
   const nonRegionalEvents = sortEvents(
@@ -677,7 +676,7 @@ async function main() {
       rawCollectedIncludingDuplicates: collected.length,
       rawUnique: rawEvents.length,
       targetDateMatches: targetDateEvents.length,
-      regionalMatches: regionalEvents.length,
+      targetDateWithGeo: regionalEvents.length,
       nonRegionalTargetDateMatches: nonRegionalEvents.length,
 
       rawMaerkte: rawEvents.filter(event => event.category === 'maerkte').length,
@@ -686,8 +685,8 @@ async function main() {
       targetDateMaerkte: targetDateEvents.filter(event => event.category === 'maerkte').length,
       targetDateFeste: targetDateEvents.filter(event => event.category === 'feste').length,
 
-      regionalMaerkte: regionalEvents.filter(event => event.category === 'maerkte').length,
-      regionalFeste: regionalEvents.filter(event => event.category === 'feste').length,
+      targetDateWithGeoMaerkte: regionalEvents.filter(event => event.category === 'maerkte').length,
+      targetDateWithGeoFeste: regionalEvents.filter(event => event.category === 'feste').length,
     },
   };
 
@@ -708,19 +707,19 @@ async function main() {
   await fs.writeFile(path.join(OUT_DIR, '02-zieldatum.txt'), eventsToText('02 ZIELDATUM - lokaler Datumsfilter', targetDateEvents, meta), 'utf8');
 
   await fs.writeFile(path.join(OUT_DIR, '03-ortsfilter.json'), JSON.stringify({ meta, events: regionalEvents, removed: nonRegionalEvents }, null, 2), 'utf8');
-  await fs.writeFile(path.join(OUT_DIR, '03-ortsfilter.txt'), eventsToText('03 ORTSFILTER - Datum + regionale Ortsliste', regionalEvents, meta), 'utf8');
+  await fs.writeFile(path.join(OUT_DIR, '03-ortsfilter.txt'), eventsToText('03 ZIELDATUM MIT GEO - Browser-Radiusfilter', regionalEvents, meta), 'utf8');
 
   await fs.writeFile(path.join(OUT_DIR, 'debug-output.json'), JSON.stringify(debug, null, 2), 'utf8');
   await fs.writeFile(path.join(OUT_DIR, 'debug-output.txt'), summaryToText(meta, allPages, cityStatsForTargetDate), 'utf8');
 
   await fs.writeFile(path.join(OUT_DIR, 'feste-maerkte.json'), JSON.stringify({ meta, events: regionalEvents }, null, 2), 'utf8');
-  await fs.writeFile(path.join(OUT_DIR, 'feste-maerkte.txt'), eventsToText('EventBW Feste/Märkte - Datum + Ortsfilter', regionalEvents, meta), 'utf8');
+  await fs.writeFile(path.join(OUT_DIR, 'feste-maerkte.txt'), eventsToText('EventBW Feste/Märkte - Zieldatum mit Geo', regionalEvents, meta), 'utf8');
 
   console.log('EventBW slim full list import with city filter done.');
   console.log(`Target date: ${targetDate}`);
   console.log(`Raw unique: ${rawEvents.length}`);
   console.log(`Target date matches: ${targetDateEvents.length}`);
-  console.log(`Regional matches: ${regionalEvents.length}`);
+  console.log(`Target date with geo: ${regionalEvents.length}`);
 }
 
 main().catch(error => {
