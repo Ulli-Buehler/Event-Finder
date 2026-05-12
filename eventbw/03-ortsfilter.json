@@ -82,6 +82,30 @@
   },
   "events": [
     {
+      "title": "Schäfertage mit Schäfermarkt",
+      "category": "feste",
+      "city": "Beuren",
+      "startDate": "2026-05-16",
+      "endDate": "2026-05-17",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schafertage-mit-schafermarkt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
+      "page": 16
+    },
+    {
+      "title": "GardenLife",
+      "category": "maerkte",
+      "city": "Reutlingen",
+      "startDate": "2026-05-14",
+      "endDate": "2026-05-17",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gardenlife/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
+      "page": 1
+    }
+  ],
+  "removed": [
+    {
       "title": "Boxberger Maimarkt",
       "category": "feste",
       "city": "Boxberg",
@@ -419,17 +443,6 @@
       "endDate": "2026-05-17",
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/aktionstage-roter-turm-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
-      "page": 16
-    },
-    {
-      "title": "Schäfertage mit Schäfermarkt",
-      "category": "feste",
-      "city": "Beuren",
-      "startDate": "2026-05-16",
-      "endDate": "2026-05-17",
-      "time": "11:00 - 17:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schafertage-mit-schafermarkt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
       "page": 16
     },
@@ -1125,17 +1138,6 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommerfest-des-imkervereins-kirnbach/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
       "page": 20
-    },
-    {
-      "title": "GardenLife",
-      "category": "maerkte",
-      "city": "Reutlingen",
-      "startDate": "2026-05-14",
-      "endDate": "2026-05-17",
-      "time": "",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gardenlife/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
-      "page": 1
     },
     {
       "title": "Sinsheimer Fohlenmarkt",

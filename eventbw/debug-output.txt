@@ -1,26 +1,13 @@
-EventBW schlanker Voll-Listenimport
+EventBW Listenimport mit lokalem Ortsfilter
 
 Quellen:
 - /kategorie/maerkte/
 - /kategorie/feste/
 
-Importierte Event-Felder:
-- title
-- category
-- city
-- startDate
-- endDate
-- time
-- detailUrl
-- sourceUrl
-- page
-
-Nicht geladen:
-- Detailseiten
-- Geodaten
-- km-Entfernung
-- Bilder
-- Browser/Playwright
+Filter:
+- Datumsfilter: lokal
+- Ortsfilter: lokal per Ortsliste
+- Geo/km: noch nicht
 
 Zieldatum: 2026-05-17
 
@@ -30,15 +17,331 @@ Counts:
   "rawCollectedIncludingDuplicates": 3375,
   "rawUnique": 3375,
   "targetDateMatches": 98,
+  "regionalMatches": 2,
+  "nonRegionalTargetDateMatches": 96,
   "rawMaerkte": 141,
   "rawFeste": 3234,
-  "finalMaerkte": 3,
-  "finalFeste": 95,
-  "rawWithTime": 2826,
-  "rawWithoutTime": 549,
-  "finalWithTime": 80,
-  "finalWithoutTime": 18
+  "targetDateMaerkte": 3,
+  "targetDateFeste": 95,
+  "regionalMaerkte": 1,
+  "regionalFeste": 1
 }
+
+Regionale Ortsliste:
+- Dettingen unter Teck
+- Kirchheim unter Teck
+- Owen
+- Bissingen an der Teck
+- Weilheim an der Teck
+- Holzmaden
+- Ohmden
+- Lenningen
+- Erkenbrechtsweiler
+- Beuren
+- Neuffen
+- Frickenhausen
+- Nürtingen
+- Wendlingen am Neckar
+- Wernau
+- Plochingen
+- Reichenbach an der Fils
+- Ebersbach an der Fils
+- Uhingen
+- Göppingen
+- Eislingen/Fils
+- Esslingen am Neckar
+- Filderstadt
+- Leinfelden-Echterdingen
+- Ostfildern
+- Neuhausen auf den Fildern
+- Denkendorf
+- Köngen
+- Unterensingen
+- Oberboihingen
+- Wolfschlugen
+- Aichtal
+- Neckartenzlingen
+- Bempflingen
+- Grafenberg
+- Riederich
+- Metzingen
+- Bad Urach
+- Römerstein
+- Grabenstetten
+- Hülben
+- Reutlingen
+- Pfullingen
+- Lichtenstein
+- Wiesensteig
+- Mühlhausen im Täle
+- Bad Ditzenbach
+- Deggingen
+- Laichingen
+- Merklingen
+- Gruibingen
+- Gammelshausen
+- Heiningen
+- Boll
+- Aichelberg
+- Hattenhofen
+- Schlierbach
+- Albershausen
+
+Ortsstatistik vor Ortsfilter:
+[
+  {
+    "city": "Echt Bodensee",
+    "count": 10
+  },
+  {
+    "city": "Karlsruhe",
+    "count": 7
+  },
+  {
+    "city": "unbekannt",
+    "count": 7
+  },
+  {
+    "city": "Baiersbronn",
+    "count": 3
+  },
+  {
+    "city": "Müllheim",
+    "count": 3
+  },
+  {
+    "city": "Sigmaringen",
+    "count": 3
+  },
+  {
+    "city": "Bernau im Schwarzwald",
+    "count": 2
+  },
+  {
+    "city": "Boxberg",
+    "count": 2
+  },
+  {
+    "city": "Eberbach",
+    "count": 2
+  },
+  {
+    "city": "Meßkirch",
+    "count": 2
+  },
+  {
+    "city": "Münsingen",
+    "count": 2
+  },
+  {
+    "city": "Seebach",
+    "count": 2
+  },
+  {
+    "city": "Tettnang",
+    "count": 2
+  },
+  {
+    "city": "Wolfach",
+    "count": 2
+  },
+  {
+    "city": "Bad Säckingen",
+    "count": 1
+  },
+  {
+    "city": "Bad Schussenried-Kürnbach",
+    "count": 1
+  },
+  {
+    "city": "Bad Wimpfen",
+    "count": 1
+  },
+  {
+    "city": "Beilstein",
+    "count": 1
+  },
+  {
+    "city": "Beuren",
+    "count": 1
+  },
+  {
+    "city": "Biederbach",
+    "count": 1
+  },
+  {
+    "city": "Biosphärengebiet Schwäbische Alb",
+    "count": 1
+  },
+  {
+    "city": "Blumberg",
+    "count": 1
+  },
+  {
+    "city": "Brackenheim",
+    "count": 1
+  },
+  {
+    "city": "Calw",
+    "count": 1
+  },
+  {
+    "city": "Donaubergland",
+    "count": 1
+  },
+  {
+    "city": "Flein",
+    "count": 1
+  },
+  {
+    "city": "Forbach",
+    "count": 1
+  },
+  {
+    "city": "Friedrichshafen",
+    "count": 1
+  },
+  {
+    "city": "Görwihl",
+    "count": 1
+  },
+  {
+    "city": "Hausach",
+    "count": 1
+  },
+  {
+    "city": "Hessigheim",
+    "count": 1
+  },
+  {
+    "city": "Hohenstein",
+    "count": 1
+  },
+  {
+    "city": "Hüfingen",
+    "count": 1
+  },
+  {
+    "city": "Immenstaad",
+    "count": 1
+  },
+  {
+    "city": "Kandern",
+    "count": 1
+  },
+  {
+    "city": "Karlsbad",
+    "count": 1
+  },
+  {
+    "city": "Kehl",
+    "count": 1
+  },
+  {
+    "city": "Konstanz",
+    "count": 1
+  },
+  {
+    "city": "Lindau",
+    "count": 1
+  },
+  {
+    "city": "Naturpark Neckartal-Odenwald",
+    "count": 1
+  },
+  {
+    "city": "Neuhausen ob Eck",
+    "count": 1
+  },
+  {
+    "city": "Oberkirch",
+    "count": 1
+  },
+  {
+    "city": "Öhningen",
+    "count": 1
+  },
+  {
+    "city": "Öhringen",
+    "count": 1
+  },
+  {
+    "city": "Öhringen-Cappel",
+    "count": 1
+  },
+  {
+    "city": "Osterburken",
+    "count": 1
+  },
+  {
+    "city": "Pfullendorf",
+    "count": 1
+  },
+  {
+    "city": "Rangendingen",
+    "count": 1
+  },
+  {
+    "city": "Reutlingen",
+    "count": 1
+  },
+  {
+    "city": "Rickenbach",
+    "count": 1
+  },
+  {
+    "city": "Sachsenheim",
+    "count": 1
+  },
+  {
+    "city": "Schallstadt",
+    "count": 1
+  },
+  {
+    "city": "Sigmaringen- Jungnau",
+    "count": 1
+  },
+  {
+    "city": "Simonswald",
+    "count": 1
+  },
+  {
+    "city": "Sinsheim",
+    "count": 1
+  },
+  {
+    "city": "Sulzfeld",
+    "count": 1
+  },
+  {
+    "city": "Tübingen",
+    "count": 1
+  },
+  {
+    "city": "Überlingen am Bodensee",
+    "count": 1
+  },
+  {
+    "city": "Vogtsbauernhof",
+    "count": 1
+  },
+  {
+    "city": "Waldkirch",
+    "count": 1
+  },
+  {
+    "city": "Walldürn",
+    "count": 1
+  },
+  {
+    "city": "Weingarten",
+    "count": 1
+  },
+  {
+    "city": "Weinstadt",
+    "count": 1
+  }
+]
 
 Pages:
 [
