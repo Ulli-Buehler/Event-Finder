@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v8-sunday-clean");
+console.log("APP VERSION: eventbw-json-v9-clean-sunday-radius");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -8,7 +8,6 @@ let radiusKm = 40;
 let appEvents = [];
 let importMeta = null;
 let filtersOpen = false;
-let importPollTimer = null;
 
 const map = L.map("map").setView(userPos, 9);
 
@@ -16,7 +15,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "© OpenStreetMap"
 }).addTo(map);
 
-let radiusCircle = L.circle(userPos, {
+const radiusCircle = L.circle(userPos, {
   radius: radiusKm * 1000,
   color: "#007aff",
   fillColor: "#007aff",
@@ -24,7 +23,7 @@ let radiusCircle = L.circle(userPos, {
   weight: 3
 }).addTo(map);
 
-let userMarker = L.circleMarker(userPos, {
+const userMarker = L.circleMarker(userPos, {
   radius: 6,
   color: "#007aff",
   fillColor: "#007aff",
@@ -38,8 +37,7 @@ const cards = document.getElementById("cards");
 const statusText = document.getElementById("status");
 const radiusSlider = document.getElementById("radiusSlider");
 const radiusLabel = document.getElementById("radiusLabel");
-const refreshBtn = document.getElementById("refreshBtn");
-const importStatus = document.getElementById("importStatus");
+const lastUpdateInfo = document.getElementById("lastUpdateInfo");
 const filterToggle = document.getElementById("filterToggle");
 const filterPanel = document.getElementById("filterPanel");
 const topPanel = document.querySelector(".top");
@@ -50,7 +48,7 @@ radiusSlider.value = 40;
 
 const eventMeta = document.createElement("div");
 eventMeta.className = "event-meta";
-importStatus.insertAdjacentElement("afterend", eventMeta);
+filterPanel.appendChild(eventMeta);
 
 const markers = [];
 
@@ -90,7 +88,6 @@ function hasCoords(event) {
 
 function distanceKm(lat1, lon1, lat2, lon2) {
   const R = 6371;
-
   const dLat = (lat2 - lat1) * Math.PI / 180;
   const dLon = (lon2 - lon1) * Math.PI / 180;
 
@@ -102,17 +99,8 @@ function distanceKm(lat1, lon1, lat2, lon2) {
 
   return Math.round(
     R * 2 *
-    Math.atan2(
-      Math.sqrt(a),
-      Math.sqrt(1 - a)
-    )
+    Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
   );
-}
-
-function categoryLabel(category) {
-  if (category === "maerkte") return "Märkte";
-  if (category === "feste") return "Feste";
-  return category || "Event";
 }
 
 function eventEmoji(event) {
@@ -173,6 +161,51 @@ function formatEventDate(event) {
   return date || "Datum unbekannt";
 }
 
+function formatSundayDate(value) {
+  if (!value) {
+    return "den aktuellen Sonntag";
+  }
+
+  const date = new Date(value + "T12:00:00");
+
+  if (Number.isNaN(date.getTime())) {
+    return "den aktuellen Sonntag";
+  }
+
+  return "Sonntag, den " + new Intl.DateTimeFormat("de-DE", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric"
+  }).format(date);
+}
+
+function formatUpdateTime(value) {
+  if (!value) {
+    return "unbekannt";
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return "unbekannt";
+  }
+
+  return new Intl.DateTimeFormat("de-DE", {
+    dateStyle: "medium",
+    timeStyle: "short"
+  }).format(date);
+}
+
+function updateLastUpdateInfo() {
+  const finishedAt =
+    importMeta && importMeta.finishedAt
+      ? importMeta.finishedAt
+      : "";
+
+  lastUpdateInfo.innerText =
+    "Letztes Update: " + formatUpdateTime(finishedAt);
+}
+
 function normalizeEvent(raw, index) {
   const event = {
     id: "eventbw-" + (index + 1),
@@ -197,11 +230,6 @@ function normalizeEvent(raw, index) {
   return event;
 }
 
-function setImportState(state, text) {
-  importStatus.className = "import-status " + state;
-  importStatus.innerText = text;
-}
-
 async function fetchEventBwData() {
   const response = await fetch(EVENTBW_JSON_URL(), {
     cache: "no-store"
@@ -214,15 +242,13 @@ async function fetchEventBwData() {
   return response.json();
 }
 
-async function loadEventBwEvents(statusMessage = "EventBW-Daten geladen") {
-  setImportState("loading", "Lade EventBW-Daten ...");
-
+async function loadEventBwEvents() {
   const data = await fetchEventBwData();
 
   importMeta = data.meta || null;
   appEvents = (data.events || []).map(normalizeEvent);
 
-  setImportState("ok", "");
+  updateLastUpdateInfo();
 }
 
 function openSheet(event) {
@@ -230,13 +256,13 @@ function openSheet(event) {
     event.title || "Event";
 
   document.getElementById("sheet-place").innerHTML =
-    `<strong>${event.city || "Ort unbekannt"}</strong>`;
+    `<strong>${event.city || "Ort unbekannt"} • ${event.realDistanceText}</strong>`;
 
   document.getElementById("sheet-date").innerHTML =
-    formatEventDate(event) + " • " + event.realDistanceText;
+    formatEventDate(event);
 
   document.getElementById("sheet-description").innerText =
-    "Kategorie: " + categoryLabel(event.category);
+    "Märkte/Feste für " + formatSundayDate(importMeta && importMeta.targetDate);
 
   const link = document.getElementById("sheet-link");
 
@@ -306,7 +332,6 @@ function render() {
   closeSheet();
 
   cards.innerHTML = "";
-
   clearMarkers();
 
   radiusKm = Number(radiusSlider.value);
@@ -323,7 +348,7 @@ function render() {
   const visibleEvents = appEvents
     .map(enrichVisibleEvent)
     .filter(event => {
-      if (!event.hasLocation) return true;
+      if (!event.hasLocation) return false;
       return event.realDistance <= radiusKm;
     })
     .sort((a, b) => {
@@ -340,21 +365,19 @@ function render() {
     visibleEvents.length +
     " von " +
     appEvents.length +
-    " Events sichtbar";
+    " Events im Radius sichtbar";
 
   visibleEvents.forEach(event => {
-    if (event.hasLocation) {
-      const marker = L.marker([
-        event.lat,
-        event.lng
-      ])
-        .addTo(map)
-        .on("click", () => {
-          openSheet(event);
-        });
+    const marker = L.marker([
+      event.lat,
+      event.lng
+    ])
+      .addTo(map)
+      .on("click", () => {
+        openSheet(event);
+      });
 
-      markers.push(marker);
-    }
+    markers.push(marker);
 
     const card = document.createElement("div");
     card.className = "card";
@@ -394,119 +417,13 @@ function render() {
       <div class="card">
         <div class="card-body">
           <h2>
-            Keine Events gefunden
+            Keine Events im Radius
           </h2>
         </div>
       </div>
     `;
   }
 }
-
-async function pollForImportUpdate(previousFinishedAt, startedPollAt) {
-  let checks = 0;
-  const maxChecks = 45;
-
-  if (importPollTimer) {
-    clearInterval(importPollTimer);
-  }
-
-  importPollTimer = setInterval(async () => {
-    checks += 1;
-
-    setImportState(
-      "running",
-      "⏳ Import läuft ... prüfe Ergebnis " + checks + "/" + maxChecks
-    );
-
-    try {
-      const data = await fetchEventBwData();
-      const newFinishedAt = data.meta && data.meta.finishedAt;
-
-      if (
-        newFinishedAt &&
-        newFinishedAt !== previousFinishedAt &&
-        new Date(newFinishedAt).getTime() >= startedPollAt
-      ) {
-        clearInterval(importPollTimer);
-        importPollTimer = null;
-
-        importMeta = data.meta || null;
-        appEvents = (data.events || []).map(normalizeEvent);
-
-        render();
-
-        setImportState(
-          "ok",
-          "✅ Import fertig. Daten automatisch aktualisiert."
-        );
-
-        refreshBtn.disabled = false;
-      }
-
-      if (checks >= maxChecks) {
-        clearInterval(importPollTimer);
-        importPollTimer = null;
-
-        setImportState(
-          "warning",
-          "⚠️ Import gestartet, aber neue Daten noch nicht sichtbar. Bitte später neu laden."
-        );
-
-        refreshBtn.disabled = false;
-      }
-    } catch (err) {
-      if (checks >= maxChecks) {
-        clearInterval(importPollTimer);
-        importPollTimer = null;
-
-        setImportState(
-          "error",
-          "❌ Importstatus konnte nicht geprüft werden."
-        );
-
-        refreshBtn.disabled = false;
-      }
-    }
-  }, 7000);
-}
-
-refreshBtn.onclick = async () => {
-  refreshBtn.disabled = true;
-
-  const previousFinishedAt =
-    importMeta && importMeta.finishedAt
-      ? importMeta.finishedAt
-      : "";
-
-  const startedPollAt = Date.now();
-
-  setImportState("starting", "🔄 Import wird gestartet ...");
-
-  try {
-    const response = await fetch("/api/trigger-import", {
-      method: "POST"
-    });
-
-    if (!response.ok) {
-      throw new Error("HTTP " + response.status);
-    }
-
-    setImportState(
-      "running",
-      "✅ Import gestartet. Warte auf neue Daten ..."
-    );
-
-    pollForImportUpdate(previousFinishedAt, startedPollAt);
-
-  } catch (err) {
-    setImportState(
-      "error",
-      "❌ Import konnte nicht gestartet werden."
-    );
-
-    refreshBtn.disabled = false;
-  }
-};
 
 radiusSlider.oninput = render;
 
@@ -518,10 +435,8 @@ async function init() {
   } catch (err) {
     console.error(err);
 
-    setImportState(
-      "error",
-      "❌ EventBW-Daten konnten nicht geladen werden"
-    );
+    lastUpdateInfo.innerText =
+      "Daten konnten nicht geladen werden";
 
     cards.innerHTML = `
       <div class="card">
