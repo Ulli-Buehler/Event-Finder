@@ -17,14 +17,14 @@ Counts:
   "rawCollectedIncludingDuplicates": 3375,
   "rawUnique": 3375,
   "targetDateMatches": 98,
-  "regionalMatches": 2,
-  "nonRegionalTargetDateMatches": 96,
+  "regionalMatches": 8,
+  "nonRegionalTargetDateMatches": 90,
   "rawMaerkte": 141,
   "rawFeste": 3234,
   "targetDateMaerkte": 3,
   "targetDateFeste": 95,
   "regionalMaerkte": 1,
-  "regionalFeste": 1
+  "regionalFeste": 7
 }
 
 Regionale Ortsliste:
@@ -45,16 +45,6 @@ Regionale Ortsliste:
 - Wernau
 - Plochingen
 - Reichenbach an der Fils
-- Ebersbach an der Fils
-- Uhingen
-- Göppingen
-- Eislingen/Fils
-- Esslingen am Neckar
-- Filderstadt
-- Leinfelden-Echterdingen
-- Ostfildern
-- Neuhausen auf den Fildern
-- Denkendorf
 - Köngen
 - Unterensingen
 - Oberboihingen
@@ -64,6 +54,50 @@ Regionale Ortsliste:
 - Bempflingen
 - Grafenberg
 - Riederich
+- Esslingen am Neckar
+- Filderstadt
+- Leinfelden-Echterdingen
+- Ostfildern
+- Neuhausen auf den Fildern
+- Denkendorf
+- Deizisau
+- Altbach
+- Baltmannsweiler
+- Aichwald
+- Kernen im Remstal
+- Fellbach
+- Waiblingen
+- Weinstadt
+- Remshalden
+- Schorndorf
+- Schwäbisch Gmünd
+- Lorch
+- Welzheim
+- Adelberg
+- Plüderhausen
+- Urbach
+- Winterbach
+- Rudersberg
+- Stuttgart
+- Sindelfingen
+- Böblingen
+- Leonberg
+- Gerlingen
+- Ditzingen
+- Korntal-Münchingen
+- Ludwigsburg
+- Kornwestheim
+- Vaihingen an der Enz
+- Waldenbuch
+- Steinenbronn
+- Leinfelden
+- Echterdingen
+- Holzgerlingen
+- Herrenberg
+- Weil der Stadt
+- Magstadt
+- Renningen
+- Weil im Schönbuch
 - Metzingen
 - Bad Urach
 - Römerstein
@@ -71,21 +105,44 @@ Regionale Ortsliste:
 - Hülben
 - Reutlingen
 - Pfullingen
+- Eningen unter Achalm
 - Lichtenstein
-- Wiesensteig
-- Mühlhausen im Täle
-- Bad Ditzenbach
-- Deggingen
-- Laichingen
-- Merklingen
-- Gruibingen
-- Gammelshausen
+- Tübingen
+- Pliezhausen
+- Walddorfhäslach
+- Gomaringen
+- Mössingen
+- Münsingen
+- Biosphärengebiet Schwäbische Alb
+- Ebersbach an der Fils
+- Uhingen
+- Göppingen
+- Eislingen/Fils
+- Süßen
+- Donzdorf
+- Salach
+- Wangen
+- Rechberghausen
 - Heiningen
 - Boll
+- Bad Boll
+- Dürnau
+- Gammelshausen
 - Aichelberg
 - Hattenhofen
 - Schlierbach
 - Albershausen
+- Gruibingen
+- Mühlhausen im Täle
+- Wiesensteig
+- Bad Ditzenbach
+- Deggingen
+- Laichingen
+- Merklingen
+- Westerheim
+- Heroldstatt
+- Calw
+- Bad Liebenzell
 
 Ortsstatistik vor Ortsfilter:
 [
