@@ -1,37 +1,22 @@
 {
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
-    "searchPlace": "Dettingen Teck",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-12T02:24:06.360Z",
-    "finishedAt": "2026-05-12T02:27:31.618Z",
+    "startedAt": "2026-05-12T05:58:57.742Z",
+    "finishedAt": "2026-05-12T06:01:09.329Z",
     "maxPagesPerCategory": 300,
-    "filters": {
-      "eventbwCategorySearch": true,
-      "categories": [
-        "maerkte",
-        "feste"
-      ],
-      "eventbwDateFromTo": true,
-      "localDateFilterAvailable": true,
-      "finalIsTargetDateOnly": true,
-      "radius": false,
-      "detailsLoaded": false,
-      "geo": false
-    },
     "counts": {
-      "pages": 243,
-      "rawCollectedIncludingDuplicates": 3354,
-      "rawUnique": 3354,
-      "targetDateMatches": 95,
-      "final": 95,
+      "pages": 244,
+      "rawCollectedIncludingDuplicates": 3375,
+      "rawUnique": 3375,
+      "targetDateMatches": 98,
       "rawMaerkte": 141,
-      "rawFeste": 3213,
+      "rawFeste": 3234,
       "finalMaerkte": 3,
-      "finalFeste": 92,
-      "rawWithTime": 2805,
+      "finalFeste": 95,
+      "rawWithTime": 2826,
       "rawWithoutTime": 549,
-      "finalWithTime": 77,
+      "finalWithTime": 80,
       "finalWithoutTime": 18
     }
   },
@@ -42,23 +27,10 @@
       "city": "Wolfach",
       "startDate": "2026-05-13",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-13",
-      "sortTime": "",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-13 - 2026-05-17",
-      "teaser": "Über das verlängerte Christi-Himmelfahrts-Wochenende organisiert die Stadt Wolfach auch in diesem Jahr wieder eine Partnerschaſtsreise in die südfranzösische Partnerstadt Cavalaire-sur-Mer an der Côte d’Azur.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/partnerschaftsreise-mit-dem-maire-nach-cavalaire/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 3,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "13.05.2026 - 17.05.2026",
-        "text": "Partnerschaftsreise - \"Mit dem Maire nach Cavalaire\" Feste | Wolfach 13.05.2026 - 17.05.2026 Über das verlängerte Christi-Himmelfahrts-Wochenende organisiert die Stadt Wolfach auch in diesem Jahr wieder eine Partnerschaſtsreise in die südfranzösische Partnerstadt Cavalaire-sur-Mer an der Côte d’Azur. Details 13 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
+      "page": 3
     },
     {
       "title": "Stadtgartenfest Osterburken",
@@ -66,23 +38,10 @@
       "city": "Osterburken",
       "startDate": "2026-05-13",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-13",
-      "sortTime": "",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-13 - 2026-05-17",
-      "teaser": "Das Stadtgartenfest in Osterburken ist ein beliebtes Familienfest imGrünen mit musikalischer Unterhaltung, Mitmachaktionen für Kinder, Spielangeboten und dem traditionellen Borkemer Entenrennen.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtgartenfest-osterburken/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 3,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "13.05.2026 - 17.05.2026",
-        "text": "Stadtgartenfest Osterburken Feste | Osterburken 13.05.2026 - 17.05.2026 Das Stadtgartenfest in Osterburken ist ein beliebtes Familienfest imGrünen mit musikalischer Unterhaltung, Mitmachaktionen für Kinder, Spielangeboten und dem traditionellen Borkemer Entenrennen. Details 13 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
+      "page": 3
     },
     {
       "title": "dokKA 13",
@@ -90,23 +49,10 @@
       "city": "Karlsruhe",
       "startDate": "2026-05-13",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "10:00 - 18:00 Uhr",
-      "sortDate": "2026-05-13",
-      "sortTime": "10:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-13 - 2026-05-17 | 10:00 - 18:00 Uhr",
-      "teaser": "Im Eröffnungsfilm \"Im Umkreis des Paradies\" begegnen sich die Lebensrealitäten junger Studierender und europäischer Aussteiger, die auf unterschiedliche Weise ihr persönliches „Paradies“ suchen.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/dokka-13/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 4,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "13.05.2026 - 17.05.2026, 10:00 - 18:00 Uhr",
-        "text": "dokKA 13 Feste | Karlsruhe 13.05.2026 - 17.05.2026, 10:00 - 18:00 Uhr Im Eröffnungsfilm \"Im Umkreis des Paradies\" begegnen sich die Lebensrealitäten junger Studierender und europäischer Aussteiger, die auf unterschiedliche Weise ihr persönliches „Paradies“ suchen. Details 13 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
     },
     {
       "title": "Boxberger Maimarkt",
@@ -114,23 +60,10 @@
       "city": "Boxberg",
       "startDate": "2026-05-13",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "17:00 - 23:59 Uhr",
-      "sortDate": "2026-05-13",
-      "sortTime": "17:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-13 - 2026-05-17 | 17:00 - 23:59 Uhr",
-      "teaser": "Der Boxberger Maimarkt findet vom 13. bis 17. Mai 2026 statt und bietet ein vielseitiges Programm für alle Altersgruppen.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/boxberger-maimarkt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 4,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "13.05.2026 - 17.05.2026, 17:00 - 23:59 Uhr",
-        "text": "Boxberger Maimarkt Feste | Boxberg 13.05.2026 - 17.05.2026, 17:00 - 23:59 Uhr Der Boxberger Maimarkt findet vom 13. bis 17. Mai 2026 statt und bietet ein vielseitiges Programm für alle Altersgruppen. Details 13 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
     },
     {
       "title": "Boxberger Maimarkt 2026",
@@ -138,23 +71,10 @@
       "city": "Boxberg",
       "startDate": "2026-05-13",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "17:00 - 23:59 Uhr",
-      "sortDate": "2026-05-13",
-      "sortTime": "17:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-13 - 2026-05-17 | 17:00 - 23:59 Uhr",
-      "teaser": "Der Boxberger Maimarkt bietet ein buntes Rahmenprogramm für Groß und Klein, mit Festhallenbetrieb, zahlreichen Schaustellern und Markthändlern. Neben dem Herzstück des Festes, das offizielle Marktbier,...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/boxberger-maimarkt-2026/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 4,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "13.05.2026 - 17.05.2026, 17:00 - 23:59 Uhr",
-        "text": "Boxberger Maimarkt 2026 Feste | Boxberg 13.05.2026 - 17.05.2026, 17:00 - 23:59 Uhr Der Boxberger Maimarkt bietet ein buntes Rahmenprogramm für Groß und Klein, mit Festhallenbetrieb, zahlreichen Schaustellern und Markthändlern. Neben dem Herzstück des Festes, das offizielle Marktbier,... Details 13 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
     },
     {
       "title": "Deckerhof-Mühle - Besichtigung",
@@ -162,23 +82,10 @@
       "city": "Seebach",
       "startDate": "2026-05-13",
       "endDate": "2026-10-28",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "18:00 - 19:00 Uhr",
-      "sortDate": "2026-05-13",
-      "sortTime": "18:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-13 - 2026-10-28 | 18:00 - 19:00 Uhr",
-      "teaser": "Technik mit Flair: Alte Mühle - neue Mühle. Nun klappert sie wieder, die aus dem Jahre 1792 stammende Deckerhof-Mühle. Doch neben dem Wasserrad drehen sich...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/deckerhof-muhle-besichtigung/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 3,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "13.05.2026 - 28.10.2026, 18:00 - 19:00 Uhr",
-        "text": "Deckerhof-Mühle - Besichtigung Feste | Seebach 13.05.2026 - 28.10.2026, 18:00 - 19:00 Uhr Technik mit Flair: Alte Mühle - neue Mühle. Nun klappert sie wieder, die aus dem Jahre 1792 stammende Deckerhof-Mühle. Doch neben dem Wasserrad drehen sich... Details 13 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
+      "page": 3
     },
     {
       "title": "Wii bim Wolf",
@@ -186,23 +93,10 @@
       "city": "Schallstadt",
       "startDate": "2026-05-13",
       "endDate": "2026-07-29",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "18:00 - 22:00 Uhr",
-      "sortDate": "2026-05-13",
-      "sortTime": "18:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-13 - 2026-07-29 | 18:00 - 22:00 Uhr",
-      "teaser": "Wii bim Wolf - Jeden Mittwoch ab 18 Uhr 13. Mai - 29. Juli",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wii-bim-wolf/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 4,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "13.05.2026 - 29.07.2026, 18:00 - 22:00 Uhr",
-        "text": "Wii bim Wolf Feste | Schallstadt 13.05.2026 - 29.07.2026, 18:00 - 22:00 Uhr Wii bim Wolf - Jeden Mittwoch ab 18 Uhr 13. Mai - 29. Juli Details"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Landesturnfest",
@@ -210,23 +104,10 @@
       "city": "Konstanz",
       "startDate": "2026-05-13",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "19:30 - 15:00 Uhr",
-      "sortDate": "2026-05-13",
-      "sortTime": "19:30",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-13 - 2026-05-17 | 19:30 - 15:00 Uhr",
-      "teaser": "Es ist DAS sportliche Großereignis des Jahres: Das Landesturnfest 2026 wird dieses Jahr in Konstanz (und Kreuzlingen) ausgerichtet. Jedes Jahr findet es in einer anderen ausgewählten Stadt...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/landesturnfest/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 2,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "13.05.2026 - 17.05.2026, 19:30 - 15:00 Uhr",
-        "text": "Landesturnfest Feste | Konstanz 13.05.2026 - 17.05.2026, 19:30 - 15:00 Uhr Es ist DAS sportliche Großereignis des Jahres: Das Landesturnfest 2026 wird dieses Jahr in Konstanz (und Kreuzlingen) ausgerichtet. Jedes Jahr findet es in einer anderen ausgewählten Stadt... Details"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
+      "page": 3
     },
     {
       "title": "Blumen- und Lichterfest",
@@ -234,23 +115,10 @@
       "city": "Walldürn",
       "startDate": "2026-05-14",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-14",
-      "sortTime": "",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-14 - 2026-05-17",
-      "teaser": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/blumen-und-lichterfest/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 5,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "14.05.2026 - 17.05.2026",
-        "text": "Blumen- und Lichterfest Feste | Walldürn 14.05.2026 - 17.05.2026 Details 14 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Frühlingsfest",
@@ -258,23 +126,10 @@
       "city": "Biederbach",
       "startDate": "2026-05-14",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-14",
-      "sortTime": "",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-14 - 2026-05-17",
-      "teaser": "Der Musikverein Trachtenkapelle Biederbach veranstaltet vom 14. Mai bis 17. Mai erneut sein traditionelles Frühlingsfest am Standort am Haus der Vereine (Weihermatten), in Biederbach.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fruhlingsfest-3/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/7/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 7,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "14.05.2026 - 17.05.2026",
-        "text": "Frühlingsfest Feste | Biederbach 14.05.2026 - 17.05.2026 Der Musikverein Trachtenkapelle Biederbach veranstaltet vom 14. Mai bis 17. Mai erneut sein traditionelles Frühlingsfest am Standort am Haus der Vereine (Weihermatten), in Biederbach. Details 14 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
+      "page": 8
     },
     {
       "title": "Stadtfest Kehler Messdi",
@@ -282,23 +137,10 @@
       "city": "Kehl",
       "startDate": "2026-05-14",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-14",
-      "sortTime": "",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-14 - 2026-05-17",
-      "teaser": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtfest-kehler-messdi/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 5,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "14.05.2026 - 17.05.2026",
-        "text": "Stadtfest Kehler Messdi Feste | Kehl 14.05.2026 - 17.05.2026 Details 14 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "TUNING WORLD BODENSEE",
@@ -306,23 +148,10 @@
       "city": "Friedrichshafen",
       "startDate": "2026-05-14",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-14",
-      "sortTime": "",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-14 - 2026-05-17",
-      "teaser": "Die TUNING WORLD BODENSEE - das internationale Messe Event für Auto-Tuning, Lifestyle und Club-Szene.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tuning-world-bodensee-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 9,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "14.05.2026 - 17.05.2026",
-        "text": "TUNING WORLD BODENSEE Feste | Friedrichshafen 14.05.2026 - 17.05.2026 Die TUNING WORLD BODENSEE - das internationale Messe Event für Auto-Tuning, Lifestyle und Club-Szene. Details"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
+      "page": 10
     },
     {
       "title": "Internationale Marbacher Vielseitigkeit - Nationenpreis",
@@ -330,23 +159,10 @@
       "city": "Münsingen",
       "startDate": "2026-05-14",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "00:00 - 00:00 Uhr",
-      "sortDate": "2026-05-14",
-      "sortTime": "00:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-14 - 2026-05-17 | 00:00 - 00:00 Uhr",
-      "teaser": "Internationale Marbacher Vielseitigkeit - Nationenpreis",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationale-marbacher-vielseitigkeit-nationenpreis/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 8,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "14.05.2026 - 17.05.2026, 00:00 - 00:00 Uhr",
-        "text": "Internationale Marbacher Vielseitigkeit - Nationenpreis Feste | Münsingen 14.05.2026 - 17.05.2026, 00:00 - 00:00 Uhr Internationale Marbacher Vielseitigkeit - Nationenpreis Details 14 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
+      "page": 8
     },
     {
       "title": "Rundtour ab Wasserburg in Richtung Lindau und Bregenz",
@@ -354,23 +170,10 @@
       "city": "Echt Bodensee",
       "startDate": "2026-05-14",
       "endDate": "2026-09-13",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "11:15 - 13:35 Uhr",
-      "sortDate": "2026-05-14",
-      "sortTime": "11:15",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-14 - 2026-09-13 | 11:15 - 13:35 Uhr",
-      "teaser": "Erleben Sie den Bodensee auf einer knapp zweistündigen Rundtour ab Wasserburg und genießen Sie die wechselnden Perspektiven vom Wasser aus.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/rundtour-ab-wasserburg-in-richtung-lindau-und-bregenz/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 6,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "14.05.2026 - 13.09.2026, 11:15 - 13:35 Uhr",
-        "text": "Rundtour ab Wasserburg in Richtung Lindau und Bregenz Feste | Echt Bodensee 14.05.2026 - 13.09.2026, 11:15 - 13:35 Uhr Erleben Sie den Bodensee auf einer knapp zweistündigen Rundtour ab Wasserburg und genießen Sie die wechselnden Perspektiven vom Wasser aus. Details 14 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
+      "page": 6
     },
     {
       "title": "Rundtour ab Nonnenhorn",
@@ -378,23 +181,10 @@
       "city": "Echt Bodensee",
       "startDate": "2026-05-14",
       "endDate": "2026-09-13",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "11:25 - 13:25 Uhr",
-      "sortDate": "2026-05-14",
-      "sortTime": "11:25",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-14 - 2026-09-13 | 11:25 - 13:25 Uhr",
-      "teaser": "Die schönsten Rundtouren auf dem See: ab Nonnenhorn in Richtung Lindau/ Bregenz.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/rundtour-ab-nonnenhorn/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 6,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "14.05.2026 - 13.09.2026, 11:25 - 13:25 Uhr",
-        "text": "Rundtour ab Nonnenhorn Feste | Echt Bodensee 14.05.2026 - 13.09.2026, 11:25 - 13:25 Uhr Die schönsten Rundtouren auf dem See: ab Nonnenhorn in Richtung Lindau/ Bregenz. Details 14 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
+      "page": 6
     },
     {
       "title": "Rundtouren ab Kressbronn",
@@ -402,23 +192,10 @@
       "city": "Echt Bodensee",
       "startDate": "2026-05-14",
       "endDate": "2026-09-13",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "11:35 - 13:15 Uhr",
-      "sortDate": "2026-05-14",
-      "sortTime": "11:35",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-14 - 2026-09-13 | 11:35 - 13:15 Uhr",
-      "teaser": "Die schönsten Rundtouren auf dem See: ab Kressbronn in Richtung Lindau / Bregenz",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/rundtouren-ab-kressbronn/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 6,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "14.05.2026 - 13.09.2026, 11:35 - 13:15 Uhr",
-        "text": "Rundtouren ab Kressbronn Feste | Echt Bodensee 14.05.2026 - 13.09.2026, 11:35 - 13:15 Uhr Die schönsten Rundtouren auf dem See: ab Kressbronn in Richtung Lindau / Bregenz Details 14 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
+      "page": 6
     },
     {
       "title": "Rundtour ab Langenargen",
@@ -426,23 +203,10 @@
       "city": "Echt Bodensee",
       "startDate": "2026-05-14",
       "endDate": "2026-09-13",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "11:55 - 12:55 Uhr",
-      "sortDate": "2026-05-14",
-      "sortTime": "11:55",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-14 - 2026-09-13 | 11:55 - 12:55 Uhr",
-      "teaser": "Die schönsten Rundtouren ab Langenargen in Richtung Lindau/Bregenz",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/rundtour-ab-langenargen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 6,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "14.05.2026 - 13.09.2026, 11:55 - 12:55 Uhr",
-        "text": "Rundtour ab Langenargen Feste | Echt Bodensee 14.05.2026 - 13.09.2026, 11:55 - 12:55 Uhr Die schönsten Rundtouren ab Langenargen in Richtung Lindau/Bregenz Details 14 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
+      "page": 6
     },
     {
       "title": "Lachs mit Seeblick",
@@ -450,23 +214,10 @@
       "city": "Echt Bodensee",
       "startDate": "2026-05-14",
       "endDate": "2026-09-13",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "12:30 - 16:25 Uhr",
-      "sortDate": "2026-05-14",
-      "sortTime": "12:30",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-14 - 2026-09-13 | 12:30 - 16:25 Uhr",
-      "teaser": "Tauchen Sie ein in eine kulinarische Genussreise auf dem Bodensee und lassen Sie sich von köstlichem Lachs und weiteren Leckereien verwöhnen! Erleben Sie eine entspannte...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/lachs-mit-seeblick/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 6,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "14.05.2026 - 13.09.2026, 12:30 - 16:25 Uhr",
-        "text": "Lachs mit Seeblick Feste | Echt Bodensee 14.05.2026 - 13.09.2026, 12:30 - 16:25 Uhr Tauchen Sie ein in eine kulinarische Genussreise auf dem Bodensee und lassen Sie sich von köstlichem Lachs und weiteren Leckereien verwöhnen! Erleben Sie eine entspannte... Details 14 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
+      "page": 6
     },
     {
       "title": "Fisch vom Grill",
@@ -474,23 +225,10 @@
       "city": "Echt Bodensee",
       "startDate": "2026-05-14",
       "endDate": "2026-09-13",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "17:25 - 20:30 Uhr",
-      "sortDate": "2026-05-14",
-      "sortTime": "17:25",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-14 - 2026-09-13 | 17:25 - 20:30 Uhr",
-      "teaser": "Auf der ca. 3-stündigen Rundfahrt erwartet Sie ein hochwertiges Fisch- und Grill-Buffet, sowie eine einzigartige Aussicht auf den Bodensee mit Alpenpanorama.Ab Meersburg & Konstanz",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fisch-vom-grill/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 6,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "14.05.2026 - 13.09.2026, 17:25 - 20:30 Uhr",
-        "text": "Fisch vom Grill Feste | Echt Bodensee 14.05.2026 - 13.09.2026, 17:25 - 20:30 Uhr Auf der ca. 3-stündigen Rundfahrt erwartet Sie ein hochwertiges Fisch- und Grill-Buffet, sowie eine einzigartige Aussicht auf den Bodensee mit Alpenpanorama.Ab Meersburg & Konstanz Details 14 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
+      "page": 6
     },
     {
       "title": "Italienische Pasta-Fahrt",
@@ -498,23 +236,10 @@
       "city": "Echt Bodensee",
       "startDate": "2026-05-14",
       "endDate": "2026-09-13",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "17:25 - 20:30 Uhr",
-      "sortDate": "2026-05-14",
-      "sortTime": "17:25",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-14 - 2026-09-13 | 17:25 - 20:30 Uhr",
-      "teaser": "Genießen Sie eine köstliche Pasta-Fahrt auf dem Bodensee und lassen Sie sich von italienischen Spezialitäten verwöhnen, während Sie die malerische Aussicht auf den See genießen! Buon...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/italienische-pasta-fahrt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 5,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "14.05.2026 - 13.09.2026, 17:25 - 20:30 Uhr",
-        "text": "Italienische Pasta-Fahrt Feste | Echt Bodensee 14.05.2026 - 13.09.2026, 17:25 - 20:30 Uhr Genießen Sie eine köstliche Pasta-Fahrt auf dem Bodensee und lassen Sie sich von italienischen Spezialitäten verwöhnen, während Sie die malerische Aussicht auf den See genießen! Buon... Details"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
+      "page": 6
     },
     {
       "title": "Grill-Fahrt",
@@ -522,23 +247,10 @@
       "city": "Echt Bodensee",
       "startDate": "2026-05-14",
       "endDate": "2026-09-13",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "18:05 - 21:00 Uhr",
-      "sortDate": "2026-05-14",
-      "sortTime": "18:05",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-14 - 2026-09-13 | 18:05 - 21:00 Uhr",
-      "teaser": "Grill-Fahrt - Spezialitäten vom Grill an Bord genießen Während die Sonne langsam im See versinkt genießen Sie das verführerische Buffet. Erleben Sie den Abend mit...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/grill-fahrt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 6,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "14.05.2026 - 13.09.2026, 18:05 - 21:00 Uhr",
-        "text": "Grill-Fahrt Feste | Echt Bodensee 14.05.2026 - 13.09.2026, 18:05 - 21:00 Uhr Grill-Fahrt - Spezialitäten vom Grill an Bord genießen Während die Sonne langsam im See versinkt genießen Sie das verführerische Buffet. Erleben Sie den Abend mit... Details 14 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
+      "page": 6
     },
     {
       "title": "Grill-Fahrt im Überlinger See",
@@ -546,23 +258,10 @@
       "city": "Echt Bodensee",
       "startDate": "2026-05-14",
       "endDate": "2026-09-13",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "18:05 - 21:00 Uhr",
-      "sortDate": "2026-05-14",
-      "sortTime": "18:05",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-14 - 2026-09-13 | 18:05 - 21:00 Uhr",
-      "teaser": "Genießen Sie einen stimmungsvollen Sommerabend mit vielfältigem Grill-Buffet an Bord. Freuen Sie sich auf eine ca. dreistündige Rundfahrt im Überlinger See ab Konstanz oder Meersburg.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/grill-fahrt-im-uberlinger-see/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 6,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "14.05.2026 - 13.09.2026, 18:05 - 21:00 Uhr",
-        "text": "Grill-Fahrt im Überlinger See Feste | Echt Bodensee 14.05.2026 - 13.09.2026, 18:05 - 21:00 Uhr Genießen Sie einen stimmungsvollen Sommerabend mit vielfältigem Grill-Buffet an Bord. Freuen Sie sich auf eine ca. dreistündige Rundfahrt im Überlinger See ab Konstanz oder Meersburg. Details 14 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
+      "page": 6
     },
     {
       "title": "45. Eberbacher Frühling",
@@ -570,23 +269,10 @@
       "city": "Eberbach",
       "startDate": "2026-05-15",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-15",
-      "sortTime": "",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-15 - 2026-05-17",
-      "teaser": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/45-eberbacher-fruehling/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 10,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "15.05.2026 - 17.05.2026",
-        "text": "45. Eberbacher Frühling Feste | Eberbach 15.05.2026 - 17.05.2026 Details 15 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
+      "page": 11
     },
     {
       "title": "Eberbacher Frühling",
@@ -594,23 +280,10 @@
       "city": "Eberbach",
       "startDate": "2026-05-15",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-15",
-      "sortTime": "",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-15 - 2026-05-17",
-      "teaser": "Am Wochenende nach Christi Himmelfahrt lockt ein traditionsreiches Altstadtfest zahlreiche Besucherinnen und Besucher nach Eberbach: der Eberbacher Frühling. Es bietet viele Aktivitäten für Groß und Klein und eine...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/eberbacher-fruhling/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 11,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "15.05.2026 - 17.05.2026",
-        "text": "Eberbacher Frühling Feste | Eberbach 15.05.2026 - 17.05.2026 Am Wochenende nach Christi Himmelfahrt lockt ein traditionsreiches Altstadtfest zahlreiche Besucherinnen und Besucher nach Eberbach: der Eberbacher Frühling. Es bietet viele Aktivitäten für Groß und Klein und eine... Details 15 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
+      "page": 12
     },
     {
       "title": "NADELWELT",
@@ -618,23 +291,10 @@
       "city": "Karlsruhe",
       "startDate": "2026-05-15",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-15",
-      "sortTime": "",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-15 - 2026-05-17",
-      "teaser": "Entdecke deine Kreativität auf der NADELWELT – der internationalen Veranstaltung für Handarbeiten in Karlsruhe!",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/nadelwelt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 12,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "15.05.2026 - 17.05.2026",
-        "text": "NADELWELT Feste | Karlsruhe 15.05.2026 - 17.05.2026 Entdecke deine Kreativität auf der NADELWELT – der internationalen Veranstaltung für Handarbeiten in Karlsruhe! Details 15 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
+      "page": 12
     },
     {
       "title": "Weinbergliebe - Festival in Hessigheim",
@@ -642,47 +302,10 @@
       "city": "Hessigheim",
       "startDate": "2026-05-15",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "00:00 - 00:00 Uhr",
-      "sortDate": "2026-05-15",
-      "sortTime": "00:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-15 - 2026-05-17 | 00:00 - 00:00 Uhr",
-      "teaser": "https://www.weinbergliebe.de/e...\" width=\"100%\" height=\"700\" frameborder=\"0\" scrolling=\"no\">",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinbergliebe-festival-in-hessigheim/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 13,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "15.05.2026 - 17.05.2026, 00:00 - 00:00 Uhr",
-        "text": "Weinbergliebe - Festival in Hessigheim Feste | Hessigheim 15.05.2026 - 17.05.2026, 00:00 - 00:00 Uhr https://www.weinbergliebe.de/e...\" width=\"100%\" height=\"700\" frameborder=\"0\" scrolling=\"no\"> Details 15 May Feste"
-      }
-    },
-    {
-      "title": "16. Karlsbader Rhododendrontage",
-      "category": "feste",
-      "city": "Karlsbad",
-      "startDate": "2026-05-15",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "10:00 - 18:00 Uhr",
-      "sortDate": "2026-05-15",
-      "sortTime": "10:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-15 - 2026-05-17 | 10:00 - 18:00 Uhr",
-      "teaser": "Auch dieses Jahr lädt der Park Jansen zu den 16. Karlsbader Rhododendrontagen mit buntem Rahmenprogramm ein.",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/16-karlsbader-rhododendrontage/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 12,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "15.05.2026 - 17.05.2026, 10:00 - 18:00 Uhr",
-        "text": "16. Karlsbader Rhododendrontage Feste | Karlsbad 15.05.2026 - 17.05.2026, 10:00 - 18:00 Uhr Auch dieses Jahr lädt der Park Jansen zu den 16. Karlsbader Rhododendrontagen mit buntem Rahmenprogramm ein. Details 15 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
+      "page": 14
     },
     {
       "title": "Qi Gong im Kurpark",
@@ -690,23 +313,32 @@
       "city": "Baiersbronn",
       "startDate": "2026-05-15",
       "endDate": "2026-06-12",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "10:00 - 11:00 Uhr",
-      "sortDate": "2026-05-15",
-      "sortTime": "10:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-15 - 2026-06-12 | 10:00 - 11:00 Uhr",
-      "teaser": "Kurs",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/qi-gong-im-kurpark/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 13,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "15.05.2026 - 12.06.2026, 10:00 - 11:00 Uhr",
-        "text": "Qi Gong im Kurpark Feste | Baiersbronn 15.05.2026 - 12.06.2026, 10:00 - 11:00 Uhr Kurs Details 15 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/",
+      "page": 13
+    },
+    {
+      "title": "16. Karlsbader Rhododendrontage",
+      "category": "feste",
+      "city": "Karlsbad",
+      "startDate": "2026-05-15",
+      "endDate": "2026-05-17",
+      "time": "10:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/16-karlsbader-rhododendrontage/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/",
+      "page": 13
+    },
+    {
+      "title": "Kunst trifft Handwerk",
+      "category": "feste",
+      "city": "Bad Säckingen",
+      "startDate": "2026-05-15",
+      "endDate": "2026-05-17",
+      "time": "14:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kunst-trifft-handwerk-3/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
+      "page": 14
     },
     {
       "title": "Schwimmabzeichen im Donaubad",
@@ -714,23 +346,10 @@
       "city": "Sigmaringen",
       "startDate": "2026-05-15",
       "endDate": "2026-09-20",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "17:00 Uhr",
-      "sortDate": "2026-05-15",
-      "sortTime": "17:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-15 - 2026-09-20 | 17:00 Uhr",
-      "teaser": "An jedem letzten Freitag im Monat nimmt das DLRG im Donaubad Sigmaringen für 5€ sowohl das Frühschwimmabzeichen Seepferdchen, als auch die deutschen Schwimmabzeichen in Bronze und...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schwimmabzeichen-im-donaubad/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 12,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "15.05.2026 - 20.09.2026, 17:00 Uhr",
-        "text": "Schwimmabzeichen im Donaubad Feste | Sigmaringen 15.05.2026 - 20.09.2026, 17:00 Uhr An jedem letzten Freitag im Monat nimmt das DLRG im Donaubad Sigmaringen für 5€ sowohl das Frühschwimmabzeichen Seepferdchen, als auch die deutschen Schwimmabzeichen in Bronze und... Details 15 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/",
+      "page": 13
     },
     {
       "title": "Dorffest Willaringen",
@@ -738,23 +357,10 @@
       "city": "Rickenbach",
       "startDate": "2026-05-16",
       "endDate": "2026-05-18",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-16",
-      "sortTime": "",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-16 - 2026-05-18",
-      "teaser": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/dorffest-willaringen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 13,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "16.05.2026 - 18.05.2026",
-        "text": "Dorffest Willaringen Feste | Rickenbach 16.05.2026 - 18.05.2026 Details"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
+      "page": 14
     },
     {
       "title": "Heimattage 2026: Baden-Württemberg-Tag",
@@ -762,23 +368,10 @@
       "city": "Oberkirch",
       "startDate": "2026-05-16",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-16",
-      "sortTime": "",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-16 - 2026-05-17",
-      "teaser": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/heimattage-2026-baden-wuerttemberg-tag/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 14,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "16.05.2026 - 17.05.2026",
-        "text": "Heimattage 2026: Baden-Württemberg-Tag Feste | Oberkirch 16.05.2026 - 17.05.2026 Details 16 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
+      "page": 14
     },
     {
       "title": "\"Tolle Wolle\" auf Campus Galli",
@@ -786,23 +379,10 @@
       "city": "Meßkirch",
       "startDate": "2026-05-16",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "10:00 - 18:00 Uhr",
-      "sortDate": "2026-05-16",
-      "sortTime": "10:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-16 - 2026-05-17 | 10:00 - 18:00 Uhr",
-      "teaser": "Am 16. und 17. Mai dreht sich bei CAMPUS GALLI alles um das Schaf und seine wertvolle Wolle! Im frühen Mittelalter waren Schafe unverzichtbar: Sie...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tolle-wolle-auf-campus-galli/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 14,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "16.05.2026 - 17.05.2026, 10:00 - 18:00 Uhr",
-        "text": "\"Tolle Wolle\" auf Campus Galli Feste | Meßkirch 16.05.2026 - 17.05.2026, 10:00 - 18:00 Uhr Am 16. und 17. Mai dreht sich bei CAMPUS GALLI alles um das Schaf und seine wertvolle Wolle! Im frühen Mittelalter waren Schafe unverzichtbar: Sie... Details 16 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/15/",
+      "page": 15
     },
     {
       "title": "Aktionstage Roter Turm",
@@ -810,47 +390,10 @@
       "city": "Bad Wimpfen",
       "startDate": "2026-05-16",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "11:00 - 17:00 Uhr",
-      "sortDate": "2026-05-16",
-      "sortTime": "11:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-16 - 2026-05-17 | 11:00 - 17:00 Uhr",
-      "teaser": "Am Museumstag wird der Rote Turm mit Mittelalterleben belebt. Stauferwache, Handwerk und freier Eintritt in Museen laden zum Besuch nach Bad Wimpfen ein.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/aktionstage-roter-turm-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 16,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "16.05.2026 - 17.05.2026, 11:00 - 17:00 Uhr",
-        "text": "Aktionstage Roter Turm Feste | Bad Wimpfen 16.05.2026 - 17.05.2026, 11:00 - 17:00 Uhr Am Museumstag wird der Rote Turm mit Mittelalterleben belebt. Stauferwache, Handwerk und freier Eintritt in Museen laden zum Besuch nach Bad Wimpfen ein. Details 16 May Feste"
-      }
-    },
-    {
-      "title": "MARKGRÄFLER WEINPROMENADE",
-      "category": "feste",
-      "city": "Müllheim",
-      "startDate": "2026-05-16",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "11:00 - 18:00 Uhr",
-      "sortDate": "2026-05-16",
-      "sortTime": "11:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-16 - 2026-05-17 | 11:00 - 18:00 Uhr",
-      "teaser": "Sehen | Riechen | Schmecken – den Winzern ins Glas geschaut",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/markgrafler-weinpromenade/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/17/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 17,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "16.05.2026 - 17.05.2026, 11:00 - 18:00 Uhr",
-        "text": "MARKGRÄFLER WEINPROMENADE Feste | Müllheim 16.05.2026 - 17.05.2026, 11:00 - 18:00 Uhr Sehen | Riechen | Schmecken – den Winzern ins Glas geschaut Details 16 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
+      "page": 16
     },
     {
       "title": "Schäfertage mit Schäfermarkt",
@@ -858,23 +401,21 @@
       "city": "Beuren",
       "startDate": "2026-05-16",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "11:00 - 17:00 Uhr",
-      "sortDate": "2026-05-16",
-      "sortTime": "11:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-16 - 2026-05-17 | 11:00 - 17:00 Uhr",
-      "teaser": "Mitmachaktionen und ein Schäfermarkt schaffen ein abwechslungsreiches Angebot für die ganze Familie. Das Baden und Scheren der Schafe und die Vorführungen mit Hütehunden sind besondere...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schafertage-mit-schafermarkt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/15/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 15,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "16.05.2026 - 17.05.2026, 11:00 - 17:00 Uhr",
-        "text": "Schäfertage mit Schäfermarkt Feste | Beuren 16.05.2026 - 17.05.2026, 11:00 - 17:00 Uhr Mitmachaktionen und ein Schäfermarkt schaffen ein abwechslungsreiches Angebot für die ganze Familie. Das Baden und Scheren der Schafe und die Vorführungen mit Hütehunden sind besondere... Details 16 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
+      "page": 16
+    },
+    {
+      "title": "MARKGRÄFLER WEINPROMENADE",
+      "category": "feste",
+      "city": "Müllheim",
+      "startDate": "2026-05-16",
+      "endDate": "2026-05-17",
+      "time": "11:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/markgrafler-weinpromenade/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/",
+      "page": 18
     },
     {
       "title": "Tag der Weingüter",
@@ -882,23 +423,10 @@
       "city": "Sachsenheim",
       "startDate": "2026-05-16",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "11:00 - 23:30 Uhr",
-      "sortDate": "2026-05-16",
-      "sortTime": "11:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-16 - 2026-05-17 | 11:00 - 23:30 Uhr",
-      "teaser": "Tag der Hohenhaslacher Weingüter im Rahmen der Gläsernen Produktion",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-weinguter/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 18,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "16.05.2026 - 17.05.2026, 11:00 - 23:30 Uhr",
-        "text": "Tag der Weingüter Feste | Sachsenheim 16.05.2026 - 17.05.2026, 11:00 - 23:30 Uhr Tag der Hohenhaslacher Weingüter im Rahmen der Gläsernen Produktion Details 16 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/",
+      "page": 18
     },
     {
       "title": "Jubiläumsparty - Schützenverein Rangendingen",
@@ -906,23 +434,10 @@
       "city": "Rangendingen",
       "startDate": "2026-05-16",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "15:30 - 02:00 Uhr",
-      "sortDate": "2026-05-16",
-      "sortTime": "15:30",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-16 - 2026-05-17 | 15:30 - 02:00 Uhr",
-      "teaser": "Die Feierlichkeiten werden durch die Jugendkapelle des Musikvereins Rangendingen eröffnet. Der Sieger der Jubiläums-Ehrenscheibe wird im Rahmen der Feierlichkeiten bekannt gegeben. Am Abend ab ca....",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/jubilaumsparty-schutzenverein-rangendingen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 18,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "16.05.2026 - 17.05.2026, 15:30 - 02:00 Uhr",
-        "text": "Jubiläumsparty - Schützenverein Rangendingen Feste | Rangendingen 16.05.2026 - 17.05.2026, 15:30 - 02:00 Uhr Die Feierlichkeiten werden durch die Jugendkapelle des Musikvereins Rangendingen eröffnet. Der Sieger der Jubiläums-Ehrenscheibe wird im Rahmen der Feierlichkeiten bekannt gegeben. Am Abend ab ca.... Details 16 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/",
+      "page": 19
     },
     {
       "title": "Internationaler Museumstag",
@@ -930,23 +445,10 @@
       "city": "Tübingen",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-17",
-      "sortTime": "",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17",
-      "teaser": "Baden-Württemberg erzählt! – so lautet das diesjährige vom Museumsverband Baden-Württemberg ausgerufene Motto zum Internationalen Museumstag. Die teilnehmenden Museen und deren Programm für Tübingen finden Sie unten.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-3/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 19,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026",
-        "text": "Internationaler Museumstag Feste | Tübingen 17.05.2026 Baden-Württemberg erzählt! – so lautet das diesjährige vom Museumsverband Baden-Württemberg ausgerufene Motto zum Internationalen Museumstag. Die teilnehmenden Museen und deren Programm für Tübingen finden Sie unten. Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/",
+      "page": 19
     },
     {
       "title": "Internationaler Museumstag 2026",
@@ -954,23 +456,10 @@
       "city": "",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-17",
-      "sortTime": "",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17",
-      "teaser": "Der Internationale Museumstag ist ein jährliches, weltweites Ereignis, das die Bedeutung der Museen für Gesellschaft, Kultur und Bildung hervorhebt.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-2026-3/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 22,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026",
-        "text": "Internationaler Museumstag 2026 Feste 17.05.2026 Der Internationale Museumstag ist ein jährliches, weltweites Ereignis, das die Bedeutung der Museen für Gesellschaft, Kultur und Bildung hervorhebt. Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
+      "page": 23
     },
     {
       "title": "Internationaler Museumstag im Hans-Thoma-Kunstmuseum",
@@ -978,23 +467,10 @@
       "city": "Bernau im Schwarzwald",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-17",
-      "sortTime": "",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17",
-      "teaser": "Der Aktionstag mit dem Ziel, weltweit auf die gesellschaftliche Rolle der Museen aufmerksam zu machen. Besucher sind auch in den Bernauer Museen eingeladen an den...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-im-hans-thoma-kunstmuseum/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 22,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026",
-        "text": "Internationaler Museumstag im Hans-Thoma-Kunstmuseum Feste | Bernau im Schwarzwald 17.05.2026 Der Aktionstag mit dem Ziel, weltweit auf die gesellschaftliche Rolle der Museen aufmerksam zu machen. Besucher sind auch in den Bernauer Museen eingeladen an den... Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
+      "page": 22
     },
     {
       "title": "Internationaler Museumstag im Resenhof",
@@ -1002,23 +478,10 @@
       "city": "Bernau im Schwarzwald",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-17",
-      "sortTime": "",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17",
-      "teaser": "Der Aktionstag mit dem Ziel, weltweit auf die gesellschaftliche Rolle der Museen aufmerksam zu machen. Besucher sind auch in den Bernauer Museen eingeladen an den...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-im-resenhof/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 22,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026",
-        "text": "Internationaler Museumstag im Resenhof Feste | Bernau im Schwarzwald 17.05.2026 Der Aktionstag mit dem Ziel, weltweit auf die gesellschaftliche Rolle der Museen aufmerksam zu machen. Besucher sind auch in den Bernauer Museen eingeladen an den... Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
+      "page": 22
     },
     {
       "title": "Reitwochen für Erwachsene",
@@ -1026,23 +489,10 @@
       "city": "Münsingen",
       "startDate": "2026-05-17",
       "endDate": "2026-05-22",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "00:00 - 00:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "00:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-17 - 2026-05-22 | 00:00 - 00:00 Uhr",
-      "teaser": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/reitwochen-fur-erwachsene/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 20,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026 - 22.05.2026, 00:00 - 00:00 Uhr",
-        "text": "Reitwochen für Erwachsene Feste | Münsingen 17.05.2026 - 22.05.2026, 00:00 - 00:00 Uhr Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
+      "page": 20
     },
     {
       "title": "Baiersbronner Bike- & Wanderhimmel-Fest",
@@ -1050,47 +500,10 @@
       "city": "Baiersbronn",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "09:00 - 17:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "09:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 09:00 - 17:00 Uhr",
-      "teaser": "Wander- und Bike-Event",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/baiersbronner-bike-wanderhimmel-fest/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 19,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 09:00 - 17:00 Uhr",
-        "text": "Baiersbronner Bike- & Wanderhimmel-Fest Feste | Baiersbronn 17.05.2026, 09:00 - 17:00 Uhr Wander- und Bike-Event Details 17 May Feste"
-      }
-    },
-    {
-      "title": "Besuch bei der DS Hohentwiel und der MS Österreich",
-      "category": "feste",
-      "city": "Immenstaad",
-      "startDate": "2026-05-17",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "09:15 - 19:45 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "09:15",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 09:15 - 19:45 Uhr",
-      "teaser": "Schifffahrt mit der Lädine zum Tag der offenen Tür des Art Deco Motorschiffes Österreich und des Dampfschiffes Hohentwiel.",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/feuerwerksfahrt-zum-seehasenfest/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 19,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 09:15 - 19:45 Uhr",
-        "text": "Besuch bei der DS Hohentwiel und der MS Österreich Feste | Immenstaad 17.05.2026, 09:15 - 19:45 Uhr Schifffahrt mit der Lädine zum Tag der offenen Tür des Art Deco Motorschiffes Österreich und des Dampfschiffes Hohentwiel. Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
+      "page": 20
     },
     {
       "title": "Schwarzwaldhof-Ingenieurfahrt",
@@ -1098,143 +511,10 @@
       "city": "Blumberg",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "09:45 - 16:34 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "09:45",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 09:45 - 16:34 Uhr",
-      "teaser": "Begeben Sie sich auf eine spannende Tour mit unserem Ingenieur und Sie erhalten alle Antworten auf diese Fragen. Zudem gibt es allerlei Wissenswertes zum damaligen...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schwarzwaldhof-ingenieurfahrt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 20,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 09:45 - 16:34 Uhr",
-        "text": "Schwarzwaldhof-Ingenieurfahrt Feste | Blumberg 17.05.2026, 09:45 - 16:34 Uhr Begeben Sie sich auf eine spannende Tour mit unserem Ingenieur und Sie erhalten alle Antworten auf diese Fragen. Zudem gibt es allerlei Wissenswertes zum damaligen... Details"
-      }
-    },
-    {
-      "title": "Albtag - der Familientag",
-      "category": "feste",
-      "city": "Hohenstein",
-      "startDate": "2026-05-17",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "10:00 - 17:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "10:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 10:00 - 17:00 Uhr",
-      "teaser": "Ein buntes und abwechslungsreiches Programm für die ganze Familie.",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/albtag-der-familientag/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 20,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 10:00 - 17:00 Uhr",
-        "text": "Albtag - der Familientag Feste | Hohenstein 17.05.2026, 10:00 - 17:00 Uhr Ein buntes und abwechslungsreiches Programm für die ganze Familie. Details 17 May Feste"
-      }
-    },
-    {
-      "title": "Gutenbergs Geopoints",
-      "category": "feste",
-      "city": "Biosphärengebiet Schwäbische Alb",
-      "startDate": "2026-05-17",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "10:00 - 13:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "10:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 10:00 - 13:00 Uhr",
-      "teaser": "Bei der Exkursion wird die Entstehung der unterschiedlichen Kalkformationen erklärt, sowie der Zusammenhang zwischen der Verkarstung der Alb und der Ausfällung von Kalk aufgezeigt.",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gutenbergs-geopoints/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 20,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 10:00 - 13:00 Uhr",
-        "text": "Gutenbergs Geopoints Feste | Biosphärengebiet Schwäbische Alb 17.05.2026, 10:00 - 13:00 Uhr Bei der Exkursion wird die Entstehung der unterschiedlichen Kalkformationen erklärt, sowie der Zusammenhang zwischen der Verkarstung der Alb und der Ausfällung von Kalk aufgezeigt. Details 17 May Feste"
-      }
-    },
-    {
-      "title": "Jugendvorspiel der Nachwuchstalente des Musikvereins Seebach",
-      "category": "feste",
-      "city": "Seebach",
-      "startDate": "2026-05-17",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "10:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "10:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 10:00 Uhr",
-      "teaser": "Der Nachwuchs des Musikvereins Seebach präsentiert sich.",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/jugendvorspiel-der-nachwuchstalente-des-musikvereins-seebach/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 21,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 10:00 Uhr",
-        "text": "Jugendvorspiel der Nachwuchstalente des Musikvereins Seebach Feste | Seebach 17.05.2026, 10:00 Uhr Der Nachwuchs des Musikvereins Seebach präsentiert sich. Details 17 May Feste"
-      }
-    },
-    {
-      "title": "Oldtimer-Schlepper-Treffen",
-      "category": "feste",
-      "city": "Bad Schussenried-Kürnbach",
-      "startDate": "2026-05-17",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "10:00 - 16:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "10:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 10:00 - 16:00 Uhr",
-      "teaser": "Lassen auch Sie sich von alter Technik begeistern! Zum Schlepper-Treffen bringen zahlreiche Sammler*innen ihre wohlgehüteten Schätze nach Kürnbach. Gemeinsam mit den Oldtimerfreunden Federbach-Schussen präsentieren wir...",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oldtimer-schlepper-treffen-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 20,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 10:00 - 16:00 Uhr",
-        "text": "Oldtimer-Schlepper-Treffen Feste | Bad Schussenried-Kürnbach 17.05.2026, 10:00 - 16:00 Uhr Lassen auch Sie sich von alter Technik begeistern! Zum Schlepper-Treffen bringen zahlreiche Sammler*innen ihre wohlgehüteten Schätze nach Kürnbach. Gemeinsam mit den Oldtimerfreunden Federbach-Schussen präsentieren wir... Details 17 May Feste"
-      }
-    },
-    {
-      "title": "Oldtimertreffen",
-      "category": "feste",
-      "city": "Meßkirch",
-      "startDate": "2026-05-17",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "10:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "10:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 10:00 Uhr",
-      "teaser": "Oldtimertreffen vor dem Oldtimermuseum Meßkirch.",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oldtimertreffen-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 19,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 10:00 Uhr",
-        "text": "Oldtimertreffen Feste | Meßkirch 17.05.2026, 10:00 Uhr Oldtimertreffen vor dem Oldtimermuseum Meßkirch. Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
+      "page": 21
     },
     {
       "title": "Pilates auf der Liegewiese im Donaubad",
@@ -1242,47 +522,43 @@
       "city": "Sigmaringen",
       "startDate": "2026-05-17",
       "endDate": "2026-09-20",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "10:00 - 11:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "10:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-17 - 2026-09-20 | 10:00 - 11:00 Uhr",
-      "teaser": "Starten Sie entspannt in den Sonntag mit Pilates unter freiem Himmel auf unserer Liegewiese im Donaubad. Bringen Sie einfach Ihre Yogamatte mit und kommen Sie...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/pilates-auf-der-liegewiese-im-donaubad/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 22,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026 - 20.09.2026, 10:00 - 11:00 Uhr",
-        "text": "Pilates auf der Liegewiese im Donaubad Feste | Sigmaringen 17.05.2026 - 20.09.2026, 10:00 - 11:00 Uhr Starten Sie entspannt in den Sonntag mit Pilates unter freiem Himmel auf unserer Liegewiese im Donaubad. Bringen Sie einfach Ihre Yogamatte mit und kommen Sie... Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
+      "page": 23
     },
     {
-      "title": "Summer Spirit - Geschichte in Bewegung",
+      "title": "Gutenbergs Geopoints",
       "category": "feste",
-      "city": "Lindau",
+      "city": "Biosphärengebiet Schwäbische Alb",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "10:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "10:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 10:00 Uhr",
-      "teaser": "Auf den Spuren jüdischer Flüchtlinge – Exkursion mit geführtem Rundgang",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/summer-spirit-geschichte-in-bewegung/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 19,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 10:00 Uhr",
-        "text": "Summer Spirit - Geschichte in Bewegung Feste | Lindau 17.05.2026, 10:00 Uhr Auf den Spuren jüdischer Flüchtlinge – Exkursion mit geführtem Rundgang Details 17 May Feste"
-      }
+      "time": "10:00 - 13:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gutenbergs-geopoints/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
+      "page": 20
+    },
+    {
+      "title": "Oldtimer-Schlepper-Treffen",
+      "category": "feste",
+      "city": "Bad Schussenried-Kürnbach",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "10:00 - 16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oldtimer-schlepper-treffen-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
+      "page": 21
+    },
+    {
+      "title": "Albtag - der Familientag",
+      "category": "feste",
+      "city": "Hohenstein",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "10:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/albtag-der-familientag/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
+      "page": 20
     },
     {
       "title": "Tag des offenen Ateliers",
@@ -1290,47 +566,10 @@
       "city": "Kandern",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "10:00 - 17:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "10:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 10:00 - 17:00 Uhr",
-      "teaser": "Malerei, Bildhauerei, Fotografie, Musik, Literatur, Handwerk oder andere künstlerische Ausdrucksformen in Kandern. Weitere Infos bei Melanie Mittmann: info@artundamarone.de",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-des-offenen-ateliers/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 21,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 10:00 - 17:00 Uhr",
-        "text": "Tag des offenen Ateliers Feste | Kandern 17.05.2026, 10:00 - 17:00 Uhr Malerei, Bildhauerei, Fotografie, Musik, Literatur, Handwerk oder andere künstlerische Ausdrucksformen in Kandern. Weitere Infos bei Melanie Mittmann: info@artundamarone.de Details 17 May Feste"
-      }
-    },
-    {
-      "title": "Traktorenfest der Kolpingsfamilie Rotzingen",
-      "category": "feste",
-      "city": "Görwihl",
-      "startDate": "2026-05-17",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "10:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "10:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 10:00 Uhr",
-      "teaser": "Das alljährliche Traktorenfest beginnt traditionell mit einem feierlichen Gottesdienst, bei dem auch die Segnung der Traktoren nicht fehlt.",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/traktorenfest-der-kolpingsfamilie-rotzingen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 21,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 10:00 Uhr",
-        "text": "Traktorenfest der Kolpingsfamilie Rotzingen Feste | Görwihl 17.05.2026, 10:00 Uhr Das alljährliche Traktorenfest beginnt traditionell mit einem feierlichen Gottesdienst, bei dem auch die Segnung der Traktoren nicht fehlt. Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
+      "page": 21
     },
     {
       "title": "Vergleichsschießen Simonswald - Gütenbach",
@@ -1338,71 +577,54 @@
       "city": "Simonswald",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "10:00 - 18:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "10:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 10:00 - 18:00 Uhr",
-      "teaser": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vergleichsschiesen-simonswald-gutenbach/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 20,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 10:00 - 18:00 Uhr",
-        "text": "Vergleichsschießen Simonswald - Gütenbach Feste | Simonswald 17.05.2026, 10:00 - 18:00 Uhr Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
+      "page": 20
     },
     {
-      "title": "Rangerführung zum Buhlbachsee",
+      "title": "Jugendvorspiel der Nachwuchstalente des Musikvereins Seebach",
       "category": "feste",
-      "city": "Baiersbronn",
+      "city": "Seebach",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "10:30 - 15:30 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "10:30",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 10:30 - 15:30 Uhr",
-      "teaser": "Führung und Exkursion",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/rangerfuhrung-zum-buhlbachsee/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 19,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 10:30 - 15:30 Uhr",
-        "text": "Rangerführung zum Buhlbachsee Feste | Baiersbronn 17.05.2026, 10:30 - 15:30 Uhr Führung und Exkursion Details 17 May Feste"
-      }
+      "time": "10:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/jugendvorspiel-der-nachwuchstalente-des-musikvereins-seebach/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
+      "page": 21
     },
     {
-      "title": "Sommerfest des Imkervereins Kirnbach",
+      "title": "Oldtimertreffen",
       "category": "feste",
-      "city": "Wolfach",
+      "city": "Meßkirch",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "10:30 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "10:30",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 10:30 Uhr",
-      "teaser": "Mit Gottesdienst und anschließend vielfältiger Bewirtung.",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommerfest-des-imkervereins-kirnbach/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 20,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 10:30 Uhr",
-        "text": "Sommerfest des Imkervereins Kirnbach Feste | Wolfach 17.05.2026, 10:30 Uhr Mit Gottesdienst und anschließend vielfältiger Bewirtung. Details 17 May Feste"
-      }
+      "time": "10:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oldtimertreffen-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/",
+      "page": 19
+    },
+    {
+      "title": "Summer Spirit - Geschichte in Bewegung",
+      "category": "feste",
+      "city": "Lindau",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "10:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/summer-spirit-geschichte-in-bewegung/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
+      "page": 20
+    },
+    {
+      "title": "Traktorenfest der Kolpingsfamilie Rotzingen",
+      "category": "feste",
+      "city": "Görwihl",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "10:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/traktorenfest-der-kolpingsfamilie-rotzingen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
+      "page": 22
     },
     {
       "title": "Translationsfest St. Genesius in Schienen",
@@ -1410,263 +632,43 @@
       "city": "Öhningen",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "10:30 - 12:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "10:30",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 10:30 - 12:00 Uhr",
-      "teaser": "17.05.2026 Translationsfest St. Genesius Schienen 10:30 Uhr Das Translationsfest, das an die Überführung der Genesius-Reliquie nach Schienen erinnert, wird am Sonntag nach Christi Himmelfahrt begangen....",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/translationsfest-st-genesius-in-schienen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 21,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 10:30 - 12:00 Uhr",
-        "text": "Translationsfest St. Genesius in Schienen Feste | Öhningen 17.05.2026, 10:30 - 12:00 Uhr 17.05.2026 Translationsfest St. Genesius Schienen 10:30 Uhr Das Translationsfest, das an die Überführung der Genesius-Reliquie nach Schienen erinnert, wird am Sonntag nach Christi Himmelfahrt begangen.... Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
+      "page": 22
     },
     {
-      "title": "Internationaler Museumstag - Freier Eintritt",
+      "title": "Rangerführung zum Buhlbachsee",
       "category": "feste",
-      "city": "Karlsruhe",
+      "city": "Baiersbronn",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "11:00 - 18:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "11:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 11:00 - 18:00 Uhr",
-      "teaser": "Heute am Internationalen Museumstag stehen euch die Türen des Kunstmuseum Karlsruhe offen – der Eintritt ist frei!",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-freier-eintritt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 22,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 11:00 - 18:00 Uhr",
-        "text": "Internationaler Museumstag - Freier Eintritt Feste | Karlsruhe 17.05.2026, 11:00 - 18:00 Uhr Heute am Internationalen Museumstag stehen euch die Türen des Kunstmuseum Karlsruhe offen – der Eintritt ist frei! Details 17 May Feste"
-      }
+      "time": "10:30 - 15:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/rangerfuhrung-zum-buhlbachsee/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
+      "page": 20
     },
     {
-      "title": "Internationaler Museumstag - Römerfest",
+      "title": "Sommerfest des Imkervereins Kirnbach",
       "category": "feste",
-      "city": "Öhringen",
+      "city": "Wolfach",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "11:00 - 16:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "11:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 11:00 - 16:00 Uhr",
-      "teaser": "Für alle Kinder, die den Alltag der Römer besser kennenlernen möchten.",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-romerfest/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 19,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 11:00 - 16:00 Uhr",
-        "text": "Internationaler Museumstag - Römerfest Feste | Öhringen 17.05.2026, 11:00 - 16:00 Uhr Für alle Kinder, die den Alltag der Römer besser kennenlernen möchten. Details 17 May Feste"
-      }
+      "time": "10:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommerfest-des-imkervereins-kirnbach/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
+      "page": 20
     },
     {
-      "title": "Internationaler Museumstag 2026",
+      "title": "Besuch bei der DS Hohentwiel und der MS Österreich",
       "category": "feste",
-      "city": "Calw",
+      "city": "Immenstaad",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "11:00 - 17:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "11:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 11:00 - 17:00 Uhr",
-      "teaser": "Unter dem Motto \"Calwer Museen mit Freude entdecken\" können die Besucherinnen und Besucher am Internationalen Museumstag die Calwer Museumslandschaft auf vielfältige Weise erleben.",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-2026/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 21,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 11:00 - 17:00 Uhr",
-        "text": "Internationaler Museumstag 2026 Feste | Calw 17.05.2026, 11:00 - 17:00 Uhr Unter dem Motto \"Calwer Museen mit Freude entdecken\" können die Besucherinnen und Besucher am Internationalen Museumstag die Calwer Museumslandschaft auf vielfältige Weise erleben. Details 17 May Feste"
-      }
-    },
-    {
-      "title": "Internationaler Museumstag im Elztalmuseum",
-      "category": "feste",
-      "city": "Waldkirch",
-      "startDate": "2026-05-17",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "11:00 - 17:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "11:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 11:00 - 17:00 Uhr",
-      "teaser": "Programm:12 Uhr: Konzert William Cuthbertson13.30 Uhr: Werkstattführung A. Schneider14.30 Uhr: Öffentliche Orgelführung15.00 Uhr: Film \"Heidi\" (in Kooperation mit dem kommunalen Kino \"Klappe 11\").",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-im-elztalmuseum/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 22,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 11:00 - 17:00 Uhr",
-        "text": "Internationaler Museumstag im Elztalmuseum Feste | Waldkirch 17.05.2026, 11:00 - 17:00 Uhr Programm:12 Uhr: Konzert William Cuthbertson13.30 Uhr: Werkstattführung A. Schneider14.30 Uhr: Öffentliche Orgelführung15.00 Uhr: Film \"Heidi\" (in Kooperation mit dem kommunalen Kino \"Klappe 11\"). Details 17 May Feste"
-      }
-    },
-    {
-      "title": "Internationaler Museumstag in Hüfingen",
-      "category": "feste",
-      "city": "Hüfingen",
-      "startDate": "2026-05-17",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "11:00 - 17:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "11:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 11:00 - 17:00 Uhr",
-      "teaser": "Am Internationalen Museumtag haben unsere Museen von geöffnet. Es werden zudem besondere Aktionen angeboten.",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-in-hufingen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 21,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 11:00 - 17:00 Uhr",
-        "text": "Internationaler Museumstag in Hüfingen Feste | Hüfingen 17.05.2026, 11:00 - 17:00 Uhr Am Internationalen Museumtag haben unsere Museen von 11:00 - 17:00 Uhr geöffnet. Es werden zudem besondere Aktionen angeboten. Details 17 May Feste"
-      }
-    },
-    {
-      "title": "Internationaler Museumstag und Tag der offenen Ateliers in Müllheim",
-      "category": "feste",
-      "city": "Müllheim",
-      "startDate": "2026-05-17",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "11:00 - 18:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "11:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 11:00 - 18:00 Uhr",
-      "teaser": "Der Internationale Museumstag 2026 ist eine wunderbare Gelegenheit, die vielfältigen Geschichten, die hinter den Objekten unserer Ausstellungen stecken, kennenzulernen – passend zum Motto dieses Tages:...",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-und-tag-der-offenen-ateliers-in-mullheim/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 18,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 11:00 - 18:00 Uhr",
-        "text": "Internationaler Museumstag und Tag der offenen Ateliers in Müllheim Feste | Müllheim 17.05.2026, 11:00 - 18:00 Uhr Der Internationale Museumstag 2026 ist eine wunderbare Gelegenheit, die vielfältigen Geschichten, die hinter den Objekten unserer Ausstellungen stecken, kennenzulernen – passend zum Motto dieses Tages:... Details"
-      }
-    },
-    {
-      "title": "Internationaler Museumstag, mit kleiner Bewirtung Heimatmuseum Brackenheim-Botenheim",
-      "category": "feste",
-      "city": "Brackenheim",
-      "startDate": "2026-05-17",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "11:00 - 17:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "11:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 11:00 - 17:00 Uhr",
-      "teaser": "",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-mit-kleiner-bewirtung-heimatmuseum-brackenheim-botenheim/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 21,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 11:00 - 17:00 Uhr",
-        "text": "Internationaler Museumstag, mit kleiner Bewirtung Heimatmuseum Brackenheim-Botenheim Feste | Brackenheim 17.05.2026, 11:00 - 17:00 Uhr Details 17 May Feste"
-      }
-    },
-    {
-      "title": "Internationaler Museumstag: Ganz die alte Schule!?",
-      "category": "feste",
-      "city": "Neuhausen ob Eck",
-      "startDate": "2026-05-17",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "11:00 - 17:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "11:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 11:00 - 17:00 Uhr",
-      "teaser": "Jeder kennt sie: die Schule! Einblicke in die Schule von heute und eine Zeitreise in die Vergangenheit: mit Sütterlin-Werkstatt, belebtem Dorf und Lausbuben-Olympiade.",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-ganz-die-alte-schule/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 19,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 11:00 - 17:00 Uhr",
-        "text": "Internationaler Museumstag: Ganz die alte Schule!? Feste | Neuhausen ob Eck 17.05.2026, 11:00 - 17:00 Uhr Jeder kennt sie: die Schule! Einblicke in die Schule von heute und eine Zeitreise in die Vergangenheit: mit Sütterlin-Werkstatt, belebtem Dorf und Lausbuben-Olympiade. Details 17 May Feste"
-      }
-    },
-    {
-      "title": "Naturpark-Markt Neckargemünd",
-      "category": "feste",
-      "city": "Naturpark Neckartal-Odenwald",
-      "startDate": "2026-05-17",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "11:00 - 18:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "11:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 11:00 - 18:00 Uhr",
-      "teaser": "Regional. Echt. Natürlich. Auf den Naturpark-Märkten entdecken Sie Köstlichkeiten und Handwerk direkt aus dem Naturpark Neckartal-Odenwald. Treffen Sie Erzeuger, genießen Sie Vielfalt – erleben Sie...",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturpark-markt-neckargemund/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 20,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 11:00 - 18:00 Uhr",
-        "text": "Naturpark-Markt Neckargemünd Feste | Naturpark Neckartal-Odenwald 17.05.2026, 11:00 - 18:00 Uhr Regional. Echt. Natürlich. Auf den Naturpark-Märkten entdecken Sie Köstlichkeiten und Handwerk direkt aus dem Naturpark Neckartal-Odenwald. Treffen Sie Erzeuger, genießen Sie Vielfalt – erleben Sie... Details 17 May Feste"
-      }
-    },
-    {
-      "title": "Offene Werkstatt für Familien: Lirum Larum Löffelstiel",
-      "category": "feste",
-      "city": "Vogtsbauernhof",
-      "startDate": "2026-05-17",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "11:00 - 16:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "11:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 11:00 - 16:00 Uhr",
-      "teaser": "Offene Werkstatt für Familien: Ihr dürft selbst tätig werden!",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/offene-werkstatt-fur-familien-lirum-larum-loffelstiel/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 19,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 11:00 - 16:00 Uhr",
-        "text": "Offene Werkstatt für Familien: Lirum Larum Löffelstiel Feste | Vogtsbauernhof 17.05.2026, 11:00 - 16:00 Uhr Offene Werkstatt für Familien: Ihr dürft selbst tätig werden! Details 17 May Feste"
-      }
+      "time": "10:40 - 18:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/feuerwerksfahrt-zum-seehasenfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/",
+      "page": 19
     },
     {
       "title": "Staatskapelle entspannt (Staatstheater entspannt)",
@@ -1674,23 +676,87 @@
       "city": "Karlsruhe",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "11:00 - 12:45 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "11:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 11:00 - 12:45 Uhr",
-      "teaser": "mit Werken von Felix Mendelssohn Bartholdy und Moritz Eggert",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/staatskapelle-entspannt-staatstheater-entspannt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 21,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 11:00 - 12:45 Uhr",
-        "text": "Staatskapelle entspannt (Staatstheater entspannt) Feste | Karlsruhe 17.05.2026, 11:00 - 12:45 Uhr mit Werken von Felix Mendelssohn Bartholdy und Moritz Eggert Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
+      "page": 22
+    },
+    {
+      "title": "Internationaler Museumstag - Römerfest",
+      "category": "feste",
+      "city": "Öhringen",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "11:00 - 16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-romerfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
+      "page": 20
+    },
+    {
+      "title": "Offene Werkstatt für Familien: Lirum Larum Löffelstiel",
+      "category": "feste",
+      "city": "Vogtsbauernhof",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "11:00 - 16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/offene-werkstatt-fur-familien-lirum-larum-loffelstiel/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
+      "page": 20
+    },
+    {
+      "title": "Internationaler Museumstag 2026",
+      "category": "feste",
+      "city": "Calw",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-2026/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
+      "page": 21
+    },
+    {
+      "title": "Internationaler Museumstag im Elztalmuseum",
+      "category": "feste",
+      "city": "Waldkirch",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-im-elztalmuseum/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
+      "page": 23
+    },
+    {
+      "title": "Internationaler Museumstag im Heimatmuseum",
+      "category": "feste",
+      "city": "Brackenheim",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-mit-kleiner-bewirtung-heimatmuseum-brackenheim-botenheim/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
+      "page": 22
+    },
+    {
+      "title": "Internationaler Museumstag in Hüfingen",
+      "category": "feste",
+      "city": "Hüfingen",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-in-hufingen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
+      "page": 21
+    },
+    {
+      "title": "Internationaler Museumstag: Ganz die alte Schule!?",
+      "category": "feste",
+      "city": "Neuhausen ob Eck",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-ganz-die-alte-schule/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/",
+      "page": 19
     },
     {
       "title": "Tag des offenen Gartens im Hofgut Cappel",
@@ -1698,23 +764,10 @@
       "city": "Öhringen-Cappel",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "11:00 - 17:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "11:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 11:00 - 17:00 Uhr",
-      "teaser": "10 Jahre Landesgartenschau – Rückkehr zum Hofgut!",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-des-offenen-gartens-im-hofgut-cappel/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 19,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 11:00 - 17:00 Uhr",
-        "text": "Tag des offenen Gartens im Hofgut Cappel Feste | Öhringen-Cappel 17.05.2026, 11:00 - 17:00 Uhr 10 Jahre Landesgartenschau – Rückkehr zum Hofgut! Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
+      "page": 20
     },
     {
       "title": "Wein & Wiese | WeinWanderEvent",
@@ -1722,23 +775,43 @@
       "city": "Flein",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "11:00 - 17:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "11:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 11:00 - 17:00 Uhr",
-      "teaser": "WeinWanderEvent für Groß und Klein in Flein: Zehn Genuss-Orte mit regionalen Weinen, vielfältigen Speisen sowie Programm für Kinder und Naturbegeisterte.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wein-wiese-weinwanderevent/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 21,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 11:00 - 17:00 Uhr",
-        "text": "Wein & Wiese | WeinWanderEvent Feste | Flein 17.05.2026, 11:00 - 17:00 Uhr WeinWanderEvent für Groß und Klein in Flein: Zehn Genuss-Orte mit regionalen Weinen, vielfältigen Speisen sowie Programm für Kinder und Naturbegeisterte. Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
+      "page": 22
+    },
+    {
+      "title": "Internationaler Museumstag - Freier Eintritt",
+      "category": "feste",
+      "city": "Karlsruhe",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "11:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-freier-eintritt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
+      "page": 23
+    },
+    {
+      "title": "Internationaler Museumstag und Tag der offenen Ateliers in Müllheim",
+      "category": "feste",
+      "city": "Müllheim",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "11:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-und-tag-der-offenen-ateliers-in-mullheim/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/",
+      "page": 19
+    },
+    {
+      "title": "Naturpark-Markt Neckargemünd",
+      "category": "feste",
+      "city": "Naturpark Neckartal-Odenwald",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "11:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturpark-markt-neckargemund/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
+      "page": 21
     },
     {
       "title": "Wein, Wandern & Genuss | WeinWanderEvent",
@@ -1746,23 +819,10 @@
       "city": "Beilstein",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "11:00 - 18:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "11:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 11:00 - 18:00 Uhr",
-      "teaser": "Entlang des \"WeinLeseWeges\" in der Weinleselandschaft Marbach-Bottwartal verwöhnen die Weingüter ihre Gäste mit Wein und kulinarischen Spezialitäten. Geschichten und Gedichte rund um den Rebensaft und das...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wein-wandern-genuss-weinwanderevent/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 20,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 11:00 - 18:00 Uhr",
-        "text": "Wein, Wandern & Genuss | WeinWanderEvent Feste | Beilstein 17.05.2026, 11:00 - 18:00 Uhr Entlang des \"WeinLeseWeges\" in der Weinleselandschaft Marbach-Bottwartal verwöhnen die Weingüter ihre Gäste mit Wein und kulinarischen Spezialitäten. Geschichten und Gedichte rund um den Rebensaft und das... Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
+      "page": 21
     },
     {
       "title": "Kaffee und Kuchen-Fahrt im Überlinger See",
@@ -1770,47 +830,10 @@
       "city": "Echt Bodensee",
       "startDate": "2026-05-17",
       "endDate": "2026-09-13",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "12:15 - 16:10 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "12:15",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-17 - 2026-09-13 | 12:15 - 16:10 Uhr",
-      "teaser": "Erleben Sie eine entspannte Rundtour, während Sie die Schönheit der Natur und die frische Seeluft genießen. An Bord erwartet Sie ein köstliches Kuchenbuffet mit saisonalen...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kaffee-und-kuchen-fahrt-im-uberlinger-see/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 19,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026 - 13.09.2026, 12:15 - 16:10 Uhr",
-        "text": "Kaffee und Kuchen-Fahrt im Überlinger See Feste | Echt Bodensee 17.05.2026 - 13.09.2026, 12:15 - 16:10 Uhr Erleben Sie eine entspannte Rundtour, während Sie die Schönheit der Natur und die frische Seeluft genießen. An Bord erwartet Sie ein köstliches Kuchenbuffet mit saisonalen... Details 17 May Feste"
-      }
-    },
-    {
-      "title": "Internationaler Museumstag im Murgtalmuseum Bermersbach",
-      "category": "feste",
-      "city": "Forbach",
-      "startDate": "2026-05-17",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "13:00 - 17:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "13:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 13:00 - 17:00 Uhr",
-      "teaser": "Unsere Gäste können auf über 800m² Ausstellungsfläche das Leben und Arbeiten im Murgtal zu früheren Zeiten erleben. Am Internationalen Museumstag öffnet der Heimatverein das Murgtal-Museum...",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-im-murgtalmuseum-bermersbach/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 22,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 13:00 - 17:00 Uhr",
-        "text": "Internationaler Museumstag im Murgtalmuseum Bermersbach Feste | Forbach 17.05.2026, 13:00 - 17:00 Uhr Unsere Gäste können auf über 800m² Ausstellungsfläche das Leben und Arbeiten im Murgtal zu früheren Zeiten erleben. Am Internationalen Museumstag öffnet der Heimatverein das Murgtal-Museum... Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
+      "page": 20
     },
     {
       "title": "Tag des Wanderns: Auf den Spuren der DonauWelle",
@@ -1818,23 +841,10 @@
       "city": "Donaubergland",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "13:00 - 16:30 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "13:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 13:00 - 16:30 Uhr",
-      "teaser": "Zum bundesweiten „Tag des Wanderns“ laden das Donaubergland und die Gemeinde Immendingen am Sonntag, 17. Mai um 13.00 Uhr zu einer geführten Wanderung \"auf den Spuren der DonauWelle\"...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-des-wanderns-auf-den-spuren-der-donauwelle/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 21,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 13:00 - 16:30 Uhr",
-        "text": "Tag des Wanderns: Auf den Spuren der DonauWelle Feste | Donaubergland 17.05.2026, 13:00 - 16:30 Uhr Zum bundesweiten „Tag des Wanderns“ laden das Donaubergland und die Gemeinde Immendingen am Sonntag, 17. Mai um 13.00 Uhr zu einer geführten Wanderung \"auf den Spuren der DonauWelle\"... Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
+      "page": 22
     },
     {
       "title": "Tüftler, Denker und Macher - 70 Jahre Elektronik in Tettnang",
@@ -1842,23 +852,21 @@
       "city": "Tettnang",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "13:00 - 16:30 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "13:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 13:00 - 16:30 Uhr",
-      "teaser": "Das Elektronikmuseum blickt am internationalen Museumstag weit in die Geschichte der Elektrotechnik am Wirtschaftsstandort Tettnang zurück. Mitmachaktionen für Groß und Klein eröffnen die Welt vor...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tuftler-denker-und-macher-70-jahre-elektronik-in-tettnang/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 19,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 13:00 - 16:30 Uhr",
-        "text": "Tüftler, Denker und Macher - 70 Jahre Elektronik in Tettnang Feste | Tettnang 17.05.2026, 13:00 - 16:30 Uhr Das Elektronikmuseum blickt am internationalen Museumstag weit in die Geschichte der Elektrotechnik am Wirtschaftsstandort Tettnang zurück. Mitmachaktionen für Groß und Klein eröffnen die Welt vor... Details"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
+      "page": 20
+    },
+    {
+      "title": "Internationaler Museumstag im Murgtalmuseum Bermersbach",
+      "category": "feste",
+      "city": "Forbach",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "13:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-im-murgtalmuseum-bermersbach/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
+      "page": 23
     },
     {
       "title": "WeinZeit im Dobel",
@@ -1866,23 +874,21 @@
       "city": "Sulzfeld",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "13:00 - 18:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "13:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 13:00 - 18:00 Uhr",
-      "teaser": "WeinZeit - Weinkult Weinausschank am Cuvée-Wagen",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinzeit-im-dobel/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 21,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 13:00 - 18:00 Uhr",
-        "text": "WeinZeit im Dobel Feste | Sulzfeld 17.05.2026, 13:00 - 18:00 Uhr WeinZeit - Weinkult Weinausschank am Cuvée-Wagen Details"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
+      "page": 22
+    },
+    {
+      "title": "WeinBar SteilLage vom Weingut Wissmann-Stilz",
+      "category": "feste",
+      "city": "Weinstadt",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "13:00 - 19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinbar-steillage-vom-weingut-wissmann-stilz/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
+      "page": 23
     },
     {
       "title": "Internationaler Museumstag",
@@ -1890,23 +896,10 @@
       "city": "",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "14:00 - 17:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "14:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 14:00 - 17:00 Uhr",
-      "teaser": "Internationaler Museumstag in den Albstädter Kulturmuseen.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-4/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 20,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 14:00 - 17:00 Uhr",
-        "text": "Internationaler Museumstag Feste 17.05.2026, 14:00 - 17:00 Uhr Internationaler Museumstag in den Albstädter Kulturmuseen. Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
+      "page": 21
     },
     {
       "title": "Tag der Museen",
@@ -1914,23 +907,10 @@
       "city": "Pfullendorf",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "14:00 - 17:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "14:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 14:00 - 17:00 Uhr",
-      "teaser": "Zum Tag der Museen öffnen beide Museen von ihre Türen.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-museen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 20,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 14:00 - 17:00 Uhr",
-        "text": "Tag der Museen Feste | Pfullendorf 17.05.2026, 14:00 - 17:00 Uhr Zum Tag der Museen öffnen beide Museen von 14:00 - 17:00 Uhr ihre Türen. Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
+      "page": 21
     },
     {
       "title": "Tag der Vereine",
@@ -1938,23 +918,10 @@
       "city": "Sigmaringen- Jungnau",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "14:00 - 17:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "14:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 14:00 - 17:00 Uhr",
-      "teaser": "Unter dem Motto \"Entdecken, Mitmachen, Dazugehören\", stellen sich die Jungauer Vereine vor.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-vereine/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 22,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 14:00 - 17:00 Uhr",
-        "text": "Tag der Vereine Feste | Sigmaringen- Jungnau 17.05.2026, 14:00 - 17:00 Uhr Unter dem Motto \"Entdecken, Mitmachen, Dazugehören\", stellen sich die Jungauer Vereine vor. Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
+      "page": 23
     },
     {
       "title": "Die Klosterbäckerin - Eine köstliche Kostümführung",
@@ -1962,23 +929,10 @@
       "city": "Weingarten",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "15:00 - 16:30 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "15:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 15:00 - 16:30 Uhr",
-      "teaser": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/die-klosterbackerin-eine-kostliche-kostumfuhrung/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 21,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 15:00 - 16:30 Uhr",
-        "text": "Die Klosterbäckerin - Eine köstliche Kostümführung Feste | Weingarten 17.05.2026, 15:00 - 16:30 Uhr Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
+      "page": 21
     },
     {
       "title": "Chorprojekt Klingende Kirche 2026",
@@ -1986,23 +940,10 @@
       "city": "Müllheim",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "15:30 - 19:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "15:30",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 15:30 - 19:00 Uhr",
-      "teaser": "Klingende Kirche Bezirkschorfest Breisgau-Hochschwarzwald – Mitsingen, Mitblasen, Mitfeiern – ein offener Musiktag für alle Generationen, der Gemeinschaft, Musik und Begegnung in einem lebendigen Kirchenklangraum vereint.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/chorprojekt-klingende-kirche-2026/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 22,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 15:30 - 19:00 Uhr",
-        "text": "Chorprojekt Klingende Kirche 2026 Feste | Müllheim 17.05.2026, 15:30 - 19:00 Uhr Klingende Kirche Bezirkschorfest Breisgau-Hochschwarzwald – Mitsingen, Mitblasen, Mitfeiern – ein offener Musiktag für alle Generationen, der Gemeinschaft, Musik und Begegnung in einem lebendigen Kirchenklangraum vereint. Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
+      "page": 23
     },
     {
       "title": "PFINGSTFESTSPIELE 2026",
@@ -2010,23 +951,10 @@
       "city": "",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "16:00 - 19:15 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "16:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 16:00 - 19:15 Uhr",
-      "teaser": "„Der Rosenkavalier“ ist eine Walzer-Oper!",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/pfingstfestspiele-2026/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 20,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 16:00 - 19:15 Uhr",
-        "text": "PFINGSTFESTSPIELE 2026 Feste 17.05.2026, 16:00 - 19:15 Uhr „Der Rosenkavalier“ ist eine Walzer-Oper! Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
+      "page": 21
     },
     {
       "title": "Richard Strauss: Der Rosenkavalier | Pfingstfestspiele",
@@ -2034,23 +962,10 @@
       "city": "",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "16:00 - 19:15 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "16:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 16:00 - 19:15 Uhr",
-      "teaser": "François-Xavier Roth",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/richard-strauss-der-rosenkavalier-pfingstfestspiele/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 20,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 16:00 - 19:15 Uhr",
-        "text": "Richard Strauss: Der Rosenkavalier | Pfingstfestspiele Feste 17.05.2026, 16:00 - 19:15 Uhr François-Xavier Roth Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
+      "page": 21
     },
     {
       "title": "Wie das Kuscheln erfunden wurde",
@@ -2058,23 +973,10 @@
       "city": "Karlsruhe",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "16:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "16:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 16:00 Uhr",
-      "teaser": "Laura Albrecht & Julia BulmerEin zauberhaftes Tanztheater für die Allerkleinsten!",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wie-das-kuscheln-erfunden-wurde/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 22,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 16:00 Uhr",
-        "text": "Wie das Kuscheln erfunden wurde Feste | Karlsruhe 17.05.2026, 16:00 Uhr Laura Albrecht & Julia BulmerEin zauberhaftes Tanztheater für die Allerkleinsten! Details 18 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
+      "page": 23
     },
     {
       "title": "Wassertreten für alle",
@@ -2082,23 +984,10 @@
       "city": "Überlingen am Bodensee",
       "startDate": "2026-05-17",
       "endDate": "2026-09-30",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "17:00 - 17:30 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "17:00",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-17 - 2026-09-30 | 17:00 - 17:30 Uhr",
-      "teaser": "Das kneipp'sche Element \"Wasser\" gesundheitsbewusst erleben.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wassertreten-fur-alle/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 19,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026 - 30.09.2026, 17:00 - 17:30 Uhr",
-        "text": "Wassertreten für alle Feste | Überlingen am Bodensee 17.05.2026 - 30.09.2026, 17:00 - 17:30 Uhr Das kneipp'sche Element \"Wasser\" gesundheitsbewusst erleben. Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/",
+      "page": 19
     },
     {
       "title": "dragfruit",
@@ -2106,47 +995,10 @@
       "city": "Karlsruhe",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "18:00 - 19:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "18:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 18:00 - 19:00 Uhr",
-      "teaser": "von Riccardo Pallotta, Sarah Elena Kratzl, Asena Yeşim Lappas",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/dragfruit-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 22,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 18:00 - 19:00 Uhr",
-        "text": "dragfruit Feste | Karlsruhe 17.05.2026, 18:00 - 19:00 Uhr von Riccardo Pallotta, Sarah Elena Kratzl, Asena Yeşim Lappas Details 17 May Feste"
-      }
-    },
-    {
-      "title": "Elton John Tribute Dinner Konzert - The Musical Sound of Elton John",
-      "category": "feste",
-      "city": "",
-      "startDate": "2026-05-17",
-      "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
-      "time": "18:00 - 20:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "18:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 18:00 - 20:00 Uhr",
-      "teaser": "The Musical Sound präsentiert: Ein Abend voller Welthits, Emotionen und musikalischer Brillanz – live und ganz nah.",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/elton-john-tribute-dinner-konzert-the-musical-sound-of-elton-john/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 20,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 18:00 - 20:00 Uhr",
-        "text": "Elton John Tribute Dinner Konzert - The Musical Sound of Elton John Feste 17.05.2026, 18:00 - 20:00 Uhr The Musical Sound präsentiert: Ein Abend voller Welthits, Emotionen und musikalischer Brillanz – live und ganz nah. Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
+      "page": 22
     },
     {
       "title": "Sigmaringer Rathausplatzkonzert",
@@ -2154,23 +1006,21 @@
       "city": "Sigmaringen",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "18:00 - 19:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "18:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 18:00 - 19:00 Uhr",
-      "teaser": "Die Rathausplatzkonzerte beleben in den Sommermonaten die Sigmaringer Innenstadt und garantieren Darbietungen von höchster Qualität.",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sigmaringer-rathausplatzkonzert-9/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 21,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 18:00 - 19:00 Uhr",
-        "text": "Sigmaringer Rathausplatzkonzert Feste | Sigmaringen 17.05.2026, 18:00 - 19:00 Uhr Die Rathausplatzkonzerte beleben in den Sommermonaten die Sigmaringer Innenstadt und garantieren Darbietungen von höchster Qualität. Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
+      "page": 22
+    },
+    {
+      "title": "Elton John Tribute Dinner Konzert - The Musical Sound of Elton John",
+      "category": "feste",
+      "city": "",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "18:00 - 20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/elton-john-tribute-dinner-konzert-the-musical-sound-of-elton-john/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
+      "page": 21
     },
     {
       "title": "SINFONIE IM INNENHOF - Kammerphilharmonie Bodensee-Oberschwaben",
@@ -2178,23 +1028,21 @@
       "city": "Tettnang",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "18:30 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "18:30",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 18:30 Uhr",
-      "teaser": "17:30 Uhr Einführung zum KonzertBei unbeständigem Wetter muss die Veranstaltung in die Halle Obereisenbach verlegt werden. Bitte informieren Sie sich übers Internet www.spectrum-kultur-in-tettnang.de oder www.lebendiges-barockschloss.de",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sinfonie-im-innenhof-kammerphilharmonie-bodensee-oberschwaben/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 19,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 18:30 Uhr",
-        "text": "SINFONIE IM INNENHOF - Kammerphilharmonie Bodensee-Oberschwaben Feste | Tettnang 17.05.2026, 18:30 Uhr 17:30 Uhr Einführung zum KonzertBei unbeständigem Wetter muss die Veranstaltung in die Halle Obereisenbach verlegt werden. Bitte informieren Sie sich übers Internet www.spectrum-kultur-in-tettnang.de oder www.lebendiges-barockschloss.de Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
+      "page": 20
+    },
+    {
+      "title": "A Midsummer Night’s Dream (Premiere)",
+      "category": "feste",
+      "city": "Karlsruhe",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "time": "19:00 - 21:45 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/a-midsummer-nights-dream-vor-der-premiere/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
+      "page": 22
     },
     {
       "title": "Philosophie und Musik",
@@ -2202,23 +1050,10 @@
       "city": "",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "19:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "19:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 19:00 Uhr",
-      "teaser": "Vortragsreihe mit Philosoph Dr. Jürgen Lambrecht & musikalischen Gästen",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/philosophie-und-musik/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 22,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 19:00 Uhr",
-        "text": "Philosophie und Musik Feste 17.05.2026, 19:00 Uhr Vortragsreihe mit Philosoph Dr. Jürgen Lambrecht & musikalischen Gästen Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
+      "page": 22
     },
     {
       "title": "Mir sollten sämtliche Wunder begegnen",
@@ -2226,23 +1061,10 @@
       "city": "",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "20:00 - 21:00 Uhr",
-      "sortDate": "2026-05-17",
-      "sortTime": "20:00",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17 | 20:00 - 21:00 Uhr",
-      "teaser": "Ein Abend mit Rosalinde Renn Rosalinde Renn gibt gemeinsam mit ihren Kollegen Mattes Herre und Hans-Georg Wilhelm (Klavierbegleitung) Einblicke in die „Theaterwunder“, die ihr in...",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mir-sollten-samtliche-wunder-begegnen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 21,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Feste",
-        "dateRaw": "17.05.2026, 20:00 - 21:00 Uhr",
-        "text": "Mir sollten sämtliche Wunder begegnen Feste 17.05.2026, 20:00 - 21:00 Uhr Ein Abend mit Rosalinde Renn Rosalinde Renn gibt gemeinsam mit ihren Kollegen Mattes Herre und Hans-Georg Wilhelm (Klavierbegleitung) Einblicke in die „Theaterwunder“, die ihr in... Details 17 May Feste"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
+      "page": 22
     },
     {
       "title": "GardenLife",
@@ -2250,23 +1072,10 @@
       "city": "Reutlingen",
       "startDate": "2026-05-14",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-14",
-      "sortTime": "",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-14 - 2026-05-17",
-      "teaser": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gardenlife/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 1,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Märkte",
-        "dateRaw": "14.05.2026 - 17.05.2026",
-        "text": "GardenLife Märkte | Reutlingen 14.05.2026 - 17.05.2026 Details 14 May Märkte"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
+      "page": 1
     },
     {
       "title": "Sinsheimer Fohlenmarkt",
@@ -2274,23 +1083,10 @@
       "city": "Sinsheim",
       "startDate": "2026-05-14",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-14",
-      "sortTime": "",
-      "isMultiDay": true,
-      "dateLabel": "2026-05-14 - 2026-05-17",
-      "teaser": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sinsheimer-fohlenmarkt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 1,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Märkte",
-        "dateRaw": "14.05.2026 - 17.05.2026",
-        "text": "Sinsheimer Fohlenmarkt Märkte | Sinsheim 14.05.2026 - 17.05.2026 Details 15 May Märkte"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
+      "page": 1
     },
     {
       "title": "Muttertagsmarkt",
@@ -2298,23 +1094,10 @@
       "city": "Hausach",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "targetDate": "2026-05-17",
-      "touchesTargetDate": true,
       "time": "",
-      "sortDate": "2026-05-17",
-      "sortTime": "",
-      "isMultiDay": false,
-      "dateLabel": "2026-05-17",
-      "teaser": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/muttertagsmarkt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/?post_type=event&ort=Dettingen+Teck&region=&von=2026-05-17&bis=2026-05-17",
-      "page": 1,
-      "searchPlace": "Dettingen Teck",
-      "raw": {
-        "categoryLabel": "Märkte",
-        "dateRaw": "17.05.2026",
-        "text": "Muttertagsmarkt Märkte | Hausach 17.05.2026 Details 20 May Märkte"
-      }
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
+      "page": 1
     }
   ]
 }
