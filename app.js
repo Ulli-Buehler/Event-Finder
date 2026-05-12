@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v12-red-active-marker");
+console.log("APP VERSION: eventbw-json-v13-drag-sheet");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -9,6 +9,9 @@ let appEvents = [];
 let importMeta = null;
 let filtersOpen = false;
 let activeMarker = null;
+let sheetDragStartY = 0;
+let sheetDragCurrentY = 0;
+let sheetDragging = false;
 
 const map = L.map("map").setView(userPos, 9);
 
@@ -294,15 +297,87 @@ function openSheet(event) {
     link.style.display = "none";
   }
 
+  resetSheetPosition();
   sheet.classList.add("open");
 }
 
 function closeSheet() {
   sheet.classList.remove("open");
+  sheet.classList.remove("dragging");
+  sheet.style.transform = "";
+  sheet.style.transition = "";
 }
 
+function resetSheetPosition() {
+  sheet.classList.remove("dragging");
+  sheet.style.transform = "";
+  sheet.style.transition = "";
+}
+
+function getPointerY(event) {
+  if (event.touches && event.touches.length) {
+    return event.touches[0].clientY;
+  }
+
+  if (event.changedTouches && event.changedTouches.length) {
+    return event.changedTouches[0].clientY;
+  }
+
+  return event.clientY;
+}
+
+function startSheetDrag(event) {
+  sheetDragging = true;
+  sheetDragStartY = getPointerY(event);
+  sheetDragCurrentY = 0;
+
+  sheet.classList.add("dragging");
+
+  if (event.pointerId !== undefined && sheet.setPointerCapture) {
+    sheet.setPointerCapture(event.pointerId);
+  }
+}
+
+function moveSheetDrag(event) {
+  if (!sheetDragging) return;
+
+  const currentY = getPointerY(event);
+  sheetDragCurrentY = Math.max(0, currentY - sheetDragStartY);
+
+  sheet.style.transform =
+    "translateY(" + sheetDragCurrentY + "px)";
+
+  if (event.cancelable) {
+    event.preventDefault();
+  }
+}
+
+function endSheetDrag() {
+  if (!sheetDragging) return;
+
+  sheetDragging = false;
+
+  if (sheetDragCurrentY > 90) {
+    closeSheet();
+    return;
+  }
+
+  resetSheetPosition();
+}
+
+const sheetHandle = sheet.querySelector(".sheet-handle");
+
 sheet.querySelector(".sheet-close").onclick = closeSheet;
-sheet.querySelector(".sheet-handle").onclick = closeSheet;
+
+sheetHandle.addEventListener("pointerdown", startSheetDrag);
+sheet.addEventListener("pointermove", moveSheetDrag);
+sheet.addEventListener("pointerup", endSheetDrag);
+sheet.addEventListener("pointercancel", endSheetDrag);
+
+sheetHandle.addEventListener("touchstart", startSheetDrag, { passive: false });
+sheet.addEventListener("touchmove", moveSheetDrag, { passive: false });
+sheet.addEventListener("touchend", endSheetDrag);
+sheet.addEventListener("touchcancel", endSheetDrag);
 
 function setFiltersOpen(open) {
   filtersOpen = open;
@@ -431,6 +506,7 @@ function render() {
     ])
       .addTo(map)
       .on("click", () => {
+        setActiveMarker(marker);
         openSheet(event);
       });
 
