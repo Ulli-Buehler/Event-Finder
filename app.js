@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v3-compact-cards");
+console.log("APP VERSION: eventbw-json-v4-filter-icon-distance-sort");
 
 const EVENTBW_JSON_URL = "eventbw/feste-maerkte.json?v=" + Date.now();
 
@@ -21,7 +21,8 @@ let radiusCircle = L.circle(userPos, {
   radius: radiusKm * 1000,
   color: "#007aff",
   fillColor: "#007aff",
-  fillOpacity: 0.1
+  fillOpacity: 0.08,
+  weight: 3
 }).addTo(map);
 
 let userMarker = L.circleMarker(userPos, {
@@ -87,7 +88,9 @@ document.body.appendChild(sheet);
 function hasCoords(event) {
   return (
     typeof event.lat === "number" &&
-    typeof event.lng === "number"
+    typeof event.lng === "number" &&
+    Number.isFinite(event.lat) &&
+    Number.isFinite(event.lng)
   );
 }
 
@@ -177,7 +180,7 @@ function formatEventDate(event) {
 }
 
 function normalizeEvent(raw, index) {
-  return {
+  const event = {
     id: "eventbw-" + (index + 1),
     title: raw.title || "Event",
     category: raw.category || "",
@@ -191,10 +194,13 @@ function normalizeEvent(raw, index) {
     venue: raw.city || "",
     address: raw.city || "",
     description: "",
-    date: formatEventDate(raw),
-    lat: raw.lat,
-    lng: raw.lng
+    lat: typeof raw.lat === "number" ? raw.lat : Number(raw.lat),
+    lng: typeof raw.lng === "number" ? raw.lng : Number(raw.lng)
   };
+
+  event.date = formatEventDate(event);
+
+  return event;
 }
 
 async function loadEventBwEvents() {
@@ -263,16 +269,15 @@ function setFiltersOpen(open) {
   filtersOpen = open;
 
   filterPanel.classList.toggle("open", filtersOpen);
+  topPanel.classList.toggle("compact", !filtersOpen);
 
-  topPanel.classList.toggle(
-    "compact",
-    !filtersOpen
+  filterToggle.setAttribute(
+    "aria-label",
+    filtersOpen ? "Filter ausblenden" : "Filter anzeigen"
   );
 
   filterToggle.innerText =
-    filtersOpen
-      ? "Filter ausblenden"
-      : "Filter anzeigen";
+    filtersOpen ? "Filter ausblenden" : "☰";
 }
 
 filterToggle.onclick = () => {
@@ -343,6 +348,31 @@ function filterByDateMode(event) {
   return true;
 }
 
+function enrichVisibleEvent(event) {
+  if (!hasCoords(event)) {
+    return {
+      ...event,
+      hasLocation: false,
+      realDistance: Number.POSITIVE_INFINITY,
+      realDistanceText: "ohne km"
+    };
+  }
+
+  const dist = distanceKm(
+    userPos[0],
+    userPos[1],
+    event.lat,
+    event.lng
+  );
+
+  return {
+    ...event,
+    hasLocation: true,
+    realDistance: dist,
+    realDistanceText: dist + " km"
+  };
+}
+
 function render() {
   closeSheet();
 
@@ -370,42 +400,17 @@ function render() {
       return ACTIVE_CATEGORIES.has(event.category);
     })
     .filter(filterByDateMode)
-    .map(event => {
-      if (!hasCoords(event)) {
-        return {
-          ...event,
-          hasLocation: false,
-          realDistanceText: "ohne km"
-        };
-      }
-
-      const dist = distanceKm(
-        userPos[0],
-        userPos[1],
-        event.lat,
-        event.lng
-      );
-
-      return {
-        ...event,
-        hasLocation: true,
-        realDistance: dist,
-        realDistanceText: dist + " km"
-      };
-    })
+    .map(enrichVisibleEvent)
     .filter(event => {
       if (!event.hasLocation) return true;
       return event.realDistance <= radiusKm;
     })
     .sort((a, b) => {
-      const byDate = String(a.startDate || "").localeCompare(String(b.startDate || ""));
-      if (byDate !== 0) return byDate;
-
-      const byDistance = (a.realDistance || 9999) - (b.realDistance || 9999);
+      const byDistance = a.realDistance - b.realDistance;
       if (byDistance !== 0) return byDistance;
 
-      const byCity = String(a.city || "").localeCompare(String(b.city || ""), "de");
-      if (byCity !== 0) return byCity;
+      const byDate = String(a.startDate || "").localeCompare(String(b.startDate || ""));
+      if (byDate !== 0) return byDate;
 
       return String(a.title || "").localeCompare(String(b.title || ""), "de");
     });
@@ -457,6 +462,7 @@ function render() {
         <p class="card-date">
           ${formatEventDate(event)}
         </p>
+
       </div>
     `;
 
