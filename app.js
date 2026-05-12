@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v2-filter-toggle");
+console.log("APP VERSION: eventbw-json-v3-compact-cards");
 
 const EVENTBW_JSON_URL = "eventbw/feste-maerkte.json?v=" + Date.now();
 
@@ -24,9 +24,15 @@ let radiusCircle = L.circle(userPos, {
   fillOpacity: 0.1
 }).addTo(map);
 
-let userMarker = L.marker(userPos)
-  .addTo(map)
-  .bindPopup("Dettingen unter Teck");
+let userMarker = L.circleMarker(userPos, {
+  radius: 6,
+  color: "#007aff",
+  fillColor: "#007aff",
+  fillOpacity: 1,
+  weight: 2
+})
+.addTo(map)
+.bindPopup("Dettingen unter Teck");
 
 const cards = document.getElementById("cards");
 const statusText = document.getElementById("status");
@@ -37,6 +43,7 @@ const refreshBtn = document.getElementById("refreshBtn");
 const importStatus = document.getElementById("importStatus");
 const filterToggle = document.getElementById("filterToggle");
 const filterPanel = document.getElementById("filterPanel");
+const topPanel = document.querySelector(".top");
 
 radiusSlider.min = 5;
 radiusSlider.max = 120;
@@ -257,8 +264,15 @@ function setFiltersOpen(open) {
 
   filterPanel.classList.toggle("open", filtersOpen);
 
+  topPanel.classList.toggle(
+    "compact",
+    !filtersOpen
+  );
+
   filterToggle.innerText =
-    filtersOpen ? "Filter ausblenden" : "Filter anzeigen";
+    filtersOpen
+      ? "Filter ausblenden"
+      : "Filter anzeigen";
 }
 
 filterToggle.onclick = () => {
@@ -443,11 +457,6 @@ function render() {
         <p class="card-date">
           ${formatEventDate(event)}
         </p>
-
-        <p class="card-date">
-          ${categoryLabel(event.category)}
-        </p>
-
       </div>
     `;
 
@@ -522,4 +531,3 @@ async function init() {
 }
 
 init();
-
