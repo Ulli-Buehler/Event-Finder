@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-12T07:40:56.951Z",
-    "finishedAt": "2026-05-12T07:42:58.294Z",
+    "startedAt": "2026-05-12T11:03:15.794Z",
+    "finishedAt": "2026-05-12T11:05:57.663Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -48,34 +48,6 @@
       "Weinstadt",
       "Remshalden",
       "Schorndorf",
-      "Schwäbisch Gmünd",
-      "Lorch",
-      "Welzheim",
-      "Adelberg",
-      "Plüderhausen",
-      "Urbach",
-      "Winterbach",
-      "Rudersberg",
-      "Stuttgart",
-      "Sindelfingen",
-      "Böblingen",
-      "Leonberg",
-      "Gerlingen",
-      "Ditzingen",
-      "Korntal-Münchingen",
-      "Ludwigsburg",
-      "Kornwestheim",
-      "Vaihingen an der Enz",
-      "Waldenbuch",
-      "Steinenbronn",
-      "Leinfelden",
-      "Echterdingen",
-      "Holzgerlingen",
-      "Herrenberg",
-      "Weil der Stadt",
-      "Magstadt",
-      "Renningen",
-      "Weil im Schönbuch",
       "Metzingen",
       "Bad Urach",
       "Römerstein",
@@ -118,23 +90,21 @@
       "Laichingen",
       "Merklingen",
       "Westerheim",
-      "Heroldstatt",
-      "Calw",
-      "Bad Liebenzell"
+      "Heroldstatt"
     ],
     "counts": {
       "pages": 244,
       "rawCollectedIncludingDuplicates": 3375,
       "rawUnique": 3375,
       "targetDateMatches": 98,
-      "regionalMatches": 8,
-      "nonRegionalTargetDateMatches": 90,
+      "regionalMatches": 7,
+      "nonRegionalTargetDateMatches": 91,
       "rawMaerkte": 141,
       "rawFeste": 3234,
       "targetDateMaerkte": 3,
       "targetDateFeste": 95,
       "regionalMaerkte": 1,
-      "regionalFeste": 7
+      "regionalFeste": 6
     }
   },
   "events": [
@@ -367,7 +337,9 @@
       "time": "00:00 - 00:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationale-marbacher-vielseitigkeit-nationenpreis/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
-      "page": 8
+      "page": 8,
+      "lat": 48.4128592,
+      "lng": 9.4947894
     },
     {
       "title": "Blumen- und Lichterfest",
@@ -488,7 +460,9 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schafertage-mit-schafermarkt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
-      "page": 16
+      "page": 16,
+      "lat": 48.5695917,
+      "lng": 9.4005013
     },
     {
       "title": "\"Tolle Wolle\" auf Campus Galli",
@@ -708,7 +682,9 @@
       "time": "10:00 - 13:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gutenbergs-geopoints/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
-      "page": 20
+      "page": 20,
+      "lat": 48.4193304,
+      "lng": 9.4942411
     },
     {
       "title": "Schwarzwaldhof-Ingenieurfahrt",
@@ -950,7 +926,9 @@
       "time": "00:00 - 00:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/reitwochen-fur-erwachsene/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
-      "page": 20
+      "page": 20,
+      "lat": 48.4128592,
+      "lng": 9.4947894
     },
     {
       "title": "Naturpark-Markt Neckargemünd",
@@ -1115,7 +1093,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-3/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/",
-      "page": 19
+      "page": 19,
+      "lat": 48.5203263,
+      "lng": 9.053596
     },
     {
       "title": "Wassertreten für alle",
@@ -1170,7 +1150,9 @@
       "time": "13:00 - 19:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinbar-steillage-vom-weingut-wissmann-stilz/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
-      "page": 23
+      "page": 23,
+      "lat": 48.8085568,
+      "lng": 9.3774813
     },
     {
       "title": "Sommerfest des Imkervereins Kirnbach",
@@ -1192,7 +1174,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gardenlife/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
-      "page": 1
+      "page": 1,
+      "lat": 48.4919508,
+      "lng": 9.2114144
     },
     {
       "title": "Sinsheimer Fohlenmarkt",
