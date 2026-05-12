@@ -265,12 +265,26 @@ input[type="range"]{
 }
 
 .card-place{
+  display:flex;
+  align-items:center;
+  gap:6px;
   font-weight:800;
   color:#333;
   margin-bottom:3px !important;
-  white-space:nowrap;
+  min-width:0;
+}
+
+.card-city{
+  min-width:0;
   overflow:hidden;
   text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.card-distance{
+  flex-shrink:0;
+  white-space:nowrap;
+  color:#333;
 }
 
 .card-date{
