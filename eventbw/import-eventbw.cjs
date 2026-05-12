@@ -35,10 +35,12 @@ const CATEGORIES = [
 
 /**
  * Grober regionaler Ortsfilter rund um Dettingen unter Teck.
- * Noch KEIN harter Radiusfilter.
+ * Noch KEIN harter 30-km-Radiusfilter.
  * Ziel: offensichtliche Fern-Treffer entfernen, aber lieber etwas zu viel behalten.
+ * Der exakte Radius kommt später über Geo + distanceKm.
  */
 const REGIONAL_CITIES = [
+  // Zentrum / Teck
   'Dettingen unter Teck',
   'Kirchheim unter Teck',
   'Owen',
@@ -51,21 +53,13 @@ const REGIONAL_CITIES = [
   'Beuren',
   'Neuffen',
   'Frickenhausen',
+
+  // Nürtingen / Neckar / Filder
   'Nürtingen',
   'Wendlingen am Neckar',
   'Wernau',
   'Plochingen',
   'Reichenbach an der Fils',
-  'Ebersbach an der Fils',
-  'Uhingen',
-  'Göppingen',
-  'Eislingen/Fils',
-  'Esslingen am Neckar',
-  'Filderstadt',
-  'Leinfelden-Echterdingen',
-  'Ostfildern',
-  'Neuhausen auf den Fildern',
-  'Denkendorf',
   'Köngen',
   'Unterensingen',
   'Oberboihingen',
@@ -75,6 +69,58 @@ const REGIONAL_CITIES = [
   'Bempflingen',
   'Grafenberg',
   'Riederich',
+
+  // Esslingen / Stuttgart / Remstal
+  'Esslingen am Neckar',
+  'Filderstadt',
+  'Leinfelden-Echterdingen',
+  'Ostfildern',
+  'Neuhausen auf den Fildern',
+  'Denkendorf',
+  'Deizisau',
+  'Altbach',
+  'Baltmannsweiler',
+  'Aichwald',
+  'Kernen im Remstal',
+  'Fellbach',
+  'Waiblingen',
+  'Weinstadt',
+  'Remshalden',
+  'Schorndorf',
+  'Schwäbisch Gmünd',
+  'Lorch',
+  'Welzheim',
+  'Adelberg',
+  'Plüderhausen',
+  'Urbach',
+  'Winterbach',
+  'Rudersberg',
+
+  // Stuttgart / Böblingen / Leonberg
+  'Stuttgart',
+  'Sindelfingen',
+  'Böblingen',
+  'Leonberg',
+  'Gerlingen',
+  'Ditzingen',
+  'Korntal-Münchingen',
+  'Ludwigsburg',
+  'Kornwestheim',
+  'Vaihingen an der Enz',
+
+  // Schönbuch / südwestlich
+  'Waldenbuch',
+  'Steinenbronn',
+  'Leinfelden',
+  'Echterdingen',
+  'Holzgerlingen',
+  'Herrenberg',
+  'Weil der Stadt',
+  'Magstadt',
+  'Renningen',
+  'Weil im Schönbuch',
+
+  // Reutlingen / Ermstal / Alb
   'Metzingen',
   'Bad Urach',
   'Römerstein',
@@ -82,21 +128,50 @@ const REGIONAL_CITIES = [
   'Hülben',
   'Reutlingen',
   'Pfullingen',
+  'Eningen unter Achalm',
   'Lichtenstein',
-  'Wiesensteig',
-  'Mühlhausen im Täle',
-  'Bad Ditzenbach',
-  'Deggingen',
-  'Laichingen',
-  'Merklingen',
-  'Gruibingen',
-  'Gammelshausen',
+  'Tübingen',
+  'Pliezhausen',
+  'Walddorfhäslach',
+  'Gomaringen',
+  'Mössingen',
+  'Münsingen',
+  'Biosphärengebiet Schwäbische Alb',
+
+  // Göppingen / Filstal
+  'Ebersbach an der Fils',
+  'Uhingen',
+  'Göppingen',
+  'Eislingen/Fils',
+  'Süßen',
+  'Donzdorf',
+  'Salach',
+  'Wangen',
+  'Rechberghausen',
   'Heiningen',
   'Boll',
+  'Bad Boll',
+  'Dürnau',
+  'Gammelshausen',
   'Aichelberg',
   'Hattenhofen',
   'Schlierbach',
   'Albershausen',
+  'Gruibingen',
+  'Mühlhausen im Täle',
+  'Wiesensteig',
+  'Bad Ditzenbach',
+  'Deggingen',
+
+  // Alb / Laichingen
+  'Laichingen',
+  'Merklingen',
+  'Westerheim',
+  'Heroldstatt',
+
+  // Nordschwarzwald-Rand
+  'Calw',
+  'Bad Liebenzell',
 ];
 
 function decodeHtml(value) {
