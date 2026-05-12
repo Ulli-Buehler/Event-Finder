@@ -24,7 +24,7 @@ permissions:
 jobs:
   eventbw-import:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 10
 
     steps:
       - name: Checkout
@@ -40,7 +40,8 @@ jobs:
           EVENTBW_TARGET_DATE: ${{ inputs.target_date }}
           EVENTBW_RADIUS_KM: ${{ inputs.radius_km || '40' }}
           EVENTBW_SEARCH_PLACE: 'Dettingen Teck'
-          EVENTBW_MAX_PAGES_PER_CATEGORY: '30'
+          EVENTBW_MAX_PAGES_PER_CATEGORY: '300'
+          EVENTBW_FETCH_TIMEOUT_MS: '15000'
         run: |
           node eventbw/import-eventbw.cjs
 
@@ -52,6 +53,8 @@ jobs:
           path: |
             eventbw/01-raw-import.json
             eventbw/01-raw-import.txt
+            eventbw/02-zieldatum.json
+            eventbw/02-zieldatum.txt
             eventbw/02-sonntag.json
             eventbw/02-sonntag.txt
             eventbw/debug-output.json
@@ -69,6 +72,8 @@ jobs:
           for file in \
             eventbw/01-raw-import.json \
             eventbw/01-raw-import.txt \
+            eventbw/02-zieldatum.json \
+            eventbw/02-zieldatum.txt \
             eventbw/02-sonntag.json \
             eventbw/02-sonntag.txt \
             eventbw/debug-output.json \
