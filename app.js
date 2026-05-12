@@ -1,12 +1,13 @@
-console.log("APP VERSION: eventbw-json-v1");
+console.log("APP VERSION: eventbw-json-v2-filter-toggle");
 
 const EVENTBW_JSON_URL = "eventbw/feste-maerkte.json?v=" + Date.now();
 
 let userPos = [48.6167, 9.45];
 let radiusKm = 40;
-let dateMode = "all";
+let dateMode = "sunday";
 let appEvents = [];
 let importMeta = null;
+let filtersOpen = false;
 
 const ACTIVE_CATEGORIES = new Set();
 
@@ -34,6 +35,8 @@ const radiusLabel = document.getElementById("radiusLabel");
 const dateSelect = document.getElementById("dateSelect");
 const refreshBtn = document.getElementById("refreshBtn");
 const importStatus = document.getElementById("importStatus");
+const filterToggle = document.getElementById("filterToggle");
+const filterPanel = document.getElementById("filterPanel");
 
 radiusSlider.min = 5;
 radiusSlider.max = 120;
@@ -45,7 +48,7 @@ importStatus.insertAdjacentElement("afterend", eventMeta);
 
 const categoryBar = document.createElement("div");
 categoryBar.className = "category-bar";
-eventMeta.insertAdjacentElement("afterend", categoryBar);
+filterPanel.appendChild(categoryBar);
 
 const markers = [];
 
@@ -132,10 +135,26 @@ function clearMarkers() {
   markers.length = 0;
 }
 
+function cleanTime(time) {
+  if (!time) return "";
+
+  const normalized = String(time).trim();
+
+  if (
+    normalized === "00:00 - 00:00 Uhr" ||
+    normalized === "0:00 - 0:00 Uhr" ||
+    normalized === "00:00 Uhr"
+  ) {
+    return "";
+  }
+
+  return normalized;
+}
+
 function formatEventDate(event) {
   const start = event.startDate || "";
   const end = event.endDate || "";
-  const time = event.time || "";
+  const time = cleanTime(event.time);
 
   let date = start;
 
@@ -158,7 +177,7 @@ function normalizeEvent(raw, index) {
     city: raw.city || "",
     startDate: raw.startDate || "",
     endDate: raw.endDate || raw.startDate || "",
-    time: raw.time || "",
+    time: cleanTime(raw.time || ""),
     detailUrl: raw.detailUrl || "",
     sourceUrl: raw.sourceUrl || "",
     page: raw.page || "",
@@ -232,6 +251,19 @@ function closeSheet() {
 
 sheet.querySelector(".sheet-close").onclick = closeSheet;
 sheet.querySelector(".sheet-handle").onclick = closeSheet;
+
+function setFiltersOpen(open) {
+  filtersOpen = open;
+
+  filterPanel.classList.toggle("open", filtersOpen);
+
+  filterToggle.innerText =
+    filtersOpen ? "Filter ausblenden" : "Filter anzeigen";
+}
+
+filterToggle.onclick = () => {
+  setFiltersOpen(!filtersOpen);
+};
 
 function renderCategoryButtons() {
   categoryBar.innerHTML = "";
@@ -308,7 +340,7 @@ function render() {
   radiusLabel.innerText = radiusKm + " km";
 
   const targetDateText = importMeta && importMeta.targetDate
-    ? " • Zieldatum " + importMeta.targetDate
+    ? " • " + importMeta.targetDate
     : "";
 
   statusText.innerText =
@@ -329,7 +361,7 @@ function render() {
         return {
           ...event,
           hasLocation: false,
-          realDistanceText: "Entfernung noch nicht berechnet"
+          realDistanceText: "ohne km"
         };
       }
 
@@ -354,6 +386,9 @@ function render() {
     .sort((a, b) => {
       const byDate = String(a.startDate || "").localeCompare(String(b.startDate || ""));
       if (byDate !== 0) return byDate;
+
+      const byDistance = (a.realDistance || 9999) - (b.realDistance || 9999);
+      if (byDistance !== 0) return byDistance;
 
       const byCity = String(a.city || "").localeCompare(String(b.city || ""), "de");
       if (byCity !== 0) return byCity;
@@ -461,6 +496,7 @@ dateSelect.onchange = () => {
 
 async function init() {
   try {
+    setFiltersOpen(false);
     await loadEventBwEvents();
     renderCategoryButtons();
     render();
