@@ -54,6 +54,8 @@ jobs:
             eventbw/01-raw-import.txt
             eventbw/02-zieldatum.json
             eventbw/02-zieldatum.txt
+            eventbw/03-ortsfilter.json
+            eventbw/03-ortsfilter.txt
             eventbw/debug-output.json
             eventbw/debug-output.txt
             eventbw/feste-maerkte.json
@@ -69,6 +71,8 @@ jobs:
             eventbw/01-raw-import.txt \
             eventbw/02-zieldatum.json \
             eventbw/02-zieldatum.txt \
+            eventbw/03-ortsfilter.json \
+            eventbw/03-ortsfilter.txt \
             eventbw/debug-output.json \
             eventbw/debug-output.txt \
             eventbw/feste-maerkte.json \
