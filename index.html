@@ -5,7 +5,7 @@
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
   />
 
   <title>Lokalevents</title>
@@ -17,7 +17,7 @@
 
   <link
     rel="stylesheet"
-    href="style.css?v=8001"
+    href="style.css?v=8002"
   />
 </head>
 
@@ -27,55 +27,67 @@
 
   <div class="top">
 
-    <h1>Lokalevents</h1>
+    <div class="top-header">
+      <div>
+        <h1>Lokalevents</h1>
 
-    <p id="status">
-      EventBW Märkte/Feste
-    </p>
+        <p id="status">
+          EventBW Märkte/Feste
+        </p>
+      </div>
 
-    <div class="controls">
+      <button id="filterToggle" class="filter-toggle">
+        Filter anzeigen
+      </button>
+    </div>
 
-      <select id="dateSelect">
+    <div id="filterPanel" class="filter-panel">
 
-        <option value="all">
-          Alle geladenen Events
-        </option>
+      <div class="controls">
 
-        <option value="today">
-          Heute
-        </option>
+        <select id="dateSelect">
 
-        <option value="tomorrow">
-          Morgen
-        </option>
+          <option value="all">
+            Alle geladenen Events
+          </option>
 
-        <option value="sunday" selected>
-          Zieldatum / Sonntag
-        </option>
+          <option value="today">
+            Heute
+          </option>
 
-      </select>
+          <option value="tomorrow">
+            Morgen
+          </option>
 
-      <div class="radius-control">
+          <option value="sunday" selected>
+            Zieldatum / Sonntag
+          </option>
 
-        <div id="radiusLabel">
-          40 km
+        </select>
+
+        <div class="radius-control">
+
+          <div id="radiusLabel">
+            40 km
+          </div>
+
+          <input
+            type="range"
+            id="radiusSlider"
+            min="5"
+            max="120"
+            value="40"
+          />
+
         </div>
-
-        <input
-          type="range"
-          id="radiusSlider"
-          min="5"
-          max="120"
-          value="40"
-        />
 
       </div>
 
-    </div>
+      <button id="refreshBtn">
+        🔄 Events aktualisieren
+      </button>
 
-    <button id="refreshBtn">
-      🔄 Events aktualisieren
-    </button>
+    </div>
 
     <div id="importStatus">
       Bereit
@@ -90,7 +102,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-  <script src="app.js?v=8001"></script>
+  <script src="app.js?v=8002"></script>
 
 </body>
 </html>
