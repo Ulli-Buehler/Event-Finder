@@ -28,12 +28,25 @@ body{
   left:8px;
   right:8px;
   z-index:3000;
-  background:white;
-  padding:11px 12px;
-  border-radius:20px;
-  box-shadow:0 8px 24px rgba(0,0,0,.15);
-  max-height:calc(48vh - env(safe-area-inset-top));
-  overflow:auto;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);
+  padding:10px 12px;
+  border-radius:18px;
+  box-shadow:0 6px 18px rgba(0,0,0,.12);
+  overflow:hidden;
+  transition:all .25s ease;
+}
+
+.top.compact{
+  left:auto;
+  right:calc(8px + env(safe-area-inset-right));
+  width:48px;
+  height:48px;
+  padding:0;
+  border-radius:999px;
+  background:transparent;
+  box-shadow:none;
+  backdrop-filter:none;
 }
 
 .top-header{
@@ -41,6 +54,17 @@ body{
   align-items:flex-start;
   justify-content:space-between;
   gap:8px;
+}
+
+.top.compact .top-header{
+  display:block;
+}
+
+.top.compact .top-title-block,
+.top.compact .event-meta,
+.top.compact #importStatus,
+.top.compact .filter-panel{
+  display:none !important;
 }
 
 .top h1{
@@ -58,6 +82,14 @@ body{
   font-weight:800;
 }
 
+.creator-credit{
+  margin-top:4px;
+  font-size:11px;
+  color:#8e8e93;
+  font-weight:700;
+  letter-spacing:.2px;
+}
+
 .filter-toggle{
   flex-shrink:0;
   border:none;
@@ -67,6 +99,17 @@ body{
   padding:9px 10px;
   font-size:13px;
   font-weight:900;
+}
+
+.top.compact .filter-toggle{
+  width:48px;
+  height:48px;
+  padding:0;
+  border-radius:999px;
+  background:rgba(255,255,255,.95);
+  box-shadow:0 6px 18px rgba(0,0,0,.16);
+  font-size:23px;
+  line-height:48px;
 }
 
 .filter-panel{
@@ -315,6 +358,14 @@ input[type="range"]{
     border-radius:19px;
   }
 
+  .top.compact{
+    left:auto;
+    right:calc(8px + env(safe-area-inset-right));
+    width:44px;
+    height:44px;
+    padding:0;
+  }
+
   .top-header{
     gap:6px;
   }
@@ -358,6 +409,12 @@ input[type="range"]{
     width:390px;
   }
 
+  .top.compact{
+    left:auto;
+    right:24px;
+    width:48px;
+  }
+
   .cards{
     left:24px;
     right:24px;
@@ -367,17 +424,4 @@ input[type="range"]{
     width:240px;
     min-width:240px;
   }
-}
-
-
-.creator-credit{
-  margin-top:4px;
-  font-size:11px;
-  color:#8e8e93;
-  font-weight:700;
-  letter-spacing:.2px;
-}
-
-.top.compact .creator-credit{
-  display:none;
 }
