@@ -156,21 +156,9 @@ input[type="range"]{
   width:100%;
 }
 
-#refreshBtn{
-  margin-top:10px;
-  width:100%;
-  border:none;
-  background:#007aff;
-  color:white;
-  padding:11px 14px;
-  border-radius:15px;
-  font-size:15px;
-  font-weight:900;
-}
 
-#refreshBtn:disabled{
-  opacity:.55;
-}
+
+
 
 #importStatus{
   margin-top:7px;
