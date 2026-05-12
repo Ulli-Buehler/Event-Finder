@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v7-autoload");
+console.log("APP VERSION: eventbw-json-v8-sunday-clean");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -9,8 +9,6 @@ let appEvents = [];
 let importMeta = null;
 let filtersOpen = false;
 let importPollTimer = null;
-
-const ACTIVE_CATEGORIES = new Set();
 
 const map = L.map("map").setView(userPos, 9);
 
@@ -40,8 +38,8 @@ const cards = document.getElementById("cards");
 const statusText = document.getElementById("status");
 const radiusSlider = document.getElementById("radiusSlider");
 const radiusLabel = document.getElementById("radiusLabel");
+const refreshBtn = document.getElementById("refreshBtn");
 const importStatus = document.getElementById("importStatus");
-const lastUpdateInfo = document.getElementById("lastUpdateInfo");
 const filterToggle = document.getElementById("filterToggle");
 const filterPanel = document.getElementById("filterPanel");
 const topPanel = document.querySelector(".top");
@@ -53,10 +51,6 @@ radiusSlider.value = 40;
 const eventMeta = document.createElement("div");
 eventMeta.className = "event-meta";
 importStatus.insertAdjacentElement("afterend", eventMeta);
-
-const categoryBar = document.createElement("div");
-categoryBar.className = "category-bar";
-filterPanel.appendChild(categoryBar);
 
 const markers = [];
 
@@ -203,35 +197,6 @@ function normalizeEvent(raw, index) {
   return event;
 }
 
-function formatUpdateTime(value) {
-  if (!value) {
-    return "unbekannt";
-  }
-
-  const date = new Date(value);
-
-  if (Number.isNaN(date.getTime())) {
-    return "unbekannt";
-  }
-
-  return new Intl.DateTimeFormat("de-DE", {
-    dateStyle: "medium",
-    timeStyle: "short"
-  }).format(date);
-}
-
-function updateLastUpdateInfo() {
-  if (!lastUpdateInfo) return;
-
-  const finishedAt =
-    importMeta && importMeta.finishedAt
-      ? importMeta.finishedAt
-      : "";
-
-  lastUpdateInfo.innerText =
-    "Letztes Update: " + formatUpdateTime(finishedAt);
-}
-
 function setImportState(state, text) {
   importStatus.className = "import-status " + state;
   importStatus.innerText = text;
@@ -257,18 +222,7 @@ async function loadEventBwEvents(statusMessage = "EventBW-Daten geladen") {
   importMeta = data.meta || null;
   appEvents = (data.events || []).map(normalizeEvent);
 
-  ACTIVE_CATEGORIES.clear();
-
-  [...new Set(
-    appEvents
-      .map(event => event.category)
-      .filter(Boolean)
-  )].sort().forEach(category => {
-    ACTIVE_CATEGORIES.add(category);
-  });
-
-  updateLastUpdateInfo();
-  setImportState("ok", statusMessage);
+  setImportState("ok", "");
 }
 
 function openSheet(event) {
@@ -323,40 +277,6 @@ filterToggle.onclick = () => {
   setFiltersOpen(!filtersOpen);
 };
 
-function renderCategoryButtons() {
-  categoryBar.innerHTML = "";
-
-  const categories = [...new Set(
-    appEvents
-      .map(event => event.category)
-      .filter(Boolean)
-  )].sort();
-
-  categories.forEach(category => {
-    const button = document.createElement("button");
-
-    button.className =
-      ACTIVE_CATEGORIES.has(category)
-        ? "category-btn active"
-        : "category-btn";
-
-    button.innerText = categoryLabel(category);
-
-    button.onclick = () => {
-      if (ACTIVE_CATEGORIES.has(category)) {
-        ACTIVE_CATEGORIES.delete(category);
-      } else {
-        ACTIVE_CATEGORIES.add(category);
-      }
-
-      renderCategoryButtons();
-      render();
-    };
-
-    categoryBar.appendChild(button);
-  });
-}
-
 function enrichVisibleEvent(event) {
   if (!hasCoords(event)) {
     return {
@@ -392,22 +312,15 @@ function render() {
   radiusKm = Number(radiusSlider.value);
   radiusLabel.innerText = radiusKm + " km";
 
-  const targetDateText = importMeta && importMeta.targetDate
-    ? " • " + importMeta.targetDate
-    : "";
-
   statusText.innerText =
-    "EventBW Märkte/Feste" + targetDateText;
+    "Zeigt Märkte und Feste für " +
+    formatSundayDate(importMeta && importMeta.targetDate);
 
   radiusCircle.setLatLng(userPos);
   radiusCircle.setRadius(radiusKm * 1000);
   userMarker.setLatLng(userPos);
 
   const visibleEvents = appEvents
-    .filter(event => {
-      if (!event.category) return true;
-      return ACTIVE_CATEGORIES.has(event.category);
-    })
     .map(enrichVisibleEvent)
     .filter(event => {
       if (!event.hasLocation) return true;
@@ -489,37 +402,119 @@ function render() {
   }
 }
 
+async function pollForImportUpdate(previousFinishedAt, startedPollAt) {
+  let checks = 0;
+  const maxChecks = 45;
+
+  if (importPollTimer) {
+    clearInterval(importPollTimer);
+  }
+
+  importPollTimer = setInterval(async () => {
+    checks += 1;
+
+    setImportState(
+      "running",
+      "⏳ Import läuft ... prüfe Ergebnis " + checks + "/" + maxChecks
+    );
+
+    try {
+      const data = await fetchEventBwData();
+      const newFinishedAt = data.meta && data.meta.finishedAt;
+
+      if (
+        newFinishedAt &&
+        newFinishedAt !== previousFinishedAt &&
+        new Date(newFinishedAt).getTime() >= startedPollAt
+      ) {
+        clearInterval(importPollTimer);
+        importPollTimer = null;
+
+        importMeta = data.meta || null;
+        appEvents = (data.events || []).map(normalizeEvent);
+
+        render();
+
+        setImportState(
+          "ok",
+          "✅ Import fertig. Daten automatisch aktualisiert."
+        );
+
+        refreshBtn.disabled = false;
+      }
+
+      if (checks >= maxChecks) {
+        clearInterval(importPollTimer);
+        importPollTimer = null;
+
+        setImportState(
+          "warning",
+          "⚠️ Import gestartet, aber neue Daten noch nicht sichtbar. Bitte später neu laden."
+        );
+
+        refreshBtn.disabled = false;
+      }
+    } catch (err) {
+      if (checks >= maxChecks) {
+        clearInterval(importPollTimer);
+        importPollTimer = null;
+
+        setImportState(
+          "error",
+          "❌ Importstatus konnte nicht geprüft werden."
+        );
+
+        refreshBtn.disabled = false;
+      }
+    }
+  }, 7000);
+}
+
+refreshBtn.onclick = async () => {
+  refreshBtn.disabled = true;
+
+  const previousFinishedAt =
+    importMeta && importMeta.finishedAt
+      ? importMeta.finishedAt
+      : "";
+
+  const startedPollAt = Date.now();
+
+  setImportState("starting", "🔄 Import wird gestartet ...");
+
+  try {
+    const response = await fetch("/api/trigger-import", {
+      method: "POST"
+    });
+
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+
+    setImportState(
+      "running",
+      "✅ Import gestartet. Warte auf neue Daten ..."
+    );
+
+    pollForImportUpdate(previousFinishedAt, startedPollAt);
+
+  } catch (err) {
+    setImportState(
+      "error",
+      "❌ Import konnte nicht gestartet werden."
+    );
+
+    refreshBtn.disabled = false;
+  }
+};
+
 radiusSlider.oninput = render;
 
 async function init() {
   try {
     setFiltersOpen(false);
-
-    setImportState(
-      "loading",
-      "🔄 Lade aktuelle Event-Daten ..."
-    );
-
-    await loadEventBwEvents(
-      "✅ Daten aktuell geladen"
-    );
-
-    renderCategoryButtons();
+    await loadEventBwEvents();
     render();
-
-    setTimeout(async () => {
-      try {
-        await loadEventBwEvents(
-          "✅ Daten automatisch aktualisiert"
-        );
-
-        renderCategoryButtons();
-        render();
-      } catch (err) {
-        console.error(err);
-      }
-    }, 2500);
-
   } catch (err) {
     console.error(err);
 
