@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v11-active-marker");
+console.log("APP VERSION: eventbw-json-v12-red-active-marker");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -351,29 +351,35 @@ function enrichVisibleEvent(event) {
 }
 
 
-function highlightMarker(marker) {
+function setActiveMarker(marker) {
   if (activeMarker) {
-    activeMarker.setStyle({
-      radius: 8,
-      color: "#007aff",
-      fillColor: "#007aff",
-      fillOpacity: 0.9,
-      weight: 2
-    });
+    activeMarker.setIcon(
+      L.icon({
+        iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+        shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      })
+    );
+    activeMarker.setZIndexOffset(0);
   }
 
   activeMarker = marker;
 
   if (activeMarker) {
-    activeMarker.setStyle({
-      radius: 13,
-      color: "#ff3b30",
-      fillColor: "#ff3b30",
-      fillOpacity: 1,
-      weight: 3
-    });
-
-    activeMarker.bringToFront();
+    activeMarker.setIcon(
+      L.icon({
+        iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png",
+        shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+        iconSize: [30, 49],
+        iconAnchor: [15, 49],
+        popupAnchor: [1, -40],
+        shadowSize: [49, 49]
+      })
+    );
+    activeMarker.setZIndexOffset(1000);
   }
 }
 
@@ -419,23 +425,14 @@ function render() {
     " Events im Radius sichtbar";
 
   visibleEvents.forEach(event => {
-    const marker = L.circleMarker([
+    const marker = L.marker([
       event.lat,
       event.lng
-    ], {
-      radius: 8,
-      color: "#007aff",
-      fillColor: "#007aff",
-      fillOpacity: 0.9,
-      weight: 2
-    })
+    ])
       .addTo(map)
       .on("click", () => {
-        highlightMarker(marker);
         openSheet(event);
       });
-
-    marker.__eventData = event;
 
     markers.push(marker);
 
@@ -443,7 +440,15 @@ function render() {
     card.className = "card";
 
     card.onclick = () => {
-      highlightMarker(marker);
+      setActiveMarker(marker);
+
+      map.panTo([
+        event.lat,
+        event.lng
+      ], {
+        animate: true
+      });
+
       openSheet(event);
     };
 
@@ -474,8 +479,42 @@ function render() {
   });
 
   if (markers.length > 0) {
-    highlightMarker(markers[0]);
+    setActiveMarker(markers[0]);
   }
+
+
+  requestAnimationFrame(() => {
+    const cardList = [...cards.querySelectorAll(".card")];
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        const index = cardList.indexOf(entry.target);
+
+        if (index >= 0 && markers[index]) {
+          setActiveMarker(markers[index]);
+
+          const event = visibleEvents[index];
+
+          if (event && event.hasLocation) {
+            map.panTo([
+              event.lat,
+              event.lng
+            ], {
+              animate: true
+            });
+          }
+        }
+      });
+    }, {
+      root: cards,
+      threshold: 0.75
+    });
+
+    cardList.forEach(card => observer.observe(card));
+  });
+
 
   if (visibleEvents.length === 0) {
     cards.innerHTML = `
