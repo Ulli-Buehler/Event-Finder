@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v10-fit-radius");
+console.log("APP VERSION: eventbw-json-v11-active-marker");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -8,6 +8,7 @@ let radiusKm = 40;
 let appEvents = [];
 let importMeta = null;
 let filtersOpen = false;
+let activeMarker = null;
 
 const map = L.map("map").setView(userPos, 9);
 
@@ -349,6 +350,33 @@ function enrichVisibleEvent(event) {
   };
 }
 
+
+function highlightMarker(marker) {
+  if (activeMarker) {
+    activeMarker.setStyle({
+      radius: 8,
+      color: "#007aff",
+      fillColor: "#007aff",
+      fillOpacity: 0.9,
+      weight: 2
+    });
+  }
+
+  activeMarker = marker;
+
+  if (activeMarker) {
+    activeMarker.setStyle({
+      radius: 13,
+      color: "#ff3b30",
+      fillColor: "#ff3b30",
+      fillOpacity: 1,
+      weight: 3
+    });
+
+    activeMarker.bringToFront();
+  }
+}
+
 function render() {
   closeSheet();
 
@@ -391,14 +419,23 @@ function render() {
     " Events im Radius sichtbar";
 
   visibleEvents.forEach(event => {
-    const marker = L.marker([
+    const marker = L.circleMarker([
       event.lat,
       event.lng
-    ])
+    ], {
+      radius: 8,
+      color: "#007aff",
+      fillColor: "#007aff",
+      fillOpacity: 0.9,
+      weight: 2
+    })
       .addTo(map)
       .on("click", () => {
+        highlightMarker(marker);
         openSheet(event);
       });
+
+    marker.__eventData = event;
 
     markers.push(marker);
 
@@ -406,6 +443,7 @@ function render() {
     card.className = "card";
 
     card.onclick = () => {
+      highlightMarker(marker);
       openSheet(event);
     };
 
@@ -434,6 +472,10 @@ function render() {
 
     cards.appendChild(card);
   });
+
+  if (markers.length > 0) {
+    highlightMarker(markers[0]);
+  }
 
   if (visibleEvents.length === 0) {
     cards.innerHTML = `
