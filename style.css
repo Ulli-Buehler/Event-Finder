@@ -156,9 +156,21 @@ input[type="range"]{
   width:100%;
 }
 
+#refreshBtn{
+  margin-top:10px;
+  width:100%;
+  border:none;
+  background:#007aff;
+  color:white;
+  padding:11px 14px;
+  border-radius:15px;
+  font-size:15px;
+  font-weight:900;
+}
 
-
-
+#refreshBtn:disabled{
+  opacity:.55;
+}
 
 #importStatus{
   margin-top:7px;
@@ -450,14 +462,10 @@ input[type="range"]{
   }
 }
 
-
-.last-update-info{
-  margin-top:8px;
-  font-size:12px;
-  color:#666;
-  font-weight:800;
+#importStatus:empty{
+  display:none;
 }
 
-.top.compact .last-update-info{
-  display:none !important;
+.sunday-note{
+  font-weight:900;
 }
