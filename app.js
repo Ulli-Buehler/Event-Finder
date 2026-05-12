@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v9-clean-sunday-radius");
+console.log("APP VERSION: eventbw-json-v10-fit-radius");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -125,6 +125,25 @@ function clearMarkers() {
   });
 
   markers.length = 0;
+}
+
+function fitRadiusIntoView() {
+  const cardsHeight =
+    cards && cards.offsetHeight
+      ? cards.offsetHeight + 26
+      : 190;
+
+  const topHeight =
+    topPanel && !topPanel.classList.contains("compact")
+      ? topPanel.offsetHeight + 18
+      : 70;
+
+  map.fitBounds(radiusCircle.getBounds(), {
+    paddingTopLeft: [20, topHeight],
+    paddingBottomRight: [20, cardsHeight],
+    animate: true,
+    duration: 0.25,
+  });
 }
 
 function cleanTime(time) {
@@ -297,6 +316,8 @@ function setFiltersOpen(open) {
 
   filterToggle.innerText =
     filtersOpen ? "Filter ausblenden" : "☰";
+
+  setTimeout(fitRadiusIntoView, 260);
 }
 
 filterToggle.onclick = () => {
@@ -344,6 +365,8 @@ function render() {
   radiusCircle.setLatLng(userPos);
   radiusCircle.setRadius(radiusKm * 1000);
   userMarker.setLatLng(userPos);
+
+  fitRadiusIntoView();
 
   const visibleEvents = appEvents
     .map(enrichVisibleEvent)
