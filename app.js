@@ -454,9 +454,8 @@ function render() {
         </h2>
 
         <p class="card-place">
-          ${event.city || "Ort unbekannt"}
-          •
-          ${event.realDistanceText}
+          <span class="card-city">${event.city || "Ort unbekannt"}</span>
+          <span class="card-distance">${event.realDistanceText}</span>
         </p>
 
         <p class="card-date">
