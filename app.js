@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v6-last-update");
+console.log("APP VERSION: eventbw-json-v7-autoload");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -40,7 +40,6 @@ const cards = document.getElementById("cards");
 const statusText = document.getElementById("status");
 const radiusSlider = document.getElementById("radiusSlider");
 const radiusLabel = document.getElementById("radiusLabel");
-const refreshBtn = document.getElementById("refreshBtn");
 const importStatus = document.getElementById("importStatus");
 const lastUpdateInfo = document.getElementById("lastUpdateInfo");
 const filterToggle = document.getElementById("filterToggle");
@@ -490,122 +489,37 @@ function render() {
   }
 }
 
-async function pollForImportUpdate(previousFinishedAt, startedPollAt) {
-  let checks = 0;
-  const maxChecks = 45;
-
-  if (importPollTimer) {
-    clearInterval(importPollTimer);
-  }
-
-  importPollTimer = setInterval(async () => {
-    checks += 1;
-
-    setImportState(
-      "running",
-      "⏳ Import läuft ... prüfe Ergebnis " + checks + "/" + maxChecks
-    );
-
-    try {
-      const data = await fetchEventBwData();
-      const newFinishedAt = data.meta && data.meta.finishedAt;
-
-      if (
-        newFinishedAt &&
-        newFinishedAt !== previousFinishedAt &&
-        new Date(newFinishedAt).getTime() >= startedPollAt
-      ) {
-        clearInterval(importPollTimer);
-        importPollTimer = null;
-
-        importMeta = data.meta || null;
-        appEvents = (data.events || []).map(normalizeEvent);
-        updateLastUpdateInfo();
-
-        renderCategoryButtons();
-        render();
-
-        setImportState(
-          "ok",
-          "✅ Import fertig. Daten automatisch aktualisiert."
-        );
-
-        refreshBtn.disabled = false;
-      }
-
-      if (checks >= maxChecks) {
-        clearInterval(importPollTimer);
-        importPollTimer = null;
-
-        setImportState(
-          "warning",
-          "⚠️ Import gestartet, aber neue Daten noch nicht sichtbar. Bitte später neu laden."
-        );
-
-        refreshBtn.disabled = false;
-      }
-    } catch (err) {
-      if (checks >= maxChecks) {
-        clearInterval(importPollTimer);
-        importPollTimer = null;
-
-        setImportState(
-          "error",
-          "❌ Importstatus konnte nicht geprüft werden."
-        );
-
-        refreshBtn.disabled = false;
-      }
-    }
-  }, 7000);
-}
-
-refreshBtn.onclick = async () => {
-  refreshBtn.disabled = true;
-
-  const previousFinishedAt =
-    importMeta && importMeta.finishedAt
-      ? importMeta.finishedAt
-      : "";
-
-  const startedPollAt = Date.now();
-
-  setImportState("starting", "🔄 Import wird gestartet ...");
-
-  try {
-    const response = await fetch("/api/trigger-import", {
-      method: "POST"
-    });
-
-    if (!response.ok) {
-      throw new Error("HTTP " + response.status);
-    }
-
-    setImportState(
-      "running",
-      "✅ Import gestartet. Warte auf neue Daten ..."
-    );
-
-    pollForImportUpdate(previousFinishedAt, startedPollAt);
-
-  } catch (err) {
-    setImportState(
-      "error",
-      "❌ Import konnte nicht gestartet werden."
-    );
-
-    refreshBtn.disabled = false;
-  }
-};
-
 radiusSlider.oninput = render;
 
 async function init() {
   try {
     setFiltersOpen(false);
-    await loadEventBwEvents();
+
+    setImportState(
+      "loading",
+      "🔄 Lade aktuelle Event-Daten ..."
+    );
+
+    await loadEventBwEvents(
+      "✅ Daten aktuell geladen"
+    );
+
     renderCategoryButtons();
     render();
+
+    setTimeout(async () => {
+      try {
+        await loadEventBwEvents(
+          "✅ Daten automatisch aktualisiert"
+        );
+
+        renderCategoryButtons();
+        render();
+      } catch (err) {
+        console.error(err);
+      }
+    }, 2500);
+
   } catch (err) {
     console.error(err);
 
