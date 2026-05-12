@@ -1,13 +1,14 @@
-console.log("APP VERSION: eventbw-json-v4-filter-icon-distance-sort");
+console.log("APP VERSION: eventbw-json-v6-last-update");
 
-const EVENTBW_JSON_URL = "eventbw/feste-maerkte.json?v=" + Date.now();
+const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
+const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
 
 let userPos = [48.6167, 9.45];
 let radiusKm = 40;
-let dateMode = "sunday";
 let appEvents = [];
 let importMeta = null;
 let filtersOpen = false;
+let importPollTimer = null;
 
 const ACTIVE_CATEGORIES = new Set();
 
@@ -39,9 +40,9 @@ const cards = document.getElementById("cards");
 const statusText = document.getElementById("status");
 const radiusSlider = document.getElementById("radiusSlider");
 const radiusLabel = document.getElementById("radiusLabel");
-const dateSelect = document.getElementById("dateSelect");
 const refreshBtn = document.getElementById("refreshBtn");
 const importStatus = document.getElementById("importStatus");
+const lastUpdateInfo = document.getElementById("lastUpdateInfo");
 const filterToggle = document.getElementById("filterToggle");
 const filterPanel = document.getElementById("filterPanel");
 const topPanel = document.querySelector(".top");
@@ -203,10 +204,42 @@ function normalizeEvent(raw, index) {
   return event;
 }
 
-async function loadEventBwEvents() {
-  importStatus.innerText = "Lade EventBW-Daten ...";
+function formatUpdateTime(value) {
+  if (!value) {
+    return "unbekannt";
+  }
 
-  const response = await fetch(EVENTBW_JSON_URL, {
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return "unbekannt";
+  }
+
+  return new Intl.DateTimeFormat("de-DE", {
+    dateStyle: "medium",
+    timeStyle: "short"
+  }).format(date);
+}
+
+function updateLastUpdateInfo() {
+  if (!lastUpdateInfo) return;
+
+  const finishedAt =
+    importMeta && importMeta.finishedAt
+      ? importMeta.finishedAt
+      : "";
+
+  lastUpdateInfo.innerText =
+    "Letztes Update: " + formatUpdateTime(finishedAt);
+}
+
+function setImportState(state, text) {
+  importStatus.className = "import-status " + state;
+  importStatus.innerText = text;
+}
+
+async function fetchEventBwData() {
+  const response = await fetch(EVENTBW_JSON_URL(), {
     cache: "no-store"
   });
 
@@ -214,7 +247,13 @@ async function loadEventBwEvents() {
     throw new Error("HTTP " + response.status);
   }
 
-  const data = await response.json();
+  return response.json();
+}
+
+async function loadEventBwEvents(statusMessage = "EventBW-Daten geladen") {
+  setImportState("loading", "Lade EventBW-Daten ...");
+
+  const data = await fetchEventBwData();
 
   importMeta = data.meta || null;
   appEvents = (data.events || []).map(normalizeEvent);
@@ -229,7 +268,8 @@ async function loadEventBwEvents() {
     ACTIVE_CATEGORIES.add(category);
   });
 
-  importStatus.innerText = "EventBW-Daten geladen";
+  updateLastUpdateInfo();
+  setImportState("ok", statusMessage);
 }
 
 function openSheet(event) {
@@ -318,36 +358,6 @@ function renderCategoryButtons() {
   });
 }
 
-function filterByDateMode(event) {
-  if (dateMode === "all") return true;
-
-  const today = new Date();
-  const isoToday = today.toISOString().slice(0, 10);
-
-  const tomorrow = new Date(today);
-  tomorrow.setDate(today.getDate() + 1);
-  const isoTomorrow = tomorrow.toISOString().slice(0, 10);
-
-  if (dateMode === "today") {
-    return event.startDate <= isoToday && event.endDate >= isoToday;
-  }
-
-  if (dateMode === "tomorrow") {
-    return event.startDate <= isoTomorrow && event.endDate >= isoTomorrow;
-  }
-
-  if (dateMode === "sunday") {
-    if (importMeta && importMeta.targetDate) {
-      const targetDate = importMeta.targetDate;
-      return event.startDate <= targetDate && event.endDate >= targetDate;
-    }
-
-    return true;
-  }
-
-  return true;
-}
-
 function enrichVisibleEvent(event) {
   if (!hasCoords(event)) {
     return {
@@ -399,7 +409,6 @@ function render() {
       if (!event.category) return true;
       return ACTIVE_CATEGORIES.has(event.category);
     })
-    .filter(filterByDateMode)
     .map(enrichVisibleEvent)
     .filter(event => {
       if (!event.hasLocation) return true;
@@ -481,32 +490,115 @@ function render() {
   }
 }
 
+async function pollForImportUpdate(previousFinishedAt, startedPollAt) {
+  let checks = 0;
+  const maxChecks = 45;
+
+  if (importPollTimer) {
+    clearInterval(importPollTimer);
+  }
+
+  importPollTimer = setInterval(async () => {
+    checks += 1;
+
+    setImportState(
+      "running",
+      "⏳ Import läuft ... prüfe Ergebnis " + checks + "/" + maxChecks
+    );
+
+    try {
+      const data = await fetchEventBwData();
+      const newFinishedAt = data.meta && data.meta.finishedAt;
+
+      if (
+        newFinishedAt &&
+        newFinishedAt !== previousFinishedAt &&
+        new Date(newFinishedAt).getTime() >= startedPollAt
+      ) {
+        clearInterval(importPollTimer);
+        importPollTimer = null;
+
+        importMeta = data.meta || null;
+        appEvents = (data.events || []).map(normalizeEvent);
+        updateLastUpdateInfo();
+
+        renderCategoryButtons();
+        render();
+
+        setImportState(
+          "ok",
+          "✅ Import fertig. Daten automatisch aktualisiert."
+        );
+
+        refreshBtn.disabled = false;
+      }
+
+      if (checks >= maxChecks) {
+        clearInterval(importPollTimer);
+        importPollTimer = null;
+
+        setImportState(
+          "warning",
+          "⚠️ Import gestartet, aber neue Daten noch nicht sichtbar. Bitte später neu laden."
+        );
+
+        refreshBtn.disabled = false;
+      }
+    } catch (err) {
+      if (checks >= maxChecks) {
+        clearInterval(importPollTimer);
+        importPollTimer = null;
+
+        setImportState(
+          "error",
+          "❌ Importstatus konnte nicht geprüft werden."
+        );
+
+        refreshBtn.disabled = false;
+      }
+    }
+  }, 7000);
+}
+
 refreshBtn.onclick = async () => {
   refreshBtn.disabled = true;
-  importStatus.innerText = "🔄 Import gestartet ...";
+
+  const previousFinishedAt =
+    importMeta && importMeta.finishedAt
+      ? importMeta.finishedAt
+      : "";
+
+  const startedPollAt = Date.now();
+
+  setImportState("starting", "🔄 Import wird gestartet ...");
 
   try {
-    await fetch("/api/trigger-import", {
+    const response = await fetch("/api/trigger-import", {
       method: "POST"
     });
 
-    importStatus.innerText =
-      "✅ Import gestartet. Danach Seite neu laden.";
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+
+    setImportState(
+      "running",
+      "✅ Import gestartet. Warte auf neue Daten ..."
+    );
+
+    pollForImportUpdate(previousFinishedAt, startedPollAt);
 
   } catch (err) {
-    importStatus.innerText =
-      "❌ Import konnte nicht gestartet werden";
-  }
+    setImportState(
+      "error",
+      "❌ Import konnte nicht gestartet werden."
+    );
 
-  refreshBtn.disabled = false;
+    refreshBtn.disabled = false;
+  }
 };
 
 radiusSlider.oninput = render;
-
-dateSelect.onchange = () => {
-  dateMode = dateSelect.value;
-  render();
-};
 
 async function init() {
   try {
@@ -517,8 +609,10 @@ async function init() {
   } catch (err) {
     console.error(err);
 
-    importStatus.innerText =
-      "❌ EventBW-Daten konnten nicht geladen werden";
+    setImportState(
+      "error",
+      "❌ EventBW-Daten konnten nicht geladen werden"
+    );
 
     cards.innerHTML = `
       <div class="card">
