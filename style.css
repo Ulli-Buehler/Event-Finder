@@ -24,15 +24,15 @@ body{
 
 .top{
   position:fixed;
-  top:calc(10px + env(safe-area-inset-top));
-  left:10px;
-  right:10px;
+  top:calc(8px + env(safe-area-inset-top));
+  left:8px;
+  right:8px;
   z-index:3000;
   background:white;
-  padding:14px;
-  border-radius:24px;
-  box-shadow:0 8px 30px rgba(0,0,0,.15);
-  max-height:calc(58vh - env(safe-area-inset-top));
+  padding:11px 12px;
+  border-radius:20px;
+  box-shadow:0 8px 24px rgba(0,0,0,.15);
+  max-height:calc(48vh - env(safe-area-inset-top));
   overflow:auto;
 }
 
@@ -40,19 +40,20 @@ body{
   display:flex;
   align-items:flex-start;
   justify-content:space-between;
-  gap:10px;
+  gap:8px;
 }
 
 .top h1{
   margin:0;
-  font-size:clamp(25px,8vw,42px);
+  font-size:clamp(24px,7vw,36px);
   line-height:1;
   letter-spacing:-.5px;
 }
 
 .top p{
-  margin:8px 0 0;
-  font-size:clamp(13px,3.5vw,18px);
+  margin:6px 0 0;
+  font-size:clamp(12px,3.2vw,16px);
+  line-height:1.15;
   color:#666;
   font-weight:800;
 }
@@ -63,14 +64,14 @@ body{
   background:#f2f2f7;
   color:#007aff;
   border-radius:14px;
-  padding:10px 12px;
-  font-size:14px;
-  font-weight:800;
+  padding:9px 10px;
+  font-size:13px;
+  font-weight:900;
 }
 
 .filter-panel{
   display:none;
-  margin-top:12px;
+  margin-top:10px;
 }
 
 .filter-panel.open{
@@ -79,7 +80,7 @@ body{
 
 .controls{
   display:flex;
-  gap:10px;
+  gap:8px;
   align-items:center;
 }
 
@@ -88,20 +89,20 @@ select{
   width:52%;
   border:none;
   background:#f2f2f7;
-  border-radius:14px;
-  padding:12px;
-  font-size:15px;
+  border-radius:13px;
+  padding:10px;
+  font-size:14px;
   font-weight:800;
 }
 
 .radius-control{
   flex:1;
-  min-width:110px;
+  min-width:100px;
 }
 
 #radiusLabel{
   font-weight:900;
-  font-size:16px;
+  font-size:15px;
 }
 
 input[type="range"]{
@@ -109,14 +110,14 @@ input[type="range"]{
 }
 
 #refreshBtn{
-  margin-top:12px;
+  margin-top:10px;
   width:100%;
   border:none;
   background:#007aff;
   color:white;
-  padding:13px 16px;
-  border-radius:16px;
-  font-size:16px;
+  padding:11px 14px;
+  border-radius:15px;
+  font-size:15px;
   font-weight:900;
 }
 
@@ -125,23 +126,23 @@ input[type="range"]{
 }
 
 #importStatus{
-  margin-top:8px;
-  font-size:13px;
+  margin-top:7px;
+  font-size:12px;
   color:#666;
   font-weight:700;
 }
 
 .event-meta{
-  margin-top:8px;
-  font-size:16px;
+  margin-top:7px;
+  font-size:15px;
   font-weight:900;
 }
 
 .category-bar{
   display:flex;
-  gap:8px;
+  gap:7px;
   overflow-x:auto;
-  margin-top:10px;
+  margin-top:9px;
   padding-bottom:2px;
 }
 
@@ -149,9 +150,9 @@ input[type="range"]{
   border:none;
   background:#f2f2f7;
   border-radius:999px;
-  padding:10px 14px;
+  padding:9px 12px;
   white-space:nowrap;
-  font-size:14px;
+  font-size:13px;
   font-weight:800;
   color:#007aff;
 }
@@ -163,61 +164,61 @@ input[type="range"]{
 
 .cards{
   position:fixed;
-  bottom:calc(10px + env(safe-area-inset-bottom));
+  bottom:calc(8px + env(safe-area-inset-bottom));
   left:0;
   right:0;
   display:flex;
-  gap:12px;
+  gap:10px;
   overflow-x:auto;
   overflow-y:hidden;
-  padding:0 12px 6px;
+  padding:0 10px 5px;
   z-index:2000;
   scroll-snap-type:x mandatory;
 }
 
 .card{
-  width:min(76vw,320px);
-  min-width:min(76vw,320px);
-  height:220px;
+  width:min(56vw,230px);
+  min-width:min(56vw,230px);
+  height:152px;
   background:white;
-  border-radius:24px;
+  border-radius:18px;
   overflow:hidden;
-  box-shadow:0 10px 24px rgba(0,0,0,.18);
+  box-shadow:0 8px 20px rgba(0,0,0,.18);
   flex-shrink:0;
   scroll-snap-align:start;
 }
 
 .card-image{
-  height:70px;
+  height:44px;
   background:linear-gradient(135deg,#007aff,#64d2ff);
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:36px;
+  font-size:26px;
   color:white;
 }
 
 .card-body{
-  padding:13px;
+  padding:9px 10px;
 }
 
 .card h2{
-  margin:0 0 8px;
-  font-size:clamp(18px,5.1vw,24px);
-  line-height:1.08;
-  max-height:78px;
+  margin:0 0 5px;
+  font-size:clamp(15px,4.3vw,19px);
+  line-height:1.05;
+  max-height:40px;
   overflow:hidden;
   word-break:break-word;
   display:-webkit-box;
-  -webkit-line-clamp:3;
+  -webkit-line-clamp:2;
   -webkit-box-orient:vertical;
 }
 
 .card p{
   margin:0;
   color:#555;
-  font-size:clamp(14px,4vw,17px);
-  line-height:1.18;
+  font-size:clamp(12px,3.5vw,15px);
+  line-height:1.12;
 }
 
 .card-place{
@@ -231,6 +232,10 @@ input[type="range"]{
 
 .card-date{
   color:#666;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
 }
 
 .sheet{
@@ -240,12 +245,12 @@ input[type="range"]{
   bottom:0;
   z-index:4000;
   background:white;
-  border-radius:28px 28px 0 0;
-  padding:12px 20px calc(26px + env(safe-area-inset-bottom));
+  border-radius:24px 24px 0 0;
+  padding:10px 18px calc(22px + env(safe-area-inset-bottom));
   box-shadow:0 -12px 35px rgba(0,0,0,.25);
   transform:translateY(110%);
   transition:transform .28s ease;
-  max-height:70vh;
+  max-height:72vh;
   overflow:auto;
 }
 
@@ -254,16 +259,16 @@ input[type="range"]{
 }
 
 .sheet-handle{
-  width:48px;
+  width:44px;
   height:5px;
   background:#d1d1d6;
   border-radius:99px;
-  margin:0 auto 16px;
+  margin:0 auto 14px;
 }
 
 .sheet h2{
-  margin:0 0 10px;
-  font-size:26px;
+  margin:0 0 9px;
+  font-size:24px;
   word-break:break-word;
 }
 
@@ -271,22 +276,22 @@ input[type="range"]{
 #sheet-place,
 #sheet-date,
 #sheet-description{
-  font-size:16px;
+  font-size:15px;
   color:#555;
-  line-height:1.4;
+  line-height:1.35;
   word-break:break-word;
-  margin-bottom:8px;
+  margin-bottom:7px;
 }
 
 .detail-link{
   display:inline-block;
-  margin-top:10px;
+  margin-top:8px;
   color:white;
   background:#007aff;
   text-decoration:none;
-  border-radius:16px;
-  padding:12px 16px;
-  font-size:16px;
+  border-radius:15px;
+  padding:11px 14px;
+  font-size:15px;
   font-weight:900;
 }
 
@@ -295,19 +300,19 @@ input[type="range"]{
   border:none;
   background:#007aff;
   color:white;
-  border-radius:16px;
-  padding:14px;
-  font-size:17px;
+  border-radius:15px;
+  padding:13px;
+  font-size:16px;
   font-weight:900;
-  margin-top:14px;
+  margin-top:12px;
 }
 
 @media (max-width:380px){
   .top{
-    left:8px;
-    right:8px;
-    padding:12px;
-    border-radius:22px;
+    left:7px;
+    right:7px;
+    padding:10px;
+    border-radius:19px;
   }
 
   .top-header{
@@ -315,8 +320,8 @@ input[type="range"]{
   }
 
   .filter-toggle{
-    padding:9px 10px;
-    font-size:13px;
+    padding:8px 9px;
+    font-size:12px;
   }
 
   .controls{
@@ -329,9 +334,13 @@ input[type="range"]{
   }
 
   .card{
-    width:82vw;
-    min-width:82vw;
-    height:230px;
+    width:62vw;
+    min-width:62vw;
+    height:158px;
+  }
+
+  .card-image{
+    height:42px;
   }
 }
 
@@ -339,7 +348,7 @@ input[type="range"]{
   .top{
     left:24px;
     right:auto;
-    width:430px;
+    width:390px;
   }
 
   .cards{
@@ -348,7 +357,7 @@ input[type="range"]{
   }
 
   .card{
-    width:320px;
-    min-width:320px;
+    width:240px;
+    min-width:240px;
   }
 }
