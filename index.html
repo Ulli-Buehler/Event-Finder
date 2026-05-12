@@ -17,7 +17,7 @@
 
   <link
     rel="stylesheet"
-    href="style.css?v=8004"
+    href="style.css?v=8006"
   />
 </head>
 
@@ -49,27 +49,7 @@
 
       <div class="controls">
 
-        <select id="dateSelect">
-
-          <option value="all">
-            Alle geladenen Events
-          </option>
-
-          <option value="today">
-            Heute
-          </option>
-
-          <option value="tomorrow">
-            Morgen
-          </option>
-
-          <option value="sunday" selected>
-            Zieldatum / Sonntag
-          </option>
-
-        </select>
-
-        <div class="radius-control">
+        <div class="radius-control full">
 
           <div id="radiusLabel">
             40 km
@@ -88,8 +68,12 @@
       </div>
 
       <button id="refreshBtn">
-        🔄 Events aktualisieren
+        🔄 Import aktualisieren
       </button>
+
+      <div id="lastUpdateInfo" class="last-update-info">
+        Letztes Update: unbekannt
+      </div>
 
     </div>
 
@@ -106,7 +90,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-  <script src="app.js?v=8004"></script>
+  <script src="app.js?v=8006"></script>
 
 </body>
 </html>
