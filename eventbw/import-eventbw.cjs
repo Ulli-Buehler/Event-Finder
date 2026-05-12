@@ -70,7 +70,7 @@ const REGIONAL_CITIES = [
   'Grafenberg',
   'Riederich',
 
-  // Esslingen / Stuttgart / Remstal
+  // Esslingen / Filder / Stuttgart-Rand
   'Esslingen am Neckar',
   'Filderstadt',
   'Leinfelden-Echterdingen',
@@ -87,40 +87,8 @@ const REGIONAL_CITIES = [
   'Weinstadt',
   'Remshalden',
   'Schorndorf',
-  'Schwäbisch Gmünd',
-  'Lorch',
-  'Welzheim',
-  'Adelberg',
-  'Plüderhausen',
-  'Urbach',
-  'Winterbach',
-  'Rudersberg',
 
-  // Stuttgart / Böblingen / Leonberg
-  'Stuttgart',
-  'Sindelfingen',
-  'Böblingen',
-  'Leonberg',
-  'Gerlingen',
-  'Ditzingen',
-  'Korntal-Münchingen',
-  'Ludwigsburg',
-  'Kornwestheim',
-  'Vaihingen an der Enz',
-
-  // Schönbuch / südwestlich
-  'Waldenbuch',
-  'Steinenbronn',
-  'Leinfelden',
-  'Echterdingen',
-  'Holzgerlingen',
-  'Herrenberg',
-  'Weil der Stadt',
-  'Magstadt',
-  'Renningen',
-  'Weil im Schönbuch',
-
-  // Reutlingen / Ermstal / Alb
+  // Reutlingen / Ermstal / Alb-Nähe
   'Metzingen',
   'Bad Urach',
   'Römerstein',
@@ -168,10 +136,6 @@ const REGIONAL_CITIES = [
   'Merklingen',
   'Westerheim',
   'Heroldstatt',
-
-  // Nordschwarzwald-Rand
-  'Calw',
-  'Bad Liebenzell',
 ];
 
 function decodeHtml(value) {
@@ -587,6 +551,91 @@ function summaryToText(meta, pages, cityStatsForTargetDate) {
   ].join('\n');
 }
 
+
+const GEO_CACHE_FILE = path.join(OUT_DIR, 'geo-cache.json');
+
+async function loadGeoCache() {
+  try {
+    const raw = await fs.readFile(GEO_CACHE_FILE, 'utf8');
+    return JSON.parse(raw);
+  } catch {
+    return {};
+  }
+}
+
+async function saveGeoCache(cache) {
+  await fs.writeFile(
+    GEO_CACHE_FILE,
+    JSON.stringify(cache, null, 2),
+    'utf8'
+  );
+}
+
+async function geocodeCity(city) {
+  if (!city) return null;
+
+  const query =
+    encodeURIComponent(city + ', Baden-Württemberg, Germany');
+
+  const url =
+    `https://nominatim.openstreetmap.org/search?q=${query}&format=json&limit=1`;
+
+  const response = await fetch(url, {
+    headers: {
+      'user-agent': USER_AGENT,
+      accept: 'application/json',
+    },
+  });
+
+  if (!response.ok) {
+    return null;
+  }
+
+  const data = await response.json();
+
+  if (!Array.isArray(data) || !data.length) {
+    return null;
+  }
+
+  return {
+    lat: Number(data[0].lat),
+    lng: Number(data[0].lon),
+  };
+}
+
+async function enrichEventsWithGeo(events) {
+  const cache = await loadGeoCache();
+
+  for (const event of events) {
+    const cityKey = normalizeText(event.city);
+
+    if (!cityKey) continue;
+
+    if (cache[cityKey]) {
+      event.lat = cache[cityKey].lat;
+      event.lng = cache[cityKey].lng;
+      continue;
+    }
+
+    console.log('Geocode:', event.city);
+
+    const geo = await geocodeCity(event.city);
+
+    if (geo) {
+      cache[cityKey] = geo;
+
+      event.lat = geo.lat;
+      event.lng = geo.lng;
+
+      await new Promise(resolve => setTimeout(resolve, 1200));
+    }
+  }
+
+  await saveGeoCache(cache);
+
+  return events;
+}
+
 async function main() {
   const startedAt = new Date().toISOString();
   const targetDate = targetSundayIso();
@@ -604,8 +653,15 @@ async function main() {
 
   const rawEvents = sortEvents(dedupeEvents(collected));
   const targetDateEvents = sortEvents(rawEvents.filter(event => touchesDate(event, targetDate)));
-  const regionalEvents = sortEvents(targetDateEvents.filter(event => isRegionalCity(event.city)));
-  const nonRegionalEvents = sortEvents(targetDateEvents.filter(event => !isRegionalCity(event.city)));
+  const regionalEvents = await enrichEventsWithGeo(
+    sortEvents(
+      targetDateEvents.filter(event => isRegionalCity(event.city))
+    )
+  );
+
+  const nonRegionalEvents = sortEvents(
+    targetDateEvents.filter(event => !isRegionalCity(event.city))
+  );
 
   const cityStatsForTargetDate = cityStats(targetDateEvents);
 
