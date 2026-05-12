@@ -62,7 +62,6 @@ body{
 
 .top.compact .top-title-block,
 .top.compact .event-meta,
-.top.compact #importStatus,
 .top.compact .filter-panel{
   display:none !important;
 }
@@ -121,28 +120,6 @@ body{
   display:block;
 }
 
-.controls{
-  display:flex;
-  gap:8px;
-  align-items:center;
-}
-
-select{
-  min-width:0;
-  width:52%;
-  border:none;
-  background:#f2f2f7;
-  border-radius:13px;
-  padding:10px;
-  font-size:14px;
-  font-weight:800;
-}
-
-.radius-control{
-  flex:1;
-  min-width:100px;
-}
-
 .radius-control.full{
   width:100%;
 }
@@ -156,75 +133,17 @@ input[type="range"]{
   width:100%;
 }
 
-#refreshBtn{
-  margin-top:10px;
-  width:100%;
-  border:none;
-  background:#007aff;
-  color:white;
-  padding:11px 14px;
-  border-radius:15px;
-  font-size:15px;
-  font-weight:900;
-}
-
-#refreshBtn:disabled{
-  opacity:.55;
-}
-
-#importStatus{
-  margin-top:7px;
+.last-update-info{
+  margin-top:8px;
   font-size:12px;
   color:#666;
   font-weight:800;
-}
-
-.import-status.loading,
-.import-status.starting,
-.import-status.running{
-  color:#007aff !important;
-}
-
-.import-status.ok{
-  color:#248a3d !important;
-}
-
-.import-status.warning{
-  color:#b26a00 !important;
-}
-
-.import-status.error{
-  color:#d70015 !important;
 }
 
 .event-meta{
   margin-top:7px;
   font-size:15px;
   font-weight:900;
-}
-
-.category-bar{
-  display:flex;
-  gap:7px;
-  overflow-x:auto;
-  margin-top:9px;
-  padding-bottom:2px;
-}
-
-.category-btn{
-  border:none;
-  background:#f2f2f7;
-  border-radius:999px;
-  padding:9px 12px;
-  white-space:nowrap;
-  font-size:13px;
-  font-weight:800;
-  color:#007aff;
-}
-
-.category-btn.active{
-  background:#007aff;
-  color:white;
 }
 
 .cards{
@@ -402,29 +321,11 @@ input[type="range"]{
     padding:0;
   }
 
-  .top-header{
-    gap:6px;
-  }
-
-  .filter-toggle{
-    padding:8px 9px;
-    font-size:12px;
-  }
-
   .top.compact .filter-toggle{
     width:44px;
     height:44px;
     font-size:20px;
     line-height:44px;
-  }
-
-  .controls{
-    flex-direction:column;
-    align-items:stretch;
-  }
-
-  select{
-    width:100%;
   }
 
   .card{
@@ -460,12 +361,4 @@ input[type="range"]{
     width:240px;
     min-width:240px;
   }
-}
-
-#importStatus:empty{
-  display:none;
-}
-
-.sunday-note{
-  font-weight:900;
 }
