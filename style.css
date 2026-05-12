@@ -256,12 +256,22 @@ input[type="range"]{
   transform:translateY(0);
 }
 
+.sheet.dragging{
+  transition:none;
+}
+
 .sheet-handle{
   width:44px;
   height:5px;
   background:#d1d1d6;
   border-radius:99px;
   margin:0 auto 14px;
+  touch-action:none;
+  cursor:grab;
+}
+
+.sheet-handle:active{
+  cursor:grabbing;
 }
 
 .sheet h2{
@@ -362,4 +372,3 @@ input[type="range"]{
     min-width:240px;
   }
 }
-
