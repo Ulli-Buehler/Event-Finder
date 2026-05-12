@@ -38,6 +38,12 @@
  * - eventbw/debug-output.txt
  * - eventbw/feste-maerkte.json
  * - eventbw/feste-maerkte.txt
+ * - eventbw/html/list-maerkte-page1.html
+ * - eventbw/html/list-feste-page1.html
+ * - eventbw/html/detail-sample-1.html
+ * - eventbw/html/detail-sample-2.html
+ * - eventbw/html/detail-sample-3.html
+ * - eventbw/html/geo-km-scan.txt
  */
 
 const fs = require('node:fs/promises');
@@ -45,6 +51,7 @@ const path = require('node:path');
 
 const BASE_URL = 'https://www.veranstaltung-baden-wuerttemberg.de';
 const OUT_DIR = path.resolve(process.cwd(), 'eventbw');
+const HTML_DEBUG_DIR = path.join(OUT_DIR, 'html');
 
 const SEARCH_PLACE = process.env.EVENTBW_SEARCH_PLACE || 'Dettingen Teck';
 const MAX_PAGES_PER_CATEGORY = Number(process.env.EVENTBW_MAX_PAGES_PER_CATEGORY || 300);
@@ -419,6 +426,16 @@ async function collectCategory(categoryConfig, targetDate) {
 
     try {
       const html = await fetchHtml(sourceUrl);
+
+      if (page === 1) {
+        await fs.mkdir(HTML_DEBUG_DIR, { recursive: true });
+        await fs.writeFile(
+          path.join(HTML_DEBUG_DIR, `list-${categoryConfig.category}-page1.html`),
+          html,
+          'utf8'
+        );
+      }
+
       const pageEvents = extractEventsFromHtml(html, categoryConfig, page, sourceUrl, targetDate);
       const reportedCount = page === 1 ? extractCount(html) : null;
 
@@ -539,11 +556,115 @@ function summaryToText(meta, pages) {
   ].join('\n');
 }
 
+
+function scanHtmlForGeoKm(name, url, html) {
+  const patterns = [
+    'lat',
+    'lng',
+    'lon',
+    'latitude',
+    'longitude',
+    'geo',
+    'geolocation',
+    'maps',
+    'google',
+    'map',
+    'distance',
+    'distanz',
+    'km',
+    'schema.org',
+    'GeoCoordinates',
+    'location',
+    'address',
+  ];
+
+  const lower = html.toLowerCase();
+  const hits = [];
+
+  for (const pattern of patterns) {
+    const index = lower.indexOf(pattern.toLowerCase());
+
+    if (index >= 0) {
+      const start = Math.max(0, index - 180);
+      const end = Math.min(html.length, index + 360);
+
+      hits.push({
+        pattern,
+        index,
+        snippet: cleanText(html.slice(start, end)),
+      });
+    }
+  }
+
+  return {
+    name,
+    url,
+    length: html.length,
+    hits,
+  };
+}
+
+async function saveDetailHtmlSamples(events) {
+  await fs.mkdir(HTML_DEBUG_DIR, { recursive: true });
+
+  const samples = events.slice(0, 3);
+  const scans = [];
+
+  for (let i = 0; i < samples.length; i++) {
+    const event = samples[i];
+
+    try {
+      const html = await fetchHtml(event.detailUrl);
+      const fileName = `detail-sample-${i + 1}.html`;
+
+      await fs.writeFile(path.join(HTML_DEBUG_DIR, fileName), html, 'utf8');
+
+      scans.push(scanHtmlForGeoKm(fileName, event.detailUrl, html));
+    } catch (err) {
+      scans.push({
+        name: `detail-sample-${i + 1}.html`,
+        url: event.detailUrl,
+        error: String(err.message || err),
+      });
+    }
+  }
+
+  return scans;
+}
+
+async function scanListSnapshotsForGeoKm(targetDate) {
+  const scans = [];
+
+  for (const categoryConfig of CATEGORIES) {
+    const url = buildSearchUrl(categoryConfig, targetDate, 1);
+
+    try {
+      const html = await fetchHtml(url);
+      const fileName = `list-${categoryConfig.category}-page1.html`;
+
+      await fs.mkdir(HTML_DEBUG_DIR, { recursive: true });
+      await fs.writeFile(path.join(HTML_DEBUG_DIR, fileName), html, 'utf8');
+
+      scans.push(scanHtmlForGeoKm(fileName, url, html));
+    } catch (err) {
+      scans.push({
+        name: `list-${categoryConfig.category}-page1.html`,
+        url,
+        error: String(err.message || err),
+      });
+    }
+  }
+
+  return scans;
+}
+
+
 async function main() {
   const startedAt = new Date().toISOString();
   const targetDate = targetSundayIso();
 
   await fs.mkdir(OUT_DIR, { recursive: true });
+  await fs.mkdir(HTML_DEBUG_DIR, { recursive: true });
 
   const allPages = [];
   const collected = [];
@@ -556,6 +677,32 @@ async function main() {
 
   const rawEvents = sortEvents(dedupeEvents(collected));
   const targetDateEvents = sortEvents(rawEvents.filter(e => e.touchesTargetDate));
+
+  const listGeoKmScans = await scanListSnapshotsForGeoKm(targetDate);
+  const detailGeoKmScans = await saveDetailHtmlSamples(rawEvents);
+  const geoKmScan = {
+    generatedAt: new Date().toISOString(),
+    note: 'Debug scan only: checks raw HTML for possible geo/km data without parsing or calculating distance.',
+    listGeoKmScans,
+    detailGeoKmScans,
+  };
+
+  await fs.writeFile(
+    path.join(HTML_DEBUG_DIR, 'geo-km-scan.json'),
+    JSON.stringify(geoKmScan, null, 2),
+    'utf8'
+  );
+
+  await fs.writeFile(
+    path.join(HTML_DEBUG_DIR, 'geo-km-scan.txt'),
+    [
+      'EventBW Geo/KM HTML Scan',
+      '',
+      JSON.stringify(geoKmScan, null, 2),
+      '',
+    ].join('\n'),
+    'utf8'
+  );
 
   const meta = {
     source: BASE_URL,
@@ -596,6 +743,7 @@ async function main() {
     pages: allPages,
     rawEvents,
     targetDateEvents,
+    geoKmScan,
   };
 
   await fs.writeFile(path.join(OUT_DIR, '01-raw-import.json'), JSON.stringify({ meta, events: rawEvents }, null, 2), 'utf8');
