@@ -16,7 +16,7 @@ on:
         default: '40'
         type: string
   schedule:
-    - cron: '15 5 * * *'
+    - cron: '55 4 * * *'
 
 permissions:
   contents: write
@@ -59,7 +59,8 @@ jobs:
             eventbw/debug-output.json \
             eventbw/debug-output.txt \
             eventbw/feste-maerkte.json \
-            eventbw/feste-maerkte.txt
+            eventbw/feste-maerkte.txt \
+            eventbw/geo-cache.json
           do
             if [[ -f "$file" ]]; then
               git add "$file"
