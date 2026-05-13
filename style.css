@@ -390,19 +390,26 @@ input[type="range"]{
 }
 
 
-.cards::after{
-  content:"";
-  flex:0 0 calc(44vw - 10px);
+
+
+
+.cards-end-spacer{
+  flex:0 0 calc(100vw - min(56vw,230px) - 20px);
+  min-width:calc(100vw - min(56vw,230px) - 20px);
+  height:1px;
+  pointer-events:none;
 }
 
 @media (max-width:380px){
-  .cards::after{
-    flex-basis:calc(38vw - 10px);
+  .cards-end-spacer{
+    flex-basis:calc(100vw - 62vw - 20px);
+    min-width:calc(100vw - 62vw - 20px);
   }
 }
 
 @media (min-width:700px){
-  .cards::after{
-    flex-basis:260px;
+  .cards-end-spacer{
+    flex-basis:calc(100vw - 240px - 48px);
+    min-width:calc(100vw - 240px - 48px);
   }
 }
