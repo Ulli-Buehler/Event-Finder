@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v14-easy-drag-sheet");
+console.log("APP VERSION: eventbw-json-v15-full-sheet-drag");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -75,10 +75,6 @@ sheet.innerHTML = `
   <a id="sheet-link" class="detail-link" href="#" target="_blank" rel="noopener">
     Details öffnen
   </a>
-
-  <button class="sheet-close">
-    Schließen
-  </button>
 `;
 
 document.body.appendChild(sheet);
@@ -330,6 +326,12 @@ function getPointerY(event) {
 }
 
 function startSheetDrag(event) {
+  const interactiveTarget = event.target.closest("a, button");
+
+  if (interactiveTarget) {
+    return;
+  }
+
   sheetDragging = true;
   document.body.classList.add("no-select");
   sheetDragStartY = getPointerY(event);
@@ -370,16 +372,12 @@ function endSheetDrag() {
   resetSheetPosition();
 }
 
-const sheetDragZone = sheet.querySelector(".sheet-drag-zone");
-
-sheet.querySelector(".sheet-close").onclick = closeSheet;
-
-sheetDragZone.addEventListener("pointerdown", startSheetDrag);
+sheet.addEventListener("pointerdown", startSheetDrag);
 sheet.addEventListener("pointermove", moveSheetDrag);
 sheet.addEventListener("pointerup", endSheetDrag);
 sheet.addEventListener("pointercancel", endSheetDrag);
 
-sheetDragZone.addEventListener("touchstart", startSheetDrag, { passive: false });
+sheet.addEventListener("touchstart", startSheetDrag, { passive: false });
 sheet.addEventListener("touchmove", moveSheetDrag, { passive: false });
 sheet.addEventListener("touchend", endSheetDrag);
 sheet.addEventListener("touchcancel", endSheetDrag);
