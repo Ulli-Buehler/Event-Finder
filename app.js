@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v17-fixed-scroll-cron-test");
+console.log("APP VERSION: eventbw-json-v18-stale-warning");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -216,8 +216,38 @@ function updateLastUpdateInfo() {
       ? importMeta.finishedAt
       : "";
 
-  lastUpdateInfo.innerText =
-    "Letztes Update: " + formatUpdateTime(finishedAt);
+  lastUpdateInfo.classList.remove("fresh", "stale");
+
+  if (!finishedAt) {
+    lastUpdateInfo.classList.add("stale");
+    lastUpdateInfo.innerText =
+      "⚠️ Datenstand unbekannt";
+    return;
+  }
+
+  const finishedDate = new Date(finishedAt);
+
+  if (Number.isNaN(finishedDate.getTime())) {
+    lastUpdateInfo.classList.add("stale");
+    lastUpdateInfo.innerText =
+      "⚠️ Datenstand unbekannt";
+    return;
+  }
+
+  const ageHours =
+    (Date.now() - finishedDate.getTime()) / 36e5;
+
+  if (ageHours > 18) {
+    lastUpdateInfo.classList.add("stale");
+    lastUpdateInfo.innerText =
+      "⚠️ Daten möglicherweise veraltet: " +
+      formatUpdateTime(finishedAt);
+  } else {
+    lastUpdateInfo.classList.add("fresh");
+    lastUpdateInfo.innerText =
+      "Letztes Update: " +
+      formatUpdateTime(finishedAt);
+  }
 }
 
 function normalizeEvent(raw, index) {
