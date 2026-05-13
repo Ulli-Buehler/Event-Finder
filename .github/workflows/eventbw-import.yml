@@ -59,8 +59,7 @@ jobs:
             eventbw/debug-output.json \
             eventbw/debug-output.txt \
             eventbw/feste-maerkte.json \
-            eventbw/feste-maerkte.txt \
-            eventbw/geo-cache.json
+            eventbw/feste-maerkte.txt
           do
             if [[ -f "$file" ]]; then
               git add "$file"
