@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v18-scroll-active-card");
+console.log("APP VERSION: eventbw-json-v16-sheet-drag-anywhere");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -130,14 +130,21 @@ function clearMarkers() {
 }
 
 function fitRadiusIntoView() {
-  const zoomByRadius =
-    radiusKm <= 30 ? 10 :
-    radiusKm <= 55 ? 9 :
-    radiusKm <= 85 ? 8 :
-    7;
+  const cardsHeight =
+    cards && cards.offsetHeight
+      ? cards.offsetHeight + 26
+      : 190;
 
-  map.setView(userPos, zoomByRadius, {
-    animate: true
+  const topHeight =
+    topPanel && !topPanel.classList.contains("compact")
+      ? topPanel.offsetHeight + 18
+      : 70;
+
+  map.fitBounds(radiusCircle.getBounds(), {
+    paddingTopLeft: [20, topHeight],
+    paddingBottomRight: [20, cardsHeight],
+    animate: true,
+    duration: 0.25,
   });
 }
 
@@ -454,59 +461,6 @@ function setActiveMarker(marker) {
   }
 }
 
-
-let cardScrollSyncTimer = null;
-
-function activeCardIndexFromScroll() {
-  const cardList = [...cards.querySelectorAll(".card")];
-
-  if (!cardList.length) {
-    return -1;
-  }
-
-  const targetLeft = cards.scrollLeft;
-  let bestIndex = 0;
-  let bestDistance = Number.POSITIVE_INFINITY;
-
-  cardList.forEach((card, index) => {
-    const distance = Math.abs(card.offsetLeft - targetLeft);
-
-    if (distance < bestDistance) {
-      bestDistance = distance;
-      bestIndex = index;
-    }
-  });
-
-  return bestIndex;
-}
-
-function syncActiveMarkerToScroll() {
-  const index = activeCardIndexFromScroll();
-
-  if (index >= 0 && markers[index]) {
-    setActiveMarker(markers[index]);
-  }
-}
-
-function setupCardScrollSync() {
-  if (cardScrollSyncTimer) {
-    clearTimeout(cardScrollSyncTimer);
-    cardScrollSyncTimer = null;
-  }
-
-  cards.onscroll = () => {
-    if (cardScrollSyncTimer) {
-      clearTimeout(cardScrollSyncTimer);
-    }
-
-    cardScrollSyncTimer = setTimeout(() => {
-      syncActiveMarkerToScroll();
-    }, 80);
-  };
-
-  requestAnimationFrame(syncActiveMarkerToScroll);
-}
-
 function render() {
   closeSheet();
 
@@ -567,10 +521,11 @@ function render() {
     card.onclick = () => {
       setActiveMarker(marker);
 
-      card.scrollIntoView({
-        behavior: "smooth",
-        inline: "start",
-        block: "nearest"
+      map.panTo([
+        event.lat,
+        event.lng
+      ], {
+        animate: true
       });
 
       openSheet(event);
@@ -602,20 +557,42 @@ function render() {
     cards.appendChild(card);
   });
 
-  if (visibleEvents.length > 0) {
-    const endSpacer = document.createElement("div");
-    endSpacer.className = "cards-end-spacer";
-    endSpacer.setAttribute("aria-hidden", "true");
-    cards.appendChild(endSpacer);
-  }
-
   if (markers.length > 0) {
     setActiveMarker(markers[0]);
   }
 
 
-  setupCardScrollSync(visibleEvents);
+  requestAnimationFrame(() => {
+    const cardList = [...cards.querySelectorAll(".card")];
 
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        const index = cardList.indexOf(entry.target);
+
+        if (index >= 0 && markers[index]) {
+          setActiveMarker(markers[index]);
+
+          const event = visibleEvents[index];
+
+          if (event && event.hasLocation) {
+            map.panTo([
+              event.lat,
+              event.lng
+            ], {
+              animate: true
+            });
+          }
+        }
+      });
+    }, {
+      root: cards,
+      threshold: 0.75
+    });
+
+    cardList.forEach(card => observer.observe(card));
+  });
 
 
   if (visibleEvents.length === 0) {
