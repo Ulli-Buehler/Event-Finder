@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v17-start-zoom-last-card");
+console.log("APP VERSION: eventbw-json-v18-scroll-active-card");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -454,6 +454,59 @@ function setActiveMarker(marker) {
   }
 }
 
+
+let cardScrollSyncTimer = null;
+
+function activeCardIndexFromScroll() {
+  const cardList = [...cards.querySelectorAll(".card")];
+
+  if (!cardList.length) {
+    return -1;
+  }
+
+  const targetLeft = cards.scrollLeft;
+  let bestIndex = 0;
+  let bestDistance = Number.POSITIVE_INFINITY;
+
+  cardList.forEach((card, index) => {
+    const distance = Math.abs(card.offsetLeft - targetLeft);
+
+    if (distance < bestDistance) {
+      bestDistance = distance;
+      bestIndex = index;
+    }
+  });
+
+  return bestIndex;
+}
+
+function syncActiveMarkerToScroll() {
+  const index = activeCardIndexFromScroll();
+
+  if (index >= 0 && markers[index]) {
+    setActiveMarker(markers[index]);
+  }
+}
+
+function setupCardScrollSync() {
+  if (cardScrollSyncTimer) {
+    clearTimeout(cardScrollSyncTimer);
+    cardScrollSyncTimer = null;
+  }
+
+  cards.onscroll = () => {
+    if (cardScrollSyncTimer) {
+      clearTimeout(cardScrollSyncTimer);
+    }
+
+    cardScrollSyncTimer = setTimeout(() => {
+      syncActiveMarkerToScroll();
+    }, 80);
+  };
+
+  requestAnimationFrame(syncActiveMarkerToScroll);
+}
+
 function render() {
   closeSheet();
 
@@ -513,6 +566,13 @@ function render() {
 
     card.onclick = () => {
       setActiveMarker(marker);
+
+      card.scrollIntoView({
+        behavior: "smooth",
+        inline: "start",
+        block: "nearest"
+      });
+
       openSheet(event);
     };
 
@@ -554,27 +614,8 @@ function render() {
   }
 
 
-  requestAnimationFrame(() => {
-    const cardList = [...cards.querySelectorAll(".card")];
+  setupCardScrollSync(visibleEvents);
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-
-        const index = cardList.indexOf(entry.target);
-
-        if (index >= 0 && markers[index]) {
-          setActiveMarker(markers[index]);
-
-        }
-      });
-    }, {
-      root: cards,
-      threshold: 0.75
-    });
-
-    cardList.forEach(card => observer.observe(card));
-  });
 
 
   if (visibleEvents.length === 0) {
