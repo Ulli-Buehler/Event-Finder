@@ -16,7 +16,7 @@ on:
         default: '40'
         type: string
   schedule:
-    - cron: '5 6 * * *'
+    - cron: '35 6 * * *'
 
 permissions:
   contents: write
@@ -49,12 +49,16 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          for file in             eventbw/01-raw-import.json             eventbw/01-raw-import.txt             eventbw/02-zieldatum.json             eventbw/02-zieldatum.txt             eventbw/03-ortsfilter.json             eventbw/03-ortsfilter.txt             eventbw/debug-output.json             eventbw/debug-output.txt             eventbw/feste-maerkte.json             eventbw/feste-maerkte.txt
-          do
-            if [[ -f "$file" ]]; then
-              git add "$file"
-            fi
-          done
+          git add eventbw/01-raw-import.json
+          git add eventbw/01-raw-import.txt
+          git add eventbw/02-zieldatum.json
+          git add eventbw/02-zieldatum.txt
+          git add eventbw/03-ortsfilter.json
+          git add eventbw/03-ortsfilter.txt
+          git add eventbw/debug-output.json
+          git add eventbw/debug-output.txt
+          git add eventbw/feste-maerkte.json
+          git add eventbw/feste-maerkte.txt
 
           if [[ -n "$(git status --porcelain)" ]]; then
             git commit -m "Update EventBW import outputs"
