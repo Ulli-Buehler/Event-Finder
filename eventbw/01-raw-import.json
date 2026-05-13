@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-13T15:35:22.345Z",
-    "finishedAt": "2026-05-13T15:39:09.441Z",
+    "startedAt": "2026-05-13T16:00:38.816Z",
+    "finishedAt": "2026-05-13T16:04:16.512Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -1487,9 +1487,7 @@
       "time": "10:00 - 11:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/qi-gong-im-kurpark/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
-      "page": 11,
-      "lat": 48.5069519,
-      "lng": 8.3720124
+      "page": 11
     },
     {
       "title": "Trailwunschkonzert für Biobiker",
@@ -1566,9 +1564,7 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/45-eberbacher-fruehling/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
-      "page": 9,
-      "lat": 49.4635303,
-      "lng": 8.9855203
+      "page": 9
     },
     {
       "title": "Eberbacher Frühling",
@@ -1579,9 +1575,7 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/eberbacher-fruhling/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
-      "page": 10,
-      "lat": 49.4635303,
-      "lng": 8.9855203
+      "page": 10
     },
     {
       "title": "AOK Gesundheitstag",
@@ -1647,9 +1641,7 @@
       "time": "00:00 - 00:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinbergliebe-festival-in-hessigheim/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
-      "page": 12,
-      "lat": 48.9937553,
-      "lng": 9.1883111
+      "page": 12
     },
     {
       "title": "16. Karlsbader Rhododendrontage",
@@ -1660,9 +1652,7 @@
       "time": "10:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/16-karlsbader-rhododendrontage/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
-      "page": 11,
-      "lat": 48.9038411,
-      "lng": 8.5088293
+      "page": 11
     },
     {
       "title": "Das neue Staatstheater – Baustellenführung durch Modul 1",
@@ -2808,7 +2798,9 @@
       "time": "10:00 - 16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oldtimer-schlepper-treffen-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/",
-      "page": 19
+      "page": 19,
+      "lat": 47.993799,
+      "lng": 9.6684394
     },
     {
       "title": "Baiersbronner Bike- & Wanderhimmel-Fest",
@@ -2845,7 +2837,9 @@
       "time": "11:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wein-wandern-genuss-weinwanderevent/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/",
-      "page": 19
+      "page": 19,
+      "lat": 49.0403804,
+      "lng": 9.3137915
     },
     {
       "title": "Internationaler Museumstag im Hans-Thoma-Kunstmuseum",
@@ -2856,7 +2850,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-im-hans-thoma-kunstmuseum/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
-      "page": 20
+      "page": 20,
+      "lat": 47.8057268,
+      "lng": 8.0345882
     },
     {
       "title": "Internationaler Museumstag im Resenhof",
@@ -2867,7 +2863,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-im-resenhof/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
-      "page": 20
+      "page": 20,
+      "lat": 47.8057268,
+      "lng": 8.0345882
     },
     {
       "title": "Gutenbergs Geopoints",
@@ -2878,7 +2876,9 @@
       "time": "10:00 - 13:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gutenbergs-geopoints/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/",
-      "page": 18
+      "page": 18,
+      "lat": 48.4193304,
+      "lng": 9.4942411
     },
     {
       "title": "Schwarzwaldhof-Ingenieurfahrt",
@@ -2889,7 +2889,9 @@
       "time": "09:45 - 16:34 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schwarzwaldhof-ingenieurfahrt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/",
-      "page": 19
+      "page": 19,
+      "lat": 47.8401424,
+      "lng": 8.534081
     },
     {
       "title": "Internationaler Museumstag im Heimatmuseum",
@@ -2900,7 +2902,9 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-mit-kleiner-bewirtung-heimatmuseum-brackenheim-botenheim/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
-      "page": 20
+      "page": 20,
+      "lat": 49.0784228,
+      "lng": 9.067437
     },
     {
       "title": "Internationaler Museumstag 2026",
@@ -2911,7 +2915,9 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-2026/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/",
-      "page": 19
+      "page": 19,
+      "lat": 48.7142691,
+      "lng": 8.7397624
     },
     {
       "title": "Tag des Wanderns: Auf den Spuren der DonauWelle",
@@ -2922,7 +2928,9 @@
       "time": "13:00 - 16:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-des-wanderns-auf-den-spuren-der-donauwelle/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
-      "page": 20
+      "page": 20,
+      "lat": 48.1129533,
+      "lng": 8.8906795
     },
     {
       "title": "Kaffee und Kuchen-Fahrt im Überlinger See",
@@ -2944,7 +2952,9 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wein-wiese-weinwanderevent/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
-      "page": 20
+      "page": 20,
+      "lat": 49.1005935,
+      "lng": 9.2138586
     },
     {
       "title": "Internationaler Museumstag im Murgtalmuseum Bermersbach",
@@ -2955,7 +2965,9 @@
       "time": "13:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-im-murgtalmuseum-bermersbach/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
-      "page": 21
+      "page": 21,
+      "lat": 48.6790385,
+      "lng": 8.3594916
     },
     {
       "title": "Traktorenfest der Kolpingsfamilie Rotzingen",
@@ -2966,7 +2978,9 @@
       "time": "10:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/traktorenfest-der-kolpingsfamilie-rotzingen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
-      "page": 20
+      "page": 20,
+      "lat": 47.6411618,
+      "lng": 8.0784862
     },
     {
       "title": "Albtag - der Familientag",
@@ -2977,7 +2991,9 @@
       "time": "10:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/albtag-der-familientag/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/",
-      "page": 18
+      "page": 18,
+      "lat": 48.3472808,
+      "lng": 9.3548059
     },
     {
       "title": "Internationaler Museumstag in Hüfingen",
@@ -3223,8 +3239,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-museen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/",
       "page": 19,
-      "lat": 47.9232677,
-      "lng": 9.2500203
+      "lat": 47.924349,
+      "lng": 9.2559822
     },
     {
       "title": "Jugendvorspiel der Nachwuchstalente des Musikvereins Seebach",
