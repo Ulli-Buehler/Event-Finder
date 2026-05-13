@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v15-full-sheet-drag");
+console.log("APP VERSION: eventbw-json-v16-fixed-center-card-end");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -520,14 +520,6 @@ function render() {
 
     card.onclick = () => {
       setActiveMarker(marker);
-
-      map.panTo([
-        event.lat,
-        event.lng
-      ], {
-        animate: true
-      });
-
       openSheet(event);
     };
 
@@ -574,16 +566,6 @@ function render() {
         if (index >= 0 && markers[index]) {
           setActiveMarker(markers[index]);
 
-          const event = visibleEvents[index];
-
-          if (event && event.hasLocation) {
-            map.panTo([
-              event.lat,
-              event.lng
-            ], {
-              animate: true
-            });
-          }
         }
       });
     }, {
