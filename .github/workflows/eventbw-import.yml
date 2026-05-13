@@ -16,7 +16,7 @@ on:
         default: '40'
         type: string
   schedule:
-    - cron: '25 5 * * *'
+    - cron: '5 6 * * *'
 
 permissions:
   contents: write
@@ -49,17 +49,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          for file in \
-            eventbw/01-raw-import.json \
-            eventbw/01-raw-import.txt \
-            eventbw/02-zieldatum.json \
-            eventbw/02-zieldatum.txt \
-            eventbw/03-ortsfilter.json \
-            eventbw/03-ortsfilter.txt \
-            eventbw/debug-output.json \
-            eventbw/debug-output.txt \
-            eventbw/feste-maerkte.json \
-            eventbw/feste-maerkte.txt
+          for file in             eventbw/01-raw-import.json             eventbw/01-raw-import.txt             eventbw/02-zieldatum.json             eventbw/02-zieldatum.txt             eventbw/03-ortsfilter.json             eventbw/03-ortsfilter.txt             eventbw/debug-output.json             eventbw/debug-output.txt             eventbw/feste-maerkte.json             eventbw/feste-maerkte.txt
           do
             if [[ -f "$file" ]]; then
               git add "$file"
