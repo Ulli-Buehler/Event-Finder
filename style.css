@@ -252,6 +252,8 @@ input[type="range"]{
   overflow:auto;
   user-select:none;
   -webkit-user-select:none;
+  touch-action:none;
+  cursor:grab;
 }
 
 .sheet.open{
@@ -268,13 +270,12 @@ input[type="range"]{
   align-items:center;
   justify-content:center;
   margin:0 -18px 2px;
-  touch-action:none;
-  cursor:grab;
+  pointer-events:none;
   user-select:none;
   -webkit-user-select:none;
 }
 
-.sheet-drag-zone:active{
+.sheet:active{
   cursor:grabbing;
 }
 
@@ -314,17 +315,7 @@ input[type="range"]{
   font-weight:900;
 }
 
-.sheet-close{
-  width:100%;
-  border:none;
-  background:#007aff;
-  color:white;
-  border-radius:15px;
-  padding:13px;
-  font-size:16px;
-  font-weight:900;
-  margin-top:12px;
-}
+
 
 @media (max-width:380px){
   .top{
@@ -389,4 +380,11 @@ input[type="range"]{
 .no-select *{
   user-select:none !important;
   -webkit-user-select:none !important;
+}
+
+
+.sheet a,
+.sheet button{
+  touch-action:manipulation;
+  cursor:pointer;
 }
