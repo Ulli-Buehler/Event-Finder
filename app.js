@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v13-drag-sheet");
+console.log("APP VERSION: eventbw-json-v14-easy-drag-sheet");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -60,7 +60,9 @@ const sheet = document.createElement("div");
 sheet.className = "sheet";
 
 sheet.innerHTML = `
-  <div class="sheet-handle"></div>
+  <div class="sheet-drag-zone">
+    <div class="sheet-handle"></div>
+  </div>
 
   <h2 id="sheet-title"></h2>
 
@@ -302,6 +304,7 @@ function openSheet(event) {
 }
 
 function closeSheet() {
+  document.body.classList.remove("no-select");
   sheet.classList.remove("open");
   sheet.classList.remove("dragging");
   sheet.style.transform = "";
@@ -328,6 +331,7 @@ function getPointerY(event) {
 
 function startSheetDrag(event) {
   sheetDragging = true;
+  document.body.classList.add("no-select");
   sheetDragStartY = getPointerY(event);
   sheetDragCurrentY = 0;
 
@@ -356,6 +360,7 @@ function endSheetDrag() {
   if (!sheetDragging) return;
 
   sheetDragging = false;
+  document.body.classList.remove("no-select");
 
   if (sheetDragCurrentY > 90) {
     closeSheet();
@@ -365,16 +370,16 @@ function endSheetDrag() {
   resetSheetPosition();
 }
 
-const sheetHandle = sheet.querySelector(".sheet-handle");
+const sheetDragZone = sheet.querySelector(".sheet-drag-zone");
 
 sheet.querySelector(".sheet-close").onclick = closeSheet;
 
-sheetHandle.addEventListener("pointerdown", startSheetDrag);
+sheetDragZone.addEventListener("pointerdown", startSheetDrag);
 sheet.addEventListener("pointermove", moveSheetDrag);
 sheet.addEventListener("pointerup", endSheetDrag);
 sheet.addEventListener("pointercancel", endSheetDrag);
 
-sheetHandle.addEventListener("touchstart", startSheetDrag, { passive: false });
+sheetDragZone.addEventListener("touchstart", startSheetDrag, { passive: false });
 sheet.addEventListener("touchmove", moveSheetDrag, { passive: false });
 sheet.addEventListener("touchend", endSheetDrag);
 sheet.addEventListener("touchcancel", endSheetDrag);
