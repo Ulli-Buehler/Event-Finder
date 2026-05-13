@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-13T18:00:48.170Z",
-    "finishedAt": "2026-05-13T18:04:42.233Z",
+    "startedAt": "2026-05-13T19:00:32.872Z",
+    "finishedAt": "2026-05-13T19:04:22.825Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -372,7 +372,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/blumen-und-lichterfest/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
-      "page": 3
+      "page": 3,
+      "lat": 49.5833,
+      "lng": 9.36667
     },
     {
       "title": "Kunst trifft Handwerk",
@@ -383,7 +385,9 @@
       "time": "14:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kunst-trifft-handwerk-3/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
-      "page": 12
+      "page": 12,
+      "lat": 47.5527459,
+      "lng": 7.9410556
     },
     {
       "title": "Qi Gong im Kurpark",
@@ -394,7 +398,9 @@
       "time": "10:00 - 11:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/qi-gong-im-kurpark/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
-      "page": 11
+      "page": 11,
+      "lat": 48.5069519,
+      "lng": 8.3720124
     },
     {
       "title": "45. Eberbacher Frühling",
@@ -405,7 +411,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/45-eberbacher-fruehling/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
-      "page": 9
+      "page": 9,
+      "lat": 49.4635303,
+      "lng": 8.9855203
     },
     {
       "title": "Eberbacher Frühling",
@@ -416,7 +424,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/eberbacher-fruhling/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
-      "page": 10
+      "page": 10,
+      "lat": 49.4635303,
+      "lng": 8.9855203
     },
     {
       "title": "Weinbergliebe - Festival in Hessigheim",
@@ -427,7 +437,9 @@
       "time": "00:00 - 00:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinbergliebe-festival-in-hessigheim/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
-      "page": 12
+      "page": 12,
+      "lat": 48.9937553,
+      "lng": 9.1883111
     },
     {
       "title": "16. Karlsbader Rhododendrontage",
@@ -438,7 +450,9 @@
       "time": "10:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/16-karlsbader-rhododendrontage/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
-      "page": 11
+      "page": 11,
+      "lat": 48.9038411,
+      "lng": 8.5088293
     },
     {
       "title": "NADELWELT",
@@ -649,7 +663,9 @@
       "time": "09:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/baiersbronner-bike-wanderhimmel-fest/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/",
-      "page": 18
+      "page": 18,
+      "lat": 48.5069519,
+      "lng": 8.3720124
     },
     {
       "title": "Rangerführung zum Buhlbachsee",
@@ -660,7 +676,9 @@
       "time": "10:30 - 15:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/rangerfuhrung-zum-buhlbachsee/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/",
-      "page": 18
+      "page": 18,
+      "lat": 48.5069519,
+      "lng": 8.3720124
     },
     {
       "title": "Wein, Wandern & Genuss | WeinWanderEvent",
@@ -770,9 +788,7 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wein-wiese-weinwanderevent/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
-      "page": 20,
-      "lat": 49.1005935,
-      "lng": 9.2138586
+      "page": 20
     },
     {
       "title": "Internationaler Museumstag im Murgtalmuseum Bermersbach",
@@ -783,9 +799,7 @@
       "time": "13:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-im-murgtalmuseum-bermersbach/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
-      "page": 21,
-      "lat": 48.6790385,
-      "lng": 8.3594916
+      "page": 21
     },
     {
       "title": "Traktorenfest der Kolpingsfamilie Rotzingen",
@@ -796,9 +810,7 @@
       "time": "10:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/traktorenfest-der-kolpingsfamilie-rotzingen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
-      "page": 20,
-      "lat": 47.6411618,
-      "lng": 8.0784862
+      "page": 20
     },
     {
       "title": "Albtag - der Familientag",
@@ -809,9 +821,7 @@
       "time": "10:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/albtag-der-familientag/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/",
-      "page": 18,
-      "lat": 48.3472808,
-      "lng": 9.3548059
+      "page": 18
     },
     {
       "title": "Internationaler Museumstag in Hüfingen",
@@ -1005,8 +1015,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-ganz-die-alte-schule/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/17/",
       "page": 17,
-      "lat": 47.9713008,
-      "lng": 8.9284465
+      "lat": 47.9713529,
+      "lng": 8.9283473
     },
     {
       "title": "Translationsfest St. Genesius in Schienen",
@@ -1133,8 +1143,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinzeit-im-dobel/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/20/",
       "page": 20,
-      "lat": 49.1047,
-      "lng": 8.85583
+      "lat": 49.1060275,
+      "lng": 8.8597086
     },
     {
       "title": "SINFONIE IM INNENHOF - Kammerphilharmonie Bodensee-Oberschwaben",
