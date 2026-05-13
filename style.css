@@ -388,3 +388,21 @@ input[type="range"]{
   touch-action:manipulation;
   cursor:pointer;
 }
+
+
+.cards::after{
+  content:"";
+  flex:0 0 calc(44vw - 10px);
+}
+
+@media (max-width:380px){
+  .cards::after{
+    flex-basis:calc(38vw - 10px);
+  }
+}
+
+@media (min-width:700px){
+  .cards::after{
+    flex-basis:260px;
+  }
+}
