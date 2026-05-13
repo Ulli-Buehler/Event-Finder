@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v16-fixed-center-card-end");
+console.log("APP VERSION: eventbw-json-v17-start-zoom-last-card");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -130,21 +130,14 @@ function clearMarkers() {
 }
 
 function fitRadiusIntoView() {
-  const cardsHeight =
-    cards && cards.offsetHeight
-      ? cards.offsetHeight + 26
-      : 190;
+  const zoomByRadius =
+    radiusKm <= 30 ? 10 :
+    radiusKm <= 55 ? 9 :
+    radiusKm <= 85 ? 8 :
+    7;
 
-  const topHeight =
-    topPanel && !topPanel.classList.contains("compact")
-      ? topPanel.offsetHeight + 18
-      : 70;
-
-  map.fitBounds(radiusCircle.getBounds(), {
-    paddingTopLeft: [20, topHeight],
-    paddingBottomRight: [20, cardsHeight],
-    animate: true,
-    duration: 0.25,
+  map.setView(userPos, zoomByRadius, {
+    animate: true
   });
 }
 
@@ -548,6 +541,13 @@ function render() {
 
     cards.appendChild(card);
   });
+
+  if (visibleEvents.length > 0) {
+    const endSpacer = document.createElement("div");
+    endSpacer.className = "cards-end-spacer";
+    endSpacer.setAttribute("aria-hidden", "true");
+    cards.appendChild(endSpacer);
+  }
 
   if (markers.length > 0) {
     setActiveMarker(markers[0]);
