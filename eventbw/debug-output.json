@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-13T16:00:38.816Z",
-    "finishedAt": "2026-05-13T16:04:16.512Z",
+    "startedAt": "2026-05-13T17:00:38.108Z",
+    "finishedAt": "2026-05-13T17:04:28.445Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -3709,7 +3709,9 @@
       "time": "10:00 - 11:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/qi-gong-im-kurpark/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
-      "page": 11
+      "page": 11,
+      "lat": 48.5069519,
+      "lng": 8.3720124
     },
     {
       "title": "Trailwunschkonzert für Biobiker",
@@ -3786,7 +3788,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/45-eberbacher-fruehling/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
-      "page": 9
+      "page": 9,
+      "lat": 49.4635303,
+      "lng": 8.9855203
     },
     {
       "title": "Eberbacher Frühling",
@@ -3797,7 +3801,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/eberbacher-fruhling/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
-      "page": 10
+      "page": 10,
+      "lat": 49.4635303,
+      "lng": 8.9855203
     },
     {
       "title": "AOK Gesundheitstag",
@@ -3863,7 +3869,9 @@
       "time": "00:00 - 00:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinbergliebe-festival-in-hessigheim/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
-      "page": 12
+      "page": 12,
+      "lat": 48.9937553,
+      "lng": 9.1883111
     },
     {
       "title": "16. Karlsbader Rhododendrontage",
@@ -3874,7 +3882,9 @@
       "time": "10:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/16-karlsbader-rhododendrontage/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
-      "page": 11
+      "page": 11,
+      "lat": 48.9038411,
+      "lng": 8.5088293
     },
     {
       "title": "Das neue Staatstheater – Baustellenführung durch Modul 1",
@@ -4063,7 +4073,9 @@
       "time": "17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schwimmabzeichen-im-donaubad/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
-      "page": 11
+      "page": 11,
+      "lat": 48.0869139,
+      "lng": 9.2165039
     },
     {
       "title": "CARTHAGO- Band aus Slowenien, Vorgruppe: SongSlamAllstars",
@@ -4184,7 +4196,9 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/aktionstage-roter-turm-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
-      "page": 14
+      "page": 14,
+      "lat": 49.2303439,
+      "lng": 9.1621599
     },
     {
       "title": "Alice Armstrong beim Blues Club",
@@ -4261,7 +4275,9 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schafertage-mit-schafermarkt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
-      "page": 14
+      "page": 14,
+      "lat": 48.5805031,
+      "lng": 9.4044658
     },
     {
       "title": "Dunkelromantische Tanznacht",
@@ -4558,7 +4574,9 @@
       "time": "10:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tolle-wolle-auf-campus-galli/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/",
-      "page": 13
+      "page": 13,
+      "lat": 47.9939249,
+      "lng": 9.1122006
     },
     {
       "title": "Mühlacker Frühling",
@@ -4580,7 +4598,9 @@
       "time": "11:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/markgrafler-weinpromenade/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
-      "page": 16
+      "page": 16,
+      "lat": 47.810102,
+      "lng": 7.5995606
     },
     {
       "title": "Nachbarschaftsflohmarkt „Die Unterstadt räumt auf“",
@@ -4635,7 +4655,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/heimattage-2026-baden-wuerttemberg-tag/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
-      "page": 12
+      "page": 12,
+      "lat": 48.5308586,
+      "lng": 8.078657
     },
     {
       "title": "MAMMA MIA - The Ultimative ABBA Night",
@@ -4712,7 +4734,9 @@
       "time": "15:30 - 02:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/jubilaumsparty-schutzenverein-rangendingen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/17/",
-      "page": 17
+      "page": 17,
+      "lat": 48.3789351,
+      "lng": 8.8877867
     },
     {
       "title": "Dorffest Willaringen",
@@ -4723,7 +4747,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/dorffest-willaringen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
-      "page": 12
+      "page": 12,
+      "lat": 47.6209218,
+      "lng": 7.9788595
     },
     {
       "title": "Tag der Hohenhaslacher Weingüter",
@@ -4745,7 +4771,9 @@
       "time": "11:00 - 23:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-weinguter/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
-      "page": 16
+      "page": 16,
+      "lat": 48.9654062,
+      "lng": 9.0583956
     },
     {
       "title": "Taranja Wu & pADDELNoHNEkANU",
@@ -5409,8 +5437,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-ganz-die-alte-schule/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/17/",
       "page": 17,
-      "lat": 47.9713008,
-      "lng": 8.9284465
+      "lat": 47.9713529,
+      "lng": 8.9283473
     },
     {
       "title": "Translationsfest St. Genesius in Schienen",
@@ -40099,7 +40127,9 @@
       "time": "10:00 - 11:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/qi-gong-im-kurpark/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
-      "page": 11
+      "page": 11,
+      "lat": 48.5069519,
+      "lng": 8.3720124
     },
     {
       "title": "45. Eberbacher Frühling",
@@ -40110,7 +40140,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/45-eberbacher-fruehling/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
-      "page": 9
+      "page": 9,
+      "lat": 49.4635303,
+      "lng": 8.9855203
     },
     {
       "title": "Eberbacher Frühling",
@@ -40121,7 +40153,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/eberbacher-fruhling/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
-      "page": 10
+      "page": 10,
+      "lat": 49.4635303,
+      "lng": 8.9855203
     },
     {
       "title": "Weinbergliebe - Festival in Hessigheim",
@@ -40132,7 +40166,9 @@
       "time": "00:00 - 00:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinbergliebe-festival-in-hessigheim/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
-      "page": 12
+      "page": 12,
+      "lat": 48.9937553,
+      "lng": 9.1883111
     },
     {
       "title": "16. Karlsbader Rhododendrontage",
@@ -40143,7 +40179,9 @@
       "time": "10:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/16-karlsbader-rhododendrontage/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
-      "page": 11
+      "page": 11,
+      "lat": 48.9038411,
+      "lng": 8.5088293
     },
     {
       "title": "NADELWELT",
@@ -40167,7 +40205,9 @@
       "time": "17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schwimmabzeichen-im-donaubad/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
-      "page": 11
+      "page": 11,
+      "lat": 48.0869139,
+      "lng": 9.2165039
     },
     {
       "title": "Aktionstage Roter Turm",
@@ -40178,7 +40218,9 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/aktionstage-roter-turm-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
-      "page": 14
+      "page": 14,
+      "lat": 49.2303439,
+      "lng": 9.1621599
     },
     {
       "title": "Schäfertage mit Schäfermarkt",
@@ -40189,7 +40231,9 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schafertage-mit-schafermarkt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
-      "page": 14
+      "page": 14,
+      "lat": 48.5805031,
+      "lng": 9.4044658
     },
     {
       "title": "\"Tolle Wolle\" auf Campus Galli",
@@ -40200,7 +40244,9 @@
       "time": "10:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tolle-wolle-auf-campus-galli/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/",
-      "page": 13
+      "page": 13,
+      "lat": 47.9939249,
+      "lng": 9.1122006
     },
     {
       "title": "MARKGRÄFLER WEINPROMENADE",
@@ -40211,7 +40257,9 @@
       "time": "11:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/markgrafler-weinpromenade/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
-      "page": 16
+      "page": 16,
+      "lat": 47.810102,
+      "lng": 7.5995606
     },
     {
       "title": "Heimattage 2026: Baden-Württemberg-Tag",
@@ -40222,7 +40270,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/heimattage-2026-baden-wuerttemberg-tag/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
-      "page": 12
+      "page": 12,
+      "lat": 48.5308586,
+      "lng": 8.078657
     },
     {
       "title": "Jubiläumsparty - Schützenverein Rangendingen",
@@ -40233,7 +40283,9 @@
       "time": "15:30 - 02:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/jubilaumsparty-schutzenverein-rangendingen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/17/",
-      "page": 17
+      "page": 17,
+      "lat": 48.3789351,
+      "lng": 8.8877867
     },
     {
       "title": "Dorffest Willaringen",
@@ -40244,7 +40296,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/dorffest-willaringen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
-      "page": 12
+      "page": 12,
+      "lat": 47.6209218,
+      "lng": 7.9788595
     },
     {
       "title": "Tag der Weingüter",
@@ -40255,7 +40309,9 @@
       "time": "11:00 - 23:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-weinguter/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
-      "page": 16
+      "page": 16,
+      "lat": 48.9654062,
+      "lng": 9.0583956
     },
     {
       "title": "Elton John Tribute Dinner Konzert - The Musical Sound of Elton John",
@@ -40732,8 +40788,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-ganz-die-alte-schule/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/17/",
       "page": 17,
-      "lat": 47.9713008,
-      "lng": 8.9284465
+      "lat": 47.9713529,
+      "lng": 8.9283473
     },
     {
       "title": "Translationsfest St. Genesius in Schienen",
@@ -41311,7 +41367,9 @@
       "time": "10:00 - 11:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/qi-gong-im-kurpark/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
-      "page": 11
+      "page": 11,
+      "lat": 48.5069519,
+      "lng": 8.3720124
     },
     {
       "title": "45. Eberbacher Frühling",
@@ -41322,7 +41380,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/45-eberbacher-fruehling/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
-      "page": 9
+      "page": 9,
+      "lat": 49.4635303,
+      "lng": 8.9855203
     },
     {
       "title": "Eberbacher Frühling",
@@ -41333,7 +41393,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/eberbacher-fruhling/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
-      "page": 10
+      "page": 10,
+      "lat": 49.4635303,
+      "lng": 8.9855203
     },
     {
       "title": "Weinbergliebe - Festival in Hessigheim",
@@ -41344,7 +41406,9 @@
       "time": "00:00 - 00:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinbergliebe-festival-in-hessigheim/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
-      "page": 12
+      "page": 12,
+      "lat": 48.9937553,
+      "lng": 9.1883111
     },
     {
       "title": "16. Karlsbader Rhododendrontage",
@@ -41355,7 +41419,9 @@
       "time": "10:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/16-karlsbader-rhododendrontage/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
-      "page": 11
+      "page": 11,
+      "lat": 48.9038411,
+      "lng": 8.5088293
     },
     {
       "title": "NADELWELT",
@@ -41379,7 +41445,9 @@
       "time": "17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schwimmabzeichen-im-donaubad/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
-      "page": 11
+      "page": 11,
+      "lat": 48.0869139,
+      "lng": 9.2165039
     },
     {
       "title": "Aktionstage Roter Turm",
@@ -41390,7 +41458,9 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/aktionstage-roter-turm-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
-      "page": 14
+      "page": 14,
+      "lat": 49.2303439,
+      "lng": 9.1621599
     },
     {
       "title": "Schäfertage mit Schäfermarkt",
@@ -41401,7 +41471,9 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schafertage-mit-schafermarkt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
-      "page": 14
+      "page": 14,
+      "lat": 48.5805031,
+      "lng": 9.4044658
     },
     {
       "title": "\"Tolle Wolle\" auf Campus Galli",
@@ -41412,7 +41484,9 @@
       "time": "10:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tolle-wolle-auf-campus-galli/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/",
-      "page": 13
+      "page": 13,
+      "lat": 47.9939249,
+      "lng": 9.1122006
     },
     {
       "title": "MARKGRÄFLER WEINPROMENADE",
@@ -41423,7 +41497,9 @@
       "time": "11:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/markgrafler-weinpromenade/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
-      "page": 16
+      "page": 16,
+      "lat": 47.810102,
+      "lng": 7.5995606
     },
     {
       "title": "Heimattage 2026: Baden-Württemberg-Tag",
@@ -41434,7 +41510,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/heimattage-2026-baden-wuerttemberg-tag/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
-      "page": 12
+      "page": 12,
+      "lat": 48.5308586,
+      "lng": 8.078657
     },
     {
       "title": "Jubiläumsparty - Schützenverein Rangendingen",
@@ -41445,7 +41523,9 @@
       "time": "15:30 - 02:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/jubilaumsparty-schutzenverein-rangendingen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/17/",
-      "page": 17
+      "page": 17,
+      "lat": 48.3789351,
+      "lng": 8.8877867
     },
     {
       "title": "Dorffest Willaringen",
@@ -41456,7 +41536,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/dorffest-willaringen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
-      "page": 12
+      "page": 12,
+      "lat": 47.6209218,
+      "lng": 7.9788595
     },
     {
       "title": "Tag der Weingüter",
@@ -41467,7 +41549,9 @@
       "time": "11:00 - 23:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-weinguter/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
-      "page": 16
+      "page": 16,
+      "lat": 48.9654062,
+      "lng": 9.0583956
     },
     {
       "title": "Elton John Tribute Dinner Konzert - The Musical Sound of Elton John",
@@ -41944,8 +42028,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-ganz-die-alte-schule/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/17/",
       "page": 17,
-      "lat": 47.9713008,
-      "lng": 8.9284465
+      "lat": 47.9713529,
+      "lng": 8.9283473
     },
     {
       "title": "Translationsfest St. Genesius in Schienen",
@@ -42510,7 +42594,9 @@
       "time": "10:00 - 11:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/qi-gong-im-kurpark/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
-      "page": 11
+      "page": 11,
+      "lat": 48.5069519,
+      "lng": 8.3720124
     },
     {
       "title": "45. Eberbacher Frühling",
@@ -42521,7 +42607,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/45-eberbacher-fruehling/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
-      "page": 9
+      "page": 9,
+      "lat": 49.4635303,
+      "lng": 8.9855203
     },
     {
       "title": "Eberbacher Frühling",
@@ -42532,7 +42620,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/eberbacher-fruhling/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
-      "page": 10
+      "page": 10,
+      "lat": 49.4635303,
+      "lng": 8.9855203
     },
     {
       "title": "Weinbergliebe - Festival in Hessigheim",
@@ -42543,7 +42633,9 @@
       "time": "00:00 - 00:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinbergliebe-festival-in-hessigheim/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
-      "page": 12
+      "page": 12,
+      "lat": 48.9937553,
+      "lng": 9.1883111
     },
     {
       "title": "16. Karlsbader Rhododendrontage",
@@ -42554,7 +42646,9 @@
       "time": "10:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/16-karlsbader-rhododendrontage/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
-      "page": 11
+      "page": 11,
+      "lat": 48.9038411,
+      "lng": 8.5088293
     },
     {
       "title": "NADELWELT",
@@ -42578,7 +42672,9 @@
       "time": "17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schwimmabzeichen-im-donaubad/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
-      "page": 11
+      "page": 11,
+      "lat": 48.0869139,
+      "lng": 9.2165039
     },
     {
       "title": "Aktionstage Roter Turm",
@@ -42589,7 +42685,9 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/aktionstage-roter-turm-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
-      "page": 14
+      "page": 14,
+      "lat": 49.2303439,
+      "lng": 9.1621599
     },
     {
       "title": "\"Tolle Wolle\" auf Campus Galli",
@@ -42600,7 +42698,9 @@
       "time": "10:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tolle-wolle-auf-campus-galli/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/",
-      "page": 13
+      "page": 13,
+      "lat": 47.9939249,
+      "lng": 9.1122006
     },
     {
       "title": "MARKGRÄFLER WEINPROMENADE",
@@ -42611,7 +42711,9 @@
       "time": "11:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/markgrafler-weinpromenade/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
-      "page": 16
+      "page": 16,
+      "lat": 47.810102,
+      "lng": 7.5995606
     },
     {
       "title": "Heimattage 2026: Baden-Württemberg-Tag",
@@ -42622,7 +42724,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/heimattage-2026-baden-wuerttemberg-tag/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
-      "page": 12
+      "page": 12,
+      "lat": 48.5308586,
+      "lng": 8.078657
     },
     {
       "title": "Jubiläumsparty - Schützenverein Rangendingen",
@@ -42633,7 +42737,9 @@
       "time": "15:30 - 02:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/jubilaumsparty-schutzenverein-rangendingen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/17/",
-      "page": 17
+      "page": 17,
+      "lat": 48.3789351,
+      "lng": 8.8877867
     },
     {
       "title": "Dorffest Willaringen",
@@ -42644,7 +42750,9 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/dorffest-willaringen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
-      "page": 12
+      "page": 12,
+      "lat": 47.6209218,
+      "lng": 7.9788595
     },
     {
       "title": "Tag der Weingüter",
@@ -42655,7 +42763,9 @@
       "time": "11:00 - 23:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-weinguter/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
-      "page": 16
+      "page": 16,
+      "lat": 48.9654062,
+      "lng": 9.0583956
     },
     {
       "title": "Elton John Tribute Dinner Konzert - The Musical Sound of Elton John",
@@ -43106,8 +43216,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-ganz-die-alte-schule/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/17/",
       "page": 17,
-      "lat": 47.9713008,
-      "lng": 8.9284465
+      "lat": 47.9713529,
+      "lng": 8.9283473
     },
     {
       "title": "Translationsfest St. Genesius in Schienen",
