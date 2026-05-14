@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v21-no-geo-safe");
+console.log("APP VERSION: eventbw-json-v23-compact-sheet-buttons");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -346,6 +346,8 @@ function openSheet(event) {
   const link = document.getElementById("sheet-link");
   const navigationBtn = document.getElementById("navigationBtn");
 
+  const sheetActions = document.querySelector(".sheet-actions");
+
   if (event.detailUrl) {
     link.href = event.detailUrl;
     link.style.display = "inline-block";
@@ -363,6 +365,12 @@ function openSheet(event) {
     navigationBtn.style.display = "none";
     navigationBtn.onclick = null;
   }
+
+  const hasAnyAction =
+    event.detailUrl || hasCoords(event);
+
+  sheetActions.style.display =
+    hasAnyAction ? "flex" : "none";
 
   resetSheetPosition();
   sheet.classList.add("open");
@@ -609,8 +617,14 @@ function render() {
       return event.realDistance <= radiusKm;
     })
     .sort((a, b) => {
-      const byDistance = a.realDistance - b.realDistance;
-      if (byDistance !== 0) return byDistance;
+      if (a.hasLocation !== b.hasLocation) {
+        return a.hasLocation ? -1 : 1;
+      }
+
+      if (a.hasLocation && b.hasLocation) {
+        const byDistance = a.realDistance - b.realDistance;
+        if (byDistance !== 0) return byDistance;
+      }
 
       const byDate = String(a.startDate || "").localeCompare(String(b.startDate || ""));
       if (byDate !== 0) return byDate;
@@ -618,11 +632,16 @@ function render() {
       return String(a.title || "").localeCompare(String(b.title || ""), "de");
     });
 
+  const visibleWithGeo =
+    visibleEvents.filter(event => event.hasLocation).length;
+
   eventMeta.innerText =
     visibleEvents.length +
     " von " +
     appEvents.length +
-    " Events sichtbar";
+    " Events sichtbar • " +
+    visibleWithGeo +
+    " mit Karte";
 
   visibleEvents.forEach(event => {
     let marker = null;
@@ -701,6 +720,8 @@ function render() {
     setActiveMarker(null);
   }
 
+
+  cards.scrollLeft = 0;
 
   setupCardScrollSync();
 
