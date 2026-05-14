@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v26-radius200-no-geo-visible");
+console.log("APP VERSION: eventbw-json-v27-geo-source-note");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -72,6 +72,8 @@ sheet.innerHTML = `
   <div id="sheet-date"></div>
 
   <div id="sheet-description"></div>
+
+  <div id="sheet-geo-note" class="sheet-geo-note"></div>
 
   <a id="sheet-link" class="detail-link" href="#" target="_blank" rel="noopener">
     Details öffnen
@@ -268,6 +270,9 @@ function normalizeEvent(raw, index) {
     venue: raw.city || "",
     address: raw.city || "",
     description: "",
+    geoEstimated: raw.geoEstimated === true || raw.geoSource === "derived",
+    geoSource: raw.geoSource || "",
+    geoQuery: raw.geoQuery || "",
     lat: typeof raw.lat === "number" ? raw.lat : Number(raw.lat),
     lng: typeof raw.lng === "number" ? raw.lng : Number(raw.lng)
   };
@@ -310,6 +315,19 @@ function openSheet(event) {
 
   document.getElementById("sheet-description").innerText =
     "Märkte/Feste für " + formatSundayDate(importMeta && importMeta.targetDate);
+
+  const geoNote = document.getElementById("sheet-geo-note");
+
+  if (event.geoEstimated) {
+    geoNote.innerText = "📍 Position aus Ortsangabe berechnet";
+    geoNote.style.display = "block";
+  } else if (!hasCoords(event)) {
+    geoNote.innerText = "⚠️ Kein Kartenstandort gefunden";
+    geoNote.style.display = "block";
+  } else {
+    geoNote.innerText = "";
+    geoNote.style.display = "none";
+  }
 
   const link = document.getElementById("sheet-link");
 
