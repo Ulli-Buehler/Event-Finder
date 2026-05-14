@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-14T00:00:35.065Z",
-    "finishedAt": "2026-05-14T00:04:36.066Z",
+    "startedAt": "2026-05-14T01:00:34.808Z",
+    "finishedAt": "2026-05-14T01:03:58.698Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,72 +94,20 @@
     ],
     "counts": {
       "pages": 243,
-      "rawCollectedIncludingDuplicates": 3362,
-      "rawUnique": 3334,
-      "targetDateMatches": 88,
-      "targetDateWithGeo": 88,
-      "nonRegionalTargetDateMatches": 81,
+      "rawCollectedIncludingDuplicates": 3363,
+      "rawUnique": 3363,
+      "targetDateMatches": 90,
+      "targetDateWithGeo": 90,
+      "nonRegionalTargetDateMatches": 83,
       "rawMaerkte": 140,
-      "rawFeste": 3194,
+      "rawFeste": 3223,
       "targetDateMaerkte": 3,
-      "targetDateFeste": 85,
+      "targetDateFeste": 87,
       "targetDateWithGeoMaerkte": 3,
-      "targetDateWithGeoFeste": 85
+      "targetDateWithGeoFeste": 87
     }
   },
   "events": [
-    {
-      "title": "Landesturnfest",
-      "category": "feste",
-      "city": "Konstanz",
-      "startDate": "2026-05-13",
-      "endDate": "2026-05-17",
-      "time": "19:30 - 15:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/landesturnfest/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "lat": 47.659216,
-      "lng": 9.1750718
-    },
-    {
-      "title": "Stadtgartenfest Osterburken",
-      "category": "feste",
-      "city": "Osterburken",
-      "startDate": "2026-05-13",
-      "endDate": "2026-05-17",
-      "time": "",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtgartenfest-osterburken/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "lat": 49.4305787,
-      "lng": 9.4273773
-    },
-    {
-      "title": "Deckerhof-Mühle - Besichtigung",
-      "category": "feste",
-      "city": "Seebach",
-      "startDate": "2026-05-13",
-      "endDate": "2026-10-28",
-      "time": "18:00 - 19:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/deckerhof-muhle-besichtigung/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "lat": 48.5762423,
-      "lng": 8.1711181
-    },
-    {
-      "title": "Partnerschaftsreise - \"Mit dem Maire nach Cavalaire\"",
-      "category": "feste",
-      "city": "Wolfach",
-      "startDate": "2026-05-13",
-      "endDate": "2026-05-17",
-      "time": "",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/partnerschaftsreise-mit-dem-maire-nach-cavalaire/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "lat": 48.2985845,
-      "lng": 8.222608
-    },
     {
       "title": "Frühlingsfest",
       "category": "feste",
@@ -207,6 +155,17 @@
       "page": 2
     },
     {
+      "title": "Italienische Pasta-Fahrt",
+      "category": "feste",
+      "city": "Echt Bodensee",
+      "startDate": "2026-05-14",
+      "endDate": "2026-09-13",
+      "time": "17:25 - 20:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/italienische-pasta-fahrt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
       "title": "Lachs mit Seeblick",
       "category": "feste",
       "city": "Echt Bodensee",
@@ -251,6 +210,17 @@
       "page": 2
     },
     {
+      "title": "Rundtouren ab Kressbronn",
+      "category": "feste",
+      "city": "Echt Bodensee",
+      "startDate": "2026-05-14",
+      "endDate": "2026-09-13",
+      "time": "11:35 - 13:15 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/rundtouren-ab-kressbronn/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
       "title": "TUNING WORLD BODENSEE",
       "category": "feste",
       "city": "Friedrichshafen",
@@ -264,6 +234,19 @@
       "lng": 9.4800858
     },
     {
+      "title": "Stadtfest Kehler Messdi",
+      "category": "feste",
+      "city": "Kehl",
+      "startDate": "2026-05-14",
+      "endDate": "2026-05-17",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtfest-kehler-messdi/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "lat": 48.5733977,
+      "lng": 7.8114002
+    },
+    {
       "title": "Internationale Marbacher Vielseitigkeit - Nationenpreis",
       "category": "feste",
       "city": "Münsingen",
@@ -275,6 +258,19 @@
       "page": 4,
       "lat": 48.4128592,
       "lng": 9.4947894
+    },
+    {
+      "title": "Blumen- und Lichterfest",
+      "category": "feste",
+      "city": "Walldürn",
+      "startDate": "2026-05-14",
+      "endDate": "2026-05-17",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/blumen-und-lichterfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "lat": 49.5833,
+      "lng": 9.36667
     },
     {
       "title": "Kunst trifft Handwerk",
@@ -301,6 +297,19 @@
       "page": 9,
       "lat": 48.5069519,
       "lng": 8.3720124
+    },
+    {
+      "title": "45. Eberbacher Frühling",
+      "category": "feste",
+      "city": "Eberbach",
+      "startDate": "2026-05-15",
+      "endDate": "2026-05-17",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/45-eberbacher-fruehling/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/7/",
+      "page": 7,
+      "lat": 49.4635303,
+      "lng": 8.9855203
     },
     {
       "title": "Eberbacher Frühling",
@@ -392,6 +401,19 @@
       "page": 12,
       "lat": 48.5805031,
       "lng": 9.4044658
+    },
+    {
+      "title": "\"Tolle Wolle\" auf Campus Galli",
+      "category": "feste",
+      "city": "Meßkirch",
+      "startDate": "2026-05-16",
+      "endDate": "2026-05-17",
+      "time": "10:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tolle-wolle-auf-campus-galli/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
+      "page": 11,
+      "lat": 47.9939249,
+      "lng": 9.1122006
     },
     {
       "title": "MARKGRÄFLER WEINPROMENADE",

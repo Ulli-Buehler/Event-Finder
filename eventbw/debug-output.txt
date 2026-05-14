@@ -15,17 +15,17 @@ Zieldatum: 2026-05-17
 Counts:
 {
   "pages": 243,
-  "rawCollectedIncludingDuplicates": 3362,
-  "rawUnique": 3334,
-  "targetDateMatches": 88,
-  "targetDateWithGeo": 88,
-  "nonRegionalTargetDateMatches": 81,
+  "rawCollectedIncludingDuplicates": 3363,
+  "rawUnique": 3363,
+  "targetDateMatches": 90,
+  "targetDateWithGeo": 90,
+  "nonRegionalTargetDateMatches": 83,
   "rawMaerkte": 140,
-  "rawFeste": 3194,
+  "rawFeste": 3223,
   "targetDateMaerkte": 3,
-  "targetDateFeste": 85,
+  "targetDateFeste": 87,
   "targetDateWithGeoMaerkte": 3,
-  "targetDateWithGeoFeste": 85
+  "targetDateWithGeoFeste": 87
 }
 
 Regionale Ortsliste:
@@ -119,7 +119,7 @@ Ortsstatistik vor Ortsfilter:
 [
   {
     "city": "Echt Bodensee",
-    "count": 8
+    "count": 10
   },
   {
     "city": "unbekannt",
@@ -146,19 +146,19 @@ Ortsstatistik vor Ortsfilter:
     "count": 2
   },
   {
+    "city": "Eberbach",
+    "count": 2
+  },
+  {
+    "city": "Meßkirch",
+    "count": 2
+  },
+  {
     "city": "Münsingen",
     "count": 2
   },
   {
-    "city": "Seebach",
-    "count": 2
-  },
-  {
     "city": "Tettnang",
-    "count": 2
-  },
-  {
-    "city": "Wolfach",
     "count": 2
   },
   {
@@ -206,10 +206,6 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Eberbach",
-    "count": 1
-  },
-  {
     "city": "Flein",
     "count": 1
   },
@@ -254,15 +250,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Konstanz",
+    "city": "Kehl",
     "count": 1
   },
   {
     "city": "Lindau",
-    "count": 1
-  },
-  {
-    "city": "Meßkirch",
     "count": 1
   },
   {
@@ -290,10 +282,6 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Osterburken",
-    "count": 1
-  },
-  {
     "city": "Pfullendorf",
     "count": 1
   },
@@ -311,6 +299,10 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Sachsenheim",
+    "count": 1
+  },
+  {
+    "city": "Seebach",
     "count": 1
   },
   {
@@ -346,11 +338,19 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Walldürn",
+    "count": 1
+  },
+  {
     "city": "Weingarten",
     "count": 1
   },
   {
     "city": "Weinstadt",
+    "count": 1
+  },
+  {
+    "city": "Wolfach",
     "count": 1
   }
 ]
@@ -362,7 +362,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
     "ok": true,
-    "reportedCount": 141,
+    "reportedCount": 140,
     "parsedCount": 14
   },
   {
@@ -449,7 +449,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 3254,
+    "reportedCount": 3222,
     "parsedCount": 14
   },
   {
@@ -2290,7 +2290,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/231/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 2
+    "parsedCount": 3
   },
   {
     "category": "feste",
