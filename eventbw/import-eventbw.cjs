@@ -615,6 +615,9 @@ async function enrichEventsWithGeo(events) {
     if (cache[cityKey]) {
       event.lat = cache[cityKey].lat;
       event.lng = cache[cityKey].lng;
+      event.geoEstimated = true;
+      event.geoSource = 'derived';
+      event.geoQuery = cache[cityKey].query || `${event.city}, Baden-Württemberg, Germany`;
       continue;
     }
 
@@ -623,10 +626,16 @@ async function enrichEventsWithGeo(events) {
     const geo = await geocodeCity(event.city);
 
     if (geo) {
-      cache[cityKey] = geo;
+      cache[cityKey] = {
+        ...geo,
+        query: `${event.city}, Baden-Württemberg, Germany`,
+      };
 
       event.lat = geo.lat;
       event.lng = geo.lng;
+      event.geoEstimated = true;
+      event.geoSource = 'derived';
+      event.geoQuery = cache[cityKey].query;
 
       await new Promise(resolve => setTimeout(resolve, 1200));
     }
@@ -676,7 +685,9 @@ async function main() {
       rawCollectedIncludingDuplicates: collected.length,
       rawUnique: rawEvents.length,
       targetDateMatches: targetDateEvents.length,
-      targetDateWithGeo: regionalEvents.length,
+      targetDateWithGeo: regionalEvents.filter(event => Number.isFinite(event.lat) && Number.isFinite(event.lng)).length,
+      targetDateWithoutGeo: regionalEvents.filter(event => !Number.isFinite(event.lat) || !Number.isFinite(event.lng)).length,
+      targetDateGeoEstimated: regionalEvents.filter(event => event.geoEstimated === true).length,
       nonRegionalTargetDateMatches: nonRegionalEvents.length,
 
       rawMaerkte: rawEvents.filter(event => event.category === 'maerkte').length,
@@ -685,8 +696,10 @@ async function main() {
       targetDateMaerkte: targetDateEvents.filter(event => event.category === 'maerkte').length,
       targetDateFeste: targetDateEvents.filter(event => event.category === 'feste').length,
 
-      targetDateWithGeoMaerkte: regionalEvents.filter(event => event.category === 'maerkte').length,
-      targetDateWithGeoFeste: regionalEvents.filter(event => event.category === 'feste').length,
+      targetDateWithGeoMaerkte: regionalEvents.filter(event => event.category === 'maerkte' && Number.isFinite(event.lat) && Number.isFinite(event.lng)).length,
+      targetDateWithGeoFeste: regionalEvents.filter(event => event.category === 'feste' && Number.isFinite(event.lat) && Number.isFinite(event.lng)).length,
+      targetDateWithoutGeoMaerkte: regionalEvents.filter(event => event.category === 'maerkte' && (!Number.isFinite(event.lat) || !Number.isFinite(event.lng))).length,
+      targetDateWithoutGeoFeste: regionalEvents.filter(event => event.category === 'feste' && (!Number.isFinite(event.lat) || !Number.isFinite(event.lng))).length,
     },
   };
 
@@ -719,7 +732,8 @@ async function main() {
   console.log(`Target date: ${targetDate}`);
   console.log(`Raw unique: ${rawEvents.length}`);
   console.log(`Target date matches: ${targetDateEvents.length}`);
-  console.log(`Target date with geo: ${regionalEvents.length}`);
+  console.log(`Target date with geo: ${regionalEvents.filter(event => Number.isFinite(event.lat) && Number.isFinite(event.lng)).length}`);
+  console.log(`Target date without geo: ${regionalEvents.filter(event => !Number.isFinite(event.lat) || !Number.isFinite(event.lng)).length}`);
 }
 
 main().catch(error => {
