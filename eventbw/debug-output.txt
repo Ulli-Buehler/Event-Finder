@@ -14,18 +14,18 @@ Zieldatum: 2026-05-17
 
 Counts:
 {
-  "pages": 243,
-  "rawCollectedIncludingDuplicates": 3365,
-  "rawUnique": 3365,
-  "targetDateMatches": 90,
-  "targetDateWithGeo": 90,
+  "pages": 244,
+  "rawCollectedIncludingDuplicates": 3383,
+  "rawUnique": 3383,
+  "targetDateMatches": 91,
+  "targetDateWithGeo": 91,
   "nonRegionalTargetDateMatches": 83,
   "rawMaerkte": 140,
-  "rawFeste": 3225,
+  "rawFeste": 3243,
   "targetDateMaerkte": 3,
-  "targetDateFeste": 87,
+  "targetDateFeste": 88,
   "targetDateWithGeoMaerkte": 3,
-  "targetDateWithGeoFeste": 87
+  "targetDateWithGeoFeste": 88
 }
 
 Regionale Ortsliste:
@@ -258,6 +258,10 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Mössingen",
+    "count": 1
+  },
+  {
     "city": "Naturpark Neckartal-Odenwald",
     "count": 1
   },
@@ -449,7 +453,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 3223,
+    "reportedCount": 3243,
     "parsedCount": 14
   },
   {
@@ -2290,12 +2294,20 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/231/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 5
+    "parsedCount": 14
   },
   {
     "category": "feste",
     "page": 232,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/232/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 9
+  },
+  {
+    "category": "feste",
+    "page": 233,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/233/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
