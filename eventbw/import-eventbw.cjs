@@ -1075,6 +1075,44 @@ async function enrichEventsWithGeo(events) {
   return events;
 }
 
+
+function enrichMissingGeoFromBodenseeRegion(events) {
+  let checked = 0;
+  let recovered = 0;
+
+  // Grober Mittelpunkt Bodensee / Überlinger See. Nur als letzter Fallback.
+  const BODENSEE_FALLBACK = {
+    lat: 47.6500,
+    lng: 9.3500,
+    query: 'Bodensee, Baden-Württemberg, Germany',
+  };
+
+  for (const event of events) {
+    const hasGeo =
+      Number.isFinite(event.lat) &&
+      Number.isFinite(event.lng);
+
+    if (hasGeo) continue;
+
+    if (!isBodenseeContext(event)) continue;
+
+    checked += 1;
+
+    event.lat = BODENSEE_FALLBACK.lat;
+    event.lng = BODENSEE_FALLBACK.lng;
+    event.geoEstimated = true;
+    event.geoSource = 'derived-region-bodensee';
+    event.geoQuery = BODENSEE_FALLBACK.query;
+    event.geoRegionFallback = 'Bodensee';
+    event.geoRegionFallbackNote = 'Kein genauer Ort gefunden; Position grob auf Bodensee gesetzt.';
+
+    recovered += 1;
+  }
+
+  return { checked, recovered };
+}
+
+
 async function main() {
   const startedAt = new Date().toISOString();
   const targetDate = targetSundayIso();
@@ -1099,6 +1137,7 @@ async function main() {
   const detailGeo = await enrichMissingGeoFromDetail(regionalEvents);
   const compoundCityGeo = await enrichMissingGeoFromCompoundCity(regionalEvents);
   const titleGeo = await enrichMissingGeoFromTitle(regionalEvents);
+  const bodenseeRegionGeo = enrichMissingGeoFromBodenseeRegion(regionalEvents);
 
   const nonRegionalEvents = sortEvents(
     targetDateEvents.filter(event => !isRegionalCity(event.city))
@@ -1125,12 +1164,15 @@ async function main() {
       targetDateGeoEstimatedFromDetail: regionalEvents.filter(event => event.geoSource === 'derived-detail').length,
       targetDateGeoEstimatedFromCompoundCity: regionalEvents.filter(event => event.geoSource === 'derived-compound-city').length,
       targetDateGeoEstimatedFromTitle: regionalEvents.filter(event => event.geoSource === 'derived-title').length,
+      targetDateGeoEstimatedFromBodenseeRegion: regionalEvents.filter(event => event.geoSource === 'derived-region-bodensee').length,
       targetDateDetailGeoChecked: detailGeo.checked,
       targetDateDetailGeoRecovered: detailGeo.recovered,
       targetDateCompoundCityGeoChecked: compoundCityGeo.checked,
       targetDateCompoundCityGeoRecovered: compoundCityGeo.recovered,
       targetDateTitleGeoChecked: titleGeo.checked,
       targetDateTitleGeoRecovered: titleGeo.recovered,
+      targetDateBodenseeRegionGeoChecked: bodenseeRegionGeo.checked,
+      targetDateBodenseeRegionGeoRecovered: bodenseeRegionGeo.recovered,
       nonRegionalTargetDateMatches: nonRegionalEvents.length,
 
       rawMaerkte: rawEvents.filter(event => event.category === 'maerkte').length,
@@ -1153,6 +1195,7 @@ async function main() {
     detailGeo,
     compoundCityGeo,
     titleGeo,
+    bodenseeRegionGeo,
     rawEvents,
     targetDateEvents,
     regionalEvents,
@@ -1186,10 +1229,11 @@ async function main() {
   console.log(`Compound city geo recovered: ${compoundCityGeo.recovered}`);
   console.log(`Title geo checked: ${titleGeo.checked}`);
   console.log(`Title geo recovered: ${titleGeo.recovered}`);
+  console.log(`Bodensee region geo checked: ${bodenseeRegionGeo.checked}`);
+  console.log(`Bodensee region geo recovered: ${bodenseeRegionGeo.recovered}`);
 }
 
 main().catch(error => {
   console.error(error);
   process.exitCode = 1;
 });
-
