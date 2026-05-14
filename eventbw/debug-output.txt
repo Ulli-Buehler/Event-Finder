@@ -14,18 +14,18 @@ Zieldatum: 2026-05-17
 
 Counts:
 {
-  "pages": 246,
-  "rawCollectedIncludingDuplicates": 3395,
-  "rawUnique": 3395,
-  "targetDateMatches": 98,
-  "targetDateWithGeo": 98,
-  "nonRegionalTargetDateMatches": 91,
-  "rawMaerkte": 141,
-  "rawFeste": 3254,
+  "pages": 243,
+  "rawCollectedIncludingDuplicates": 3362,
+  "rawUnique": 3334,
+  "targetDateMatches": 88,
+  "targetDateWithGeo": 88,
+  "nonRegionalTargetDateMatches": 81,
+  "rawMaerkte": 140,
+  "rawFeste": 3194,
   "targetDateMaerkte": 3,
-  "targetDateFeste": 95,
+  "targetDateFeste": 85,
   "targetDateWithGeoMaerkte": 3,
-  "targetDateWithGeoFeste": 95
+  "targetDateWithGeoFeste": 85
 }
 
 Regionale Ortsliste:
@@ -119,15 +119,15 @@ Ortsstatistik vor Ortsfilter:
 [
   {
     "city": "Echt Bodensee",
-    "count": 10
-  },
-  {
-    "city": "Karlsruhe",
-    "count": 7
+    "count": 8
   },
   {
     "city": "unbekannt",
     "count": 7
+  },
+  {
+    "city": "Karlsruhe",
+    "count": 6
   },
   {
     "city": "Baiersbronn",
@@ -143,18 +143,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Bernau im Schwarzwald",
-    "count": 2
-  },
-  {
-    "city": "Boxberg",
-    "count": 2
-  },
-  {
-    "city": "Eberbach",
-    "count": 2
-  },
-  {
-    "city": "Meßkirch",
     "count": 2
   },
   {
@@ -218,6 +206,10 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Eberbach",
+    "count": 1
+  },
+  {
     "city": "Flein",
     "count": 1
   },
@@ -262,15 +254,15 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Kehl",
-    "count": 1
-  },
-  {
     "city": "Konstanz",
     "count": 1
   },
   {
     "city": "Lindau",
+    "count": 1
+  },
+  {
+    "city": "Meßkirch",
     "count": 1
   },
   {
@@ -322,10 +314,6 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Schallstadt",
-    "count": 1
-  },
-  {
     "city": "Sigmaringen- Jungnau",
     "count": 1
   },
@@ -355,10 +343,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Waldkirch",
-    "count": 1
-  },
-  {
-    "city": "Walldürn",
     "count": 1
   },
   {
@@ -457,14 +441,6 @@ Pages:
     "category": "maerkte",
     "page": 11,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/11/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 1
-  },
-  {
-    "category": "maerkte",
-    "page": 12,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/12/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   },
@@ -2314,28 +2290,12 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/231/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 14
+    "parsedCount": 2
   },
   {
     "category": "feste",
     "page": 232,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/232/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 233,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/233/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 6
-  },
-  {
-    "category": "feste",
-    "page": 234,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/234/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
