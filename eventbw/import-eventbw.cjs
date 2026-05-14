@@ -636,9 +636,12 @@ function extractDetailLocationFromHtml(html) {
 }
 
 function detailGeoQuery(event, detailLocation) {
+  const cityQueries = geoQueriesForCity(event.city)
+    .map(query => query.replace(/,?\s*Baden-Württemberg, Germany$/i, ''));
+
   const parts = [
     detailLocation,
-    event.city,
+    ...cityQueries,
     'Baden-Württemberg',
     'Germany',
   ]
@@ -647,6 +650,113 @@ function detailGeoQuery(event, detailLocation) {
 
   return [...new Set(parts)].join(', ');
 }
+
+
+function geoQueriesForCity(city) {
+  const cleanCity = cleanText(city);
+
+  if (!cleanCity) {
+    return [];
+  }
+
+  const queries = [];
+
+  queries.push(`${cleanCity}, Baden-Württemberg, Germany`);
+
+  const dashMatch = cleanCity.match(/^(.+?)\s*[-–]\s*(.+)$/);
+
+  if (dashMatch) {
+    const mainTown = cleanText(dashMatch[1]);
+    const district = cleanText(dashMatch[2]);
+
+    if (mainTown && district) {
+      queries.push(`${district}, ${mainTown}, Baden-Württemberg, Germany`);
+      queries.push(`${district}, Baden-Württemberg, Germany`);
+      queries.push(`${mainTown}, Baden-Württemberg, Germany`);
+    }
+  }
+
+  return [...new Set(queries)];
+}
+
+function extractTitleLocation(title) {
+  const text = cleanText(title);
+
+  const patterns = [
+    /\bab\s+([A-ZÄÖÜ][A-Za-zÄÖÜäöüß .\-]+?)(?:\s+(?:in|und|mit|am|an|zur|zum|ins|im|durch|Richtung)\b|$)/,
+    /\bin\s+([A-ZÄÖÜ][A-Za-zÄÖÜäöüß .\-]+?)(?:\s+(?:und|mit|am|an|zur|zum|ins|im|durch|Richtung)\b|$)/,
+    /\bbei\s+([A-ZÄÖÜ][A-Za-zÄÖÜäöüß .\-]+?)(?:\s+(?:und|mit|am|an|zur|zum|ins|im|durch|Richtung)\b|$)/,
+  ];
+
+  for (const pattern of patterns) {
+    const match = text.match(pattern);
+
+    if (match) {
+      const location = cleanText(match[1])
+        .replace(/\s+-\s*$/g, '')
+        .replace(/\s+$/g, '');
+
+      if (
+        location.length >= 3 &&
+        location.length <= 60 &&
+        !/^(Richtung|See|Bodensee|Markt|Fest|Tour|Rundtour)$/i.test(location)
+      ) {
+        return location;
+      }
+    }
+  }
+
+  return '';
+}
+
+async function enrichMissingGeoFromTitle(events) {
+  let checked = 0;
+  let recovered = 0;
+
+  for (const event of events) {
+    const hasGeo =
+      Number.isFinite(event.lat) &&
+      Number.isFinite(event.lng);
+
+    if (hasGeo) continue;
+
+    const titleLocation = extractTitleLocation(event.title);
+
+    if (!titleLocation) continue;
+
+    checked += 1;
+
+    const queries = geoQueriesForCity(titleLocation);
+
+    event.geoTitleChecked = true;
+    event.geoTitleLocation = titleLocation;
+
+    for (const query of queries) {
+      const geo = await geocodeQuery(query);
+
+      if (geo) {
+        event.lat = geo.lat;
+        event.lng = geo.lng;
+        event.geoEstimated = true;
+        event.geoSource = 'derived-title';
+        event.geoQuery = query;
+        recovered += 1;
+
+        await new Promise(resolve => setTimeout(resolve, 1200));
+        break;
+      }
+    }
+
+    if (!Number.isFinite(event.lat) || !Number.isFinite(event.lng)) {
+      event.geoTitleFound = false;
+    } else {
+      event.geoTitleFound = true;
+    }
+  }
+
+  return { checked, recovered };
+}
+
 
 async function enrichMissingGeoFromDetail(events) {
   let recovered = 0;
@@ -749,9 +859,20 @@ async function geocodeQuery(queryText) {
 }
 
 async function geocodeCity(city) {
-  if (!city) return null;
+  const queries = geoQueriesForCity(city);
 
-  return geocodeQuery(city + ', Baden-Württemberg, Germany');
+  for (const query of queries) {
+    const geo = await geocodeQuery(query);
+
+    if (geo) {
+      return {
+        ...geo,
+        query,
+      };
+    }
+  }
+
+  return null;
 }
 
 async function enrichEventsWithGeo(events) {
@@ -777,8 +898,9 @@ async function enrichEventsWithGeo(events) {
 
     if (geo) {
       cache[cityKey] = {
-        ...geo,
-        query: `${event.city}, Baden-Württemberg, Germany`,
+        lat: geo.lat,
+        lng: geo.lng,
+        query: geo.query || `${event.city}, Baden-Württemberg, Germany`,
       };
 
       event.lat = geo.lat;
@@ -818,6 +940,7 @@ async function main() {
   );
 
   const detailGeo = await enrichMissingGeoFromDetail(regionalEvents);
+  const titleGeo = await enrichMissingGeoFromTitle(regionalEvents);
 
   const nonRegionalEvents = sortEvents(
     targetDateEvents.filter(event => !isRegionalCity(event.city))
@@ -842,8 +965,11 @@ async function main() {
       targetDateGeoEstimated: regionalEvents.filter(event => event.geoEstimated === true).length,
       targetDateGeoEstimatedFromCity: regionalEvents.filter(event => event.geoSource === 'derived').length,
       targetDateGeoEstimatedFromDetail: regionalEvents.filter(event => event.geoSource === 'derived-detail').length,
+      targetDateGeoEstimatedFromTitle: regionalEvents.filter(event => event.geoSource === 'derived-title').length,
       targetDateDetailGeoChecked: detailGeo.checked,
       targetDateDetailGeoRecovered: detailGeo.recovered,
+      targetDateTitleGeoChecked: titleGeo.checked,
+      targetDateTitleGeoRecovered: titleGeo.recovered,
       nonRegionalTargetDateMatches: nonRegionalEvents.length,
 
       rawMaerkte: rawEvents.filter(event => event.category === 'maerkte').length,
@@ -864,6 +990,7 @@ async function main() {
     pages: allPages,
     cityStatsForTargetDate,
     detailGeo,
+    titleGeo,
     rawEvents,
     targetDateEvents,
     regionalEvents,
@@ -893,6 +1020,8 @@ async function main() {
   console.log(`Target date without geo: ${regionalEvents.filter(event => !Number.isFinite(event.lat) || !Number.isFinite(event.lng)).length}`);
   console.log(`Detail geo checked: ${detailGeo.checked}`);
   console.log(`Detail geo recovered: ${detailGeo.recovered}`);
+  console.log(`Title geo checked: ${titleGeo.checked}`);
+  console.log(`Title geo recovered: ${titleGeo.recovered}`);
 }
 
 main().catch(error => {
