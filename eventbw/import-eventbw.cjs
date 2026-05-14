@@ -553,6 +553,151 @@ function summaryToText(meta, pages, cityStatsForTargetDate) {
 }
 
 
+
+function extractJsonLdLocation(html) {
+  const scripts = [...String(html || '').matchAll(
+    /<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi
+  )];
+
+  const candidates = [];
+
+  function collectFromNode(node) {
+    if (!node || typeof node !== 'object') return;
+
+    if (Array.isArray(node)) {
+      node.forEach(collectFromNode);
+      return;
+    }
+
+    if (node['@graph']) {
+      collectFromNode(node['@graph']);
+    }
+
+    const location = node.location || node.venue || null;
+
+    if (location && typeof location === 'object') {
+      const name = cleanText(location.name || '');
+      const address = location.address || {};
+      const street = cleanText(address.streetAddress || '');
+      const postalCode = cleanText(address.postalCode || '');
+      const locality = cleanText(address.addressLocality || '');
+      const region = cleanText(address.addressRegion || '');
+      const parts = [name, street, postalCode, locality, region]
+        .filter(Boolean);
+
+      if (parts.length) {
+        candidates.push(parts.join(', '));
+      }
+    }
+
+    for (const value of Object.values(node)) {
+      if (value && typeof value === 'object') {
+        collectFromNode(value);
+      }
+    }
+  }
+
+  for (const script of scripts) {
+    try {
+      collectFromNode(JSON.parse(decodeHtml(script[1]).trim()));
+    } catch {
+      // ignore invalid JSON-LD
+    }
+  }
+
+  return candidates.find(Boolean) || '';
+}
+
+function extractDetailLocationFromHtml(html) {
+  const jsonLdLocation = extractJsonLdLocation(html);
+
+  if (jsonLdLocation) {
+    return jsonLdLocation;
+  }
+
+  const text = cleanText(html);
+
+  const patterns = [
+    /(?:Veranstaltungsort|Ort|Location|Adresse|Treffpunkt)\s*:?\s+([^|]{3,160}?)(?:\s+(?:Anfahrt|Termine?|Datum|Uhrzeit|Weitere|Kontakt|Beschreibung)\b|$)/i,
+    /(?:Veranstaltungsort|Ort|Location|Adresse|Treffpunkt)\s*:?\s+(.{3,160})/i,
+  ];
+
+  for (const pattern of patterns) {
+    const match = text.match(pattern);
+
+    if (match) {
+      return cleanText(match[1])
+        .replace(/\s{2,}/g, ' ')
+        .slice(0, 180);
+    }
+  }
+
+  return '';
+}
+
+function detailGeoQuery(event, detailLocation) {
+  const parts = [
+    detailLocation,
+    event.city,
+    'Baden-Württemberg',
+    'Germany',
+  ]
+    .map(cleanText)
+    .filter(Boolean);
+
+  return [...new Set(parts)].join(', ');
+}
+
+async function enrichMissingGeoFromDetail(events) {
+  let recovered = 0;
+  let checked = 0;
+
+  for (const event of events) {
+    const hasGeo =
+      Number.isFinite(event.lat) &&
+      Number.isFinite(event.lng);
+
+    if (hasGeo || !event.detailUrl) continue;
+
+    checked += 1;
+
+    try {
+      const html = await fetchHtml(event.detailUrl);
+      const detailLocation = extractDetailLocationFromHtml(html);
+
+      if (!detailLocation) {
+        event.geoDetailChecked = true;
+        event.geoDetailFound = false;
+        continue;
+      }
+
+      const query = detailGeoQuery(event, detailLocation);
+      const geo = await geocodeQuery(query);
+
+      event.geoDetailChecked = true;
+      event.geoDetailFound = true;
+      event.geoDetailLocation = detailLocation;
+
+      if (geo) {
+        event.lat = geo.lat;
+        event.lng = geo.lng;
+        event.geoEstimated = true;
+        event.geoSource = 'derived-detail';
+        event.geoQuery = query;
+        recovered += 1;
+
+        await new Promise(resolve => setTimeout(resolve, 1200));
+      }
+    } catch (error) {
+      event.geoDetailChecked = true;
+      event.geoDetailError = String(error.message || error);
+    }
+  }
+
+  return { checked, recovered };
+}
+
+
 const GEO_CACHE_FILE = path.join(OUT_DIR, 'geo-cache.json');
 
 async function loadGeoCache() {
@@ -572,11 +717,10 @@ async function saveGeoCache(cache) {
   );
 }
 
-async function geocodeCity(city) {
-  if (!city) return null;
+async function geocodeQuery(queryText) {
+  if (!queryText) return null;
 
-  const query =
-    encodeURIComponent(city + ', Baden-Württemberg, Germany');
+  const query = encodeURIComponent(queryText);
 
   const url =
     `https://nominatim.openstreetmap.org/search?q=${query}&format=json&limit=1`;
@@ -602,6 +746,12 @@ async function geocodeCity(city) {
     lat: Number(data[0].lat),
     lng: Number(data[0].lon),
   };
+}
+
+async function geocodeCity(city) {
+  if (!city) return null;
+
+  return geocodeQuery(city + ', Baden-Württemberg, Germany');
 }
 
 async function enrichEventsWithGeo(events) {
@@ -667,6 +817,8 @@ async function main() {
     sortEvents(targetDateEvents)
   );
 
+  const detailGeo = await enrichMissingGeoFromDetail(regionalEvents);
+
   const nonRegionalEvents = sortEvents(
     targetDateEvents.filter(event => !isRegionalCity(event.city))
   );
@@ -688,6 +840,10 @@ async function main() {
       targetDateWithGeo: regionalEvents.filter(event => Number.isFinite(event.lat) && Number.isFinite(event.lng)).length,
       targetDateWithoutGeo: regionalEvents.filter(event => !Number.isFinite(event.lat) || !Number.isFinite(event.lng)).length,
       targetDateGeoEstimated: regionalEvents.filter(event => event.geoEstimated === true).length,
+      targetDateGeoEstimatedFromCity: regionalEvents.filter(event => event.geoSource === 'derived').length,
+      targetDateGeoEstimatedFromDetail: regionalEvents.filter(event => event.geoSource === 'derived-detail').length,
+      targetDateDetailGeoChecked: detailGeo.checked,
+      targetDateDetailGeoRecovered: detailGeo.recovered,
       nonRegionalTargetDateMatches: nonRegionalEvents.length,
 
       rawMaerkte: rawEvents.filter(event => event.category === 'maerkte').length,
@@ -707,6 +863,7 @@ async function main() {
     meta,
     pages: allPages,
     cityStatsForTargetDate,
+    detailGeo,
     rawEvents,
     targetDateEvents,
     regionalEvents,
@@ -734,6 +891,8 @@ async function main() {
   console.log(`Target date matches: ${targetDateEvents.length}`);
   console.log(`Target date with geo: ${regionalEvents.filter(event => Number.isFinite(event.lat) && Number.isFinite(event.lng)).length}`);
   console.log(`Target date without geo: ${regionalEvents.filter(event => !Number.isFinite(event.lat) || !Number.isFinite(event.lng)).length}`);
+  console.log(`Detail geo checked: ${detailGeo.checked}`);
+  console.log(`Detail geo recovered: ${detailGeo.recovered}`);
 }
 
 main().catch(error => {
