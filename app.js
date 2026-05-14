@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v27-geo-source-note");
+console.log("APP VERSION: eventbw-json-v28-navigation-button");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -75,9 +75,15 @@ sheet.innerHTML = `
 
   <div id="sheet-geo-note" class="sheet-geo-note"></div>
 
-  <a id="sheet-link" class="detail-link" href="#" target="_blank" rel="noopener">
-    Details öffnen
-  </a>
+  <div id="sheet-actions" class="sheet-actions">
+    <a id="sheet-link" class="detail-link" href="#" target="_blank" rel="noopener">
+      Details
+    </a>
+
+    <button id="navigationBtn" class="navigation-link" type="button">
+      Navigation
+    </button>
+  </div>
 `;
 
 document.body.appendChild(sheet);
@@ -303,6 +309,33 @@ async function loadEventBwEvents() {
   updateLastUpdateInfo();
 }
 
+
+function openNavigation(event) {
+  if (!hasCoords(event)) return;
+
+  const lat = event.lat;
+  const lng = event.lng;
+
+  const destination =
+    encodeURIComponent(lat + "," + lng);
+
+  const wazeUrl =
+    "waze://?ll=" + destination + "&navigate=yes";
+
+  const googleUrl =
+    "https://www.google.com/maps/dir/?api=1&destination=" + destination;
+
+  const startedAt = Date.now();
+
+  window.location.href = wazeUrl;
+
+  setTimeout(() => {
+    if (Date.now() - startedAt < 1800) {
+      window.location.href = googleUrl;
+    }
+  }, 900);
+}
+
 function openSheet(event) {
   document.getElementById("sheet-title").innerText =
     event.title || "Event";
@@ -329,7 +362,9 @@ function openSheet(event) {
     geoNote.style.display = "none";
   }
 
+  const sheetActions = document.getElementById("sheet-actions");
   const link = document.getElementById("sheet-link");
+  const navigationBtn = document.getElementById("navigationBtn");
 
   if (event.detailUrl) {
     link.href = event.detailUrl;
@@ -338,6 +373,19 @@ function openSheet(event) {
     link.href = "#";
     link.style.display = "none";
   }
+
+  if (hasCoords(event)) {
+    navigationBtn.style.display = "inline-block";
+    navigationBtn.onclick = () => {
+      openNavigation(event);
+    };
+  } else {
+    navigationBtn.style.display = "none";
+    navigationBtn.onclick = null;
+  }
+
+  sheetActions.style.display =
+    event.detailUrl || hasCoords(event) ? "flex" : "none";
 
   resetSheetPosition();
   sheet.classList.add("open");
