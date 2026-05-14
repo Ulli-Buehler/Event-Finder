@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v23-compact-sheet-buttons");
+console.log("APP VERSION: eventbw-json-v18-stale-warning");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -55,7 +55,6 @@ eventMeta.className = "event-meta";
 filterPanel.appendChild(eventMeta);
 
 const markers = [];
-let cardMarkers = [];
 
 const sheet = document.createElement("div");
 sheet.className = "sheet";
@@ -73,15 +72,9 @@ sheet.innerHTML = `
 
   <div id="sheet-description"></div>
 
-  <div class="sheet-actions">
-    <a id="sheet-link" class="detail-link" href="#" target="_blank" rel="noopener">
-      Details
-    </a>
-
-    <button id="navigationBtn" class="navigation-link" type="button">
-      Navigation
-    </button>
-  </div>
+  <a id="sheet-link" class="detail-link" href="#" target="_blank" rel="noopener">
+    Details öffnen
+  </a>
 `;
 
 document.body.appendChild(sheet);
@@ -134,7 +127,6 @@ function clearMarkers() {
   });
 
   markers.length = 0;
-  cardMarkers = [];
 }
 
 function fitRadiusIntoView() {
@@ -303,33 +295,6 @@ async function loadEventBwEvents() {
   updateLastUpdateInfo();
 }
 
-
-function openNavigation(event) {
-  if (!hasCoords(event)) return;
-
-  const lat = event.lat;
-  const lng = event.lng;
-
-  const wazeUrl =
-    "waze://?ll=" +
-    encodeURIComponent(lat + "," + lng) +
-    "&navigate=yes";
-
-  const googleUrl =
-    "https://www.google.com/maps/dir/?api=1&destination=" +
-    encodeURIComponent(lat + "," + lng);
-
-  const startedAt = Date.now();
-
-  window.location.href = wazeUrl;
-
-  setTimeout(() => {
-    if (Date.now() - startedAt < 1800) {
-      window.location.href = googleUrl;
-    }
-  }, 900);
-}
-
 function openSheet(event) {
   document.getElementById("sheet-title").innerText =
     event.title || "Event";
@@ -344,9 +309,6 @@ function openSheet(event) {
     "Märkte/Feste für " + formatSundayDate(importMeta && importMeta.targetDate);
 
   const link = document.getElementById("sheet-link");
-  const navigationBtn = document.getElementById("navigationBtn");
-
-  const sheetActions = document.querySelector(".sheet-actions");
 
   if (event.detailUrl) {
     link.href = event.detailUrl;
@@ -355,22 +317,6 @@ function openSheet(event) {
     link.href = "#";
     link.style.display = "none";
   }
-
-  if (hasCoords(event)) {
-    navigationBtn.style.display = "inline-block";
-    navigationBtn.onclick = () => {
-      openNavigation(event);
-    };
-  } else {
-    navigationBtn.style.display = "none";
-    navigationBtn.onclick = null;
-  }
-
-  const hasAnyAction =
-    event.detailUrl || hasCoords(event);
-
-  sheetActions.style.display =
-    hasAnyAction ? "flex" : "none";
 
   resetSheetPosition();
   sheet.classList.add("open");
@@ -486,7 +432,7 @@ function enrichVisibleEvent(event) {
       ...event,
       hasLocation: false,
       realDistance: Number.POSITIVE_INFINITY,
-      realDistanceText: "ohne Geo"
+      realDistanceText: "ohne km"
     };
   }
 
@@ -567,10 +513,8 @@ function activeCardIndexFromScroll() {
 function syncActiveMarkerToScroll() {
   const index = activeCardIndexFromScroll();
 
-  if (index >= 0 && cardMarkers[index]) {
-    setActiveMarker(cardMarkers[index]);
-  } else {
-    setActiveMarker(null);
+  if (index >= 0 && markers[index]) {
+    setActiveMarker(markers[index]);
   }
 }
 
@@ -613,18 +557,12 @@ function render() {
   const visibleEvents = appEvents
     .map(enrichVisibleEvent)
     .filter(event => {
-      if (!event.hasLocation) return true;
+      if (!event.hasLocation) return false;
       return event.realDistance <= radiusKm;
     })
     .sort((a, b) => {
-      if (a.hasLocation !== b.hasLocation) {
-        return a.hasLocation ? -1 : 1;
-      }
-
-      if (a.hasLocation && b.hasLocation) {
-        const byDistance = a.realDistance - b.realDistance;
-        if (byDistance !== 0) return byDistance;
-      }
+      const byDistance = a.realDistance - b.realDistance;
+      if (byDistance !== 0) return byDistance;
 
       const byDate = String(a.startDate || "").localeCompare(String(b.startDate || ""));
       if (byDate !== 0) return byDate;
@@ -632,45 +570,30 @@ function render() {
       return String(a.title || "").localeCompare(String(b.title || ""), "de");
     });
 
-  const visibleWithGeo =
-    visibleEvents.filter(event => event.hasLocation).length;
-
   eventMeta.innerText =
     visibleEvents.length +
     " von " +
     appEvents.length +
-    " Events sichtbar • " +
-    visibleWithGeo +
-    " mit Karte";
+    " Events im Radius sichtbar";
 
   visibleEvents.forEach(event => {
-    let marker = null;
+    const marker = L.marker([
+      event.lat,
+      event.lng
+    ])
+      .addTo(map)
+      .on("click", () => {
+        setActiveMarker(marker);
+        openSheet(event);
+      });
 
-    if (event.hasLocation) {
-      marker = L.marker([
-        event.lat,
-        event.lng
-      ])
-        .addTo(map)
-        .on("click", () => {
-          setActiveMarker(marker);
-          openSheet(event);
-        });
-
-      markers.push(marker);
-    }
-
-    cardMarkers.push(marker);
+    markers.push(marker);
 
     const card = document.createElement("div");
-    card.className = event.hasLocation ? "card" : "card no-geo";
+    card.className = "card";
 
     card.onclick = () => {
-      if (marker) {
-        setActiveMarker(marker);
-      } else {
-        setActiveMarker(null);
-      }
+      setActiveMarker(marker);
 
       card.scrollIntoView({
         behavior: "smooth",
@@ -716,12 +639,8 @@ function render() {
 
   if (markers.length > 0) {
     setActiveMarker(markers[0]);
-  } else {
-    setActiveMarker(null);
   }
 
-
-  cards.scrollLeft = 0;
 
   setupCardScrollSync();
 
@@ -764,7 +683,3 @@ async function init() {
         </div>
       </div>
     `;
-  }
-}
-
-init();
