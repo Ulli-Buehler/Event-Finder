@@ -649,22 +649,16 @@ function detailGeoQuery(event, detailLocation) {
 }
 
 
-
 function splitCompoundCity(city) {
   const cleanCity = cleanText(city);
-
   const match = cleanCity.match(/^(.+?)\s*[-–]\s*(.+)$/);
 
-  if (!match) {
-    return null;
-  }
+  if (!match) return null;
 
   const mainTown = cleanText(match[1]);
   const district = cleanText(match[2]);
 
-  if (!mainTown || !district) {
-    return null;
-  }
+  if (!mainTown || !district) return null;
 
   return { mainTown, district };
 }
@@ -695,9 +689,7 @@ function isBodenseeContext(event) {
 function geoQueriesForCompoundCity(city) {
   const compound = splitCompoundCity(city);
 
-  if (!compound) {
-    return [];
-  }
+  if (!compound) return [];
 
   const { mainTown, district } = compound;
 
@@ -708,18 +700,124 @@ function geoQueriesForCompoundCity(city) {
   ];
 }
 
-function geoQueriesForCityFallback(city) {
+function simplifyDetailLocation(detailLocation, city) {
+  const detail = cleanText(detailLocation);
   const cleanCity = cleanText(city);
+  const candidates = [];
 
-  if (!cleanCity) {
-    return [];
+  if (detail) candidates.push(detail);
+
+  // Remove postal codes and very specific street/address parts.
+  const withoutPostal = detail
+    .replace(/\b\d{5}\b/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  if (withoutPostal && withoutPostal !== detail) {
+    candidates.push(withoutPostal);
   }
 
-  return [
-    ...geoQueriesForCompoundCity(cleanCity),
-    `${cleanCity}, Baden-Württemberg, Germany`,
-    `${cleanCity}, Germany`,
-  ].filter(Boolean);
+  // Split detail location into meaningful comma parts and try venue + city.
+  const parts = detail
+    .split(',')
+    .map(cleanText)
+    .filter(Boolean);
+
+  if (parts.length) {
+    const venue = parts[0];
+
+    if (venue && cleanCity) {
+      candidates.push(`${venue}, ${cleanCity}, Baden-Württemberg, Germany`);
+    }
+
+    if (venue) {
+      candidates.push(`${venue}, Baden-Württemberg, Germany`);
+    }
+  }
+
+  if (cleanCity && cleanCity !== 'Echt Bodensee') {
+    candidates.push(`${cleanCity}, Baden-Württemberg, Germany`);
+    candidates.push(...geoQueriesForCompoundCity(cleanCity));
+  }
+
+  return [...new Set(candidates.filter(Boolean))];
+}
+
+function extractTitleGeoLocation(event) {
+  const title = cleanText(event.title);
+
+  const patterns = [
+    /\bab\s+([A-ZÄÖÜ][A-Za-zÄÖÜäöüß .\-]+?)(?:\s+(?:in|und|mit|am|an|zur|zum|ins|im|durch|Richtung)\b|$)/,
+    /\bin\s+([A-ZÄÖÜ][A-Za-zÄÖÜäöüß .\-]+?)(?:\s+(?:und|mit|am|an|zur|zum|ins|im|durch|Richtung)\b|$)/,
+    /\bbei\s+([A-ZÄÖÜ][A-Za-zÄÖÜäöüß .\-]+?)(?:\s+(?:und|mit|am|an|zur|zum|ins|im|durch|Richtung)\b|$)/,
+  ];
+
+  for (const pattern of patterns) {
+    const match = title.match(pattern);
+
+    if (!match) continue;
+
+    const location = cleanText(match[1])
+      .replace(/\s+-\s*$/g, '')
+      .replace(/\s+$/g, '');
+
+    if (
+      location.length >= 3 &&
+      location.length <= 60 &&
+      !/^(Richtung|See|Bodensee|Markt|Fest|Tour|Rundtour)$/i.test(location)
+    ) {
+      return location;
+    }
+  }
+
+  return '';
+}
+
+function titleGeoQueries(event, location) {
+  const cleanLocation = cleanText(location);
+  const city = cleanText(event.city);
+  const queries = [];
+
+  if (!cleanLocation) return [];
+
+  if (isBodenseeContext(event)) {
+    if (/^kressbronn$/i.test(cleanLocation)) {
+      queries.push('Kressbronn am Bodensee, Baden-Württemberg, Germany');
+      queries.push('Kressbronn am Bodensee, Germany');
+    } else if (/^wasserburg$/i.test(cleanLocation)) {
+      queries.push('Wasserburg (Bodensee), Germany');
+      queries.push('Wasserburg am Bodensee, Germany');
+    } else {
+      queries.push(`${cleanLocation}, Bodenseekreis, Germany`);
+      queries.push(`${cleanLocation}, Bodensee, Germany`);
+    }
+  }
+
+  if (city && city !== cleanLocation && city !== 'Echt Bodensee') {
+    queries.push(`${cleanLocation}, ${city}, Baden-Württemberg, Germany`);
+  }
+
+  queries.push(`${cleanLocation}, Baden-Württemberg, Germany`);
+  queries.push(`${cleanLocation}, Germany`);
+
+  return [...new Set(queries)];
+}
+
+async function tryGeoQueries(queries) {
+  for (const query of queries) {
+    const geo = await geocodeQuery(query);
+
+    if (geo) {
+      return {
+        ...geo,
+        query,
+      };
+    }
+
+    await new Promise(resolve => setTimeout(resolve, 1200));
+  }
+
+  return null;
 }
 
 async function enrichMissingGeoFromCompoundCity(events) {
@@ -748,99 +846,22 @@ async function enrichMissingGeoFromCompoundCity(events) {
       queries,
     });
 
-    for (const query of queries) {
-      const geo = await geocodeQuery(query);
+    const geo = await tryGeoQueries(queries);
 
-      if (geo) {
-        event.lat = geo.lat;
-        event.lng = geo.lng;
-        event.geoEstimated = true;
-        event.geoSource = 'derived-compound-city';
-        event.geoQuery = query;
-        event.geoCompoundCityFound = true;
-        recovered += 1;
-
-        await new Promise(resolve => setTimeout(resolve, 1200));
-        break;
-      }
-    }
-
-    if (!Number.isFinite(event.lat) || !Number.isFinite(event.lng)) {
+    if (geo) {
+      event.lat = geo.lat;
+      event.lng = geo.lng;
+      event.geoEstimated = true;
+      event.geoSource = 'derived-compound-city';
+      event.geoQuery = geo.query;
+      event.geoCompoundCityFound = true;
+      recovered += 1;
+    } else {
       event.geoCompoundCityFound = false;
     }
   }
 
   return { checked, recovered, tried };
-}
-
-
-function extractTitleGeoLocation(event) {
-  const title = cleanText(event.title);
-  const city = cleanText(event.city);
-
-  const patterns = [
-    /\bab\s+([A-ZÄÖÜ][A-Za-zÄÖÜäöüß .\-]+?)(?:\s+(?:in|und|mit|am|an|zur|zum|ins|im|durch|Richtung)\b|$)/,
-    /\bin\s+([A-ZÄÖÜ][A-Za-zÄÖÜäöüß .\-]+?)(?:\s+(?:und|mit|am|an|zur|zum|ins|im|durch|Richtung)\b|$)/,
-    /\bbei\s+([A-ZÄÖÜ][A-Za-zÄÖÜäöüß .\-]+?)(?:\s+(?:und|mit|am|an|zur|zum|ins|im|durch|Richtung)\b|$)/,
-  ];
-
-  for (const pattern of patterns) {
-    const match = title.match(pattern);
-
-    if (!match) continue;
-
-    const location = cleanText(match[1])
-      .replace(/\s+-\s*$/g, '')
-      .replace(/\s+$/g, '');
-
-    if (
-      location.length >= 3 &&
-      location.length <= 60 &&
-      !/^(Richtung|See|Bodensee|Markt|Fest|Tour|Rundtour)$/i.test(location)
-    ) {
-      return {
-        location,
-        reason: `title:${match[0]}`,
-        city,
-      };
-    }
-  }
-
-  return null;
-}
-
-function titleGeoQueries(event, titleLocation) {
-  const location = cleanText(titleLocation.location);
-  const city = cleanText(event.city);
-  const queries = [];
-
-  if (isBodenseeContext(event)) {
-    if (/^kressbronn$/i.test(location)) {
-      queries.push('Kressbronn am Bodensee, Baden-Württemberg, Germany');
-      queries.push('Kressbronn am Bodensee, Germany');
-    } else if (/^wasserburg$/i.test(location)) {
-      queries.push('Wasserburg (Bodensee), Germany');
-      queries.push('Wasserburg am Bodensee, Germany');
-    } else if (/^konstanz$/i.test(location)) {
-      queries.push('Konstanz, Baden-Württemberg, Germany');
-    } else if (/^friedrichshafen$/i.test(location)) {
-      queries.push('Friedrichshafen, Baden-Württemberg, Germany');
-    } else {
-      queries.push(`${location}, Bodenseekreis, Germany`);
-      queries.push(`${location}, Bodensee, Germany`);
-      queries.push(`${location}, Baden-Württemberg, Germany`);
-      queries.push(`${location}, Germany`);
-    }
-  }
-
-  if (city && city !== location && city !== 'Echt Bodensee') {
-    queries.push(`${location}, ${city}, Baden-Württemberg, Germany`);
-  }
-
-  queries.push(`${location}, Baden-Württemberg, Germany`);
-  queries.push(`${location}, Germany`);
-
-  return [...new Set(queries)];
 }
 
 async function enrichMissingGeoFromTitle(events) {
@@ -859,36 +880,32 @@ async function enrichMissingGeoFromTitle(events) {
 
     if (!titleLocation) continue;
 
+    const queries = titleGeoQueries(event, titleLocation);
+
+    if (!queries.length) continue;
+
     checked += 1;
     event.geoTitleChecked = true;
-    event.geoTitleLocation = titleLocation.location;
+    event.geoTitleLocation = titleLocation;
 
-    const queries = titleGeoQueries(event, titleLocation);
     tried.push({
       title: event.title,
       city: event.city,
-      extracted: titleLocation.location,
+      extracted: titleLocation,
       queries,
     });
 
-    for (const query of queries) {
-      const geo = await geocodeQuery(query);
+    const geo = await tryGeoQueries(queries);
 
-      if (geo) {
-        event.lat = geo.lat;
-        event.lng = geo.lng;
-        event.geoEstimated = true;
-        event.geoSource = 'derived-title';
-        event.geoQuery = query;
-        event.geoTitleFound = true;
-        recovered += 1;
-
-        await new Promise(resolve => setTimeout(resolve, 1200));
-        break;
-      }
-    }
-
-    if (!Number.isFinite(event.lat) || !Number.isFinite(event.lng)) {
+    if (geo) {
+      event.lat = geo.lat;
+      event.lng = geo.lng;
+      event.geoEstimated = true;
+      event.geoSource = 'derived-title';
+      event.geoQuery = geo.query;
+      event.geoTitleFound = true;
+      recovered += 1;
+    } else {
       event.geoTitleFound = false;
     }
   }
@@ -900,6 +917,7 @@ async function enrichMissingGeoFromTitle(events) {
 async function enrichMissingGeoFromDetail(events) {
   let recovered = 0;
   let checked = 0;
+  const tried = [];
 
   for (const event of events) {
     const hasGeo =
@@ -914,28 +932,41 @@ async function enrichMissingGeoFromDetail(events) {
       const html = await fetchHtml(event.detailUrl);
       const detailLocation = extractDetailLocationFromHtml(html);
 
+      event.geoDetailChecked = true;
+
       if (!detailLocation) {
-        event.geoDetailChecked = true;
         event.geoDetailFound = false;
         continue;
       }
 
-      const query = detailGeoQuery(event, detailLocation);
-      const geo = await geocodeQuery(query);
-
-      event.geoDetailChecked = true;
       event.geoDetailFound = true;
       event.geoDetailLocation = detailLocation;
+
+      const queries = [
+        detailGeoQuery(event, detailLocation),
+        ...simplifyDetailLocation(detailLocation, event.city),
+      ]
+        .map(cleanText)
+        .filter(Boolean);
+
+      const uniqueQueries = [...new Set(queries)];
+
+      tried.push({
+        title: event.title,
+        city: event.city,
+        detailLocation,
+        queries: uniqueQueries,
+      });
+
+      const geo = await tryGeoQueries(uniqueQueries);
 
       if (geo) {
         event.lat = geo.lat;
         event.lng = geo.lng;
         event.geoEstimated = true;
         event.geoSource = 'derived-detail';
-        event.geoQuery = query;
+        event.geoQuery = geo.query;
         recovered += 1;
-
-        await new Promise(resolve => setTimeout(resolve, 1200));
       }
     } catch (error) {
       event.geoDetailChecked = true;
@@ -943,9 +974,8 @@ async function enrichMissingGeoFromDetail(events) {
     }
   }
 
-  return { checked, recovered };
+  return { checked, recovered, tried };
 }
-
 
 const GEO_CACHE_FILE = path.join(OUT_DIR, 'geo-cache.json');
 
