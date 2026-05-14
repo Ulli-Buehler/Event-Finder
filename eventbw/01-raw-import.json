@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-14T12:21:17.251Z",
-    "finishedAt": "2026-05-14T12:24:32.198Z",
+    "startedAt": "2026-05-14T12:40:00.577Z",
+    "finishedAt": "2026-05-14T12:47:46.903Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -97,28 +97,28 @@
       "rawCollectedIncludingDuplicates": 3395,
       "rawUnique": 3395,
       "targetDateMatches": 91,
-      "targetDateWithGeo": 70,
-      "targetDateWithoutGeo": 21,
-      "targetDateGeoEstimated": 70,
-      "targetDateGeoEstimatedFromCity": 43,
-      "targetDateGeoEstimatedFromDetail": 19,
-      "targetDateGeoEstimatedFromCompoundCity": 2,
-      "targetDateGeoEstimatedFromTitle": 6,
-      "targetDateDetailGeoChecked": 48,
-      "targetDateDetailGeoRecovered": 19,
-      "targetDateCompoundCityGeoChecked": 2,
-      "targetDateCompoundCityGeoRecovered": 2,
-      "targetDateTitleGeoChecked": 6,
-      "targetDateTitleGeoRecovered": 6,
+      "targetDateWithGeo": 85,
+      "targetDateWithoutGeo": 6,
+      "targetDateGeoEstimated": 85,
+      "targetDateGeoEstimatedFromCity": 46,
+      "targetDateGeoEstimatedFromDetail": 35,
+      "targetDateGeoEstimatedFromCompoundCity": 0,
+      "targetDateGeoEstimatedFromTitle": 4,
+      "targetDateDetailGeoChecked": 45,
+      "targetDateDetailGeoRecovered": 35,
+      "targetDateCompoundCityGeoChecked": 0,
+      "targetDateCompoundCityGeoRecovered": 0,
+      "targetDateTitleGeoChecked": 4,
+      "targetDateTitleGeoRecovered": 4,
       "nonRegionalTargetDateMatches": 83,
       "rawMaerkte": 140,
       "rawFeste": 3255,
       "targetDateMaerkte": 3,
       "targetDateFeste": 88,
       "targetDateWithGeoMaerkte": 3,
-      "targetDateWithGeoFeste": 67,
+      "targetDateWithGeoFeste": 82,
       "targetDateWithoutGeoMaerkte": 0,
-      "targetDateWithoutGeoFeste": 21
+      "targetDateWithoutGeoFeste": 6
     }
   },
   "events": [
@@ -434,7 +434,12 @@
       "page": 1,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Hafen Konstanz, Echt Bodensee, Baden-Württemberg"
+      "geoDetailLocation": "Hafen Konstanz, Echt Bodensee, Baden-Württemberg",
+      "lat": 47.6589253,
+      "lng": 9.1799861,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Hafen Konstanz, Baden-Württemberg, Germany"
     },
     {
       "title": "Lachs mit Seeblick",
@@ -2303,7 +2308,12 @@
       "page": 15,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Parkplatz Schützenhaus Rangendingen, 72414, Rangendingen, Baden-Württemberg"
+      "geoDetailLocation": "Parkplatz Schützenhaus Rangendingen, 72414, Rangendingen, Baden-Württemberg",
+      "lat": 48.3789351,
+      "lng": 8.8877867,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Rangendingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Dorffest Willaringen",
@@ -2317,7 +2327,12 @@
       "page": 10,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Bei der Gemeindehalle Willaringen, Willaringen 18, 79736, Rickenbach, Baden-Württemberg"
+      "geoDetailLocation": "Bei der Gemeindehalle Willaringen, Willaringen 18, 79736, Rickenbach, Baden-Württemberg",
+      "lat": 47.6209218,
+      "lng": 7.9788595,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Rickenbach, Baden-Württemberg, Germany"
     },
     {
       "title": "Tag der Hohenhaslacher Weingüter",
@@ -2342,7 +2357,12 @@
       "page": 14,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Weingut Kurt und Dietmar Ott, Sachsenheim, Baden-Württemberg"
+      "geoDetailLocation": "Weingut Kurt und Dietmar Ott, Sachsenheim, Baden-Württemberg",
+      "lat": 48.9654062,
+      "lng": 9.0583956,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Sachsenheim, Baden-Württemberg, Germany"
     },
     {
       "title": "Taranja Wu & pADDELNoHNEkANU",
@@ -2672,18 +2692,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Oberschwäbisches Museumsdorf Kürnbach, Am Museumsdorf 1, 88427, Bad Schussenried-Kürnbach, Baden-Württemberg",
-      "geoCompoundCityChecked": true,
-      "geoCompoundCityQueries": [
-        "Kürnbach, Bad Schussenried, Baden-Württemberg, Germany",
-        "Kürnbach, Baden-Württemberg, Germany",
-        "Bad Schussenried, Baden-Württemberg, Germany"
-      ],
-      "lat": 47.99208,
-      "lng": 9.6710084,
+      "lat": 47.9921969,
+      "lng": 9.6760937,
       "geoEstimated": true,
-      "geoSource": "derived-compound-city",
-      "geoQuery": "Kürnbach, Bad Schussenried, Baden-Württemberg, Germany",
-      "geoCompoundCityFound": true
+      "geoSource": "derived-detail",
+      "geoQuery": "Oberschwäbisches Museumsdorf Kürnbach, Bad Schussenried-Kürnbach, Baden-Württemberg, Germany"
     },
     {
       "title": "Baiersbronner Bike- & Wanderhimmel-Fest",
@@ -2748,7 +2761,12 @@
       "page": 18,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Hans-Thoma-Kunstmuseum, Bernau im Schwarzwald, Baden-Württemberg"
+      "geoDetailLocation": "Hans-Thoma-Kunstmuseum, Bernau im Schwarzwald, Baden-Württemberg",
+      "lat": 47.8057268,
+      "lng": 8.0345882,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Bernau im Schwarzwald, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag im Resenhof",
@@ -2762,7 +2780,12 @@
       "page": 18,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Schwarzwälder Holzschneflermuseum Resenhof, Bernau im Schwarzwald, Baden-Württemberg"
+      "geoDetailLocation": "Schwarzwälder Holzschneflermuseum Resenhof, Bernau im Schwarzwald, Baden-Württemberg",
+      "lat": 47.8057268,
+      "lng": 8.0345882,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Bernau im Schwarzwald, Baden-Württemberg, Germany"
     },
     {
       "title": "Gutenbergs Geopoints",
@@ -2776,7 +2799,12 @@
       "page": 16,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Parkplatz Ortseinfahrt Gutenberg von Oberlenningen kommend, Biosphärengebiet Schwäbische Alb, Baden-Württemberg"
+      "geoDetailLocation": "Parkplatz Ortseinfahrt Gutenberg von Oberlenningen kommend, Biosphärengebiet Schwäbische Alb, Baden-Württemberg",
+      "lat": 48.4193304,
+      "lng": 9.4942411,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Biosphärengebiet Schwäbische Alb, Baden-Württemberg, Germany"
     },
     {
       "title": "Schwarzwaldhof-Ingenieurfahrt",
@@ -2810,8 +2838,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Heimatmuseum Brackenheim-Botenheim, Brackenheim, Baden-Württemberg",
-      "lat": 49.0654868,
-      "lng": 9.0662841,
+      "lat": 49.0654869,
+      "lng": 9.0662842,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Heimatmuseum Brackenheim-Botenheim, Brackenheim, Baden-Württemberg, Brackenheim, Baden-Württemberg, Germany"
@@ -2828,7 +2856,12 @@
       "page": 17,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Schaudepot, Calw, Baden-Württemberg"
+      "geoDetailLocation": "Schaudepot, Calw, Baden-Württemberg",
+      "lat": 47.5999389,
+      "lng": 7.6147845,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Schaudepot, Baden-Württemberg, Germany"
     },
     {
       "title": "Tag des Wanderns: Auf den Spuren der DonauWelle",
@@ -2842,7 +2875,12 @@
       "page": 18,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "DonauWelle Donauversinkung, Donaubergland, Baden-Württemberg"
+      "geoDetailLocation": "DonauWelle Donauversinkung, Donaubergland, Baden-Württemberg",
+      "lat": 48.1129533,
+      "lng": 8.8906795,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Donaubergland, Baden-Württemberg, Germany"
     },
     {
       "title": "Kaffee und Kuchen-Fahrt im Überlinger See",
@@ -2889,7 +2927,12 @@
       "page": 19,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Murgtalmuseum Bermersbach, Forbach, Baden-Württemberg"
+      "geoDetailLocation": "Murgtalmuseum Bermersbach, Forbach, Baden-Württemberg",
+      "lat": 48.6790385,
+      "lng": 8.3594916,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Forbach, Baden-Württemberg, Germany"
     },
     {
       "title": "Traktorenfest der Kolpingsfamilie Rotzingen",
@@ -2903,7 +2946,12 @@
       "page": 18,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Gemeindesaal Rotzingen - Altes Schulhaus, Görwihl, Baden-Württemberg"
+      "geoDetailLocation": "Gemeindesaal Rotzingen - Altes Schulhaus, Görwihl, Baden-Württemberg",
+      "lat": 47.6411618,
+      "lng": 8.0784862,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Görwihl, Baden-Württemberg, Germany"
     },
     {
       "title": "Albtag - der Familientag",
@@ -2917,7 +2965,12 @@
       "page": 16,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "TSV Ödenwaldstetten 1924 e.V. Heidstr. 26 72531 Hohenstein, Heidstraße 26, 72531, Hohenstein, Baden-Württemberg"
+      "geoDetailLocation": "TSV Ödenwaldstetten 1924 e.V. Heidstr. 26 72531 Hohenstein, Heidstraße 26, 72531, Hohenstein, Baden-Württemberg",
+      "lat": 48.3472808,
+      "lng": 9.3548059,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Hohenstein, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag in Hüfingen",
@@ -2950,7 +3003,12 @@
       "page": 15,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Lädine St. Jodok, Immenstaad, Baden-Württemberg"
+      "geoDetailLocation": "Lädine St. Jodok, Immenstaad, Baden-Württemberg",
+      "lat": 47.6048795,
+      "lng": 9.531927,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Immenstaad, Baden-Württemberg, Germany"
     },
     {
       "title": "Tag des offenen Ateliers",
@@ -2964,7 +3022,12 @@
       "page": 17,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Café Miss Gugelhupf, An der Fischermühle 1, 79400, Kandern, Baden-Württemberg"
+      "geoDetailLocation": "Café Miss Gugelhupf, An der Fischermühle 1, 79400, Kandern, Baden-Württemberg",
+      "lat": 47.7141662,
+      "lng": 7.661242,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Café Miss Gugelhupf, An der Fischermühle 1, 79400, Kandern, Baden-Württemberg"
     },
     {
       "title": "A Midsummer Night’s Dream (Premiere)",
@@ -3059,14 +3122,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Einfahrt Parkplatz Therme Lindau, Eichwaldstraße 16-20, 88131, Lindau, Baden-Württemberg",
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Bewegung",
-      "lat": 48.7808376,
-      "lng": 9.1838281,
+      "lat": 47.7285223,
+      "lng": 8.0310869,
       "geoEstimated": true,
-      "geoSource": "derived-title",
-      "geoQuery": "Bewegung, Baden-Württemberg, Germany",
-      "geoTitleFound": true
+      "geoSource": "derived-detail",
+      "geoQuery": "Lindau, Baden-Württemberg, Germany"
     },
     {
       "title": "Oldtimertreffen",
@@ -3080,7 +3140,12 @@
       "page": 15,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Oldtimermuseum Meßkirch, Meßkirch, Baden-Württemberg"
+      "geoDetailLocation": "Oldtimermuseum Meßkirch, Meßkirch, Baden-Württemberg",
+      "lat": 47.9939249,
+      "lng": 9.1122006,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Meßkirch, Baden-Württemberg, Germany"
     },
     {
       "title": "Museen \"Historische Messerschmiede\" und \"Rechenmacherhaus\" geöffnet",
@@ -3092,14 +3157,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/museen-historische-messerschmiede-und-rechenmacherhaus-geoffnet/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/",
       "page": 19,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Mössingen, Mössingen, Baden-Württemberg",
-      "lat": 48.3970692,
-      "lng": 9.0460031,
+      "lat": 48.4069119,
+      "lng": 9.0602912,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Mössingen, Mössingen, Baden-Württemberg, Mössingen, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Mössingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Chorprojekt Klingende Kirche 2026",
@@ -3111,14 +3173,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/chorprojekt-klingende-kirche-2026/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/",
       "page": 19,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Evangelische Kirche Müllheim, Müllheim, Baden-Württemberg",
-      "lat": 47.8083092,
-      "lng": 7.6257421,
+      "lat": 47.810102,
+      "lng": 7.5995606,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Evangelische Kirche Müllheim, Müllheim, Baden-Württemberg, Müllheim, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Müllheim, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag und Tag der offenen Ateliers in Müllheim",
@@ -3130,17 +3189,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-und-tag-der-offenen-ateliers-in-mullheim/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/15/",
       "page": 15,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Markgräfler Museum im Blankenhorn-Palais, Müllheim, Baden-Württemberg",
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Müllheim",
       "lat": 47.810102,
       "lng": 7.5995606,
       "geoEstimated": true,
-      "geoSource": "derived-title",
-      "geoQuery": "Müllheim, Baden-Württemberg, Germany",
-      "geoTitleFound": true
+      "geoSource": "derived",
+      "geoQuery": "Müllheim, Baden-Württemberg, Germany"
     },
     {
       "title": "Reitwochen für Erwachsene",
@@ -3248,8 +3301,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-museen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
       "page": 16,
-      "lat": 47.9232677,
-      "lng": 9.2500203,
+      "lat": 47.924349,
+      "lng": 9.2559822,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Pfullendorf, Baden-Württemberg, Germany"
@@ -3315,18 +3368,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Schlossgartenhalle Jungnau, Am Schlossgarten 8, 72488, Sigmaringen- Jungnau, Baden-Württemberg",
-      "geoCompoundCityChecked": true,
-      "geoCompoundCityQueries": [
-        "Jungnau, Sigmaringen, Baden-Württemberg, Germany",
-        "Jungnau, Baden-Württemberg, Germany",
-        "Sigmaringen, Baden-Württemberg, Germany"
-      ],
-      "lat": 48.1397433,
-      "lng": 9.2090717,
+      "lat": 48.1410983,
+      "lng": 9.2141259,
       "geoEstimated": true,
-      "geoSource": "derived-compound-city",
-      "geoQuery": "Jungnau, Sigmaringen, Baden-Württemberg, Germany",
-      "geoCompoundCityFound": true
+      "geoSource": "derived-detail",
+      "geoQuery": "Schlossgartenhalle Jungnau, Sigmaringen- Jungnau, Baden-Württemberg, Germany"
     },
     {
       "title": "Vergleichsschießen Simonswald - Gütenbach",
