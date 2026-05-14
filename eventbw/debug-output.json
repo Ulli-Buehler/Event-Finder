@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-14T19:00:42.749Z",
-    "finishedAt": "2026-05-14T19:06:11.244Z",
+    "startedAt": "2026-05-14T19:23:18.272Z",
+    "finishedAt": "2026-05-14T19:28:11.527Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -100,13 +100,13 @@
       "targetDateWithGeo": 91,
       "targetDateWithoutGeo": 0,
       "targetDateGeoEstimated": 91,
-      "targetDateGeoEstimatedFromCity": 72,
-      "targetDateGeoEstimatedFromDetail": 9,
+      "targetDateGeoEstimatedFromCity": 73,
+      "targetDateGeoEstimatedFromDetail": 8,
       "targetDateGeoEstimatedFromCompoundCity": 0,
       "targetDateGeoEstimatedFromTitle": 4,
       "targetDateGeoEstimatedFromBodenseeRegion": 6,
-      "targetDateDetailGeoChecked": 19,
-      "targetDateDetailGeoRecovered": 9,
+      "targetDateDetailGeoChecked": 18,
+      "targetDateDetailGeoRecovered": 8,
       "targetDateCompoundCityGeoChecked": 0,
       "targetDateCompoundCityGeoRecovered": 0,
       "targetDateTitleGeoChecked": 4,
@@ -2327,8 +2327,8 @@
     }
   ],
   "detailGeo": {
-    "checked": 19,
-    "recovered": 9,
+    "checked": 18,
+    "recovered": 8,
     "tried": [
       {
         "title": "Fisch vom Grill",
@@ -2427,18 +2427,6 @@
           "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
           "Echt Bodensee, Echt Bodensee, Baden-Württemberg, Germany",
           "Echt Bodensee, Baden-Württemberg, Germany"
-        ]
-      },
-      {
-        "title": "Kunst trifft Handwerk",
-        "city": "Bad Säckingen",
-        "detailLocation": "Schlosspark, Bad Säckingen, Baden-Württemberg",
-        "queries": [
-          "Schlosspark, Bad Säckingen, Baden-Württemberg, Bad Säckingen, Baden-Württemberg, Germany",
-          "Schlosspark, Bad Säckingen, Baden-Württemberg",
-          "Schlosspark, Bad Säckingen, Baden-Württemberg, Germany",
-          "Schlosspark, Baden-Württemberg, Germany",
-          "Bad Säckingen, Baden-Württemberg, Germany"
         ]
       },
       {
@@ -3683,14 +3671,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kunst-trifft-handwerk-3/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Schlosspark, Bad Säckingen, Baden-Württemberg",
-      "lat": 47.5505754,
-      "lng": 7.9488937,
+      "lat": 47.5527459,
+      "lng": 7.9410556,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Schlosspark, Bad Säckingen, Baden-Württemberg, Bad Säckingen, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Bad Säckingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Köstlich Wandern 2. Tour",
@@ -5678,8 +5663,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-ganz-die-alte-schule/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/15/",
       "page": 15,
-      "lat": 47.9713008,
-      "lng": 8.9284465,
+      "lat": 47.9713529,
+      "lng": 8.9283473,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Neuhausen ob Eck, Baden-Württemberg, Germany"
@@ -5742,8 +5727,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-museen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
       "page": 16,
-      "lat": 47.9232677,
-      "lng": 9.2500203,
+      "lat": 47.924349,
+      "lng": 9.2559822,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Pfullendorf, Baden-Württemberg, Germany"
@@ -40763,14 +40748,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kunst-trifft-handwerk-3/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Schlosspark, Bad Säckingen, Baden-Württemberg",
-      "lat": 47.5505754,
-      "lng": 7.9488937,
+      "lat": 47.5527459,
+      "lng": 7.9410556,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Schlosspark, Bad Säckingen, Baden-Württemberg, Bad Säckingen, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Bad Säckingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Qi Gong im Kurpark",
@@ -41658,8 +41640,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-ganz-die-alte-schule/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/15/",
       "page": 15,
-      "lat": 47.9713008,
-      "lng": 8.9284465,
+      "lat": 47.9713529,
+      "lng": 8.9283473,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Neuhausen ob Eck, Baden-Württemberg, Germany"
@@ -41722,8 +41704,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-museen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
       "page": 16,
-      "lat": 47.9232677,
-      "lng": 9.2500203,
+      "lat": 47.924349,
+      "lng": 9.2559822,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Pfullendorf, Baden-Württemberg, Germany"
@@ -42302,14 +42284,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kunst-trifft-handwerk-3/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Schlosspark, Bad Säckingen, Baden-Württemberg",
-      "lat": 47.5505754,
-      "lng": 7.9488937,
+      "lat": 47.5527459,
+      "lng": 7.9410556,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Schlosspark, Bad Säckingen, Baden-Württemberg, Bad Säckingen, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Bad Säckingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Qi Gong im Kurpark",
@@ -43197,8 +43176,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-ganz-die-alte-schule/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/15/",
       "page": 15,
-      "lat": 47.9713008,
-      "lng": 8.9284465,
+      "lat": 47.9713529,
+      "lng": 8.9283473,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Neuhausen ob Eck, Baden-Württemberg, Germany"
@@ -43261,8 +43240,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-museen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
       "page": 16,
-      "lat": 47.9232677,
-      "lng": 9.2500203,
+      "lat": 47.924349,
+      "lng": 9.2559822,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Pfullendorf, Baden-Württemberg, Germany"
@@ -43825,14 +43804,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kunst-trifft-handwerk-3/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Schlosspark, Bad Säckingen, Baden-Württemberg",
-      "lat": 47.5505754,
-      "lng": 7.9488937,
+      "lat": 47.5527459,
+      "lng": 7.9410556,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Schlosspark, Bad Säckingen, Baden-Württemberg, Bad Säckingen, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Bad Säckingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Qi Gong im Kurpark",
@@ -44656,8 +44632,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-ganz-die-alte-schule/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/15/",
       "page": 15,
-      "lat": 47.9713008,
-      "lng": 8.9284465,
+      "lat": 47.9713529,
+      "lng": 8.9283473,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Neuhausen ob Eck, Baden-Württemberg, Germany"
@@ -44720,8 +44696,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-museen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
       "page": 16,
-      "lat": 47.9232677,
-      "lng": 9.2500203,
+      "lat": 47.924349,
+      "lng": 9.2559822,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Pfullendorf, Baden-Württemberg, Germany"
