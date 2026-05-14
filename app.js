@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v20-show-no-geo-events");
+console.log("APP VERSION: eventbw-json-v21-no-geo-safe");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -55,6 +55,7 @@ eventMeta.className = "event-meta";
 filterPanel.appendChild(eventMeta);
 
 const markers = [];
+let cardMarkers = [];
 
 const sheet = document.createElement("div");
 sheet.className = "sheet";
@@ -133,6 +134,7 @@ function clearMarkers() {
   });
 
   markers.length = 0;
+  cardMarkers = [];
 }
 
 function fitRadiusIntoView() {
@@ -557,8 +559,10 @@ function activeCardIndexFromScroll() {
 function syncActiveMarkerToScroll() {
   const index = activeCardIndexFromScroll();
 
-  if (index >= 0 && markers[index]) {
-    setActiveMarker(markers[index]);
+  if (index >= 0 && cardMarkers[index]) {
+    setActiveMarker(cardMarkers[index]);
+  } else {
+    setActiveMarker(null);
   }
 }
 
@@ -621,23 +625,33 @@ function render() {
     " Events sichtbar";
 
   visibleEvents.forEach(event => {
-    const marker = L.marker([
-      event.lat,
-      event.lng
-    ])
-      .addTo(map)
-      .on("click", () => {
-        setActiveMarker(marker);
-        openSheet(event);
-      });
+    let marker = null;
 
-    markers.push(marker);
+    if (event.hasLocation) {
+      marker = L.marker([
+        event.lat,
+        event.lng
+      ])
+        .addTo(map)
+        .on("click", () => {
+          setActiveMarker(marker);
+          openSheet(event);
+        });
+
+      markers.push(marker);
+    }
+
+    cardMarkers.push(marker);
 
     const card = document.createElement("div");
     card.className = event.hasLocation ? "card" : "card no-geo";
 
     card.onclick = () => {
-      setActiveMarker(marker);
+      if (marker) {
+        setActiveMarker(marker);
+      } else {
+        setActiveMarker(null);
+      }
 
       card.scrollIntoView({
         behavior: "smooth",
@@ -683,6 +697,8 @@ function render() {
 
   if (markers.length > 0) {
     setActiveMarker(markers[0]);
+  } else {
+    setActiveMarker(null);
   }
 
 
