@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v29-geo-note-refined");
+console.log("APP VERSION: eventbw-json-v30-clean-stats");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -662,14 +662,20 @@ function render() {
   const visibleWithoutGeo =
     visibleEvents.length - visibleWithGeo;
 
-  eventMeta.innerText =
-    visibleEvents.length +
-    " von " +
+  let eventMetaText =
     appEvents.length +
-    " Events sichtbar · " +
-    visibleWithGeo +
-    " mit Karte" +
-    (visibleWithoutGeo ? " · " + visibleWithoutGeo + " ohne Geo" : "");
+    " Events gesamt · " +
+    visibleEvents.length +
+    " im Radius";
+
+  if (visibleWithoutGeo) {
+    eventMetaText +=
+      "\nDavon " +
+      visibleWithoutGeo +
+      " ohne Kartenposition";
+  }
+
+  eventMeta.innerText = eventMetaText;
 
   visibleEvents.forEach(event => {
     let marker = null;
