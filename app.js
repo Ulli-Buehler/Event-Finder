@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v18-stale-warning");
+console.log("APP VERSION: eventbw-json-v19-navigation-button");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -72,9 +72,15 @@ sheet.innerHTML = `
 
   <div id="sheet-description"></div>
 
-  <a id="sheet-link" class="detail-link" href="#" target="_blank" rel="noopener">
-    Details öffnen
-  </a>
+  <div class="sheet-actions">
+    <a id="sheet-link" class="detail-link" href="#" target="_blank" rel="noopener">
+      Details
+    </a>
+
+    <button id="navigationBtn" class="navigation-link" type="button">
+      Navigation
+    </button>
+  </div>
 `;
 
 document.body.appendChild(sheet);
@@ -295,6 +301,33 @@ async function loadEventBwEvents() {
   updateLastUpdateInfo();
 }
 
+
+function openNavigation(event) {
+  if (!hasCoords(event)) return;
+
+  const lat = event.lat;
+  const lng = event.lng;
+
+  const wazeUrl =
+    "waze://?ll=" +
+    encodeURIComponent(lat + "," + lng) +
+    "&navigate=yes";
+
+  const googleUrl =
+    "https://www.google.com/maps/dir/?api=1&destination=" +
+    encodeURIComponent(lat + "," + lng);
+
+  const startedAt = Date.now();
+
+  window.location.href = wazeUrl;
+
+  setTimeout(() => {
+    if (Date.now() - startedAt < 1800) {
+      window.location.href = googleUrl;
+    }
+  }, 900);
+}
+
 function openSheet(event) {
   document.getElementById("sheet-title").innerText =
     event.title || "Event";
@@ -309,6 +342,7 @@ function openSheet(event) {
     "Märkte/Feste für " + formatSundayDate(importMeta && importMeta.targetDate);
 
   const link = document.getElementById("sheet-link");
+  const navigationBtn = document.getElementById("navigationBtn");
 
   if (event.detailUrl) {
     link.href = event.detailUrl;
@@ -316,6 +350,16 @@ function openSheet(event) {
   } else {
     link.href = "#";
     link.style.display = "none";
+  }
+
+  if (hasCoords(event)) {
+    navigationBtn.style.display = "inline-block";
+    navigationBtn.onclick = () => {
+      openNavigation(event);
+    };
+  } else {
+    navigationBtn.style.display = "none";
+    navigationBtn.onclick = null;
   }
 
   resetSheetPosition();
