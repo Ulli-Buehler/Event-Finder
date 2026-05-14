@@ -433,3 +433,15 @@ input[type="range"]{
 .card.no-geo .card-distance{
   color:#8e8e93;
 }
+
+
+.sheet-geo-note{
+  display:none;
+  margin:8px 0 7px;
+  padding:7px 9px;
+  border-radius:10px;
+  background:#f2f2f7;
+  color:#6e6e73;
+  font-size:13px;
+  font-weight:800;
+}
