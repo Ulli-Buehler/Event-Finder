@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-14T04:00:41.818Z",
-    "finishedAt": "2026-05-14T04:04:20.078Z",
+    "startedAt": "2026-05-14T05:00:34.258Z",
+    "finishedAt": "2026-05-14T05:04:12.621Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -93,14 +93,14 @@
       "Heroldstatt"
     ],
     "counts": {
-      "pages": 244,
-      "rawCollectedIncludingDuplicates": 3383,
-      "rawUnique": 3383,
+      "pages": 245,
+      "rawCollectedIncludingDuplicates": 3395,
+      "rawUnique": 3395,
       "targetDateMatches": 91,
       "targetDateWithGeo": 91,
       "nonRegionalTargetDateMatches": 83,
       "rawMaerkte": 140,
-      "rawFeste": 3243,
+      "rawFeste": 3255,
       "targetDateMaerkte": 3,
       "targetDateFeste": 88,
       "targetDateWithGeoMaerkte": 3,
@@ -372,9 +372,7 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/aktionstage-roter-turm-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
-      "page": 12,
-      "lat": 49.2303439,
-      "lng": 9.1621599
+      "page": 12
     },
     {
       "title": "Schäfertage mit Schäfermarkt",
@@ -483,8 +481,8 @@
       "endDate": "2026-05-17",
       "time": "14:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-4/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
-      "page": 16
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/17/",
+      "page": 17
     },
     {
       "title": "Internationaler Museumstag 2026",
@@ -573,8 +571,8 @@
       "endDate": "2026-05-17",
       "time": "10:30 - 15:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/rangerfuhrung-zum-buhlbachsee/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/15/",
-      "page": 15,
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
+      "page": 16,
       "lat": 48.5069519,
       "lng": 8.3720124
     },
@@ -799,7 +797,7 @@
       "city": "Karlsruhe",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "time": "11:00 - 12:45 Uhr",
+      "time": "11:00 - 12:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/staatskapelle-entspannt-staatstheater-entspannt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/",
       "page": 18,
@@ -985,8 +983,8 @@
       "endDate": "2026-05-17",
       "time": "18:00 - 19:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sigmaringer-rathausplatzkonzert-9/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/17/",
-      "page": 17,
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/",
+      "page": 18,
       "lat": 48.0869139,
       "lng": 9.2165039
     },
@@ -998,8 +996,8 @@
       "endDate": "2026-05-17",
       "time": "14:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-vereine/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/",
-      "page": 18
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/19/",
+      "page": 19
     },
     {
       "title": "Vergleichsschießen Simonswald - Gütenbach",
