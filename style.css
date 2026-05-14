@@ -425,3 +425,11 @@ input[type="range"]{
   margin-right:-8px;
 }
 
+
+.card.no-geo .card-image{
+  opacity:.72;
+}
+
+.card.no-geo .card-distance{
+  color:#8e8e93;
+}
