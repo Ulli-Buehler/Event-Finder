@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v18-stale-warning");
+console.log("APP VERSION: eventbw-json-v26-radius200-no-geo-visible");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -47,7 +47,7 @@ const filterPanel = document.getElementById("filterPanel");
 const topPanel = document.querySelector(".top");
 
 radiusSlider.min = 5;
-radiusSlider.max = 120;
+radiusSlider.max = 200;
 radiusSlider.value = 40;
 
 const eventMeta = document.createElement("div");
@@ -55,6 +55,7 @@ eventMeta.className = "event-meta";
 filterPanel.appendChild(eventMeta);
 
 const markers = [];
+let cardMarkers = [];
 
 const sheet = document.createElement("div");
 sheet.className = "sheet";
@@ -127,6 +128,7 @@ function clearMarkers() {
   });
 
   markers.length = 0;
+  cardMarkers = [];
 }
 
 function fitRadiusIntoView() {
@@ -134,7 +136,8 @@ function fitRadiusIntoView() {
     radiusKm <= 30 ? 10 :
     radiusKm <= 55 ? 9 :
     radiusKm <= 85 ? 8 :
-    7;
+    radiusKm <= 140 ? 7 :
+    6;
 
   map.setView(userPos, zoomByRadius, {
     animate: true
@@ -432,7 +435,7 @@ function enrichVisibleEvent(event) {
       ...event,
       hasLocation: false,
       realDistance: Number.POSITIVE_INFINITY,
-      realDistanceText: "ohne km"
+      realDistanceText: "kein Geo"
     };
   }
 
@@ -513,8 +516,10 @@ function activeCardIndexFromScroll() {
 function syncActiveMarkerToScroll() {
   const index = activeCardIndexFromScroll();
 
-  if (index >= 0 && markers[index]) {
-    setActiveMarker(markers[index]);
+  if (index >= 0 && cardMarkers[index]) {
+    setActiveMarker(cardMarkers[index]);
+  } else if (index >= 0) {
+    setActiveMarker(null);
   }
 }
 
@@ -557,12 +562,18 @@ function render() {
   const visibleEvents = appEvents
     .map(enrichVisibleEvent)
     .filter(event => {
-      if (!event.hasLocation) return false;
+      if (!event.hasLocation) return true;
       return event.realDistance <= radiusKm;
     })
     .sort((a, b) => {
-      const byDistance = a.realDistance - b.realDistance;
-      if (byDistance !== 0) return byDistance;
+      if (a.hasLocation !== b.hasLocation) {
+        return a.hasLocation ? -1 : 1;
+      }
+
+      if (a.hasLocation && b.hasLocation) {
+        const byDistance = a.realDistance - b.realDistance;
+        if (byDistance !== 0) return byDistance;
+      }
 
       const byDate = String(a.startDate || "").localeCompare(String(b.startDate || ""));
       if (byDate !== 0) return byDate;
@@ -570,30 +581,49 @@ function render() {
       return String(a.title || "").localeCompare(String(b.title || ""), "de");
     });
 
+  const visibleWithGeo =
+    visibleEvents.filter(event => event.hasLocation).length;
+
+  const visibleWithoutGeo =
+    visibleEvents.length - visibleWithGeo;
+
   eventMeta.innerText =
     visibleEvents.length +
     " von " +
     appEvents.length +
-    " Events im Radius sichtbar";
+    " Events sichtbar · " +
+    visibleWithGeo +
+    " mit Karte" +
+    (visibleWithoutGeo ? " · " + visibleWithoutGeo + " ohne Geo" : "");
 
   visibleEvents.forEach(event => {
-    const marker = L.marker([
-      event.lat,
-      event.lng
-    ])
-      .addTo(map)
-      .on("click", () => {
-        setActiveMarker(marker);
-        openSheet(event);
-      });
+    let marker = null;
 
-    markers.push(marker);
+    if (event.hasLocation) {
+      marker = L.marker([
+        event.lat,
+        event.lng
+      ])
+        .addTo(map)
+        .on("click", () => {
+          setActiveMarker(marker);
+          openSheet(event);
+        });
+
+      markers.push(marker);
+    }
+
+    cardMarkers.push(marker);
 
     const card = document.createElement("div");
-    card.className = "card";
+    card.className = event.hasLocation ? "card" : "card no-geo";
 
     card.onclick = () => {
-      setActiveMarker(marker);
+      if (marker) {
+        setActiveMarker(marker);
+      } else {
+        setActiveMarker(null);
+      }
 
       card.scrollIntoView({
         behavior: "smooth",
@@ -639,6 +669,8 @@ function render() {
 
   if (markers.length > 0) {
     setActiveMarker(markers[0]);
+  } else {
+    setActiveMarker(null);
   }
 
 
