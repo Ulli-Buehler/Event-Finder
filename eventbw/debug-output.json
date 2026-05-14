@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-14T18:00:39.258Z",
-    "finishedAt": "2026-05-14T18:06:12.116Z",
+    "startedAt": "2026-05-14T19:00:42.749Z",
+    "finishedAt": "2026-05-14T19:06:11.244Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -100,13 +100,13 @@
       "targetDateWithGeo": 91,
       "targetDateWithoutGeo": 0,
       "targetDateGeoEstimated": 91,
-      "targetDateGeoEstimatedFromCity": 68,
-      "targetDateGeoEstimatedFromDetail": 13,
+      "targetDateGeoEstimatedFromCity": 72,
+      "targetDateGeoEstimatedFromDetail": 9,
       "targetDateGeoEstimatedFromCompoundCity": 0,
       "targetDateGeoEstimatedFromTitle": 4,
       "targetDateGeoEstimatedFromBodenseeRegion": 6,
-      "targetDateDetailGeoChecked": 23,
-      "targetDateDetailGeoRecovered": 13,
+      "targetDateDetailGeoChecked": 19,
+      "targetDateDetailGeoRecovered": 9,
       "targetDateCompoundCityGeoChecked": 0,
       "targetDateCompoundCityGeoRecovered": 0,
       "targetDateTitleGeoChecked": 4,
@@ -2327,8 +2327,8 @@
     }
   ],
   "detailGeo": {
-    "checked": 23,
-    "recovered": 13,
+    "checked": 19,
+    "recovered": 9,
     "tried": [
       {
         "title": "Fisch vom Grill",
@@ -2430,62 +2430,15 @@
         ]
       },
       {
-        "title": "Aktionstage Roter Turm",
-        "city": "Bad Wimpfen",
-        "detailLocation": "Roter Turm, Bad Wimpfen, Baden-Württemberg",
+        "title": "Kunst trifft Handwerk",
+        "city": "Bad Säckingen",
+        "detailLocation": "Schlosspark, Bad Säckingen, Baden-Württemberg",
         "queries": [
-          "Roter Turm, Bad Wimpfen, Baden-Württemberg, Bad Wimpfen, Baden-Württemberg, Germany",
-          "Roter Turm, Bad Wimpfen, Baden-Württemberg",
-          "Roter Turm, Bad Wimpfen, Baden-Württemberg, Germany",
-          "Roter Turm, Baden-Württemberg, Germany",
-          "Bad Wimpfen, Baden-Württemberg, Germany"
-        ]
-      },
-      {
-        "title": "Schäfertage mit Schäfermarkt",
-        "city": "Beuren",
-        "detailLocation": "Freilichtmuseum Beuren, Beuren, Baden-Württemberg",
-        "queries": [
-          "Freilichtmuseum Beuren, Beuren, Baden-Württemberg, Beuren, Baden-Württemberg, Germany",
-          "Freilichtmuseum Beuren, Beuren, Baden-Württemberg",
-          "Freilichtmuseum Beuren, Beuren, Baden-Württemberg, Germany",
-          "Freilichtmuseum Beuren, Baden-Württemberg, Germany",
-          "Beuren, Baden-Württemberg, Germany"
-        ]
-      },
-      {
-        "title": "16. Karlsbader Rhododendrontage",
-        "city": "Karlsbad",
-        "detailLocation": "Rhododendronpark Jansen, Karlsbad, Baden-Württemberg",
-        "queries": [
-          "Rhododendronpark Jansen, Karlsbad, Baden-Württemberg, Karlsbad, Baden-Württemberg, Germany",
-          "Rhododendronpark Jansen, Karlsbad, Baden-Württemberg",
-          "Rhododendronpark Jansen, Karlsbad, Baden-Württemberg, Germany",
-          "Rhododendronpark Jansen, Baden-Württemberg, Germany",
-          "Karlsbad, Baden-Württemberg, Germany"
-        ]
-      },
-      {
-        "title": "\"Tolle Wolle\" auf Campus Galli",
-        "city": "Meßkirch",
-        "detailLocation": "Campus Galli, Meßkirch, Baden-Württemberg",
-        "queries": [
-          "Campus Galli, Meßkirch, Baden-Württemberg, Meßkirch, Baden-Württemberg, Germany",
-          "Campus Galli, Meßkirch, Baden-Württemberg",
-          "Campus Galli, Meßkirch, Baden-Württemberg, Germany",
-          "Campus Galli, Baden-Württemberg, Germany",
-          "Meßkirch, Baden-Württemberg, Germany"
-        ]
-      },
-      {
-        "title": "MARKGRÄFLER WEINPROMENADE",
-        "city": "Müllheim",
-        "detailLocation": "Müllheim, Müllheim, Baden-Württemberg",
-        "queries": [
-          "Müllheim, Müllheim, Baden-Württemberg, Müllheim, Baden-Württemberg, Germany",
-          "Müllheim, Müllheim, Baden-Württemberg",
-          "Müllheim, Müllheim, Baden-Württemberg, Germany",
-          "Müllheim, Baden-Württemberg, Germany"
+          "Schlosspark, Bad Säckingen, Baden-Württemberg, Bad Säckingen, Baden-Württemberg, Germany",
+          "Schlosspark, Bad Säckingen, Baden-Württemberg",
+          "Schlosspark, Bad Säckingen, Baden-Württemberg, Germany",
+          "Schlosspark, Baden-Württemberg, Germany",
+          "Bad Säckingen, Baden-Württemberg, Germany"
         ]
       },
       {
@@ -3297,8 +3250,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtfest-kehler-messdi/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1,
-      "lat": 48.5728929,
-      "lng": 7.8109768,
+      "lat": 48.5733977,
+      "lng": 7.8114002,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Kehl, Baden-Württemberg, Germany"
@@ -3730,11 +3683,14 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kunst-trifft-handwerk-3/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
-      "lat": 47.5527459,
-      "lng": 7.9410556,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Schlosspark, Bad Säckingen, Baden-Württemberg",
+      "lat": 47.5505754,
+      "lng": 7.9488937,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Säckingen, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Schlosspark, Bad Säckingen, Baden-Württemberg, Bad Säckingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Köstlich Wandern 2. Tour",
@@ -4271,14 +4227,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/aktionstage-roter-turm-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
       "page": 12,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Roter Turm, Bad Wimpfen, Baden-Württemberg",
-      "lat": 49.2298065,
-      "lng": 9.1656881,
+      "lat": 49.2303439,
+      "lng": 9.1621599,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Roter Turm, Bad Wimpfen, Baden-Württemberg, Bad Wimpfen, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Bad Wimpfen, Baden-Württemberg, Germany"
     },
     {
       "title": "Alice Armstrong beim Blues Club",
@@ -4356,14 +4309,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schafertage-mit-schafermarkt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
       "page": 12,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Freilichtmuseum Beuren, Beuren, Baden-Württemberg",
-      "lat": 48.5767311,
-      "lng": 9.4151185,
+      "lat": 48.5805031,
+      "lng": 9.4044658,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Freilichtmuseum Beuren, Beuren, Baden-Württemberg, Beuren, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Beuren, Baden-Württemberg, Germany"
     },
     {
       "title": "Dunkelromantische Tanznacht",
@@ -4518,14 +4468,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/16-karlsbader-rhododendrontage/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/",
       "page": 13,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Rhododendronpark Jansen, Karlsbad, Baden-Württemberg",
-      "lat": 48.886633,
-      "lng": 8.4878794,
+      "lat": 48.9038411,
+      "lng": 8.5088293,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Rhododendronpark Jansen, Karlsbad, Baden-Württemberg, Karlsbad, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Karlsbad, Baden-Württemberg, Germany"
     },
     {
       "title": "3. Liederabend – Ann-Beth Solvang",
@@ -4691,14 +4638,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tolle-wolle-auf-campus-galli/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Campus Galli, Meßkirch, Baden-Württemberg",
-      "lat": 48.0330561,
-      "lng": 9.1031462,
+      "lat": 47.9939249,
+      "lng": 9.1122006,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Campus Galli, Meßkirch, Baden-Württemberg, Meßkirch, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Meßkirch, Baden-Württemberg, Germany"
     },
     {
       "title": "Mühlacker Frühling",
@@ -4721,14 +4665,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/markgrafler-weinpromenade/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
       "page": 14,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Müllheim, Müllheim, Baden-Württemberg",
       "lat": 47.810102,
       "lng": 7.5995606,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Müllheim, Müllheim, Baden-Württemberg, Müllheim, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Müllheim, Baden-Württemberg, Germany"
     },
     {
       "title": "Nachbarschaftsflohmarkt „Die Unterstadt räumt auf“",
@@ -5737,8 +5678,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-ganz-die-alte-schule/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/15/",
       "page": 15,
-      "lat": 47.9713529,
-      "lng": 8.9283473,
+      "lat": 47.9713008,
+      "lng": 8.9284465,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Neuhausen ob Eck, Baden-Württemberg, Germany"
@@ -5801,8 +5742,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-museen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
       "page": 16,
-      "lat": 47.924349,
-      "lng": 9.2559822,
+      "lat": 47.9232677,
+      "lng": 9.2500203,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Pfullendorf, Baden-Württemberg, Germany"
@@ -5900,8 +5841,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinzeit-im-dobel/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/",
       "page": 18,
-      "lat": 49.1047,
-      "lng": 8.85583,
+      "lat": 49.1060275,
+      "lng": 8.8597086,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Sulzfeld, Baden-Württemberg, Germany"
@@ -40774,8 +40715,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtfest-kehler-messdi/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1,
-      "lat": 48.5728929,
-      "lng": 7.8109768,
+      "lat": 48.5733977,
+      "lng": 7.8114002,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Kehl, Baden-Württemberg, Germany"
@@ -40822,11 +40763,14 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kunst-trifft-handwerk-3/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
-      "lat": 47.5527459,
-      "lng": 7.9410556,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Schlosspark, Bad Säckingen, Baden-Württemberg",
+      "lat": 47.5505754,
+      "lng": 7.9488937,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Säckingen, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Schlosspark, Bad Säckingen, Baden-Württemberg, Bad Säckingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Qi Gong im Kurpark",
@@ -40934,14 +40878,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/aktionstage-roter-turm-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
       "page": 12,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Roter Turm, Bad Wimpfen, Baden-Württemberg",
-      "lat": 49.2298065,
-      "lng": 9.1656881,
+      "lat": 49.2303439,
+      "lng": 9.1621599,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Roter Turm, Bad Wimpfen, Baden-Württemberg, Bad Wimpfen, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Bad Wimpfen, Baden-Württemberg, Germany"
     },
     {
       "title": "Schäfertage mit Schäfermarkt",
@@ -40953,14 +40894,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schafertage-mit-schafermarkt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
       "page": 12,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Freilichtmuseum Beuren, Beuren, Baden-Württemberg",
-      "lat": 48.5767311,
-      "lng": 9.4151185,
+      "lat": 48.5805031,
+      "lng": 9.4044658,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Freilichtmuseum Beuren, Beuren, Baden-Württemberg, Beuren, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Beuren, Baden-Württemberg, Germany"
     },
     {
       "title": "16. Karlsbader Rhododendrontage",
@@ -40972,14 +40910,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/16-karlsbader-rhododendrontage/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/",
       "page": 13,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Rhododendronpark Jansen, Karlsbad, Baden-Württemberg",
-      "lat": 48.886633,
-      "lng": 8.4878794,
+      "lat": 48.9038411,
+      "lng": 8.5088293,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Rhododendronpark Jansen, Karlsbad, Baden-Württemberg, Karlsbad, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Karlsbad, Baden-Württemberg, Germany"
     },
     {
       "title": "\"Tolle Wolle\" auf Campus Galli",
@@ -40991,14 +40926,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tolle-wolle-auf-campus-galli/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Campus Galli, Meßkirch, Baden-Württemberg",
-      "lat": 48.0330561,
-      "lng": 9.1031462,
+      "lat": 47.9939249,
+      "lng": 9.1122006,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Campus Galli, Meßkirch, Baden-Württemberg, Meßkirch, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Meßkirch, Baden-Württemberg, Germany"
     },
     {
       "title": "MARKGRÄFLER WEINPROMENADE",
@@ -41010,14 +40942,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/markgrafler-weinpromenade/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
       "page": 14,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Müllheim, Müllheim, Baden-Württemberg",
       "lat": 47.810102,
       "lng": 7.5995606,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Müllheim, Müllheim, Baden-Württemberg, Müllheim, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Müllheim, Baden-Württemberg, Germany"
     },
     {
       "title": "Heimattage 2026: Baden-Württemberg-Tag",
@@ -41729,8 +41658,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-ganz-die-alte-schule/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/15/",
       "page": 15,
-      "lat": 47.9713529,
-      "lng": 8.9283473,
+      "lat": 47.9713008,
+      "lng": 8.9284465,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Neuhausen ob Eck, Baden-Württemberg, Germany"
@@ -41793,8 +41722,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-museen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
       "page": 16,
-      "lat": 47.924349,
-      "lng": 9.2559822,
+      "lat": 47.9232677,
+      "lng": 9.2500203,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Pfullendorf, Baden-Württemberg, Germany"
@@ -41892,8 +41821,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinzeit-im-dobel/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/",
       "page": 18,
-      "lat": 49.1047,
-      "lng": 8.85583,
+      "lat": 49.1060275,
+      "lng": 8.8597086,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Sulzfeld, Baden-Württemberg, Germany"
@@ -42325,8 +42254,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtfest-kehler-messdi/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1,
-      "lat": 48.5728929,
-      "lng": 7.8109768,
+      "lat": 48.5733977,
+      "lng": 7.8114002,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Kehl, Baden-Württemberg, Germany"
@@ -42373,11 +42302,14 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kunst-trifft-handwerk-3/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
-      "lat": 47.5527459,
-      "lng": 7.9410556,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Schlosspark, Bad Säckingen, Baden-Württemberg",
+      "lat": 47.5505754,
+      "lng": 7.9488937,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Säckingen, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Schlosspark, Bad Säckingen, Baden-Württemberg, Bad Säckingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Qi Gong im Kurpark",
@@ -42485,14 +42417,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/aktionstage-roter-turm-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
       "page": 12,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Roter Turm, Bad Wimpfen, Baden-Württemberg",
-      "lat": 49.2298065,
-      "lng": 9.1656881,
+      "lat": 49.2303439,
+      "lng": 9.1621599,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Roter Turm, Bad Wimpfen, Baden-Württemberg, Bad Wimpfen, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Bad Wimpfen, Baden-Württemberg, Germany"
     },
     {
       "title": "Schäfertage mit Schäfermarkt",
@@ -42504,14 +42433,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schafertage-mit-schafermarkt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
       "page": 12,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Freilichtmuseum Beuren, Beuren, Baden-Württemberg",
-      "lat": 48.5767311,
-      "lng": 9.4151185,
+      "lat": 48.5805031,
+      "lng": 9.4044658,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Freilichtmuseum Beuren, Beuren, Baden-Württemberg, Beuren, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Beuren, Baden-Württemberg, Germany"
     },
     {
       "title": "16. Karlsbader Rhododendrontage",
@@ -42523,14 +42449,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/16-karlsbader-rhododendrontage/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/",
       "page": 13,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Rhododendronpark Jansen, Karlsbad, Baden-Württemberg",
-      "lat": 48.886633,
-      "lng": 8.4878794,
+      "lat": 48.9038411,
+      "lng": 8.5088293,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Rhododendronpark Jansen, Karlsbad, Baden-Württemberg, Karlsbad, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Karlsbad, Baden-Württemberg, Germany"
     },
     {
       "title": "\"Tolle Wolle\" auf Campus Galli",
@@ -42542,14 +42465,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tolle-wolle-auf-campus-galli/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Campus Galli, Meßkirch, Baden-Württemberg",
-      "lat": 48.0330561,
-      "lng": 9.1031462,
+      "lat": 47.9939249,
+      "lng": 9.1122006,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Campus Galli, Meßkirch, Baden-Württemberg, Meßkirch, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Meßkirch, Baden-Württemberg, Germany"
     },
     {
       "title": "MARKGRÄFLER WEINPROMENADE",
@@ -42561,14 +42481,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/markgrafler-weinpromenade/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
       "page": 14,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Müllheim, Müllheim, Baden-Württemberg",
       "lat": 47.810102,
       "lng": 7.5995606,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Müllheim, Müllheim, Baden-Württemberg, Müllheim, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Müllheim, Baden-Württemberg, Germany"
     },
     {
       "title": "Heimattage 2026: Baden-Württemberg-Tag",
@@ -43280,8 +43197,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-ganz-die-alte-schule/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/15/",
       "page": 15,
-      "lat": 47.9713529,
-      "lng": 8.9283473,
+      "lat": 47.9713008,
+      "lng": 8.9284465,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Neuhausen ob Eck, Baden-Württemberg, Germany"
@@ -43344,8 +43261,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-museen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
       "page": 16,
-      "lat": 47.924349,
-      "lng": 9.2559822,
+      "lat": 47.9232677,
+      "lng": 9.2500203,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Pfullendorf, Baden-Württemberg, Germany"
@@ -43443,8 +43360,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinzeit-im-dobel/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/",
       "page": 18,
-      "lat": 49.1047,
-      "lng": 8.85583,
+      "lat": 49.1060275,
+      "lng": 8.8597086,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Sulzfeld, Baden-Württemberg, Germany"
@@ -43876,8 +43793,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtfest-kehler-messdi/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1,
-      "lat": 48.5728929,
-      "lng": 7.8109768,
+      "lat": 48.5733977,
+      "lng": 7.8114002,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Kehl, Baden-Württemberg, Germany"
@@ -43908,11 +43825,14 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kunst-trifft-handwerk-3/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
-      "lat": 47.5527459,
-      "lng": 7.9410556,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Schlosspark, Bad Säckingen, Baden-Württemberg",
+      "lat": 47.5505754,
+      "lng": 7.9488937,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Säckingen, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Schlosspark, Bad Säckingen, Baden-Württemberg, Bad Säckingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Qi Gong im Kurpark",
@@ -44020,14 +43940,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/aktionstage-roter-turm-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
       "page": 12,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Roter Turm, Bad Wimpfen, Baden-Württemberg",
-      "lat": 49.2298065,
-      "lng": 9.1656881,
+      "lat": 49.2303439,
+      "lng": 9.1621599,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Roter Turm, Bad Wimpfen, Baden-Württemberg, Bad Wimpfen, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Bad Wimpfen, Baden-Württemberg, Germany"
     },
     {
       "title": "16. Karlsbader Rhododendrontage",
@@ -44039,14 +43956,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/16-karlsbader-rhododendrontage/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/",
       "page": 13,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Rhododendronpark Jansen, Karlsbad, Baden-Württemberg",
-      "lat": 48.886633,
-      "lng": 8.4878794,
+      "lat": 48.9038411,
+      "lng": 8.5088293,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Rhododendronpark Jansen, Karlsbad, Baden-Württemberg, Karlsbad, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Karlsbad, Baden-Württemberg, Germany"
     },
     {
       "title": "\"Tolle Wolle\" auf Campus Galli",
@@ -44058,14 +43972,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tolle-wolle-auf-campus-galli/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Campus Galli, Meßkirch, Baden-Württemberg",
-      "lat": 48.0330561,
-      "lng": 9.1031462,
+      "lat": 47.9939249,
+      "lng": 9.1122006,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Campus Galli, Meßkirch, Baden-Württemberg, Meßkirch, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Meßkirch, Baden-Württemberg, Germany"
     },
     {
       "title": "MARKGRÄFLER WEINPROMENADE",
@@ -44077,14 +43988,11 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/markgrafler-weinpromenade/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
       "page": 14,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Müllheim, Müllheim, Baden-Württemberg",
       "lat": 47.810102,
       "lng": 7.5995606,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Müllheim, Müllheim, Baden-Württemberg, Müllheim, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Müllheim, Baden-Württemberg, Germany"
     },
     {
       "title": "Heimattage 2026: Baden-Württemberg-Tag",
@@ -44748,8 +44656,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-museumstag-ganz-die-alte-schule/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/15/",
       "page": 15,
-      "lat": 47.9713529,
-      "lng": 8.9283473,
+      "lat": 47.9713008,
+      "lng": 8.9284465,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Neuhausen ob Eck, Baden-Württemberg, Germany"
@@ -44812,8 +44720,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-museen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/16/",
       "page": 16,
-      "lat": 47.924349,
-      "lng": 9.2559822,
+      "lat": 47.9232677,
+      "lng": 9.2500203,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Pfullendorf, Baden-Württemberg, Germany"
@@ -44911,8 +44819,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinzeit-im-dobel/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/18/",
       "page": 18,
-      "lat": 49.1047,
-      "lng": 8.85583,
+      "lat": 49.1060275,
+      "lng": 8.8597086,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Sulzfeld, Baden-Württemberg, Germany"
