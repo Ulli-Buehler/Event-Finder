@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v19-navigation-button");
+console.log("APP VERSION: eventbw-json-v20-show-no-geo-events");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -476,7 +476,7 @@ function enrichVisibleEvent(event) {
       ...event,
       hasLocation: false,
       realDistance: Number.POSITIVE_INFINITY,
-      realDistanceText: "ohne km"
+      realDistanceText: "ohne Geo"
     };
   }
 
@@ -601,7 +601,7 @@ function render() {
   const visibleEvents = appEvents
     .map(enrichVisibleEvent)
     .filter(event => {
-      if (!event.hasLocation) return false;
+      if (!event.hasLocation) return true;
       return event.realDistance <= radiusKm;
     })
     .sort((a, b) => {
@@ -618,7 +618,7 @@ function render() {
     visibleEvents.length +
     " von " +
     appEvents.length +
-    " Events im Radius sichtbar";
+    " Events sichtbar";
 
   visibleEvents.forEach(event => {
     const marker = L.marker([
@@ -634,7 +634,7 @@ function render() {
     markers.push(marker);
 
     const card = document.createElement("div");
-    card.className = "card";
+    card.className = event.hasLocation ? "card" : "card no-geo";
 
     card.onclick = () => {
       setActiveMarker(marker);
