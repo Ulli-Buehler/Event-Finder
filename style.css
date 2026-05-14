@@ -303,16 +303,30 @@ input[type="range"]{
   margin-bottom:7px;
 }
 
-.detail-link{
-  display:inline-block;
+.sheet-actions{
+  display:flex;
+  gap:8px;
   margin-top:8px;
+}
+
+.detail-link,
+.navigation-link{
+  display:inline-block;
+  flex:1;
   color:white;
   background:#007aff;
   text-decoration:none;
+  border:none;
   border-radius:15px;
   padding:11px 14px;
   font-size:15px;
   font-weight:900;
+  text-align:center;
+  font-family:inherit;
+}
+
+.navigation-link{
+  background:#34c759;
 }
 
 
