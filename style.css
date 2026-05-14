@@ -303,16 +303,34 @@ input[type="range"]{
   margin-bottom:7px;
 }
 
-.detail-link{
-  display:inline-block;
+.sheet-actions{
+  display:flex;
+  gap:8px;
   margin-top:8px;
+  align-items:center;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+}
+
+.detail-link,
+.navigation-link{
+  display:inline-block;
+  flex:0 0 auto;
   color:white;
   background:#007aff;
   text-decoration:none;
+  border:none;
   border-radius:15px;
-  padding:11px 14px;
+  padding:10px 13px;
   font-size:15px;
   font-weight:900;
+  text-align:center;
+  font-family:inherit;
+  line-height:1.1;
+}
+
+.navigation-link{
+  background:#34c759;
 }
 
 
