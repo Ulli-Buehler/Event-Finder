@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-14T11:46:10.410Z",
-    "finishedAt": "2026-05-14T11:50:35.880Z",
+    "startedAt": "2026-05-14T12:07:10.161Z",
+    "finishedAt": "2026-05-14T12:11:13.430Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -97,14 +97,17 @@
       "rawCollectedIncludingDuplicates": 3395,
       "rawUnique": 3395,
       "targetDateMatches": 91,
-      "targetDateWithGeo": 83,
-      "targetDateWithoutGeo": 8,
-      "targetDateGeoEstimated": 83,
+      "targetDateWithGeo": 84,
+      "targetDateWithoutGeo": 7,
+      "targetDateGeoEstimated": 84,
       "targetDateGeoEstimatedFromCity": 73,
       "targetDateGeoEstimatedFromDetail": 6,
+      "targetDateGeoEstimatedFromCompoundCity": 1,
       "targetDateGeoEstimatedFromTitle": 4,
       "targetDateDetailGeoChecked": 18,
       "targetDateDetailGeoRecovered": 6,
+      "targetDateCompoundCityGeoChecked": 1,
+      "targetDateCompoundCityGeoRecovered": 1,
       "targetDateTitleGeoChecked": 4,
       "targetDateTitleGeoRecovered": 4,
       "nonRegionalTargetDateMatches": 83,
@@ -113,9 +116,9 @@
       "targetDateMaerkte": 3,
       "targetDateFeste": 88,
       "targetDateWithGeoMaerkte": 3,
-      "targetDateWithGeoFeste": 80,
+      "targetDateWithGeoFeste": 81,
       "targetDateWithoutGeoMaerkte": 0,
-      "targetDateWithoutGeoFeste": 8
+      "targetDateWithoutGeoFeste": 7
     }
   },
   "events": [
@@ -1375,7 +1378,19 @@
       "page": 19,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Schlossgartenhalle Jungnau, Am Schlossgarten 8, 72488, Sigmaringen- Jungnau, Baden-Württemberg"
+      "geoDetailLocation": "Schlossgartenhalle Jungnau, Am Schlossgarten 8, 72488, Sigmaringen- Jungnau, Baden-Württemberg",
+      "geoCompoundCityChecked": true,
+      "geoCompoundCityQueries": [
+        "Jungnau, Sigmaringen, Baden-Württemberg, Germany",
+        "Jungnau, Baden-Württemberg, Germany",
+        "Sigmaringen, Baden-Württemberg, Germany"
+      ],
+      "lat": 48.1397433,
+      "lng": 9.2090717,
+      "geoEstimated": true,
+      "geoSource": "derived-compound-city",
+      "geoQuery": "Jungnau, Sigmaringen, Baden-Württemberg, Germany",
+      "geoCompoundCityFound": true
     },
     {
       "title": "Vergleichsschießen Simonswald - Gütenbach",
