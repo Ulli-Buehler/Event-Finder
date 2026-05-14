@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v25-rollback-stable-complete");
+console.log("APP VERSION: eventbw-json-v18-stale-warning");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
