@@ -15,6 +15,8 @@ on:
         required: false
         default: '40'
         type: string
+  schedule:
+    - cron: '0 5-18 * * *'
 
 permissions:
   contents: write
