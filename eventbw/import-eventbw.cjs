@@ -648,6 +648,134 @@ function detailGeoQuery(event, detailLocation) {
   return [...new Set(parts)].join(', ');
 }
 
+
+function extractTitleGeoLocation(event) {
+  const title = cleanText(event.title);
+  const city = cleanText(event.city);
+
+  const patterns = [
+    /\bab\s+([A-ZÄÖÜ][A-Za-zÄÖÜäöüß .\-]+?)(?:\s+(?:in|und|mit|am|an|zur|zum|ins|im|durch|Richtung)\b|$)/,
+    /\bin\s+([A-ZÄÖÜ][A-Za-zÄÖÜäöüß .\-]+?)(?:\s+(?:und|mit|am|an|zur|zum|ins|im|durch|Richtung)\b|$)/,
+    /\bbei\s+([A-ZÄÖÜ][A-Za-zÄÖÜäöüß .\-]+?)(?:\s+(?:und|mit|am|an|zur|zum|ins|im|durch|Richtung)\b|$)/,
+  ];
+
+  for (const pattern of patterns) {
+    const match = title.match(pattern);
+
+    if (!match) continue;
+
+    const location = cleanText(match[1])
+      .replace(/\s+-\s*$/g, '')
+      .replace(/\s+$/g, '');
+
+    if (
+      location.length >= 3 &&
+      location.length <= 60 &&
+      !/^(Richtung|See|Bodensee|Markt|Fest|Tour|Rundtour)$/i.test(location)
+    ) {
+      return {
+        location,
+        reason: `title:${match[0]}`,
+        city,
+      };
+    }
+  }
+
+  return null;
+}
+
+function titleGeoQueries(event, titleLocation) {
+  const location = cleanText(titleLocation.location);
+  const city = cleanText(event.city);
+  const title = normalizeText(event.title + ' ' + event.city);
+  const queries = [];
+
+  const isBodensee =
+    title.includes('bodensee') ||
+    title.includes('langenargen') ||
+    title.includes('nonnenhorn') ||
+    title.includes('kressbronn') ||
+    title.includes('lindau') ||
+    title.includes('bregenz');
+
+  if (isBodensee) {
+    if (/^kressbronn$/i.test(location)) {
+      queries.push('Kressbronn am Bodensee, Baden-Württemberg, Germany');
+      queries.push('Kressbronn am Bodensee, Germany');
+    } else if (/^wasserburg$/i.test(location)) {
+      queries.push('Wasserburg (Bodensee), Germany');
+      queries.push('Wasserburg am Bodensee, Germany');
+    } else {
+      queries.push(`${location}, Bodenseekreis, Germany`);
+      queries.push(`${location}, Lake Constance, Germany`);
+      queries.push(`${location}, Germany`);
+    }
+  }
+
+  if (city && city !== location && city !== 'Echt Bodensee') {
+    queries.push(`${location}, ${city}, Baden-Württemberg, Germany`);
+  }
+
+  queries.push(`${location}, Baden-Württemberg, Germany`);
+  queries.push(`${location}, Germany`);
+
+  return [...new Set(queries)];
+}
+
+async function enrichMissingGeoFromTitle(events) {
+  let checked = 0;
+  let recovered = 0;
+  const tried = [];
+
+  for (const event of events) {
+    const hasGeo =
+      Number.isFinite(event.lat) &&
+      Number.isFinite(event.lng);
+
+    if (hasGeo) continue;
+
+    const titleLocation = extractTitleGeoLocation(event);
+
+    if (!titleLocation) continue;
+
+    checked += 1;
+    event.geoTitleChecked = true;
+    event.geoTitleLocation = titleLocation.location;
+
+    const queries = titleGeoQueries(event, titleLocation);
+    tried.push({
+      title: event.title,
+      city: event.city,
+      extracted: titleLocation.location,
+      queries,
+    });
+
+    for (const query of queries) {
+      const geo = await geocodeQuery(query);
+
+      if (geo) {
+        event.lat = geo.lat;
+        event.lng = geo.lng;
+        event.geoEstimated = true;
+        event.geoSource = 'derived-title';
+        event.geoQuery = query;
+        event.geoTitleFound = true;
+        recovered += 1;
+
+        await new Promise(resolve => setTimeout(resolve, 1200));
+        break;
+      }
+    }
+
+    if (!Number.isFinite(event.lat) || !Number.isFinite(event.lng)) {
+      event.geoTitleFound = false;
+    }
+  }
+
+  return { checked, recovered, tried };
+}
+
+
 async function enrichMissingGeoFromDetail(events) {
   let recovered = 0;
   let checked = 0;
@@ -818,6 +946,7 @@ async function main() {
   );
 
   const detailGeo = await enrichMissingGeoFromDetail(regionalEvents);
+  const titleGeo = await enrichMissingGeoFromTitle(regionalEvents);
 
   const nonRegionalEvents = sortEvents(
     targetDateEvents.filter(event => !isRegionalCity(event.city))
@@ -842,8 +971,11 @@ async function main() {
       targetDateGeoEstimated: regionalEvents.filter(event => event.geoEstimated === true).length,
       targetDateGeoEstimatedFromCity: regionalEvents.filter(event => event.geoSource === 'derived').length,
       targetDateGeoEstimatedFromDetail: regionalEvents.filter(event => event.geoSource === 'derived-detail').length,
+      targetDateGeoEstimatedFromTitle: regionalEvents.filter(event => event.geoSource === 'derived-title').length,
       targetDateDetailGeoChecked: detailGeo.checked,
       targetDateDetailGeoRecovered: detailGeo.recovered,
+      targetDateTitleGeoChecked: titleGeo.checked,
+      targetDateTitleGeoRecovered: titleGeo.recovered,
       nonRegionalTargetDateMatches: nonRegionalEvents.length,
 
       rawMaerkte: rawEvents.filter(event => event.category === 'maerkte').length,
@@ -864,6 +996,7 @@ async function main() {
     pages: allPages,
     cityStatsForTargetDate,
     detailGeo,
+    titleGeo,
     rawEvents,
     targetDateEvents,
     regionalEvents,
@@ -893,6 +1026,8 @@ async function main() {
   console.log(`Target date without geo: ${regionalEvents.filter(event => !Number.isFinite(event.lat) || !Number.isFinite(event.lng)).length}`);
   console.log(`Detail geo checked: ${detailGeo.checked}`);
   console.log(`Detail geo recovered: ${detailGeo.recovered}`);
+  console.log(`Title geo checked: ${titleGeo.checked}`);
+  console.log(`Title geo recovered: ${titleGeo.recovered}`);
 }
 
 main().catch(error => {
