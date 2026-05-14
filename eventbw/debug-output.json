@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-14T10:54:41.206Z",
-    "finishedAt": "2026-05-14T11:01:35.150Z",
+    "startedAt": "2026-05-14T11:08:39.429Z",
+    "finishedAt": "2026-05-14T11:13:00.729Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -97,25 +97,25 @@
       "rawCollectedIncludingDuplicates": 3395,
       "rawUnique": 3395,
       "targetDateMatches": 91,
-      "targetDateWithGeo": 22,
-      "targetDateWithoutGeo": 69,
-      "targetDateGeoEstimated": 22,
+      "targetDateWithGeo": 40,
+      "targetDateWithoutGeo": 51,
+      "targetDateGeoEstimated": 40,
       "targetDateGeoEstimatedFromCity": 22,
-      "targetDateGeoEstimatedFromDetail": 0,
-      "targetDateGeoEstimatedFromTitle": 0,
+      "targetDateGeoEstimatedFromDetail": 11,
+      "targetDateGeoEstimatedFromTitle": 7,
       "targetDateDetailGeoChecked": 69,
-      "targetDateDetailGeoRecovered": 0,
-      "targetDateTitleGeoChecked": 9,
-      "targetDateTitleGeoRecovered": 0,
+      "targetDateDetailGeoRecovered": 11,
+      "targetDateTitleGeoChecked": 7,
+      "targetDateTitleGeoRecovered": 7,
       "nonRegionalTargetDateMatches": 83,
       "rawMaerkte": 140,
       "rawFeste": 3255,
       "targetDateMaerkte": 3,
       "targetDateFeste": 88,
-      "targetDateWithGeoMaerkte": 0,
-      "targetDateWithGeoFeste": 22,
-      "targetDateWithoutGeoMaerkte": 3,
-      "targetDateWithoutGeoFeste": 66
+      "targetDateWithGeoMaerkte": 1,
+      "targetDateWithGeoFeste": 39,
+      "targetDateWithoutGeoMaerkte": 2,
+      "targetDateWithoutGeoFeste": 49
     }
   },
   "pages": [
@@ -2322,11 +2322,11 @@
   ],
   "detailGeo": {
     "checked": 69,
-    "recovered": 0
+    "recovered": 11
   },
   "titleGeo": {
-    "checked": 9,
-    "recovered": 0
+    "checked": 7,
+    "recovered": 7
   },
   "rawEvents": [
     {
@@ -2672,7 +2672,12 @@
       "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Langenargen",
-      "geoTitleFound": false
+      "lat": 47.6145819,
+      "lng": 9.560059,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Langenargen, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtour ab Nonnenhorn",
@@ -2689,7 +2694,12 @@
       "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Nonnenhorn",
-      "geoTitleFound": false
+      "lat": 47.6046208,
+      "lng": 9.5316534,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Nonnenhorn, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtour ab Wasserburg in Richtung Lindau und Bregenz",
@@ -2706,7 +2716,12 @@
       "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Wasserburg",
-      "geoTitleFound": false
+      "lat": 48.0023588,
+      "lng": 8.8355336,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Wasserburg, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtouren ab Kressbronn",
@@ -2723,7 +2738,12 @@
       "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Kressbronn",
-      "geoTitleFound": false
+      "lat": 49.0655511,
+      "lng": 10.1378705,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Kressbronn, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Ehingen geht SpazBieren",
@@ -2927,8 +2947,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtfest-kehler-messdi/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1,
-      "lat": 48.5728929,
-      "lng": 7.8109768,
+      "lat": 48.5733977,
+      "lng": 7.8114002,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Kehl, Baden-Württemberg, Germany"
@@ -5027,9 +5047,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Hüfingen, Hüfingen, Baden-Württemberg",
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Hüfingen",
-      "geoTitleFound": false
+      "lat": 47.9214121,
+      "lng": 8.4988475,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Hüfingen, Hüfingen, Baden-Württemberg, Hüfingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Besuch bei der DS Hohentwiel und der MS Österreich",
@@ -5154,7 +5176,12 @@
       "geoDetailLocation": "Einfahrt Parkplatz Therme Lindau, Eichwaldstraße 16-20, 88131, Lindau, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Bewegung",
-      "geoTitleFound": false
+      "lat": 48.7808376,
+      "lng": 9.1838281,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Bewegung, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Oldtimertreffen",
@@ -5182,7 +5209,12 @@
       "page": 19,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Mössingen, Mössingen, Baden-Württemberg"
+      "geoDetailLocation": "Mössingen, Mössingen, Baden-Württemberg",
+      "lat": 48.3970692,
+      "lng": 9.0460031,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Mössingen, Mössingen, Baden-Württemberg, Mössingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Chorprojekt Klingende Kirche 2026",
@@ -5196,7 +5228,12 @@
       "page": 19,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Evangelische Kirche Müllheim, Müllheim, Baden-Württemberg"
+      "geoDetailLocation": "Evangelische Kirche Müllheim, Müllheim, Baden-Württemberg",
+      "lat": 47.8083092,
+      "lng": 7.6257421,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Evangelische Kirche Müllheim, Müllheim, Baden-Württemberg, Müllheim, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag und Tag der offenen Ateliers in Müllheim",
@@ -5213,7 +5250,12 @@
       "geoDetailLocation": "Markgräfler Museum im Blankenhorn-Palais, Müllheim, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Müllheim",
-      "geoTitleFound": false
+      "lat": 47.810102,
+      "lng": 7.5995606,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Müllheim, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Reitwochen für Erwachsene",
@@ -5257,7 +5299,12 @@
       "page": 15,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Freilichtmuseum Neuhausen ob Eck, Neuhausen ob Eck, Baden-Württemberg"
+      "geoDetailLocation": "Freilichtmuseum Neuhausen ob Eck, Neuhausen ob Eck, Baden-Württemberg",
+      "lat": 47.9816222,
+      "lng": 8.9311214,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Freilichtmuseum Neuhausen ob Eck, Neuhausen ob Eck, Baden-Württemberg, Neuhausen ob Eck, Baden-Württemberg, Germany"
     },
     {
       "title": "Translationsfest St. Genesius in Schienen",
@@ -5274,7 +5321,12 @@
       "geoDetailLocation": "Katholische Pfarr- und Wallfahrtskirche St. Genesius in Schienen, Öhningen, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Schienen",
-      "geoTitleFound": false
+      "lat": 47.687779,
+      "lng": 8.8989458,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Schienen, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Internationaler Museumstag - Römerfest",
@@ -5288,7 +5340,12 @@
       "page": 16,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Weygang-Museum, Öhringen, Baden-Württemberg"
+      "geoDetailLocation": "Weygang-Museum, Öhringen, Baden-Württemberg",
+      "lat": 49.2010358,
+      "lng": 9.5082687,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Weygang-Museum, Öhringen, Baden-Württemberg, Öhringen, Baden-Württemberg, Germany"
     },
     {
       "title": "Tag des offenen Gartens im Hofgut Cappel",
@@ -5330,7 +5387,12 @@
       "page": 17,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Seebach - Mummelseehalle, Seebach, Baden-Württemberg"
+      "geoDetailLocation": "Seebach - Mummelseehalle, Seebach, Baden-Württemberg",
+      "lat": 48.5766435,
+      "lng": 8.171799,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Seebach - Mummelseehalle, Seebach, Baden-Württemberg, Seebach, Baden-Württemberg, Germany"
     },
     {
       "title": "Pilates auf der Liegewiese im Donaubad",
@@ -5418,7 +5480,12 @@
       "page": 16,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Neues Schloss Tettnang, Tettnang, Baden-Württemberg"
+      "geoDetailLocation": "Neues Schloss Tettnang, Tettnang, Baden-Württemberg",
+      "lat": 47.6698605,
+      "lng": 9.5845236,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Neues Schloss Tettnang, Tettnang, Baden-Württemberg, Tettnang, Baden-Württemberg, Germany"
     },
     {
       "title": "Tüftler, Denker und Macher - 70 Jahre Elektronik in Tettnang",
@@ -5433,9 +5500,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Elektronikmuseum Tettnang, Tettnang, Baden-Württemberg",
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Tettnang",
-      "geoTitleFound": false
+      "lat": 47.6719794,
+      "lng": 9.5885218,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Elektronikmuseum Tettnang, Tettnang, Baden-Württemberg, Tettnang, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag",
@@ -5505,7 +5574,12 @@
       "page": 17,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Schlösslegarten, Weingarten, Baden-Württemberg"
+      "geoDetailLocation": "Schlösslegarten, Weingarten, Baden-Württemberg",
+      "lat": 47.8059116,
+      "lng": 9.6392273,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Schlösslegarten, Weingarten, Baden-Württemberg, Weingarten, Baden-Württemberg, Germany"
     },
     {
       "title": "WeinBar SteilLage vom Weingut Wissmann-Stilz",
@@ -5519,7 +5593,12 @@
       "page": 19,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Remstalkino, Weinstadt, Baden-Württemberg"
+      "geoDetailLocation": "Remstalkino, Weinstadt, Baden-Württemberg",
+      "lat": 48.7998099,
+      "lng": 9.40389,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Remstalkino, Weinstadt, Baden-Württemberg, Weinstadt, Baden-Württemberg, Germany"
     },
     {
       "title": "Sommerfest des Imkervereins Kirnbach",
@@ -38542,7 +38621,12 @@
       "page": 1,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Hausach, Hausach, Baden-Württemberg"
+      "geoDetailLocation": "Hausach, Hausach, Baden-Württemberg",
+      "lat": 48.2836305,
+      "lng": 8.174972,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Hausach, Hausach, Baden-Württemberg, Hausach, Baden-Württemberg, Germany"
     },
     {
       "title": "Pfingstmarkt",
@@ -40121,7 +40205,12 @@
       "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Langenargen",
-      "geoTitleFound": false
+      "lat": 47.6145819,
+      "lng": 9.560059,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Langenargen, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtour ab Nonnenhorn",
@@ -40138,7 +40227,12 @@
       "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Nonnenhorn",
-      "geoTitleFound": false
+      "lat": 47.6046208,
+      "lng": 9.5316534,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Nonnenhorn, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtour ab Wasserburg in Richtung Lindau und Bregenz",
@@ -40155,7 +40249,12 @@
       "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Wasserburg",
-      "geoTitleFound": false
+      "lat": 48.0023588,
+      "lng": 8.8355336,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Wasserburg, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtouren ab Kressbronn",
@@ -40172,7 +40271,12 @@
       "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Kressbronn",
-      "geoTitleFound": false
+      "lat": 49.0655511,
+      "lng": 10.1378705,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Kressbronn, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "TUNING WORLD BODENSEE",
@@ -40200,8 +40304,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtfest-kehler-messdi/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1,
-      "lat": 48.5728929,
-      "lng": 7.8109768,
+      "lat": 48.5733977,
+      "lng": 7.8114002,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Kehl, Baden-Württemberg, Germany"
@@ -40815,9 +40919,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Hüfingen, Hüfingen, Baden-Württemberg",
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Hüfingen",
-      "geoTitleFound": false
+      "lat": 47.9214121,
+      "lng": 8.4988475,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Hüfingen, Hüfingen, Baden-Württemberg, Hüfingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Besuch bei der DS Hohentwiel und der MS Österreich",
@@ -40942,7 +41048,12 @@
       "geoDetailLocation": "Einfahrt Parkplatz Therme Lindau, Eichwaldstraße 16-20, 88131, Lindau, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Bewegung",
-      "geoTitleFound": false
+      "lat": 48.7808376,
+      "lng": 9.1838281,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Bewegung, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Oldtimertreffen",
@@ -40970,7 +41081,12 @@
       "page": 19,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Mössingen, Mössingen, Baden-Württemberg"
+      "geoDetailLocation": "Mössingen, Mössingen, Baden-Württemberg",
+      "lat": 48.3970692,
+      "lng": 9.0460031,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Mössingen, Mössingen, Baden-Württemberg, Mössingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Chorprojekt Klingende Kirche 2026",
@@ -40984,7 +41100,12 @@
       "page": 19,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Evangelische Kirche Müllheim, Müllheim, Baden-Württemberg"
+      "geoDetailLocation": "Evangelische Kirche Müllheim, Müllheim, Baden-Württemberg",
+      "lat": 47.8083092,
+      "lng": 7.6257421,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Evangelische Kirche Müllheim, Müllheim, Baden-Württemberg, Müllheim, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag und Tag der offenen Ateliers in Müllheim",
@@ -41001,7 +41122,12 @@
       "geoDetailLocation": "Markgräfler Museum im Blankenhorn-Palais, Müllheim, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Müllheim",
-      "geoTitleFound": false
+      "lat": 47.810102,
+      "lng": 7.5995606,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Müllheim, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Reitwochen für Erwachsene",
@@ -41045,7 +41171,12 @@
       "page": 15,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Freilichtmuseum Neuhausen ob Eck, Neuhausen ob Eck, Baden-Württemberg"
+      "geoDetailLocation": "Freilichtmuseum Neuhausen ob Eck, Neuhausen ob Eck, Baden-Württemberg",
+      "lat": 47.9816222,
+      "lng": 8.9311214,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Freilichtmuseum Neuhausen ob Eck, Neuhausen ob Eck, Baden-Württemberg, Neuhausen ob Eck, Baden-Württemberg, Germany"
     },
     {
       "title": "Translationsfest St. Genesius in Schienen",
@@ -41062,7 +41193,12 @@
       "geoDetailLocation": "Katholische Pfarr- und Wallfahrtskirche St. Genesius in Schienen, Öhningen, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Schienen",
-      "geoTitleFound": false
+      "lat": 47.687779,
+      "lng": 8.8989458,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Schienen, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Internationaler Museumstag - Römerfest",
@@ -41076,7 +41212,12 @@
       "page": 16,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Weygang-Museum, Öhringen, Baden-Württemberg"
+      "geoDetailLocation": "Weygang-Museum, Öhringen, Baden-Württemberg",
+      "lat": 49.2010358,
+      "lng": 9.5082687,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Weygang-Museum, Öhringen, Baden-Württemberg, Öhringen, Baden-Württemberg, Germany"
     },
     {
       "title": "Tag des offenen Gartens im Hofgut Cappel",
@@ -41118,7 +41259,12 @@
       "page": 17,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Seebach - Mummelseehalle, Seebach, Baden-Württemberg"
+      "geoDetailLocation": "Seebach - Mummelseehalle, Seebach, Baden-Württemberg",
+      "lat": 48.5766435,
+      "lng": 8.171799,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Seebach - Mummelseehalle, Seebach, Baden-Württemberg, Seebach, Baden-Württemberg, Germany"
     },
     {
       "title": "Pilates auf der Liegewiese im Donaubad",
@@ -41206,7 +41352,12 @@
       "page": 16,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Neues Schloss Tettnang, Tettnang, Baden-Württemberg"
+      "geoDetailLocation": "Neues Schloss Tettnang, Tettnang, Baden-Württemberg",
+      "lat": 47.6698605,
+      "lng": 9.5845236,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Neues Schloss Tettnang, Tettnang, Baden-Württemberg, Tettnang, Baden-Württemberg, Germany"
     },
     {
       "title": "Tüftler, Denker und Macher - 70 Jahre Elektronik in Tettnang",
@@ -41221,9 +41372,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Elektronikmuseum Tettnang, Tettnang, Baden-Württemberg",
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Tettnang",
-      "geoTitleFound": false
+      "lat": 47.6719794,
+      "lng": 9.5885218,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Elektronikmuseum Tettnang, Tettnang, Baden-Württemberg, Tettnang, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag",
@@ -41293,7 +41446,12 @@
       "page": 17,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Schlösslegarten, Weingarten, Baden-Württemberg"
+      "geoDetailLocation": "Schlösslegarten, Weingarten, Baden-Württemberg",
+      "lat": 47.8059116,
+      "lng": 9.6392273,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Schlösslegarten, Weingarten, Baden-Württemberg, Weingarten, Baden-Württemberg, Germany"
     },
     {
       "title": "WeinBar SteilLage vom Weingut Wissmann-Stilz",
@@ -41307,7 +41465,12 @@
       "page": 19,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Remstalkino, Weinstadt, Baden-Württemberg"
+      "geoDetailLocation": "Remstalkino, Weinstadt, Baden-Württemberg",
+      "lat": 48.7998099,
+      "lng": 9.40389,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Remstalkino, Weinstadt, Baden-Württemberg, Weinstadt, Baden-Württemberg, Germany"
     },
     {
       "title": "Sommerfest des Imkervereins Kirnbach",
@@ -41363,7 +41526,12 @@
       "page": 1,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Hausach, Hausach, Baden-Württemberg"
+      "geoDetailLocation": "Hausach, Hausach, Baden-Württemberg",
+      "lat": 48.2836305,
+      "lng": 8.174972,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Hausach, Hausach, Baden-Württemberg, Hausach, Baden-Württemberg, Germany"
     }
   ],
   "regionalEvents": [
@@ -41468,7 +41636,12 @@
       "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Langenargen",
-      "geoTitleFound": false
+      "lat": 47.6145819,
+      "lng": 9.560059,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Langenargen, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtour ab Nonnenhorn",
@@ -41485,7 +41658,12 @@
       "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Nonnenhorn",
-      "geoTitleFound": false
+      "lat": 47.6046208,
+      "lng": 9.5316534,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Nonnenhorn, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtour ab Wasserburg in Richtung Lindau und Bregenz",
@@ -41502,7 +41680,12 @@
       "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Wasserburg",
-      "geoTitleFound": false
+      "lat": 48.0023588,
+      "lng": 8.8355336,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Wasserburg, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtouren ab Kressbronn",
@@ -41519,7 +41702,12 @@
       "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Kressbronn",
-      "geoTitleFound": false
+      "lat": 49.0655511,
+      "lng": 10.1378705,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Kressbronn, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "TUNING WORLD BODENSEE",
@@ -41547,8 +41735,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtfest-kehler-messdi/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1,
-      "lat": 48.5728929,
-      "lng": 7.8109768,
+      "lat": 48.5733977,
+      "lng": 7.8114002,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Kehl, Baden-Württemberg, Germany"
@@ -42162,9 +42350,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Hüfingen, Hüfingen, Baden-Württemberg",
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Hüfingen",
-      "geoTitleFound": false
+      "lat": 47.9214121,
+      "lng": 8.4988475,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Hüfingen, Hüfingen, Baden-Württemberg, Hüfingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Besuch bei der DS Hohentwiel und der MS Österreich",
@@ -42289,7 +42479,12 @@
       "geoDetailLocation": "Einfahrt Parkplatz Therme Lindau, Eichwaldstraße 16-20, 88131, Lindau, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Bewegung",
-      "geoTitleFound": false
+      "lat": 48.7808376,
+      "lng": 9.1838281,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Bewegung, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Oldtimertreffen",
@@ -42317,7 +42512,12 @@
       "page": 19,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Mössingen, Mössingen, Baden-Württemberg"
+      "geoDetailLocation": "Mössingen, Mössingen, Baden-Württemberg",
+      "lat": 48.3970692,
+      "lng": 9.0460031,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Mössingen, Mössingen, Baden-Württemberg, Mössingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Chorprojekt Klingende Kirche 2026",
@@ -42331,7 +42531,12 @@
       "page": 19,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Evangelische Kirche Müllheim, Müllheim, Baden-Württemberg"
+      "geoDetailLocation": "Evangelische Kirche Müllheim, Müllheim, Baden-Württemberg",
+      "lat": 47.8083092,
+      "lng": 7.6257421,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Evangelische Kirche Müllheim, Müllheim, Baden-Württemberg, Müllheim, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag und Tag der offenen Ateliers in Müllheim",
@@ -42348,7 +42553,12 @@
       "geoDetailLocation": "Markgräfler Museum im Blankenhorn-Palais, Müllheim, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Müllheim",
-      "geoTitleFound": false
+      "lat": 47.810102,
+      "lng": 7.5995606,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Müllheim, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Reitwochen für Erwachsene",
@@ -42392,7 +42602,12 @@
       "page": 15,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Freilichtmuseum Neuhausen ob Eck, Neuhausen ob Eck, Baden-Württemberg"
+      "geoDetailLocation": "Freilichtmuseum Neuhausen ob Eck, Neuhausen ob Eck, Baden-Württemberg",
+      "lat": 47.9816222,
+      "lng": 8.9311214,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Freilichtmuseum Neuhausen ob Eck, Neuhausen ob Eck, Baden-Württemberg, Neuhausen ob Eck, Baden-Württemberg, Germany"
     },
     {
       "title": "Translationsfest St. Genesius in Schienen",
@@ -42409,7 +42624,12 @@
       "geoDetailLocation": "Katholische Pfarr- und Wallfahrtskirche St. Genesius in Schienen, Öhningen, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Schienen",
-      "geoTitleFound": false
+      "lat": 47.687779,
+      "lng": 8.8989458,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Schienen, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Internationaler Museumstag - Römerfest",
@@ -42423,7 +42643,12 @@
       "page": 16,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Weygang-Museum, Öhringen, Baden-Württemberg"
+      "geoDetailLocation": "Weygang-Museum, Öhringen, Baden-Württemberg",
+      "lat": 49.2010358,
+      "lng": 9.5082687,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Weygang-Museum, Öhringen, Baden-Württemberg, Öhringen, Baden-Württemberg, Germany"
     },
     {
       "title": "Tag des offenen Gartens im Hofgut Cappel",
@@ -42465,7 +42690,12 @@
       "page": 17,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Seebach - Mummelseehalle, Seebach, Baden-Württemberg"
+      "geoDetailLocation": "Seebach - Mummelseehalle, Seebach, Baden-Württemberg",
+      "lat": 48.5766435,
+      "lng": 8.171799,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Seebach - Mummelseehalle, Seebach, Baden-Württemberg, Seebach, Baden-Württemberg, Germany"
     },
     {
       "title": "Pilates auf der Liegewiese im Donaubad",
@@ -42553,7 +42783,12 @@
       "page": 16,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Neues Schloss Tettnang, Tettnang, Baden-Württemberg"
+      "geoDetailLocation": "Neues Schloss Tettnang, Tettnang, Baden-Württemberg",
+      "lat": 47.6698605,
+      "lng": 9.5845236,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Neues Schloss Tettnang, Tettnang, Baden-Württemberg, Tettnang, Baden-Württemberg, Germany"
     },
     {
       "title": "Tüftler, Denker und Macher - 70 Jahre Elektronik in Tettnang",
@@ -42568,9 +42803,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Elektronikmuseum Tettnang, Tettnang, Baden-Württemberg",
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Tettnang",
-      "geoTitleFound": false
+      "lat": 47.6719794,
+      "lng": 9.5885218,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Elektronikmuseum Tettnang, Tettnang, Baden-Württemberg, Tettnang, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag",
@@ -42640,7 +42877,12 @@
       "page": 17,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Schlösslegarten, Weingarten, Baden-Württemberg"
+      "geoDetailLocation": "Schlösslegarten, Weingarten, Baden-Württemberg",
+      "lat": 47.8059116,
+      "lng": 9.6392273,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Schlösslegarten, Weingarten, Baden-Württemberg, Weingarten, Baden-Württemberg, Germany"
     },
     {
       "title": "WeinBar SteilLage vom Weingut Wissmann-Stilz",
@@ -42654,7 +42896,12 @@
       "page": 19,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Remstalkino, Weinstadt, Baden-Württemberg"
+      "geoDetailLocation": "Remstalkino, Weinstadt, Baden-Württemberg",
+      "lat": 48.7998099,
+      "lng": 9.40389,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Remstalkino, Weinstadt, Baden-Württemberg, Weinstadt, Baden-Württemberg, Germany"
     },
     {
       "title": "Sommerfest des Imkervereins Kirnbach",
@@ -42710,7 +42957,12 @@
       "page": 1,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Hausach, Hausach, Baden-Württemberg"
+      "geoDetailLocation": "Hausach, Hausach, Baden-Württemberg",
+      "lat": 48.2836305,
+      "lng": 8.174972,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Hausach, Hausach, Baden-Württemberg, Hausach, Baden-Württemberg, Germany"
     }
   ],
   "nonRegionalEvents": [
@@ -42815,7 +43067,12 @@
       "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Langenargen",
-      "geoTitleFound": false
+      "lat": 47.6145819,
+      "lng": 9.560059,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Langenargen, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtour ab Nonnenhorn",
@@ -42832,7 +43089,12 @@
       "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Nonnenhorn",
-      "geoTitleFound": false
+      "lat": 47.6046208,
+      "lng": 9.5316534,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Nonnenhorn, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtour ab Wasserburg in Richtung Lindau und Bregenz",
@@ -42849,7 +43111,12 @@
       "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Wasserburg",
-      "geoTitleFound": false
+      "lat": 48.0023588,
+      "lng": 8.8355336,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Wasserburg, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtouren ab Kressbronn",
@@ -42866,7 +43133,12 @@
       "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Kressbronn",
-      "geoTitleFound": false
+      "lat": 49.0655511,
+      "lng": 10.1378705,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Kressbronn, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "TUNING WORLD BODENSEE",
@@ -42894,8 +43166,8 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtfest-kehler-messdi/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1,
-      "lat": 48.5728929,
-      "lng": 7.8109768,
+      "lat": 48.5733977,
+      "lng": 7.8114002,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Kehl, Baden-Württemberg, Germany"
@@ -43465,9 +43737,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Hüfingen, Hüfingen, Baden-Württemberg",
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Hüfingen",
-      "geoTitleFound": false
+      "lat": 47.9214121,
+      "lng": 8.4988475,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Hüfingen, Hüfingen, Baden-Württemberg, Hüfingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Besuch bei der DS Hohentwiel und der MS Österreich",
@@ -43592,7 +43866,12 @@
       "geoDetailLocation": "Einfahrt Parkplatz Therme Lindau, Eichwaldstraße 16-20, 88131, Lindau, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Bewegung",
-      "geoTitleFound": false
+      "lat": 48.7808376,
+      "lng": 9.1838281,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Bewegung, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Oldtimertreffen",
@@ -43620,7 +43899,12 @@
       "page": 19,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Evangelische Kirche Müllheim, Müllheim, Baden-Württemberg"
+      "geoDetailLocation": "Evangelische Kirche Müllheim, Müllheim, Baden-Württemberg",
+      "lat": 47.8083092,
+      "lng": 7.6257421,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Evangelische Kirche Müllheim, Müllheim, Baden-Württemberg, Müllheim, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag und Tag der offenen Ateliers in Müllheim",
@@ -43637,7 +43921,12 @@
       "geoDetailLocation": "Markgräfler Museum im Blankenhorn-Palais, Müllheim, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Müllheim",
-      "geoTitleFound": false
+      "lat": 47.810102,
+      "lng": 7.5995606,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Müllheim, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Naturpark-Markt Neckargemünd",
@@ -43665,7 +43954,12 @@
       "page": 15,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Freilichtmuseum Neuhausen ob Eck, Neuhausen ob Eck, Baden-Württemberg"
+      "geoDetailLocation": "Freilichtmuseum Neuhausen ob Eck, Neuhausen ob Eck, Baden-Württemberg",
+      "lat": 47.9816222,
+      "lng": 8.9311214,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Freilichtmuseum Neuhausen ob Eck, Neuhausen ob Eck, Baden-Württemberg, Neuhausen ob Eck, Baden-Württemberg, Germany"
     },
     {
       "title": "Translationsfest St. Genesius in Schienen",
@@ -43682,7 +43976,12 @@
       "geoDetailLocation": "Katholische Pfarr- und Wallfahrtskirche St. Genesius in Schienen, Öhningen, Baden-Württemberg",
       "geoTitleChecked": true,
       "geoTitleLocation": "Schienen",
-      "geoTitleFound": false
+      "lat": 47.687779,
+      "lng": 8.8989458,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Schienen, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Internationaler Museumstag - Römerfest",
@@ -43696,7 +43995,12 @@
       "page": 16,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Weygang-Museum, Öhringen, Baden-Württemberg"
+      "geoDetailLocation": "Weygang-Museum, Öhringen, Baden-Württemberg",
+      "lat": 49.2010358,
+      "lng": 9.5082687,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Weygang-Museum, Öhringen, Baden-Württemberg, Öhringen, Baden-Württemberg, Germany"
     },
     {
       "title": "Tag des offenen Gartens im Hofgut Cappel",
@@ -43738,7 +44042,12 @@
       "page": 17,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Seebach - Mummelseehalle, Seebach, Baden-Württemberg"
+      "geoDetailLocation": "Seebach - Mummelseehalle, Seebach, Baden-Württemberg",
+      "lat": 48.5766435,
+      "lng": 8.171799,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Seebach - Mummelseehalle, Seebach, Baden-Württemberg, Seebach, Baden-Württemberg, Germany"
     },
     {
       "title": "Pilates auf der Liegewiese im Donaubad",
@@ -43826,7 +44135,12 @@
       "page": 16,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Neues Schloss Tettnang, Tettnang, Baden-Württemberg"
+      "geoDetailLocation": "Neues Schloss Tettnang, Tettnang, Baden-Württemberg",
+      "lat": 47.6698605,
+      "lng": 9.5845236,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Neues Schloss Tettnang, Tettnang, Baden-Württemberg, Tettnang, Baden-Württemberg, Germany"
     },
     {
       "title": "Tüftler, Denker und Macher - 70 Jahre Elektronik in Tettnang",
@@ -43841,9 +44155,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Elektronikmuseum Tettnang, Tettnang, Baden-Württemberg",
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Tettnang",
-      "geoTitleFound": false
+      "lat": 47.6719794,
+      "lng": 9.5885218,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Elektronikmuseum Tettnang, Tettnang, Baden-Württemberg, Tettnang, Baden-Württemberg, Germany"
     },
     {
       "title": "Wassertreten für alle",
@@ -43899,7 +44215,12 @@
       "page": 17,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Schlösslegarten, Weingarten, Baden-Württemberg"
+      "geoDetailLocation": "Schlösslegarten, Weingarten, Baden-Württemberg",
+      "lat": 47.8059116,
+      "lng": 9.6392273,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Schlösslegarten, Weingarten, Baden-Württemberg, Weingarten, Baden-Württemberg, Germany"
     },
     {
       "title": "Sommerfest des Imkervereins Kirnbach",
@@ -43941,7 +44262,12 @@
       "page": 1,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Hausach, Hausach, Baden-Württemberg"
+      "geoDetailLocation": "Hausach, Hausach, Baden-Württemberg",
+      "lat": 48.2836305,
+      "lng": 8.174972,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Hausach, Hausach, Baden-Württemberg, Hausach, Baden-Württemberg, Germany"
     }
   ]
 }
