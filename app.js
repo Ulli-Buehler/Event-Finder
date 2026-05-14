@@ -1,4 +1,4 @@
-console.log("APP VERSION: eventbw-json-v28-navigation-button");
+console.log("APP VERSION: eventbw-json-v29-geo-note-refined");
 
 const EVENTBW_JSON_BASE_URL = "eventbw/feste-maerkte.json";
 const EVENTBW_JSON_URL = () => EVENTBW_JSON_BASE_URL + "?v=" + Date.now();
@@ -276,7 +276,7 @@ function normalizeEvent(raw, index) {
     venue: raw.city || "",
     address: raw.city || "",
     description: "",
-    geoEstimated: raw.geoEstimated === true || raw.geoSource === "derived",
+    geoEstimated: raw.geoEstimated === true || Boolean(raw.geoSource),
     geoSource: raw.geoSource || "",
     geoQuery: raw.geoQuery || "",
     lat: typeof raw.lat === "number" ? raw.lat : Number(raw.lat),
@@ -351,11 +351,20 @@ function openSheet(event) {
 
   const geoNote = document.getElementById("sheet-geo-note");
 
-  if (event.geoEstimated) {
-    geoNote.innerText = "📍 Position aus Ortsangabe berechnet";
-    geoNote.style.display = "block";
-  } else if (!hasCoords(event)) {
+  if (!hasCoords(event)) {
     geoNote.innerText = "⚠️ Kein Kartenstandort gefunden";
+    geoNote.style.display = "block";
+  } else if (event.geoSource === "derived-detail") {
+    geoNote.innerText = "📍 Position aus Detail-Ortsangabe berechnet";
+    geoNote.style.display = "block";
+  } else if (event.geoSource === "derived-title") {
+    geoNote.innerText = "📍 Position aus Titel-Ortsangabe berechnet";
+    geoNote.style.display = "block";
+  } else if (event.geoSource === "derived-compound-city") {
+    geoNote.innerText = "📍 Position aus Ortsteil berechnet";
+    geoNote.style.display = "block";
+  } else if (event.geoSource === "derived-region-bodensee") {
+    geoNote.innerText = "📍 Grobe Position: Bodensee";
     geoNote.style.display = "block";
   } else {
     geoNote.innerText = "";
