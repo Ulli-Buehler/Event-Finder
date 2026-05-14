@@ -649,6 +649,131 @@ function detailGeoQuery(event, detailLocation) {
 }
 
 
+
+function splitCompoundCity(city) {
+  const cleanCity = cleanText(city);
+
+  const match = cleanCity.match(/^(.+?)\s*[-–]\s*(.+)$/);
+
+  if (!match) {
+    return null;
+  }
+
+  const mainTown = cleanText(match[1]);
+  const district = cleanText(match[2]);
+
+  if (!mainTown || !district) {
+    return null;
+  }
+
+  return { mainTown, district };
+}
+
+function isBodenseeContext(event) {
+  const text = normalizeText(
+    [
+      event.title,
+      event.city,
+      event.geoDetailLocation,
+      event.detailUrl,
+    ].filter(Boolean).join(' ')
+  );
+
+  return (
+    text.includes('bodensee') ||
+    text.includes('kressbronn') ||
+    text.includes('langenargen') ||
+    text.includes('nonnenhorn') ||
+    text.includes('wasserburg') ||
+    text.includes('lindau') ||
+    text.includes('bregenz') ||
+    text.includes('konstanz') ||
+    text.includes('friedrichshafen')
+  );
+}
+
+function geoQueriesForCompoundCity(city) {
+  const compound = splitCompoundCity(city);
+
+  if (!compound) {
+    return [];
+  }
+
+  const { mainTown, district } = compound;
+
+  return [
+    `${district}, ${mainTown}, Baden-Württemberg, Germany`,
+    `${district}, Baden-Württemberg, Germany`,
+    `${mainTown}, Baden-Württemberg, Germany`,
+  ];
+}
+
+function geoQueriesForCityFallback(city) {
+  const cleanCity = cleanText(city);
+
+  if (!cleanCity) {
+    return [];
+  }
+
+  return [
+    ...geoQueriesForCompoundCity(cleanCity),
+    `${cleanCity}, Baden-Württemberg, Germany`,
+    `${cleanCity}, Germany`,
+  ].filter(Boolean);
+}
+
+async function enrichMissingGeoFromCompoundCity(events) {
+  let checked = 0;
+  let recovered = 0;
+  const tried = [];
+
+  for (const event of events) {
+    const hasGeo =
+      Number.isFinite(event.lat) &&
+      Number.isFinite(event.lng);
+
+    if (hasGeo) continue;
+
+    const queries = geoQueriesForCompoundCity(event.city);
+
+    if (!queries.length) continue;
+
+    checked += 1;
+    event.geoCompoundCityChecked = true;
+    event.geoCompoundCityQueries = queries;
+
+    tried.push({
+      title: event.title,
+      city: event.city,
+      queries,
+    });
+
+    for (const query of queries) {
+      const geo = await geocodeQuery(query);
+
+      if (geo) {
+        event.lat = geo.lat;
+        event.lng = geo.lng;
+        event.geoEstimated = true;
+        event.geoSource = 'derived-compound-city';
+        event.geoQuery = query;
+        event.geoCompoundCityFound = true;
+        recovered += 1;
+
+        await new Promise(resolve => setTimeout(resolve, 1200));
+        break;
+      }
+    }
+
+    if (!Number.isFinite(event.lat) || !Number.isFinite(event.lng)) {
+      event.geoCompoundCityFound = false;
+    }
+  }
+
+  return { checked, recovered, tried };
+}
+
+
 function extractTitleGeoLocation(event) {
   const title = cleanText(event.title);
   const city = cleanText(event.city);
@@ -687,27 +812,23 @@ function extractTitleGeoLocation(event) {
 function titleGeoQueries(event, titleLocation) {
   const location = cleanText(titleLocation.location);
   const city = cleanText(event.city);
-  const title = normalizeText(event.title + ' ' + event.city);
   const queries = [];
 
-  const isBodensee =
-    title.includes('bodensee') ||
-    title.includes('langenargen') ||
-    title.includes('nonnenhorn') ||
-    title.includes('kressbronn') ||
-    title.includes('lindau') ||
-    title.includes('bregenz');
-
-  if (isBodensee) {
+  if (isBodenseeContext(event)) {
     if (/^kressbronn$/i.test(location)) {
       queries.push('Kressbronn am Bodensee, Baden-Württemberg, Germany');
       queries.push('Kressbronn am Bodensee, Germany');
     } else if (/^wasserburg$/i.test(location)) {
       queries.push('Wasserburg (Bodensee), Germany');
       queries.push('Wasserburg am Bodensee, Germany');
+    } else if (/^konstanz$/i.test(location)) {
+      queries.push('Konstanz, Baden-Württemberg, Germany');
+    } else if (/^friedrichshafen$/i.test(location)) {
+      queries.push('Friedrichshafen, Baden-Württemberg, Germany');
     } else {
       queries.push(`${location}, Bodenseekreis, Germany`);
-      queries.push(`${location}, Lake Constance, Germany`);
+      queries.push(`${location}, Bodensee, Germany`);
+      queries.push(`${location}, Baden-Württemberg, Germany`);
       queries.push(`${location}, Germany`);
     }
   }
@@ -946,6 +1067,7 @@ async function main() {
   );
 
   const detailGeo = await enrichMissingGeoFromDetail(regionalEvents);
+  const compoundCityGeo = await enrichMissingGeoFromCompoundCity(regionalEvents);
   const titleGeo = await enrichMissingGeoFromTitle(regionalEvents);
 
   const nonRegionalEvents = sortEvents(
@@ -971,9 +1093,12 @@ async function main() {
       targetDateGeoEstimated: regionalEvents.filter(event => event.geoEstimated === true).length,
       targetDateGeoEstimatedFromCity: regionalEvents.filter(event => event.geoSource === 'derived').length,
       targetDateGeoEstimatedFromDetail: regionalEvents.filter(event => event.geoSource === 'derived-detail').length,
+      targetDateGeoEstimatedFromCompoundCity: regionalEvents.filter(event => event.geoSource === 'derived-compound-city').length,
       targetDateGeoEstimatedFromTitle: regionalEvents.filter(event => event.geoSource === 'derived-title').length,
       targetDateDetailGeoChecked: detailGeo.checked,
       targetDateDetailGeoRecovered: detailGeo.recovered,
+      targetDateCompoundCityGeoChecked: compoundCityGeo.checked,
+      targetDateCompoundCityGeoRecovered: compoundCityGeo.recovered,
       targetDateTitleGeoChecked: titleGeo.checked,
       targetDateTitleGeoRecovered: titleGeo.recovered,
       nonRegionalTargetDateMatches: nonRegionalEvents.length,
@@ -996,6 +1121,7 @@ async function main() {
     pages: allPages,
     cityStatsForTargetDate,
     detailGeo,
+    compoundCityGeo,
     titleGeo,
     rawEvents,
     targetDateEvents,
@@ -1026,6 +1152,8 @@ async function main() {
   console.log(`Target date without geo: ${regionalEvents.filter(event => !Number.isFinite(event.lat) || !Number.isFinite(event.lng)).length}`);
   console.log(`Detail geo checked: ${detailGeo.checked}`);
   console.log(`Detail geo recovered: ${detailGeo.recovered}`);
+  console.log(`Compound city geo checked: ${compoundCityGeo.checked}`);
+  console.log(`Compound city geo recovered: ${compoundCityGeo.recovered}`);
   console.log(`Title geo checked: ${titleGeo.checked}`);
   console.log(`Title geo recovered: ${titleGeo.recovered}`);
 }
