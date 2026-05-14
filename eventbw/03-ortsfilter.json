@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-14T11:30:36.493Z",
-    "finishedAt": "2026-05-14T11:34:51.093Z",
+    "startedAt": "2026-05-14T11:46:10.410Z",
+    "finishedAt": "2026-05-14T11:50:35.880Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -97,22 +97,25 @@
       "rawCollectedIncludingDuplicates": 3395,
       "rawUnique": 3395,
       "targetDateMatches": 91,
-      "targetDateWithGeo": 79,
-      "targetDateWithoutGeo": 12,
-      "targetDateGeoEstimated": 79,
+      "targetDateWithGeo": 83,
+      "targetDateWithoutGeo": 8,
+      "targetDateGeoEstimated": 83,
       "targetDateGeoEstimatedFromCity": 73,
       "targetDateGeoEstimatedFromDetail": 6,
+      "targetDateGeoEstimatedFromTitle": 4,
       "targetDateDetailGeoChecked": 18,
       "targetDateDetailGeoRecovered": 6,
+      "targetDateTitleGeoChecked": 4,
+      "targetDateTitleGeoRecovered": 4,
       "nonRegionalTargetDateMatches": 83,
       "rawMaerkte": 140,
       "rawFeste": 3255,
       "targetDateMaerkte": 3,
       "targetDateFeste": 88,
       "targetDateWithGeoMaerkte": 3,
-      "targetDateWithGeoFeste": 76,
+      "targetDateWithGeoFeste": 80,
       "targetDateWithoutGeoMaerkte": 0,
-      "targetDateWithoutGeoFeste": 12
+      "targetDateWithoutGeoFeste": 8
     }
   },
   "events": [
@@ -214,7 +217,15 @@
       "page": 2,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg"
+      "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Langenargen",
+      "lat": 47.6145819,
+      "lng": 9.560059,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Langenargen, Bodenseekreis, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtour ab Nonnenhorn",
@@ -228,7 +239,15 @@
       "page": 2,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg"
+      "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Nonnenhorn",
+      "lat": 47.6046208,
+      "lng": 9.5316534,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Nonnenhorn, Bodenseekreis, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtour ab Wasserburg in Richtung Lindau und Bregenz",
@@ -242,7 +261,15 @@
       "page": 2,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg"
+      "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Wasserburg",
+      "lat": 47.5697038,
+      "lng": 9.6383375,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Wasserburg (Bodensee), Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtouren ab Kressbronn",
@@ -256,7 +283,15 @@
       "page": 1,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg"
+      "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Kressbronn",
+      "lat": 47.5965788,
+      "lng": 9.6003273,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Kressbronn am Bodensee, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "TUNING WORLD BODENSEE",
@@ -1666,7 +1701,15 @@
       "page": 2,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg"
+      "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Langenargen",
+      "lat": 47.6145819,
+      "lng": 9.560059,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Langenargen, Bodenseekreis, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtour ab Nonnenhorn",
@@ -1680,7 +1723,15 @@
       "page": 2,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg"
+      "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Nonnenhorn",
+      "lat": 47.6046208,
+      "lng": 9.5316534,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Nonnenhorn, Bodenseekreis, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtour ab Wasserburg in Richtung Lindau und Bregenz",
@@ -1694,7 +1745,15 @@
       "page": 2,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg"
+      "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Wasserburg",
+      "lat": 47.5697038,
+      "lng": 9.6383375,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Wasserburg (Bodensee), Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Rundtouren ab Kressbronn",
@@ -1708,7 +1767,15 @@
       "page": 1,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg"
+      "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Kressbronn",
+      "lat": 47.5965788,
+      "lng": 9.6003273,
+      "geoEstimated": true,
+      "geoSource": "derived-title",
+      "geoQuery": "Kressbronn am Bodensee, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "TUNING WORLD BODENSEE",
