@@ -403,3 +403,24 @@ input[type="range"]{
     min-width:calc(100vw - 62vw - 20px);
   }
 }
+
+@media (min-width:700px){
+  .cards-end-spacer{
+    flex-basis:calc(100vw - 240px - 48px);
+    min-width:calc(100vw - 240px - 48px);
+  }
+}
+
+
+.last-update-info.fresh{
+  color:#666;
+}
+
+.last-update-info.stale{
+  color:#b26a00;
+  background:#fff3cd;
+  border-radius:10px;
+  padding:6px 8px;
+  margin-left:-8px;
+  margin-right:-8px;
+}
