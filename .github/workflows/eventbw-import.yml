@@ -68,6 +68,8 @@ jobs:
           git add eventbw/03-ortsfilter.txt
           git add eventbw/debug-output.json
           git add eventbw/debug-output.txt
+          git add eventbw/debug-gutenbergs-geopoints.html
+          git add eventbw/debug-gutenbergs-geopoints.txt
           git add eventbw/feste-maerkte.json
           git add eventbw/feste-maerkte.txt
 
