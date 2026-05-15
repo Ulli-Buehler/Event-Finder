@@ -15,6 +15,11 @@ on:
         required: false
         default: '40'
         type: string
+      debug_list_geos:
+        description: EventBW Listen-Geos debuggen
+        required: false
+        default: false
+        type: boolean
   schedule:
     - cron: '0 5-18 * * *'
 
@@ -34,6 +39,12 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: '24'
+
+      - name: Debug EventBW list geos
+        if: ${{ inputs.debug_list_geos == true }}
+        working-directory: eventbw
+        run: |
+          node check-list-geos.cjs
 
       - name: Run EventBW importer
         env:
