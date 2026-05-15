@@ -1152,6 +1152,28 @@ async function enrichMissingGeoFromTitle(events) {
 }
 
 
+
+function isBroadOrMissingCityForDetailFirst(city) {
+  const cleanCity = cleanText(city);
+  const normalized = normalizeText(cleanCity);
+
+  if (!normalized) return true;
+
+  const broadTerms = [
+    'biosphaerengebiet',
+    'schwaebische alb',
+    'donaubergland',
+    'naturpark',
+    'bodensee',
+    'echt bodensee',
+    'schwarzwald',
+    'region',
+  ];
+
+  return broadTerms.some(term => normalized.includes(term));
+}
+
+
 async function enrichMissingGeoFromDetail(events) {
   let recovered = 0;
   let checked = 0;
@@ -1163,6 +1185,11 @@ async function enrichMissingGeoFromDetail(events) {
       Number.isFinite(event.lng);
 
     if (hasGeo || !event.detailUrl) continue;
+
+    // Detail-Geocoding vor City-Geocoding nur bei groben Regionen/leerer Ortsangabe.
+    // Bei normalen Städten reicht der Ortsmittelpunkt und verhindert falsche POI-Treffer
+    // wie "Remstalkino, Weinstadt" -> Schützenhaus Steinheim.
+    if (!isBroadOrMissingCityForDetailFirst(event.city)) continue;
 
     checked += 1;
 
