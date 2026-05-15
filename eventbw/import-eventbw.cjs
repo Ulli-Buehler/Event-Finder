@@ -11,10 +11,11 @@
  * Ablauf:
  * 1. alle Märkte/Feste aus den Listenseiten laden
  * 2. Datum lokal filtern
- * 3. alle Events am Zieldatum geocodieren
- * 4. Webseite filtert danach live über Radius
+ * 3. für Zieldatum-Events zuerst echte Detailseiten-Koordinaten übernehmen
+ * 4. nur fehlende Geos per Ort/Detail/Titel/Region ableiten
+ * 5. Webseite filtert danach live über Radius
  *
- * Keine Detailseiten.
+ * Detailseiten nur für Zieldatum-Events.
  * Geo nur für Zieldatum-Events.
  * km-Berechnung passiert im Browser.
  */
@@ -608,6 +609,140 @@ function extractJsonLdLocation(html) {
   return candidates.find(Boolean) || '';
 }
 
+
+function numberFromMaybeString(value) {
+  if (value === null || value === undefined) return NaN;
+  return Number(String(value).replace(',', '.').trim());
+}
+
+function validLatLng(lat, lng) {
+  return Number.isFinite(lat) && Number.isFinite(lng) &&
+    lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180;
+}
+
+function extractCoordinatesFromJsonNode(node) {
+  if (!node || typeof node !== 'object') return null;
+
+  if (Array.isArray(node)) {
+    for (const item of node) {
+      const found = extractCoordinatesFromJsonNode(item);
+      if (found) return found;
+    }
+    return null;
+  }
+
+  const latValue = node.latitude ?? node.lat ?? node.Latitude ?? node.Lat;
+  const lngValue = node.longitude ?? node.lng ?? node.lon ?? node.Longitude ?? node.Lng ?? node.Lon;
+
+  const lat = numberFromMaybeString(latValue);
+  const lng = numberFromMaybeString(lngValue);
+
+  if (validLatLng(lat, lng)) {
+    return { lat, lng };
+  }
+
+  for (const key of ['geo', 'location', 'venue', '@graph']) {
+    const found = extractCoordinatesFromJsonNode(node[key]);
+    if (found) return found;
+  }
+
+  for (const value of Object.values(node)) {
+    if (value && typeof value === 'object') {
+      const found = extractCoordinatesFromJsonNode(value);
+      if (found) return found;
+    }
+  }
+
+  return null;
+}
+
+function extractDetailCoordinatesFromHtml(html) {
+  const raw = String(html || '');
+
+  const jsonLdScripts = [...raw.matchAll(
+    /<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi
+  )].map(match => decodeHtml(match[1]));
+
+  for (const script of jsonLdScripts) {
+    try {
+      const found = extractCoordinatesFromJsonNode(JSON.parse(script.trim()));
+
+      if (found) {
+        return {
+          lat: found.lat,
+          lng: found.lng,
+          geoSource: 'eventbw-detail-coordinates',
+          geoQuery: 'EventBW Detailseite JSON-LD'
+        };
+      }
+    } catch {
+      // ignore invalid JSON-LD
+    }
+  }
+
+  const scripts = [...raw.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/gi)]
+    .map(match => decodeHtml(match[1]));
+
+  const joined = scripts.join('\n') + '\n' + raw;
+
+  const markerMatch = joined.match(
+    /L\.marker\s*\(\s*\[\s*(-?\d{1,2}(?:[.,]\d+)?)\s*,\s*(-?\d{1,3}(?:[.,]\d+)?)\s*\]/i
+  );
+
+  if (markerMatch) {
+    const lat = numberFromMaybeString(markerMatch[1]);
+    const lng = numberFromMaybeString(markerMatch[2]);
+
+    if (validLatLng(lat, lng)) {
+      return {
+        lat,
+        lng,
+        geoSource: 'eventbw-detail-coordinates',
+        geoQuery: 'EventBW Detailseite Leaflet Marker'
+      };
+    }
+  }
+
+  const dataLatLng = joined.match(
+    /data-(?:lat|latitude)=["'](-?\d{1,2}(?:[.,]\d+)?)["'][\s\S]{0,400}?data-(?:lng|lon|longitude)=["'](-?\d{1,3}(?:[.,]\d+)?)["']/i
+  );
+
+  if (dataLatLng) {
+    const lat = numberFromMaybeString(dataLatLng[1]);
+    const lng = numberFromMaybeString(dataLatLng[2]);
+
+    if (validLatLng(lat, lng)) {
+      return {
+        lat,
+        lng,
+        geoSource: 'eventbw-detail-coordinates',
+        geoQuery: 'EventBW Detailseite data-lat/data-lng'
+      };
+    }
+  }
+
+  const latLngPair = joined.match(
+    /["']?(?:lat|latitude)["']?\s*[:=]\s*["']?(-?\d{1,2}(?:[.,]\d+)?)["']?[\s\S]{0,300}?["']?(?:lng|lon|longitude)["']?\s*[:=]\s*["']?(-?\d{1,3}(?:[.,]\d+)?)["']?/i
+  );
+
+  if (latLngPair) {
+    const lat = numberFromMaybeString(latLngPair[1]);
+    const lng = numberFromMaybeString(latLngPair[2]);
+
+    if (validLatLng(lat, lng)) {
+      return {
+        lat,
+        lng,
+        geoSource: 'eventbw-detail-coordinates',
+        geoQuery: 'EventBW Detailseite lat/lng'
+      };
+    }
+  }
+
+  return null;
+}
+
+
 function extractDetailLocationFromHtml(html) {
   const jsonLdLocation = extractJsonLdLocation(html);
 
@@ -930,9 +1065,22 @@ async function enrichMissingGeoFromDetail(events) {
 
     try {
       const html = await fetchHtml(event.detailUrl);
-      const detailLocation = extractDetailLocationFromHtml(html);
+      const detailCoordinates = extractDetailCoordinatesFromHtml(html);
 
       event.geoDetailChecked = true;
+
+      if (detailCoordinates) {
+        event.lat = detailCoordinates.lat;
+        event.lng = detailCoordinates.lng;
+        event.geoEstimated = false;
+        event.geoSource = detailCoordinates.geoSource;
+        event.geoQuery = detailCoordinates.geoQuery;
+        event.geoDetailCoordinateFound = true;
+        recovered += 1;
+        continue;
+      }
+
+      const detailLocation = extractDetailLocationFromHtml(html);
 
       if (!detailLocation) {
         event.geoDetailFound = false;
@@ -1033,10 +1181,98 @@ async function geocodeCity(city) {
   return geocodeQuery(city + ', Baden-Württemberg, Germany');
 }
 
+
+async function enrichGeoFromEventBwDetailCoordinates(events) {
+  let checked = 0;
+  let recovered = 0;
+  let failed = 0;
+  const recoveredEvents = [];
+  const failedEvents = [];
+  const concurrency = Number(process.env.EVENTBW_DETAIL_GEO_CONCURRENCY || 4);
+
+  let index = 0;
+
+  async function worker() {
+    while (index < events.length) {
+      const currentIndex = index++;
+      const event = events[currentIndex];
+
+      const hasGeo =
+        Number.isFinite(event.lat) &&
+        Number.isFinite(event.lng);
+
+      if (hasGeo || !event.detailUrl) continue;
+
+      checked += 1;
+
+      try {
+        const html = await fetchHtml(event.detailUrl);
+        const detailCoordinates = extractDetailCoordinatesFromHtml(html);
+
+        event.geoDetailCoordinateChecked = true;
+
+        if (!detailCoordinates) {
+          event.geoDetailCoordinateFound = false;
+          continue;
+        }
+
+        event.lat = detailCoordinates.lat;
+        event.lng = detailCoordinates.lng;
+        event.geoEstimated = false;
+        event.geoSource = detailCoordinates.geoSource;
+        event.geoQuery = detailCoordinates.geoQuery;
+        event.geoDetailCoordinateFound = true;
+
+        recovered += 1;
+        recoveredEvents.push({
+          title: event.title,
+          city: event.city,
+          detailUrl: event.detailUrl,
+          lat: event.lat,
+          lng: event.lng,
+          geoQuery: event.geoQuery,
+        });
+      } catch (error) {
+        failed += 1;
+        event.geoDetailCoordinateChecked = true;
+        event.geoDetailCoordinateError = String(error.message || error);
+        failedEvents.push({
+          title: event.title,
+          city: event.city,
+          detailUrl: event.detailUrl,
+          error: String(error.message || error),
+        });
+      }
+    }
+  }
+
+  const workers = Array.from(
+    { length: Math.max(1, Math.min(concurrency, events.length || 1)) },
+    () => worker()
+  );
+
+  await Promise.all(workers);
+
+  return {
+    checked,
+    recovered,
+    failed,
+    recoveredEvents,
+    failedEvents,
+  };
+}
+
+
 async function enrichEventsWithGeo(events) {
   const cache = await loadGeoCache();
 
   for (const event of events) {
+    const alreadyHasGeo =
+      Number.isFinite(event.lat) &&
+      Number.isFinite(event.lng);
+
+    if (alreadyHasGeo) continue;
+
     const cityKey = normalizeText(event.city);
 
     if (!cityKey) continue;
@@ -1130,9 +1366,10 @@ async function main() {
 
   const rawEvents = sortEvents(dedupeEvents(collected));
   const targetDateEvents = sortEvents(rawEvents.filter(event => touchesDate(event, targetDate)));
-  const regionalEvents = await enrichEventsWithGeo(
-    sortEvents(targetDateEvents)
-  );
+  const regionalEvents = sortEvents(targetDateEvents);
+
+  const detailCoordinateGeo = await enrichGeoFromEventBwDetailCoordinates(regionalEvents);
+  await enrichEventsWithGeo(regionalEvents);
 
   const detailGeo = await enrichMissingGeoFromDetail(regionalEvents);
   const compoundCityGeo = await enrichMissingGeoFromCompoundCity(regionalEvents);
@@ -1161,10 +1398,14 @@ async function main() {
       targetDateWithoutGeo: regionalEvents.filter(event => !Number.isFinite(event.lat) || !Number.isFinite(event.lng)).length,
       targetDateGeoEstimated: regionalEvents.filter(event => event.geoEstimated === true).length,
       targetDateGeoEstimatedFromCity: regionalEvents.filter(event => event.geoSource === 'derived').length,
+      targetDateGeoFromEventBwDetailCoordinates: regionalEvents.filter(event => event.geoSource === 'eventbw-detail-coordinates').length,
       targetDateGeoEstimatedFromDetail: regionalEvents.filter(event => event.geoSource === 'derived-detail').length,
       targetDateGeoEstimatedFromCompoundCity: regionalEvents.filter(event => event.geoSource === 'derived-compound-city').length,
       targetDateGeoEstimatedFromTitle: regionalEvents.filter(event => event.geoSource === 'derived-title').length,
       targetDateGeoEstimatedFromBodenseeRegion: regionalEvents.filter(event => event.geoSource === 'derived-region-bodensee').length,
+      targetDateDetailCoordinateGeoChecked: detailCoordinateGeo.checked,
+      targetDateDetailCoordinateGeoRecovered: detailCoordinateGeo.recovered,
+      targetDateDetailCoordinateGeoFailed: detailCoordinateGeo.failed,
       targetDateDetailGeoChecked: detailGeo.checked,
       targetDateDetailGeoRecovered: detailGeo.recovered,
       targetDateCompoundCityGeoChecked: compoundCityGeo.checked,
@@ -1192,6 +1433,7 @@ async function main() {
     meta,
     pages: allPages,
     cityStatsForTargetDate,
+    detailCoordinateGeo,
     detailGeo,
     compoundCityGeo,
     titleGeo,
@@ -1223,6 +1465,9 @@ async function main() {
   console.log(`Target date matches: ${targetDateEvents.length}`);
   console.log(`Target date with geo: ${regionalEvents.filter(event => Number.isFinite(event.lat) && Number.isFinite(event.lng)).length}`);
   console.log(`Target date without geo: ${regionalEvents.filter(event => !Number.isFinite(event.lat) || !Number.isFinite(event.lng)).length}`);
+  console.log(`EventBW detail coordinate geo checked: ${detailCoordinateGeo.checked}`);
+  console.log(`EventBW detail coordinate geo recovered: ${detailCoordinateGeo.recovered}`);
+  console.log(`EventBW detail coordinate geo failed: ${detailCoordinateGeo.failed}`);
   console.log(`Detail geo checked: ${detailGeo.checked}`);
   console.log(`Detail geo recovered: ${detailGeo.recovered}`);
   console.log(`Compound city geo checked: ${compoundCityGeo.checked}`);
