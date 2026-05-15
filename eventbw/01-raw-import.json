@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-15T03:19:52.918Z",
-    "finishedAt": "2026-05-15T03:24:09.708Z",
+    "startedAt": "2026-05-15T04:00:30.993Z",
+    "finishedAt": "2026-05-15T04:07:21.343Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -100,23 +100,24 @@
       "targetDateWithGeo": 75,
       "targetDateWithoutGeo": 0,
       "targetDateGeoEstimated": 75,
-      "targetDateGeoEstimatedFromCity": 66,
+      "targetDateGeoEstimatedFromCity": 0,
       "targetDateGeoFromEventBwDetailCoordinates": 0,
-      "targetDateGeoEstimatedFromDetail": 7,
+      "targetDateGeoEstimatedFromDetail": 74,
       "targetDateGeoEstimatedFromCompoundCity": 0,
       "targetDateGeoEstimatedFromTitle": 0,
-      "targetDateGeoEstimatedFromBodenseeRegion": 2,
+      "targetDateGeoEstimatedFromBodenseeRegion": 1,
       "targetDateDetailCoordinateGeoChecked": 75,
       "targetDateDetailCoordinateGeoRecovered": 0,
       "targetDateDetailCoordinateGeoFailed": 0,
-      "targetDateDetailGeoChecked": 9,
-      "targetDateDetailGeoRecovered": 7,
+      "targetDateDetailGoogleMapsQueries": 75,
+      "targetDateDetailGeoChecked": 75,
+      "targetDateDetailGeoRecovered": 74,
       "targetDateCompoundCityGeoChecked": 0,
       "targetDateCompoundCityGeoRecovered": 0,
       "targetDateTitleGeoChecked": 0,
       "targetDateTitleGeoRecovered": 0,
-      "targetDateBodenseeRegionGeoChecked": 2,
-      "targetDateBodenseeRegionGeoRecovered": 2,
+      "targetDateBodenseeRegionGeoChecked": 1,
+      "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 69,
       "rawMaerkte": 138,
       "rawFeste": 3170,
@@ -163,11 +164,14 @@
       "page": 3,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.5527459,
-      "lng": 7.9410556,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Schlosspark, Bad Säckingen",
+      "lat": 47.5505754,
+      "lng": 7.9488937,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Säckingen, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Schlosspark, Bad Säckingen, Bad Säckingen, Baden-Württemberg, Germany"
     },
     {
       "title": "Köstlich Wandern 2. Tour",
@@ -203,10 +207,13 @@
       "page": 3,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Kurpark Schönmünzach, 72270 Baiersbronn",
       "lat": 48.5069519,
       "lng": 8.3720124,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Baiersbronn, Baden-Württemberg, Germany"
     },
     {
@@ -287,11 +294,14 @@
       "page": 1,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.4635303,
-      "lng": 8.9855203,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Innenstadt, Leopoldsplatz, 69412 Eberbach",
+      "lat": 49.4879547,
+      "lng": 8.4663083,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Eberbach, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Innenstadt, Baden-Württemberg, Germany"
     },
     {
       "title": "Eberbacher Frühling",
@@ -305,10 +315,13 @@
       "page": 1,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Altstadt Eberbach, Leopoldsplatz 1, 69412 Eberbach",
       "lat": 49.4635303,
       "lng": 8.9855203,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Eberbach, Baden-Württemberg, Germany"
     },
     {
@@ -378,10 +391,13 @@
       "page": 3,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Wurmberg (in den Felsengärten), 74394 Hessigheim",
       "lat": 48.9937553,
       "lng": 9.1883111,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Hessigheim, Baden-Württemberg, Germany"
     },
     {
@@ -451,11 +467,14 @@
       "page": 2,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Messe Karlsruhe, Karlsruhe",
+      "lat": 48.9808646,
+      "lng": 8.3304167,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Messe Karlsruhe, Karlsruhe, Karlsruhe, Baden-Württemberg, Germany"
     },
     {
       "title": "Nils Karlsson Däumling",
@@ -590,11 +609,14 @@
       "page": 3,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.0869139,
-      "lng": 9.2165039,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Donaubad Sigmaringen, Roystraße 31, 72488 Sigmaringen",
+      "lat": 48.0796421,
+      "lng": 9.2084364,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Sigmaringen, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Donaubad Sigmaringen, Roystraße 31, 72488 Sigmaringen, Sigmaringen, Baden-Württemberg, Germany"
     },
     {
       "title": "CARTHAGO- Band aus Slowenien, Vorgruppe: SongSlamAllstars",
@@ -718,11 +740,14 @@
       "page": 6,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.2303439,
-      "lng": 9.1621599,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Roter Turm, Bad Wimpfen",
+      "lat": 49.2298065,
+      "lng": 9.1656881,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Wimpfen, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Roter Turm, Bad Wimpfen, Bad Wimpfen, Baden-Württemberg, Germany"
     },
     {
       "title": "Alice Armstrong beim Blues Club",
@@ -802,11 +827,14 @@
       "page": 6,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.5805031,
-      "lng": 9.4044658,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Freilichtmuseum Beuren, Beuren",
+      "lat": 48.5767311,
+      "lng": 9.4151185,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Beuren, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Freilichtmuseum Beuren, Beuren, Beuren, Baden-Württemberg, Germany"
     },
     {
       "title": "Dunkelromantische Tanznacht",
@@ -963,11 +991,14 @@
       "page": 7,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.9038411,
-      "lng": 8.5088293,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Rhododendronpark Jansen, Karlsbad",
+      "lat": 48.886633,
+      "lng": 8.4878794,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsbad, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Rhododendronpark Jansen, Karlsbad, Karlsbad, Baden-Württemberg, Germany"
     },
     {
       "title": "3. Liederabend – Ann-Beth Solvang",
@@ -1135,11 +1166,14 @@
       "page": 5,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.9939249,
-      "lng": 9.1122006,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Campus Galli, Meßkirch",
+      "lat": 48.0330561,
+      "lng": 9.1031462,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Meßkirch, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Campus Galli, Meßkirch, Meßkirch, Baden-Württemberg, Germany"
     },
     {
       "title": "Mühlacker Frühling",
@@ -1164,10 +1198,13 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Müllheim",
       "lat": 47.810102,
       "lng": 7.5995606,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Müllheim, Baden-Württemberg, Germany"
     },
     {
@@ -1215,11 +1252,14 @@
       "page": 4,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.5308586,
-      "lng": 8.078657,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Marktplatz, Am Marktplatz, 77704 Oberkirch",
+      "lat": 48.5291689,
+      "lng": 8.0798594,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Oberkirch, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Marktplatz, Am Marktplatz, 77704 Oberkirch, Oberkirch, Baden-Württemberg, Germany"
     },
     {
       "title": "MAMMA MIA - The Ultimative ABBA Night",
@@ -1299,10 +1339,13 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Parkplatz Schützenhaus Rangendingen, 72414 Rangendingen",
       "lat": 48.3789351,
       "lng": 8.8877867,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Rangendingen, Baden-Württemberg, Germany"
     },
     {
@@ -1317,10 +1360,13 @@
       "page": 4,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Bei der Gemeindehalle Willaringen, Willaringen 18, 79736 Rickenbach",
       "lat": 47.6209218,
       "lng": 7.9788595,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Rickenbach, Baden-Württemberg, Germany"
     },
     {
@@ -1346,10 +1392,13 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Weingut Kurt und Dietmar Ott, Sachsenheim",
       "lat": 48.9654062,
       "lng": 9.0583956,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Sachsenheim, Baden-Württemberg, Germany"
     },
     {
@@ -1553,12 +1602,12 @@
       "geoDetailCoordinateFound": false,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "RANTASTIC GmbH Livebühnen & Eventlocations, Baden-Württemberg",
+      "geoDetailLocation": "RANTASTIC GmbH Livebühnen & Eventlocations,",
       "lat": 48.8118727,
       "lng": 8.2098487,
       "geoEstimated": true,
       "geoSource": "derived-detail",
-      "geoQuery": "RANTASTIC GmbH Livebühnen & Eventlocations, Baden-Württemberg, Baden-Württemberg, Germany"
+      "geoQuery": "RANTASTIC GmbH Livebühnen & Eventlocations,, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag",
@@ -1574,12 +1623,12 @@
       "geoDetailCoordinateFound": false,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Maschenmuseum, Baden-Württemberg",
+      "geoDetailLocation": "Maschenmuseum,",
       "lat": 48.2557267,
       "lng": 9.0163366,
       "geoEstimated": true,
       "geoSource": "derived-detail",
-      "geoQuery": "Maschenmuseum, Baden-Württemberg, Baden-Württemberg, Germany"
+      "geoQuery": "Maschenmuseum,, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag 2026",
@@ -1618,12 +1667,12 @@
       "geoDetailCoordinateFound": false,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Theater Baden-Baden, Baden-Württemberg",
+      "geoDetailLocation": "Theater Baden-Baden,",
       "lat": 48.7596774,
       "lng": 8.2378565,
       "geoEstimated": true,
       "geoSource": "derived-detail",
-      "geoQuery": "Theater Baden-Baden, Baden-Württemberg, Baden-Württemberg, Germany"
+      "geoQuery": "Theater Baden-Baden,, Baden-Württemberg, Germany"
     },
     {
       "title": "PFINGSTFESTSPIELE 2026",
@@ -1639,12 +1688,12 @@
       "geoDetailCoordinateFound": false,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Festspielhaus Baden-Baden, Baden-Württemberg",
+      "geoDetailLocation": "Festspielhaus Baden-Baden,",
       "lat": 48.7671509,
       "lng": 8.2321876,
       "geoEstimated": true,
       "geoSource": "derived-detail",
-      "geoQuery": "Festspielhaus Baden-Baden, Baden-Württemberg, Baden-Württemberg, Germany"
+      "geoQuery": "Festspielhaus Baden-Baden,, Baden-Württemberg, Germany"
     },
     {
       "title": "Philosophie und Musik",
@@ -1660,12 +1709,12 @@
       "geoDetailCoordinateFound": false,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Spitalkirche, Baden-Württemberg",
+      "geoDetailLocation": "Spitalkirche,",
       "lat": 48.7633689,
       "lng": 8.2445675,
       "geoEstimated": true,
       "geoSource": "derived-detail",
-      "geoQuery": "Spitalkirche, Baden-Württemberg, Baden-Württemberg, Germany"
+      "geoQuery": "Spitalkirche,, Baden-Württemberg, Germany"
     },
     {
       "title": "Richard Strauss: Der Rosenkavalier | Pfingstfestspiele",
@@ -1681,12 +1730,12 @@
       "geoDetailCoordinateFound": false,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Festspielhaus Baden-Baden, Baden-Württemberg",
+      "geoDetailLocation": "Festspielhaus Baden-Baden,",
       "lat": 48.7671509,
       "lng": 8.2321876,
       "geoEstimated": true,
       "geoSource": "derived-detail",
-      "geoQuery": "Festspielhaus Baden-Baden, Baden-Württemberg, Baden-Württemberg, Germany"
+      "geoQuery": "Festspielhaus Baden-Baden,, Baden-Württemberg, Germany"
     },
     {
       "title": "Oldtimer-Schlepper-Treffen",
@@ -1700,11 +1749,14 @@
       "page": 11,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.993799,
-      "lng": 9.6684394,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Oberschwäbisches Museumsdorf Kürnbach, Am Museumsdorf 1, 88427 Bad Schussenried-Kürnbach",
+      "lat": 47.9921969,
+      "lng": 9.6760937,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Schussenried-Kürnbach, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Oberschwäbisches Museumsdorf Kürnbach, Bad Schussenried-Kürnbach, Baden-Württemberg, Germany"
     },
     {
       "title": "Baiersbronner Bike- & Wanderhimmel-Fest",
@@ -1718,11 +1770,14 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.5069519,
-      "lng": 8.3720124,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Weißenbachhalle, Im Oberrain 7, 72270 Baiersbronn",
+      "lat": 48.5244534,
+      "lng": 8.3244735,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Weißenbachhalle, Im Oberrain 7, 72270 Baiersbronn, Baiersbronn, Baden-Württemberg, Germany"
     },
     {
       "title": "Rangerführung zum Buhlbachsee",
@@ -1736,11 +1791,14 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.5069519,
-      "lng": 8.3720124,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Bushaltestelle Lotharpfad (B 500), 72270 Baiersbronn",
+      "lat": 48.505951,
+      "lng": 8.2236421,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Bushaltestelle Lotharpfad (B 500), 72270 Baiersbronn"
     },
     {
       "title": "Wein, Wandern & Genuss | WeinWanderEvent",
@@ -1754,11 +1812,14 @@
       "page": 11,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.0403804,
-      "lng": 9.3137915,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Burg Hohenbeilstein, Beilstein",
+      "lat": 49.0412427,
+      "lng": 9.3170263,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Beilstein, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Burg Hohenbeilstein, Beilstein, Beilstein, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag im Hans-Thoma-Kunstmuseum",
@@ -1772,10 +1833,13 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Hans-Thoma-Kunstmuseum, Bernau im Schwarzwald",
       "lat": 47.8057268,
       "lng": 8.0345882,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Bernau im Schwarzwald, Baden-Württemberg, Germany"
     },
     {
@@ -1790,10 +1854,13 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Schwarzwälder Holzschneflermuseum Resenhof, Bernau im Schwarzwald",
       "lat": 47.8057268,
       "lng": 8.0345882,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Bernau im Schwarzwald, Baden-Württemberg, Germany"
     },
     {
@@ -1808,11 +1875,14 @@
       "page": 10,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.4193304,
-      "lng": 9.4942411,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Parkplatz Ortseinfahrt Gutenberg von Oberlenningen kommend, Biosphärengebiet Schwäbische Alb",
+      "lat": 48.5454046,
+      "lng": 9.5187218,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Biosphärengebiet Schwäbische Alb, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Wanderparkplatz Gutenberger Höhlen, Lenningen, Germany"
     },
     {
       "title": "Schwarzwaldhof-Ingenieurfahrt",
@@ -1826,11 +1896,14 @@
       "page": 11,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.8401424,
-      "lng": 8.534081,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Sauschwänzlebahn, Blumberg",
+      "lat": 47.8378648,
+      "lng": 8.5561375,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Blumberg, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Sauschwänzlebahn, Blumberg, Blumberg, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag im Heimatmuseum",
@@ -1844,11 +1917,14 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.0784228,
-      "lng": 9.067437,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Heimatmuseum Brackenheim-Botenheim, Brackenheim",
+      "lat": 49.0654869,
+      "lng": 9.0662842,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Brackenheim, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Heimatmuseum Brackenheim-Botenheim, Brackenheim, Brackenheim, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag 2026",
@@ -1862,11 +1938,14 @@
       "page": 11,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.7142691,
-      "lng": 8.7397624,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Schaudepot, Calw",
+      "lat": 47.599939,
+      "lng": 7.6147845,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Calw, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Schaudepot, Baden-Württemberg, Germany"
     },
     {
       "title": "Tag des Wanderns: Auf den Spuren der DonauWelle",
@@ -1880,10 +1959,13 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "DonauWelle Donauversinkung, Donaubergland",
       "lat": 48.1129533,
       "lng": 8.8906795,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Donaubergland, Baden-Württemberg, Germany"
     },
     {
@@ -1900,14 +1982,12 @@
       "geoDetailCoordinateFound": false,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Echt Bodensee, Echt Bodensee, Baden-Württemberg",
-      "lat": 47.65,
-      "lng": 9.35,
+      "geoDetailLocation": "Echt Bodensee",
+      "lat": 47.6508474,
+      "lng": 9.4782933,
       "geoEstimated": true,
-      "geoSource": "derived-region-bodensee",
-      "geoQuery": "Bodensee, Baden-Württemberg, Germany",
-      "geoRegionFallback": "Bodensee",
-      "geoRegionFallbackNote": "Kein genauer Ort gefunden; Position grob auf Bodensee gesetzt."
+      "geoSource": "derived-detail",
+      "geoQuery": "Karlstraße 13, Friedrichshafen, Germany"
     },
     {
       "title": "Wein & Wiese | WeinWanderEvent",
@@ -1921,11 +2001,14 @@
       "page": 11,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.1005935,
-      "lng": 9.2138586,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Weinausschankhütte am Fleiner See, Flein",
+      "lat": 49.1006811,
+      "lng": 9.2318748,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Flein, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Weinausschankhütte am Fleiner See, Flein, Flein, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag im Murgtalmuseum Bermersbach",
@@ -1939,10 +2022,13 @@
       "page": 13,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Murgtalmuseum Bermersbach, Forbach",
       "lat": 48.6790385,
       "lng": 8.3594916,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Forbach, Baden-Württemberg, Germany"
     },
     {
@@ -1957,10 +2043,13 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Gemeindesaal Rotzingen - Altes Schulhaus, Görwihl",
       "lat": 47.6411618,
       "lng": 8.0784862,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Görwihl, Baden-Württemberg, Germany"
     },
     {
@@ -1975,10 +2064,13 @@
       "page": 10,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "TSV Ödenwaldstetten 1924 e.V. Heidstr. 26 72531 Hohenstein, Heidstraße 26, 72531 Hohenstein",
       "lat": 48.3472808,
       "lng": 9.3548059,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Hohenstein, Baden-Württemberg, Germany"
     },
     {
@@ -1993,10 +2085,13 @@
       "page": 11,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Hüfingen",
       "lat": 47.9269484,
       "lng": 8.4892187,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Hüfingen, Baden-Württemberg, Germany"
     },
     {
@@ -2011,10 +2106,13 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Lädine St. Jodok, Immenstaad",
       "lat": 47.6048795,
       "lng": 9.531927,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Immenstaad, Baden-Württemberg, Germany"
     },
     {
@@ -2029,11 +2127,14 @@
       "page": 11,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.714697,
-      "lng": 7.6610865,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Café Miss Gugelhupf, An der Fischermühle 1, 79400 Kandern",
+      "lat": 47.7141662,
+      "lng": 7.661242,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Kandern, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Café Miss Gugelhupf, An der Fischermühle 1, 79400 Kandern"
     },
     {
       "title": "A Midsummer Night’s Dream (Premiere)",
@@ -2047,11 +2148,14 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Großes Haus, Karlsruhe",
+      "lat": 48.7795557,
+      "lng": 9.1845634,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Großes Haus, Baden-Württemberg, Germany"
     },
     {
       "title": "dragfruit",
@@ -2065,11 +2169,14 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Insel, Karlstr. 49b, Karlsruhe",
+      "lat": 49.004719,
+      "lng": 8.3957424,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Insel, Karlsruhe, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag - Freier Eintritt",
@@ -2083,11 +2190,14 @@
       "page": 13,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Kunstmuseum Karlsruhe, Karlsruhe",
+      "lat": 49.0003577,
+      "lng": 8.3834933,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Kunstmuseum Karlsruhe, Karlsruhe, Karlsruhe, Baden-Württemberg, Germany"
     },
     {
       "title": "Staatskapelle entspannt (Staatstheater entspannt)",
@@ -2101,10 +2211,13 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Neues Entrée, Karlsruhe",
       "lat": 49.0068705,
       "lng": 8.4034195,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
     },
     {
@@ -2119,11 +2232,14 @@
       "page": 13,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Kulturzentrum Tempel, Karlsruhe",
+      "lat": 49.013903,
+      "lng": 8.3578352,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Kulturzentrum Tempel, Karlsruhe, Karlsruhe, Baden-Württemberg, Germany"
     },
     {
       "title": "Summer Spirit - Geschichte in Bewegung",
@@ -2137,10 +2253,13 @@
       "page": 10,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Einfahrt Parkplatz Therme Lindau, Eichwaldstraße 16-20, 88131 Lindau",
       "lat": 47.7285223,
       "lng": 8.0310869,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Lindau, Baden-Württemberg, Germany"
     },
     {
@@ -2155,10 +2274,13 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Oldtimermuseum Meßkirch, Meßkirch",
       "lat": 47.9939249,
       "lng": 9.1122006,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Meßkirch, Baden-Württemberg, Germany"
     },
     {
@@ -2173,10 +2295,13 @@
       "page": 13,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Mössingen",
       "lat": 48.4069119,
       "lng": 9.0602912,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Mössingen, Baden-Württemberg, Germany"
     },
     {
@@ -2191,11 +2316,14 @@
       "page": 13,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.810102,
-      "lng": 7.5995606,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Evangelische Kirche Müllheim, Müllheim",
+      "lat": 47.8083092,
+      "lng": 7.6257421,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Müllheim, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Evangelische Kirche Müllheim, Müllheim, Müllheim, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag und Tag der offenen Ateliers in Müllheim",
@@ -2209,10 +2337,13 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Markgräfler Museum im Blankenhorn-Palais, Müllheim",
       "lat": 47.810102,
       "lng": 7.5995606,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Müllheim, Baden-Württemberg, Germany"
     },
     {
@@ -2227,10 +2358,13 @@
       "page": 10,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Münsingen",
       "lat": 48.4128592,
       "lng": 9.4947894,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Münsingen, Baden-Württemberg, Germany"
     },
     {
@@ -2245,11 +2379,14 @@
       "page": 11,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.4594806,
-      "lng": 9.1433285,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Neckargemünd, Naturpark Neckartal-Odenwald",
+      "lat": 49.3954054,
+      "lng": 8.7965893,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Naturpark Neckartal-Odenwald, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Neckargemünd, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag: Ganz die alte Schule!?",
@@ -2263,11 +2400,14 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.9713529,
-      "lng": 8.9283473,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Freilichtmuseum Neuhausen ob Eck, Neuhausen ob Eck",
+      "lat": 47.9816222,
+      "lng": 8.9311214,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Neuhausen ob Eck, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Freilichtmuseum Neuhausen ob Eck, Neuhausen ob Eck, Neuhausen ob Eck, Baden-Württemberg, Germany"
     },
     {
       "title": "Translationsfest St. Genesius in Schienen",
@@ -2281,10 +2421,13 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Katholische Pfarr- und Wallfahrtskirche St. Genesius in Schienen, Öhningen",
       "lat": 47.6617131,
       "lng": 8.8873571,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Öhningen, Baden-Württemberg, Germany"
     },
     {
@@ -2299,11 +2442,14 @@
       "page": 10,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.2005034,
-      "lng": 9.5024397,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Weygang-Museum, Öhringen",
+      "lat": 49.2010358,
+      "lng": 9.5082687,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Öhringen, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Weygang-Museum, Öhringen, Öhringen, Baden-Württemberg, Germany"
     },
     {
       "title": "Tag des offenen Gartens im Hofgut Cappel",
@@ -2317,11 +2463,14 @@
       "page": 10,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.2019995,
-      "lng": 9.526879,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Hofgut Cappel, Haller Straße 11, 74613 Öhringen-Cappel",
+      "lat": 49.2008532,
+      "lng": 9.523883,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Öhringen-Cappel, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Hofgut Cappel, Öhringen-Cappel, Baden-Württemberg, Germany"
     },
     {
       "title": "Tag der Museen",
@@ -2335,10 +2484,13 @@
       "page": 10,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Heimat- und Handwerkermuseum Bindhaus, Pfullendorf",
       "lat": 47.924349,
       "lng": 9.2559822,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Pfullendorf, Baden-Württemberg, Germany"
     },
     {
@@ -2353,11 +2505,14 @@
       "page": 11,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.5762423,
-      "lng": 8.1711181,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Seebach - Mummelseehalle, Seebach",
+      "lat": 48.5766435,
+      "lng": 8.171799,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Seebach, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Seebach - Mummelseehalle, Seebach, Seebach, Baden-Württemberg, Germany"
     },
     {
       "title": "Pilates auf der Liegewiese im Donaubad",
@@ -2371,11 +2526,14 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.0869139,
-      "lng": 9.2165039,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Donaubad Sigmaringen, Roystraße 31, 72488 Sigmaringen",
+      "lat": 48.0796421,
+      "lng": 9.2084364,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Sigmaringen, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Donaubad Sigmaringen, Roystraße 31, 72488 Sigmaringen, Sigmaringen, Baden-Württemberg, Germany"
     },
     {
       "title": "Sigmaringer Rathausplatzkonzert",
@@ -2389,11 +2547,14 @@
       "page": 11,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.0869139,
-      "lng": 9.2165039,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Rathausplatz Sigmaringen, Sigmaringen",
+      "lat": 48.0284939,
+      "lng": 9.2958921,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Sigmaringen, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Rathausplatz Sigmaringen, Sigmaringen, Sigmaringen, Baden-Württemberg, Germany"
     },
     {
       "title": "Tag der Vereine",
@@ -2409,7 +2570,7 @@
       "geoDetailCoordinateFound": false,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Schlossgartenhalle Jungnau, Am Schlossgarten 8, 72488, Sigmaringen- Jungnau, Baden-Württemberg",
+      "geoDetailLocation": "Schlossgartenhalle Jungnau, Am Schlossgarten 8, 72488 Sigmaringen- Jungnau",
       "lat": 48.1410983,
       "lng": 9.2141259,
       "geoEstimated": true,
@@ -2428,11 +2589,14 @@
       "page": 10,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.1001644,
-      "lng": 8.0554669,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Schützenhaus, 79263 Simonswald",
+      "lat": 48.9596109,
+      "lng": 9.2931435,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Simonswald, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Schützenhaus, Baden-Württemberg, Germany"
     },
     {
       "title": "WeinZeit im Dobel",
@@ -2446,10 +2610,13 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Gewann Dobel, 75056 Sulzfeld",
       "lat": 49.1060275,
       "lng": 8.8597086,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Sulzfeld, Baden-Württemberg, Germany"
     },
     {
@@ -2464,11 +2631,14 @@
       "page": 10,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.6716558,
-      "lng": 9.5891158,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Neues Schloss Tettnang, Tettnang",
+      "lat": 47.6698605,
+      "lng": 9.5845236,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Tettnang, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Neues Schloss Tettnang, Tettnang, Tettnang, Baden-Württemberg, Germany"
     },
     {
       "title": "Tüftler, Denker und Macher - 70 Jahre Elektronik in Tettnang",
@@ -2482,11 +2652,14 @@
       "page": 10,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.6716558,
-      "lng": 9.5891158,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Elektronikmuseum Tettnang, Tettnang",
+      "lat": 47.6719794,
+      "lng": 9.5885218,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Tettnang, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Elektronikmuseum Tettnang, Tettnang, Tettnang, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag",
@@ -2500,10 +2673,13 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "verschiedene Veranstaltungsorte, Tübingen",
       "lat": 48.5203263,
       "lng": 9.053596,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Tübingen, Baden-Württemberg, Germany"
     },
     {
@@ -2518,10 +2694,13 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Kneippanlage in den Villengärten, Überlingen am Bodensee",
       "lat": 47.7664456,
       "lng": 9.1605106,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Überlingen am Bodensee, Baden-Württemberg, Germany"
     },
     {
@@ -2536,11 +2715,14 @@
       "page": 10,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Schwarzwälder Freilichtmuseum Vogtsbauernhof, Vogtsbauernhof",
       "lat": 48.2719957,
       "lng": 8.1971752,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Vogtsbauernhof, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Schwarzwälder Freilichtmuseum Vogtsbauernhof, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag im Elztalmuseum",
@@ -2554,10 +2736,13 @@
       "page": 13,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Elztalmuseum Waldkirch - Regionalgeschichte und Orgelbau, Waldkirch",
       "lat": 48.0939396,
       "lng": 7.9610142,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Waldkirch, Baden-Württemberg, Germany"
     },
     {
@@ -2572,11 +2757,14 @@
       "page": 11,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.8075299,
-      "lng": 9.6431145,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Schlösslegarten, Weingarten",
+      "lat": 47.8059116,
+      "lng": 9.6392273,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Weingarten, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Schlösslegarten, Weingarten, Weingarten, Baden-Württemberg, Germany"
     },
     {
       "title": "WeinBar SteilLage vom Weingut Wissmann-Stilz",
@@ -2590,11 +2778,14 @@
       "page": 13,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.8085568,
-      "lng": 9.3774813,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Remstalkino, Weinstadt",
+      "lat": 48.7998099,
+      "lng": 9.40389,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Weinstadt, Baden-Württemberg, Germany"
+      "geoSource": "derived-detail",
+      "geoQuery": "Remstalkino, Weinstadt, Weinstadt, Baden-Württemberg, Germany"
     },
     {
       "title": "Sommerfest des Imkervereins Kirnbach",
@@ -2608,10 +2799,13 @@
       "page": 10,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Vereinsbienenhaus, Wolfach",
       "lat": 48.2985845,
       "lng": 8.222608,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Wolfach, Baden-Württemberg, Germany"
     },
     {
@@ -35593,10 +35787,13 @@
       "page": 1,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Hausach",
       "lat": 48.2836305,
       "lng": 8.174972,
       "geoEstimated": true,
-      "geoSource": "derived",
+      "geoSource": "derived-detail",
       "geoQuery": "Hausach, Baden-Württemberg, Germany"
     },
     {
