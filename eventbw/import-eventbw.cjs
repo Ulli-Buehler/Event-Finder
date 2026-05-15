@@ -1182,6 +1182,82 @@ async function geocodeCity(city) {
 }
 
 
+
+async function saveDebugHtmlForEvent(events, wantedTitle) {
+  const wanted = normalizeText(wantedTitle);
+  const event = events.find(item =>
+    normalizeText(item.title) === wanted ||
+    normalizeText(item.title).includes(wanted)
+  );
+
+  if (!event || !event.detailUrl) {
+    return {
+      title: wantedTitle,
+      found: false,
+      saved: false,
+      reason: 'Event nicht im Zieldatum gefunden oder keine Detail-URL',
+    };
+  }
+
+  try {
+    const html = await fetchHtml(event.detailUrl);
+    const safeName = wantedTitle
+      .toLowerCase()
+      .normalize('NFKD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+
+    const htmlPath = path.join(OUT_DIR, `debug-${safeName}.html`);
+    const txtPath = path.join(OUT_DIR, `debug-${safeName}.txt`);
+
+    await fs.writeFile(htmlPath, html, 'utf8');
+
+    const coordinateHints = [
+      ...html.matchAll(/.{0,120}(?:lat|lng|latitude|longitude|geo|marker|map|leaflet|wp-json|admin-ajax).{0,180}/gi),
+    ]
+      .slice(0, 80)
+      .map(match => cleanText(match[0]));
+
+    await fs.writeFile(
+      txtPath,
+      [
+        `Titel: ${event.title}`,
+        `Ort: ${event.city || ''}`,
+        `Detail: ${event.detailUrl}`,
+        `HTML bytes: ${html.length}`,
+        '',
+        'Koordinaten-/Map-Hinweise:',
+        ...coordinateHints.map((hint, index) => `${index + 1}. ${hint}`),
+        '',
+      ].join('\n'),
+      'utf8'
+    );
+
+    return {
+      title: event.title,
+      city: event.city,
+      detailUrl: event.detailUrl,
+      found: true,
+      saved: true,
+      htmlPath: `eventbw/debug-${safeName}.html`,
+      txtPath: `eventbw/debug-${safeName}.txt`,
+      htmlBytes: html.length,
+      hintCount: coordinateHints.length,
+    };
+  } catch (error) {
+    return {
+      title: event.title,
+      city: event.city,
+      detailUrl: event.detailUrl,
+      found: true,
+      saved: false,
+      error: String(error.message || error),
+    };
+  }
+}
+
+
 async function enrichGeoFromEventBwDetailCoordinates(events) {
   let checked = 0;
   let recovered = 0;
@@ -1368,6 +1444,8 @@ async function main() {
   const targetDateEvents = sortEvents(rawEvents.filter(event => touchesDate(event, targetDate)));
   const regionalEvents = sortEvents(targetDateEvents);
 
+  const gutenbergsDebug = await saveDebugHtmlForEvent(regionalEvents, 'Gutenbergs Geopoints');
+
   const detailCoordinateGeo = await enrichGeoFromEventBwDetailCoordinates(regionalEvents);
   await enrichEventsWithGeo(regionalEvents);
 
@@ -1433,6 +1511,7 @@ async function main() {
     meta,
     pages: allPages,
     cityStatsForTargetDate,
+    gutenbergsDebug,
     detailCoordinateGeo,
     detailGeo,
     compoundCityGeo,
