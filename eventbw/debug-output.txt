@@ -17,30 +17,30 @@ Counts:
   "pages": 239,
   "rawCollectedIncludingDuplicates": 3308,
   "rawUnique": 3308,
-  "targetDateMatches": 79,
-  "targetDateWithGeo": 79,
+  "targetDateMatches": 75,
+  "targetDateWithGeo": 75,
   "targetDateWithoutGeo": 0,
-  "targetDateGeoEstimated": 79,
-  "targetDateGeoEstimatedFromCity": 68,
-  "targetDateGeoEstimatedFromDetail": 8,
+  "targetDateGeoEstimated": 75,
+  "targetDateGeoEstimatedFromCity": 66,
+  "targetDateGeoEstimatedFromDetail": 7,
   "targetDateGeoEstimatedFromCompoundCity": 0,
-  "targetDateGeoEstimatedFromTitle": 1,
+  "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 2,
-  "targetDateDetailGeoChecked": 11,
-  "targetDateDetailGeoRecovered": 8,
+  "targetDateDetailGeoChecked": 9,
+  "targetDateDetailGeoRecovered": 7,
   "targetDateCompoundCityGeoChecked": 0,
   "targetDateCompoundCityGeoRecovered": 0,
-  "targetDateTitleGeoChecked": 1,
-  "targetDateTitleGeoRecovered": 1,
+  "targetDateTitleGeoChecked": 0,
+  "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 2,
   "targetDateBodenseeRegionGeoRecovered": 2,
-  "nonRegionalTargetDateMatches": 72,
+  "nonRegionalTargetDateMatches": 69,
   "rawMaerkte": 138,
   "rawFeste": 3170,
-  "targetDateMaerkte": 3,
-  "targetDateFeste": 76,
-  "targetDateWithGeoMaerkte": 3,
-  "targetDateWithGeoFeste": 76,
+  "targetDateMaerkte": 1,
+  "targetDateFeste": 74,
+  "targetDateWithGeoMaerkte": 1,
+  "targetDateWithGeoFeste": 74,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 0
 }
@@ -147,10 +147,6 @@ Ortsstatistik vor Ortsfilter:
     "count": 3
   },
   {
-    "city": "Echt Bodensee",
-    "count": 3
-  },
-  {
     "city": "Müllheim",
     "count": 3
   },
@@ -160,6 +156,10 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Bernau im Schwarzwald",
+    "count": 2
+  },
+  {
+    "city": "Eberbach",
     "count": 2
   },
   {
@@ -211,6 +211,10 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Echt Bodensee",
+    "count": 1
+  },
+  {
     "city": "Flein",
     "count": 1
   },
@@ -248,10 +252,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Karlsbad",
-    "count": 1
-  },
-  {
-    "city": "Kehl",
     "count": 1
   },
   {
@@ -299,10 +299,6 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Reutlingen",
-    "count": 1
-  },
-  {
     "city": "Rickenbach",
     "count": 1
   },
@@ -320,10 +316,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Simonswald",
-    "count": 1
-  },
-  {
-    "city": "Sinsheim",
     "count": 1
   },
   {
@@ -347,10 +339,6 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Walldürn",
-    "count": 1
-  },
-  {
     "city": "Weingarten",
     "count": 1
   },
@@ -371,7 +359,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
     "ok": true,
-    "reportedCount": 140,
+    "reportedCount": 138,
     "parsedCount": 14
   },
   {
@@ -458,7 +446,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 3255,
+    "reportedCount": 3170,
     "parsedCount": 14
   },
   {
