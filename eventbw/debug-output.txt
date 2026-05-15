@@ -14,33 +14,33 @@ Zieldatum: 2026-05-17
 
 Counts:
 {
-  "pages": 245,
-  "rawCollectedIncludingDuplicates": 3395,
-  "rawUnique": 3395,
-  "targetDateMatches": 91,
-  "targetDateWithGeo": 91,
+  "pages": 239,
+  "rawCollectedIncludingDuplicates": 3308,
+  "rawUnique": 3308,
+  "targetDateMatches": 79,
+  "targetDateWithGeo": 79,
   "targetDateWithoutGeo": 0,
-  "targetDateGeoEstimated": 91,
-  "targetDateGeoEstimatedFromCity": 23,
-  "targetDateGeoEstimatedFromDetail": 58,
+  "targetDateGeoEstimated": 79,
+  "targetDateGeoEstimatedFromCity": 68,
+  "targetDateGeoEstimatedFromDetail": 8,
   "targetDateGeoEstimatedFromCompoundCity": 0,
-  "targetDateGeoEstimatedFromTitle": 4,
-  "targetDateGeoEstimatedFromBodenseeRegion": 6,
-  "targetDateDetailGeoChecked": 68,
-  "targetDateDetailGeoRecovered": 58,
+  "targetDateGeoEstimatedFromTitle": 1,
+  "targetDateGeoEstimatedFromBodenseeRegion": 2,
+  "targetDateDetailGeoChecked": 11,
+  "targetDateDetailGeoRecovered": 8,
   "targetDateCompoundCityGeoChecked": 0,
   "targetDateCompoundCityGeoRecovered": 0,
-  "targetDateTitleGeoChecked": 4,
-  "targetDateTitleGeoRecovered": 4,
-  "targetDateBodenseeRegionGeoChecked": 6,
-  "targetDateBodenseeRegionGeoRecovered": 6,
-  "nonRegionalTargetDateMatches": 83,
-  "rawMaerkte": 140,
-  "rawFeste": 3255,
+  "targetDateTitleGeoChecked": 1,
+  "targetDateTitleGeoRecovered": 1,
+  "targetDateBodenseeRegionGeoChecked": 2,
+  "targetDateBodenseeRegionGeoRecovered": 2,
+  "nonRegionalTargetDateMatches": 72,
+  "rawMaerkte": 138,
+  "rawFeste": 3170,
   "targetDateMaerkte": 3,
-  "targetDateFeste": 88,
+  "targetDateFeste": 76,
   "targetDateWithGeoMaerkte": 3,
-  "targetDateWithGeoFeste": 88,
+  "targetDateWithGeoFeste": 76,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 0
 }
@@ -135,10 +135,6 @@ Regionale Ortsliste:
 Ortsstatistik vor Ortsfilter:
 [
   {
-    "city": "Echt Bodensee",
-    "count": 10
-  },
-  {
     "city": "unbekannt",
     "count": 7
   },
@@ -148,6 +144,10 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Baiersbronn",
+    "count": 3
+  },
+  {
+    "city": "Echt Bodensee",
     "count": 3
   },
   {
@@ -163,15 +163,7 @@ Ortsstatistik vor Ortsfilter:
     "count": 2
   },
   {
-    "city": "Eberbach",
-    "count": 2
-  },
-  {
     "city": "Meßkirch",
-    "count": 2
-  },
-  {
-    "city": "Münsingen",
     "count": 2
   },
   {
@@ -196,10 +188,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Beuren",
-    "count": 1
-  },
-  {
-    "city": "Biederbach",
     "count": 1
   },
   {
@@ -228,10 +216,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Forbach",
-    "count": 1
-  },
-  {
-    "city": "Friedrichshafen",
     "count": 1
   },
   {
@@ -276,6 +260,10 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Mössingen",
+    "count": 1
+  },
+  {
+    "city": "Münsingen",
     "count": 1
   },
   {
@@ -456,7 +444,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/10/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 14
+    "parsedCount": 12
   },
   {
     "category": "maerkte",
@@ -2279,60 +2267,12 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/227/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 14
+    "parsedCount": 6
   },
   {
     "category": "feste",
     "page": 228,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/228/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 229,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/229/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 230,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/230/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 231,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/231/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 232,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/232/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 233,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/233/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 7
-  },
-  {
-    "category": "feste",
-    "page": 234,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/234/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
