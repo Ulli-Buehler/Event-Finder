@@ -1381,6 +1381,46 @@ async function saveDebugHtmlForEvent(events, wantedTitle) {
 }
 
 
+
+function applyManualGeoOverrides(events) {
+  let recovered = 0;
+  const overrides = [];
+
+  for (const event of events) {
+    const text = normalizeText(
+      [
+        event.title,
+        event.city,
+        event.detailUrl,
+      ].filter(Boolean).join(' ')
+    );
+
+    if (
+      text.includes('gutenbergs geopoints') ||
+      (text.includes('gutenberg') && text.includes('biosphaerengebiet schwaebische alb'))
+    ) {
+      event.lat = 48.534250;
+      event.lng = 9.518710;
+      event.geoEstimated = true;
+      event.geoSource = 'manual-locality';
+      event.geoQuery = 'Gutenberg, Lenningen, Baden-Württemberg, Germany';
+      event.geoManualNote = 'Manuell auf Ortsteil Gutenberg/Lenningen gesetzt, weil automatische POI-Suche falsche Treffer lieferte.';
+
+      recovered += 1;
+      overrides.push({
+        title: event.title,
+        city: event.city,
+        lat: event.lat,
+        lng: event.lng,
+        geoQuery: event.geoQuery,
+      });
+    }
+  }
+
+  return { recovered, overrides };
+}
+
+
 async function enrichGeoFromEventBwDetailCoordinates(events) {
   let checked = 0;
   let recovered = 0;
@@ -1568,6 +1608,7 @@ async function main() {
   const regionalEvents = sortEvents(targetDateEvents);
 
   const gutenbergsDebug = await saveDebugHtmlForEvent(regionalEvents, 'Gutenbergs Geopoints');
+  const manualGeo = applyManualGeoOverrides(regionalEvents);
 
   const detailCoordinateGeo = await enrichGeoFromEventBwDetailCoordinates(regionalEvents);
 
@@ -1604,6 +1645,7 @@ async function main() {
       targetDateWithoutGeo: regionalEvents.filter(event => !Number.isFinite(event.lat) || !Number.isFinite(event.lng)).length,
       targetDateGeoEstimated: regionalEvents.filter(event => event.geoEstimated === true).length,
       targetDateGeoEstimatedFromCity: regionalEvents.filter(event => event.geoSource === 'derived').length,
+      targetDateGeoManualLocality: regionalEvents.filter(event => event.geoSource === 'manual-locality').length,
       targetDateGeoFromEventBwDetailCoordinates: regionalEvents.filter(event => event.geoSource === 'eventbw-detail-coordinates').length,
       targetDateGeoEstimatedFromDetail: regionalEvents.filter(event => event.geoSource === 'derived-detail').length,
       targetDateGeoEstimatedFromCompoundCity: regionalEvents.filter(event => event.geoSource === 'derived-compound-city').length,
@@ -1641,6 +1683,7 @@ async function main() {
     pages: allPages,
     cityStatsForTargetDate,
     gutenbergsDebug,
+    manualGeo,
     detailCoordinateGeo,
     detailGeo,
     compoundCityGeo,
@@ -1673,6 +1716,7 @@ async function main() {
   console.log(`Target date matches: ${targetDateEvents.length}`);
   console.log(`Target date with geo: ${regionalEvents.filter(event => Number.isFinite(event.lat) && Number.isFinite(event.lng)).length}`);
   console.log(`Target date without geo: ${regionalEvents.filter(event => !Number.isFinite(event.lat) || !Number.isFinite(event.lng)).length}`);
+  console.log(`Manual locality geo recovered: ${manualGeo.recovered}`);
   console.log(`EventBW detail coordinate geo checked: ${detailCoordinateGeo.checked}`);
   console.log(`EventBW detail coordinate geo recovered: ${detailCoordinateGeo.recovered}`);
   console.log(`EventBW detail coordinate geo failed: ${detailCoordinateGeo.failed}`);
