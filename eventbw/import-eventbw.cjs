@@ -780,6 +780,48 @@ function extractGoogleMapsQueryFromHtml(html) {
   return '';
 }
 
+function localityQueriesFromDetail(detailLocation, event) {
+  const detail = cleanText(detailLocation);
+  const city = cleanText(event.city);
+  const text = normalizeText(`${event.title || ''} ${detail} ${city}`);
+  const queries = [];
+
+  // Lokale Orts-/Ortsteil-Erkennung: lieber richtige Ortschaft als falscher POI.
+  if (text.includes('gutenberg') || text.includes('oberlenningen')) {
+    queries.push('Gutenberg, Lenningen, Baden-Württemberg, Germany');
+    queries.push('Oberlenningen, Lenningen, Baden-Württemberg, Germany');
+    queries.push('Lenningen, Baden-Württemberg, Germany');
+  }
+
+  if (text.includes('unterlenningen')) {
+    queries.push('Unterlenningen, Lenningen, Baden-Württemberg, Germany');
+    queries.push('Lenningen, Baden-Württemberg, Germany');
+  }
+
+  if (text.includes('schopfloch')) {
+    queries.push('Schopfloch, Baden-Württemberg, Germany');
+  }
+
+  if (text.includes('ochsenwang')) {
+    queries.push('Ochsenwang, Bissingen an der Teck, Baden-Württemberg, Germany');
+  }
+
+  if (text.includes('grabenstetten')) {
+    queries.push('Grabenstetten, Baden-Württemberg, Germany');
+  }
+
+  if (text.includes('hoellensternbroeller') || text.includes('hollsternbroller')) {
+    queries.push('Gutenberg, Lenningen, Baden-Württemberg, Germany');
+  }
+
+  // "Echt Bodensee" ist meistens Region/Marke. Ohne besseren Ort nur auf Friedrichshafen/Regionsebene.
+  if (/^echt\s+bodensee$/i.test(detail) || /^echt\s+bodensee$/i.test(city)) {
+    queries.push('Friedrichshafen, Baden-Württemberg, Germany');
+  }
+
+  return [...new Set(queries.map(cleanText).filter(Boolean))];
+}
+
 function canonicalDetailGeoQueries(detailLocation, event) {
   const detail = cleanText(detailLocation);
   const city = cleanText(event.city);
@@ -787,20 +829,10 @@ function canonicalDetailGeoQueries(detailLocation, event) {
 
   if (!detail) return queries;
 
-  // Bekannte EventBW-/Google-Maps-POIs, die Nominatim nicht zuverlässig findet.
-  if (/^echt\s+bodensee$/i.test(detail) || /^echt\s+bodensee$/i.test(city)) {
-    queries.push('Deutsche Bodensee Tourismus GmbH, Karlstraße 13, Friedrichshafen, Germany');
-    queries.push('Echt Bodensee, Friedrichshafen, Germany');
-    queries.push('Karlstraße 13, Friedrichshafen, Germany');
-  }
+  // 1. Orts-/Ortsteil-Erkennung zuerst.
+  queries.push(...localityQueriesFromDetail(detail, event));
 
-  if (/parkplatz\s+ortseinfahrt\s+gutenberg/i.test(detail)) {
-    queries.push('Parkplatz Ortseinfahrt Gutenberg von Oberlenningen kommend, Lenningen, Germany');
-    queries.push('Parkplatz Lenningen, Lindenstraße, Gutenberg, Lenningen, Germany');
-    queries.push('Wanderparkplatz Gutenberger Höhlen, Lenningen, Germany');
-    queries.push('Gutenberg, Lenningen, Baden-Württemberg, Germany');
-  }
-
+  // 2. Danach normale Detail-Ortsangabe.
   queries.push(detailGeoQuery(event, detail));
   queries.push(...simplifyDetailLocation(detail, city));
 
