@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-15T08:00:35.327Z",
-    "finishedAt": "2026-05-15T08:04:57.678Z",
+    "startedAt": "2026-05-15T09:00:32.126Z",
+    "finishedAt": "2026-05-15T09:04:23.428Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -100,13 +100,14 @@
       "targetDateWithGeo": 75,
       "targetDateWithoutGeo": 0,
       "targetDateGeoEstimated": 75,
-      "targetDateGeoEstimatedFromCity": 61,
+      "targetDateGeoEstimatedFromCity": 60,
+      "targetDateGeoManualLocality": 1,
       "targetDateGeoFromEventBwDetailCoordinates": 0,
       "targetDateGeoEstimatedFromDetail": 12,
       "targetDateGeoEstimatedFromCompoundCity": 1,
       "targetDateGeoEstimatedFromTitle": 0,
       "targetDateGeoEstimatedFromBodenseeRegion": 1,
-      "targetDateDetailCoordinateGeoChecked": 75,
+      "targetDateDetailCoordinateGeoChecked": 74,
       "targetDateDetailCoordinateGeoRecovered": 0,
       "targetDateDetailCoordinateGeoFailed": 0,
       "targetDateDetailGoogleMapsQueries": 13,
@@ -2267,11 +2268,23 @@
     "saved": true,
     "htmlPath": "eventbw/debug-gutenbergs-geopoints.html",
     "txtPath": "eventbw/debug-gutenbergs-geopoints.txt",
-    "htmlBytes": 81718,
+    "htmlBytes": 81714,
     "hintCount": 38
   },
+  "manualGeo": {
+    "recovered": 1,
+    "overrides": [
+      {
+        "title": "Gutenbergs Geopoints",
+        "city": "Biosphärengebiet Schwäbische Alb",
+        "lat": 48.53425,
+        "lng": 9.51871,
+        "geoQuery": "Gutenberg, Lenningen, Baden-Württemberg, Germany"
+      }
+    ]
+  },
   "detailCoordinateGeo": {
-    "checked": 75,
+    "checked": 74,
     "recovered": 0,
     "failed": 0,
     "recoveredEvents": [],
@@ -3124,8 +3137,8 @@
       "page": 6,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.5805031,
-      "lng": 9.4044658,
+      "lat": 48.5695917,
+      "lng": 9.4005013,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Beuren, Baden-Württemberg, Germany"
@@ -4134,13 +4147,12 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gutenbergs-geopoints/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.4193304,
-      "lng": 9.4942411,
+      "lat": 48.53425,
+      "lng": 9.51871,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Biosphärengebiet Schwäbische Alb, Baden-Württemberg, Germany"
+      "geoSource": "manual-locality",
+      "geoQuery": "Gutenberg, Lenningen, Baden-Württemberg, Germany",
+      "geoManualNote": "Manuell auf Ortsteil Gutenberg/Lenningen gesetzt, weil automatische POI-Suche falsche Treffer lieferte."
     },
     {
       "title": "Schwarzwaldhof-Ingenieurfahrt",
@@ -4667,8 +4679,8 @@
       "page": 10,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.924349,
-      "lng": 9.2559822,
+      "lat": 47.9232677,
+      "lng": 9.2500203,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Pfullendorf, Baden-Württemberg, Germany"
@@ -4782,8 +4794,8 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.1047,
-      "lng": 8.85583,
+      "lat": 49.1060275,
+      "lng": 8.8597086,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Sulzfeld, Baden-Württemberg, Germany"
@@ -39592,8 +39604,8 @@
       "page": 6,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.5805031,
-      "lng": 9.4044658,
+      "lat": 48.5695917,
+      "lng": 9.4005013,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Beuren, Baden-Württemberg, Germany"
@@ -39997,13 +40009,12 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gutenbergs-geopoints/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.4193304,
-      "lng": 9.4942411,
+      "lat": 48.53425,
+      "lng": 9.51871,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Biosphärengebiet Schwäbische Alb, Baden-Württemberg, Germany"
+      "geoSource": "manual-locality",
+      "geoQuery": "Gutenberg, Lenningen, Baden-Württemberg, Germany",
+      "geoManualNote": "Manuell auf Ortsteil Gutenberg/Lenningen gesetzt, weil automatische POI-Suche falsche Treffer lieferte."
     },
     {
       "title": "Schwarzwaldhof-Ingenieurfahrt",
@@ -40530,8 +40541,8 @@
       "page": 10,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.924349,
-      "lng": 9.2559822,
+      "lat": 47.9232677,
+      "lng": 9.2500203,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Pfullendorf, Baden-Württemberg, Germany"
@@ -40645,8 +40656,8 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.1047,
-      "lng": 8.85583,
+      "lat": 49.1060275,
+      "lng": 8.8597086,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Sulzfeld, Baden-Württemberg, Germany"
@@ -40992,8 +41003,8 @@
       "page": 6,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.5805031,
-      "lng": 9.4044658,
+      "lat": 48.5695917,
+      "lng": 9.4005013,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Beuren, Baden-Württemberg, Germany"
@@ -41397,13 +41408,12 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gutenbergs-geopoints/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.4193304,
-      "lng": 9.4942411,
+      "lat": 48.53425,
+      "lng": 9.51871,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Biosphärengebiet Schwäbische Alb, Baden-Württemberg, Germany"
+      "geoSource": "manual-locality",
+      "geoQuery": "Gutenberg, Lenningen, Baden-Württemberg, Germany",
+      "geoManualNote": "Manuell auf Ortsteil Gutenberg/Lenningen gesetzt, weil automatische POI-Suche falsche Treffer lieferte."
     },
     {
       "title": "Schwarzwaldhof-Ingenieurfahrt",
@@ -41930,8 +41940,8 @@
       "page": 10,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.924349,
-      "lng": 9.2559822,
+      "lat": 47.9232677,
+      "lng": 9.2500203,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Pfullendorf, Baden-Württemberg, Germany"
@@ -42045,8 +42055,8 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.1047,
-      "lng": 8.85583,
+      "lat": 49.1060275,
+      "lng": 8.8597086,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Sulzfeld, Baden-Württemberg, Germany"
@@ -43258,8 +43268,8 @@
       "page": 10,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.924349,
-      "lng": 9.2559822,
+      "lat": 47.9232677,
+      "lng": 9.2500203,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Pfullendorf, Baden-Württemberg, Germany"
@@ -43373,8 +43383,8 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.1047,
-      "lng": 8.85583,
+      "lat": 49.1060275,
+      "lng": 8.8597086,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Sulzfeld, Baden-Württemberg, Germany"
