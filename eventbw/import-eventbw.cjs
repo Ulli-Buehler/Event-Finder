@@ -743,7 +743,78 @@ function extractDetailCoordinatesFromHtml(html) {
 }
 
 
+
+function extractGoogleMapsQueryFromHtml(html) {
+  const raw = String(html || '');
+  const links = [...raw.matchAll(/<a\b[^>]+href=["']([^"']*(?:google\.com\/maps|maps\.app\.goo\.gl)[^"']*)["'][^>]*>([\s\S]*?)<\/a>/gi)];
+
+  for (const link of links) {
+    const href = decodeHtml(link[1]);
+    const label = cleanText(link[2]);
+
+    if (!/google\s+maps|maps|karte|anfahrt/i.test(label + ' ' + href)) {
+      continue;
+    }
+
+    try {
+      const url = new URL(href);
+
+      const query =
+        url.searchParams.get('query') ||
+        url.searchParams.get('q') ||
+        url.searchParams.get('destination') ||
+        '';
+
+      if (query) {
+        return cleanText(decodeURIComponent(query.replace(/\+/g, ' ')));
+      }
+    } catch {
+      const queryMatch = href.match(/[?&](?:query|q|destination)=([^&]+)/i);
+
+      if (queryMatch) {
+        return cleanText(decodeURIComponent(queryMatch[1].replace(/\+/g, ' ')));
+      }
+    }
+  }
+
+  return '';
+}
+
+function canonicalDetailGeoQueries(detailLocation, event) {
+  const detail = cleanText(detailLocation);
+  const city = cleanText(event.city);
+  const queries = [];
+
+  if (!detail) return queries;
+
+  // Bekannte EventBW-/Google-Maps-POIs, die Nominatim nicht zuverlässig findet.
+  if (/^echt\s+bodensee$/i.test(detail) || /^echt\s+bodensee$/i.test(city)) {
+    queries.push('Deutsche Bodensee Tourismus GmbH, Karlstraße 13, Friedrichshafen, Germany');
+    queries.push('Echt Bodensee, Friedrichshafen, Germany');
+    queries.push('Karlstraße 13, Friedrichshafen, Germany');
+  }
+
+  if (/parkplatz\s+ortseinfahrt\s+gutenberg/i.test(detail)) {
+    queries.push('Parkplatz Ortseinfahrt Gutenberg von Oberlenningen kommend, Lenningen, Germany');
+    queries.push('Parkplatz Lenningen, Lindenstraße, Gutenberg, Lenningen, Germany');
+    queries.push('Wanderparkplatz Gutenberger Höhlen, Lenningen, Germany');
+    queries.push('Gutenberg, Lenningen, Baden-Württemberg, Germany');
+  }
+
+  queries.push(detailGeoQuery(event, detail));
+  queries.push(...simplifyDetailLocation(detail, city));
+
+  return [...new Set(queries.map(cleanText).filter(Boolean))];
+}
+
+
 function extractDetailLocationFromHtml(html) {
+  const googleMapsQuery = extractGoogleMapsQueryFromHtml(html);
+
+  if (googleMapsQuery) {
+    return googleMapsQuery;
+  }
+
   const jsonLdLocation = extractJsonLdLocation(html);
 
   if (jsonLdLocation) {
@@ -1090,14 +1161,7 @@ async function enrichMissingGeoFromDetail(events) {
       event.geoDetailFound = true;
       event.geoDetailLocation = detailLocation;
 
-      const queries = [
-        detailGeoQuery(event, detailLocation),
-        ...simplifyDetailLocation(detailLocation, event.city),
-      ]
-        .map(cleanText)
-        .filter(Boolean);
-
-      const uniqueQueries = [...new Set(queries)];
+      const uniqueQueries = canonicalDetailGeoQueries(detailLocation, event);
 
       tried.push({
         title: event.title,
@@ -1447,9 +1511,14 @@ async function main() {
   const gutenbergsDebug = await saveDebugHtmlForEvent(regionalEvents, 'Gutenbergs Geopoints');
 
   const detailCoordinateGeo = await enrichGeoFromEventBwDetailCoordinates(regionalEvents);
+
+  // Wichtig: Präzise Ortsangaben aus der Detailseite müssen vor dem groben City-Geocode kommen.
+  // Beispiel: "Gutenbergs Geopoints" hat auf der Detailseite
+  // "Parkplatz Ortseinfahrt Gutenberg von Oberlenningen kommend".
+  const detailGeo = await enrichMissingGeoFromDetail(regionalEvents);
+
   await enrichEventsWithGeo(regionalEvents);
 
-  const detailGeo = await enrichMissingGeoFromDetail(regionalEvents);
   const compoundCityGeo = await enrichMissingGeoFromCompoundCity(regionalEvents);
   const titleGeo = await enrichMissingGeoFromTitle(regionalEvents);
   const bodenseeRegionGeo = enrichMissingGeoFromBodenseeRegion(regionalEvents);
@@ -1484,6 +1553,7 @@ async function main() {
       targetDateDetailCoordinateGeoChecked: detailCoordinateGeo.checked,
       targetDateDetailCoordinateGeoRecovered: detailCoordinateGeo.recovered,
       targetDateDetailCoordinateGeoFailed: detailCoordinateGeo.failed,
+      targetDateDetailGoogleMapsQueries: regionalEvents.filter(event => event.geoDetailLocation && !event.geoDetailLocation.includes(', Baden-Württemberg')).length,
       targetDateDetailGeoChecked: detailGeo.checked,
       targetDateDetailGeoRecovered: detailGeo.recovered,
       targetDateCompoundCityGeoChecked: compoundCityGeo.checked,
