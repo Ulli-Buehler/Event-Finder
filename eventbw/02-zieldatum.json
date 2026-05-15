@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-15T04:00:30.993Z",
-    "finishedAt": "2026-05-15T04:07:21.343Z",
+    "startedAt": "2026-05-15T04:28:29.584Z",
+    "finishedAt": "2026-05-15T04:35:59.349Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 239,
-      "rawCollectedIncludingDuplicates": 3308,
-      "rawUnique": 3308,
+      "rawCollectedIncludingDuplicates": 3309,
+      "rawUnique": 3309,
       "targetDateMatches": 75,
       "targetDateWithGeo": 75,
       "targetDateWithoutGeo": 0,
@@ -120,7 +120,7 @@
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 69,
       "rawMaerkte": 138,
-      "rawFeste": 3170,
+      "rawFeste": 3171,
       "targetDateMaerkte": 1,
       "targetDateFeste": 74,
       "targetDateWithGeoMaerkte": 1,
@@ -334,7 +334,7 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Rhododendronpark Jansen, Karlsbad",
-      "lat": 48.886633,
+      "lat": 48.8866329,
       "lng": 8.4878794,
       "geoEstimated": true,
       "geoSource": "derived-detail",
@@ -756,11 +756,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Parkplatz Ortseinfahrt Gutenberg von Oberlenningen kommend, Biosphärengebiet Schwäbische Alb",
-      "lat": 48.5454046,
-      "lng": 9.5187218,
+      "lat": 48.5332835,
+      "lng": 9.5179249,
       "geoEstimated": true,
       "geoSource": "derived-detail",
-      "geoQuery": "Wanderparkplatz Gutenberger Höhlen, Lenningen, Germany"
+      "geoQuery": "Gutenberg, Lenningen, Baden-Württemberg, Germany"
     },
     {
       "title": "Schwarzwaldhof-Ingenieurfahrt",
@@ -819,7 +819,7 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Schaudepot, Calw",
-      "lat": 47.599939,
+      "lat": 47.5999389,
       "lng": 7.6147845,
       "geoEstimated": true,
       "geoSource": "derived-detail",
@@ -861,11 +861,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Echt Bodensee",
-      "lat": 47.6508474,
-      "lng": 9.4782933,
+      "lat": 47.6500279,
+      "lng": 9.4800858,
       "geoEstimated": true,
       "geoSource": "derived-detail",
-      "geoQuery": "Karlstraße 13, Friedrichshafen, Germany"
+      "geoQuery": "Friedrichshafen, Baden-Württemberg, Germany"
     },
     {
       "title": "Wein & Wiese | WeinWanderEvent",
