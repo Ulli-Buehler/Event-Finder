@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-16T02:00:39.481Z",
-    "finishedAt": "2026-05-16T02:05:02.854Z",
+    "startedAt": "2026-05-16T03:00:31.492Z",
+    "finishedAt": "2026-05-16T03:05:10.800Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 236,
-      "rawCollectedIncludingDuplicates": 3268,
-      "rawUnique": 3268,
+      "rawCollectedIncludingDuplicates": 3270,
+      "rawUnique": 3269,
       "targetDateMatches": 68,
       "targetDateWithGeo": 68,
       "targetDateWithoutGeo": 0,
@@ -120,7 +120,7 @@
       "targetDateBodenseeRegionGeoChecked": 1,
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 62,
-      "rawMaerkte": 137,
+      "rawMaerkte": 138,
       "rawFeste": 3131,
       "targetDateMaerkte": 1,
       "targetDateFeste": 67,
@@ -161,8 +161,8 @@
       "page": 3,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.5695917,
-      "lng": 9.4005013,
+      "lat": 48.5805031,
+      "lng": 9.4044658,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Beuren, Baden-Württemberg, Germany"
