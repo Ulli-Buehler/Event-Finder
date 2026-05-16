@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-16T14:42:40.721Z",
-    "finishedAt": "2026-05-16T14:47:01.965Z",
+    "startedAt": "2026-05-16T15:00:29.334Z",
+    "finishedAt": "2026-05-16T15:05:19.238Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -97,37 +97,37 @@
       "rawCollectedIncludingDuplicates": 3308,
       "rawUnique": 3308,
       "targetDateMatches": 70,
-      "targetDateWithGeo": 70,
-      "targetDateWithoutGeo": 0,
-      "targetDateGeoEstimated": 70,
-      "targetDateGeoEstimatedFromCity": 55,
+      "targetDateWithGeo": 40,
+      "targetDateWithoutGeo": 30,
+      "targetDateGeoEstimated": 40,
+      "targetDateGeoEstimatedFromCity": 25,
       "targetDateGeoManualLocality": 1,
       "targetDateGeoFromEventBwDetailCoordinates": 0,
-      "targetDateGeoEstimatedFromDetail": 12,
-      "targetDateGeoEstimatedFromCompoundCity": 1,
-      "targetDateGeoEstimatedFromTitle": 0,
-      "targetDateGeoEstimatedFromBodenseeRegion": 1,
+      "targetDateGeoEstimatedFromDetail": 8,
+      "targetDateGeoEstimatedFromCompoundCity": 2,
+      "targetDateGeoEstimatedFromTitle": 2,
+      "targetDateGeoEstimatedFromBodenseeRegion": 2,
       "targetDateDetailCoordinateGeoChecked": 69,
       "targetDateDetailCoordinateGeoRecovered": 0,
       "targetDateDetailCoordinateGeoFailed": 0,
       "targetDateDetailGoogleMapsQueries": 13,
       "targetDateDetailGeoChecked": 13,
-      "targetDateDetailGeoRecovered": 12,
-      "targetDateCompoundCityGeoChecked": 1,
-      "targetDateCompoundCityGeoRecovered": 1,
-      "targetDateTitleGeoChecked": 0,
-      "targetDateTitleGeoRecovered": 0,
-      "targetDateBodenseeRegionGeoChecked": 1,
-      "targetDateBodenseeRegionGeoRecovered": 1,
+      "targetDateDetailGeoRecovered": 8,
+      "targetDateCompoundCityGeoChecked": 2,
+      "targetDateCompoundCityGeoRecovered": 2,
+      "targetDateTitleGeoChecked": 2,
+      "targetDateTitleGeoRecovered": 2,
+      "targetDateBodenseeRegionGeoChecked": 2,
+      "targetDateBodenseeRegionGeoRecovered": 2,
       "nonRegionalTargetDateMatches": 63,
       "rawMaerkte": 138,
       "rawFeste": 3170,
       "targetDateMaerkte": 1,
       "targetDateFeste": 69,
       "targetDateWithGeoMaerkte": 1,
-      "targetDateWithGeoFeste": 69,
+      "targetDateWithGeoFeste": 39,
       "targetDateWithoutGeoMaerkte": 0,
-      "targetDateWithoutGeoFeste": 0
+      "targetDateWithoutGeoFeste": 30
     }
   },
   "pages": [
@@ -2264,7 +2264,7 @@
     "saved": true,
     "htmlPath": "eventbw/debug-gutenbergs-geopoints.html",
     "txtPath": "eventbw/debug-gutenbergs-geopoints.txt",
-    "htmlBytes": 82003,
+    "htmlBytes": 81971,
     "hintCount": 38
   },
   "manualGeo": {
@@ -2288,7 +2288,7 @@
   },
   "detailGeo": {
     "checked": 13,
-    "recovered": 12,
+    "recovered": 8,
     "tried": [
       {
         "title": "Elton John Tribute Dinner Konzert - The Musical Sound of Elton John",
@@ -2436,9 +2436,18 @@
     ]
   },
   "compoundCityGeo": {
-    "checked": 1,
-    "recovered": 1,
+    "checked": 2,
+    "recovered": 2,
     "tried": [
+      {
+        "title": "Oldtimer-Schlepper-Treffen",
+        "city": "Bad Schussenried-Kürnbach",
+        "queries": [
+          "Kürnbach, Bad Schussenried, Baden-Württemberg, Germany",
+          "Kürnbach, Baden-Württemberg, Germany",
+          "Bad Schussenried, Baden-Württemberg, Germany"
+        ]
+      },
       {
         "title": "Tag der Vereine",
         "city": "Sigmaringen- Jungnau",
@@ -2451,13 +2460,35 @@
     ]
   },
   "titleGeo": {
-    "checked": 0,
-    "recovered": 0,
-    "tried": []
+    "checked": 2,
+    "recovered": 2,
+    "tried": [
+      {
+        "title": "Internationaler Museumstag in Hüfingen",
+        "city": "Hüfingen",
+        "extracted": "Hüfingen",
+        "queries": [
+          "Hüfingen, Baden-Württemberg, Germany",
+          "Hüfingen, Germany"
+        ]
+      },
+      {
+        "title": "Summer Spirit - Geschichte in Bewegung",
+        "city": "Lindau",
+        "extracted": "Bewegung",
+        "queries": [
+          "Bewegung, Bodenseekreis, Germany",
+          "Bewegung, Bodensee, Germany",
+          "Bewegung, Lindau, Baden-Württemberg, Germany",
+          "Bewegung, Baden-Württemberg, Germany",
+          "Bewegung, Germany"
+        ]
+      }
+    ]
   },
   "bodenseeRegionGeo": {
-    "checked": 1,
-    "recovered": 1
+    "checked": 2,
+    "recovered": 2
   },
   "rawEvents": [
     {
@@ -2526,12 +2557,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
       "page": 3,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.2303439,
-      "lng": 9.1621599,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Wimpfen, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Alice Armstrong beim Blues Club",
@@ -2599,12 +2625,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5695917,
-      "lng": 9.4005013,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Beuren, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Dunkelromantische Tanznacht",
@@ -2760,12 +2781,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
       "page": 4,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.9038411,
-      "lng": 8.5088293,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsbad, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "3. Liederabend – Ann-Beth Solvang",
@@ -2932,12 +2948,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.9939249,
-      "lng": 9.1122006,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Meßkirch, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Mühlacker Frühling",
@@ -2961,12 +2972,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.810102,
-      "lng": 7.5995606,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Müllheim, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Nachbarschaftsflohmarkt „Die Unterstadt räumt auf“",
@@ -3012,12 +3018,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5308586,
-      "lng": 8.078657,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Oberkirch, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "MAMMA MIA - The Ultimative ABBA Night",
@@ -3096,12 +3097,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.3789351,
-      "lng": 8.8877867,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Rangendingen, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Dorffest Willaringen",
@@ -3114,12 +3110,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.6209218,
-      "lng": 7.9788595,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Rickenbach, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Tag der Hohenhaslacher Weingüter",
@@ -3143,12 +3134,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.9654062,
-      "lng": 9.0583956,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Sachsenheim, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Taranja Wu & pADDELNoHNEkANU",
@@ -3498,11 +3484,18 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.993799,
-      "lng": 9.6684394,
+      "geoCompoundCityChecked": true,
+      "geoCompoundCityQueries": [
+        "Kürnbach, Bad Schussenried, Baden-Württemberg, Germany",
+        "Kürnbach, Baden-Württemberg, Germany",
+        "Bad Schussenried, Baden-Württemberg, Germany"
+      ],
+      "lat": 47.99208,
+      "lng": 9.6710084,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Schussenried-Kürnbach, Baden-Württemberg, Germany"
+      "geoSource": "derived-compound-city",
+      "geoQuery": "Kürnbach, Bad Schussenried, Baden-Württemberg, Germany",
+      "geoCompoundCityFound": true
     },
     {
       "title": "Großes Fest zur Erweiterung des Biosphärengebiets",
@@ -3515,12 +3508,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.4937953,
-      "lng": 9.3978845,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Urach, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Baiersbronner Bike- & Wanderhimmel-Fest",
@@ -3533,12 +3521,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5069519,
-      "lng": 8.3720124,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Rangerführung zum Buhlbachsee",
@@ -3551,12 +3534,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5069519,
-      "lng": 8.3720124,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Wein, Wandern & Genuss | WeinWanderEvent",
@@ -3569,12 +3547,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0403804,
-      "lng": 9.3137915,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Beilstein, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag im Hans-Thoma-Kunstmuseum",
@@ -3646,12 +3619,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.8401424,
-      "lng": 8.534081,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Blumberg, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag im Heimatmuseum",
@@ -3664,12 +3632,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0784228,
-      "lng": 9.067437,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Brackenheim, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag 2026",
@@ -3682,12 +3645,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.7142691,
-      "lng": 8.7397624,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Calw, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Tag des Wanderns: Auf den Spuren der DonauWelle",
@@ -3703,12 +3661,7 @@
       "geoDetailCoordinateFound": false,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "DonauWelle Donauversinkung, Donaubergland",
-      "lat": 48.1129533,
-      "lng": 8.8906795,
-      "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Donaubergland, Baden-Württemberg, Germany"
+      "geoDetailLocation": "DonauWelle Donauversinkung, Donaubergland"
     },
     {
       "title": "Kaffee und Kuchen-Fahrt im Überlinger See",
@@ -3725,11 +3678,13 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Echt Bodensee",
-      "lat": 47.6500279,
-      "lng": 9.4800858,
+      "lat": 47.65,
+      "lng": 9.35,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Friedrichshafen, Baden-Württemberg, Germany"
+      "geoSource": "derived-region-bodensee",
+      "geoQuery": "Bodensee, Baden-Württemberg, Germany",
+      "geoRegionFallback": "Bodensee",
+      "geoRegionFallbackNote": "Kein genauer Ort gefunden; Position grob auf Bodensee gesetzt."
     },
     {
       "title": "Wein & Wiese | WeinWanderEvent",
@@ -3742,12 +3697,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.1005935,
-      "lng": 9.2138586,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Flein, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag im Murgtalmuseum Bermersbach",
@@ -3760,12 +3710,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.6790385,
-      "lng": 8.3594916,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Forbach, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Traktorenfest der Kolpingsfamilie Rotzingen",
@@ -3778,12 +3723,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.6411618,
-      "lng": 8.0784862,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Görwihl, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Albtag - der Familientag",
@@ -3796,12 +3736,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/7/",
       "page": 7,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.3472808,
-      "lng": 9.3548059,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Hohenstein, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag in Hüfingen",
@@ -3815,11 +3750,14 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Hüfingen",
       "lat": 47.9269484,
       "lng": 8.4892187,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Hüfingen, Baden-Württemberg, Germany"
+      "geoSource": "derived-title",
+      "geoQuery": "Hüfingen, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Besuch bei der DS Hohentwiel und der MS Österreich",
@@ -3832,12 +3770,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.6048795,
-      "lng": 9.531927,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Immenstaad, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Tag des offenen Ateliers",
@@ -3850,12 +3783,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.714697,
-      "lng": 7.6610865,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Kandern, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "A Midsummer Night’s Dream (Premiere)",
@@ -3868,12 +3796,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "dragfruit (Nur noch wenige Male)",
@@ -3886,12 +3809,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag - Freier Eintritt",
@@ -3904,12 +3822,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Staatskapelle entspannt (Staatstheater entspannt)",
@@ -3922,12 +3835,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Wie das Kuscheln erfunden wurde",
@@ -3940,12 +3848,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Summer Spirit - Geschichte in Bewegung",
@@ -3959,11 +3862,14 @@
       "page": 7,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.7285223,
-      "lng": 8.0310869,
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Bewegung",
+      "lat": 48.7808376,
+      "lng": 9.1838281,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Lindau, Baden-Württemberg, Germany"
+      "geoSource": "derived-title",
+      "geoQuery": "Bewegung, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Oldtimertreffen",
@@ -3976,12 +3882,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.9939249,
-      "lng": 9.1122006,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Meßkirch, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Museen \"Historische Messerschmiede\" und \"Rechenmacherhaus\" geöffnet",
@@ -3994,12 +3895,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.4069119,
-      "lng": 9.0602912,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Mössingen, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Chorprojekt Klingende Kirche 2026",
@@ -4070,11 +3966,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Neckargemünd, Naturpark Neckartal-Odenwald",
-      "lat": 49.3954054,
-      "lng": 8.7965893,
+      "lat": 49.4594806,
+      "lng": 9.1433285,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Neckargemünd, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Naturpark Neckartal-Odenwald, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag: Ganz die alte Schule!?",
@@ -4371,7 +4267,7 @@
       "lat": 47.7664456,
       "lng": 9.1605106,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
+      "geoSource": "derived",
       "geoQuery": "Überlingen am Bodensee, Baden-Württemberg, Germany"
     },
     {
@@ -39398,12 +39294,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
       "page": 3,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.2303439,
-      "lng": 9.1621599,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Wimpfen, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Schäfertage mit Schäfermarkt",
@@ -39416,12 +39307,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5695917,
-      "lng": 9.4005013,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Beuren, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "16. Karlsbader Rhododendrontage",
@@ -39434,12 +39320,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
       "page": 4,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.9038411,
-      "lng": 8.5088293,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsbad, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "\"Tolle Wolle\" auf Campus Galli",
@@ -39452,12 +39333,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.9939249,
-      "lng": 9.1122006,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Meßkirch, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "MARKGRÄFLER WEINPROMENADE",
@@ -39470,12 +39346,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.810102,
-      "lng": 7.5995606,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Müllheim, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Heimattage 2026: Baden-Württemberg-Tag",
@@ -39488,12 +39359,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5308586,
-      "lng": 8.078657,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Oberkirch, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Jubiläumsparty - Schützenverein Rangendingen",
@@ -39506,12 +39372,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.3789351,
-      "lng": 8.8877867,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Rangendingen, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Dorffest Willaringen",
@@ -39524,12 +39385,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.6209218,
-      "lng": 7.9788595,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Rickenbach, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Tag der Weingüter",
@@ -39542,12 +39398,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.9654062,
-      "lng": 9.0583956,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Sachsenheim, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Elton John Tribute Dinner Konzert - The Musical Sound of Elton John",
@@ -39710,11 +39561,18 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.993799,
-      "lng": 9.6684394,
+      "geoCompoundCityChecked": true,
+      "geoCompoundCityQueries": [
+        "Kürnbach, Bad Schussenried, Baden-Württemberg, Germany",
+        "Kürnbach, Baden-Württemberg, Germany",
+        "Bad Schussenried, Baden-Württemberg, Germany"
+      ],
+      "lat": 47.99208,
+      "lng": 9.6710084,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Schussenried-Kürnbach, Baden-Württemberg, Germany"
+      "geoSource": "derived-compound-city",
+      "geoQuery": "Kürnbach, Bad Schussenried, Baden-Württemberg, Germany",
+      "geoCompoundCityFound": true
     },
     {
       "title": "Großes Fest zur Erweiterung des Biosphärengebiets",
@@ -39727,12 +39585,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.4937953,
-      "lng": 9.3978845,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Urach, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Baiersbronner Bike- & Wanderhimmel-Fest",
@@ -39745,12 +39598,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5069519,
-      "lng": 8.3720124,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Rangerführung zum Buhlbachsee",
@@ -39763,12 +39611,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5069519,
-      "lng": 8.3720124,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Wein, Wandern & Genuss | WeinWanderEvent",
@@ -39781,12 +39624,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0403804,
-      "lng": 9.3137915,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Beilstein, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag im Hans-Thoma-Kunstmuseum",
@@ -39858,12 +39696,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.8401424,
-      "lng": 8.534081,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Blumberg, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag im Heimatmuseum",
@@ -39876,12 +39709,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0784228,
-      "lng": 9.067437,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Brackenheim, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag 2026",
@@ -39894,12 +39722,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.7142691,
-      "lng": 8.7397624,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Calw, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Tag des Wanderns: Auf den Spuren der DonauWelle",
@@ -39915,12 +39738,7 @@
       "geoDetailCoordinateFound": false,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "DonauWelle Donauversinkung, Donaubergland",
-      "lat": 48.1129533,
-      "lng": 8.8906795,
-      "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Donaubergland, Baden-Württemberg, Germany"
+      "geoDetailLocation": "DonauWelle Donauversinkung, Donaubergland"
     },
     {
       "title": "Kaffee und Kuchen-Fahrt im Überlinger See",
@@ -39937,11 +39755,13 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Echt Bodensee",
-      "lat": 47.6500279,
-      "lng": 9.4800858,
+      "lat": 47.65,
+      "lng": 9.35,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Friedrichshafen, Baden-Württemberg, Germany"
+      "geoSource": "derived-region-bodensee",
+      "geoQuery": "Bodensee, Baden-Württemberg, Germany",
+      "geoRegionFallback": "Bodensee",
+      "geoRegionFallbackNote": "Kein genauer Ort gefunden; Position grob auf Bodensee gesetzt."
     },
     {
       "title": "Wein & Wiese | WeinWanderEvent",
@@ -39954,12 +39774,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.1005935,
-      "lng": 9.2138586,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Flein, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag im Murgtalmuseum Bermersbach",
@@ -39972,12 +39787,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.6790385,
-      "lng": 8.3594916,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Forbach, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Traktorenfest der Kolpingsfamilie Rotzingen",
@@ -39990,12 +39800,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.6411618,
-      "lng": 8.0784862,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Görwihl, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Albtag - der Familientag",
@@ -40008,12 +39813,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/7/",
       "page": 7,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.3472808,
-      "lng": 9.3548059,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Hohenstein, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag in Hüfingen",
@@ -40027,11 +39827,14 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Hüfingen",
       "lat": 47.9269484,
       "lng": 8.4892187,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Hüfingen, Baden-Württemberg, Germany"
+      "geoSource": "derived-title",
+      "geoQuery": "Hüfingen, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Besuch bei der DS Hohentwiel und der MS Österreich",
@@ -40044,12 +39847,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.6048795,
-      "lng": 9.531927,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Immenstaad, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Tag des offenen Ateliers",
@@ -40062,12 +39860,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.714697,
-      "lng": 7.6610865,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Kandern, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "A Midsummer Night’s Dream (Premiere)",
@@ -40080,12 +39873,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "dragfruit (Nur noch wenige Male)",
@@ -40098,12 +39886,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag - Freier Eintritt",
@@ -40116,12 +39899,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Staatskapelle entspannt (Staatstheater entspannt)",
@@ -40134,12 +39912,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Wie das Kuscheln erfunden wurde",
@@ -40152,12 +39925,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Summer Spirit - Geschichte in Bewegung",
@@ -40171,11 +39939,14 @@
       "page": 7,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.7285223,
-      "lng": 8.0310869,
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Bewegung",
+      "lat": 48.7808376,
+      "lng": 9.1838281,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Lindau, Baden-Württemberg, Germany"
+      "geoSource": "derived-title",
+      "geoQuery": "Bewegung, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Oldtimertreffen",
@@ -40188,12 +39959,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.9939249,
-      "lng": 9.1122006,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Meßkirch, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Museen \"Historische Messerschmiede\" und \"Rechenmacherhaus\" geöffnet",
@@ -40206,12 +39972,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.4069119,
-      "lng": 9.0602912,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Mössingen, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Chorprojekt Klingende Kirche 2026",
@@ -40282,11 +40043,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Neckargemünd, Naturpark Neckartal-Odenwald",
-      "lat": 49.3954054,
-      "lng": 8.7965893,
+      "lat": 49.4594806,
+      "lng": 9.1433285,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Neckargemünd, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Naturpark Neckartal-Odenwald, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag: Ganz die alte Schule!?",
@@ -40583,7 +40344,7 @@
       "lat": 47.7664456,
       "lng": 9.1605106,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
+      "geoSource": "derived",
       "geoQuery": "Überlingen am Bodensee, Baden-Württemberg, Germany"
     },
     {
@@ -40707,12 +40468,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
       "page": 3,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.2303439,
-      "lng": 9.1621599,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Wimpfen, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Schäfertage mit Schäfermarkt",
@@ -40725,12 +40481,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5695917,
-      "lng": 9.4005013,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Beuren, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "16. Karlsbader Rhododendrontage",
@@ -40743,12 +40494,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
       "page": 4,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.9038411,
-      "lng": 8.5088293,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsbad, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "\"Tolle Wolle\" auf Campus Galli",
@@ -40761,12 +40507,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.9939249,
-      "lng": 9.1122006,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Meßkirch, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "MARKGRÄFLER WEINPROMENADE",
@@ -40779,12 +40520,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.810102,
-      "lng": 7.5995606,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Müllheim, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Heimattage 2026: Baden-Württemberg-Tag",
@@ -40797,12 +40533,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5308586,
-      "lng": 8.078657,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Oberkirch, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Jubiläumsparty - Schützenverein Rangendingen",
@@ -40815,12 +40546,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.3789351,
-      "lng": 8.8877867,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Rangendingen, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Dorffest Willaringen",
@@ -40833,12 +40559,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.6209218,
-      "lng": 7.9788595,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Rickenbach, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Tag der Weingüter",
@@ -40851,12 +40572,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.9654062,
-      "lng": 9.0583956,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Sachsenheim, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Elton John Tribute Dinner Konzert - The Musical Sound of Elton John",
@@ -41019,11 +40735,18 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.993799,
-      "lng": 9.6684394,
+      "geoCompoundCityChecked": true,
+      "geoCompoundCityQueries": [
+        "Kürnbach, Bad Schussenried, Baden-Württemberg, Germany",
+        "Kürnbach, Baden-Württemberg, Germany",
+        "Bad Schussenried, Baden-Württemberg, Germany"
+      ],
+      "lat": 47.99208,
+      "lng": 9.6710084,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Schussenried-Kürnbach, Baden-Württemberg, Germany"
+      "geoSource": "derived-compound-city",
+      "geoQuery": "Kürnbach, Bad Schussenried, Baden-Württemberg, Germany",
+      "geoCompoundCityFound": true
     },
     {
       "title": "Großes Fest zur Erweiterung des Biosphärengebiets",
@@ -41036,12 +40759,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.4937953,
-      "lng": 9.3978845,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Urach, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Baiersbronner Bike- & Wanderhimmel-Fest",
@@ -41054,12 +40772,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5069519,
-      "lng": 8.3720124,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Rangerführung zum Buhlbachsee",
@@ -41072,12 +40785,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5069519,
-      "lng": 8.3720124,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Wein, Wandern & Genuss | WeinWanderEvent",
@@ -41090,12 +40798,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0403804,
-      "lng": 9.3137915,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Beilstein, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag im Hans-Thoma-Kunstmuseum",
@@ -41167,12 +40870,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.8401424,
-      "lng": 8.534081,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Blumberg, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag im Heimatmuseum",
@@ -41185,12 +40883,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0784228,
-      "lng": 9.067437,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Brackenheim, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag 2026",
@@ -41203,12 +40896,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.7142691,
-      "lng": 8.7397624,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Calw, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Tag des Wanderns: Auf den Spuren der DonauWelle",
@@ -41224,12 +40912,7 @@
       "geoDetailCoordinateFound": false,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "DonauWelle Donauversinkung, Donaubergland",
-      "lat": 48.1129533,
-      "lng": 8.8906795,
-      "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Donaubergland, Baden-Württemberg, Germany"
+      "geoDetailLocation": "DonauWelle Donauversinkung, Donaubergland"
     },
     {
       "title": "Kaffee und Kuchen-Fahrt im Überlinger See",
@@ -41246,11 +40929,13 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Echt Bodensee",
-      "lat": 47.6500279,
-      "lng": 9.4800858,
+      "lat": 47.65,
+      "lng": 9.35,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Friedrichshafen, Baden-Württemberg, Germany"
+      "geoSource": "derived-region-bodensee",
+      "geoQuery": "Bodensee, Baden-Württemberg, Germany",
+      "geoRegionFallback": "Bodensee",
+      "geoRegionFallbackNote": "Kein genauer Ort gefunden; Position grob auf Bodensee gesetzt."
     },
     {
       "title": "Wein & Wiese | WeinWanderEvent",
@@ -41263,12 +40948,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.1005935,
-      "lng": 9.2138586,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Flein, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag im Murgtalmuseum Bermersbach",
@@ -41281,12 +40961,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.6790385,
-      "lng": 8.3594916,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Forbach, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Traktorenfest der Kolpingsfamilie Rotzingen",
@@ -41299,12 +40974,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.6411618,
-      "lng": 8.0784862,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Görwihl, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Albtag - der Familientag",
@@ -41317,12 +40987,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/7/",
       "page": 7,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.3472808,
-      "lng": 9.3548059,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Hohenstein, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag in Hüfingen",
@@ -41336,11 +41001,14 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Hüfingen",
       "lat": 47.9269484,
       "lng": 8.4892187,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Hüfingen, Baden-Württemberg, Germany"
+      "geoSource": "derived-title",
+      "geoQuery": "Hüfingen, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Besuch bei der DS Hohentwiel und der MS Österreich",
@@ -41353,12 +41021,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.6048795,
-      "lng": 9.531927,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Immenstaad, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Tag des offenen Ateliers",
@@ -41371,12 +41034,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.714697,
-      "lng": 7.6610865,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Kandern, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "A Midsummer Night’s Dream (Premiere)",
@@ -41389,12 +41047,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "dragfruit (Nur noch wenige Male)",
@@ -41407,12 +41060,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag - Freier Eintritt",
@@ -41425,12 +41073,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Staatskapelle entspannt (Staatstheater entspannt)",
@@ -41443,12 +41086,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Wie das Kuscheln erfunden wurde",
@@ -41461,12 +41099,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Summer Spirit - Geschichte in Bewegung",
@@ -41480,11 +41113,14 @@
       "page": 7,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.7285223,
-      "lng": 8.0310869,
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Bewegung",
+      "lat": 48.7808376,
+      "lng": 9.1838281,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Lindau, Baden-Württemberg, Germany"
+      "geoSource": "derived-title",
+      "geoQuery": "Bewegung, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Oldtimertreffen",
@@ -41497,12 +41133,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.9939249,
-      "lng": 9.1122006,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Meßkirch, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Museen \"Historische Messerschmiede\" und \"Rechenmacherhaus\" geöffnet",
@@ -41515,12 +41146,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.4069119,
-      "lng": 9.0602912,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Mössingen, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Chorprojekt Klingende Kirche 2026",
@@ -41591,11 +41217,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Neckargemünd, Naturpark Neckartal-Odenwald",
-      "lat": 49.3954054,
-      "lng": 8.7965893,
+      "lat": 49.4594806,
+      "lng": 9.1433285,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Neckargemünd, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Naturpark Neckartal-Odenwald, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag: Ganz die alte Schule!?",
@@ -41892,7 +41518,7 @@
       "lat": 47.7664456,
       "lng": 9.1605106,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
+      "geoSource": "derived",
       "geoQuery": "Überlingen am Bodensee, Baden-Württemberg, Germany"
     },
     {
@@ -42016,12 +41642,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
       "page": 3,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.2303439,
-      "lng": 9.1621599,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Wimpfen, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "16. Karlsbader Rhododendrontage",
@@ -42034,12 +41655,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
       "page": 4,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.9038411,
-      "lng": 8.5088293,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsbad, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "\"Tolle Wolle\" auf Campus Galli",
@@ -42052,12 +41668,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.9939249,
-      "lng": 9.1122006,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Meßkirch, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "MARKGRÄFLER WEINPROMENADE",
@@ -42070,12 +41681,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.810102,
-      "lng": 7.5995606,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Müllheim, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Heimattage 2026: Baden-Württemberg-Tag",
@@ -42088,12 +41694,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5308586,
-      "lng": 8.078657,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Oberkirch, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Jubiläumsparty - Schützenverein Rangendingen",
@@ -42106,12 +41707,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.3789351,
-      "lng": 8.8877867,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Rangendingen, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Dorffest Willaringen",
@@ -42124,12 +41720,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.6209218,
-      "lng": 7.9788595,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Rickenbach, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Tag der Weingüter",
@@ -42142,12 +41733,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.9654062,
-      "lng": 9.0583956,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Sachsenheim, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Elton John Tribute Dinner Konzert - The Musical Sound of Elton John",
@@ -42310,11 +41896,18 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.993799,
-      "lng": 9.6684394,
+      "geoCompoundCityChecked": true,
+      "geoCompoundCityQueries": [
+        "Kürnbach, Bad Schussenried, Baden-Württemberg, Germany",
+        "Kürnbach, Baden-Württemberg, Germany",
+        "Bad Schussenried, Baden-Württemberg, Germany"
+      ],
+      "lat": 47.99208,
+      "lng": 9.6710084,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Schussenried-Kürnbach, Baden-Württemberg, Germany"
+      "geoSource": "derived-compound-city",
+      "geoQuery": "Kürnbach, Bad Schussenried, Baden-Württemberg, Germany",
+      "geoCompoundCityFound": true
     },
     {
       "title": "Baiersbronner Bike- & Wanderhimmel-Fest",
@@ -42327,12 +41920,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5069519,
-      "lng": 8.3720124,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Rangerführung zum Buhlbachsee",
@@ -42345,12 +41933,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5069519,
-      "lng": 8.3720124,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Wein, Wandern & Genuss | WeinWanderEvent",
@@ -42363,12 +41946,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0403804,
-      "lng": 9.3137915,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Beilstein, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag im Hans-Thoma-Kunstmuseum",
@@ -42423,12 +42001,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.8401424,
-      "lng": 8.534081,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Blumberg, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag im Heimatmuseum",
@@ -42441,12 +42014,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0784228,
-      "lng": 9.067437,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Brackenheim, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag 2026",
@@ -42459,12 +42027,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.7142691,
-      "lng": 8.7397624,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Calw, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Tag des Wanderns: Auf den Spuren der DonauWelle",
@@ -42480,12 +42043,7 @@
       "geoDetailCoordinateFound": false,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "DonauWelle Donauversinkung, Donaubergland",
-      "lat": 48.1129533,
-      "lng": 8.8906795,
-      "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Donaubergland, Baden-Württemberg, Germany"
+      "geoDetailLocation": "DonauWelle Donauversinkung, Donaubergland"
     },
     {
       "title": "Kaffee und Kuchen-Fahrt im Überlinger See",
@@ -42502,11 +42060,13 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Echt Bodensee",
-      "lat": 47.6500279,
-      "lng": 9.4800858,
+      "lat": 47.65,
+      "lng": 9.35,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Friedrichshafen, Baden-Württemberg, Germany"
+      "geoSource": "derived-region-bodensee",
+      "geoQuery": "Bodensee, Baden-Württemberg, Germany",
+      "geoRegionFallback": "Bodensee",
+      "geoRegionFallbackNote": "Kein genauer Ort gefunden; Position grob auf Bodensee gesetzt."
     },
     {
       "title": "Wein & Wiese | WeinWanderEvent",
@@ -42519,12 +42079,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.1005935,
-      "lng": 9.2138586,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Flein, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag im Murgtalmuseum Bermersbach",
@@ -42537,12 +42092,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.6790385,
-      "lng": 8.3594916,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Forbach, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Traktorenfest der Kolpingsfamilie Rotzingen",
@@ -42555,12 +42105,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.6411618,
-      "lng": 8.0784862,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Görwihl, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Albtag - der Familientag",
@@ -42573,12 +42118,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/7/",
       "page": 7,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.3472808,
-      "lng": 9.3548059,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Hohenstein, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag in Hüfingen",
@@ -42592,11 +42132,14 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Hüfingen",
       "lat": 47.9269484,
       "lng": 8.4892187,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Hüfingen, Baden-Württemberg, Germany"
+      "geoSource": "derived-title",
+      "geoQuery": "Hüfingen, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Besuch bei der DS Hohentwiel und der MS Österreich",
@@ -42609,12 +42152,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.6048795,
-      "lng": 9.531927,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Immenstaad, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Tag des offenen Ateliers",
@@ -42627,12 +42165,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.714697,
-      "lng": 7.6610865,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Kandern, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "A Midsummer Night’s Dream (Premiere)",
@@ -42645,12 +42178,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "dragfruit (Nur noch wenige Male)",
@@ -42663,12 +42191,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Internationaler Museumstag - Freier Eintritt",
@@ -42681,12 +42204,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Staatskapelle entspannt (Staatstheater entspannt)",
@@ -42699,12 +42217,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Wie das Kuscheln erfunden wurde",
@@ -42717,12 +42230,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Summer Spirit - Geschichte in Bewegung",
@@ -42736,11 +42244,14 @@
       "page": 7,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.7285223,
-      "lng": 8.0310869,
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Bewegung",
+      "lat": 48.7808376,
+      "lng": 9.1838281,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Lindau, Baden-Württemberg, Germany"
+      "geoSource": "derived-title",
+      "geoQuery": "Bewegung, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Oldtimertreffen",
@@ -42753,12 +42264,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.9939249,
-      "lng": 9.1122006,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Meßkirch, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Chorprojekt Klingende Kirche 2026",
@@ -42811,11 +42317,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Neckargemünd, Naturpark Neckartal-Odenwald",
-      "lat": 49.3954054,
-      "lng": 8.7965893,
+      "lat": 49.4594806,
+      "lng": 9.1433285,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Neckargemünd, Baden-Württemberg, Germany"
+      "geoSource": "derived",
+      "geoQuery": "Naturpark Neckartal-Odenwald, Baden-Württemberg, Germany"
     },
     {
       "title": "Internationaler Museumstag: Ganz die alte Schule!?",
@@ -43094,7 +42600,7 @@
       "lat": 47.7664456,
       "lng": 9.1605106,
       "geoEstimated": true,
-      "geoSource": "derived-detail",
+      "geoSource": "derived",
       "geoQuery": "Überlingen am Bodensee, Baden-Württemberg, Germany"
     },
     {
