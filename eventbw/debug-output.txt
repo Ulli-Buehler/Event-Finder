@@ -14,39 +14,39 @@ Zieldatum: 2026-05-17
 
 Counts:
 {
-  "pages": 239,
-  "rawCollectedIncludingDuplicates": 3310,
-  "rawUnique": 3310,
-  "targetDateMatches": 75,
-  "targetDateWithGeo": 75,
+  "pages": 236,
+  "rawCollectedIncludingDuplicates": 3266,
+  "rawUnique": 3252,
+  "targetDateMatches": 61,
+  "targetDateWithGeo": 61,
   "targetDateWithoutGeo": 0,
-  "targetDateGeoEstimated": 75,
-  "targetDateGeoEstimatedFromCity": 60,
+  "targetDateGeoEstimated": 61,
+  "targetDateGeoEstimatedFromCity": 47,
   "targetDateGeoManualLocality": 1,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 12,
   "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
-  "targetDateGeoEstimatedFromBodenseeRegion": 1,
-  "targetDateDetailCoordinateGeoChecked": 74,
+  "targetDateGeoEstimatedFromBodenseeRegion": 0,
+  "targetDateDetailCoordinateGeoChecked": 60,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
-  "targetDateDetailGoogleMapsQueries": 13,
-  "targetDateDetailGeoChecked": 13,
+  "targetDateDetailGoogleMapsQueries": 12,
+  "targetDateDetailGeoChecked": 12,
   "targetDateDetailGeoRecovered": 12,
   "targetDateCompoundCityGeoChecked": 1,
   "targetDateCompoundCityGeoRecovered": 1,
   "targetDateTitleGeoChecked": 0,
   "targetDateTitleGeoRecovered": 0,
-  "targetDateBodenseeRegionGeoChecked": 1,
-  "targetDateBodenseeRegionGeoRecovered": 1,
-  "nonRegionalTargetDateMatches": 69,
-  "rawMaerkte": 138,
-  "rawFeste": 3172,
+  "targetDateBodenseeRegionGeoChecked": 0,
+  "targetDateBodenseeRegionGeoRecovered": 0,
+  "nonRegionalTargetDateMatches": 57,
+  "rawMaerkte": 137,
+  "rawFeste": 3115,
   "targetDateMaerkte": 1,
-  "targetDateFeste": 74,
+  "targetDateFeste": 60,
   "targetDateWithGeoMaerkte": 1,
-  "targetDateWithGeoFeste": 74,
+  "targetDateWithGeoFeste": 60,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 0
 }
@@ -142,14 +142,10 @@ Ortsstatistik vor Ortsfilter:
 [
   {
     "city": "unbekannt",
-    "count": 7
-  },
-  {
-    "city": "Karlsruhe",
     "count": 6
   },
   {
-    "city": "Baiersbronn",
+    "city": "Karlsruhe",
     "count": 3
   },
   {
@@ -157,8 +153,8 @@ Ortsstatistik vor Ortsfilter:
     "count": 3
   },
   {
-    "city": "Sigmaringen",
-    "count": 3
+    "city": "Baiersbronn",
+    "count": 2
   },
   {
     "city": "Bernau im Schwarzwald",
@@ -173,12 +169,12 @@ Ortsstatistik vor Ortsfilter:
     "count": 2
   },
   {
-    "city": "Tettnang",
+    "city": "Sigmaringen",
     "count": 2
   },
   {
-    "city": "Bad Säckingen",
-    "count": 1
+    "city": "Tettnang",
+    "count": 2
   },
   {
     "city": "Bad Schussenried-Kürnbach",
@@ -225,19 +221,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Forbach",
-    "count": 1
-  },
-  {
     "city": "Görwihl",
     "count": 1
   },
   {
     "city": "Hausach",
-    "count": 1
-  },
-  {
-    "city": "Hessigheim",
     "count": 1
   },
   {
@@ -265,10 +253,6 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Mössingen",
-    "count": 1
-  },
-  {
     "city": "Münsingen",
     "count": 1
   },
@@ -278,10 +262,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Neuhausen ob Eck",
-    "count": 1
-  },
-  {
-    "city": "Oberkirch",
     "count": 1
   },
   {
@@ -302,10 +282,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Rangendingen",
-    "count": 1
-  },
-  {
-    "city": "Rickenbach",
     "count": 1
   },
   {
@@ -341,15 +317,7 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Waldkirch",
-    "count": 1
-  },
-  {
     "city": "Weingarten",
-    "count": 1
-  },
-  {
-    "city": "Weinstadt",
     "count": 1
   },
   {
@@ -365,7 +333,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
     "ok": true,
-    "reportedCount": 138,
+    "reportedCount": 137,
     "parsedCount": 14
   },
   {
@@ -438,7 +406,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/10/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 12
+    "parsedCount": 11
   },
   {
     "category": "maerkte",
@@ -2237,36 +2205,12 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/224/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 14
+    "parsedCount": 7
   },
   {
     "category": "feste",
     "page": 225,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/225/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 226,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/226/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 227,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/227/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 8
-  },
-  {
-    "category": "feste",
-    "page": 228,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/228/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
