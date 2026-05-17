@@ -17,36 +17,36 @@ Counts:
   "pages": 234,
   "rawCollectedIncludingDuplicates": 3232,
   "rawUnique": 3232,
-  "targetDateMatches": 49,
-  "targetDateWithGeo": 49,
+  "targetDateMatches": 61,
+  "targetDateWithGeo": 61,
   "targetDateWithoutGeo": 0,
-  "targetDateGeoEstimated": 49,
-  "targetDateGeoEstimatedFromCity": 36,
+  "targetDateGeoEstimated": 61,
+  "targetDateGeoEstimatedFromCity": 46,
   "targetDateGeoManualLocality": 1,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
-  "targetDateGeoEstimatedFromDetail": 10,
+  "targetDateGeoEstimatedFromDetail": 12,
   "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 1,
-  "targetDateDetailCoordinateGeoChecked": 48,
+  "targetDateDetailCoordinateGeoChecked": 60,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
-  "targetDateDetailGoogleMapsQueries": 11,
-  "targetDateDetailGeoChecked": 11,
-  "targetDateDetailGeoRecovered": 10,
+  "targetDateDetailGoogleMapsQueries": 13,
+  "targetDateDetailGeoChecked": 13,
+  "targetDateDetailGeoRecovered": 12,
   "targetDateCompoundCityGeoChecked": 1,
   "targetDateCompoundCityGeoRecovered": 1,
   "targetDateTitleGeoChecked": 0,
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 1,
   "targetDateBodenseeRegionGeoRecovered": 1,
-  "nonRegionalTargetDateMatches": 44,
+  "nonRegionalTargetDateMatches": 55,
   "rawMaerkte": 136,
   "rawFeste": 3096,
   "targetDateMaerkte": 1,
-  "targetDateFeste": 48,
+  "targetDateFeste": 60,
   "targetDateWithGeoMaerkte": 1,
-  "targetDateWithGeoFeste": 48,
+  "targetDateWithGeoFeste": 60,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 0
 }
@@ -149,11 +149,23 @@ Ortsstatistik vor Ortsfilter:
     "count": 5
   },
   {
+    "city": "Baiersbronn",
+    "count": 2
+  },
+  {
     "city": "Bernau im Schwarzwald",
     "count": 2
   },
   {
+    "city": "Müllheim",
+    "count": 2
+  },
+  {
     "city": "Sigmaringen",
+    "count": 2
+  },
+  {
+    "city": "Tettnang",
     "count": 2
   },
   {
@@ -189,6 +201,10 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Echt Bodensee",
+    "count": 1
+  },
+  {
     "city": "Flein",
     "count": 1
   },
@@ -213,15 +229,23 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Immenstaad",
+    "count": 1
+  },
+  {
     "city": "Kandern",
     "count": 1
   },
   {
-    "city": "Mössingen",
+    "city": "Lindau",
     "count": 1
   },
   {
-    "city": "Müllheim",
+    "city": "Meßkirch",
+    "count": 1
+  },
+  {
+    "city": "Mössingen",
     "count": 1
   },
   {
@@ -233,7 +257,7 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Oberkirch",
+    "city": "Neuhausen ob Eck",
     "count": 1
   },
   {
@@ -241,11 +265,15 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Pfullendorf",
+    "city": "Öhringen",
     "count": 1
   },
   {
-    "city": "Rickenbach",
+    "city": "Öhringen-Cappel",
+    "count": 1
+  },
+  {
+    "city": "Pfullendorf",
     "count": 1
   },
   {
@@ -269,7 +297,15 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Tettnang",
+    "city": "Tübingen",
+    "count": 1
+  },
+  {
+    "city": "Überlingen am Bodensee",
+    "count": 1
+  },
+  {
+    "city": "Vogtsbauernhof",
     "count": 1
   },
   {
@@ -297,7 +333,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
     "ok": true,
-    "reportedCount": 138,
+    "reportedCount": 136,
     "parsedCount": 14
   },
   {
@@ -384,7 +420,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 3170,
+    "reportedCount": 3096,
     "parsedCount": 14
   },
   {
