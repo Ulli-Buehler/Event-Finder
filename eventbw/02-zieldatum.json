@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-17T02:00:28.615Z",
-    "finishedAt": "2026-05-17T02:04:08.427Z",
+    "startedAt": "2026-05-17T03:00:29.643Z",
+    "finishedAt": "2026-05-17T03:04:39.941Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 234,
-      "rawCollectedIncludingDuplicates": 3232,
-      "rawUnique": 3232,
+      "rawCollectedIncludingDuplicates": 3234,
+      "rawUnique": 3234,
       "targetDateMatches": 61,
       "targetDateWithGeo": 61,
       "targetDateWithoutGeo": 0,
@@ -120,8 +120,8 @@
       "targetDateBodenseeRegionGeoChecked": 1,
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 55,
-      "rawMaerkte": 136,
-      "rawFeste": 3096,
+      "rawMaerkte": 137,
+      "rawFeste": 3097,
       "targetDateMaerkte": 1,
       "targetDateFeste": 60,
       "targetDateWithGeoMaerkte": 1,
@@ -1087,8 +1087,8 @@
       "page": 4,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.1047,
-      "lng": 8.85583,
+      "lat": 49.1060275,
+      "lng": 8.8597086,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Sulzfeld, Baden-Württemberg, Germany"

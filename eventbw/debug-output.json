@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-17T02:00:28.615Z",
-    "finishedAt": "2026-05-17T02:04:08.427Z",
+    "startedAt": "2026-05-17T03:00:29.643Z",
+    "finishedAt": "2026-05-17T03:04:39.941Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 234,
-      "rawCollectedIncludingDuplicates": 3232,
-      "rawUnique": 3232,
+      "rawCollectedIncludingDuplicates": 3234,
+      "rawUnique": 3234,
       "targetDateMatches": 61,
       "targetDateWithGeo": 61,
       "targetDateWithoutGeo": 0,
@@ -120,8 +120,8 @@
       "targetDateBodenseeRegionGeoChecked": 1,
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 55,
-      "rawMaerkte": 136,
-      "rawFeste": 3096,
+      "rawMaerkte": 137,
+      "rawFeste": 3097,
       "targetDateMaerkte": 1,
       "targetDateFeste": 60,
       "targetDateWithGeoMaerkte": 1,
@@ -136,7 +136,7 @@
       "page": 1,
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "ok": true,
-      "reportedCount": 136,
+      "reportedCount": 137,
       "parsedCount": 14
     },
     {
@@ -209,7 +209,7 @@
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/10/",
       "ok": true,
       "reportedCount": null,
-      "parsedCount": 10
+      "parsedCount": 11
     },
     {
       "category": "maerkte",
@@ -223,7 +223,7 @@
       "page": 1,
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "ok": true,
-      "reportedCount": 3096,
+      "reportedCount": 3097,
       "parsedCount": 14
     },
     {
@@ -1992,7 +1992,7 @@
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/222/",
       "ok": true,
       "reportedCount": null,
-      "parsedCount": 2
+      "parsedCount": 3
     },
     {
       "category": "feste",
@@ -2196,7 +2196,7 @@
     "saved": true,
     "htmlPath": "eventbw/debug-gutenbergs-geopoints.html",
     "txtPath": "eventbw/debug-gutenbergs-geopoints.txt",
-    "htmlBytes": 79813,
+    "htmlBytes": 79764,
     "hintCount": 38
   },
   "manualGeo": {
@@ -3348,8 +3348,8 @@
       "page": 4,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.1047,
-      "lng": 8.85583,
+      "lat": 49.1060275,
+      "lng": 8.8597086,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Sulzfeld, Baden-Württemberg, Germany"
@@ -36751,6 +36751,17 @@
       "page": 221
     },
     {
+      "title": "Bruckenwasenfest",
+      "category": "feste",
+      "city": "Plochingen",
+      "startDate": "2027-05-22",
+      "endDate": "2027-05-22",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bruckenwasenfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/221/",
+      "page": 221
+    },
+    {
       "title": "Bernhard Hoëcker",
       "category": "feste",
       "city": "Radolfzell am Bodensee",
@@ -36890,8 +36901,8 @@
       "endDate": "2028-05-28",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/100-jahre-musikverein-aufen-bezirksmusikfest/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/221/",
-      "page": 221
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/222/",
+      "page": 222
     },
     {
       "title": "Vatertagsfest der Hako-Freunde Weiher auf dem Vereinsgelände der Hako-Freunde",
@@ -38417,6 +38428,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/maimarkt-3/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/10/",
       "page": 10
+    },
+    {
+      "title": "Flohmarkt",
+      "category": "maerkte",
+      "city": "Ravensburg",
+      "startDate": "2027-05-22",
+      "endDate": "2027-05-22",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/flohmarkt-16/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/10/",
+      "page": 10
     }
   ],
   "targetDateEvents": [
@@ -39376,8 +39398,8 @@
       "page": 4,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.1047,
-      "lng": 8.85583,
+      "lat": 49.1060275,
+      "lng": 8.8597086,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Sulzfeld, Baden-Württemberg, Germany"
@@ -40523,8 +40545,8 @@
       "page": 4,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.1047,
-      "lng": 8.85583,
+      "lat": 49.1060275,
+      "lng": 8.8597086,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Sulzfeld, Baden-Württemberg, Germany"
@@ -41599,8 +41621,8 @@
       "page": 4,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 49.1047,
-      "lng": 8.85583,
+      "lat": 49.1060275,
+      "lng": 8.8597086,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Sulzfeld, Baden-Württemberg, Germany"
