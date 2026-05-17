@@ -14,39 +14,39 @@ Zieldatum: 2026-05-17
 
 Counts:
 {
-  "pages": 239,
-  "rawCollectedIncludingDuplicates": 3308,
-  "rawUnique": 3308,
-  "targetDateMatches": 70,
-  "targetDateWithGeo": 70,
+  "pages": 234,
+  "rawCollectedIncludingDuplicates": 3232,
+  "rawUnique": 3232,
+  "targetDateMatches": 49,
+  "targetDateWithGeo": 49,
   "targetDateWithoutGeo": 0,
-  "targetDateGeoEstimated": 70,
-  "targetDateGeoEstimatedFromCity": 55,
+  "targetDateGeoEstimated": 49,
+  "targetDateGeoEstimatedFromCity": 36,
   "targetDateGeoManualLocality": 1,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
-  "targetDateGeoEstimatedFromDetail": 12,
+  "targetDateGeoEstimatedFromDetail": 10,
   "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 1,
-  "targetDateDetailCoordinateGeoChecked": 69,
+  "targetDateDetailCoordinateGeoChecked": 48,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
-  "targetDateDetailGoogleMapsQueries": 13,
-  "targetDateDetailGeoChecked": 13,
-  "targetDateDetailGeoRecovered": 12,
+  "targetDateDetailGoogleMapsQueries": 11,
+  "targetDateDetailGeoChecked": 11,
+  "targetDateDetailGeoRecovered": 10,
   "targetDateCompoundCityGeoChecked": 1,
   "targetDateCompoundCityGeoRecovered": 1,
   "targetDateTitleGeoChecked": 0,
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 1,
   "targetDateBodenseeRegionGeoRecovered": 1,
-  "nonRegionalTargetDateMatches": 63,
-  "rawMaerkte": 138,
-  "rawFeste": 3170,
+  "nonRegionalTargetDateMatches": 44,
+  "rawMaerkte": 136,
+  "rawFeste": 3096,
   "targetDateMaerkte": 1,
-  "targetDateFeste": 69,
+  "targetDateFeste": 48,
   "targetDateWithGeoMaerkte": 1,
-  "targetDateWithGeoFeste": 69,
+  "targetDateWithGeoFeste": 48,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 0
 }
@@ -149,27 +149,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 5
   },
   {
-    "city": "Müllheim",
-    "count": 3
-  },
-  {
-    "city": "Baiersbronn",
-    "count": 2
-  },
-  {
     "city": "Bernau im Schwarzwald",
     "count": 2
   },
   {
-    "city": "Meßkirch",
-    "count": 2
-  },
-  {
     "city": "Sigmaringen",
-    "count": 2
-  },
-  {
-    "city": "Tettnang",
     "count": 2
   },
   {
@@ -181,15 +165,7 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Bad Wimpfen",
-    "count": 1
-  },
-  {
     "city": "Beilstein",
-    "count": 1
-  },
-  {
-    "city": "Beuren",
     "count": 1
   },
   {
@@ -210,10 +186,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Donaubergland",
-    "count": 1
-  },
-  {
-    "city": "Echt Bodensee",
     "count": 1
   },
   {
@@ -241,23 +213,15 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Immenstaad",
-    "count": 1
-  },
-  {
     "city": "Kandern",
     "count": 1
   },
   {
-    "city": "Karlsbad",
-    "count": 1
-  },
-  {
-    "city": "Lindau",
-    "count": 1
-  },
-  {
     "city": "Mössingen",
+    "count": 1
+  },
+  {
+    "city": "Müllheim",
     "count": 1
   },
   {
@@ -269,10 +233,6 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Neuhausen ob Eck",
-    "count": 1
-  },
-  {
     "city": "Oberkirch",
     "count": 1
   },
@@ -281,27 +241,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Öhringen",
-    "count": 1
-  },
-  {
-    "city": "Öhringen-Cappel",
-    "count": 1
-  },
-  {
     "city": "Pfullendorf",
     "count": 1
   },
   {
-    "city": "Rangendingen",
-    "count": 1
-  },
-  {
     "city": "Rickenbach",
-    "count": 1
-  },
-  {
-    "city": "Sachsenheim",
     "count": 1
   },
   {
@@ -325,15 +269,7 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Tübingen",
-    "count": 1
-  },
-  {
-    "city": "Überlingen am Bodensee",
-    "count": 1
-  },
-  {
-    "city": "Vogtsbauernhof",
+    "city": "Tettnang",
     "count": 1
   },
   {
@@ -434,7 +370,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/10/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 12
+    "parsedCount": 10
   },
   {
     "category": "maerkte",
@@ -2217,52 +2153,12 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/222/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 14
+    "parsedCount": 2
   },
   {
     "category": "feste",
     "page": 223,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/223/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 224,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/224/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 225,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/225/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 226,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/226/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 227,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/227/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 6
-  },
-  {
-    "category": "feste",
-    "page": 228,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/228/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
