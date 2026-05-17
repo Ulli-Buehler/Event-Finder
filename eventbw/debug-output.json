@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-17",
-    "startedAt": "2026-05-17T03:00:29.643Z",
-    "finishedAt": "2026-05-17T03:04:39.941Z",
+    "startedAt": "2026-05-17T04:00:29.293Z",
+    "finishedAt": "2026-05-17T04:04:23.205Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 234,
-      "rawCollectedIncludingDuplicates": 3234,
-      "rawUnique": 3234,
+      "rawCollectedIncludingDuplicates": 3235,
+      "rawUnique": 3235,
       "targetDateMatches": 61,
       "targetDateWithGeo": 61,
       "targetDateWithoutGeo": 0,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 55,
       "rawMaerkte": 137,
-      "rawFeste": 3097,
+      "rawFeste": 3098,
       "targetDateMaerkte": 1,
       "targetDateFeste": 60,
       "targetDateWithGeoMaerkte": 1,
@@ -223,7 +223,7 @@
       "page": 1,
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "ok": true,
-      "reportedCount": 3097,
+      "reportedCount": 3098,
       "parsedCount": 14
     },
     {
@@ -1992,7 +1992,7 @@
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/222/",
       "ok": true,
       "reportedCount": null,
-      "parsedCount": 3
+      "parsedCount": 4
     },
     {
       "category": "feste",
@@ -2196,7 +2196,7 @@
     "saved": true,
     "htmlPath": "eventbw/debug-gutenbergs-geopoints.html",
     "txtPath": "eventbw/debug-gutenbergs-geopoints.txt",
-    "htmlBytes": 79764,
+    "htmlBytes": 79765,
     "hintCount": 38
   },
   "manualGeo": {
@@ -36234,6 +36234,17 @@
       "page": 217
     },
     {
+      "title": "Oliver Wnuk - Wnuk denkt laut und liest was vor",
+      "category": "feste",
+      "city": "Uhldingen-Mühlhofen",
+      "startDate": "2027-01-23",
+      "endDate": "2027-01-23",
+      "time": "20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oliver-wnuk-wnuk-denkt-laut-und-liest-was-vor/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/217/",
+      "page": 217
+    },
+    {
       "title": "Tübinger Fasnetsumzug",
       "category": "feste",
       "city": "Tübingen",
@@ -36263,8 +36274,8 @@
       "endDate": "2027-01-30",
       "time": "19:31 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/3-sitzung-der-kg-urmel/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/217/",
-      "page": 217
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/218/",
+      "page": 218
     },
     {
       "title": "Gosche Wiiber Waggis E.V. - 5 Jähriges Jubiläum",
@@ -36428,8 +36439,8 @@
       "endDate": "2027-02-26",
       "time": "19:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/viva-la-vida-a-tribute-to-coldplay-4/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/218/",
-      "page": 218
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/219/",
+      "page": 219
     },
     {
       "title": "90s Super Show - live & on stage!",
@@ -36582,8 +36593,8 @@
       "endDate": "2027-04-10",
       "time": "19:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/ipartypeople-stuttgart-disney-party-3/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/219/",
-      "page": 219
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/220/",
+      "page": 220
     },
     {
       "title": "Ballonblühen 2027",
@@ -36736,8 +36747,8 @@
       "endDate": "2027-05-08",
       "time": "09:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/20-radolfzeller-krautermarkt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/220/",
-      "page": 220
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/221/",
+      "page": 221
     },
     {
       "title": "Wine & Gin Walk",
@@ -36890,8 +36901,8 @@
       "endDate": "2027-11-19",
       "time": "19:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/comedy-mit-doris-reichenauer/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/221/",
-      "page": 221
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/222/",
+      "page": 222
     },
     {
       "title": "100 Jahre Musikverein Aufen - Bezirksmusikfest",
