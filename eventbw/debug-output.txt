@@ -14,39 +14,39 @@ Zieldatum: 2026-05-24
 
 Counts:
 {
-  "pages": 234,
-  "rawCollectedIncludingDuplicates": 3236,
-  "rawUnique": 3236,
-  "targetDateMatches": 47,
-  "targetDateWithGeo": 46,
+  "pages": 230,
+  "rawCollectedIncludingDuplicates": 3175,
+  "rawUnique": 3174,
+  "targetDateMatches": 44,
+  "targetDateWithGeo": 43,
   "targetDateWithoutGeo": 1,
-  "targetDateGeoEstimated": 46,
-  "targetDateGeoEstimatedFromCity": 42,
+  "targetDateGeoEstimated": 43,
+  "targetDateGeoEstimatedFromCity": 40,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
-  "targetDateGeoEstimatedFromDetail": 4,
+  "targetDateGeoEstimatedFromDetail": 3,
   "targetDateGeoEstimatedFromCompoundCity": 0,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 0,
-  "targetDateDetailCoordinateGeoChecked": 47,
+  "targetDateDetailCoordinateGeoChecked": 44,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
-  "targetDateDetailGoogleMapsQueries": 4,
-  "targetDateDetailGeoChecked": 4,
-  "targetDateDetailGeoRecovered": 4,
+  "targetDateDetailGoogleMapsQueries": 3,
+  "targetDateDetailGeoChecked": 3,
+  "targetDateDetailGeoRecovered": 3,
   "targetDateCompoundCityGeoChecked": 0,
   "targetDateCompoundCityGeoRecovered": 0,
   "targetDateTitleGeoChecked": 0,
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 0,
   "targetDateBodenseeRegionGeoRecovered": 0,
-  "nonRegionalTargetDateMatches": 43,
-  "rawMaerkte": 137,
-  "rawFeste": 3099,
+  "nonRegionalTargetDateMatches": 40,
+  "rawMaerkte": 135,
+  "rawFeste": 3039,
   "targetDateMaerkte": 4,
-  "targetDateFeste": 43,
+  "targetDateFeste": 40,
   "targetDateWithGeoMaerkte": 3,
-  "targetDateWithGeoFeste": 43,
+  "targetDateWithGeoFeste": 40,
   "targetDateWithoutGeoMaerkte": 1,
   "targetDateWithoutGeoFeste": 0
 }
@@ -153,10 +153,6 @@ Ortsstatistik vor Ortsfilter:
     "count": 3
   },
   {
-    "city": "Echt Bodensee",
-    "count": 2
-  },
-  {
     "city": "Löwenstein",
     "count": 2
   },
@@ -190,6 +186,10 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Distelhausen",
+    "count": 1
+  },
+  {
+    "city": "Echt Bodensee",
     "count": 1
   },
   {
@@ -249,19 +249,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Sigmaringen",
-    "count": 1
-  },
-  {
     "city": "Singen",
     "count": 1
   },
   {
     "city": "Sinsheimer Erlebnisregion",
-    "count": 1
-  },
-  {
-    "city": "Stuttgart",
     "count": 1
   },
   {
@@ -301,7 +293,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
     "ok": true,
-    "reportedCount": 137,
+    "reportedCount": 136,
     "parsedCount": 14
   },
   {
@@ -374,7 +366,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/10/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 11
+    "parsedCount": 10
   },
   {
     "category": "maerkte",
@@ -2125,44 +2117,12 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/218/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 14
+    "parsedCount": 1
   },
   {
     "category": "feste",
     "page": 219,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/219/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 220,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/220/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 221,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/221/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 222,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/222/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 5
-  },
-  {
-    "category": "feste",
-    "page": 223,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/223/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
