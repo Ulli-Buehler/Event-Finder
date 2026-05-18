@@ -15,8 +15,8 @@ Zieldatum: 2026-05-24
 Counts:
 {
   "pages": 230,
-  "rawCollectedIncludingDuplicates": 3175,
-  "rawUnique": 3175,
+  "rawCollectedIncludingDuplicates": 3176,
+  "rawUnique": 3176,
   "targetDateMatches": 43,
   "targetDateWithGeo": 42,
   "targetDateWithoutGeo": 1,
@@ -41,7 +41,7 @@ Counts:
   "targetDateBodenseeRegionGeoChecked": 0,
   "targetDateBodenseeRegionGeoRecovered": 0,
   "nonRegionalTargetDateMatches": 39,
-  "rawMaerkte": 136,
+  "rawMaerkte": 137,
   "rawFeste": 3039,
   "targetDateMaerkte": 4,
   "targetDateFeste": 39,
@@ -289,7 +289,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
     "ok": true,
-    "reportedCount": 136,
+    "reportedCount": 137,
     "parsedCount": 14
   },
   {
@@ -362,7 +362,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/10/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 10
+    "parsedCount": 11
   },
   {
     "category": "maerkte",

@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-24",
-    "startedAt": "2026-05-18T02:00:28.661Z",
-    "finishedAt": "2026-05-18T02:03:20.845Z",
+    "startedAt": "2026-05-18T03:00:30.659Z",
+    "finishedAt": "2026-05-18T03:03:38.536Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 230,
-      "rawCollectedIncludingDuplicates": 3175,
-      "rawUnique": 3175,
+      "rawCollectedIncludingDuplicates": 3176,
+      "rawUnique": 3176,
       "targetDateMatches": 43,
       "targetDateWithGeo": 42,
       "targetDateWithoutGeo": 1,
@@ -120,7 +120,7 @@
       "targetDateBodenseeRegionGeoChecked": 0,
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 39,
-      "rawMaerkte": 136,
+      "rawMaerkte": 137,
       "rawFeste": 3039,
       "targetDateMaerkte": 4,
       "targetDateFeste": 39,
@@ -136,7 +136,7 @@
       "page": 1,
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "ok": true,
-      "reportedCount": 136,
+      "reportedCount": 137,
       "parsedCount": 14
     },
     {
@@ -209,7 +209,7 @@
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/10/",
       "ok": true,
       "reportedCount": null,
-      "parsedCount": 10
+      "parsedCount": 11
     },
     {
       "category": "maerkte",
@@ -3136,8 +3136,8 @@
       "page": 4,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.3901,
-      "lng": 9.98614,
+      "lat": 48.3648439,
+      "lng": 9.9848052,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Ulm/Neu-Ulm, Baden-Württemberg, Germany"
@@ -4358,8 +4358,8 @@
       "page": 14,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.688082,
-      "lng": 9.4095761,
+      "lat": 47.6882714,
+      "lng": 9.4094634,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Friedrichshafen (Kluftern), Baden-Württemberg, Germany"
@@ -37399,6 +37399,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/flohmarkt-16/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/10/",
       "page": 10
+    },
+    {
+      "title": "Muttertagsmarkt",
+      "category": "maerkte",
+      "city": "Hausach",
+      "startDate": "2027-05-23",
+      "endDate": "2027-05-23",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/muttertagsmarkt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/10/",
+      "page": 10
     }
   ],
   "targetDateEvents": [
@@ -37507,8 +37518,8 @@
       "page": 4,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.3901,
-      "lng": 9.98614,
+      "lat": 48.3648439,
+      "lng": 9.9848052,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Ulm/Neu-Ulm, Baden-Württemberg, Germany"
@@ -37816,8 +37827,8 @@
       "page": 14,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.688082,
-      "lng": 9.4095761,
+      "lat": 47.6882714,
+      "lng": 9.4094634,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Friedrichshafen (Kluftern), Baden-Württemberg, Germany"
@@ -38284,8 +38295,8 @@
       "page": 4,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.3901,
-      "lng": 9.98614,
+      "lat": 48.3648439,
+      "lng": 9.9848052,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Ulm/Neu-Ulm, Baden-Württemberg, Germany"
@@ -38593,8 +38604,8 @@
       "page": 14,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.688082,
-      "lng": 9.4095761,
+      "lat": 47.6882714,
+      "lng": 9.4094634,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Friedrichshafen (Kluftern), Baden-Württemberg, Germany"
@@ -39061,8 +39072,8 @@
       "page": 4,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.3901,
-      "lng": 9.98614,
+      "lat": 48.3648439,
+      "lng": 9.9848052,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Ulm/Neu-Ulm, Baden-Württemberg, Germany"
@@ -39352,8 +39363,8 @@
       "page": 14,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.688082,
-      "lng": 9.4095761,
+      "lat": 47.6882714,
+      "lng": 9.4094634,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Friedrichshafen (Kluftern), Baden-Württemberg, Germany"
