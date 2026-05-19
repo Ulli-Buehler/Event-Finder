@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-24",
-    "startedAt": "2026-05-19T02:00:30.811Z",
-    "finishedAt": "2026-05-19T02:03:38.698Z",
+    "startedAt": "2026-05-19T03:00:31.864Z",
+    "finishedAt": "2026-05-19T03:03:38.444Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -93,9 +93,9 @@
       "Heroldstatt"
     ],
     "counts": {
-      "pages": 229,
-      "rawCollectedIncludingDuplicates": 3175,
-      "rawUnique": 3175,
+      "pages": 230,
+      "rawCollectedIncludingDuplicates": 3176,
+      "rawUnique": 3174,
       "targetDateMatches": 43,
       "targetDateWithGeo": 42,
       "targetDateWithoutGeo": 1,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 39,
       "rawMaerkte": 137,
-      "rawFeste": 3038,
+      "rawFeste": 3037,
       "targetDateMaerkte": 4,
       "targetDateFeste": 39,
       "targetDateWithGeoMaerkte": 3,
@@ -236,8 +236,8 @@
       "page": 4,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.3901,
-      "lng": 9.98614,
+      "lat": 48.3648439,
+      "lng": 9.9848052,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Ulm/Neu-Ulm, Baden-Württemberg, Germany"

@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-24",
-    "startedAt": "2026-05-19T02:00:30.811Z",
-    "finishedAt": "2026-05-19T02:03:38.698Z",
+    "startedAt": "2026-05-19T03:00:31.864Z",
+    "finishedAt": "2026-05-19T03:03:38.444Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -93,9 +93,9 @@
       "Heroldstatt"
     ],
     "counts": {
-      "pages": 229,
-      "rawCollectedIncludingDuplicates": 3175,
-      "rawUnique": 3175,
+      "pages": 230,
+      "rawCollectedIncludingDuplicates": 3176,
+      "rawUnique": 3174,
       "targetDateMatches": 43,
       "targetDateWithGeo": 42,
       "targetDateWithoutGeo": 1,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 39,
       "rawMaerkte": 137,
-      "rawFeste": 3038,
+      "rawFeste": 3037,
       "targetDateMaerkte": 4,
       "targetDateFeste": 39,
       "targetDateWithGeoMaerkte": 3,
@@ -223,7 +223,7 @@
       "page": 1,
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "ok": true,
-      "reportedCount": 3037,
+      "reportedCount": 3038,
       "parsedCount": 14
     },
     {
@@ -1958,6 +1958,14 @@
       "category": "feste",
       "page": 218,
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/218/",
+      "ok": true,
+      "reportedCount": null,
+      "parsedCount": 1
+    },
+    {
+      "category": "feste",
+      "page": 219,
+      "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/219/",
       "ok": false,
       "error": "HTTP 404 Not Found"
     }
@@ -3029,8 +3037,8 @@
       "page": 4,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.3901,
-      "lng": 9.98614,
+      "lat": 48.3648439,
+      "lng": 9.9848052,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Ulm/Neu-Ulm, Baden-Württemberg, Germany"
@@ -34297,8 +34305,8 @@
       "endDate": "2026-12-12",
       "time": "19:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/x-mas-party-in-illmensee/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/207/",
-      "page": 207
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/208/",
+      "page": 208
     },
     {
       "title": "WORKSHOP: Räuchern in den Raunächten",
@@ -34495,8 +34503,8 @@
       "endDate": "2026-12-17",
       "time": "19:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/das-musical-dinner/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/208/",
-      "page": 208
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/209/",
+      "page": 209
     },
     {
       "title": "Dachbodenlesung: Ben Rakidžija • Verteidigung des Mittagsschlafs",
@@ -34638,8 +34646,8 @@
       "endDate": "2026-12-19",
       "time": "20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/x-mas-party-in-wald/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/209/",
-      "page": 209
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/210/",
+      "page": 210
     },
     {
       "title": "Waldweihnacht des Schwarzwaldvereins Wolfach",
@@ -34781,8 +34789,8 @@
       "endDate": "2026-12-26",
       "time": "15:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weihnachtskonzert-des-trachtenblasorchesters/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/210/",
-      "page": 210
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/211/",
+      "page": 211
     },
     {
       "title": "Musik zur Weihnacht",
@@ -34913,8 +34921,8 @@
       "endDate": "2026-12-31",
       "time": "11:00 - 14:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/die-groste-kindersilvesterparty-in-funny-world/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/211/",
-      "page": 211
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/212/",
+      "page": 212
     },
     {
       "title": "Silvester in der schwäbischen Toskana 2026",
@@ -35089,8 +35097,8 @@
       "endDate": "2027-01-17",
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/du-ich-tubinger-hochzeitsmesse/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/212/",
-      "page": 212
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/213/",
+      "page": 213
     },
     {
       "title": "1. Sitzung der KG-Urmel",
@@ -35243,8 +35251,8 @@
       "endDate": "2027-02-06",
       "time": "12:00 - 20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/strasenfasnet/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/213/",
-      "page": 213
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/214/",
+      "page": 214
     },
     {
       "title": "Großer Fasnet-Umzug durch die Innenstadt",
@@ -35397,8 +35405,8 @@
       "endDate": "2027-03-07",
       "time": "11:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fruhlingsmarkt-mit-verkaufsoffenem-sonntag/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/214/",
-      "page": 214
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
+      "page": 215
     },
     {
       "title": "Das Musical Dinner",
@@ -35551,8 +35559,8 @@
       "endDate": "2027-04-24",
       "time": "10:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fruhjahrs-regionalmarkt-klimatag-und-fairer-markt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
-      "page": 215
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/216/",
+      "page": 216
     },
     {
       "title": "Alfons – Klasse!",
@@ -35694,17 +35702,6 @@
       "endDate": "2027-05-22",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bruckenwasenfest/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/216/",
-      "page": 216
-    },
-    {
-      "title": "Bernhard Hoëcker",
-      "category": "feste",
-      "city": "Radolfzell am Bodensee",
-      "startDate": "2027-05-26",
-      "endDate": "2027-05-26",
-      "time": "20:00 - 22:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bernhard-hoecker/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/216/",
       "page": 216
     },
@@ -37499,8 +37496,8 @@
       "page": 4,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.3901,
-      "lng": 9.98614,
+      "lat": 48.3648439,
+      "lng": 9.9848052,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Ulm/Neu-Ulm, Baden-Württemberg, Germany"
@@ -38276,8 +38273,8 @@
       "page": 4,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.3901,
-      "lng": 9.98614,
+      "lat": 48.3648439,
+      "lng": 9.9848052,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Ulm/Neu-Ulm, Baden-Württemberg, Germany"
@@ -39053,8 +39050,8 @@
       "page": 4,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.3901,
-      "lng": 9.98614,
+      "lat": 48.3648439,
+      "lng": 9.9848052,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Ulm/Neu-Ulm, Baden-Württemberg, Germany"
