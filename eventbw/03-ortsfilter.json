@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-24",
-    "startedAt": "2026-05-19T04:00:31.874Z",
-    "finishedAt": "2026-05-19T04:03:48.203Z",
+    "startedAt": "2026-05-19T05:00:33.398Z",
+    "finishedAt": "2026-05-19T05:03:53.558Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -93,9 +93,9 @@
       "Heroldstatt"
     ],
     "counts": {
-      "pages": 230,
-      "rawCollectedIncludingDuplicates": 3189,
-      "rawUnique": 3189,
+      "pages": 231,
+      "rawCollectedIncludingDuplicates": 3194,
+      "rawUnique": 3194,
       "targetDateMatches": 43,
       "targetDateWithGeo": 42,
       "targetDateWithoutGeo": 1,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 39,
       "rawMaerkte": 137,
-      "rawFeste": 3052,
+      "rawFeste": 3057,
       "targetDateMaerkte": 4,
       "targetDateFeste": 39,
       "targetDateWithGeoMaerkte": 3,
@@ -401,11 +401,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Schlosspark Eichtersheim, Sinsheimer Erlebnisregion",
-      "lat": 49.2508136,
-      "lng": 8.8754052,
+      "lat": 49.2330266,
+      "lng": 8.7757925,
       "geoEstimated": true,
       "geoSource": "derived-detail",
-      "geoQuery": "Sinsheimer Erlebnisregion, Baden-Württemberg, Germany"
+      "geoQuery": "Schlosspark Eichtersheim, Baden-Württemberg, Germany"
     },
     {
       "title": "KinderWerkstatt „Mit Hammer und Amboss“",
@@ -1160,11 +1160,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Schlosspark Eichtersheim, Sinsheimer Erlebnisregion",
-      "lat": 49.2508136,
-      "lng": 8.8754052,
+      "lat": 49.2330266,
+      "lng": 8.7757925,
       "geoEstimated": true,
       "geoSource": "derived-detail",
-      "geoQuery": "Sinsheimer Erlebnisregion, Baden-Württemberg, Germany"
+      "geoQuery": "Schlosspark Eichtersheim, Baden-Württemberg, Germany"
     },
     {
       "title": "KinderWerkstatt „Mit Hammer und Amboss“",
