@@ -16,19 +16,19 @@ Counts:
 {
   "pages": 229,
   "rawCollectedIncludingDuplicates": 3175,
-  "rawUnique": 3166,
-  "targetDateMatches": 39,
-  "targetDateWithGeo": 38,
+  "rawUnique": 3175,
+  "targetDateMatches": 41,
+  "targetDateWithGeo": 40,
   "targetDateWithoutGeo": 1,
-  "targetDateGeoEstimated": 38,
-  "targetDateGeoEstimatedFromCity": 37,
+  "targetDateGeoEstimated": 40,
+  "targetDateGeoEstimatedFromCity": 39,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 1,
   "targetDateGeoEstimatedFromCompoundCity": 0,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 0,
-  "targetDateDetailCoordinateGeoChecked": 39,
+  "targetDateDetailCoordinateGeoChecked": 41,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 1,
@@ -40,13 +40,13 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 0,
   "targetDateBodenseeRegionGeoRecovered": 0,
-  "nonRegionalTargetDateMatches": 35,
+  "nonRegionalTargetDateMatches": 37,
   "rawMaerkte": 137,
-  "rawFeste": 3029,
+  "rawFeste": 3038,
   "targetDateMaerkte": 4,
-  "targetDateFeste": 35,
+  "targetDateFeste": 37,
   "targetDateWithGeoMaerkte": 3,
-  "targetDateWithGeoFeste": 35,
+  "targetDateWithGeoFeste": 37,
   "targetDateWithoutGeoMaerkte": 1,
   "targetDateWithoutGeoFeste": 0
 }
@@ -145,12 +145,12 @@ Ortsstatistik vor Ortsfilter:
     "count": 3
   },
   {
-    "city": "Karlsruhe",
+    "city": "Freiamt",
     "count": 3
   },
   {
-    "city": "Freiamt",
-    "count": 2
+    "city": "Karlsruhe",
+    "count": 3
   },
   {
     "city": "Löwenstein",
@@ -254,6 +254,10 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Ulm",
+    "count": 1
+  },
+  {
+    "city": "Ulm/Neu-Ulm",
     "count": 1
   },
   {

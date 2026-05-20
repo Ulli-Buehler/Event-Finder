@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-24",
-    "startedAt": "2026-05-20T00:00:35.162Z",
-    "finishedAt": "2026-05-20T00:03:41.161Z",
+    "startedAt": "2026-05-20T01:00:30.375Z",
+    "finishedAt": "2026-05-20T01:03:18.671Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,19 +95,19 @@
     "counts": {
       "pages": 229,
       "rawCollectedIncludingDuplicates": 3175,
-      "rawUnique": 3166,
-      "targetDateMatches": 39,
-      "targetDateWithGeo": 38,
+      "rawUnique": 3175,
+      "targetDateMatches": 41,
+      "targetDateWithGeo": 40,
       "targetDateWithoutGeo": 1,
-      "targetDateGeoEstimated": 38,
-      "targetDateGeoEstimatedFromCity": 37,
+      "targetDateGeoEstimated": 40,
+      "targetDateGeoEstimatedFromCity": 39,
       "targetDateGeoManualLocality": 0,
       "targetDateGeoFromEventBwDetailCoordinates": 0,
       "targetDateGeoEstimatedFromDetail": 1,
       "targetDateGeoEstimatedFromCompoundCity": 0,
       "targetDateGeoEstimatedFromTitle": 0,
       "targetDateGeoEstimatedFromBodenseeRegion": 0,
-      "targetDateDetailCoordinateGeoChecked": 39,
+      "targetDateDetailCoordinateGeoChecked": 41,
       "targetDateDetailCoordinateGeoRecovered": 0,
       "targetDateDetailCoordinateGeoFailed": 0,
       "targetDateDetailGoogleMapsQueries": 1,
@@ -119,13 +119,13 @@
       "targetDateTitleGeoRecovered": 0,
       "targetDateBodenseeRegionGeoChecked": 0,
       "targetDateBodenseeRegionGeoRecovered": 0,
-      "nonRegionalTargetDateMatches": 35,
+      "nonRegionalTargetDateMatches": 37,
       "rawMaerkte": 137,
-      "rawFeste": 3029,
+      "rawFeste": 3038,
       "targetDateMaerkte": 4,
-      "targetDateFeste": 35,
+      "targetDateFeste": 37,
       "targetDateWithGeoMaerkte": 3,
-      "targetDateWithGeoFeste": 35,
+      "targetDateWithGeoFeste": 37,
       "targetDateWithoutGeoMaerkte": 1,
       "targetDateWithoutGeoFeste": 0
     }
@@ -1968,12 +1968,12 @@
       "count": 3
     },
     {
-      "city": "Karlsruhe",
+      "city": "Freiamt",
       "count": 3
     },
     {
-      "city": "Freiamt",
-      "count": 2
+      "city": "Karlsruhe",
+      "count": 3
     },
     {
       "city": "Löwenstein",
@@ -2080,6 +2080,10 @@
       "count": 1
     },
     {
+      "city": "Ulm/Neu-Ulm",
+      "count": 1
+    },
+    {
       "city": "Urloffen",
       "count": 1
     },
@@ -2103,7 +2107,7 @@
     "overrides": []
   },
   "detailCoordinateGeo": {
-    "checked": 39,
+    "checked": 41,
     "recovered": 0,
     "failed": 0,
     "recoveredEvents": [],
@@ -2143,57 +2147,13 @@
   },
   "rawEvents": [
     {
-      "title": "Brigitte Wagner - Meisterin der Kaltnadel Filmvorführung mit der Künstlerin",
+      "title": "Beats and Wine",
       "category": "feste",
       "city": "",
-      "startDate": "2026-05-19",
-      "endDate": "2026-05-19",
-      "time": "18:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/brigitte-wagner-meisterin-der-kaltnadel-filmvorfuhrung-mit-der-kunstlerin/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2
-    },
-    {
-      "title": "EFFEKTE-Reihe im Mai: Energie trifft Gesundheit: Innovationen zum Mitmachen",
-      "category": "feste",
-      "city": "Karlsruhe",
-      "startDate": "2026-05-19",
-      "endDate": "2026-05-19",
-      "time": "13:00 - 22:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/effekte-reihe-mai-ausgabe-19-mai-19-30-uhr/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2
-    },
-    {
-      "title": "Donau-Staffellauf",
-      "category": "feste",
-      "city": "Sigmaringen",
-      "startDate": "2026-05-19",
-      "endDate": "2026-05-19",
-      "time": "18:30 - 21:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/donau-staffellauf/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2
-    },
-    {
-      "title": "Online Infostunde - Engagement zuhause mit Herz und Sinn",
-      "category": "feste",
-      "city": "Stadt Albstadt",
-      "startDate": "2026-05-19",
-      "endDate": "2026-05-19",
-      "time": "18:00 - 19:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/online-infostunde-engagement-zuhause-mit-herz-und-sinn/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2
-    },
-    {
-      "title": "Freude am Singen",
-      "category": "feste",
-      "city": "Stadt Konstanz",
-      "startDate": "2026-05-19",
-      "endDate": "2026-05-19",
-      "time": "15:00 - 17:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/freude-am-singen/",
+      "startDate": "2026-05-20",
+      "endDate": "2026-05-20",
+      "time": "18:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/beats-and-wine-4/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2
     },
@@ -2240,6 +2200,101 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kulinarische-wildpflanzenwanderung-mitteltal/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1
+    },
+    {
+      "title": "Yoga im Kurhaus Freiamt – Irmgard Dufner",
+      "category": "feste",
+      "city": "Freiamt",
+      "startDate": "2026-05-20",
+      "endDate": "2026-09-30",
+      "time": "19:00 - 20:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/yoga-im-kurhaus-freiamt-irmgard-dufner/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.1737465,
+      "lng": 7.9182707,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Freiamt, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Finanzplanung für Frauen – Versicherungsschutz in jeder Lebensphase – was ist sinnvoll und was nicht? LIVE ONLINE",
+      "category": "feste",
+      "city": "Heilbronn",
+      "startDate": "2026-05-20",
+      "endDate": "2026-05-20",
+      "time": "17:30 - 19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/finanzplanung-fur-frauen-versicherungsschutz-in-jeder-lebensphase-was-ist-sinnvoll-und-was-nicht-live-online/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2
+    },
+    {
+      "title": "Konzert - Sean Webster Band",
+      "category": "feste",
+      "city": "Kandern",
+      "startDate": "2026-05-20",
+      "endDate": "2026-05-20",
+      "time": "20:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/konzert-sean-webster-band/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2
+    },
+    {
+      "title": "Cavalleria rusticana / Pagliacci (Zum letzten Mal)",
+      "category": "feste",
+      "city": "Karlsruhe",
+      "startDate": "2026-05-20",
+      "endDate": "2026-05-20",
+      "time": "19:30 - 22:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/cavalleria-rusticana-pagliacci-4/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2
+    },
+    {
+      "title": "Flow",
+      "category": "feste",
+      "city": "Karlsruhe",
+      "startDate": "2026-05-20",
+      "endDate": "2026-05-20",
+      "time": "20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/flow-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2
+    },
+    {
+      "title": "Nils Karlsson Däumling",
+      "category": "feste",
+      "city": "Karlsruhe",
+      "startDate": "2026-05-20",
+      "endDate": "2026-05-20",
+      "time": "10:00 - 10:40 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/nils-karlsson-daumling/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2
+    },
+    {
+      "title": "Sprechen & Zuhören im Quartier - im Studentenhaus",
+      "category": "feste",
+      "city": "Karlsruhe",
+      "startDate": "2026-05-20",
+      "endDate": "2026-05-20",
+      "time": "18:00 - 20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sprechen-zuhoren-im-quartier-im-studentenhaus/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2
+    },
+    {
+      "title": "Die Grabowskis",
+      "category": "feste",
+      "city": "Kressbronn am Bodensee",
+      "startDate": "2026-05-20",
+      "endDate": "2026-05-20",
+      "time": "19:30 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/die-grabowskis/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2
     },
     {
       "title": "Welttag der Bienen - Aktionen zu Bienen, Wachs und Honig",
@@ -2308,6 +2363,28 @@
       "page": 1
     },
     {
+      "title": "Die Gründung Europas - der steinerne Weg zum Frieden",
+      "category": "feste",
+      "city": "Schwetzingen",
+      "startDate": "2026-05-20",
+      "endDate": "2026-05-20",
+      "time": "19:30 - 21:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/die-grundung-europas-der-steinerne-weg-zum-frieden/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2
+    },
+    {
+      "title": "KI - Forum 'Verstehen, was KI kann – Anwendungen und Auswirkungen'",
+      "category": "feste",
+      "city": "Sigmaringen",
+      "startDate": "2026-05-20",
+      "endDate": "2026-05-20",
+      "time": "18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/ki-forum-verstehen-was-ki-kann-anwendungen-und-auswirkungen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2
+    },
+    {
       "title": "Feierabend-Apéro auf dem Rathausplatz mit Werner Amann",
       "category": "feste",
       "city": "Sipplingen",
@@ -2357,6 +2434,28 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Ulm, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Fürsten, Friseure und Fabrikanten: Die Villinger Altertümersammlung als städtisches Gemeinschaftswerk",
+      "category": "feste",
+      "city": "Villingen-Schwenningen",
+      "startDate": "2026-05-20",
+      "endDate": "2026-05-20",
+      "time": "19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vortrag-im-beleitprogramm-der-sonderausstellung-ausgepackt-schatze-aus-der-sammlung-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2
+    },
+    {
+      "title": "Spieleabende \"Kindheit in Elztal\"",
+      "category": "feste",
+      "city": "Waldkirch",
+      "startDate": "2026-05-20",
+      "endDate": "2026-05-20",
+      "time": "15:00 - 19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/spieleabende-kindheit-in-elztal/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2
     },
     {
       "title": "„Lammfromme Streithammel“",
@@ -2683,6 +2782,24 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/erneuerbare-energien-einsatz-und-nutzung-bei-aesculap/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
       "page": 3
+    },
+    {
+      "title": "Kleinbrauermarkt",
+      "category": "feste",
+      "city": "Ulm/Neu-Ulm",
+      "startDate": "2026-05-21",
+      "endDate": "2026-05-24",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kleinbrauermarkt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.3901,
+      "lng": 9.98614,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Ulm/Neu-Ulm, Baden-Württemberg, Germany"
     },
     {
       "title": "AFTER WORK",
@@ -3712,11 +3829,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Schlosspark Eichtersheim, Sinsheimer Erlebnisregion",
-      "lat": 49.2508136,
-      "lng": 8.8754052,
+      "lat": 49.2330266,
+      "lng": 8.7757925,
       "geoEstimated": true,
       "geoSource": "derived-detail",
-      "geoQuery": "Sinsheimer Erlebnisregion, Baden-Württemberg, Germany"
+      "geoQuery": "Schlosspark Eichtersheim, Baden-Württemberg, Germany"
     },
     {
       "title": "Deep Frequencies",
@@ -37242,6 +37359,24 @@
   ],
   "targetDateEvents": [
     {
+      "title": "Yoga im Kurhaus Freiamt – Irmgard Dufner",
+      "category": "feste",
+      "city": "Freiamt",
+      "startDate": "2026-05-20",
+      "endDate": "2026-09-30",
+      "time": "19:00 - 20:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/yoga-im-kurhaus-freiamt-irmgard-dufner/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.1737465,
+      "lng": 7.9182707,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Freiamt, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Ulmer Zelt",
       "category": "feste",
       "city": "Ulm",
@@ -37276,6 +37411,24 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Freiamt, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Kleinbrauermarkt",
+      "category": "feste",
+      "city": "Ulm/Neu-Ulm",
+      "startDate": "2026-05-21",
+      "endDate": "2026-05-24",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kleinbrauermarkt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.3901,
+      "lng": 9.98614,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Ulm/Neu-Ulm, Baden-Württemberg, Germany"
     },
     {
       "title": "PLAYMOBIL-Schwarzwald Marie auf Weltreise",
@@ -37436,11 +37589,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Schlosspark Eichtersheim, Sinsheimer Erlebnisregion",
-      "lat": 49.2508136,
-      "lng": 8.8754052,
+      "lat": 49.2330266,
+      "lng": 8.7757925,
       "geoEstimated": true,
       "geoSource": "derived-detail",
-      "geoQuery": "Sinsheimer Erlebnisregion, Baden-Württemberg, Germany"
+      "geoQuery": "Schlosspark Eichtersheim, Baden-Württemberg, Germany"
     },
     {
       "title": "KinderWerkstatt „Mit Hammer und Amboss“",
@@ -37944,6 +38097,24 @@
   ],
   "regionalEvents": [
     {
+      "title": "Yoga im Kurhaus Freiamt – Irmgard Dufner",
+      "category": "feste",
+      "city": "Freiamt",
+      "startDate": "2026-05-20",
+      "endDate": "2026-09-30",
+      "time": "19:00 - 20:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/yoga-im-kurhaus-freiamt-irmgard-dufner/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.1737465,
+      "lng": 7.9182707,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Freiamt, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Ulmer Zelt",
       "category": "feste",
       "city": "Ulm",
@@ -37978,6 +38149,24 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Freiamt, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Kleinbrauermarkt",
+      "category": "feste",
+      "city": "Ulm/Neu-Ulm",
+      "startDate": "2026-05-21",
+      "endDate": "2026-05-24",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kleinbrauermarkt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.3901,
+      "lng": 9.98614,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Ulm/Neu-Ulm, Baden-Württemberg, Germany"
     },
     {
       "title": "PLAYMOBIL-Schwarzwald Marie auf Weltreise",
@@ -38138,11 +38327,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Schlosspark Eichtersheim, Sinsheimer Erlebnisregion",
-      "lat": 49.2508136,
-      "lng": 8.8754052,
+      "lat": 49.2330266,
+      "lng": 8.7757925,
       "geoEstimated": true,
       "geoSource": "derived-detail",
-      "geoQuery": "Sinsheimer Erlebnisregion, Baden-Württemberg, Germany"
+      "geoQuery": "Schlosspark Eichtersheim, Baden-Württemberg, Germany"
     },
     {
       "title": "KinderWerkstatt „Mit Hammer und Amboss“",
@@ -38646,6 +38835,24 @@
   ],
   "nonRegionalEvents": [
     {
+      "title": "Yoga im Kurhaus Freiamt – Irmgard Dufner",
+      "category": "feste",
+      "city": "Freiamt",
+      "startDate": "2026-05-20",
+      "endDate": "2026-09-30",
+      "time": "19:00 - 20:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/yoga-im-kurhaus-freiamt-irmgard-dufner/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.1737465,
+      "lng": 7.9182707,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Freiamt, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Ulmer Zelt",
       "category": "feste",
       "city": "Ulm",
@@ -38680,6 +38887,24 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Freiamt, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Kleinbrauermarkt",
+      "category": "feste",
+      "city": "Ulm/Neu-Ulm",
+      "startDate": "2026-05-21",
+      "endDate": "2026-05-24",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kleinbrauermarkt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.3901,
+      "lng": 9.98614,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Ulm/Neu-Ulm, Baden-Württemberg, Germany"
     },
     {
       "title": "PLAYMOBIL-Schwarzwald Marie auf Weltreise",
@@ -38822,11 +39047,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Schlosspark Eichtersheim, Sinsheimer Erlebnisregion",
-      "lat": 49.2508136,
-      "lng": 8.8754052,
+      "lat": 49.2330266,
+      "lng": 8.7757925,
       "geoEstimated": true,
       "geoSource": "derived-detail",
-      "geoQuery": "Sinsheimer Erlebnisregion, Baden-Württemberg, Germany"
+      "geoQuery": "Schlosspark Eichtersheim, Baden-Württemberg, Germany"
     },
     {
       "title": "KinderWerkstatt „Mit Hammer und Amboss“",
