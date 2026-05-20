@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-24",
-    "startedAt": "2026-05-20T11:00:32.585Z",
-    "finishedAt": "2026-05-20T11:03:43.641Z",
+    "startedAt": "2026-05-20T11:48:52.461Z",
+    "finishedAt": "2026-05-20T11:50:14.272Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -1858,11 +1858,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Schlosspark Eichtersheim, Sinsheimer Erlebnisregion",
-      "lat": 49.2330266,
-      "lng": 8.7757925,
+      "lat": 49.2508136,
+      "lng": 8.8754052,
       "geoEstimated": true,
       "geoSource": "derived-detail",
-      "geoQuery": "Schlosspark Eichtersheim, Baden-Württemberg, Germany"
+      "geoQuery": "Sinsheimer Erlebnisregion, Baden-Württemberg, Germany"
     },
     {
       "title": "Nebelhöhlenfest",
@@ -2064,8 +2064,8 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.6882714,
-      "lng": 9.4094634,
+      "lat": 47.688082,
+      "lng": 9.4095761,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Friedrichshafen (Kluftern), Baden-Württemberg, Germany"
@@ -2190,8 +2190,8 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.9713529,
-      "lng": 8.9283473,
+      "lat": 47.9713008,
+      "lng": 8.9284465,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Neuhausen ob Eck, Baden-Württemberg, Germany"
