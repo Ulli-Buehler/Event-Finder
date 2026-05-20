@@ -14,8 +14,8 @@ Zieldatum: 2026-05-24
 
 Counts:
 {
-  "pages": 229,
-  "rawCollectedIncludingDuplicates": 3175,
+  "pages": 230,
+  "rawCollectedIncludingDuplicates": 3176,
   "rawUnique": 3175,
   "targetDateMatches": 41,
   "targetDateWithGeo": 40,
@@ -2103,6 +2103,14 @@ Pages:
     "category": "feste",
     "page": 218,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/218/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 1
+  },
+  {
+    "category": "feste",
+    "page": 219,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/219/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
