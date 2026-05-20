@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-24",
-    "startedAt": "2026-05-20T22:00:32.578Z",
-    "finishedAt": "2026-05-20T22:03:52.667Z",
+    "startedAt": "2026-05-20T23:00:32.011Z",
+    "finishedAt": "2026-05-20T23:03:46.388Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -197,8 +197,8 @@
       "page": 2,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.3648439,
-      "lng": 9.9848052,
+      "lat": 48.3901,
+      "lng": 9.98614,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Ulm/Neu-Ulm, Baden-Württemberg, Germany"
@@ -812,7 +812,7 @@
       "page": 13,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.7624281,
+      "lat": 47.762428,
       "lng": 9.723363,
       "geoEstimated": true,
       "geoSource": "derived",
