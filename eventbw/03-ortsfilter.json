@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-24",
-    "startedAt": "2026-05-20T12:00:34.043Z",
-    "finishedAt": "2026-05-20T12:01:55.083Z",
+    "startedAt": "2026-05-20T13:00:35.613Z",
+    "finishedAt": "2026-05-20T13:03:26.887Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -197,8 +197,8 @@
       "page": 2,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.3648439,
-      "lng": 9.9848052,
+      "lat": 48.3901,
+      "lng": 9.98614,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Ulm/Neu-Ulm, Baden-Württemberg, Germany"
@@ -362,11 +362,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Schlosspark Eichtersheim, Sinsheimer Erlebnisregion",
-      "lat": 49.2330266,
-      "lng": 8.7757925,
+      "lat": 49.2508136,
+      "lng": 8.8754052,
       "geoEstimated": true,
       "geoSource": "derived-detail",
-      "geoQuery": "Schlosspark Eichtersheim, Baden-Württemberg, Germany"
+      "geoQuery": "Sinsheimer Erlebnisregion, Baden-Württemberg, Germany"
     },
     {
       "title": "Nebelhöhlenfest",
@@ -953,8 +953,8 @@
       "page": 2,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.3648439,
-      "lng": 9.9848052,
+      "lat": 48.3901,
+      "lng": 9.98614,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Ulm/Neu-Ulm, Baden-Württemberg, Germany"
@@ -1100,11 +1100,11 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Schlosspark Eichtersheim, Sinsheimer Erlebnisregion",
-      "lat": 49.2330266,
-      "lng": 8.7757925,
+      "lat": 49.2508136,
+      "lng": 8.8754052,
       "geoEstimated": true,
       "geoSource": "derived-detail",
-      "geoQuery": "Schlosspark Eichtersheim, Baden-Württemberg, Germany"
+      "geoQuery": "Sinsheimer Erlebnisregion, Baden-Württemberg, Germany"
     },
     {
       "title": "Nebelhöhlenfest",
