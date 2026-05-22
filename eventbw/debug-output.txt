@@ -14,21 +14,21 @@ Zieldatum: 2026-05-24
 
 Counts:
 {
-  "pages": 233,
-  "rawCollectedIncludingDuplicates": 3221,
-  "rawUnique": 3221,
-  "targetDateMatches": 42,
-  "targetDateWithGeo": 41,
+  "pages": 230,
+  "rawCollectedIncludingDuplicates": 3187,
+  "rawUnique": 3179,
+  "targetDateMatches": 39,
+  "targetDateWithGeo": 38,
   "targetDateWithoutGeo": 1,
-  "targetDateGeoEstimated": 41,
-  "targetDateGeoEstimatedFromCity": 40,
+  "targetDateGeoEstimated": 38,
+  "targetDateGeoEstimatedFromCity": 37,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 1,
   "targetDateGeoEstimatedFromCompoundCity": 0,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 0,
-  "targetDateDetailCoordinateGeoChecked": 42,
+  "targetDateDetailCoordinateGeoChecked": 39,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 1,
@@ -40,13 +40,13 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 0,
   "targetDateBodenseeRegionGeoRecovered": 0,
-  "nonRegionalTargetDateMatches": 38,
+  "nonRegionalTargetDateMatches": 35,
   "rawMaerkte": 137,
-  "rawFeste": 3084,
+  "rawFeste": 3042,
   "targetDateMaerkte": 4,
-  "targetDateFeste": 38,
+  "targetDateFeste": 35,
   "targetDateWithGeoMaerkte": 3,
-  "targetDateWithGeoFeste": 38,
+  "targetDateWithGeoFeste": 35,
   "targetDateWithoutGeoMaerkte": 1,
   "targetDateWithoutGeoFeste": 0
 }
@@ -149,10 +149,6 @@ Ortsstatistik vor Ortsfilter:
     "count": 3
   },
   {
-    "city": "Freiamt",
-    "count": 2
-  },
-  {
     "city": "Löwenstein",
     "count": 2
   },
@@ -177,10 +173,6 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Braunsbach",
-    "count": 1
-  },
-  {
     "city": "Breisach",
     "count": 1
   },
@@ -193,7 +185,7 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Endingen",
+    "city": "Freiamt",
     "count": 1
   },
   {
@@ -2109,36 +2101,12 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/218/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 14
+    "parsedCount": 12
   },
   {
     "category": "feste",
     "page": 219,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/219/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 220,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/220/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 221,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/221/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 4
-  },
-  {
-    "category": "feste",
-    "page": 222,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/222/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
