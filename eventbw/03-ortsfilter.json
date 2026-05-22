@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-24",
-    "startedAt": "2026-05-22T04:00:36.847Z",
-    "finishedAt": "2026-05-22T04:04:19.516Z",
+    "startedAt": "2026-05-22T05:00:33.358Z",
+    "finishedAt": "2026-05-22T05:03:57.175Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -93,9 +93,9 @@
       "Heroldstatt"
     ],
     "counts": {
-      "pages": 232,
-      "rawCollectedIncludingDuplicates": 3207,
-      "rawUnique": 3205,
+      "pages": 233,
+      "rawCollectedIncludingDuplicates": 3223,
+      "rawUnique": 3223,
       "targetDateMatches": 41,
       "targetDateWithGeo": 40,
       "targetDateWithoutGeo": 1,
@@ -120,8 +120,8 @@
       "targetDateBodenseeRegionGeoChecked": 1,
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 37,
-      "rawMaerkte": 137,
-      "rawFeste": 3068,
+      "rawMaerkte": 138,
+      "rawFeste": 3085,
       "targetDateMaerkte": 4,
       "targetDateFeste": 37,
       "targetDateWithGeoMaerkte": 3,
@@ -475,8 +475,8 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.6882714,
-      "lng": 9.4094634,
+      "lat": 47.688082,
+      "lng": 9.4095761,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Friedrichshafen (Kluftern), Baden-Württemberg, Germany"
@@ -1200,8 +1200,8 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.6882714,
-      "lng": 9.4094634,
+      "lat": 47.688082,
+      "lng": 9.4095761,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Friedrichshafen (Kluftern), Baden-Württemberg, Germany"
