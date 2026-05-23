@@ -14,21 +14,21 @@ Zieldatum: 2026-05-24
 
 Counts:
 {
-  "pages": 233,
-  "rawCollectedIncludingDuplicates": 3223,
-  "rawUnique": 3223,
-  "targetDateMatches": 41,
-  "targetDateWithGeo": 40,
-  "targetDateWithoutGeo": 1,
-  "targetDateGeoEstimated": 40,
-  "targetDateGeoEstimatedFromCity": 38,
+  "pages": 229,
+  "rawCollectedIncludingDuplicates": 3174,
+  "rawUnique": 3174,
+  "targetDateMatches": 27,
+  "targetDateWithGeo": 27,
+  "targetDateWithoutGeo": 0,
+  "targetDateGeoEstimated": 27,
+  "targetDateGeoEstimatedFromCity": 25,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 1,
   "targetDateGeoEstimatedFromCompoundCity": 0,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 1,
-  "targetDateDetailCoordinateGeoChecked": 41,
+  "targetDateDetailCoordinateGeoChecked": 27,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 2,
@@ -40,14 +40,14 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 1,
   "targetDateBodenseeRegionGeoRecovered": 1,
-  "nonRegionalTargetDateMatches": 37,
-  "rawMaerkte": 138,
-  "rawFeste": 3085,
-  "targetDateMaerkte": 4,
-  "targetDateFeste": 37,
+  "nonRegionalTargetDateMatches": 23,
+  "rawMaerkte": 137,
+  "rawFeste": 3037,
+  "targetDateMaerkte": 3,
+  "targetDateFeste": 24,
   "targetDateWithGeoMaerkte": 3,
-  "targetDateWithGeoFeste": 37,
-  "targetDateWithoutGeoMaerkte": 1,
+  "targetDateWithGeoFeste": 24,
+  "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 0
 }
 
@@ -141,10 +141,6 @@ Regionale Ortsliste:
 Ortsstatistik vor Ortsfilter:
 [
   {
-    "city": "Baiersbronn",
-    "count": 3
-  },
-  {
     "city": "Karlsruhe",
     "count": 3
   },
@@ -157,19 +153,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 2
   },
   {
-    "city": "Öhringen",
-    "count": 2
-  },
-  {
     "city": "Bad Schussenried-Kürnbach",
     "count": 1
   },
   {
-    "city": "Baiersbronn Mitteltal",
-    "count": 1
-  },
-  {
-    "city": "Baiersbronn-Mitteltal",
+    "city": "Baiersbronn",
     "count": 1
   },
   {
@@ -182,10 +170,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Dischingen",
-    "count": 1
-  },
-  {
-    "city": "Distelhausen",
     "count": 1
   },
   {
@@ -205,27 +189,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Illmensee",
-    "count": 1
-  },
-  {
-    "city": "Konstanz",
-    "count": 1
-  },
-  {
-    "city": "Michelstadt",
-    "count": 1
-  },
-  {
     "city": "Münsingen",
     "count": 1
   },
   {
-    "city": "Neuhausen ob Eck",
-    "count": 1
-  },
-  {
-    "city": "Oberdischingen",
+    "city": "Öhringen",
     "count": 1
   },
   {
@@ -253,19 +221,7 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Sonnenbühl",
-    "count": 1
-  },
-  {
-    "city": "Uhldingen-Mühlhofen",
-    "count": 1
-  },
-  {
     "city": "unbekannt",
-    "count": 1
-  },
-  {
-    "city": "Urloffen",
     "count": 1
   },
   {
@@ -285,7 +241,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
     "ok": true,
-    "reportedCount": 138,
+    "reportedCount": 137,
     "parsedCount": 14
   },
   {
@@ -358,7 +314,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/10/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 12
+    "parsedCount": 11
   },
   {
     "category": "maerkte",
@@ -2101,44 +2057,12 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/217/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 14
+    "parsedCount": 13
   },
   {
     "category": "feste",
     "page": 218,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/218/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 219,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/219/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 220,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/220/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 221,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/221/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 5
-  },
-  {
-    "category": "feste",
-    "page": 222,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/222/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
