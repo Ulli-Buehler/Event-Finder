@@ -14,39 +14,39 @@ Zieldatum: 2026-05-24
 
 Counts:
 {
-  "pages": 229,
-  "rawCollectedIncludingDuplicates": 3174,
-  "rawUnique": 3174,
-  "targetDateMatches": 27,
-  "targetDateWithGeo": 27,
+  "pages": 230,
+  "rawCollectedIncludingDuplicates": 3179,
+  "rawUnique": 3179,
+  "targetDateMatches": 34,
+  "targetDateWithGeo": 34,
   "targetDateWithoutGeo": 0,
-  "targetDateGeoEstimated": 27,
-  "targetDateGeoEstimatedFromCity": 25,
+  "targetDateGeoEstimated": 34,
+  "targetDateGeoEstimatedFromCity": 33,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 1,
   "targetDateGeoEstimatedFromCompoundCity": 0,
   "targetDateGeoEstimatedFromTitle": 0,
-  "targetDateGeoEstimatedFromBodenseeRegion": 1,
-  "targetDateDetailCoordinateGeoChecked": 27,
+  "targetDateGeoEstimatedFromBodenseeRegion": 0,
+  "targetDateDetailCoordinateGeoChecked": 34,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
-  "targetDateDetailGoogleMapsQueries": 2,
-  "targetDateDetailGeoChecked": 2,
+  "targetDateDetailGoogleMapsQueries": 1,
+  "targetDateDetailGeoChecked": 1,
   "targetDateDetailGeoRecovered": 1,
   "targetDateCompoundCityGeoChecked": 0,
   "targetDateCompoundCityGeoRecovered": 0,
   "targetDateTitleGeoChecked": 0,
   "targetDateTitleGeoRecovered": 0,
-  "targetDateBodenseeRegionGeoChecked": 1,
-  "targetDateBodenseeRegionGeoRecovered": 1,
-  "nonRegionalTargetDateMatches": 23,
+  "targetDateBodenseeRegionGeoChecked": 0,
+  "targetDateBodenseeRegionGeoRecovered": 0,
+  "nonRegionalTargetDateMatches": 30,
   "rawMaerkte": 137,
-  "rawFeste": 3037,
+  "rawFeste": 3042,
   "targetDateMaerkte": 3,
-  "targetDateFeste": 24,
+  "targetDateFeste": 31,
   "targetDateWithGeoMaerkte": 3,
-  "targetDateWithGeoFeste": 24,
+  "targetDateWithGeoFeste": 31,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 0
 }
@@ -145,6 +145,10 @@ Ortsstatistik vor Ortsfilter:
     "count": 3
   },
   {
+    "city": "Baiersbronn",
+    "count": 2
+  },
+  {
     "city": "Löwenstein",
     "count": 2
   },
@@ -153,11 +157,19 @@ Ortsstatistik vor Ortsfilter:
     "count": 2
   },
   {
+    "city": "Öhringen",
+    "count": 2
+  },
+  {
     "city": "Bad Schussenried-Kürnbach",
     "count": 1
   },
   {
-    "city": "Baiersbronn",
+    "city": "Baiersbronn Mitteltal",
+    "count": 1
+  },
+  {
+    "city": "Baiersbronn-Mitteltal",
     "count": 1
   },
   {
@@ -173,7 +185,7 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Endingen",
+    "city": "Distelhausen",
     "count": 1
   },
   {
@@ -189,11 +201,15 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Konstanz",
+    "count": 1
+  },
+  {
     "city": "Münsingen",
     "count": 1
   },
   {
-    "city": "Öhringen",
+    "city": "Neuhausen ob Eck",
     "count": 1
   },
   {
@@ -221,7 +237,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "unbekannt",
+    "city": "Sonnenbühl",
+    "count": 1
+  },
+  {
+    "city": "Urloffen",
     "count": 1
   },
   {
@@ -328,7 +348,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 3085,
+    "reportedCount": 3042,
     "parsedCount": 14
   },
   {
@@ -2057,12 +2077,20 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/217/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 13
+    "parsedCount": 14
   },
   {
     "category": "feste",
     "page": 218,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/218/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 4
+  },
+  {
+    "category": "feste",
+    "page": 219,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/219/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
