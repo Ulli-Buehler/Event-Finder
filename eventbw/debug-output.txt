@@ -14,21 +14,21 @@ Zieldatum: 2026-05-24
 
 Counts:
 {
-  "pages": 231,
-  "rawCollectedIncludingDuplicates": 3203,
-  "rawUnique": 3203,
-  "targetDateMatches": 35,
-  "targetDateWithGeo": 35,
+  "pages": 234,
+  "rawCollectedIncludingDuplicates": 3235,
+  "rawUnique": 3235,
+  "targetDateMatches": 36,
+  "targetDateWithGeo": 36,
   "targetDateWithoutGeo": 0,
-  "targetDateGeoEstimated": 35,
-  "targetDateGeoEstimatedFromCity": 34,
+  "targetDateGeoEstimated": 36,
+  "targetDateGeoEstimatedFromCity": 35,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 1,
   "targetDateGeoEstimatedFromCompoundCity": 0,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 0,
-  "targetDateDetailCoordinateGeoChecked": 35,
+  "targetDateDetailCoordinateGeoChecked": 36,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 1,
@@ -40,13 +40,13 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 0,
   "targetDateBodenseeRegionGeoRecovered": 0,
-  "nonRegionalTargetDateMatches": 31,
+  "nonRegionalTargetDateMatches": 32,
   "rawMaerkte": 137,
-  "rawFeste": 3066,
+  "rawFeste": 3098,
   "targetDateMaerkte": 3,
-  "targetDateFeste": 32,
+  "targetDateFeste": 33,
   "targetDateWithGeoMaerkte": 3,
-  "targetDateWithGeoFeste": 32,
+  "targetDateWithGeoFeste": 33,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 0
 }
@@ -142,7 +142,7 @@ Ortsstatistik vor Ortsfilter:
 [
   {
     "city": "Karlsruhe",
-    "count": 3
+    "count": 4
   },
   {
     "city": "Baiersbronn",
@@ -352,7 +352,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 3065,
+    "reportedCount": 3098,
     "parsedCount": 14
   },
   {
@@ -2103,6 +2103,30 @@ Pages:
     "category": "feste",
     "page": 220,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/220/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 221,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/221/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 222,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/222/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 4
+  },
+  {
+    "category": "feste",
+    "page": 223,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/223/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
