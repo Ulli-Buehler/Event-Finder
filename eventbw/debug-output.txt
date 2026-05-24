@@ -10,45 +10,45 @@ Filter:
 - Geo: für alle Zieldatum-Events
 - km/Radius: live im Browser
 
-Zieldatum: 2026-05-24
+Zieldatum: 2026-05-31
 
 Counts:
 {
   "pages": 231,
   "rawCollectedIncludingDuplicates": 3193,
   "rawUnique": 3193,
-  "targetDateMatches": 32,
-  "targetDateWithGeo": 32,
-  "targetDateWithoutGeo": 0,
-  "targetDateGeoEstimated": 32,
-  "targetDateGeoEstimatedFromCity": 32,
+  "targetDateMatches": 30,
+  "targetDateWithGeo": 28,
+  "targetDateWithoutGeo": 2,
+  "targetDateGeoEstimated": 28,
+  "targetDateGeoEstimatedFromCity": 25,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
-  "targetDateGeoEstimatedFromDetail": 0,
+  "targetDateGeoEstimatedFromDetail": 2,
   "targetDateGeoEstimatedFromCompoundCity": 0,
   "targetDateGeoEstimatedFromTitle": 0,
-  "targetDateGeoEstimatedFromBodenseeRegion": 0,
-  "targetDateDetailCoordinateGeoChecked": 32,
+  "targetDateGeoEstimatedFromBodenseeRegion": 1,
+  "targetDateDetailCoordinateGeoChecked": 30,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
-  "targetDateDetailGoogleMapsQueries": 0,
-  "targetDateDetailGeoChecked": 0,
-  "targetDateDetailGeoRecovered": 0,
+  "targetDateDetailGoogleMapsQueries": 4,
+  "targetDateDetailGeoChecked": 4,
+  "targetDateDetailGeoRecovered": 2,
   "targetDateCompoundCityGeoChecked": 0,
   "targetDateCompoundCityGeoRecovered": 0,
   "targetDateTitleGeoChecked": 0,
   "targetDateTitleGeoRecovered": 0,
-  "targetDateBodenseeRegionGeoChecked": 0,
-  "targetDateBodenseeRegionGeoRecovered": 0,
-  "nonRegionalTargetDateMatches": 29,
+  "targetDateBodenseeRegionGeoChecked": 1,
+  "targetDateBodenseeRegionGeoRecovered": 1,
+  "nonRegionalTargetDateMatches": 30,
   "rawMaerkte": 136,
   "rawFeste": 3057,
   "targetDateMaerkte": 2,
-  "targetDateFeste": 30,
+  "targetDateFeste": 28,
   "targetDateWithGeoMaerkte": 2,
-  "targetDateWithGeoFeste": 30,
+  "targetDateWithGeoFeste": 26,
   "targetDateWithoutGeoMaerkte": 0,
-  "targetDateWithoutGeoFeste": 0
+  "targetDateWithoutGeoFeste": 2
 }
 
 Regionale Ortsliste:
@@ -141,59 +141,67 @@ Regionale Ortsliste:
 Ortsstatistik vor Ortsfilter:
 [
   {
+    "city": "unbekannt",
+    "count": 3
+  },
+  {
+    "city": "Baiersbronn-Röt",
+    "count": 2
+  },
+  {
+    "city": "Eberbach",
+    "count": 2
+  },
+  {
+    "city": "Uhldingen-Mühlhofen",
+    "count": 2
+  },
+  {
+    "city": "Bad Krozingen",
+    "count": 1
+  },
+  {
+    "city": "Bad Säckingen",
+    "count": 1
+  },
+  {
+    "city": "Bietigheim-Bissingen",
+    "count": 1
+  },
+  {
+    "city": "Ettlingen",
+    "count": 1
+  },
+  {
+    "city": "Friedrichshafen",
+    "count": 1
+  },
+  {
+    "city": "Heilbronn",
+    "count": 1
+  },
+  {
+    "city": "Illmensee",
+    "count": 1
+  },
+  {
+    "city": "Isny im Allgäu",
+    "count": 1
+  },
+  {
+    "city": "Karlsbad",
+    "count": 1
+  },
+  {
     "city": "Karlsruhe",
-    "count": 6
-  },
-  {
-    "city": "Baiersbronn",
-    "count": 2
-  },
-  {
-    "city": "Löwenstein",
-    "count": 2
-  },
-  {
-    "city": "Nagold",
-    "count": 2
-  },
-  {
-    "city": "Öhringen",
-    "count": 2
-  },
-  {
-    "city": "Bad Schussenried-Kürnbach",
     "count": 1
   },
   {
-    "city": "Baiersbronn Mitteltal",
+    "city": "Mannheim",
     "count": 1
   },
   {
-    "city": "Baiersbronn-Mitteltal",
-    "count": 1
-  },
-  {
-    "city": "Breisach",
-    "count": 1
-  },
-  {
-    "city": "Freiamt",
-    "count": 1
-  },
-  {
-    "city": "Friedrichshafen (Kluftern)",
-    "count": 1
-  },
-  {
-    "city": "Gundelsheim",
-    "count": 1
-  },
-  {
-    "city": "Konstanz",
-    "count": 1
-  },
-  {
-    "city": "Münsingen",
+    "city": "Neubulach",
     "count": 1
   },
   {
@@ -201,15 +209,7 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Östringen",
-    "count": 1
-  },
-  {
-    "city": "Östringen-Tiefenbach",
-    "count": 1
-  },
-  {
-    "city": "Rothenburg ob der Tauber",
+    "city": "Pfullendorf/Aach-Linz",
     "count": 1
   },
   {
@@ -217,7 +217,15 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Urloffen",
+    "city": "Schwäbisches Streuobstparadies",
+    "count": 1
+  },
+  {
+    "city": "Sigmaringen",
+    "count": 1
+  },
+  {
+    "city": "Überlingen am Bodensee",
     "count": 1
   },
   {
@@ -225,11 +233,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Waldburg",
+    "city": "Vogtsburg im Kaiserstuhl",
     "count": 1
   },
   {
-    "city": "Waldkirch",
+    "city": "Walldürn",
     "count": 1
   }
 ]
