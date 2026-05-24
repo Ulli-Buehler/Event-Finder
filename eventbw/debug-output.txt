@@ -15,20 +15,20 @@ Zieldatum: 2026-05-24
 Counts:
 {
   "pages": 231,
-  "rawCollectedIncludingDuplicates": 3189,
-  "rawUnique": 3189,
-  "targetDateMatches": 30,
-  "targetDateWithGeo": 30,
+  "rawCollectedIncludingDuplicates": 3193,
+  "rawUnique": 3193,
+  "targetDateMatches": 32,
+  "targetDateWithGeo": 32,
   "targetDateWithoutGeo": 0,
-  "targetDateGeoEstimated": 30,
-  "targetDateGeoEstimatedFromCity": 30,
+  "targetDateGeoEstimated": 32,
+  "targetDateGeoEstimatedFromCity": 32,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 0,
   "targetDateGeoEstimatedFromCompoundCity": 0,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 0,
-  "targetDateDetailCoordinateGeoChecked": 30,
+  "targetDateDetailCoordinateGeoChecked": 32,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 0,
@@ -40,13 +40,13 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 0,
   "targetDateBodenseeRegionGeoRecovered": 0,
-  "nonRegionalTargetDateMatches": 27,
+  "nonRegionalTargetDateMatches": 29,
   "rawMaerkte": 136,
-  "rawFeste": 3053,
+  "rawFeste": 3057,
   "targetDateMaerkte": 2,
-  "targetDateFeste": 28,
+  "targetDateFeste": 30,
   "targetDateWithGeoMaerkte": 2,
-  "targetDateWithGeoFeste": 28,
+  "targetDateWithGeoFeste": 30,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 0
 }
@@ -142,7 +142,7 @@ Ortsstatistik vor Ortsfilter:
 [
   {
     "city": "Karlsruhe",
-    "count": 4
+    "count": 6
   },
   {
     "city": "Baiersbronn",
@@ -328,7 +328,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 3053,
+    "reportedCount": 3057,
     "parsedCount": 14
   },
   {
@@ -2073,7 +2073,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/219/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 1
+    "parsedCount": 5
   },
   {
     "category": "feste",
