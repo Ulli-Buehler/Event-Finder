@@ -16,19 +16,19 @@ Counts:
 {
   "pages": 230,
   "rawCollectedIncludingDuplicates": 3185,
-  "rawUnique": 3184,
-  "targetDateMatches": 27,
-  "targetDateWithGeo": 27,
+  "rawUnique": 3185,
+  "targetDateMatches": 30,
+  "targetDateWithGeo": 30,
   "targetDateWithoutGeo": 0,
-  "targetDateGeoEstimated": 27,
-  "targetDateGeoEstimatedFromCity": 27,
+  "targetDateGeoEstimated": 30,
+  "targetDateGeoEstimatedFromCity": 30,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 0,
   "targetDateGeoEstimatedFromCompoundCity": 0,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 0,
-  "targetDateDetailCoordinateGeoChecked": 27,
+  "targetDateDetailCoordinateGeoChecked": 30,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 0,
@@ -40,13 +40,13 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 0,
   "targetDateBodenseeRegionGeoRecovered": 0,
-  "nonRegionalTargetDateMatches": 24,
-  "rawMaerkte": 135,
+  "nonRegionalTargetDateMatches": 27,
+  "rawMaerkte": 136,
   "rawFeste": 3049,
-  "targetDateMaerkte": 3,
-  "targetDateFeste": 24,
-  "targetDateWithGeoMaerkte": 3,
-  "targetDateWithGeoFeste": 24,
+  "targetDateMaerkte": 2,
+  "targetDateFeste": 28,
+  "targetDateWithGeoMaerkte": 2,
+  "targetDateWithGeoFeste": 28,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 0
 }
@@ -157,6 +157,14 @@ Ortsstatistik vor Ortsfilter:
     "count": 2
   },
   {
+    "city": "Öhringen",
+    "count": 2
+  },
+  {
+    "city": "Bad Schussenried-Kürnbach",
+    "count": 1
+  },
+  {
     "city": "Baiersbronn Mitteltal",
     "count": 1
   },
@@ -165,19 +173,15 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Braunsbach",
-    "count": 1
-  },
-  {
     "city": "Breisach",
     "count": 1
   },
   {
-    "city": "Dischingen",
+    "city": "Freiamt",
     "count": 1
   },
   {
-    "city": "Distelhausen",
+    "city": "Friedrichshafen (Kluftern)",
     "count": 1
   },
   {
@@ -209,11 +213,15 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Sonnenbühl",
+    "city": "Sasbachwalden",
     "count": 1
   },
   {
     "city": "Urloffen",
+    "count": 1
+  },
+  {
+    "city": "Vogtsbauernhof",
     "count": 1
   },
   {
@@ -233,7 +241,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
     "ok": true,
-    "reportedCount": 137,
+    "reportedCount": 136,
     "parsedCount": 14
   },
   {
@@ -320,7 +328,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 3098,
+    "reportedCount": 3049,
     "parsedCount": 14
   },
   {
