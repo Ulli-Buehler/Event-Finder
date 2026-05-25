@@ -15,20 +15,20 @@ Zieldatum: 2026-05-31
 Counts:
 {
   "pages": 229,
-  "rawCollectedIncludingDuplicates": 3161,
-  "rawUnique": 3161,
-  "targetDateMatches": 30,
-  "targetDateWithGeo": 28,
+  "rawCollectedIncludingDuplicates": 3163,
+  "rawUnique": 3163,
+  "targetDateMatches": 31,
+  "targetDateWithGeo": 29,
   "targetDateWithoutGeo": 2,
-  "targetDateGeoEstimated": 28,
-  "targetDateGeoEstimatedFromCity": 25,
+  "targetDateGeoEstimated": 29,
+  "targetDateGeoEstimatedFromCity": 26,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 2,
   "targetDateGeoEstimatedFromCompoundCity": 0,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 1,
-  "targetDateDetailCoordinateGeoChecked": 30,
+  "targetDateDetailCoordinateGeoChecked": 31,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 4,
@@ -40,13 +40,13 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 1,
   "targetDateBodenseeRegionGeoRecovered": 1,
-  "nonRegionalTargetDateMatches": 30,
+  "nonRegionalTargetDateMatches": 31,
   "rawMaerkte": 134,
-  "rawFeste": 3027,
+  "rawFeste": 3029,
   "targetDateMaerkte": 2,
-  "targetDateFeste": 28,
+  "targetDateFeste": 29,
   "targetDateWithGeoMaerkte": 2,
-  "targetDateWithGeoFeste": 26,
+  "targetDateWithGeoFeste": 27,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 2
 }
@@ -162,6 +162,10 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Bad Säckingen",
+    "count": 1
+  },
+  {
+    "city": "Baiersbronn",
     "count": 1
   },
   {
@@ -336,7 +340,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 3027,
+    "reportedCount": 3029,
     "parsedCount": 14
   },
   {
@@ -2065,7 +2069,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/217/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 3
+    "parsedCount": 5
   },
   {
     "category": "feste",
