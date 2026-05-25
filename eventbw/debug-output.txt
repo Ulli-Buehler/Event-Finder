@@ -16,7 +16,7 @@ Counts:
 {
   "pages": 229,
   "rawCollectedIncludingDuplicates": 3161,
-  "rawUnique": 3147,
+  "rawUnique": 3161,
   "targetDateMatches": 30,
   "targetDateWithGeo": 28,
   "targetDateWithoutGeo": 2,
@@ -42,7 +42,7 @@ Counts:
   "targetDateBodenseeRegionGeoRecovered": 1,
   "nonRegionalTargetDateMatches": 30,
   "rawMaerkte": 134,
-  "rawFeste": 3013,
+  "rawFeste": 3027,
   "targetDateMaerkte": 2,
   "targetDateFeste": 28,
   "targetDateWithGeoMaerkte": 2,
@@ -249,7 +249,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
     "ok": true,
-    "reportedCount": 136,
+    "reportedCount": 134,
     "parsedCount": 14
   },
   {

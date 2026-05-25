@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-31",
-    "startedAt": "2026-05-25T00:00:33.357Z",
-    "finishedAt": "2026-05-25T00:03:12.940Z",
+    "startedAt": "2026-05-25T01:00:30.803Z",
+    "finishedAt": "2026-05-25T01:03:15.391Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 229,
       "rawCollectedIncludingDuplicates": 3161,
-      "rawUnique": 3147,
+      "rawUnique": 3161,
       "targetDateMatches": 30,
       "targetDateWithGeo": 28,
       "targetDateWithoutGeo": 2,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 30,
       "rawMaerkte": 134,
-      "rawFeste": 3013,
+      "rawFeste": 3027,
       "targetDateMaerkte": 2,
       "targetDateFeste": 28,
       "targetDateWithGeoMaerkte": 2,
@@ -660,6 +660,17 @@
       "page": 4
     },
     {
+      "title": "Trailwunschkonzert für Biobiker",
+      "category": "feste",
+      "city": "Baiersbronn",
+      "startDate": "2026-05-28",
+      "endDate": "2026-05-28",
+      "time": "10:00 - 16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/trailwunschkonzert-fur-biobiker/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "Ohne Moos nix los",
       "category": "feste",
       "city": "Baiersbronn Mitteltal",
@@ -693,6 +704,17 @@
       "page": 4
     },
     {
+      "title": "SkyNight",
+      "category": "feste",
+      "city": "Heilbronn",
+      "startDate": "2026-05-28",
+      "endDate": "2026-05-28",
+      "time": "21:00 - 23:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/skynight/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "Einkehrrunde - Isny für Naturfreunde & Feierabendgenießer",
       "category": "feste",
       "city": "Isny im Allgäu",
@@ -709,6 +731,39 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Isny im Allgäu, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Der Besondere Film: Ach, diese Lücke, diese entsetzliche Lücke",
+      "category": "feste",
+      "city": "Kandern",
+      "startDate": "2026-05-28",
+      "endDate": "2026-05-28",
+      "time": "20:15 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/der-besondere-film-ach-diese-lucke-diese-entsetzliche-lucke/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Anymos-KI:NO SOMMER | Astro Boy",
+      "category": "feste",
+      "city": "Karlsruhe",
+      "startDate": "2026-05-28",
+      "endDate": "2026-05-28",
+      "time": "19:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/anymos-kino-sommer-astro-boy/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Habibi, das ist echt!",
+      "category": "feste",
+      "city": "Karlsruhe",
+      "startDate": "2026-05-28",
+      "endDate": "2026-05-28",
+      "time": "21:00 - 23:20 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/habibi-das-ist-echt-premiere/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Internationale Bodenseewoche",
@@ -733,6 +788,28 @@
       "page": 4
     },
     {
+      "title": "Gedenkfeier zum 50. Todestag von Martin Heidegger",
+      "category": "feste",
+      "city": "Meßkirch",
+      "startDate": "2026-05-28",
+      "endDate": "2026-05-28",
+      "time": "19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gedenkfeier-zum-50-todestag-von-martin-heidegger/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Kutschfahrt über die Schwäbische Alb",
+      "category": "feste",
+      "city": "Münsingen",
+      "startDate": "2026-05-28",
+      "endDate": "2026-05-29",
+      "time": "18:00 - 19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kutschfahrt-uber-die-schwabische-alb/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "Kutschfahrten über die Schwäbische Alb",
       "category": "feste",
       "city": "Münsingen",
@@ -742,6 +819,28 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kutschfahrten-uber-die-schwabische-alb/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
       "page": 4
+    },
+    {
+      "title": "Workshop Palliative Care – Eine Ethik der Sorge, Verlässlichkeit und Würde mit Prof. Dr. Sr. M. Magdalena Schleinschok",
+      "category": "feste",
+      "city": "Rottenburg am Neckar",
+      "startDate": "2026-05-28",
+      "endDate": "2026-05-28",
+      "time": "17:00 - 19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/workshop-palliative-care-eine-ethik-der-sorge-verlasslichkeit-und-wurde-mit-prof-dr-sr-m-magdalena-schleinschok/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Bilderbuchkino „Petronella Apfelmus“",
+      "category": "feste",
+      "city": "Sigmaringen",
+      "startDate": "2026-05-28",
+      "endDate": "2026-05-28",
+      "time": "16:00 - 16:40 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bilderbuchkino-petronella-apfelmus/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "SeeferienMinidisco",
@@ -760,6 +859,17 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Uhldingen-Mühlhofen, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Erfolgsgeschichte in der Felswand: Wanderfalken-Vortrag und -Vernissage mit Dr. Michael Preusch MdL im Naturparkzentrum",
+      "category": "feste",
+      "city": "Zaberfeld",
+      "startDate": "2026-05-28",
+      "endDate": "2026-05-28",
+      "time": "18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/erfolgsgeschichte-in-der-felswand-wanderfalken-vortrag-und-vernissage-mit-dr-michael-preusch-mdl-im-naturparkzentrum/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Sommerfest",
@@ -930,6 +1040,17 @@
       "page": 7
     },
     {
+      "title": "Campus Festival Konstanz 2026 - Kombiticket Freitag & Samstag",
+      "category": "feste",
+      "city": "Konstanz",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "15:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/campus-festival-konstanz-2026-kombiticket-freitag-samstag/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "Neverland Childhood Party People / Das MITSING Konzert Fan Tour",
       "category": "feste",
       "city": "Mannheim",
@@ -968,6 +1089,17 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Mannheim, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Summer Beats Herrmannsee",
+      "category": "feste",
+      "city": "Pforzheim",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/summer-beats-herrmannsee/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Spieleabend",
@@ -1037,6 +1169,28 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Sigmaringen, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Mama macht Party",
+      "category": "feste",
+      "city": "Stuttgart",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mama-macht-party-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Matching Night Stuttgart",
+      "category": "feste",
+      "city": "Stuttgart",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/matching-night-stuttgart-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Frl. Wommy Wonder \"Aber hallo!\"",
@@ -33475,28 +33629,6 @@
       "page": 217
     },
     {
-      "title": "Naturparkmarkt",
-      "category": "maerkte",
-      "city": "Löwenstein",
-      "startDate": "2026-05-24",
-      "endDate": "2026-05-24",
-      "time": "",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturparkmarkt-3/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
-      "page": 1
-    },
-    {
-      "title": "Naturparkmarkt Löwenstein",
-      "category": "maerkte",
-      "city": "Löwenstein",
-      "startDate": "2026-05-24",
-      "endDate": "2026-05-24",
-      "time": "11:00 - 17:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturparkmarkt-lowenstein/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
-      "page": 1
-    },
-    {
       "title": "Trossinger Pfingstmarkt",
       "category": "maerkte",
       "city": "Trossingen",
@@ -33639,6 +33771,28 @@
       "endDate": "2026-06-14",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturparkmarkt-4/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
+      "page": 1
+    },
+    {
+      "title": "Häussler Backtage",
+      "category": "maerkte",
+      "city": "Altheim",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-20",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/haeussler-backtage/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
+      "page": 1
+    },
+    {
+      "title": "Büchermarkt",
+      "category": "maerkte",
+      "city": "Kirchberg an der Jagst",
+      "startDate": "2026-06-20",
+      "endDate": "2026-06-20",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/buechermarkt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "page": 1
     },
