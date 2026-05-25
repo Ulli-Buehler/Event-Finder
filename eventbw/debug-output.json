@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-31",
-    "startedAt": "2026-05-25T14:00:32.901Z",
-    "finishedAt": "2026-05-25T14:03:20.456Z",
+    "startedAt": "2026-05-25T15:00:33.760Z",
+    "finishedAt": "2026-05-25T15:02:49.704Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -97,10 +97,10 @@
       "rawCollectedIncludingDuplicates": 3167,
       "rawUnique": 3167,
       "targetDateMatches": 19,
-      "targetDateWithGeo": 13,
-      "targetDateWithoutGeo": 6,
-      "targetDateGeoEstimated": 13,
-      "targetDateGeoEstimatedFromCity": 11,
+      "targetDateWithGeo": 18,
+      "targetDateWithoutGeo": 1,
+      "targetDateGeoEstimated": 18,
+      "targetDateGeoEstimatedFromCity": 16,
       "targetDateGeoManualLocality": 0,
       "targetDateGeoFromEventBwDetailCoordinates": 0,
       "targetDateGeoEstimatedFromDetail": 1,
@@ -125,9 +125,9 @@
       "targetDateMaerkte": 1,
       "targetDateFeste": 18,
       "targetDateWithGeoMaerkte": 1,
-      "targetDateWithGeoFeste": 12,
+      "targetDateWithGeoFeste": 17,
       "targetDateWithoutGeoMaerkte": 0,
-      "targetDateWithoutGeoFeste": 6
+      "targetDateWithoutGeoFeste": 1
     }
   },
   "pages": [
@@ -3621,7 +3621,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 47.5527459,
+      "lng": 7.9410556,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Bad Säckingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Brückenfest in Röt-Schönegründ",
@@ -3688,7 +3693,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4635303,
+      "lng": 8.9855203,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Geopark Ranger",
@@ -3701,7 +3711,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4635303,
+      "lng": 8.9855203,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
     },
     {
       "title": "TECH by Handelsblatt",
@@ -3750,7 +3765,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4933675,
+      "lng": 9.7831552,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsbad So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Öffnung des Wasserturms Liebelsberg",
@@ -3848,7 +3868,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.5833,
+      "lng": 9.36667,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Walldürn So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Vortrag „Gesunde Ernährung“ mit Frau Klein-Unverzagt",
@@ -37108,7 +37133,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 47.5527459,
+      "lng": 7.9410556,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Bad Säckingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Brückenfest in Röt-Schönegründ",
@@ -37175,7 +37205,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4635303,
+      "lng": 8.9855203,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Geopark Ranger",
@@ -37188,7 +37223,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4635303,
+      "lng": 8.9855203,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
     },
     {
       "title": "TECH by Handelsblatt",
@@ -37237,7 +37277,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4933675,
+      "lng": 9.7831552,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsbad So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Öffnung des Wasserturms Liebelsberg",
@@ -37335,7 +37380,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.5833,
+      "lng": 9.36667,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Walldürn So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Naturpark-Markt Ettlingen",
@@ -37430,7 +37480,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 47.5527459,
+      "lng": 7.9410556,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Bad Säckingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Brückenfest in Röt-Schönegründ",
@@ -37497,7 +37552,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4635303,
+      "lng": 8.9855203,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Geopark Ranger",
@@ -37510,7 +37570,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4635303,
+      "lng": 8.9855203,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
     },
     {
       "title": "TECH by Handelsblatt",
@@ -37559,7 +37624,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4933675,
+      "lng": 9.7831552,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsbad So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Öffnung des Wasserturms Liebelsberg",
@@ -37657,7 +37727,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.5833,
+      "lng": 9.36667,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Walldürn So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Naturpark-Markt Ettlingen",
@@ -37752,7 +37827,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 47.5527459,
+      "lng": 7.9410556,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Bad Säckingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Brückenfest in Röt-Schönegründ",
@@ -37819,7 +37899,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4635303,
+      "lng": 8.9855203,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Geopark Ranger",
@@ -37832,7 +37917,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4635303,
+      "lng": 8.9855203,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
     },
     {
       "title": "TECH by Handelsblatt",
@@ -37881,7 +37971,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4933675,
+      "lng": 9.7831552,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsbad So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Öffnung des Wasserturms Liebelsberg",
@@ -37979,7 +38074,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.5833,
+      "lng": 9.36667,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Walldürn So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Naturpark-Markt Ettlingen",
