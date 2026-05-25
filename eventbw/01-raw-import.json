@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-31",
-    "startedAt": "2026-05-25T05:00:32.239Z",
-    "finishedAt": "2026-05-25T05:03:32.332Z",
+    "startedAt": "2026-05-25T06:00:33.001Z",
+    "finishedAt": "2026-05-25T06:04:07.819Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 229,
-      "rawCollectedIncludingDuplicates": 3165,
-      "rawUnique": 3163,
+      "rawCollectedIncludingDuplicates": 3167,
+      "rawUnique": 3167,
       "targetDateMatches": 31,
       "targetDateWithGeo": 29,
       "targetDateWithoutGeo": 2,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 31,
       "rawMaerkte": 134,
-      "rawFeste": 3029,
+      "rawFeste": 3033,
       "targetDateMaerkte": 2,
       "targetDateFeste": 29,
       "targetDateWithGeoMaerkte": 2,
@@ -7049,6 +7049,28 @@
       "page": 44
     },
     {
+      "title": "Bücherbärchen-Vorlesegeschichte „Der Waldbuchclub“",
+      "category": "feste",
+      "city": "Sigmaringen",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-18",
+      "time": "16:00 - 16:35 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bucherbarchen-vorlesegeschichte-der-waldbuchclub/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/44/",
+      "page": 44
+    },
+    {
+      "title": "Jets Duo",
+      "category": "feste",
+      "city": "Tauberbischofsheim",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-18",
+      "time": "19:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/jets-duo/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/44/",
+      "page": 44
+    },
+    {
       "title": "Yoga am Abend – Zeit für mich!",
       "category": "feste",
       "city": "Wertheim",
@@ -7221,8 +7243,8 @@
       "endDate": "2026-06-19",
       "time": "19:30 - 20:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/platzkonzert-mit-der-trachtenkapelle-herrischried-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/44/",
-      "page": 44
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/45/",
+      "page": 45
     },
     {
       "title": "Ingelfinger Weindorf",
@@ -7364,8 +7386,8 @@
       "endDate": "2026-06-21",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/southside-festival-neuhausen-ob-eck/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/44/",
-      "page": 44
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/45/",
+      "page": 45
     },
     {
       "title": "Festivalpass All Days | Southside Festival 2026",
@@ -33579,6 +33601,28 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/seefest/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/216/",
       "page": 216
+    },
+    {
+      "title": "AMERICANA",
+      "category": "feste",
+      "city": "Friedrichshafen",
+      "startDate": "2027-09-01",
+      "endDate": "2027-09-05",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/americana-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/217/",
+      "page": 217
+    },
+    {
+      "title": "Hakorennen der Hako-Freunde Weiher auf dem Vereinsgelände des Reitervereins",
+      "category": "feste",
+      "city": "Ubstadt-Weiher",
+      "startDate": "2027-09-03",
+      "endDate": "2027-09-03",
+      "time": "14:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/hakorennen-der-hako-freunde-weiher-auf-dem-vereinsgelande-des-reitervereins-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/217/",
+      "page": 217
     },
     {
       "title": "WDC Weltmeisterschaft 2027 Kür Standard der Professionals",
