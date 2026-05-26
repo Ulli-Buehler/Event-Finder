@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-31",
-    "startedAt": "2026-05-26T13:00:37.870Z",
-    "finishedAt": "2026-05-26T13:03:13.397Z",
+    "startedAt": "2026-05-26T14:00:39.989Z",
+    "finishedAt": "2026-05-26T14:03:43.022Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -97,26 +97,26 @@
       "rawCollectedIncludingDuplicates": 3142,
       "rawUnique": 3142,
       "targetDateMatches": 19,
-      "targetDateWithGeo": 18,
-      "targetDateWithoutGeo": 1,
-      "targetDateGeoEstimated": 18,
-      "targetDateGeoEstimatedFromCity": 16,
+      "targetDateWithGeo": 3,
+      "targetDateWithoutGeo": 16,
+      "targetDateGeoEstimated": 3,
+      "targetDateGeoEstimatedFromCity": 0,
       "targetDateGeoManualLocality": 0,
       "targetDateGeoFromEventBwDetailCoordinates": 0,
-      "targetDateGeoEstimatedFromDetail": 1,
+      "targetDateGeoEstimatedFromDetail": 0,
       "targetDateGeoEstimatedFromCompoundCity": 0,
-      "targetDateGeoEstimatedFromTitle": 0,
+      "targetDateGeoEstimatedFromTitle": 2,
       "targetDateGeoEstimatedFromBodenseeRegion": 1,
       "targetDateDetailCoordinateGeoChecked": 19,
       "targetDateDetailCoordinateGeoRecovered": 0,
       "targetDateDetailCoordinateGeoFailed": 0,
       "targetDateDetailGoogleMapsQueries": 2,
       "targetDateDetailGeoChecked": 2,
-      "targetDateDetailGeoRecovered": 1,
-      "targetDateCompoundCityGeoChecked": 0,
+      "targetDateDetailGeoRecovered": 0,
+      "targetDateCompoundCityGeoChecked": 4,
       "targetDateCompoundCityGeoRecovered": 0,
-      "targetDateTitleGeoChecked": 0,
-      "targetDateTitleGeoRecovered": 0,
+      "targetDateTitleGeoChecked": 2,
+      "targetDateTitleGeoRecovered": 2,
       "targetDateBodenseeRegionGeoChecked": 1,
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 19,
@@ -124,10 +124,10 @@
       "rawFeste": 3009,
       "targetDateMaerkte": 1,
       "targetDateFeste": 18,
-      "targetDateWithGeoMaerkte": 1,
-      "targetDateWithGeoFeste": 17,
-      "targetDateWithoutGeoMaerkte": 0,
-      "targetDateWithoutGeoFeste": 1
+      "targetDateWithGeoMaerkte": 0,
+      "targetDateWithGeoFeste": 3,
+      "targetDateWithoutGeoMaerkte": 1,
+      "targetDateWithoutGeoFeste": 15
     }
   },
   "events": [
@@ -145,12 +145,7 @@
       "geoDetailCoordinateFound": false,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Heuneburg - Stadt Pyrene,",
-      "lat": 48.095332,
-      "lng": 9.4109119,
-      "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Heuneburg - Stadt Pyrene,, Baden-Württemberg, Germany"
+      "geoDetailLocation": "Heuneburg - Stadt Pyrene,"
     },
     {
       "title": "Frühschoppen & Schwabenklang",
@@ -186,12 +181,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.9159087,
-      "lng": 7.6999845,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Krozingen So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "VfB im Ländle - Sommertour 2026",
@@ -204,12 +194,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.5527459,
-      "lng": 7.9410556,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Säckingen So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Brückenfest in Röt-Schönegründ",
@@ -223,11 +208,21 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.5575644,
-      "lng": 8.3960852,
+      "geoCompoundCityChecked": true,
+      "geoCompoundCityQueries": [
+        "Röt So,, Baiersbronn, Baden-Württemberg, Germany",
+        "Röt So,, Baden-Württemberg, Germany",
+        "Baiersbronn, Baden-Württemberg, Germany"
+      ],
+      "geoCompoundCityFound": false,
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Röt-Schönegründ",
+      "lat": 48.5618661,
+      "lng": 8.3974059,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn-Röt So,, Baden-Württemberg, Germany"
+      "geoSource": "derived-title",
+      "geoQuery": "Röt-Schönegründ, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Konzert beim Brückenfest mit dem Harmonika-Spielring Baiersbronn",
@@ -241,11 +236,13 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.5575644,
-      "lng": 8.3960852,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn-Röt So,, Baden-Württemberg, Germany"
+      "geoCompoundCityChecked": true,
+      "geoCompoundCityQueries": [
+        "Röt So,, Baiersbronn, Baden-Württemberg, Germany",
+        "Röt So,, Baden-Württemberg, Germany",
+        "Baiersbronn, Baden-Württemberg, Germany"
+      ],
+      "geoCompoundCityFound": false
     },
     {
       "title": "Fachwerkführung zum Deutschen Fachwerktag",
@@ -259,11 +256,13 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.9493243,
-      "lng": 9.1364229,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bietigheim-Bissingen So,, Baden-Württemberg, Germany"
+      "geoCompoundCityChecked": true,
+      "geoCompoundCityQueries": [
+        "Bissingen So,, Bietigheim, Baden-Württemberg, Germany",
+        "Bissingen So,, Baden-Württemberg, Germany",
+        "Bietigheim, Baden-Württemberg, Germany"
+      ],
+      "geoCompoundCityFound": false
     },
     {
       "title": "Bertram Engel: Mit alten Männern spiel ich nicht",
@@ -276,12 +275,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.4635303,
-      "lng": 8.9855203,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Geopark Ranger",
@@ -294,12 +288,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.4635303,
-      "lng": 8.9855203,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "TECH by Handelsblatt",
@@ -312,12 +301,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.142291,
-      "lng": 9.218655,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Heilbronn So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Vollmondabend - Berg in Flammen",
@@ -331,11 +315,14 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.864499,
-      "lng": 9.3766192,
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Flammen",
+      "lat": 47.778406,
+      "lng": 9.767565,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Illmensee So,, Baden-Württemberg, Germany"
+      "geoSource": "derived-title",
+      "geoQuery": "Flammen, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "FÖRST Esel & Wein - Eselwanderung in die Weinberge",
@@ -348,12 +335,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.4933675,
-      "lng": 9.7831552,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsbad So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Öffnung des Wasserturms Liebelsberg",
@@ -366,12 +348,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.6617473,
-      "lng": 8.6958614,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Neubulach So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Der Dorfpolizist - Alltagsleben im historischen Dorf",
@@ -384,12 +361,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.9713529,
-      "lng": 8.9283473,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Neuhausen ob Eck So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Frühschoppen mit der Musikkapelle Aach-Linz",
@@ -403,11 +375,13 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.9083472,
-      "lng": 9.2030635,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Pfullendorf/Aach-Linz So,, Baden-Württemberg, Germany"
+      "geoCompoundCityChecked": true,
+      "geoCompoundCityQueries": [
+        "Linz So,, Pfullendorf/Aach, Baden-Württemberg, Germany",
+        "Linz So,, Baden-Württemberg, Germany",
+        "Pfullendorf/Aach, Baden-Württemberg, Germany"
+      ],
+      "geoCompoundCityFound": false
     },
     {
       "title": "Apfelwiesenfest im Streuobst-Lehrpfad Hiltental",
@@ -433,12 +407,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.198851,
-      "lng": 8.2856229,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Hauptwallfahrtszeit Walldürn",
@@ -451,12 +420,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.5833,
-      "lng": 9.36667,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Walldürn So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Naturpark-Markt Ettlingen",
@@ -469,12 +433,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "page": 1,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.9414188,
-      "lng": 8.4076347,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Ettlingen So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     }
   ],
   "removed": [
@@ -492,12 +451,7 @@
       "geoDetailCoordinateFound": false,
       "geoDetailChecked": true,
       "geoDetailFound": true,
-      "geoDetailLocation": "Heuneburg - Stadt Pyrene,",
-      "lat": 48.095332,
-      "lng": 9.4109119,
-      "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Heuneburg - Stadt Pyrene,, Baden-Württemberg, Germany"
+      "geoDetailLocation": "Heuneburg - Stadt Pyrene,"
     },
     {
       "title": "Frühschoppen & Schwabenklang",
@@ -533,12 +487,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.9159087,
-      "lng": 7.6999845,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Krozingen So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "VfB im Ländle - Sommertour 2026",
@@ -551,12 +500,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.5527459,
-      "lng": 7.9410556,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bad Säckingen So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Brückenfest in Röt-Schönegründ",
@@ -570,11 +514,21 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.5575644,
-      "lng": 8.3960852,
+      "geoCompoundCityChecked": true,
+      "geoCompoundCityQueries": [
+        "Röt So,, Baiersbronn, Baden-Württemberg, Germany",
+        "Röt So,, Baden-Württemberg, Germany",
+        "Baiersbronn, Baden-Württemberg, Germany"
+      ],
+      "geoCompoundCityFound": false,
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Röt-Schönegründ",
+      "lat": 48.5618661,
+      "lng": 8.3974059,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn-Röt So,, Baden-Württemberg, Germany"
+      "geoSource": "derived-title",
+      "geoQuery": "Röt-Schönegründ, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Konzert beim Brückenfest mit dem Harmonika-Spielring Baiersbronn",
@@ -588,11 +542,13 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.5575644,
-      "lng": 8.3960852,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn-Röt So,, Baden-Württemberg, Germany"
+      "geoCompoundCityChecked": true,
+      "geoCompoundCityQueries": [
+        "Röt So,, Baiersbronn, Baden-Württemberg, Germany",
+        "Röt So,, Baden-Württemberg, Germany",
+        "Baiersbronn, Baden-Württemberg, Germany"
+      ],
+      "geoCompoundCityFound": false
     },
     {
       "title": "Fachwerkführung zum Deutschen Fachwerktag",
@@ -606,11 +562,13 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 48.9493243,
-      "lng": 9.1364229,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Bietigheim-Bissingen So,, Baden-Württemberg, Germany"
+      "geoCompoundCityChecked": true,
+      "geoCompoundCityQueries": [
+        "Bissingen So,, Bietigheim, Baden-Württemberg, Germany",
+        "Bissingen So,, Baden-Württemberg, Germany",
+        "Bietigheim, Baden-Württemberg, Germany"
+      ],
+      "geoCompoundCityFound": false
     },
     {
       "title": "Bertram Engel: Mit alten Männern spiel ich nicht",
@@ -623,12 +581,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.4635303,
-      "lng": 8.9855203,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Geopark Ranger",
@@ -641,12 +594,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.4635303,
-      "lng": 8.9855203,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "TECH by Handelsblatt",
@@ -659,12 +607,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.142291,
-      "lng": 9.218655,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Heilbronn So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Vollmondabend - Berg in Flammen",
@@ -678,11 +621,14 @@
       "page": 8,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.864499,
-      "lng": 9.3766192,
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Flammen",
+      "lat": 47.778406,
+      "lng": 9.767565,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Illmensee So,, Baden-Württemberg, Germany"
+      "geoSource": "derived-title",
+      "geoQuery": "Flammen, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "FÖRST Esel & Wein - Eselwanderung in die Weinberge",
@@ -695,12 +641,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.4933675,
-      "lng": 9.7831552,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsbad So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Öffnung des Wasserturms Liebelsberg",
@@ -713,12 +654,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.6617473,
-      "lng": 8.6958614,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Neubulach So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Der Dorfpolizist - Alltagsleben im historischen Dorf",
@@ -731,12 +667,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.9713529,
-      "lng": 8.9283473,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Neuhausen ob Eck So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Frühschoppen mit der Musikkapelle Aach-Linz",
@@ -750,11 +681,13 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.9083472,
-      "lng": 9.2030635,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Pfullendorf/Aach-Linz So,, Baden-Württemberg, Germany"
+      "geoCompoundCityChecked": true,
+      "geoCompoundCityQueries": [
+        "Linz So,, Pfullendorf/Aach, Baden-Württemberg, Germany",
+        "Linz So,, Baden-Württemberg, Germany",
+        "Pfullendorf/Aach, Baden-Württemberg, Germany"
+      ],
+      "geoCompoundCityFound": false
     },
     {
       "title": "Apfelwiesenfest im Streuobst-Lehrpfad Hiltental",
@@ -780,12 +713,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/8/",
       "page": 8,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.198851,
-      "lng": 8.2856229,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Hauptwallfahrtszeit Walldürn",
@@ -798,12 +726,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.5833,
-      "lng": 9.36667,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Walldürn So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Naturpark-Markt Ettlingen",
@@ -816,12 +739,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "page": 1,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.9414188,
-      "lng": 8.4076347,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Ettlingen So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     }
   ]
 }
