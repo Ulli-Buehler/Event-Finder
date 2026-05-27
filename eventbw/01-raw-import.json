@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-31",
-    "startedAt": "2026-05-27T01:00:32.475Z",
-    "finishedAt": "2026-05-27T01:02:44.997Z",
+    "startedAt": "2026-05-27T02:00:34.214Z",
+    "finishedAt": "2026-05-27T02:02:35.444Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 227,
       "rawCollectedIncludingDuplicates": 3137,
-      "rawUnique": 3135,
+      "rawUnique": 3137,
       "targetDateMatches": 19,
       "targetDateWithGeo": 18,
       "targetDateWithoutGeo": 1,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 19,
       "rawMaerkte": 133,
-      "rawFeste": 3002,
+      "rawFeste": 3004,
       "targetDateMaerkte": 1,
       "targetDateFeste": 18,
       "targetDateWithGeoMaerkte": 1,
@@ -30742,6 +30742,17 @@
       "page": 198
     },
     {
+      "title": "Whisky-Tasting",
+      "category": "feste",
+      "city": "Radolfzell am Bodensee Do,",
+      "startDate": "2026-11-26",
+      "endDate": "2026-11-26",
+      "time": "19:00 - 21:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/whisky-tasting/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/199/",
+      "page": 199
+    },
+    {
       "title": "Alpenglühen Mädelsabend",
       "category": "feste",
       "city": "Teningen Do,",
@@ -30751,6 +30762,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/alpengluehen-maedelsabend/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/198/",
       "page": 198
+    },
+    {
+      "title": "Märchen & Menü im Landgasthof Zum Goldenen Kreuz",
+      "category": "feste",
+      "city": "Wilhelmsdorf Do,",
+      "startDate": "2026-11-26",
+      "endDate": "2026-11-26",
+      "time": "19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/marchen-menu-im-landgasthof-zum-goldenen-kreuz/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/199/",
+      "page": 199
     },
     {
       "title": "Baiersbronner FireAbend",
@@ -30903,8 +30925,8 @@
       "endDate": "2026-11-28",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schifffahrt-tagesfahrt-zum-weihnachtsmarkt-nach-colmar/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/199/",
-      "page": 199
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/200/",
+      "page": 200
     },
     {
       "title": "Adventsfahrten ab Konstanz",
@@ -30991,8 +31013,8 @@
       "endDate": "2026-11-28",
       "time": "11:00 - 16:45 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/adventsschifffahrten/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/199/",
-      "page": 199
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/200/",
+      "page": 200
     },
     {
       "title": "MetalEnz Unleashed Vol.4",
