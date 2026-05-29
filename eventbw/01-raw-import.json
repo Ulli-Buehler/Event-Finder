@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-31",
-    "startedAt": "2026-05-29T00:00:35.391Z",
-    "finishedAt": "2026-05-29T00:03:06.054Z",
+    "startedAt": "2026-05-29T01:00:31.113Z",
+    "finishedAt": "2026-05-29T01:02:42.292Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 232,
       "rawCollectedIncludingDuplicates": 3210,
-      "rawUnique": 3196,
+      "rawUnique": 3210,
       "targetDateMatches": 20,
       "targetDateWithGeo": 19,
       "targetDateWithoutGeo": 1,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 20,
       "rawMaerkte": 135,
-      "rawFeste": 3061,
+      "rawFeste": 3075,
       "targetDateMaerkte": 1,
       "targetDateFeste": 19,
       "targetDateWithGeoMaerkte": 1,
@@ -132,156 +132,13 @@
   },
   "events": [
     {
-      "title": "ESCAPE TO THE DINNER - Knack den Geschmack",
+      "title": "Sommerfest",
       "category": "feste",
       "city": "",
-      "startDate": "2026-05-28",
-      "endDate": "2026-05-28",
-      "time": "19:00 - 21:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/escape-to-the-dinner-knack-den-geschmack/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Lesen im Grünen - \"Dschungelspielplatz Klosterwiese\"",
-      "category": "feste",
-      "city": "",
-      "startDate": "2026-05-28",
-      "endDate": "2026-05-28",
-      "time": "15:30 - 16:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/lesen-im-grunen-dschungelspielplatz-klosterwiese/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Jahrmarkt Albstadt-Onstmettingen",
-      "category": "feste",
-      "city": "Albstadt Do,",
-      "startDate": "2026-05-28",
-      "endDate": "2026-05-28",
-      "time": "09:00 - 18:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/jahrmarkt-albstadt-onstmettingen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Busausfahrt - Alpirsbacher Klosterbräu",
-      "category": "feste",
-      "city": "Baiersbronn Do,",
-      "startDate": "2026-05-28",
-      "endDate": "2026-05-28",
-      "time": "13:45 - 17:45 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/busausfahrt-alpirsbacher-klosterbrau/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Ohne Moos nix los",
-      "category": "feste",
-      "city": "Baiersbronn Mitteltal Do,",
-      "startDate": "2026-05-28",
-      "endDate": "2026-05-28",
-      "time": "14:00 - 18:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/ohne-moos-nix-los-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Rangerstation Tonbachtal",
-      "category": "feste",
-      "city": "Baiersbronn-Tonbach Do,",
-      "startDate": "2026-05-28",
-      "endDate": "2026-05-28",
-      "time": "11:00 - 15:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/rangerstation-tonbachtal/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "AfterWork mit Viola",
-      "category": "feste",
-      "city": "Heilbronn Do,",
-      "startDate": "2026-05-28",
-      "endDate": "2026-05-28",
-      "time": "17:00 - 22:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/afterwork-mit-viola-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Einkehrrunde - Isny für Naturfreunde & Feierabendgenießer",
-      "category": "feste",
-      "city": "Isny im Allgäu Do,",
-      "startDate": "2026-05-28",
-      "endDate": "2026-05-28",
-      "time": "",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/einkehrrunde-isny-fur-naturfreunde-feierabendgenieser/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Der Besondere Film: Ach, diese Lücke, diese entsetzliche Lücke",
-      "category": "feste",
-      "city": "Kandern Do,",
-      "startDate": "2026-05-28",
-      "endDate": "2026-05-28",
-      "time": "20:15 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/der-besondere-film-ach-diese-lucke-diese-entsetzliche-lucke/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Habibi, das ist echt!",
-      "category": "feste",
-      "city": "Karlsruhe Do,",
-      "startDate": "2026-05-28",
-      "endDate": "2026-05-28",
-      "time": "21:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/habibi-das-ist-echt-premiere/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Internationale Bodenseewoche",
-      "category": "feste",
-      "city": "Konstanz Do,",
-      "startDate": "2026-05-28",
-      "endDate": "2026-05-28",
-      "time": "14:00 - 00:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationale-bodenseewoche/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "After Work Event im Burgfeld",
-      "category": "feste",
-      "city": "Lauffen Do,",
-      "startDate": "2026-05-28",
-      "endDate": "2026-05-28",
-      "time": "17:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/after-work-event-im-burgfeld/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Kutschfahrten über die Schwäbische Alb",
-      "category": "feste",
-      "city": "Münsingen Do,",
-      "startDate": "2026-05-28",
-      "endDate": "2026-05-28",
-      "time": "18:00 - 19:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kutschfahrten-uber-die-schwabische-alb/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "SeeferienMinidisco",
-      "category": "feste",
-      "city": "Uhldingen-Mühlhofen Do,",
-      "startDate": "2026-05-28",
-      "endDate": "2026-05-28",
-      "time": "",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/seeferienminidisco/",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "17:00 - 00:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommerfest-4/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1
     },
@@ -297,6 +154,17 @@
       "page": 3
     },
     {
+      "title": "Street Food Fiesta Bad Säckingen",
+      "category": "feste",
+      "city": "Bad Säckingen Fr,",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "16:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/street-food-fiesta-bad-sackingen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
       "title": "Backtag im Backhäusle",
       "category": "feste",
       "city": "Baiersbronn Fr,",
@@ -306,6 +174,39 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/backtag-im-backhausle/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
       "page": 3
+    },
+    {
+      "title": "Mountainbike-Fahrtechniktipps für Kids",
+      "category": "feste",
+      "city": "Baiersbronn Fr,",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "10:00 - 12:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mountainbike-fahrtechniktipps-fur-kids/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Wir gestalten einen Blumentopf",
+      "category": "feste",
+      "city": "Baiersbronn Fr,",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "14:30 - 17:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wir-basteln-einen-blumentopf/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Sonneninsel Steetfood Sommer | 5. Maiwochenende mit Crazy Foods",
+      "category": "feste",
+      "city": "Dobel Fr,",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sonneninsel-steetfood-sommer-5-maiwochenende-mit-crazy-foods/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
     },
     {
       "title": "Eiszeit-Safari/Eine Reise in die letzte Eiszeit",
@@ -396,6 +297,17 @@
       "page": 2
     },
     {
+      "title": "Campus Festival Konstanz 2026 - Kombiticket Freitag & Samstag",
+      "category": "feste",
+      "city": "Konstanz Fr,",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "15:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/campus-festival-konstanz-2026-kombiticket-freitag-samstag/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
       "title": "Neverland Childhood Party People / Das MITSING Konzert Fan Tour",
       "category": "feste",
       "city": "Mannheim Fr,",
@@ -416,6 +328,50 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/partyschiff-xxl-mannheim-90er/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2
+    },
+    {
+      "title": "Stadtfest",
+      "category": "feste",
+      "city": "Mannheim Fr,",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Summer Beats Herrmannsee",
+      "category": "feste",
+      "city": "Pforzheim Fr,",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/summer-beats-herrmannsee/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Spieleabend",
+      "category": "feste",
+      "city": "Radolfzell am Bodensee Fr,",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "20:00 - 03:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/spieleabend/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Seeblasen",
+      "category": "feste",
+      "city": "Sasbachwalden Fr,",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/seeblasen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
     },
     {
       "title": "Ein Augenblick Kunst im Kino - Abstrakte Malerei von Monika Kustermann mit dem Film \"Die Witwe Clicquot\"",
@@ -451,6 +407,28 @@
       "page": 2
     },
     {
+      "title": "Mama macht Party",
+      "category": "feste",
+      "city": "Stuttgart Fr,",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mama-macht-party-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Matching Night Stuttgart",
+      "category": "feste",
+      "city": "Stuttgart Fr,",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/matching-night-stuttgart-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
       "title": "Italienische Nacht mit \"Die Rossinis\" als Trio in Tauberbischofsheim",
       "category": "feste",
       "city": "Tauberbischofsheim Fr,",
@@ -460,6 +438,28 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/italienische-nacht-mit-den-rossinis/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2
+    },
+    {
+      "title": "Frl. Wommy Wonder \"Aber hallo!\"",
+      "category": "feste",
+      "city": "Uhldingen-Mühlhofen Fr,",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/frl-wommy-wonder-aber-hallo-3/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Scheunen-Festival und Open-Air Musik Party",
+      "category": "feste",
+      "city": "Weinstadt Fr,",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "time": "18:00 - 23:59 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/scheunen-festival-und-open-air-musik-party/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
     },
     {
       "title": "Tag der offenen Tür im Glasmuseum Wertheim",
@@ -484,6 +484,39 @@
       "page": 2
     },
     {
+      "title": "Beats and Wine | Discoparty E-Werk",
+      "category": "feste",
+      "city": "",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "time": "20:00 - 01:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/beats-and-wine-discoparty-e-werk/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Italienisches Sommerfest in Baden-Baden",
+      "category": "feste",
+      "city": "",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "time": "14:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/italienisches-sommerfest-in-baden-baden/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Kunsthandwerkermarkt Kloster Lichtenthal",
+      "category": "feste",
+      "city": "",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kunsthandwerkermarkt-kloster-lichtenthal/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "Met Opera 2025/26: Gabriela Lena Frank / Nilo Cruz EL ÚLTIMO SUEÑO DE FRIDA Y DIEGO",
       "category": "feste",
       "city": "",
@@ -493,6 +526,50 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/met-opera-2025-26-gabriela-lena-frank-nilo-cruz-el-ultimo-sueno-de-frida-y-diego/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
       "page": 4
+    },
+    {
+      "title": "Wir bepflanzen die Seele: Gärtnern als Spiegel des Inneren – Ein Kurs mit Gartenbuchautor Sven Beck",
+      "category": "feste",
+      "city": "Bad Bellingen Sa,",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "time": "10:30 - 13:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wir-bepflanzen-die-seele-gartnern-als-spiegel-des-inneren-ein-kurs-mit-gartenbuchautor-sven-beck/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Flohmarkt Kurpark",
+      "category": "feste",
+      "city": "Bad Krozingen Sa,",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "time": "09:00 - 15:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/flohmarkt-kurpark/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "48. Tanne-Waldlust Pokal",
+      "category": "feste",
+      "city": "Baiersbronn Sa,",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "time": "09:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/48-tanne-waldlust-pokal/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Bewirtung im Backhäusle",
+      "category": "feste",
+      "city": "Baiersbronn Sa,",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bewirtung-im-backhausle/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Grenzgängertour",
@@ -561,6 +638,17 @@
       "page": 3
     },
     {
+      "title": "We Love Oldschool",
+      "category": "feste",
+      "city": "Heidenheim Sa,",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "time": "21:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/we-love-oldschool/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "Sip & Strech – die Schampus-Yogastunde",
       "category": "feste",
       "city": "Heilbronn Sa,",
@@ -592,6 +680,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/das-neue-staatstheater-baustellenfuhrung-durch-modul-1/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
       "page": 4
+    },
+    {
+      "title": "RETRO - die Karlsruher Retro-Clubnacht",
+      "category": "feste",
+      "city": "Karlsruhe Sa,",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "time": "21:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/retro-die-karlsruher-retro-clubnacht/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Schwanensee- International Ballet Company Italia",
@@ -627,6 +726,28 @@
       "page": 6
     },
     {
+      "title": "Partyschiff XXL \"Mannheim\" - 90er",
+      "category": "feste",
+      "city": "Mannheim Sa,",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "time": "15:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/partyschiff-xxl-mannheim-90er-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Partyschiff XXL Mannheim - 90er",
+      "category": "feste",
+      "city": "Mannheim Sa,",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "time": "20:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/partyschiff-xxl-mannheim-90er-3/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "Blues Train",
       "category": "feste",
       "city": "Müllheim Sa,",
@@ -658,6 +779,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tolle-knolle-aktionen-zur-kartoffel-mit-dem-forum-ernahrung-des-landwirtschaftsamts/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
       "page": 3
+    },
+    {
+      "title": "Dumbas",
+      "category": "feste",
+      "city": "Ostrach-Wangen Sa,",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/dumbas/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "(W)Einblicke",
@@ -726,6 +858,17 @@
       "page": 4
     },
     {
+      "title": "BALAMBA NIGHTS",
+      "category": "feste",
+      "city": "Singen Sa,",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "time": "10:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/balamba-nights/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "Überlingen Vital",
       "category": "feste",
       "city": "Überlingen am Bodensee Sa,",
@@ -757,6 +900,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/14-birkendorfer-schopfschellenfest/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
       "page": 3
+    },
+    {
+      "title": "Tag der offenen Gartentür",
+      "category": "feste",
+      "city": "Waldkirch Sa,",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "time": "14:00 - 20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-offenen-gartentur/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Die Kelten in Baden-Württemberg - Vortrag, Buchvorstellung und Signierstunde",
