@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-31",
-    "startedAt": "2026-05-29T03:00:37.170Z",
-    "finishedAt": "2026-05-29T03:02:49.490Z",
+    "startedAt": "2026-05-29T04:00:35.947Z",
+    "finishedAt": "2026-05-29T04:02:43.463Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -93,9 +93,9 @@
       "Heroldstatt"
     ],
     "counts": {
-      "pages": 232,
-      "rawCollectedIncludingDuplicates": 3210,
-      "rawUnique": 3210,
+      "pages": 234,
+      "rawCollectedIncludingDuplicates": 3244,
+      "rawUnique": 3237,
       "targetDateMatches": 20,
       "targetDateWithGeo": 19,
       "targetDateWithoutGeo": 1,
@@ -120,8 +120,8 @@
       "targetDateBodenseeRegionGeoChecked": 1,
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 20,
-      "rawMaerkte": 135,
-      "rawFeste": 3075,
+      "rawMaerkte": 137,
+      "rawFeste": 3100,
       "targetDateMaerkte": 1,
       "targetDateFeste": 19,
       "targetDateWithGeoMaerkte": 1,
