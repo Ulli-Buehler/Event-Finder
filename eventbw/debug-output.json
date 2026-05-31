@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-05-31",
-    "startedAt": "2026-05-31T00:00:39.986Z",
-    "finishedAt": "2026-05-31T00:03:08.593Z",
+    "startedAt": "2026-05-31T01:00:32.876Z",
+    "finishedAt": "2026-05-31T01:03:04.733Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 233,
       "rawCollectedIncludingDuplicates": 3229,
-      "rawUnique": 3215,
+      "rawUnique": 3229,
       "targetDateMatches": 20,
       "targetDateWithGeo": 19,
       "targetDateWithoutGeo": 1,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 20,
       "rawMaerkte": 136,
-      "rawFeste": 3079,
+      "rawFeste": 3093,
       "targetDateMaerkte": 1,
       "targetDateFeste": 19,
       "targetDateWithGeoMaerkte": 1,
@@ -136,7 +136,7 @@
       "page": 1,
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "ok": true,
-      "reportedCount": 137,
+      "reportedCount": 136,
       "parsedCount": 14
     },
     {
@@ -2628,6 +2628,39 @@
       "page": 5
     },
     {
+      "title": "VDI-Vortrag: ERP-Projekte in der Praxis",
+      "category": "feste",
+      "city": "Albstadt-Ebingen Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "19:15 - 20:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vdi-vortrag-erp-projekte-in-der-praxis/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
+      "title": "Abendrundfahrt auf dem See",
+      "category": "feste",
+      "city": "Allensbach Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/abendrundfahrt-auf-dem-see/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
+      "title": "Sekt Charme und gute Laune",
+      "category": "feste",
+      "city": "Bad Urach Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "18:30 - 21:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sekt-charme-und-gute-laune-5/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
       "title": "Busausfahrt - Waldulmer Winzergenossenschaft Kappelrodeck",
       "category": "feste",
       "city": "Baiersbronn Mi,",
@@ -2659,6 +2692,39 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/marchen-erleben-fur-jung-und-alt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
       "page": 3
+    },
+    {
+      "title": "Trailwunschkonzert für Biobiker",
+      "category": "feste",
+      "city": "Baiersbronn Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "10:00 - 16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/trailwunschkonzert-fur-biobiker/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
+      "title": "Autokino",
+      "category": "feste",
+      "city": "Ehrenkirchen Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/autokino/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
+      "title": "Musikertage",
+      "category": "feste",
+      "city": "Emerkingen Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "21:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/musikertage-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
     },
     {
       "title": "Schauhaus: Großeltern erzählen!",
@@ -2694,6 +2760,17 @@
       "page": 3
     },
     {
+      "title": "Pflanzenmarkt: Rosen 2026",
+      "category": "feste",
+      "city": "Insel Mainau Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/pflanzenmarkt-rosen-2026/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
       "title": "„Auf dem Weg zur Fahrradnation?“ - Neue Perspektiven aus der Radverkehrsforschung",
       "category": "feste",
       "city": "Karlsruhe Mi,",
@@ -2705,6 +2782,17 @@
       "page": 5
     },
     {
+      "title": "Afterwork-Party",
+      "category": "feste",
+      "city": "Karlsruhe Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "20:00 - 00:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/afterwork-party-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
       "title": "Einführung in verschiedene Methoden zur Haltbarkeit von Lebensmitteln: „Halt mich fest!“ (Und jetzt! Wochen der Nachhaltigkeit)",
       "category": "feste",
       "city": "Karlsruhe Mi,",
@@ -2714,6 +2802,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/einfuhrung-in-verschiedene-methoden-zur-haltbarkeit-von-lebensmitteln-halt-mich-fest-und-jetzt-wochen-der-nachhaltigkeit/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5
+    },
+    {
+      "title": "Sichttermin für Pädagog:innen",
+      "category": "feste",
+      "city": "Karlsruhe Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "18:00 - 19:45 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sichttermin-fur-padagoginnen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
     },
     {
       "title": "Kino Open Air",
@@ -2738,6 +2837,17 @@
       "page": 3
     },
     {
+      "title": "Willys Sundowner",
+      "category": "feste",
+      "city": "Nordheim Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "18:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/willys-sundowner/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
       "title": "Seefestival Radolfzell 2026 - Querbeat - Konzert-Mittwoch",
       "category": "feste",
       "city": "Radolfzell Am Bodensee Mi,",
@@ -2760,6 +2870,17 @@
       "page": 3
     },
     {
+      "title": "Großer Zapfenstreich mit der Bürgermiliz",
+      "category": "feste",
+      "city": "Sipplingen Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/groser-zapfenstreich-mit-der-burgermiliz/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
       "title": "Musikalische Abendrundfahrt auf dem See - Sipplingen Genießen, Entspannen, Staunen",
       "category": "feste",
       "city": "Sipplingen Mi,",
@@ -2780,6 +2901,39 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bagatelle-club-edition-kickoff-vorfeiertag/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5
+    },
+    {
+      "title": "21. Mediendozentur: Die neue Weltunordnung",
+      "category": "feste",
+      "city": "Tübingen Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "18:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/21-mediendozentur-die-neue-weltunordnung/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
+      "title": "Sommer-Zeit im Bio-Weingut Idler",
+      "category": "feste",
+      "city": "Weinstadt Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "17:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommer-zeit-im-bio-weingut-idler/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
+      "title": "Yinyoga mit Livemusik",
+      "category": "feste",
+      "city": "Wertheim Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "19:00 - 21:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/yinyoga-mit-livemusik/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
     },
     {
       "title": "Wilde Landschaften am Schliffkopf",
@@ -36123,17 +36277,6 @@
       "page": 221
     },
     {
-      "title": "KUNST.MARKT.GENUSS. mit Vogtsburg-Markt",
-      "category": "maerkte",
-      "city": "Vogtsburg im Kaiserstuhl Sa,",
-      "startDate": "2026-05-30",
-      "endDate": "2026-05-30",
-      "time": "",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kunst-markt-genuss-mit-vogtsburg-markt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
-      "page": 1
-    },
-    {
       "title": "Naturpark-Markt Ettlingen",
       "category": "maerkte",
       "city": "Ettlingen So,",
@@ -36280,6 +36423,17 @@
       "endDate": "2026-06-20",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/darmsheimer-toepfermarkt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
+      "page": 1
+    },
+    {
+      "title": "Naturparkmarkt",
+      "category": "maerkte",
+      "city": "Ettlingen So,",
+      "startDate": "2026-06-21",
+      "endDate": "2026-06-21",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturparkmarkt-17/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "page": 1
     },
