@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-07",
-    "startedAt": "2026-06-01T00:00:37.690Z",
-    "finishedAt": "2026-06-01T00:03:35.410Z",
+    "startedAt": "2026-06-01T01:00:32.113Z",
+    "finishedAt": "2026-06-01T01:03:12.333Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 233,
       "rawCollectedIncludingDuplicates": 3219,
-      "rawUnique": 3205,
+      "rawUnique": 3219,
       "targetDateMatches": 42,
       "targetDateWithGeo": 40,
       "targetDateWithoutGeo": 2,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 37,
       "rawMaerkte": 135,
-      "rawFeste": 3070,
+      "rawFeste": 3084,
       "targetDateMaerkte": 2,
       "targetDateFeste": 40,
       "targetDateWithGeoMaerkte": 2,
@@ -132,156 +132,112 @@
   },
   "events": [
     {
-      "title": "Die Kelten in Baden-Württemberg - Vortrag, Buchvorstellung und Signierstunde",
+      "title": "Vortrag „Gesunde Ernährung“ mit Frau Klein-Unverzagt",
+      "category": "feste",
+      "city": "Bad Urach Mo,",
+      "startDate": "2026-06-01",
+      "endDate": "2026-06-01",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vortrag-gesunde-ernahrung-mit-frau-klein-unverzagt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Spiel und Spaß in Murgels Spielhaus",
+      "category": "feste",
+      "city": "Baiersbronn Mo,",
+      "startDate": "2026-06-01",
+      "endDate": "2026-06-01",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/spiel-und-spas-in-murgels-spielhaus/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Schifffahrt - Spargelplausch",
+      "category": "feste",
+      "city": "Breisach Mo,",
+      "startDate": "2026-06-01",
+      "endDate": "2026-06-01",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schifffahrt-spargelplausch-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Sneak für junges Publikum",
+      "category": "feste",
+      "city": "Karlsruhe Mo,",
+      "startDate": "2026-06-01",
+      "endDate": "2026-06-01",
+      "time": "17:45 - 19:35 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sneak-fur-junges-publikum/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Zeltfestival Rhein-Neckar",
+      "category": "feste",
+      "city": "Mannheim Mo,",
+      "startDate": "2026-06-01",
+      "endDate": "2026-06-01",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/zeltfestival-rhein-neckar/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "3 Tage Naturparkforscher - Wasser(er)leben",
+      "category": "feste",
+      "city": "Zaberfeld Mo,",
+      "startDate": "2026-06-01",
+      "endDate": "2026-06-01",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/3-tage-naturparkforscher-wassererleben/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Afterwork Baden-Baden @ RIZZI | Juni",
       "category": "feste",
       "city": "",
-      "startDate": "2026-05-31",
-      "endDate": "2026-05-31",
-      "time": "14:00 - 16:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/die-kelten-in-baden-wurttemberg-vortrag-buchvorstellung-und-signierstunde/",
+      "startDate": "2026-06-02",
+      "endDate": "2026-06-02",
+      "time": "17:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/afterwork-baden-baden-rizzi-juni/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1
     },
     {
-      "title": "Thunersee Musikanten",
+      "title": "Superhelden-Tag",
       "category": "feste",
-      "city": "Bad Krozingen So,",
-      "startDate": "2026-05-31",
-      "endDate": "2026-05-31",
-      "time": "10:30 - 11:45 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/thunersee-musikanten/",
+      "city": "",
+      "startDate": "2026-06-02",
+      "endDate": "2026-06-02",
+      "time": "09:00 - 12:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/superhelden-tag/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1
     },
     {
-      "title": "VfB im Ländle - Sommertour 2026",
+      "title": "Wie die Schwarzwaldmarie zu ihrem Bollenhut kam",
       "category": "feste",
-      "city": "Bad Säckingen So,",
-      "startDate": "2026-05-31",
-      "endDate": "2026-05-31",
-      "time": "12:00 - 18:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vfb-im-landle-sommertour-2026/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Kulinarische Wildpflanzenwanderung Baiersbronn",
-      "category": "feste",
-      "city": "Baiersbronn So,",
-      "startDate": "2026-05-31",
-      "endDate": "2026-05-31",
-      "time": "10:15 - 14:15 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kulinarische-wildpflanzenwanderung-baiersbronn/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Brückenfest in Röt-Schönegründ",
-      "category": "feste",
-      "city": "Baiersbronn-Röt So,",
-      "startDate": "2026-05-31",
-      "endDate": "2026-05-31",
-      "time": "10:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bruckenfest-in-rot-schonegrund/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Konzert beim Brückenfest mit dem Harmonika-Spielring Baiersbronn",
-      "category": "feste",
-      "city": "Baiersbronn-Röt So,",
-      "startDate": "2026-05-31",
-      "endDate": "2026-05-31",
-      "time": "11:30 - 12:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kurkonzert-beim-bruckenfest-mit-dem-harmonika-spielring-baiersbronn/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Bertram Engel: Mit alten Männern spiel ich nicht",
-      "category": "feste",
-      "city": "Eberbach So,",
-      "startDate": "2026-05-31",
-      "endDate": "2026-05-31",
-      "time": "20:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bertram-engel-mit-alten-mannern-spiel-ich-nicht/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "TECH by Handelsblatt",
-      "category": "feste",
-      "city": "Heilbronn So,",
-      "startDate": "2026-05-31",
-      "endDate": "2026-05-31",
-      "time": "15:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tech-by-handelsblatt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Vollmondabend - Berg in Flammen",
-      "category": "feste",
-      "city": "Illmensee So,",
-      "startDate": "2026-05-31",
-      "endDate": "2026-05-31",
-      "time": "18:00 - 22:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vollmondabend-berg-in-flammen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Öffnung des Wasserturms Liebelsberg",
-      "category": "feste",
-      "city": "Neubulach So,",
-      "startDate": "2026-05-31",
-      "endDate": "2026-05-31",
+      "city": "Baiersbronn Di,",
+      "startDate": "2026-06-02",
+      "endDate": "2026-06-02",
       "time": "14:00 - 17:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/offnung-des-wasserturms-liebelsberg/",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wie-die-schwarzwaldmarie-zu-ihrem-bollenhut-kam/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1
     },
     {
-      "title": "Der Dorfpolizist - Alltagsleben im historischen Dorf",
+      "title": "Tag der Kommunen - Rosenberg",
       "category": "feste",
-      "city": "Neuhausen ob Eck So,",
-      "startDate": "2026-05-31",
-      "endDate": "2026-05-31",
-      "time": "10:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/der-dorfpolizist-alltagsleben-im-historischen-dorf/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Apfelwiesenfest im Streuobst-Lehrpfad Hiltental",
-      "category": "feste",
-      "city": "Schwäbisches Streuobstparadies So,",
-      "startDate": "2026-05-31",
-      "endDate": "2026-05-31",
-      "time": "11:00 - 18:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/apfelwiesenfest-im-streuobst-lehrpfad-hiltental/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Begegnungen: Tausendundeine Tracht",
-      "category": "feste",
-      "city": "Vogtsbauernhof So,",
-      "startDate": "2026-05-31",
-      "endDate": "2026-05-31",
-      "time": "11:00 - 17:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/begegnungen-tausendundeine-tracht/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Hauptwallfahrtszeit Walldürn",
-      "category": "feste",
-      "city": "Walldürn So,",
-      "startDate": "2026-05-31",
-      "endDate": "2026-05-31",
-      "time": "",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/hauptwallfahrtszeit-walldurn/",
+      "city": "Ellwangen Di,",
+      "startDate": "2026-06-02",
+      "endDate": "2026-06-02",
+      "time": "09:50 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-kommunen-rosenberg/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1
     },
@@ -295,6 +251,50 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/innovation-trifft-alltag/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2
+    },
+    {
+      "title": "Natur-Schatzsuche und eigene Schatzkiste gestalten",
+      "category": "feste",
+      "city": "Seewald Di,",
+      "startDate": "2026-06-02",
+      "endDate": "2026-06-02",
+      "time": "15:00 - 16:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/natur-schatzsuche-und-eigene-schatzkiste-gestalten/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Kreativkneipe der AStA der FHU",
+      "category": "feste",
+      "city": "Tuttlingen Di,",
+      "startDate": "2026-06-02",
+      "endDate": "2026-06-02",
+      "time": "19:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kreativkneipe-der-asta-der-fhu/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Kreativkneipe der AsTA der HS Tuttlingen",
+      "category": "feste",
+      "city": "Tuttlingen Di,",
+      "startDate": "2026-06-02",
+      "endDate": "2026-06-02",
+      "time": "19:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kreativkneipe-der-asta-der-hs-tuttlingen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Open Air Kino",
+      "category": "feste",
+      "city": "Uhldingen-Mühlhofen Di,",
+      "startDate": "2026-06-02",
+      "endDate": "2026-06-02",
+      "time": "16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/open-air-kino-14/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
     },
     {
       "title": "KOMMUNALES KINO: \"Das Glück der Tüchtigen\"",
@@ -627,6 +627,83 @@
       "page": 4
     },
     {
+      "title": "Frohnleichnam auf der Blockhütte",
+      "category": "feste",
+      "city": "Baiersbronn-Tonbach Do,",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-04",
+      "time": "12:00 - 16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/frohnleichnam-auf-der-blockhutte/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Bienentag – Summende Helfer im Fokus!",
+      "category": "feste",
+      "city": "Beuren Do,",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-04",
+      "time": "13:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bienentag-summende-helfer-im-fokus/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "38. Unterheimbacher Dorffest",
+      "category": "feste",
+      "city": "Bretzfeld Do,",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-04",
+      "time": "10:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/38-unterheimbacher-dorffest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Fronleichnam",
+      "category": "feste",
+      "city": "Hüfingen Do,",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-04",
+      "time": "08:30 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fronleichnam/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Der Besondere Film: Song Sung Blue",
+      "category": "feste",
+      "city": "Kandern Do,",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-04",
+      "time": "20:15 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/der-besondere-film-song-sung-blue/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "1984 / 2052 (Voraufführung)",
+      "category": "feste",
+      "city": "Karlsruhe Do,",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-04",
+      "time": "19:30 - 23:55 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/1984-2052-vorauffuhrung/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Der Rosenkavalier",
+      "category": "feste",
+      "city": "Karlsruhe Do,",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-04",
+      "time": "17:00 - 21:25 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/der-rosenkavalier-wiederaufnahme/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "Ohrn Beach After-Work",
       "category": "feste",
       "city": "Öhringen Do,",
@@ -671,6 +748,39 @@
       "page": 4
     },
     {
+      "title": "Weinterrasse",
+      "category": "feste",
+      "city": "Sachsenheim Do,",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-04",
+      "time": "12:00 - 21:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinterrasse/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Nachmittagskino mit dem Film \"Vier Minus Drei\"",
+      "category": "feste",
+      "city": "Schramberg Do,",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-04",
+      "time": "14:30 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/nachmittagskino-mit-dem-film-vier-minus-drei/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Reben Rave",
+      "category": "feste",
+      "city": "Sexau Do,",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-04",
+      "time": "14:00 - 23:59 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/reben-rave/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "Fronleichnam in Untersimonswald mit Sakramentsprozession",
       "category": "feste",
       "city": "Simonswald Do,",
@@ -691,6 +801,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fruhschoppen-an-fronleichnam/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
       "page": 4
+    },
+    {
+      "title": "Fronleichnam in Sipplingen",
+      "category": "feste",
+      "city": "Sipplingen Do,",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-04",
+      "time": "09:00 - 11:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fronleichnam-in-sipplingen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Brunnenfest im Wilhelmsstift",
@@ -726,6 +847,17 @@
       "page": 4
     },
     {
+      "title": "Open Stage beim SeeferienFestival",
+      "category": "feste",
+      "city": "Uhldingen-Mühlhofen Do,",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-04",
+      "time": "11:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/open-stage-beim-seeferienfestival/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "AUSGEBUCHT - Workshop: Spinnen Zweitägig",
       "category": "feste",
       "city": "Vogtsbauernhof Do,",
@@ -748,6 +880,17 @@
       "page": 4
     },
     {
+      "title": "Drachentage auf Schloss Waldburg",
+      "category": "feste",
+      "city": "Waldburg Do,",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-04",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/drachentage-auf-schloss-waldburg/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "Sommerabendkonzerte an der Eselmühle",
       "category": "feste",
       "city": "Wangen im Allgäu Do,",
@@ -757,6 +900,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommerabendkonzerte-an-der-eselmuhle/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
       "page": 4
+    },
+    {
+      "title": "Fronleichnamsprozession im Ortsteil Oberwinden",
+      "category": "feste",
+      "city": "Winden im Elztal Do,",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-04",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fronleichnamsprozession-im-ortsteil-oberwinden/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "30. Schwarzwald Biker-Weekend",
@@ -34205,17 +34359,6 @@
       "page": 221
     },
     {
-      "title": "Naturpark-Markt Ettlingen",
-      "category": "maerkte",
-      "city": "Ettlingen So,",
-      "startDate": "2026-05-31",
-      "endDate": "2026-05-31",
-      "time": "11:00 - 17:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturpark-markt-ettlingen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
-      "page": 1
-    },
-    {
       "title": "Rosen-, Garten- & Kunstmarkt",
       "category": "maerkte",
       "city": "Waiblingen Sa,",
@@ -34369,6 +34512,17 @@
       "endDate": "2026-06-21",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturparkmarkt-17/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
+      "page": 1
+    },
+    {
+      "title": "Naturparkmarkt Plüderhausen",
+      "category": "maerkte",
+      "city": "Plüderhausen So,",
+      "startDate": "2026-06-21",
+      "endDate": "2026-06-21",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturparkmarkt-pluderhausen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "page": 1
     },
