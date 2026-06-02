@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-07",
-    "startedAt": "2026-06-02T16:00:47.871Z",
-    "finishedAt": "2026-06-02T16:03:49.638Z",
+    "startedAt": "2026-06-02T17:00:50.557Z",
+    "finishedAt": "2026-06-02T17:03:51.782Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -97,15 +97,15 @@
       "rawCollectedIncludingDuplicates": 3249,
       "rawUnique": 3249,
       "targetDateMatches": 43,
-      "targetDateWithGeo": 41,
-      "targetDateWithoutGeo": 2,
-      "targetDateGeoEstimated": 41,
-      "targetDateGeoEstimatedFromCity": 33,
+      "targetDateWithGeo": 31,
+      "targetDateWithoutGeo": 12,
+      "targetDateGeoEstimated": 31,
+      "targetDateGeoEstimatedFromCity": 22,
       "targetDateGeoManualLocality": 0,
       "targetDateGeoFromEventBwDetailCoordinates": 0,
       "targetDateGeoEstimatedFromDetail": 5,
       "targetDateGeoEstimatedFromCompoundCity": 3,
-      "targetDateGeoEstimatedFromTitle": 0,
+      "targetDateGeoEstimatedFromTitle": 1,
       "targetDateGeoEstimatedFromBodenseeRegion": 0,
       "targetDateDetailCoordinateGeoChecked": 43,
       "targetDateDetailCoordinateGeoRecovered": 0,
@@ -115,8 +115,8 @@
       "targetDateDetailGeoRecovered": 5,
       "targetDateCompoundCityGeoChecked": 3,
       "targetDateCompoundCityGeoRecovered": 3,
-      "targetDateTitleGeoChecked": 0,
-      "targetDateTitleGeoRecovered": 0,
+      "targetDateTitleGeoChecked": 1,
+      "targetDateTitleGeoRecovered": 1,
       "targetDateBodenseeRegionGeoChecked": 0,
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 38,
@@ -125,9 +125,9 @@
       "targetDateMaerkte": 2,
       "targetDateFeste": 41,
       "targetDateWithGeoMaerkte": 2,
-      "targetDateWithGeoFeste": 39,
+      "targetDateWithGeoFeste": 29,
       "targetDateWithoutGeoMaerkte": 0,
-      "targetDateWithoutGeoFeste": 2
+      "targetDateWithoutGeoFeste": 12
     }
   },
   "events": [
@@ -505,12 +505,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
       "page": 14,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "A Midsummer Night’s Dream",
@@ -523,12 +518,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/",
       "page": 13,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Bu sözler bizim – Die Worte gehören uns (Premiere | Prömiyer)",
@@ -541,12 +531,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/",
       "page": 13,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Jubiläums-4-Häfen-Rundfahrt mit exklusivem Insider-Wissen",
@@ -559,12 +544,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/",
       "page": 13,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Paradise Found - Die Tour (Und jetzt! Wochen der Nachhaltigkeit)",
@@ -577,12 +557,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/",
       "page": 13,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "REMSTAL SCHLEPPERTREFFEN",
@@ -608,12 +583,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
       "page": 12,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.2803765,
-      "lng": 9.6901512,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Künzelsau So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Kloster-Kinder-Welterbe | Familientag in Maulbronn",
@@ -627,11 +597,14 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
+      "geoTitleChecked": true,
+      "geoTitleLocation": "Maulbronn",
       "lat": 48.9986948,
       "lng": 8.8038083,
       "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Maulbronn So,, Baden-Württemberg, Germany"
+      "geoSource": "derived-title",
+      "geoQuery": "Maulbronn, Baden-Württemberg, Germany",
+      "geoTitleFound": true
     },
     {
       "title": "Ausstellungsführung \"Fledermäuse - Jäger der Dunkelheit\"",
@@ -665,12 +638,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
       "page": 12,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.9713529,
-      "lng": 8.9283473,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Neuhausen ob Eck So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Kräuterwochen 2026 Gärtnerei Denz Rosen und Kräuterfest",
@@ -683,12 +651,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
       "page": 14,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.6617131,
-      "lng": 8.8873571,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Öhningen So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Wasenwald-Festspiele: Tag der offenen Tür",
@@ -701,12 +664,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
       "page": 12,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.4919508,
-      "lng": 9.2114144,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Reutlingen So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Festspiel-Matinee",
@@ -719,12 +677,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/13/",
       "page": 13,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.8818426,
-      "lng": 10.2914506,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Röttingen So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Kann die Hoffnung jemals sterben? Storytelling mit Gesang, Erzählung, Schauspiel und Musik",
