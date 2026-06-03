@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-07",
-    "startedAt": "2026-06-03T00:00:37.022Z",
-    "finishedAt": "2026-06-03T00:03:07.718Z",
+    "startedAt": "2026-06-03T01:00:33.786Z",
+    "finishedAt": "2026-06-03T01:03:18.833Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 234,
       "rawCollectedIncludingDuplicates": 3240,
-      "rawUnique": 3231,
+      "rawUnique": 3240,
       "targetDateMatches": 43,
       "targetDateWithGeo": 41,
       "targetDateWithoutGeo": 2,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 38,
       "rawMaerkte": 135,
-      "rawFeste": 3096,
+      "rawFeste": 3105,
       "targetDateMaerkte": 2,
       "targetDateFeste": 41,
       "targetDateWithGeoMaerkte": 2,
@@ -223,7 +223,7 @@
       "page": 1,
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "ok": true,
-      "reportedCount": 3114,
+      "reportedCount": 3105,
       "parsedCount": 14
     },
     {
@@ -2243,105 +2243,6 @@
   },
   "rawEvents": [
     {
-      "title": "Afterwork Baden-Baden @ RIZZI | Juni",
-      "category": "feste",
-      "city": "",
-      "startDate": "2026-06-02",
-      "endDate": "2026-06-02",
-      "time": "17:00 - 22:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/afterwork-baden-baden-rizzi-juni/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Superhelden-Tag",
-      "category": "feste",
-      "city": "",
-      "startDate": "2026-06-02",
-      "endDate": "2026-06-02",
-      "time": "09:00 - 12:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/superhelden-tag/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Wie die Schwarzwaldmarie zu ihrem Bollenhut kam",
-      "category": "feste",
-      "city": "Baiersbronn Di,",
-      "startDate": "2026-06-02",
-      "endDate": "2026-06-02",
-      "time": "14:00 - 17:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wie-die-schwarzwaldmarie-zu-ihrem-bollenhut-kam/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Tag der Kommunen - Rosenberg",
-      "category": "feste",
-      "city": "Ellwangen Di,",
-      "startDate": "2026-06-02",
-      "endDate": "2026-06-02",
-      "time": "09:50 - 22:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-kommunen-rosenberg/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Innovation trifft Alltag",
-      "category": "feste",
-      "city": "Radolfzell am Bodensee Di,",
-      "startDate": "2026-06-02",
-      "endDate": "2026-06-02",
-      "time": "18:00 - 22:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/innovation-trifft-alltag/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Natur-Schatzsuche und eigene Schatzkiste gestalten",
-      "category": "feste",
-      "city": "Seewald Di,",
-      "startDate": "2026-06-02",
-      "endDate": "2026-06-02",
-      "time": "15:00 - 16:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/natur-schatzsuche-und-eigene-schatzkiste-gestalten/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Kreativkneipe der AStA der FHU",
-      "category": "feste",
-      "city": "Tuttlingen Di,",
-      "startDate": "2026-06-02",
-      "endDate": "2026-06-02",
-      "time": "19:00 - 22:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kreativkneipe-der-asta-der-fhu/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Kreativkneipe der AsTA der HS Tuttlingen",
-      "category": "feste",
-      "city": "Tuttlingen Di,",
-      "startDate": "2026-06-02",
-      "endDate": "2026-06-02",
-      "time": "19:00 - 22:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kreativkneipe-der-asta-der-hs-tuttlingen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Open Air Kino",
-      "category": "feste",
-      "city": "Uhldingen-Mühlhofen Di,",
-      "startDate": "2026-06-02",
-      "endDate": "2026-06-02",
-      "time": "16:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/open-air-kino-14/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
       "title": "KOMMUNALES KINO: \"Das Glück der Tüchtigen\"",
       "category": "feste",
       "city": "",
@@ -2351,6 +2252,28 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kommunales-kino-das-gluck-der-tuchtigen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2
+    },
+    {
+      "title": "VDI-Vortrag: ERP-Projekte in der Praxis",
+      "category": "feste",
+      "city": "Albstadt-Ebingen Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "19:15 - 20:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vdi-vortrag-erp-projekte-in-der-praxis/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Abendrundfahrt auf dem See",
+      "category": "feste",
+      "city": "Allensbach Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/abendrundfahrt-auf-dem-see/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
     },
     {
       "title": "Sekt Charme und gute Laune",
@@ -2386,6 +2309,17 @@
       "page": 1
     },
     {
+      "title": "Märchen erleben für Jung und Alt",
+      "category": "feste",
+      "city": "Baiersbronn Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "15:30 - 16:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/marchen-erleben-fur-jung-und-alt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
       "title": "Trailwunschkonzert für Biobiker",
       "category": "feste",
       "city": "Baiersbronn Mi,",
@@ -2395,6 +2329,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/trailwunschkonzert-fur-biobiker/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2
+    },
+    {
+      "title": "Autokino",
+      "category": "feste",
+      "city": "Ehrenkirchen Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/autokino/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
     },
     {
       "title": "Musikertage",
@@ -2496,6 +2441,17 @@
       "page": 2
     },
     {
+      "title": "Kino Open Air",
+      "category": "feste",
+      "city": "Kupferzell Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kino-open-air/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
       "title": "Weinlagen-Weinprobe im Muggardter Berg",
       "category": "feste",
       "city": "Müllheim Mi,",
@@ -2507,6 +2463,17 @@
       "page": 1
     },
     {
+      "title": "Willys Sundowner",
+      "category": "feste",
+      "city": "Nordheim Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "18:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/willys-sundowner/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
       "title": "Seefestival Radolfzell 2026 - Querbeat - Konzert-Mittwoch",
       "category": "feste",
       "city": "Radolfzell Am Bodensee Mi,",
@@ -2514,6 +2481,39 @@
       "endDate": "2026-06-03",
       "time": "18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/seefestival-radolfzell-2026-querbeat-konzert-mittwoch/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Von wilden Honigbienen",
+      "category": "feste",
+      "city": "Seebach Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "15:00 - 18:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/von-wilden-honigbienen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Großer Zapfenstreich mit der Bürgermiliz",
+      "category": "feste",
+      "city": "Sipplingen Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/groser-zapfenstreich-mit-der-burgermiliz/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Musikalische Abendrundfahrt auf dem See - Sipplingen Genießen, Entspannen, Staunen",
+      "category": "feste",
+      "city": "Sipplingen Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "17:30 - 18:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/musikalische-abendrundfahrt-auf-dem-see-sipplingen-geniesen-entspannen-staunen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1
     },
@@ -35556,6 +35556,39 @@
       "page": 215
     },
     {
+      "title": "Jahreskonzert des Musikverein Bernau",
+      "category": "feste",
+      "city": "Bernau im Schwarzwald Di,",
+      "startDate": "2026-12-29",
+      "endDate": "2026-12-29",
+      "time": "00:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/jahreskonzert-des-musikverein-bernau/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
+      "page": 215
+    },
+    {
+      "title": "Sundowner - Winterspecial",
+      "category": "feste",
+      "city": "Lauffen am Neckar Di,",
+      "startDate": "2026-12-29",
+      "endDate": "2026-12-29",
+      "time": "15:00 - 20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sundowner-winterspecial/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
+      "page": 215
+    },
+    {
+      "title": "Märchen zwischen den Jahren",
+      "category": "feste",
+      "city": "Ostrach Di,",
+      "startDate": "2026-12-29",
+      "endDate": "2026-12-29",
+      "time": "19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/marchen-zwischen-den-jahren/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
+      "page": 215
+    },
+    {
       "title": "Winterlagerfeuer",
       "category": "feste",
       "city": "Schwarzwaldregion Belchen Di,",
@@ -35563,6 +35596,72 @@
       "endDate": "2026-12-29",
       "time": "17:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/winterlagerfeuer/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
+      "page": 215
+    },
+    {
+      "title": "Silvester Dinner Ball",
+      "category": "feste",
+      "city": "",
+      "startDate": "2026-12-31",
+      "endDate": "2026-12-31",
+      "time": "19:00 - 02:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/silvester-dinner-ball/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
+      "page": 215
+    },
+    {
+      "title": "Bietigheimer Silvesterlauf",
+      "category": "feste",
+      "city": "Bietigheim-Bissingen Do,",
+      "startDate": "2026-12-31",
+      "endDate": "2026-12-31",
+      "time": "14:00 - 00:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bietigheimer-silvesterlauf/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
+      "page": 215
+    },
+    {
+      "title": "Die größte Kindersilvesterparty in Funny-World",
+      "category": "feste",
+      "city": "Kappel-Grafenhausen Do,",
+      "startDate": "2026-12-31",
+      "endDate": "2026-12-31",
+      "time": "11:00 - 14:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/die-groste-kindersilvesterparty-in-funny-world/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
+      "page": 215
+    },
+    {
+      "title": "Silvester in der schwäbischen Toskana 2026",
+      "category": "feste",
+      "city": "Löwenstein Do,",
+      "startDate": "2026-12-31",
+      "endDate": "2026-12-31",
+      "time": "19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/silvester-in-der-schwabischen-toskana-2026/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
+      "page": 215
+    },
+    {
+      "title": "Simisvester - Silvester im Dal",
+      "category": "feste",
+      "city": "Simonswald Do,",
+      "startDate": "2026-12-31",
+      "endDate": "2026-12-31",
+      "time": "14:00 - 04:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/simisvester-silvester-im-dal/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
+      "page": 215
+    },
+    {
+      "title": "Festliches Neujahrskonzert - Im Glanz von Trompete und Orgel",
+      "category": "feste",
+      "city": "Baiersbronn-Klosterreichenbach Fr,",
+      "startDate": "2027-01-01",
+      "endDate": "2027-01-01",
+      "time": "17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/festliches-neujahrskonzert-im-glanz-von-trompete-und-orgel/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
       "page": 215
     },
