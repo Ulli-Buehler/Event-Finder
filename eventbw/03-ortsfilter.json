@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-07",
-    "startedAt": "2026-06-03T10:00:45.960Z",
-    "finishedAt": "2026-06-03T10:03:58.702Z",
+    "startedAt": "2026-06-03T11:00:43.899Z",
+    "finishedAt": "2026-06-03T11:03:37.434Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 237,
-      "rawCollectedIncludingDuplicates": 3272,
-      "rawUnique": 3272,
+      "rawCollectedIncludingDuplicates": 3269,
+      "rawUnique": 3269,
       "targetDateMatches": 45,
       "targetDateWithGeo": 43,
       "targetDateWithoutGeo": 2,
@@ -120,7 +120,7 @@
       "targetDateBodenseeRegionGeoChecked": 0,
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 38,
-      "rawMaerkte": 135,
+      "rawMaerkte": 132,
       "rawFeste": 3137,
       "targetDateMaerkte": 2,
       "targetDateFeste": 43,
