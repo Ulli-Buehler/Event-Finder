@@ -14,21 +14,21 @@ Zieldatum: 2026-06-07
 
 Counts:
 {
-  "pages": 236,
-  "rawCollectedIncludingDuplicates": 3262,
-  "rawUnique": 3262,
-  "targetDateMatches": 45,
-  "targetDateWithGeo": 43,
+  "pages": 237,
+  "rawCollectedIncludingDuplicates": 3275,
+  "rawUnique": 3275,
+  "targetDateMatches": 46,
+  "targetDateWithGeo": 44,
   "targetDateWithoutGeo": 2,
-  "targetDateGeoEstimated": 43,
-  "targetDateGeoEstimatedFromCity": 35,
+  "targetDateGeoEstimated": 44,
+  "targetDateGeoEstimatedFromCity": 36,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 5,
   "targetDateGeoEstimatedFromCompoundCity": 3,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 0,
-  "targetDateDetailCoordinateGeoChecked": 45,
+  "targetDateDetailCoordinateGeoChecked": 46,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 5,
@@ -40,13 +40,13 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 0,
   "targetDateBodenseeRegionGeoRecovered": 0,
-  "nonRegionalTargetDateMatches": 38,
+  "nonRegionalTargetDateMatches": 39,
   "rawMaerkte": 132,
-  "rawFeste": 3130,
+  "rawFeste": 3143,
   "targetDateMaerkte": 2,
-  "targetDateFeste": 43,
+  "targetDateFeste": 44,
   "targetDateWithGeoMaerkte": 2,
-  "targetDateWithGeoFeste": 41,
+  "targetDateWithGeoFeste": 42,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 2
 }
@@ -245,6 +245,10 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Sigmaringen So,",
+    "count": 1
+  },
+  {
     "city": "Simonswald So,",
     "count": 1
   },
@@ -364,7 +368,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 3130,
+    "reportedCount": 3143,
     "parsedCount": 14
   },
   {
@@ -2149,12 +2153,20 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/224/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 8
+    "parsedCount": 14
   },
   {
     "category": "feste",
     "page": 225,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/225/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 7
+  },
+  {
+    "category": "feste",
+    "page": 226,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/226/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
