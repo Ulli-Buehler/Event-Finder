@@ -14,19 +14,19 @@ Zieldatum: 2026-06-07
 
 Counts:
 {
-  "pages": 234,
-  "rawCollectedIncludingDuplicates": 3240,
-  "rawUnique": 3226,
+  "pages": 235,
+  "rawCollectedIncludingDuplicates": 3244,
+  "rawUnique": 3241,
   "targetDateMatches": 45,
-  "targetDateWithGeo": 43,
-  "targetDateWithoutGeo": 2,
-  "targetDateGeoEstimated": 43,
-  "targetDateGeoEstimatedFromCity": 35,
+  "targetDateWithGeo": 23,
+  "targetDateWithoutGeo": 22,
+  "targetDateGeoEstimated": 23,
+  "targetDateGeoEstimatedFromCity": 12,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 5,
-  "targetDateGeoEstimatedFromCompoundCity": 3,
-  "targetDateGeoEstimatedFromTitle": 0,
+  "targetDateGeoEstimatedFromCompoundCity": 4,
+  "targetDateGeoEstimatedFromTitle": 2,
   "targetDateGeoEstimatedFromBodenseeRegion": 0,
   "targetDateDetailCoordinateGeoChecked": 45,
   "targetDateDetailCoordinateGeoRecovered": 0,
@@ -34,21 +34,21 @@ Counts:
   "targetDateDetailGoogleMapsQueries": 5,
   "targetDateDetailGeoChecked": 5,
   "targetDateDetailGeoRecovered": 5,
-  "targetDateCompoundCityGeoChecked": 3,
-  "targetDateCompoundCityGeoRecovered": 3,
-  "targetDateTitleGeoChecked": 0,
-  "targetDateTitleGeoRecovered": 0,
+  "targetDateCompoundCityGeoChecked": 5,
+  "targetDateCompoundCityGeoRecovered": 4,
+  "targetDateTitleGeoChecked": 2,
+  "targetDateTitleGeoRecovered": 2,
   "targetDateBodenseeRegionGeoChecked": 0,
   "targetDateBodenseeRegionGeoRecovered": 0,
   "nonRegionalTargetDateMatches": 38,
   "rawMaerkte": 132,
-  "rawFeste": 3094,
+  "rawFeste": 3109,
   "targetDateMaerkte": 2,
   "targetDateFeste": 43,
-  "targetDateWithGeoMaerkte": 2,
-  "targetDateWithGeoFeste": 41,
-  "targetDateWithoutGeoMaerkte": 0,
-  "targetDateWithoutGeoFeste": 2
+  "targetDateWithGeoMaerkte": 0,
+  "targetDateWithGeoFeste": 23,
+  "targetDateWithoutGeoMaerkte": 2,
+  "targetDateWithoutGeoFeste": 20
 }
 
 Regionale Ortsliste:
@@ -364,7 +364,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 3108,
+    "reportedCount": 3112,
     "parsedCount": 14
   },
   {
@@ -2139,6 +2139,14 @@ Pages:
     "category": "feste",
     "page": 223,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/223/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 4
+  },
+  {
+    "category": "feste",
+    "page": 224,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/224/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
