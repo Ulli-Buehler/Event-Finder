@@ -14,9 +14,9 @@ Zieldatum: 2026-06-07
 
 Counts:
 {
-  "pages": 235,
-  "rawCollectedIncludingDuplicates": 3244,
-  "rawUnique": 3244,
+  "pages": 236,
+  "rawCollectedIncludingDuplicates": 3262,
+  "rawUnique": 3262,
   "targetDateMatches": 45,
   "targetDateWithGeo": 43,
   "targetDateWithoutGeo": 2,
@@ -42,7 +42,7 @@ Counts:
   "targetDateBodenseeRegionGeoRecovered": 0,
   "nonRegionalTargetDateMatches": 38,
   "rawMaerkte": 132,
-  "rawFeste": 3112,
+  "rawFeste": 3130,
   "targetDateMaerkte": 2,
   "targetDateFeste": 43,
   "targetDateWithGeoMaerkte": 2,
@@ -364,7 +364,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 3112,
+    "reportedCount": 3130,
     "parsedCount": 14
   },
   {
@@ -2141,12 +2141,20 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/223/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 4
+    "parsedCount": 14
   },
   {
     "category": "feste",
     "page": 224,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/224/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 8
+  },
+  {
+    "category": "feste",
+    "page": 225,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/225/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
