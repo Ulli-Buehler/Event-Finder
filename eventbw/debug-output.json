@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-07",
-    "startedAt": "2026-06-04T01:00:36.787Z",
-    "finishedAt": "2026-06-04T01:04:00.185Z",
+    "startedAt": "2026-06-04T02:00:35.433Z",
+    "finishedAt": "2026-06-04T02:03:53.283Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,17 +95,17 @@
     "counts": {
       "pages": 235,
       "rawCollectedIncludingDuplicates": 3244,
-      "rawUnique": 3241,
+      "rawUnique": 3244,
       "targetDateMatches": 45,
-      "targetDateWithGeo": 23,
-      "targetDateWithoutGeo": 22,
-      "targetDateGeoEstimated": 23,
-      "targetDateGeoEstimatedFromCity": 12,
+      "targetDateWithGeo": 43,
+      "targetDateWithoutGeo": 2,
+      "targetDateGeoEstimated": 43,
+      "targetDateGeoEstimatedFromCity": 35,
       "targetDateGeoManualLocality": 0,
       "targetDateGeoFromEventBwDetailCoordinates": 0,
       "targetDateGeoEstimatedFromDetail": 5,
-      "targetDateGeoEstimatedFromCompoundCity": 4,
-      "targetDateGeoEstimatedFromTitle": 2,
+      "targetDateGeoEstimatedFromCompoundCity": 3,
+      "targetDateGeoEstimatedFromTitle": 0,
       "targetDateGeoEstimatedFromBodenseeRegion": 0,
       "targetDateDetailCoordinateGeoChecked": 45,
       "targetDateDetailCoordinateGeoRecovered": 0,
@@ -113,21 +113,21 @@
       "targetDateDetailGoogleMapsQueries": 5,
       "targetDateDetailGeoChecked": 5,
       "targetDateDetailGeoRecovered": 5,
-      "targetDateCompoundCityGeoChecked": 5,
-      "targetDateCompoundCityGeoRecovered": 4,
-      "targetDateTitleGeoChecked": 2,
-      "targetDateTitleGeoRecovered": 2,
+      "targetDateCompoundCityGeoChecked": 3,
+      "targetDateCompoundCityGeoRecovered": 3,
+      "targetDateTitleGeoChecked": 0,
+      "targetDateTitleGeoRecovered": 0,
       "targetDateBodenseeRegionGeoChecked": 0,
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 38,
       "rawMaerkte": 132,
-      "rawFeste": 3109,
+      "rawFeste": 3112,
       "targetDateMaerkte": 2,
       "targetDateFeste": 43,
-      "targetDateWithGeoMaerkte": 0,
-      "targetDateWithGeoFeste": 23,
-      "targetDateWithoutGeoMaerkte": 2,
-      "targetDateWithoutGeoFeste": 20
+      "targetDateWithGeoMaerkte": 2,
+      "targetDateWithGeoFeste": 41,
+      "targetDateWithoutGeoMaerkte": 0,
+      "targetDateWithoutGeoFeste": 2
     }
   },
   "pages": [
@@ -2216,8 +2216,8 @@
     ]
   },
   "compoundCityGeo": {
-    "checked": 5,
-    "recovered": 4,
+    "checked": 3,
+    "recovered": 3,
     "tried": [
       {
         "title": "KinderWerkstatt „Buttern, Backen, Kochen\"",
@@ -2245,52 +2245,13 @@
           "Hasselbach So,, Baden-Württemberg, Germany",
           "Sinsheim, Baden-Württemberg, Germany"
         ]
-      },
-      {
-        "title": "19. Tag der offenen Gärten in Uhldingen-Mühlhofen",
-        "city": "Uhldingen-Mühlhofen So,",
-        "queries": [
-          "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-          "Mühlhofen So,, Baden-Württemberg, Germany",
-          "Uhldingen, Baden-Württemberg, Germany"
-        ]
-      },
-      {
-        "title": "UNESCO-Welterbetag 2026: Gemeinsam für Frieden und Verständigung",
-        "city": "Uhldingen-Mühlhofen So,",
-        "queries": [
-          "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-          "Mühlhofen So,, Baden-Württemberg, Germany",
-          "Uhldingen, Baden-Württemberg, Germany"
-        ]
       }
     ]
   },
   "titleGeo": {
-    "checked": 2,
-    "recovered": 2,
-    "tried": [
-      {
-        "title": "Kloster-Kinder-Welterbe | Familientag in Maulbronn",
-        "city": "Maulbronn So,",
-        "extracted": "Maulbronn",
-        "queries": [
-          "Maulbronn, Maulbronn So,, Baden-Württemberg, Germany",
-          "Maulbronn, Baden-Württemberg, Germany",
-          "Maulbronn, Germany"
-        ]
-      },
-      {
-        "title": "Fronleichnam in Obersimonswald mit Sakramentsprozession",
-        "city": "Simonswald So,",
-        "extracted": "Obersimonswald",
-        "queries": [
-          "Obersimonswald, Simonswald So,, Baden-Württemberg, Germany",
-          "Obersimonswald, Baden-Württemberg, Germany",
-          "Obersimonswald, Germany"
-        ]
-      }
-    ]
+    "checked": 0,
+    "recovered": 0,
+    "tried": []
   },
   "bodenseeRegionGeo": {
     "checked": 0,
@@ -3693,7 +3654,12 @@
         "Kürnbach So,, Baden-Württemberg, Germany",
         "Bad Schussenried, Baden-Württemberg, Germany"
       ],
-      "geoCompoundCityFound": false
+      "lat": 47.99208,
+      "lng": 9.6710084,
+      "geoEstimated": true,
+      "geoSource": "derived-compound-city",
+      "geoQuery": "Kürnbach So,, Bad Schussenried, Baden-Württemberg, Germany",
+      "geoCompoundCityFound": true
     },
     {
       "title": "Brücken-Hock",
@@ -3807,7 +3773,7 @@
       "lng": 8.3639054,
       "geoEstimated": true,
       "geoSource": "derived-compound-city",
-      "geoQuery": "Tonbach So,, Baden-Württemberg, Germany",
+      "geoQuery": "Tonbach So,, Baiersbronn, Baden-Württemberg, Germany",
       "geoCompoundCityFound": true
     },
     {
@@ -3942,7 +3908,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "A Midsummer Night’s Dream",
@@ -3955,7 +3926,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Bu sözler bizim – Die Worte gehören uns (Premiere | Prömiyer)",
@@ -3968,7 +3944,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Jubiläums-4-Häfen-Rundfahrt mit exklusivem Insider-Wissen",
@@ -3981,7 +3962,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Paradise Found - Die Tour (Und jetzt! Wochen der Nachhaltigkeit)",
@@ -3994,7 +3980,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "REMSTAL SCHLEPPERTREFFEN",
@@ -4020,7 +4011,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.2803765,
+      "lng": 9.6901512,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Künzelsau So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Kloster-Kinder-Welterbe | Familientag in Maulbronn",
@@ -4034,14 +4030,11 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Maulbronn",
       "lat": 48.9986948,
       "lng": 8.8038083,
       "geoEstimated": true,
-      "geoSource": "derived-title",
-      "geoQuery": "Maulbronn, Baden-Württemberg, Germany",
-      "geoTitleFound": true
+      "geoSource": "derived",
+      "geoQuery": "Maulbronn So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Jeden Sonntag „Willkommen zum „Chill and Talk“ Jugendrteff",
@@ -4054,7 +4047,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
       "page": 12,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.4128592,
+      "lng": 9.4947894,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Münsingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Ausstellungsführung \"Fledermäuse - Jäger der Dunkelheit\"",
@@ -4088,7 +4086,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 47.9713529,
+      "lng": 8.9283473,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Neuhausen ob Eck So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Kräuterwochen 2026 Gärtnerei Denz Rosen und Kräuterfest",
@@ -4101,7 +4104,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 47.6617131,
+      "lng": 8.8873571,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Öhningen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Wasenwald-Festspiele: Tag der offenen Tür",
@@ -4114,7 +4122,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.4919508,
+      "lng": 9.2114144,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Reutlingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Festspiel-Matinee",
@@ -4127,7 +4140,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.8818426,
+      "lng": 10.2914506,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Röttingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Kann die Hoffnung jemals sterben? Storytelling mit Gesang, Erzählung, Schauspiel und Musik",
@@ -4140,7 +4158,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.225478,
+      "lng": 8.3852168,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Schramberg So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Singe ma im Kino - Lieder mit dem Leitmotiv \"Männer\" und dem Film \"Ach, diese Lücke, diese entsetzliche Lücke\"",
@@ -4153,7 +4176,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.225478,
+      "lng": 8.3852168,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Schramberg So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Fronleichnam in Obersimonswald mit Sakramentsprozession",
@@ -4167,14 +4195,11 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Obersimonswald",
-      "lat": 48.0789717,
-      "lng": 8.094862,
+      "lat": 48.1001644,
+      "lng": 8.0554669,
       "geoEstimated": true,
-      "geoSource": "derived-title",
-      "geoQuery": "Obersimonswald, Baden-Württemberg, Germany",
-      "geoTitleFound": true
+      "geoSource": "derived",
+      "geoQuery": "Simonswald So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Brunnenfest der Feuerwehr Hasselbach",
@@ -4213,18 +4238,11 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "geoCompoundCityChecked": true,
-      "geoCompoundCityQueries": [
-        "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-        "Mühlhofen So,, Baden-Württemberg, Germany",
-        "Uhldingen, Baden-Württemberg, Germany"
-      ],
-      "lat": 47.7398775,
-      "lng": 9.2618966,
+      "lat": 47.7348858,
+      "lng": 9.2400277,
       "geoEstimated": true,
-      "geoSource": "derived-compound-city",
-      "geoQuery": "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-      "geoCompoundCityFound": true
+      "geoSource": "derived",
+      "geoQuery": "Uhldingen-Mühlhofen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "UNESCO-Welterbetag 2026: Gemeinsam für Frieden und Verständigung",
@@ -4238,18 +4256,11 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "geoCompoundCityChecked": true,
-      "geoCompoundCityQueries": [
-        "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-        "Mühlhofen So,, Baden-Württemberg, Germany",
-        "Uhldingen, Baden-Württemberg, Germany"
-      ],
-      "lat": 47.7398775,
-      "lng": 9.2618966,
+      "lat": 47.7348858,
+      "lng": 9.2400277,
       "geoEstimated": true,
-      "geoSource": "derived-compound-city",
-      "geoQuery": "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-      "geoCompoundCityFound": true
+      "geoSource": "derived",
+      "geoQuery": "Uhldingen-Mühlhofen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Heuboden-Akademie: Der Bauernkrieg im deutschen Südwesten",
@@ -4262,7 +4273,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Tag des Wassers in der Kläranlage Waibstadt am Sonntag, 07. Juni 2026",
@@ -4275,7 +4291,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.2978738,
+      "lng": 8.9205595,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Waibstadt So,, Baden-Württemberg, Germany"
     },
     {
       "title": "WeinBar SteilLage vom Weingut Wissmann-Stilz",
@@ -4288,7 +4309,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.765689,
+      "lng": 9.419486,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Weinstadt So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Fledermäuse - Jäger der Dunkelheit Aktionsnachmittag im Naturparkzentrum",
@@ -4301,7 +4327,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0581972,
+      "lng": 8.9266871,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Zaberfeld So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Kreisjugendfeuerwehrzeltlager",
@@ -35511,6 +35542,28 @@
       "page": 214
     },
     {
+      "title": "Weihnachtskonzert des Trachtenblasorchesters",
+      "category": "feste",
+      "city": "Baiersbronn Sa,",
+      "startDate": "2026-12-26",
+      "endDate": "2026-12-26",
+      "time": "15:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weihnachtskonzert-des-trachtenblasorchesters/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
+      "page": 215
+    },
+    {
+      "title": "Musik zur Weihnacht",
+      "category": "feste",
+      "city": "Baiersbronn-Obertal Sa,",
+      "startDate": "2026-12-26",
+      "endDate": "2026-12-26",
+      "time": "17:00 - 18:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/musik-zur-weihnacht/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
+      "page": 215
+    },
+    {
       "title": "Auf den Spuren der Geschichte der Weihnachtskrippe im Kloster Bronnbach",
       "category": "feste",
       "city": "Wertheim-Bronnbach Sa,",
@@ -35529,6 +35582,17 @@
       "endDate": "2026-12-26",
       "time": "09:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/patrozinium-st-stephan-oberwinden/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
+      "page": 215
+    },
+    {
+      "title": "Kindersegnung - Gottesdienst",
+      "category": "feste",
+      "city": "Wolfach Sa,",
+      "startDate": "2026-12-26",
+      "endDate": "2026-12-26",
+      "time": "17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kindersegnung-gottesdienst/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
       "page": 215
     },
@@ -35639,8 +35703,8 @@
       "endDate": "2026-12-31",
       "time": "14:00 - 00:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bietigheimer-silvesterlauf/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
-      "page": 215
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/216/",
+      "page": 216
     },
     {
       "title": "Die größte Kindersilvesterparty in Funny-World",
@@ -35650,8 +35714,8 @@
       "endDate": "2026-12-31",
       "time": "11:00 - 14:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/die-groste-kindersilvesterparty-in-funny-world/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
-      "page": 215
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/216/",
+      "page": 216
     },
     {
       "title": "Silvester in der schwäbischen Toskana 2026",
@@ -35661,8 +35725,8 @@
       "endDate": "2026-12-31",
       "time": "19:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/silvester-in-der-schwabischen-toskana-2026/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
-      "page": 215
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/216/",
+      "page": 216
     },
     {
       "title": "Simisvester - Silvester im Dal",
@@ -36775,7 +36839,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "page": 1,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.2908613,
+      "lng": 8.5711222,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Oberndorf am Neckar So,, Baden-Württemberg, Germany"
     },
     {
       "title": "HandmadeART Reutlingen",
@@ -36788,7 +36857,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "page": 1,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.4919508,
+      "lng": 9.2114144,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Reutlingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Krämermarkt",
@@ -38331,7 +38405,12 @@
         "Kürnbach So,, Baden-Württemberg, Germany",
         "Bad Schussenried, Baden-Württemberg, Germany"
       ],
-      "geoCompoundCityFound": false
+      "lat": 47.99208,
+      "lng": 9.6710084,
+      "geoEstimated": true,
+      "geoSource": "derived-compound-city",
+      "geoQuery": "Kürnbach So,, Bad Schussenried, Baden-Württemberg, Germany",
+      "geoCompoundCityFound": true
     },
     {
       "title": "Brücken-Hock",
@@ -38445,7 +38524,7 @@
       "lng": 8.3639054,
       "geoEstimated": true,
       "geoSource": "derived-compound-city",
-      "geoQuery": "Tonbach So,, Baden-Württemberg, Germany",
+      "geoQuery": "Tonbach So,, Baiersbronn, Baden-Württemberg, Germany",
       "geoCompoundCityFound": true
     },
     {
@@ -38580,7 +38659,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "A Midsummer Night’s Dream",
@@ -38593,7 +38677,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Bu sözler bizim – Die Worte gehören uns (Premiere | Prömiyer)",
@@ -38606,7 +38695,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Jubiläums-4-Häfen-Rundfahrt mit exklusivem Insider-Wissen",
@@ -38619,7 +38713,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Paradise Found - Die Tour (Und jetzt! Wochen der Nachhaltigkeit)",
@@ -38632,7 +38731,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "REMSTAL SCHLEPPERTREFFEN",
@@ -38658,7 +38762,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.2803765,
+      "lng": 9.6901512,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Künzelsau So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Kloster-Kinder-Welterbe | Familientag in Maulbronn",
@@ -38672,14 +38781,11 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Maulbronn",
       "lat": 48.9986948,
       "lng": 8.8038083,
       "geoEstimated": true,
-      "geoSource": "derived-title",
-      "geoQuery": "Maulbronn, Baden-Württemberg, Germany",
-      "geoTitleFound": true
+      "geoSource": "derived",
+      "geoQuery": "Maulbronn So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Jeden Sonntag „Willkommen zum „Chill and Talk“ Jugendrteff",
@@ -38692,7 +38798,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
       "page": 12,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.4128592,
+      "lng": 9.4947894,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Münsingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Ausstellungsführung \"Fledermäuse - Jäger der Dunkelheit\"",
@@ -38726,7 +38837,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 47.9713529,
+      "lng": 8.9283473,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Neuhausen ob Eck So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Kräuterwochen 2026 Gärtnerei Denz Rosen und Kräuterfest",
@@ -38739,7 +38855,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 47.6617131,
+      "lng": 8.8873571,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Öhningen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Wasenwald-Festspiele: Tag der offenen Tür",
@@ -38752,7 +38873,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.4919508,
+      "lng": 9.2114144,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Reutlingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Festspiel-Matinee",
@@ -38765,7 +38891,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.8818426,
+      "lng": 10.2914506,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Röttingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Kann die Hoffnung jemals sterben? Storytelling mit Gesang, Erzählung, Schauspiel und Musik",
@@ -38778,7 +38909,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.225478,
+      "lng": 8.3852168,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Schramberg So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Singe ma im Kino - Lieder mit dem Leitmotiv \"Männer\" und dem Film \"Ach, diese Lücke, diese entsetzliche Lücke\"",
@@ -38791,7 +38927,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.225478,
+      "lng": 8.3852168,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Schramberg So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Fronleichnam in Obersimonswald mit Sakramentsprozession",
@@ -38805,14 +38946,11 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Obersimonswald",
-      "lat": 48.0789717,
-      "lng": 8.094862,
+      "lat": 48.1001644,
+      "lng": 8.0554669,
       "geoEstimated": true,
-      "geoSource": "derived-title",
-      "geoQuery": "Obersimonswald, Baden-Württemberg, Germany",
-      "geoTitleFound": true
+      "geoSource": "derived",
+      "geoQuery": "Simonswald So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Brunnenfest der Feuerwehr Hasselbach",
@@ -38851,18 +38989,11 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "geoCompoundCityChecked": true,
-      "geoCompoundCityQueries": [
-        "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-        "Mühlhofen So,, Baden-Württemberg, Germany",
-        "Uhldingen, Baden-Württemberg, Germany"
-      ],
-      "lat": 47.7398775,
-      "lng": 9.2618966,
+      "lat": 47.7348858,
+      "lng": 9.2400277,
       "geoEstimated": true,
-      "geoSource": "derived-compound-city",
-      "geoQuery": "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-      "geoCompoundCityFound": true
+      "geoSource": "derived",
+      "geoQuery": "Uhldingen-Mühlhofen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "UNESCO-Welterbetag 2026: Gemeinsam für Frieden und Verständigung",
@@ -38876,18 +39007,11 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "geoCompoundCityChecked": true,
-      "geoCompoundCityQueries": [
-        "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-        "Mühlhofen So,, Baden-Württemberg, Germany",
-        "Uhldingen, Baden-Württemberg, Germany"
-      ],
-      "lat": 47.7398775,
-      "lng": 9.2618966,
+      "lat": 47.7348858,
+      "lng": 9.2400277,
       "geoEstimated": true,
-      "geoSource": "derived-compound-city",
-      "geoQuery": "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-      "geoCompoundCityFound": true
+      "geoSource": "derived",
+      "geoQuery": "Uhldingen-Mühlhofen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Heuboden-Akademie: Der Bauernkrieg im deutschen Südwesten",
@@ -38900,7 +39024,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Tag des Wassers in der Kläranlage Waibstadt am Sonntag, 07. Juni 2026",
@@ -38913,7 +39042,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.2978738,
+      "lng": 8.9205595,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Waibstadt So,, Baden-Württemberg, Germany"
     },
     {
       "title": "WeinBar SteilLage vom Weingut Wissmann-Stilz",
@@ -38926,7 +39060,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.765689,
+      "lng": 9.419486,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Weinstadt So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Fledermäuse - Jäger der Dunkelheit Aktionsnachmittag im Naturparkzentrum",
@@ -38939,7 +39078,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0581972,
+      "lng": 8.9266871,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Zaberfeld So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Naturpark-Markt Oberndorf a. N.",
@@ -38952,7 +39096,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "page": 1,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.2908613,
+      "lng": 8.5711222,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Oberndorf am Neckar So,, Baden-Württemberg, Germany"
     },
     {
       "title": "HandmadeART Reutlingen",
@@ -38965,7 +39114,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "page": 1,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.4919508,
+      "lng": 9.2114144,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Reutlingen So,, Baden-Württemberg, Germany"
     }
   ],
   "regionalEvents": [
@@ -39089,7 +39243,12 @@
         "Kürnbach So,, Baden-Württemberg, Germany",
         "Bad Schussenried, Baden-Württemberg, Germany"
       ],
-      "geoCompoundCityFound": false
+      "lat": 47.99208,
+      "lng": 9.6710084,
+      "geoEstimated": true,
+      "geoSource": "derived-compound-city",
+      "geoQuery": "Kürnbach So,, Bad Schussenried, Baden-Württemberg, Germany",
+      "geoCompoundCityFound": true
     },
     {
       "title": "Brücken-Hock",
@@ -39203,7 +39362,7 @@
       "lng": 8.3639054,
       "geoEstimated": true,
       "geoSource": "derived-compound-city",
-      "geoQuery": "Tonbach So,, Baden-Württemberg, Germany",
+      "geoQuery": "Tonbach So,, Baiersbronn, Baden-Württemberg, Germany",
       "geoCompoundCityFound": true
     },
     {
@@ -39338,7 +39497,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "A Midsummer Night’s Dream",
@@ -39351,7 +39515,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Bu sözler bizim – Die Worte gehören uns (Premiere | Prömiyer)",
@@ -39364,7 +39533,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Jubiläums-4-Häfen-Rundfahrt mit exklusivem Insider-Wissen",
@@ -39377,7 +39551,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Paradise Found - Die Tour (Und jetzt! Wochen der Nachhaltigkeit)",
@@ -39390,7 +39569,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "REMSTAL SCHLEPPERTREFFEN",
@@ -39416,7 +39600,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.2803765,
+      "lng": 9.6901512,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Künzelsau So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Kloster-Kinder-Welterbe | Familientag in Maulbronn",
@@ -39430,14 +39619,11 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Maulbronn",
       "lat": 48.9986948,
       "lng": 8.8038083,
       "geoEstimated": true,
-      "geoSource": "derived-title",
-      "geoQuery": "Maulbronn, Baden-Württemberg, Germany",
-      "geoTitleFound": true
+      "geoSource": "derived",
+      "geoQuery": "Maulbronn So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Jeden Sonntag „Willkommen zum „Chill and Talk“ Jugendrteff",
@@ -39450,7 +39636,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/12/",
       "page": 12,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.4128592,
+      "lng": 9.4947894,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Münsingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Ausstellungsführung \"Fledermäuse - Jäger der Dunkelheit\"",
@@ -39484,7 +39675,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 47.9713529,
+      "lng": 8.9283473,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Neuhausen ob Eck So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Kräuterwochen 2026 Gärtnerei Denz Rosen und Kräuterfest",
@@ -39497,7 +39693,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 47.6617131,
+      "lng": 8.8873571,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Öhningen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Wasenwald-Festspiele: Tag der offenen Tür",
@@ -39510,7 +39711,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.4919508,
+      "lng": 9.2114144,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Reutlingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Festspiel-Matinee",
@@ -39523,7 +39729,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.8818426,
+      "lng": 10.2914506,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Röttingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Kann die Hoffnung jemals sterben? Storytelling mit Gesang, Erzählung, Schauspiel und Musik",
@@ -39536,7 +39747,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.225478,
+      "lng": 8.3852168,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Schramberg So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Singe ma im Kino - Lieder mit dem Leitmotiv \"Männer\" und dem Film \"Ach, diese Lücke, diese entsetzliche Lücke\"",
@@ -39549,7 +39765,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.225478,
+      "lng": 8.3852168,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Schramberg So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Fronleichnam in Obersimonswald mit Sakramentsprozession",
@@ -39563,14 +39784,11 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Obersimonswald",
-      "lat": 48.0789717,
-      "lng": 8.094862,
+      "lat": 48.1001644,
+      "lng": 8.0554669,
       "geoEstimated": true,
-      "geoSource": "derived-title",
-      "geoQuery": "Obersimonswald, Baden-Württemberg, Germany",
-      "geoTitleFound": true
+      "geoSource": "derived",
+      "geoQuery": "Simonswald So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Brunnenfest der Feuerwehr Hasselbach",
@@ -39609,18 +39827,11 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "geoCompoundCityChecked": true,
-      "geoCompoundCityQueries": [
-        "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-        "Mühlhofen So,, Baden-Württemberg, Germany",
-        "Uhldingen, Baden-Württemberg, Germany"
-      ],
-      "lat": 47.7398775,
-      "lng": 9.2618966,
+      "lat": 47.7348858,
+      "lng": 9.2400277,
       "geoEstimated": true,
-      "geoSource": "derived-compound-city",
-      "geoQuery": "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-      "geoCompoundCityFound": true
+      "geoSource": "derived",
+      "geoQuery": "Uhldingen-Mühlhofen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "UNESCO-Welterbetag 2026: Gemeinsam für Frieden und Verständigung",
@@ -39634,18 +39845,11 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "geoCompoundCityChecked": true,
-      "geoCompoundCityQueries": [
-        "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-        "Mühlhofen So,, Baden-Württemberg, Germany",
-        "Uhldingen, Baden-Württemberg, Germany"
-      ],
-      "lat": 47.7398775,
-      "lng": 9.2618966,
+      "lat": 47.7348858,
+      "lng": 9.2400277,
       "geoEstimated": true,
-      "geoSource": "derived-compound-city",
-      "geoQuery": "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-      "geoCompoundCityFound": true
+      "geoSource": "derived",
+      "geoQuery": "Uhldingen-Mühlhofen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Heuboden-Akademie: Der Bauernkrieg im deutschen Südwesten",
@@ -39658,7 +39862,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Tag des Wassers in der Kläranlage Waibstadt am Sonntag, 07. Juni 2026",
@@ -39671,7 +39880,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.2978738,
+      "lng": 8.9205595,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Waibstadt So,, Baden-Württemberg, Germany"
     },
     {
       "title": "WeinBar SteilLage vom Weingut Wissmann-Stilz",
@@ -39684,7 +39898,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.765689,
+      "lng": 9.419486,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Weinstadt So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Fledermäuse - Jäger der Dunkelheit Aktionsnachmittag im Naturparkzentrum",
@@ -39697,7 +39916,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0581972,
+      "lng": 8.9266871,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Zaberfeld So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Naturpark-Markt Oberndorf a. N.",
@@ -39710,7 +39934,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "page": 1,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.2908613,
+      "lng": 8.5711222,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Oberndorf am Neckar So,, Baden-Württemberg, Germany"
     },
     {
       "title": "HandmadeART Reutlingen",
@@ -39723,7 +39952,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "page": 1,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.4919508,
+      "lng": 9.2114144,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Reutlingen So,, Baden-Württemberg, Germany"
     }
   ],
   "nonRegionalEvents": [
@@ -39847,7 +40081,12 @@
         "Kürnbach So,, Baden-Württemberg, Germany",
         "Bad Schussenried, Baden-Württemberg, Germany"
       ],
-      "geoCompoundCityFound": false
+      "lat": 47.99208,
+      "lng": 9.6710084,
+      "geoEstimated": true,
+      "geoSource": "derived-compound-city",
+      "geoQuery": "Kürnbach So,, Bad Schussenried, Baden-Württemberg, Germany",
+      "geoCompoundCityFound": true
     },
     {
       "title": "Feierliche Eröffnung des Welterbe-Festtags",
@@ -39943,7 +40182,7 @@
       "lng": 8.3639054,
       "geoEstimated": true,
       "geoSource": "derived-compound-city",
-      "geoQuery": "Tonbach So,, Baden-Württemberg, Germany",
+      "geoQuery": "Tonbach So,, Baiersbronn, Baden-Württemberg, Germany",
       "geoCompoundCityFound": true
     },
     {
@@ -40060,7 +40299,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "A Midsummer Night’s Dream",
@@ -40073,7 +40317,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Bu sözler bizim – Die Worte gehören uns (Premiere | Prömiyer)",
@@ -40086,7 +40335,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Jubiläums-4-Häfen-Rundfahrt mit exklusivem Insider-Wissen",
@@ -40099,7 +40353,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Paradise Found - Die Tour (Und jetzt! Wochen der Nachhaltigkeit)",
@@ -40112,7 +40371,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Schach im Schloss",
@@ -40125,7 +40389,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.2803765,
+      "lng": 9.6901512,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Künzelsau So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Kloster-Kinder-Welterbe | Familientag in Maulbronn",
@@ -40139,14 +40408,11 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Maulbronn",
       "lat": 48.9986948,
       "lng": 8.8038083,
       "geoEstimated": true,
-      "geoSource": "derived-title",
-      "geoQuery": "Maulbronn, Baden-Württemberg, Germany",
-      "geoTitleFound": true
+      "geoSource": "derived",
+      "geoQuery": "Maulbronn So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Ausstellungsführung \"Fledermäuse - Jäger der Dunkelheit\"",
@@ -40180,7 +40446,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 47.9713529,
+      "lng": 8.9283473,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Neuhausen ob Eck So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Kräuterwochen 2026 Gärtnerei Denz Rosen und Kräuterfest",
@@ -40193,7 +40464,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 47.6617131,
+      "lng": 8.8873571,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Öhningen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Festspiel-Matinee",
@@ -40206,7 +40482,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.8818426,
+      "lng": 10.2914506,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Röttingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Kann die Hoffnung jemals sterben? Storytelling mit Gesang, Erzählung, Schauspiel und Musik",
@@ -40219,7 +40500,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.225478,
+      "lng": 8.3852168,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Schramberg So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Singe ma im Kino - Lieder mit dem Leitmotiv \"Männer\" und dem Film \"Ach, diese Lücke, diese entsetzliche Lücke\"",
@@ -40232,7 +40518,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/11/",
       "page": 11,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.225478,
+      "lng": 8.3852168,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Schramberg So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Fronleichnam in Obersimonswald mit Sakramentsprozession",
@@ -40246,14 +40537,11 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "geoTitleChecked": true,
-      "geoTitleLocation": "Obersimonswald",
-      "lat": 48.0789717,
-      "lng": 8.094862,
+      "lat": 48.1001644,
+      "lng": 8.0554669,
       "geoEstimated": true,
-      "geoSource": "derived-title",
-      "geoQuery": "Obersimonswald, Baden-Württemberg, Germany",
-      "geoTitleFound": true
+      "geoSource": "derived",
+      "geoQuery": "Simonswald So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Brunnenfest der Feuerwehr Hasselbach",
@@ -40292,18 +40580,11 @@
       "page": 12,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "geoCompoundCityChecked": true,
-      "geoCompoundCityQueries": [
-        "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-        "Mühlhofen So,, Baden-Württemberg, Germany",
-        "Uhldingen, Baden-Württemberg, Germany"
-      ],
-      "lat": 47.7398775,
-      "lng": 9.2618966,
+      "lat": 47.7348858,
+      "lng": 9.2400277,
       "geoEstimated": true,
-      "geoSource": "derived-compound-city",
-      "geoQuery": "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-      "geoCompoundCityFound": true
+      "geoSource": "derived",
+      "geoQuery": "Uhldingen-Mühlhofen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "UNESCO-Welterbetag 2026: Gemeinsam für Frieden und Verständigung",
@@ -40317,18 +40598,11 @@
       "page": 9,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "geoCompoundCityChecked": true,
-      "geoCompoundCityQueries": [
-        "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-        "Mühlhofen So,, Baden-Württemberg, Germany",
-        "Uhldingen, Baden-Württemberg, Germany"
-      ],
-      "lat": 47.7398775,
-      "lng": 9.2618966,
+      "lat": 47.7348858,
+      "lng": 9.2400277,
       "geoEstimated": true,
-      "geoSource": "derived-compound-city",
-      "geoQuery": "Mühlhofen So,, Uhldingen, Baden-Württemberg, Germany",
-      "geoCompoundCityFound": true
+      "geoSource": "derived",
+      "geoQuery": "Uhldingen-Mühlhofen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Heuboden-Akademie: Der Bauernkrieg im deutschen Südwesten",
@@ -40341,7 +40615,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/9/",
       "page": 9,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Tag des Wassers in der Kläranlage Waibstadt am Sonntag, 07. Juni 2026",
@@ -40354,7 +40633,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.2978738,
+      "lng": 8.9205595,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Waibstadt So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Fledermäuse - Jäger der Dunkelheit Aktionsnachmittag im Naturparkzentrum",
@@ -40367,7 +40651,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/10/",
       "page": 10,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0581972,
+      "lng": 8.9266871,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Zaberfeld So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Naturpark-Markt Oberndorf a. N.",
@@ -40380,7 +40669,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "page": 1,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.2908613,
+      "lng": 8.5711222,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Oberndorf am Neckar So,, Baden-Württemberg, Germany"
     }
   ]
 }
