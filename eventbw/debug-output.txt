@@ -18,15 +18,15 @@ Counts:
   "rawCollectedIncludingDuplicates": 3252,
   "rawUnique": 3252,
   "targetDateMatches": 46,
-  "targetDateWithGeo": 44,
-  "targetDateWithoutGeo": 2,
-  "targetDateGeoEstimated": 44,
-  "targetDateGeoEstimatedFromCity": 36,
+  "targetDateWithGeo": 30,
+  "targetDateWithoutGeo": 16,
+  "targetDateGeoEstimated": 30,
+  "targetDateGeoEstimatedFromCity": 20,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 5,
   "targetDateGeoEstimatedFromCompoundCity": 3,
-  "targetDateGeoEstimatedFromTitle": 0,
+  "targetDateGeoEstimatedFromTitle": 2,
   "targetDateGeoEstimatedFromBodenseeRegion": 0,
   "targetDateDetailCoordinateGeoChecked": 46,
   "targetDateDetailCoordinateGeoRecovered": 0,
@@ -36,8 +36,8 @@ Counts:
   "targetDateDetailGeoRecovered": 5,
   "targetDateCompoundCityGeoChecked": 3,
   "targetDateCompoundCityGeoRecovered": 3,
-  "targetDateTitleGeoChecked": 0,
-  "targetDateTitleGeoRecovered": 0,
+  "targetDateTitleGeoChecked": 2,
+  "targetDateTitleGeoRecovered": 2,
   "targetDateBodenseeRegionGeoChecked": 0,
   "targetDateBodenseeRegionGeoRecovered": 0,
   "nonRegionalTargetDateMatches": 39,
@@ -46,9 +46,9 @@ Counts:
   "targetDateMaerkte": 2,
   "targetDateFeste": 44,
   "targetDateWithGeoMaerkte": 2,
-  "targetDateWithGeoFeste": 42,
+  "targetDateWithGeoFeste": 28,
   "targetDateWithoutGeoMaerkte": 0,
-  "targetDateWithoutGeoFeste": 2
+  "targetDateWithoutGeoFeste": 16
 }
 
 Regionale Ortsliste:
