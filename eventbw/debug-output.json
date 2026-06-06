@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-07",
-    "startedAt": "2026-06-06T12:00:39.042Z",
-    "finishedAt": "2026-06-06T12:03:18.720Z",
+    "startedAt": "2026-06-06T12:05:08.966Z",
+    "finishedAt": "2026-06-06T12:06:25.369Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -97,10 +97,10 @@
       "rawCollectedIncludingDuplicates": 3247,
       "rawUnique": 3247,
       "targetDateMatches": 47,
-      "targetDateWithGeo": 45,
-      "targetDateWithoutGeo": 2,
-      "targetDateGeoEstimated": 45,
-      "targetDateGeoEstimatedFromCity": 37,
+      "targetDateWithGeo": 44,
+      "targetDateWithoutGeo": 3,
+      "targetDateGeoEstimated": 44,
+      "targetDateGeoEstimatedFromCity": 36,
       "targetDateGeoManualLocality": 0,
       "targetDateGeoFromEventBwDetailCoordinates": 0,
       "targetDateGeoEstimatedFromDetail": 5,
@@ -125,9 +125,9 @@
       "targetDateMaerkte": 2,
       "targetDateFeste": 45,
       "targetDateWithGeoMaerkte": 2,
-      "targetDateWithGeoFeste": 43,
+      "targetDateWithGeoFeste": 42,
       "targetDateWithoutGeoMaerkte": 0,
-      "targetDateWithoutGeoFeste": 2
+      "targetDateWithoutGeoFeste": 3
     }
   },
   "pages": [
@@ -3263,12 +3263,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/7/",
       "page": 7,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "A Midsummer Night’s Dream",
@@ -38732,12 +38727,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/7/",
       "page": 7,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "A Midsummer Night’s Dream",
@@ -39606,12 +39596,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/7/",
       "page": 7,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "A Midsummer Night’s Dream",
@@ -40444,12 +40429,7 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/7/",
       "page": 7,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "A Midsummer Night’s Dream",
