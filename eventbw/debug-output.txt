@@ -14,21 +14,21 @@ Zieldatum: 2026-06-07
 
 Counts:
 {
-  "pages": 235,
-  "rawCollectedIncludingDuplicates": 3247,
-  "rawUnique": 3247,
-  "targetDateMatches": 47,
-  "targetDateWithGeo": 45,
+  "pages": 231,
+  "rawCollectedIncludingDuplicates": 3191,
+  "rawUnique": 3189,
+  "targetDateMatches": 46,
+  "targetDateWithGeo": 44,
   "targetDateWithoutGeo": 2,
-  "targetDateGeoEstimated": 45,
-  "targetDateGeoEstimatedFromCity": 37,
+  "targetDateGeoEstimated": 44,
+  "targetDateGeoEstimatedFromCity": 36,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 5,
   "targetDateGeoEstimatedFromCompoundCity": 3,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 0,
-  "targetDateDetailCoordinateGeoChecked": 47,
+  "targetDateDetailCoordinateGeoChecked": 46,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 5,
@@ -41,12 +41,12 @@ Counts:
   "targetDateBodenseeRegionGeoChecked": 0,
   "targetDateBodenseeRegionGeoRecovered": 0,
   "nonRegionalTargetDateMatches": 40,
-  "rawMaerkte": 132,
-  "rawFeste": 3115,
+  "rawMaerkte": 130,
+  "rawFeste": 3059,
   "targetDateMaerkte": 2,
-  "targetDateFeste": 45,
+  "targetDateFeste": 44,
   "targetDateWithGeoMaerkte": 2,
-  "targetDateWithGeoFeste": 43,
+  "targetDateWithGeoFeste": 42,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 2
 }
@@ -157,10 +157,6 @@ Ortsstatistik vor Ortsfilter:
     "count": 2
   },
   {
-    "city": "Reutlingen So,",
-    "count": 2
-  },
-  {
     "city": "Schramberg So,",
     "count": 2
   },
@@ -245,6 +241,10 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Reutlingen So,",
+    "count": 1
+  },
+  {
     "city": "Röttingen So,",
     "count": 1
   },
@@ -285,7 +285,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
     "ok": true,
-    "reportedCount": 132,
+    "reportedCount": 131,
     "parsedCount": 14
   },
   {
@@ -358,7 +358,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/10/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 6
+    "parsedCount": 5
   },
   {
     "category": "maerkte",
@@ -2117,44 +2117,12 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/219/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 14
+    "parsedCount": 8
   },
   {
     "category": "feste",
     "page": 220,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/220/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 221,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/221/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 222,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/222/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 223,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/223/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 7
-  },
-  {
-    "category": "feste",
-    "page": 224,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/224/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
