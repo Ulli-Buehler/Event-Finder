@@ -10,45 +10,45 @@ Filter:
 - Geo: für alle Zieldatum-Events
 - km/Radius: live im Browser
 
-Zieldatum: 2026-06-07
+Zieldatum: 2026-06-14
 
 Counts:
 {
   "pages": 232,
   "rawCollectedIncludingDuplicates": 3203,
   "rawUnique": 3203,
-  "targetDateMatches": 47,
-  "targetDateWithGeo": 45,
-  "targetDateWithoutGeo": 2,
-  "targetDateGeoEstimated": 45,
-  "targetDateGeoEstimatedFromCity": 37,
+  "targetDateMatches": 48,
+  "targetDateWithGeo": 47,
+  "targetDateWithoutGeo": 1,
+  "targetDateGeoEstimated": 47,
+  "targetDateGeoEstimatedFromCity": 41,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
-  "targetDateGeoEstimatedFromDetail": 5,
-  "targetDateGeoEstimatedFromCompoundCity": 3,
+  "targetDateGeoEstimatedFromDetail": 4,
+  "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
-  "targetDateGeoEstimatedFromBodenseeRegion": 0,
-  "targetDateDetailCoordinateGeoChecked": 47,
+  "targetDateGeoEstimatedFromBodenseeRegion": 1,
+  "targetDateDetailCoordinateGeoChecked": 48,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 5,
   "targetDateDetailGeoChecked": 5,
-  "targetDateDetailGeoRecovered": 5,
-  "targetDateCompoundCityGeoChecked": 3,
-  "targetDateCompoundCityGeoRecovered": 3,
+  "targetDateDetailGeoRecovered": 4,
+  "targetDateCompoundCityGeoChecked": 1,
+  "targetDateCompoundCityGeoRecovered": 1,
   "targetDateTitleGeoChecked": 0,
   "targetDateTitleGeoRecovered": 0,
-  "targetDateBodenseeRegionGeoChecked": 0,
-  "targetDateBodenseeRegionGeoRecovered": 0,
-  "nonRegionalTargetDateMatches": 40,
+  "targetDateBodenseeRegionGeoChecked": 1,
+  "targetDateBodenseeRegionGeoRecovered": 1,
+  "nonRegionalTargetDateMatches": 46,
   "rawMaerkte": 131,
   "rawFeste": 3072,
-  "targetDateMaerkte": 2,
-  "targetDateFeste": 45,
-  "targetDateWithGeoMaerkte": 2,
-  "targetDateWithGeoFeste": 43,
+  "targetDateMaerkte": 1,
+  "targetDateFeste": 47,
+  "targetDateWithGeoMaerkte": 1,
+  "targetDateWithGeoFeste": 46,
   "targetDateWithoutGeoMaerkte": 0,
-  "targetDateWithoutGeoFeste": 2
+  "targetDateWithoutGeoFeste": 1
 }
 
 Regionale Ortsliste:
@@ -142,54 +142,50 @@ Ortsstatistik vor Ortsfilter:
 [
   {
     "city": "Karlsruhe So,",
-    "count": 5
-  },
-  {
-    "city": "unbekannt",
-    "count": 4
-  },
-  {
-    "city": "Baden-Baden So,",
-    "count": 3
-  },
-  {
-    "city": "Brackenheim So,",
-    "count": 2
-  },
-  {
-    "city": "Reutlingen So,",
-    "count": 2
-  },
-  {
-    "city": "Schramberg So,",
-    "count": 2
-  },
-  {
-    "city": "Uhldingen-Mühlhofen So,",
-    "count": 2
-  },
-  {
-    "city": "Bad Mergentheim So,",
-    "count": 1
-  },
-  {
-    "city": "Bad Schussenried-Kürnbach So,",
-    "count": 1
-  },
-  {
-    "city": "Bad Urach So,",
-    "count": 1
+    "count": 7
   },
   {
     "city": "Baiersbronn So,",
+    "count": 3
+  },
+  {
+    "city": "Bernau im Schwarzwald So,",
+    "count": 3
+  },
+  {
+    "city": "Calw So,",
+    "count": 3
+  },
+  {
+    "city": "Balingen So,",
+    "count": 2
+  },
+  {
+    "city": "Bad Krozingen So,",
     "count": 1
   },
   {
-    "city": "Baiersbronn-Tonbach So,",
+    "city": "Bad Säckingen So,",
     "count": 1
   },
   {
-    "city": "Burladingen So,",
+    "city": "Bad Schönborn So,",
+    "count": 1
+  },
+  {
+    "city": "Breisach So,",
+    "count": 1
+  },
+  {
+    "city": "Dachsberg So,",
+    "count": 1
+  },
+  {
+    "city": "Dobel So,",
+    "count": 1
+  },
+  {
+    "city": "Dormettingen So,",
     "count": 1
   },
   {
@@ -201,35 +197,27 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Forbach-Gausbach So,",
-    "count": 1
-  },
-  {
-    "city": "Geislingen So,",
-    "count": 1
-  },
-  {
     "city": "HeilbronnerLand So,",
     "count": 1
   },
   {
-    "city": "Kernen im Remstal So,",
+    "city": "Ittlingen So,",
     "count": 1
   },
   {
-    "city": "Künzelsau So,",
+    "city": "Kandern So,",
     "count": 1
   },
   {
-    "city": "Maulbronn So,",
+    "city": "Mössingen-Bad Sebastiansweiler So,",
     "count": 1
   },
   {
-    "city": "Münsingen So,",
+    "city": "Mulfingen So,",
     "count": 1
   },
   {
-    "city": "Naturpark Stromberg Heuchelberg So,",
+    "city": "Neckarwestheim So,",
     "count": 1
   },
   {
@@ -237,15 +225,31 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Oberndorf am Neckar So,",
-    "count": 1
-  },
-  {
     "city": "Öhningen So,",
     "count": 1
   },
   {
-    "city": "Röttingen So,",
+    "city": "Öhringen So,",
+    "count": 1
+  },
+  {
+    "city": "Pfullendorf So,",
+    "count": 1
+  },
+  {
+    "city": "Radolfzell am Bodensee So,",
+    "count": 1
+  },
+  {
+    "city": "Sasbachwalden So,",
+    "count": 1
+  },
+  {
+    "city": "Schallstadt So,",
+    "count": 1
+  },
+  {
+    "city": "Seebach So,",
     "count": 1
   },
   {
@@ -253,23 +257,23 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Simonswald So,",
+    "city": "Sonnenbühl-Erpfingen So,",
     "count": 1
   },
   {
-    "city": "Sinsheim- Hasselbach So,",
+    "city": "unbekannt",
     "count": 1
   },
   {
-    "city": "Vogtsbauernhof So,",
+    "city": "Wald-Sentenhart So,",
     "count": 1
   },
   {
-    "city": "Waibstadt So,",
+    "city": "Waldburg So,",
     "count": 1
   },
   {
-    "city": "Weinstadt So,",
+    "city": "Wertheim So,",
     "count": 1
   },
   {
