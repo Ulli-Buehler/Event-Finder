@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-14",
-    "startedAt": "2026-06-08T05:00:35.836Z",
-    "finishedAt": "2026-06-08T05:03:31.466Z",
+    "startedAt": "2026-06-08T06:00:41.600Z",
+    "finishedAt": "2026-06-08T06:03:45.723Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 229,
       "rawCollectedIncludingDuplicates": 3163,
-      "rawUnique": 3161,
+      "rawUnique": 3163,
       "targetDateMatches": 48,
       "targetDateWithGeo": 47,
       "targetDateWithoutGeo": 1,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 46,
       "rawMaerkte": 129,
-      "rawFeste": 3032,
+      "rawFeste": 3034,
       "targetDateMaerkte": 1,
       "targetDateFeste": 47,
       "targetDateWithGeoMaerkte": 1,
@@ -2529,6 +2529,17 @@
       "page": 3
     },
     {
+      "title": "Busausfahrt - ALDE Gott Winzer Sasbachwalden",
+      "category": "feste",
+      "city": "Baiersbronn Mi,",
+      "startDate": "2026-06-10",
+      "endDate": "2026-06-10",
+      "time": "13:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/busausfahrt-alde-gott-winzer-sasbachwalden/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
+      "page": 3
+    },
+    {
       "title": "Kulinarische Wildpflanzenwanderung Mitteltal",
       "category": "feste",
       "city": "Baiersbronn Mi,",
@@ -2624,6 +2635,17 @@
       "endDate": "2026-06-10",
       "time": "14:00 - 16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/maschengarten-nutzlich-und-selbst-gemacht-und-jetzt-wochen-der-nachhaltigkeit/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
+      "title": "Paradise Found - Die Tour (Und jetzt! Wochen der Nachhaltigkeit)",
+      "category": "feste",
+      "city": "Karlsruhe Mi,",
+      "startDate": "2026-06-10",
+      "endDate": "2026-06-10",
+      "time": "18:00 - 20:15 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/paradise-found-die-tour-und-jetzt-wochen-der-nachhaltigkeit/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
       "page": 3
     },
@@ -2690,8 +2712,8 @@
       "endDate": "2026-06-10",
       "time": "18:30 - 21:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/zukunft-warme-infoveranstaltung-zur-warmeversorgung-in-konstanz/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
-      "page": 3
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
     },
     {
       "title": "Klimawandel und Energiewende: Stand der Dinge, Herausforderungen und Chancen",
@@ -4909,8 +4931,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Sportplatz FC Bernau, Bernau im Schwarzwald",
-      "lat": 47.8076152,
-      "lng": 8.0310014,
+      "lat": 47.8061716,
+      "lng": 8.0280921,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Sportplatz FC Bernau, Bernau im Schwarzwald"
@@ -37540,8 +37562,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Sportplatz FC Bernau, Bernau im Schwarzwald",
-      "lat": 47.8076152,
-      "lng": 8.0310014,
+      "lat": 47.8061716,
+      "lng": 8.0280921,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Sportplatz FC Bernau, Bernau im Schwarzwald"
@@ -38425,8 +38447,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Sportplatz FC Bernau, Bernau im Schwarzwald",
-      "lat": 47.8076152,
-      "lng": 8.0310014,
+      "lat": 47.8061716,
+      "lng": 8.0280921,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Sportplatz FC Bernau, Bernau im Schwarzwald"
@@ -39310,8 +39332,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Sportplatz FC Bernau, Bernau im Schwarzwald",
-      "lat": 47.8076152,
-      "lng": 8.0310014,
+      "lat": 47.8061716,
+      "lng": 8.0280921,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Sportplatz FC Bernau, Bernau im Schwarzwald"
