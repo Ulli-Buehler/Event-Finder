@@ -14,21 +14,21 @@ Zieldatum: 2026-06-14
 
 Counts:
 {
-  "pages": 229,
-  "rawCollectedIncludingDuplicates": 3160,
-  "rawUnique": 3158,
-  "targetDateMatches": 48,
-  "targetDateWithGeo": 47,
+  "pages": 230,
+  "rawCollectedIncludingDuplicates": 3176,
+  "rawUnique": 3174,
+  "targetDateMatches": 50,
+  "targetDateWithGeo": 49,
   "targetDateWithoutGeo": 1,
-  "targetDateGeoEstimated": 47,
-  "targetDateGeoEstimatedFromCity": 41,
+  "targetDateGeoEstimated": 49,
+  "targetDateGeoEstimatedFromCity": 43,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 4,
   "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 1,
-  "targetDateDetailCoordinateGeoChecked": 48,
+  "targetDateDetailCoordinateGeoChecked": 50,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 5,
@@ -40,13 +40,13 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 1,
   "targetDateBodenseeRegionGeoRecovered": 1,
-  "nonRegionalTargetDateMatches": 46,
+  "nonRegionalTargetDateMatches": 48,
   "rawMaerkte": 129,
-  "rawFeste": 3029,
+  "rawFeste": 3045,
   "targetDateMaerkte": 1,
-  "targetDateFeste": 47,
+  "targetDateFeste": 49,
   "targetDateWithGeoMaerkte": 1,
-  "targetDateWithGeoFeste": 46,
+  "targetDateWithGeoFeste": 48,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 1
 }
@@ -161,6 +161,10 @@ Ortsstatistik vor Ortsfilter:
     "count": 2
   },
   {
+    "city": "Pfullendorf So,",
+    "count": 2
+  },
+  {
     "city": "Bad Krozingen So,",
     "count": 1
   },
@@ -201,6 +205,10 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Höchenschwand So,",
+    "count": 1
+  },
+  {
     "city": "Ittlingen So,",
     "count": 1
   },
@@ -230,10 +238,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Öhringen So,",
-    "count": 1
-  },
-  {
-    "city": "Pfullendorf So,",
     "count": 1
   },
   {
@@ -376,7 +380,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 3030,
+    "reportedCount": 3045,
     "parsedCount": 14
   },
   {
@@ -2105,12 +2109,20 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/217/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 7
+    "parsedCount": 14
   },
   {
     "category": "feste",
     "page": 218,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/218/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 9
+  },
+  {
+    "category": "feste",
+    "page": 219,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/219/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
