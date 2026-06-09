@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-14",
-    "startedAt": "2026-06-09T00:00:42.742Z",
-    "finishedAt": "2026-06-09T00:03:48.258Z",
+    "startedAt": "2026-06-09T01:00:36.500Z",
+    "finishedAt": "2026-06-09T01:03:21.259Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 229,
-      "rawCollectedIncludingDuplicates": 3158,
-      "rawUnique": 3153,
+      "rawCollectedIncludingDuplicates": 3159,
+      "rawUnique": 3159,
       "targetDateMatches": 48,
       "targetDateWithGeo": 47,
       "targetDateWithoutGeo": 1,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 46,
       "rawMaerkte": 129,
-      "rawFeste": 3024,
+      "rawFeste": 3030,
       "targetDateMaerkte": 1,
       "targetDateFeste": 47,
       "targetDateWithGeoMaerkte": 1,
@@ -223,7 +223,7 @@
       "page": 1,
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "ok": true,
-      "reportedCount": 3034,
+      "reportedCount": 3029,
       "parsedCount": 14
     },
     {
@@ -1952,7 +1952,7 @@
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/217/",
       "ok": true,
       "reportedCount": null,
-      "parsedCount": 5
+      "parsedCount": 6
     },
     {
       "category": "feste",
@@ -2210,61 +2210,6 @@
   },
   "rawEvents": [
     {
-      "title": "Schmiedemuseum Königshammer",
-      "category": "feste",
-      "city": "Baiersbronn Mo,",
-      "startDate": "2026-06-08",
-      "endDate": "2026-06-08",
-      "time": "",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schmiedemuseum-konigshammer/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Spiel und Spaß in Murgels Spielhaus",
-      "category": "feste",
-      "city": "Baiersbronn Mo,",
-      "startDate": "2026-06-08",
-      "endDate": "2026-06-08",
-      "time": "",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/spiel-und-spas-in-murgels-spielhaus-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Kreisjugendfeuerwehrzeltlager",
-      "category": "feste",
-      "city": "Burladingen Mo,",
-      "startDate": "2026-06-08",
-      "endDate": "2026-06-08",
-      "time": "",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kreisjugendfeuerwehrzeltlager/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Matthias Zeitler liest aus \"Wenn Schule stresst. So hilfst du deinem Kind bei Leistungsdruck, Ängsten und zu hohen Erwartungen\"",
-      "category": "feste",
-      "city": "Heilbronn Mo,",
-      "startDate": "2026-06-08",
-      "endDate": "2026-06-08",
-      "time": "18:30 - 20:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/matthias-zeitler-liest-aus-wenn-schule-stresst-so-hilfst-du-deinem-kind-bei-leistungsdruck-angsten-und-zu-hohen-erwartungen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Kino im Truppen-Tonfilm-Theater Auingen",
-      "category": "feste",
-      "city": "Münsingen Mo,",
-      "startDate": "2026-06-08",
-      "endDate": "2026-06-08",
-      "time": "19:00 - 21:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kino-im-truppen-tonfilm-theater-auingen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
       "title": "Yoga für Frauen",
       "category": "feste",
       "city": "Bad Krozingen Di,",
@@ -2272,8 +2217,8 @@
       "endDate": "2026-06-09",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/yoga-fur-frauen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
     },
     {
       "title": "Yoga für Männer",
@@ -2283,8 +2228,8 @@
       "endDate": "2026-06-09",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/yoga-fur-manner/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
     },
     {
       "title": "Art Journaling für Frauen: Sommermagie",
@@ -2327,8 +2272,8 @@
       "endDate": "2026-06-09",
       "time": "14:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/lesezeit-fur-frischlinge-5/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
     },
     {
       "title": "WeinVilla on tour: Weingut Albrecht-Kiessling bei Intersport Grabert",
@@ -2448,8 +2393,8 @@
       "endDate": "2026-06-09",
       "time": "15:00 - 16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/recycling-in-der-natur-und-zuhause-und-jetzt-wochen-der-nachhaltigkeit/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
     },
     {
       "title": "Sommerausflug nach Wasenweiler über Merdingen mit dem Ökumenischen Seniorenkreis Breisach",
@@ -2492,8 +2437,8 @@
       "endDate": "2026-06-09",
       "time": "19:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kopie-von-vortrag-im-beleitprogramm-der-sonderausstellung-ausgepackt-schatze-aus-der-sammlung/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
     },
     {
       "title": "Express Yourself - Musicalkurs",
@@ -2507,6 +2452,17 @@
       "page": 4
     },
     {
+      "title": "Lesebande",
+      "category": "feste",
+      "city": "",
+      "startDate": "2026-06-10",
+      "endDate": "2026-06-10",
+      "time": "14:30 - 15:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/lesebande/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2
+    },
+    {
       "title": "Yoga Flow",
       "category": "feste",
       "city": "Bad Krozingen Mi,",
@@ -2516,6 +2472,28 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/yoga-flow/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
       "page": 3
+    },
+    {
+      "title": "Busausfahrt - ALDE Gott Winzer Sasbachwalden",
+      "category": "feste",
+      "city": "Baiersbronn Mi,",
+      "startDate": "2026-06-10",
+      "endDate": "2026-06-10",
+      "time": "13:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/busausfahrt-alde-gott-winzer-sasbachwalden/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2
+    },
+    {
+      "title": "Kulinarische Wildpflanzenwanderung Mitteltal",
+      "category": "feste",
+      "city": "Baiersbronn Mi,",
+      "startDate": "2026-06-10",
+      "endDate": "2026-06-10",
+      "time": "10:15 - 14:15 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kulinarische-wildpflanzenwanderung-mitteltal/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2
     },
     {
       "title": "Wilhelmine Müller: Selbstbehauptung einer Dichterin",
@@ -2661,6 +2639,17 @@
       "page": 3
     },
     {
+      "title": "Feierabend-Apéro auf dem Rathausplatz mit Christine Saci",
+      "category": "feste",
+      "city": "Sipplingen Mi,",
+      "startDate": "2026-06-10",
+      "endDate": "2026-06-10",
+      "time": "17:30 - 20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/feierabend-apero-auf-dem-rathausplatz-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2
+    },
+    {
       "title": "Zukunft Wärme – Infoveranstaltung zur Wärmeversorgung in Konstanz",
       "category": "feste",
       "city": "Stadt Konstanz Mi,",
@@ -2681,6 +2670,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/klimawandel-und-energiewende-stand-der-dinge-herausforderungen-und-chancen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
       "page": 3
+    },
+    {
+      "title": "SeeferienKonzert mit dem Musikverein Oberuhldingen e. V.",
+      "category": "feste",
+      "city": "Uhldingen-Mühlhofen Mi,",
+      "startDate": "2026-06-10",
+      "endDate": "2026-06-10",
+      "time": "18:30 - 20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/seeferienkonzert-mit-dem-musikverein-oberuhldingen-e-v/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2
     },
     {
       "title": "Mannschreck Weine beim Rathaus-Treff Strümpfelbach",
@@ -4876,8 +4876,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Sportplatz FC Bernau, Bernau im Schwarzwald",
-      "lat": 47.8061716,
-      "lng": 8.0280921,
+      "lat": 47.8076152,
+      "lng": 8.0310014,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Sportplatz FC Bernau, Bernau im Schwarzwald"
@@ -28716,6 +28716,17 @@
       "page": 172
     },
     {
+      "title": "Sichelhenke Otterswang",
+      "category": "feste",
+      "city": "Bad Schussenried-Otterswang Sa,",
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-10",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sichelhenke-otterswang/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/171/",
+      "page": 171
+    },
+    {
       "title": "Hohenzollerntage - Familienbande",
       "category": "feste",
       "city": "Bisingen Sa,",
@@ -28745,6 +28756,17 @@
       "endDate": "2026-10-10",
       "time": "18:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oktoberfest-des-musikvereins-dobel/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/171/",
+      "page": 171
+    },
+    {
+      "title": "Comedian Herr Schröder",
+      "category": "feste",
+      "city": "Donaueschingen Sa,",
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-10",
+      "time": "20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/comedian-herr-schroder/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/171/",
       "page": 171
     },
@@ -28870,6 +28892,17 @@
       "page": 172
     },
     {
+      "title": "Kerwe Neidenstein",
+      "category": "feste",
+      "city": "Neidenstein Sa,",
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-10",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kerwe-neidenstein/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/171/",
+      "page": 171
+    },
+    {
       "title": "Lass' den Rauch rein - traditionelles Räuchern",
       "category": "feste",
       "city": "Neuhausen ob Eck Sa,",
@@ -28890,6 +28923,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/backhausfest-nordheim/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/172/",
       "page": 172
+    },
+    {
+      "title": "Oktoberfest in Pfullendorf",
+      "category": "feste",
+      "city": "Pfullendorf Sa,",
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-10",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oktoberfest-in-pfullendorf/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/171/",
+      "page": 171
     },
     {
       "title": "Muswiese Rot am See",
@@ -28932,6 +28976,17 @@
       "endDate": "2026-10-10",
       "time": "14:00 - 16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/blaulichttag-freiwillige-feuerwehr-sipplingen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/171/",
+      "page": 171
+    },
+    {
+      "title": "Suser- & Zwiebelkuchenfahrt auf der MS Großherzog Ludwig",
+      "category": "feste",
+      "city": "Sipplingen Sa,",
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-10",
+      "time": "10:55 - 12:50 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/suser-zwiebelkuchenfahrt-auf-der-ms-grosherzog-ludwig/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/171/",
       "page": 171
     },
@@ -35657,6 +35712,17 @@
       "page": 216
     },
     {
+      "title": "Erobique",
+      "category": "feste",
+      "city": "Heidelberg Sa,",
+      "startDate": "2027-05-29",
+      "endDate": "2027-05-29",
+      "time": "20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/erobique/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/216/",
+      "page": 216
+    },
+    {
       "title": "200 Jahre Stadtkapelle Donaueschingen - Großes Festwochende mit DRUCKLUFT LIVE & Bezirksmusikfest",
       "category": "feste",
       "city": "Donaueschingen Sa,",
@@ -35763,8 +35829,8 @@
       "endDate": "2027-09-17",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/besigheimer-winzerfest/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/216/",
-      "page": 216
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/217/",
+      "page": 217
     },
     {
       "title": "Edelwäscher Oktoberfest T2 - 100 Jahre SVF",
@@ -37452,8 +37518,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Sportplatz FC Bernau, Bernau im Schwarzwald",
-      "lat": 47.8061716,
-      "lng": 8.0280921,
+      "lat": 47.8076152,
+      "lng": 8.0310014,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Sportplatz FC Bernau, Bernau im Schwarzwald"
@@ -38337,8 +38403,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Sportplatz FC Bernau, Bernau im Schwarzwald",
-      "lat": 47.8061716,
-      "lng": 8.0280921,
+      "lat": 47.8076152,
+      "lng": 8.0310014,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Sportplatz FC Bernau, Bernau im Schwarzwald"
@@ -39222,8 +39288,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Sportplatz FC Bernau, Bernau im Schwarzwald",
-      "lat": 47.8061716,
-      "lng": 8.0280921,
+      "lat": 47.8076152,
+      "lng": 8.0310014,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Sportplatz FC Bernau, Bernau im Schwarzwald"
