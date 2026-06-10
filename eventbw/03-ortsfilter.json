@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-14",
-    "startedAt": "2026-06-10T01:00:35.743Z",
-    "finishedAt": "2026-06-10T01:04:09.497Z",
+    "startedAt": "2026-06-10T02:00:34.361Z",
+    "finishedAt": "2026-06-10T02:03:56.778Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 229,
-      "rawCollectedIncludingDuplicates": 3165,
-      "rawUnique": 3165,
+      "rawCollectedIncludingDuplicates": 3167,
+      "rawUnique": 3167,
       "targetDateMatches": 50,
       "targetDateWithGeo": 49,
       "targetDateWithoutGeo": 1,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 48,
       "rawMaerkte": 129,
-      "rawFeste": 3036,
+      "rawFeste": 3038,
       "targetDateMaerkte": 1,
       "targetDateFeste": 49,
       "targetDateWithGeoMaerkte": 1,
@@ -334,8 +334,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Sportplatz FC Bernau, Bernau im Schwarzwald",
-      "lat": 47.8061716,
-      "lng": 8.0280921,
+      "lat": 47.8076152,
+      "lng": 8.0310014,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Sportplatz FC Bernau, Bernau im Schwarzwald"
@@ -1255,8 +1255,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Sportplatz FC Bernau, Bernau im Schwarzwald",
-      "lat": 47.8061716,
-      "lng": 8.0280921,
+      "lat": 47.8076152,
+      "lng": 8.0310014,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Sportplatz FC Bernau, Bernau im Schwarzwald"
