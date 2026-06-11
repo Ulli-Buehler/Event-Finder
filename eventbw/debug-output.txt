@@ -15,20 +15,20 @@ Zieldatum: 2026-06-14
 Counts:
 {
   "pages": 232,
-  "rawCollectedIncludingDuplicates": 3198,
-  "rawUnique": 3198,
-  "targetDateMatches": 55,
-  "targetDateWithGeo": 54,
+  "rawCollectedIncludingDuplicates": 3209,
+  "rawUnique": 3209,
+  "targetDateMatches": 56,
+  "targetDateWithGeo": 55,
   "targetDateWithoutGeo": 1,
-  "targetDateGeoEstimated": 54,
-  "targetDateGeoEstimatedFromCity": 47,
+  "targetDateGeoEstimated": 55,
+  "targetDateGeoEstimatedFromCity": 48,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 5,
   "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 1,
-  "targetDateDetailCoordinateGeoChecked": 55,
+  "targetDateDetailCoordinateGeoChecked": 56,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 6,
@@ -40,13 +40,13 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 1,
   "targetDateBodenseeRegionGeoRecovered": 1,
-  "nonRegionalTargetDateMatches": 52,
+  "nonRegionalTargetDateMatches": 53,
   "rawMaerkte": 129,
-  "rawFeste": 3069,
+  "rawFeste": 3080,
   "targetDateMaerkte": 1,
-  "targetDateFeste": 54,
+  "targetDateFeste": 55,
   "targetDateWithGeoMaerkte": 1,
-  "targetDateWithGeoFeste": 53,
+  "targetDateWithGeoFeste": 54,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 1
 }
@@ -249,6 +249,10 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Ostrach So,",
+    "count": 1
+  },
+  {
     "city": "Sasbachwalden So,",
     "count": 1
   },
@@ -392,7 +396,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 3069,
+    "reportedCount": 3080,
     "parsedCount": 14
   },
   {
@@ -2145,7 +2149,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/220/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 3
+    "parsedCount": 14
   },
   {
     "category": "feste",
