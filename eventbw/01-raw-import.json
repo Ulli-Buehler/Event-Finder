@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-14",
-    "startedAt": "2026-06-12T02:00:39.084Z",
-    "finishedAt": "2026-06-12T02:04:22.249Z",
+    "startedAt": "2026-06-12T03:00:38.898Z",
+    "finishedAt": "2026-06-12T03:04:24.313Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 230,
-      "rawCollectedIncludingDuplicates": 3170,
-      "rawUnique": 3170,
+      "rawCollectedIncludingDuplicates": 3171,
+      "rawUnique": 3171,
       "targetDateMatches": 56,
       "targetDateWithGeo": 55,
       "targetDateWithoutGeo": 1,
@@ -120,7 +120,7 @@
       "targetDateBodenseeRegionGeoChecked": 1,
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 53,
-      "rawMaerkte": 128,
+      "rawMaerkte": 129,
       "rawFeste": 3042,
       "targetDateMaerkte": 1,
       "targetDateFeste": 55,
@@ -35412,6 +35412,17 @@
       "endDate": "2027-05-23",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/muttertagsmarkt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/10/",
+      "page": 10
+    },
+    {
+      "title": "Krämermarkt",
+      "category": "maerkte",
+      "city": "Dettingen an der Erms Do,",
+      "startDate": "2027-06-17",
+      "endDate": "2027-06-17",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kraemermarkt-21/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/10/",
       "page": 10
     }
