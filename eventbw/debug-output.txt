@@ -15,11 +15,11 @@ Zieldatum: 2026-06-14
 Counts:
 {
   "pages": 230,
-  "rawCollectedIncludingDuplicates": 3171,
-  "rawUnique": 3171,
-  "targetDateMatches": 56,
+  "rawCollectedIncludingDuplicates": 3181,
+  "rawUnique": 3181,
+  "targetDateMatches": 57,
   "targetDateWithGeo": 55,
-  "targetDateWithoutGeo": 1,
+  "targetDateWithoutGeo": 2,
   "targetDateGeoEstimated": 55,
   "targetDateGeoEstimatedFromCity": 48,
   "targetDateGeoManualLocality": 0,
@@ -28,7 +28,7 @@ Counts:
   "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 1,
-  "targetDateDetailCoordinateGeoChecked": 56,
+  "targetDateDetailCoordinateGeoChecked": 57,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 6,
@@ -40,15 +40,15 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 1,
   "targetDateBodenseeRegionGeoRecovered": 1,
-  "nonRegionalTargetDateMatches": 53,
+  "nonRegionalTargetDateMatches": 54,
   "rawMaerkte": 129,
-  "rawFeste": 3042,
+  "rawFeste": 3052,
   "targetDateMaerkte": 1,
-  "targetDateFeste": 55,
+  "targetDateFeste": 56,
   "targetDateWithGeoMaerkte": 1,
   "targetDateWithGeoFeste": 54,
   "targetDateWithoutGeoMaerkte": 0,
-  "targetDateWithoutGeoFeste": 1
+  "targetDateWithoutGeoFeste": 2
 }
 
 Regionale Ortsliste:
@@ -182,6 +182,10 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Bad Schönborn So,",
+    "count": 1
+  },
+  {
+    "city": "Baiersbronn Mitteltal So,",
     "count": 1
   },
   {
@@ -396,7 +400,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 3042,
+    "reportedCount": 3052,
     "parsedCount": 14
   },
   {
@@ -2133,7 +2137,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/218/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 4
+    "parsedCount": 14
   },
   {
     "category": "feste",
