@@ -14,41 +14,41 @@ Zieldatum: 2026-06-14
 
 Counts:
 {
-  "pages": 227,
-  "rawCollectedIncludingDuplicates": 3138,
-  "rawUnique": 3138,
-  "targetDateMatches": 57,
-  "targetDateWithGeo": 55,
-  "targetDateWithoutGeo": 2,
-  "targetDateGeoEstimated": 55,
-  "targetDateGeoEstimatedFromCity": 48,
+  "pages": 220,
+  "rawCollectedIncludingDuplicates": 3046,
+  "rawUnique": 3042,
+  "targetDateMatches": 43,
+  "targetDateWithGeo": 43,
+  "targetDateWithoutGeo": 0,
+  "targetDateGeoEstimated": 43,
+  "targetDateGeoEstimatedFromCity": 38,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
-  "targetDateGeoEstimatedFromDetail": 5,
-  "targetDateGeoEstimatedFromCompoundCity": 1,
+  "targetDateGeoEstimatedFromDetail": 4,
+  "targetDateGeoEstimatedFromCompoundCity": 0,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 1,
-  "targetDateDetailCoordinateGeoChecked": 57,
+  "targetDateDetailCoordinateGeoChecked": 43,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
-  "targetDateDetailGoogleMapsQueries": 6,
-  "targetDateDetailGeoChecked": 6,
-  "targetDateDetailGeoRecovered": 5,
-  "targetDateCompoundCityGeoChecked": 1,
-  "targetDateCompoundCityGeoRecovered": 1,
+  "targetDateDetailGoogleMapsQueries": 5,
+  "targetDateDetailGeoChecked": 5,
+  "targetDateDetailGeoRecovered": 4,
+  "targetDateCompoundCityGeoChecked": 0,
+  "targetDateCompoundCityGeoRecovered": 0,
   "targetDateTitleGeoChecked": 0,
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 1,
   "targetDateBodenseeRegionGeoRecovered": 1,
-  "nonRegionalTargetDateMatches": 54,
-  "rawMaerkte": 129,
-  "rawFeste": 3009,
+  "nonRegionalTargetDateMatches": 42,
+  "rawMaerkte": 121,
+  "rawFeste": 2921,
   "targetDateMaerkte": 1,
-  "targetDateFeste": 56,
+  "targetDateFeste": 42,
   "targetDateWithGeoMaerkte": 1,
-  "targetDateWithGeoFeste": 54,
+  "targetDateWithGeoFeste": 42,
   "targetDateWithoutGeoMaerkte": 0,
-  "targetDateWithoutGeoFeste": 2
+  "targetDateWithoutGeoFeste": 0
 }
 
 Regionale Ortsliste:
@@ -145,10 +145,6 @@ Ortsstatistik vor Ortsfilter:
     "count": 7
   },
   {
-    "city": "Baiersbronn So,",
-    "count": 3
-  },
-  {
     "city": "Bernau im Schwarzwald So,",
     "count": 3
   },
@@ -157,19 +153,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 3
   },
   {
-    "city": "Balingen So,",
-    "count": 2
-  },
-  {
     "city": "Friedrichshafen So,",
     "count": 2
   },
   {
     "city": "Pfullendorf So,",
-    "count": 2
-  },
-  {
-    "city": "Radolfzell am Bodensee So,",
     "count": 2
   },
   {
@@ -185,7 +173,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Baiersbronn Mitteltal So,",
+    "city": "Baiersbronn So,",
+    "count": 1
+  },
+  {
+    "city": "Balingen So,",
     "count": 1
   },
   {
@@ -213,23 +205,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Ellwangen So,",
-    "count": 1
-  },
-  {
-    "city": "HeilbronnerLand So,",
-    "count": 1
-  },
-  {
     "city": "Ittlingen So,",
     "count": 1
   },
   {
     "city": "Kandern So,",
-    "count": 1
-  },
-  {
-    "city": "Mössingen-Bad Sebastiansweiler So,",
     "count": 1
   },
   {
@@ -241,15 +221,7 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Neuhausen ob Eck So,",
-    "count": 1
-  },
-  {
     "city": "Öhningen So,",
-    "count": 1
-  },
-  {
-    "city": "Öhringen So,",
     "count": 1
   },
   {
@@ -257,15 +229,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Sasbachwalden So,",
+    "city": "Radolfzell am Bodensee So,",
     "count": 1
   },
   {
     "city": "Schallstadt So,",
-    "count": 1
-  },
-  {
-    "city": "Seebach So,",
     "count": 1
   },
   {
@@ -285,10 +253,6 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Wald-Sentenhart So,",
-    "count": 1
-  },
-  {
     "city": "Waldburg So,",
     "count": 1
   },
@@ -298,10 +262,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Wertheim So,",
-    "count": 1
-  },
-  {
-    "city": "Zaberfeld So,",
     "count": 1
   }
 ]
@@ -313,7 +273,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
     "ok": true,
-    "reportedCount": 129,
+    "reportedCount": 125,
     "parsedCount": 14
   },
   {
@@ -378,20 +338,12 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/9/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 14
+    "parsedCount": 13
   },
   {
     "category": "maerkte",
     "page": 10,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/10/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 3
-  },
-  {
-    "category": "maerkte",
-    "page": 11,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/11/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   },
@@ -2065,60 +2017,12 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/209/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 14
+    "parsedCount": 9
   },
   {
     "category": "feste",
     "page": 210,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/210/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 211,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/211/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 212,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/212/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 213,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/213/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 214,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/214/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 215,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 13
-  },
-  {
-    "category": "feste",
-    "page": 216,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/216/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
