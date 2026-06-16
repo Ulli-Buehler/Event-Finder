@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-21",
-    "startedAt": "2026-06-16T00:00:49.202Z",
-    "finishedAt": "2026-06-16T00:04:05.678Z",
+    "startedAt": "2026-06-16T01:00:43.203Z",
+    "finishedAt": "2026-06-16T01:04:04.091Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 217,
       "rawCollectedIncludingDuplicates": 2996,
-      "rawUnique": 2989,
+      "rawUnique": 2996,
       "targetDateMatches": 48,
       "targetDateWithGeo": 45,
       "targetDateWithoutGeo": 3,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 46,
       "rawMaerkte": 125,
-      "rawFeste": 2864,
+      "rawFeste": 2871,
       "targetDateMaerkte": 2,
       "targetDateFeste": 46,
       "targetDateWithGeoMaerkte": 2,
@@ -131,83 +131,6 @@
     }
   },
   "events": [
-    {
-      "title": "Stolte & Friends: Stolte und Philipp Kovac",
-      "category": "feste",
-      "city": "Baiersbronn Mo,",
-      "startDate": "2026-06-15",
-      "endDate": "2026-06-15",
-      "time": "18:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stolte-friends-stolte-und-philipp-kovac/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Autorenlesung mit Walter Roth",
-      "category": "feste",
-      "city": "Freiamt Mo,",
-      "startDate": "2026-06-15",
-      "endDate": "2026-06-15",
-      "time": "19:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/autorenlesung-mit-walther-roth/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Bottle Rocket (OV)",
-      "category": "feste",
-      "city": "Karlsruhe Mo,",
-      "startDate": "2026-06-15",
-      "endDate": "2026-06-15",
-      "time": "20:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bottle-rocket-ov/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Breath of the Future – Wege aus der fossilen Ära - Tourauftakt in Karlsruhe",
-      "category": "feste",
-      "city": "Karlsruhe Mo,",
-      "startDate": "2026-06-15",
-      "endDate": "2026-06-15",
-      "time": "19:00 - 20:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/breath-of-the-future-wege-aus-der-fossilen-ara-tourauftakt-in-karlsruhe/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Die Physiker",
-      "category": "feste",
-      "city": "Karlsruhe Mo,",
-      "startDate": "2026-06-15",
-      "endDate": "2026-06-15",
-      "time": "19:00 - 20:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/die-physiker-3/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Tanz der Vampire (TheaterFilm)",
-      "category": "feste",
-      "city": "Karlsruhe Mo,",
-      "startDate": "2026-06-15",
-      "endDate": "2026-06-15",
-      "time": "19:00 - 20:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tanz-der-vampire-theaterfilm/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Sunset-Tour SUP",
-      "category": "feste",
-      "city": "Remseck am Neckar Mo,",
-      "startDate": "2026-06-15",
-      "endDate": "2026-06-15",
-      "time": "18:00 - 20:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sunset-tour-sup/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
     {
       "title": "Abendstimmung am Lotharpfad",
       "category": "feste",
@@ -253,6 +176,50 @@
       "page": 1
     },
     {
+      "title": "Demokradienstag | „Kein Land für Niemand“",
+      "category": "feste",
+      "city": "Karlsruhe Di,",
+      "startDate": "2026-06-16",
+      "endDate": "2026-06-16",
+      "time": "18:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/demokradienstag-kein-land-fur-niemand/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Gastspiel der Akademie des Tanzes Mannheim (AdT)",
+      "category": "feste",
+      "city": "Karlsruhe Di,",
+      "startDate": "2026-06-16",
+      "endDate": "2026-06-16",
+      "time": "19:30 - 21:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gastspiel-der-akademie-des-tanzes-mannheim-adt-premiere/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Recycling in der Natur und Zuhause (Und jetzt! Wochen der Nachhaltigkeit)",
+      "category": "feste",
+      "city": "Karlsruhe Di,",
+      "startDate": "2026-06-16",
+      "endDate": "2026-06-16",
+      "time": "15:00 - 16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/recycling-in-der-natur-und-zuhause-und-jetzt-wochen-der-nachhaltigkeit-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Salon Thalamus: Neophyten - Denkanstöße zu einem Perspektivenwechsel (Und jetzt! Wochen der Nachhaltigkeit)",
+      "category": "feste",
+      "city": "Karlsruhe Di,",
+      "startDate": "2026-06-16",
+      "endDate": "2026-06-16",
+      "time": "15:00 - 16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/salon-thalamus-neophyten-denkanstose-zu-einem-perspektivenwechsel-und-jetzt-wochen-der-nachhaltigkeit/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
       "title": "Was uns verbindet - \"Biotopverbund für Fledermäuse am Beispiel der Gemeinde Kürnbach\"",
       "category": "feste",
       "city": "Kürnbach Di,",
@@ -262,6 +229,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/was-uns-verbindet-biotopverbund-fur-fledermause-am-beispiel-der-gemeinde-kurnbach/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2
+    },
+    {
+      "title": "\"Sprachcafé mitten in Müllheim\" - Aktionstage der Deutschwerkstatt Huckepack e.V.",
+      "category": "feste",
+      "city": "Müllheim Di,",
+      "startDate": "2026-06-16",
+      "endDate": "2026-06-16",
+      "time": "16:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sprachcafe-mitten-in-mullheim-aktionstage-der-deutschwerkstatt-huckepack-e-v-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
     },
     {
       "title": "Info-Veranstaltung \"Osteoporose\"",
@@ -275,6 +253,17 @@
       "page": 2
     },
     {
+      "title": "Vortrag: Demokratie ist nicht gleich Demokratie - Ein Blick in die Vielfalt politischer Systeme",
+      "category": "feste",
+      "city": "Münsingen Di,",
+      "startDate": "2026-06-16",
+      "endDate": "2026-06-16",
+      "time": "19:30 - 21:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vortrag-demokratie-ist-nicht-gleich-demokratie-ein-blick-in-die-vielfalt-politischer-systeme/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
       "title": "Live-Übertragung: Qigong am Zeller See",
       "category": "feste",
       "city": "Radolfzell am Bodensee Di,",
@@ -282,6 +271,17 @@
       "endDate": "2026-06-16",
       "time": "06:30 - 07:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/qigong-am-zeller-see/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Blind Date im Subiaco Schramberg - Film wird nicht verraten",
+      "category": "feste",
+      "city": "Schramberg Di,",
+      "startDate": "2026-06-16",
+      "endDate": "2026-06-16",
+      "time": "20:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/blind-date-im-subiaco-schramberg-film-wird-nicht-verraten-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1
     },
@@ -660,6 +660,17 @@
       "page": 4
     },
     {
+      "title": "Gesprächs- und Vortragsabend: Buchvorstellung „Meine Seele, singe“",
+      "category": "feste",
+      "city": "Bad Urach Do,",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-18",
+      "time": "18:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gesprachs-und-vortragsabend-buchvorstellung-meine-seele-singe/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "Busausfahrt - Alpirsbacher Klosterbräu",
       "category": "feste",
       "city": "Baiersbronn Do,",
@@ -713,6 +724,28 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/cocktailabend/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6
+    },
+    {
+      "title": "Leseclub für Erwachsene",
+      "category": "feste",
+      "city": "Eberbach Do,",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-18",
+      "time": "15:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/leseclub-fur-erwachsene/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "After-Work auf der Hexenalm",
+      "category": "feste",
+      "city": "Forbach-Gausbach Do,",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-18",
+      "time": "16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/after-work-auf-der-hexenalm/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Kluftinger Kleinkunstbühne: Helge Thun – Zickzack zum Zenit",
@@ -792,6 +825,39 @@
       "page": 6
     },
     {
+      "title": "Kult Sneak",
+      "category": "feste",
+      "city": "Karlsruhe Do,",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-18",
+      "time": "20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kult-sneak/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Moral und Moralismus in öffentlichen Debatten: Ein moralphilosophischer Blick (Nachholtermin)",
+      "category": "feste",
+      "city": "Karlsruhe Do,",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-18",
+      "time": "18:00 - 19:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/moral-und-moralismus-in-offentlichen-debatten-ein-moralphilosophischer-blick-nachholtermin/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Lesung von Rebekka Moser",
+      "category": "feste",
+      "city": "Kressbronn am Bodensee Do,",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-18",
+      "time": "19:30 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/lesung-von-rebekka-moser/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "Picknick und Wein in den Reben",
       "category": "feste",
       "city": "Müllheim Do,",
@@ -856,6 +922,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wein-bier-mit-der-familienbrauerei-bauhofer/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
       "page": 4
+    },
+    {
+      "title": "Vormittagskino mit dem Film \"Nouvelle Vague\"",
+      "category": "feste",
+      "city": "Schramberg Do,",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-18",
+      "time": "10:30 - 12:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vormittagskino-mit-dem-film-nouvelle-vague/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Spalierobst - eine fast vergessene Obstkultur",
