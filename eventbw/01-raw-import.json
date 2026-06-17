@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-21",
-    "startedAt": "2026-06-17T01:00:52.655Z",
-    "finishedAt": "2026-06-17T01:04:37.400Z",
+    "startedAt": "2026-06-17T02:00:40.655Z",
+    "finishedAt": "2026-06-17T02:04:53.445Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 217,
       "rawCollectedIncludingDuplicates": 3001,
-      "rawUnique": 2993,
+      "rawUnique": 3001,
       "targetDateMatches": 48,
       "targetDateWithGeo": 45,
       "targetDateWithoutGeo": 3,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 46,
       "rawMaerkte": 125,
-      "rawFeste": 2868,
+      "rawFeste": 2876,
       "targetDateMaerkte": 2,
       "targetDateFeste": 46,
       "targetDateWithGeoMaerkte": 2,
@@ -30345,6 +30345,50 @@
       "page": 194
     },
     {
+      "title": "Adventsliedersingen",
+      "category": "feste",
+      "city": "Eberbach So,",
+      "startDate": "2026-12-13",
+      "endDate": "2026-12-13",
+      "time": "18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/adventsliedersingen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/195/",
+      "page": 195
+    },
+    {
+      "title": "Weihnachtsaktion im Schulmuseum",
+      "category": "feste",
+      "city": "Hüfingen So,",
+      "startDate": "2026-12-13",
+      "endDate": "2026-12-13",
+      "time": "14:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weihnachtsaktion-im-schulmuseum/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/195/",
+      "page": 195
+    },
+    {
+      "title": "König.-Pokalschießen",
+      "category": "feste",
+      "city": "Simonswald So,",
+      "startDate": "2026-12-13",
+      "endDate": "2026-12-13",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/konig-pokalschiesen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/195/",
+      "page": 195
+    },
+    {
+      "title": "Blutspendeaktion des DRK",
+      "category": "feste",
+      "city": "Moos Mi,",
+      "startDate": "2026-12-16",
+      "endDate": "2026-12-16",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/blutspendeaktion-des-drk/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/195/",
+      "page": 195
+    },
+    {
       "title": "Familienweihnachtsfeier mit Murgel",
       "category": "feste",
       "city": "Baiersbronn Do,",
@@ -30429,8 +30473,8 @@
       "endDate": "2026-12-19",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/7-main-tauber-weihnachtscircus/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/195/",
-      "page": 195
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/196/",
+      "page": 196
     },
     {
       "title": "Jahreskonzert der Trachtenkapelle Hartschwand-Rotzingen",
@@ -30495,8 +30539,8 @@
       "endDate": "2026-12-19",
       "time": "20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/der-tod-todliche-weihnacht/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/195/",
-      "page": 195
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/196/",
+      "page": 196
     },
     {
       "title": "Lange Nacht der Sauna - Wintergefühle",
@@ -30506,8 +30550,8 @@
       "endDate": "2026-12-19",
       "time": "18:00 - 00:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/lange-nacht-der-sauna-wintergefuhle/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/195/",
-      "page": 195
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/196/",
+      "page": 196
     },
     {
       "title": "X-Mas Party in Wald",
@@ -30528,8 +30572,8 @@
       "endDate": "2026-12-19",
       "time": "14:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/waldweihnacht-des-schwarzwaldvereins-wolfach/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/195/",
-      "page": 195
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/196/",
+      "page": 196
     },
     {
       "title": "Weihnachtliches Stadionsingen im BBBank Wildpark 2026",
@@ -31841,6 +31885,50 @@
       "page": 204
     },
     {
+      "title": "150-jähriges Jubiläum des Musikverein Stammheim e. V.",
+      "category": "feste",
+      "city": "Calw Do,",
+      "startDate": "2027-05-27",
+      "endDate": "2027-05-27",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/150-jahriges-jubilaum-des-musikverein-stammheim-e-v/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/205/",
+      "page": 205
+    },
+    {
+      "title": "Tübinger Stocherkahnrennen",
+      "category": "feste",
+      "city": "Tübingen Do,",
+      "startDate": "2027-05-27",
+      "endDate": "2027-05-27",
+      "time": "13:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tubinger-stocherkahnrennen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/205/",
+      "page": 205
+    },
+    {
+      "title": "Erobique",
+      "category": "feste",
+      "city": "Heidelberg Sa,",
+      "startDate": "2027-05-29",
+      "endDate": "2027-05-29",
+      "time": "20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/erobique/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/205/",
+      "page": 205
+    },
+    {
+      "title": "200 Jahre Stadtkapelle Donaueschingen - Großes Festwochende mit DRUCKLUFT LIVE & Bezirksmusikfest",
+      "category": "feste",
+      "city": "Donaueschingen Sa,",
+      "startDate": "2027-06-05",
+      "endDate": "2027-06-05",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/200-jahre-stadtkapelle-donaueschingen-groses-festwochende-mit-druckluft-live-bezirksmusikfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/205/",
+      "page": 205
+    },
+    {
       "title": "Lisa Eckhart",
       "category": "feste",
       "city": "",
@@ -31958,8 +32046,8 @@
       "endDate": "2027-09-17",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/besigheimer-winzerfest/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/205/",
-      "page": 205
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
+      "page": 206
     },
     {
       "title": "Edelwäscher Oktoberfest T2 - 100 Jahre SVF",
@@ -31969,8 +32057,8 @@
       "endDate": "2027-09-26",
       "time": "20:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/edelwascher-oktoberfest-t2-100-jahre-svf/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/205/",
-      "page": 205
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
+      "page": 206
     },
     {
       "title": "Comedy mit Doris Reichenauer",
@@ -31980,8 +32068,8 @@
       "endDate": "2027-11-19",
       "time": "19:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/comedy-mit-doris-reichenauer/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/205/",
-      "page": 205
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
+      "page": 206
     },
     {
       "title": "100 Jahre Musikverein Aufen - Bezirksmusikfest",
@@ -31991,8 +32079,8 @@
       "endDate": "2028-05-24",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/100-jahre-musikverein-aufen-bezirksmusikfest/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/205/",
-      "page": 205
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
+      "page": 206
     },
     {
       "title": "Vatertagsfest der Hako-Freunde Weiher auf dem Vereinsgelände der Hako-Freunde",
