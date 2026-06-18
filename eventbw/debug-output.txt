@@ -14,21 +14,21 @@ Zieldatum: 2026-06-21
 
 Counts:
 {
-  "pages": 217,
-  "rawCollectedIncludingDuplicates": 3008,
-  "rawUnique": 3006,
-  "targetDateMatches": 48,
-  "targetDateWithGeo": 45,
+  "pages": 219,
+  "rawCollectedIncludingDuplicates": 3025,
+  "rawUnique": 3024,
+  "targetDateMatches": 49,
+  "targetDateWithGeo": 46,
   "targetDateWithoutGeo": 3,
-  "targetDateGeoEstimated": 45,
-  "targetDateGeoEstimatedFromCity": 40,
+  "targetDateGeoEstimated": 46,
+  "targetDateGeoEstimatedFromCity": 41,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 3,
   "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 1,
-  "targetDateDetailCoordinateGeoChecked": 48,
+  "targetDateDetailCoordinateGeoChecked": 49,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 7,
@@ -40,13 +40,13 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 1,
   "targetDateBodenseeRegionGeoRecovered": 1,
-  "nonRegionalTargetDateMatches": 46,
+  "nonRegionalTargetDateMatches": 47,
   "rawMaerkte": 125,
-  "rawFeste": 2881,
+  "rawFeste": 2899,
   "targetDateMaerkte": 2,
-  "targetDateFeste": 46,
+  "targetDateFeste": 47,
   "targetDateWithGeoMaerkte": 2,
-  "targetDateWithGeoFeste": 43,
+  "targetDateWithGeoFeste": 44,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 3
 }
@@ -209,6 +209,10 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Külsheim So,",
+    "count": 1
+  },
+  {
     "city": "Lauf So,",
     "count": 1
   },
@@ -356,7 +360,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 2881,
+    "reportedCount": 2899,
     "parsedCount": 14
   },
   {
@@ -1997,12 +2001,28 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 13
+    "parsedCount": 14
   },
   {
     "category": "feste",
     "page": 207,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/207/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 208,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/208/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 2
+  },
+  {
+    "category": "feste",
+    "page": 209,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/209/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
