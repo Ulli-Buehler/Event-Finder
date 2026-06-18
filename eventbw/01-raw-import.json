@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-21",
-    "startedAt": "2026-06-18T05:00:51.641Z",
-    "finishedAt": "2026-06-18T05:04:18.954Z",
+    "startedAt": "2026-06-18T06:00:42.734Z",
+    "finishedAt": "2026-06-18T06:04:24.746Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 219,
       "rawCollectedIncludingDuplicates": 3025,
-      "rawUnique": 3024,
+      "rawUnique": 3025,
       "targetDateMatches": 49,
       "targetDateWithGeo": 46,
       "targetDateWithoutGeo": 3,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 47,
       "rawMaerkte": 125,
-      "rawFeste": 2899,
+      "rawFeste": 2900,
       "targetDateMaerkte": 2,
       "targetDateFeste": 47,
       "targetDateWithGeoMaerkte": 2,
@@ -29890,6 +29890,17 @@
       "page": 191
     },
     {
+      "title": "Offene Schulstube Meckesheim: Thema Adalbert Stifter",
+      "category": "feste",
+      "city": "Meckesheim So,",
+      "startDate": "2026-11-29",
+      "endDate": "2026-11-29",
+      "time": "14:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/offene-schulstube-meckesheim-thema-adalbert-stifter/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/192/",
+      "page": 192
+    },
+    {
       "title": "Entspannter Advent im Pflanzenhaus",
       "category": "feste",
       "city": "Überlingen am Bodensee So,",
@@ -30029,8 +30040,8 @@
       "endDate": "2026-12-04",
       "time": "17:00 - 19:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/filzwerkstatt-nassfilzen-fur-einsteiger-kinder-und-erwachsene/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/192/",
-      "page": 192
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/193/",
+      "page": 193
     },
     {
       "title": "Mamma Mia Party/Konzert",
