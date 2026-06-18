@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-21",
-    "startedAt": "2026-06-18T01:00:46.095Z",
-    "finishedAt": "2026-06-18T01:04:33.561Z",
+    "startedAt": "2026-06-18T02:00:46.794Z",
+    "finishedAt": "2026-06-18T02:04:21.896Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 217,
       "rawCollectedIncludingDuplicates": 3004,
-      "rawUnique": 3002,
+      "rawUnique": 3004,
       "targetDateMatches": 48,
       "targetDateWithGeo": 45,
       "targetDateWithoutGeo": 3,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 46,
       "rawMaerkte": 125,
-      "rawFeste": 2877,
+      "rawFeste": 2879,
       "targetDateMaerkte": 2,
       "targetDateFeste": 46,
       "targetDateWithGeoMaerkte": 2,
@@ -30015,6 +30015,17 @@
       "page": 192
     },
     {
+      "title": "Nikolaus in Hemmenhofen",
+      "category": "feste",
+      "city": "Gaienhofen-Hemmenhofen So,",
+      "startDate": "2026-12-06",
+      "endDate": "2026-12-06",
+      "time": "15:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/nikolaus-in-hemmenhofen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/193/",
+      "page": 193
+    },
+    {
       "title": "Adventlicher Seniorennachmittag",
       "category": "feste",
       "city": "Winden im Elztal So,",
@@ -30035,6 +30046,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/seniorenadvent-in-kirnbach/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/192/",
       "page": 192
+    },
+    {
+      "title": "Silvesterhocketse",
+      "category": "feste",
+      "city": "Neckarwestheim Mo,",
+      "startDate": "2026-12-07",
+      "endDate": "2026-12-07",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/silvesterhocketse/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/193/",
+      "page": 193
     },
     {
       "title": "EFFEKTE-Reihe im Dezember: Mentale Stärke in turbulenten Zeiten",
@@ -30143,8 +30165,8 @@
       "endDate": "2026-12-11",
       "time": "17:00 - 21:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/uffwarmer-treff-weingut-winkler/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/193/",
-      "page": 193
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/194/",
+      "page": 194
     },
     {
       "title": "Christmas Shopping 2026",
@@ -30187,8 +30209,8 @@
       "endDate": "2026-12-11",
       "time": "19:00 - 21:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/der-nussknacker-4/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/193/",
-      "page": 193
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/194/",
+      "page": 194
     },
     {
       "title": "MAMMA MIA - The Ultimative ABBA Night",
