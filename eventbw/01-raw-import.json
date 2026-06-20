@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-21",
-    "startedAt": "2026-06-20T00:00:51.583Z",
-    "finishedAt": "2026-06-20T00:04:33.545Z",
+    "startedAt": "2026-06-20T01:00:46.156Z",
+    "finishedAt": "2026-06-20T01:04:08.150Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 213,
       "rawCollectedIncludingDuplicates": 2951,
-      "rawUnique": 2923,
+      "rawUnique": 2951,
       "targetDateMatches": 49,
       "targetDateWithGeo": 46,
       "targetDateWithoutGeo": 3,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 47,
       "rawMaerkte": 124,
-      "rawFeste": 2799,
+      "rawFeste": 2827,
       "targetDateMaerkte": 2,
       "targetDateFeste": 47,
       "targetDateWithGeoMaerkte": 2,
@@ -16503,6 +16503,17 @@
       "page": 105
     },
     {
+      "title": "4. Altdorfer Wasen - 80/90/2000er Party",
+      "category": "feste",
+      "city": "Altdorf Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/4-altdorfer-wasen-80-90-2000er-party/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/107/",
+      "page": 107
+    },
+    {
       "title": "Kreativ- und Kunsthandwerkermarkt im Sole-Aktiv-Park",
       "category": "feste",
       "city": "Bad Schönborn Sa,",
@@ -16514,6 +16525,17 @@
       "page": 105
     },
     {
+      "title": "Naturpark-Markt und Holzschneflertage 2026",
+      "category": "feste",
+      "city": "Bernau im Schwarzwald Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturpark-markt-und-holzschneflertage-2026/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/106/",
+      "page": 106
+    },
+    {
       "title": "Oldtimertreffen",
       "category": "feste",
       "city": "Beuren Sa,",
@@ -16523,6 +16545,28 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oldtimertreffen-3/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/105/",
       "page": 105
+    },
+    {
+      "title": "Erlebniswochenende Bietigheim-Bissingen und Besigheim - Flusserlebnis und Weingenuss im Enztal - Kanufahrt und Planwagenfahrt",
+      "category": "feste",
+      "city": "Bietigheim-Bissingen Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "10:00 - 00:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/erlebniswochenende-bietigheim-bissingen-und-besigheim-flusserlebnis-und-weingenuss-im-enztal-kanufahrt-und-planwagenfahrt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/107/",
+      "page": 107
+    },
+    {
+      "title": "500 Jahre Breisacher Hochaltar - Patrozinium des Hochaltars",
+      "category": "feste",
+      "city": "Breisach Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "10:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/500-jahre-breisacher-hochaltar-patrozinium-des-hochaltars/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/106/",
+      "page": 106
     },
     {
       "title": "CHILBI 2026 in Niederrimsingen",
@@ -16558,6 +16602,28 @@
       "page": 105
     },
     {
+      "title": "Eppinger Festivalsommer 2026 - Christian Engel & ABBAnda auf der Bühne im Weiherpark",
+      "category": "feste",
+      "city": "Eppingen Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "18:30 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/eppinger-festivalsommer-2026-christian-engel-abbanda-auf-der-buhne-im-weiherpark/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/107/",
+      "page": 107
+    },
+    {
+      "title": "Genussmarkt rund ums Lagerhaus an der Lauter",
+      "category": "feste",
+      "city": "Gomadingen Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "11:00 - 19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/genussmarkt-rund-ums-lagerhaus-an-der-lauter/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/106/",
+      "page": 106
+    },
+    {
       "title": "Sommermarkt der Landfrauen",
       "category": "feste",
       "city": "Haslach im Kinzigtal Sa,",
@@ -16567,6 +16633,39 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommermarkt-der-landfrauen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/105/",
       "page": 105
+    },
+    {
+      "title": "23. Internationales low & no budget film-sharing Kurzfilmfestival 2026",
+      "category": "feste",
+      "city": "Heilbronn Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "21:00 - 23:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/23-internationales-low-no-budget-film-sharing-kurzfilmfestival-2026/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/106/",
+      "page": 106
+    },
+    {
+      "title": "Führung über Obstbau im Garten",
+      "category": "feste",
+      "city": "Heilbronn Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "15:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fuhrung-uber-obstbau-im-garten/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/107/",
+      "page": 107
+    },
+    {
+      "title": "Kilian Krauth \"Freud & Leid mit dem Trollinger\"",
+      "category": "feste",
+      "city": "Heilbronn Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "18:00 - 20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kilian-krauth-freud-leid-mit-dem-trollinger/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/107/",
+      "page": 107
     },
     {
       "title": "Kräuterweihe in Ibach",
@@ -16580,6 +16679,17 @@
       "page": 105
     },
     {
+      "title": "Three in One African night - Gk rapgenius, Cathy matete, Tony slay, G. Hanson",
+      "category": "feste",
+      "city": "Karlsbad Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "21:15 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/three-in-one-african-night-gk-rapgenius-cathy-matete-tony-slay-g-hanson/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/106/",
+      "page": 106
+    },
+    {
       "title": "2. QueerShip",
       "category": "feste",
       "city": "Karlsruhe Sa,",
@@ -16589,6 +16699,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/2-queership/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/104/",
       "page": 104
+    },
+    {
+      "title": "Queership Tanzfahrt",
+      "category": "feste",
+      "city": "Karlsruhe Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "20:00 - 00:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/queership-tanzfahrt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/106/",
+      "page": 106
     },
     {
       "title": "MAMMA MIA - The Ultimative ABBA Night - Open Air",
@@ -16602,6 +16723,50 @@
       "page": 104
     },
     {
+      "title": "Korbflechterei",
+      "category": "feste",
+      "city": "Limersheim Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "10:00 - 19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/korbflechterei/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/106/",
+      "page": 106
+    },
+    {
+      "title": "Folk on Farm - 6. Schülenswald Open Air",
+      "category": "feste",
+      "city": "Maulbronn Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/folk-on-farm-6-schulenswald-open-air/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/106/",
+      "page": 106
+    },
+    {
+      "title": "Strandfest des Turn- und Sportvereins in Iznang",
+      "category": "feste",
+      "city": "Moos Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/strandfest-des-turn-und-sportvereins-in-iznang/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/106/",
+      "page": 106
+    },
+    {
+      "title": "Weiden- und Korbflechterei-Festival",
+      "category": "feste",
+      "city": "Neuried Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "10:00 - 19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weiden-und-korbflechterei-festival/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/106/",
+      "page": 106
+    },
+    {
       "title": "Nordheimer Parkfest",
       "category": "feste",
       "city": "Nordheim Sa,",
@@ -16611,6 +16776,61 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/nordheimer-parkfest/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/105/",
       "page": 105
+    },
+    {
+      "title": "Mariä Himmelfahrt und Patrozinium von Kloster Habsthal",
+      "category": "feste",
+      "city": "Ostrach Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "10:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/maria-himmelfahrt-und-patrozinium-von-kloster-habsthal/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/107/",
+      "page": 107
+    },
+    {
+      "title": "ELECTRIC HORIZON FESTIVAL 2026",
+      "category": "feste",
+      "city": "Plankstadt Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "11:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/electric-horizon-festival-2026/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/106/",
+      "page": 106
+    },
+    {
+      "title": "Open-Air-Kino \"Die progressiven Nostalgiker\"",
+      "category": "feste",
+      "city": "Rechberghausen Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "21:30 - 23:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/open-air-kino-die-progressiven-nostalgiker/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/106/",
+      "page": 106
+    },
+    {
+      "title": "Salztag in Hohenlohe",
+      "category": "feste",
+      "city": "Schwäbisch Hall Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "10:30 - 17:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/salztag-in-hohenlohe/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/107/",
+      "page": 107
+    },
+    {
+      "title": "Altortfest Neidenstein",
+      "category": "feste",
+      "city": "Sinsheimer Erlebnisregion Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/altortfest-neidenstein/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/107/",
+      "page": 107
     },
     {
       "title": "\"Straßenmusik-Live in Tauberbischofsheim\" mit Krämermarkt und Late-Night Shopping",
@@ -16633,6 +16853,28 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tauberbischofsheimer-cafe-anno-dazumal-geoffnet/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/105/",
       "page": 105
+    },
+    {
+      "title": "Lichterfest Todtmoos",
+      "category": "feste",
+      "city": "Todtmoos Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/lichterfest-todtmoos/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/106/",
+      "page": 106
+    },
+    {
+      "title": "Heilige Messe zum Patrozinium",
+      "category": "feste",
+      "city": "Wertheim-Bronnbach Sa,",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-15",
+      "time": "10:30 - 18:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/heilige-messe-zum-patrozinium/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/106/",
+      "page": 106
     },
     {
       "title": "Großer Wallfahrtstag mit Kräuterweihe",
@@ -16690,6 +16932,17 @@
       "page": 108
     },
     {
+      "title": "Ibacher Führwehr Fescht",
+      "category": "feste",
+      "city": "Ibach So,",
+      "startDate": "2026-08-16",
+      "endDate": "2026-08-16",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/ibacher-fuhrwehr-fescht/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/107/",
+      "page": 107
+    },
+    {
       "title": "Bau von Rindenbooten",
       "category": "feste",
       "city": "Karlsruhe So,",
@@ -16745,6 +16998,17 @@
       "page": 108
     },
     {
+      "title": "Moderne Schatzsuche: Eröffnung des Cache-Points im Freilichtmuseum",
+      "category": "feste",
+      "city": "Neuhausen ob Eck So,",
+      "startDate": "2026-08-16",
+      "endDate": "2026-08-16",
+      "time": "10:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/moderne-schatzsuche-eroffnung-des-cache-points-im-freilichtmuseum/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/107/",
+      "page": 107
+    },
+    {
       "title": "Garten Gerard",
       "category": "feste",
       "city": "Öhningen So,",
@@ -16778,6 +17042,17 @@
       "page": 108
     },
     {
+      "title": "Mühlenfest",
+      "category": "feste",
+      "city": "Seebach So,",
+      "startDate": "2026-08-16",
+      "endDate": "2026-08-16",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/muehlenfest-3/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/107/",
+      "page": 107
+    },
+    {
       "title": "Der Duft einer Epoche - Hygiene & Erotik im Barock",
       "category": "feste",
       "city": "Tettnang So,",
@@ -16787,6 +17062,39 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/der-duft-einer-epoche-hygiene-erotik-im-barock-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/108/",
       "page": 108
+    },
+    {
+      "title": "Familientag im Uferpark",
+      "category": "feste",
+      "city": "Überlingen am Bodensee So,",
+      "startDate": "2026-08-16",
+      "endDate": "2026-08-16",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/familientag-im-uferpark/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/107/",
+      "page": 107
+    },
+    {
+      "title": "Begegnungen: Ein Hoch auf die Ortenau",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-08-16",
+      "endDate": "2026-08-16",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/begegnungen-ein-hoch-auf-die-ortenau/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/107/",
+      "page": 107
+    },
+    {
+      "title": "Der \"Alte Benz\" in Aktion",
+      "category": "feste",
+      "city": "Wolfach So,",
+      "startDate": "2026-08-16",
+      "endDate": "2026-08-16",
+      "time": "15:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/der-alte-benz-in-aktion/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/107/",
+      "page": 107
     },
     {
       "title": "Feriencamp @ DB",
