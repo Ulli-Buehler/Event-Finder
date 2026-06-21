@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-21",
-    "startedAt": "2026-06-21T04:00:43.540Z",
-    "finishedAt": "2026-06-21T04:04:16.849Z",
+    "startedAt": "2026-06-21T05:00:43.616Z",
+    "finishedAt": "2026-06-21T05:04:43.200Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 210,
       "rawCollectedIncludingDuplicates": 2898,
-      "rawUnique": 2896,
+      "rawUnique": 2898,
       "targetDateMatches": 50,
       "targetDateWithGeo": 47,
       "targetDateWithoutGeo": 3,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 48,
       "rawMaerkte": 123,
-      "rawFeste": 2773,
+      "rawFeste": 2775,
       "targetDateMaerkte": 2,
       "targetDateFeste": 48,
       "targetDateWithGeoMaerkte": 2,
@@ -10757,6 +10757,17 @@
       "page": 69
     },
     {
+      "title": "Hopfenfest",
+      "category": "feste",
+      "city": "Alpirsbach Fr,",
+      "startDate": "2026-07-24",
+      "endDate": "2026-07-24",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/hopfenfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/68/",
+      "page": 68
+    },
+    {
       "title": "Rossini in Wildbad - L’occasione fa il ladro - Gelegenheit macht Diebe (Venedig 1812)",
       "category": "feste",
       "city": "Bad Wildbad Fr,",
@@ -11006,8 +11017,8 @@
       "endDate": "2026-07-24",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/india-summer-days-karlsruhe-2026/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/69/",
-      "page": 69
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/70/",
+      "page": 70
     },
     {
       "title": "River of Grass (OV)",
@@ -11087,6 +11098,17 @@
       "page": 70
     },
     {
+      "title": "Mundelsheimer SommerFÄSCHD",
+      "category": "feste",
+      "city": "Mundelsheim Fr,",
+      "startDate": "2026-07-24",
+      "endDate": "2026-07-24",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mundelsheimer-sommerfaschd/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/68/",
+      "page": 68
+    },
+    {
       "title": "Strandfest in Wangen",
       "category": "feste",
       "city": "Öhningen Fr,",
@@ -11149,8 +11171,8 @@
       "endDate": "2026-07-24",
       "time": "20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/karaoke-party/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/68/",
-      "page": 68
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/69/",
+      "page": 69
     },
     {
       "title": "20-jährige Jubiläumsfeier im Erlebniszentrum",
@@ -11193,8 +11215,8 @@
       "endDate": "2026-07-24",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/muhlkanalfest-mit-schlauchbootrallye-in-impfingen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/68/",
-      "page": 68
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/69/",
+      "page": 69
     },
     {
       "title": "Kulturtage in den Wagenburgen",
@@ -11259,8 +11281,8 @@
       "endDate": "2026-07-24",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wertheimer-altstadtfest/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/69/",
-      "page": 69
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/70/",
+      "page": 70
     },
     {
       "title": "Schlossfestspiele Zwingenberg",
