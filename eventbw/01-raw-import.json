@@ -1,9 +1,9 @@
 {
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
-    "targetDate": "2026-06-21",
-    "startedAt": "2026-06-21T21:00:40.617Z",
-    "finishedAt": "2026-06-21T21:04:30.380Z",
+    "targetDate": "2026-06-28",
+    "startedAt": "2026-06-21T22:00:41.867Z",
+    "finishedAt": "2026-06-21T22:04:01.034Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -96,38 +96,38 @@
       "pages": 210,
       "rawCollectedIncludingDuplicates": 2898,
       "rawUnique": 2898,
-      "targetDateMatches": 50,
-      "targetDateWithGeo": 47,
-      "targetDateWithoutGeo": 3,
-      "targetDateGeoEstimated": 47,
-      "targetDateGeoEstimatedFromCity": 42,
+      "targetDateMatches": 41,
+      "targetDateWithGeo": 39,
+      "targetDateWithoutGeo": 2,
+      "targetDateGeoEstimated": 39,
+      "targetDateGeoEstimatedFromCity": 35,
       "targetDateGeoManualLocality": 0,
       "targetDateGeoFromEventBwDetailCoordinates": 0,
-      "targetDateGeoEstimatedFromDetail": 3,
+      "targetDateGeoEstimatedFromDetail": 2,
       "targetDateGeoEstimatedFromCompoundCity": 1,
       "targetDateGeoEstimatedFromTitle": 0,
       "targetDateGeoEstimatedFromBodenseeRegion": 1,
-      "targetDateDetailCoordinateGeoChecked": 50,
+      "targetDateDetailCoordinateGeoChecked": 41,
       "targetDateDetailCoordinateGeoRecovered": 0,
       "targetDateDetailCoordinateGeoFailed": 0,
-      "targetDateDetailGoogleMapsQueries": 7,
-      "targetDateDetailGeoChecked": 7,
-      "targetDateDetailGeoRecovered": 3,
+      "targetDateDetailGoogleMapsQueries": 3,
+      "targetDateDetailGeoChecked": 3,
+      "targetDateDetailGeoRecovered": 2,
       "targetDateCompoundCityGeoChecked": 1,
       "targetDateCompoundCityGeoRecovered": 1,
       "targetDateTitleGeoChecked": 0,
       "targetDateTitleGeoRecovered": 0,
       "targetDateBodenseeRegionGeoChecked": 1,
       "targetDateBodenseeRegionGeoRecovered": 1,
-      "nonRegionalTargetDateMatches": 48,
+      "nonRegionalTargetDateMatches": 39,
       "rawMaerkte": 123,
       "rawFeste": 2775,
-      "targetDateMaerkte": 2,
-      "targetDateFeste": 48,
-      "targetDateWithGeoMaerkte": 2,
-      "targetDateWithGeoFeste": 45,
+      "targetDateMaerkte": 1,
+      "targetDateFeste": 40,
+      "targetDateWithGeoMaerkte": 1,
+      "targetDateWithGeoFeste": 38,
       "targetDateWithoutGeoMaerkte": 0,
-      "targetDateWithoutGeoFeste": 3
+      "targetDateWithoutGeoFeste": 2
     }
   },
   "events": [
@@ -140,12 +140,7 @@
       "time": "11:00 - 14:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/der-rosberg-spielt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
-      "page": 4,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Haus auf dem Roßberg,"
+      "page": 4
     },
     {
       "title": "Oldtimer-Traktorentreff und Ausstellung historischer Standmotoren",
@@ -156,12 +151,7 @@
       "time": "10:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oldtimer-traktorentreff-und-ausstellung-historischer-standmotoren/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Bauernhaus-Museum Allgäu-Oberschwaben Wolfegg,"
+      "page": 1
     },
     {
       "title": "Oldtimer-Traktorentreff und Ausstellung historischer Standmotoren",
@@ -172,12 +162,7 @@
       "time": "10:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oldtimer-traktorentreff-und-ausstellung-historischer-standmotoren-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Bauernhaus-Museum Allgäu-Oberschwaben Wolfegg,"
+      "page": 1
     },
     {
       "title": "Tag der offenen Gartentür",
@@ -188,19 +173,7 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-der-offenen-gartentur-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
-      "page": 3,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "/ Region Regionen Bodensee Heilbronner Land Hohenlohe + Schwäbisch Hall Kraichgau-Stromberg Kurpfalz Liebliches Taubertal Oberschwaben Odenwald Region Stuttgart",
-      "lat": 47.65,
-      "lng": 9.35,
-      "geoEstimated": true,
-      "geoSource": "derived-region-bodensee",
-      "geoQuery": "Bodensee, Baden-Württemberg, Germany",
-      "geoRegionFallback": "Bodensee",
-      "geoRegionFallbackNote": "Kein genauer Ort gefunden; Position grob auf Bodensee gesetzt."
+      "page": 3
     },
     {
       "title": "Die „Mettenberger Flachsbauern“",
@@ -211,21 +184,7 @@
       "time": "10:00 - 16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/die-mettenberger-flachsbauern/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "geoCompoundCityChecked": true,
-      "geoCompoundCityQueries": [
-        "Kürnbach So,, Bad Schussenried, Baden-Württemberg, Germany",
-        "Kürnbach So,, Baden-Württemberg, Germany",
-        "Bad Schussenried, Baden-Württemberg, Germany"
-      ],
-      "lat": 47.99208,
-      "lng": 9.6710084,
-      "geoEstimated": true,
-      "geoSource": "derived-compound-city",
-      "geoQuery": "Kürnbach So,, Bad Schussenried, Baden-Württemberg, Germany",
-      "geoCompoundCityFound": true
+      "page": 2
     },
     {
       "title": "100 Jahre Fußball SVB",
@@ -236,14 +195,7 @@
       "time": "10:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/100-jahre-fusball-svb/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5069519,
-      "lng": 8.3720124,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn So,, Baden-Württemberg, Germany"
+      "page": 1
     },
     {
       "title": "Klassik meets Pop - Die goldene Stimme",
@@ -254,14 +206,7 @@
       "time": "16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/klassik-meets-pop-die-goldene-stimme/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5069519,
-      "lng": 8.3720124,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn So,, Baden-Württemberg, Germany"
+      "page": 1
     },
     {
       "title": "Konzert mit dem Harmonika-Spielring Baiersbronn",
@@ -272,14 +217,7 @@
       "time": "12:00 - 13:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kurkonzert-mit-dem-harmonika-spielring-baiersbronn-4/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5069519,
-      "lng": 8.3720124,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn So,, Baden-Württemberg, Germany"
+      "page": 1
     },
     {
       "title": "Sonne - Quell des Lebens",
@@ -290,14 +228,7 @@
       "time": "10:00 - 16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sonne-quell-des-lebens/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5069519,
-      "lng": 8.3720124,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Baiersbronn So,, Baden-Württemberg, Germany"
+      "page": 1
     },
     {
       "title": "Mobiles Kino Brackenheim",
@@ -308,14 +239,7 @@
       "time": "13:00 - 21:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mobiles-kino-brackenheim/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
-      "page": 3,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0784228,
-      "lng": 9.067437,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Brackenheim So,, Baden-Württemberg, Germany"
+      "page": 3
     },
     {
       "title": "Naturparkmarkt Brackenheim",
@@ -326,14 +250,7 @@
       "time": "11:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturparkmarkt-brackenheim/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0784228,
-      "lng": 9.067437,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Brackenheim So,, Baden-Württemberg, Germany"
+      "page": 2
     },
     {
       "title": "500 Jahre Breisacher Hochaltar - Stadtpatrozinium",
@@ -344,14 +261,7 @@
       "time": "08:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/500-jahre-breisacher-hochaltar-stadtpatrozinium/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
-      "page": 3,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.0226167,
-      "lng": 7.6040544,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Breisach So,, Baden-Württemberg, Germany"
+      "page": 3
     },
     {
       "title": "English Teatime im Klostergarten",
@@ -362,14 +272,7 @@
       "time": "15:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/english-teatime-im-klostergarten/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.0226167,
-      "lng": 7.6040544,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Breisach So,, Baden-Württemberg, Germany"
+      "page": 1
     },
     {
       "title": "Stadtpatrozinium",
@@ -380,14 +283,7 @@
       "time": "08:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtpatrozinium/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.0226167,
-      "lng": 7.6040544,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Breisach So,, Baden-Württemberg, Germany"
+      "page": 2
     },
     {
       "title": "Hockete ums Feuerwehrhaus",
@@ -398,14 +294,7 @@
       "time": "11:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/hockete-ums-feuerwehrhaus/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
-      "page": 4,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.330074,
-      "lng": 9.1819574,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Burladingen-Stetten So,, Baden-Württemberg, Germany"
+      "page": 4
     },
     {
       "title": "Sommernachtskonzert mit dem Chor Right Now!",
@@ -416,14 +305,7 @@
       "time": "19:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommernachtskonzert-mit-dem-chor-right-now/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
-      "page": 4,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.4635303,
-      "lng": 8.9855203,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
+      "page": 4
     },
     {
       "title": "WatthaldenFestival",
@@ -434,14 +316,7 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/watthaldenfestival/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.9414188,
-      "lng": 8.4076347,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Ettlingen So,, Baden-Württemberg, Germany"
+      "page": 1
     },
     {
       "title": "Mit der Höri-Fähre zum Kunstschiff - (h)änne und dänne",
@@ -452,14 +327,7 @@
       "time": "14:15 - 18:20 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mit-der-hori-fahre-zum-kunstschiff-hanne-und-danne/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.6821346,
-      "lng": 8.9818583,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Gaienhofen So,, Baden-Württemberg, Germany"
+      "page": 2
     },
     {
       "title": "Perspektive Heidengraben – Fotokurse",
@@ -470,14 +338,7 @@
       "time": "11:00 - 16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/perspektive-heidengraben-fotokurse/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
-      "page": 3,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5218526,
-      "lng": 9.4069178,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Hülben So,, Baden-Württemberg, Germany"
+      "page": 3
     },
     {
       "title": "Konzert - Steve Arvey Trio",
@@ -488,14 +349,7 @@
       "time": "11:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/konzert-steve-arvey-trio/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.714697,
-      "lng": 7.6610865,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Kandern So,, Baden-Württemberg, Germany"
+      "page": 2
     },
     {
       "title": "Itch (Und jetzt! Wochen der Nachhaltigkeit)",
@@ -506,14 +360,7 @@
       "time": "18:30 - 20:50 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/itch-und-jetzt-wochen-der-nachhaltigkeit/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
+      "page": 2
     },
     {
       "title": "MusikTheaterTag",
@@ -524,14 +371,7 @@
       "time": "09:30 - 22:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/musiktheatertag/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
+      "page": 2
     },
     {
       "title": "The Virgin Suicides",
@@ -542,14 +382,7 @@
       "time": "20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/the-virgin-suicides/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
-      "page": 3,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.0068705,
-      "lng": 8.4034195,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
+      "page": 3
     },
     {
       "title": "Kreativsonntag 2026",
@@ -560,14 +393,7 @@
       "time": "11:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kreativsonntag-2026/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
-      "page": 4,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.6696553,
-      "lng": 9.5207106,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Külsheim So,, Baden-Württemberg, Germany"
+      "page": 4
     },
     {
       "title": "Hip Hop Workshop",
@@ -578,14 +404,7 @@
       "time": "14:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kochschule-im-laufaz/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.6485831,
-      "lng": 8.1292199,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Lauf So,, Baden-Württemberg, Germany"
+      "page": 2
     },
     {
       "title": "Mössinger Rosenmarkt & Kunstgalerie",
@@ -596,14 +415,7 @@
       "time": "11:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mossinger-rosenmarkt-kunstgalerie/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.4069119,
-      "lng": 9.0602912,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Mössingen So,, Baden-Württemberg, Germany"
+      "page": 1
     },
     {
       "title": "Naturpark-Markt Neckarbischofsheim",
@@ -614,17 +426,7 @@
       "time": "11:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturpark-markt-neckarbischofsheim/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Neckarbischofsheim, Naturpark Neckartal-Odenwald",
-      "lat": 49.2924547,
-      "lng": 8.9609366,
-      "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Neckarbischofsheim, Baden-Württemberg, Germany"
+      "page": 2
     },
     {
       "title": "Klangschalenkonzert im Heilstollen mit Uta Karen Mempel",
@@ -635,14 +437,7 @@
       "time": "19:00 - 21:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/klangschalenkonzert-im-heilstollen-mit-uta-karen-mempel/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.6617473,
-      "lng": 8.6958614,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Neubulach So,, Baden-Württemberg, Germany"
+      "page": 2
     },
     {
       "title": "SOUTHSIDE FESTIVAL 2026 | Tagespass Sunday",
@@ -653,14 +448,7 @@
       "time": "12:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/southside-festival-2026-tagespass-sunday/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.9713529,
-      "lng": 8.9283473,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Neuhausen Ob Eck So,, Baden-Württemberg, Germany"
+      "page": 2
     },
     {
       "title": "Mittsommernächte Finale „Dass Du der Mensch wirst, der Du bist …“",
@@ -671,14 +459,7 @@
       "time": "10:30 - 11:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mittsommernachte-finale-dass-du-der-mensch-wirst-der-du-bist/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.6617131,
-      "lng": 8.8873571,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Öhningen So,, Baden-Württemberg, Germany"
+      "page": 2
     },
     {
       "title": "Sommerfest Feuerwehr Schienen",
@@ -689,14 +470,7 @@
       "time": "11:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommerfest-feuerwehr-schienen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
-      "page": 3,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.687779,
-      "lng": 8.8989458,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Öhningen-Schienen So,, Baden-Württemberg, Germany"
+      "page": 3
     },
     {
       "title": "Familientag im Waldfreibad",
@@ -707,14 +481,7 @@
       "time": "09:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/familientag-im-waldfreibad/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.924349,
-      "lng": 9.2559822,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Pfullendorf So,, Baden-Württemberg, Germany"
+      "page": 1
     },
     {
       "title": "Cars & Coffee am Kaffeestübchen",
@@ -725,14 +492,7 @@
       "time": "12:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/cars-coffee-am-kaffeestubchen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.6186096,
-      "lng": 8.1280222,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Sasbachwalden So,, Baden-Württemberg, Germany"
+      "page": 2
     },
     {
       "title": "Rangerführung zum Wilden See",
@@ -743,14 +503,7 @@
       "time": "09:30 - 13:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/rangerfuhrung-zum-wilden-see/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5762423,
-      "lng": 8.1711181,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Seebach So,, Baden-Württemberg, Germany"
+      "page": 1
     },
     {
       "title": "Einen Krimi zum Abendessen - Krimilesung mit Susanne Eisele",
@@ -761,14 +514,7 @@
       "time": "18:00 - 21:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/einen-krimi-zum-abendessen-krimilesung-mit-susanne-eisele/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
-      "page": 3,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.5876024,
-      "lng": 8.4610945,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Seewald So,, Baden-Württemberg, Germany"
+      "page": 3
     },
     {
       "title": "Der Andere Abend",
@@ -779,14 +525,7 @@
       "time": "19:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/der-andere-abend/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
-      "page": 4,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.0869139,
-      "lng": 9.2165039,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Sigmaringen So,, Baden-Württemberg, Germany"
+      "page": 4
     },
     {
       "title": "Kinderfest im Donaubad",
@@ -797,14 +536,7 @@
       "time": "12:00 - 16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kinderfest-im-donaubad/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
-      "page": 3,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.0869139,
-      "lng": 9.2165039,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Sigmaringen So,, Baden-Württemberg, Germany"
+      "page": 3
     },
     {
       "title": "Internationaler Yoga Tag im Singener Stadtgarten",
@@ -815,14 +547,7 @@
       "time": "17:00 - 18:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationaler-yoga-tag-im-singener-stadtgarten/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
-      "page": 3,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 47.7609654,
-      "lng": 8.8466819,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Singen So,, Baden-Württemberg, Germany"
+      "page": 3
     },
     {
       "title": "„Yoga auf dem Schlossbuckel“ am Int. Weltyogatag",
@@ -833,17 +558,7 @@
       "time": "09:30 - 11:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/yoga-auf-dem-schlossbuckel-am-int-weltyogatag/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
-      "page": 3,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Sinsheimer Erlebnisregion",
-      "lat": 49.2508136,
-      "lng": 8.8754052,
-      "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Sinsheimer Erlebnisregion"
+      "page": 3
     },
     {
       "title": "Naturpark- Markt in Neckarbischofsheim",
@@ -854,17 +569,7 @@
       "time": "11:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturpark-markt-in-neckarbischofsheim/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
-      "page": 3,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "geoDetailChecked": true,
-      "geoDetailFound": true,
-      "geoDetailLocation": "Altes Schloss Neckarbischofsheim, Sinsheimer Erlebnisregion",
-      "lat": 49.2926345,
-      "lng": 8.9593683,
-      "geoEstimated": true,
-      "geoSource": "derived-detail",
-      "geoQuery": "Altes Schloss Neckarbischofsheim, Baden-Württemberg, Germany"
+      "page": 3
     },
     {
       "title": "Fête de la Musique mit „Duo Pariser Flair“ in Tauberbischofsheim",
@@ -875,14 +580,7 @@
       "time": "17:00 - 20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fete-de-la-musique-mit-duo-pariser-flair/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
-      "page": 2,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 49.6229682,
-      "lng": 9.6627138,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Tauberbischofsheim So,, Baden-Württemberg, Germany"
+      "page": 2
     },
     {
       "title": "Begegnungen: Frauen auf dem Land",
@@ -893,14 +591,7 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/begegnungen-frauen-auf-dem-land/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.198851,
-      "lng": 8.2856229,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+      "page": 1
     },
     {
       "title": "Offene Werkstatt für Familien: Im Schwarzwald schöne Mädchen",
@@ -911,14 +602,7 @@
       "time": "11:00 - 16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/offene-werkstatt-fur-familien-im-schwarzwald-schone-madchen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.198851,
-      "lng": 8.2856229,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+      "page": 1
     },
     {
       "title": "Café Wunderfitz im Elztalmuseum",
@@ -929,14 +613,7 @@
       "time": "14:30 - 16:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/cafe-wunderfitz-im-elztalmuseum/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
-      "page": 4,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.0939396,
-      "lng": 7.9610142,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Waldkirch So,, Baden-Württemberg, Germany"
+      "page": 4
     },
     {
       "title": "Café Wunderfitz zur Sonderausstellung \"Kindheit im Elztal\"",
@@ -947,14 +624,7 @@
       "time": "14:30 - 16:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/cafe-wunderfitz-zur-sonderausstellung-kindheit-im-elztal/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
-      "page": 3,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.0939396,
-      "lng": 7.9610142,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Waldkirch So,, Baden-Württemberg, Germany"
+      "page": 3
     },
     {
       "title": "Musikalischer Grillabend",
@@ -965,14 +635,7 @@
       "time": "18:00 - 23:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/musikalischer-grillabend/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
-      "page": 3,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.1491948,
-      "lng": 8.0317783,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Winden im Elztal So,, Baden-Württemberg, Germany"
+      "page": 3
     },
     {
       "title": "Musikalischer Grillabend",
@@ -983,14 +646,7 @@
       "time": "18:00 - 23:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/musikalischer-grillabend-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
-      "page": 3,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.1491948,
-      "lng": 8.0317783,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Winden im Elztal So,, Baden-Württemberg, Germany"
+      "page": 3
     },
     {
       "title": "Sommerfest der Kameradschaft Langenbach-Übelbach",
@@ -1001,14 +657,7 @@
       "time": "11:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommerfest-der-kameradschaft-langenbach-ubelbach/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.2985845,
-      "lng": 8.222608,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Wolfach So,, Baden-Württemberg, Germany"
+      "page": 1
     },
     {
       "title": "Bits & Bargeld - Wie bezahlen wir morgen?",
@@ -3659,7 +3308,17 @@
       "time": "08:00 - 15:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fotokurs-architektur-unesco-welterbe/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
-      "page": 23
+      "page": 23,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Trinkhalle,",
+      "lat": 48.7617867,
+      "lng": 8.2367369,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Trinkhalle,, Baden-Württemberg, Germany"
     },
     {
       "title": "Jubiläumsfest Waldkindergarten Wurzelzwerge",
@@ -3670,7 +3329,9 @@
       "time": "11:30 - 16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/jubilaumsfest-waldkindergarten-wurzelzwerge/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/24/",
-      "page": 24
+      "page": 24,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Kirche Kunterbunt beim \"Fescht für alle\"",
@@ -3681,7 +3342,14 @@
       "time": "09:30 - 11:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kirche-kunterbunt-beim-fescht-fur-alle/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/24/",
-      "page": 24
+      "page": 24,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.233048,
+      "lng": 8.9991483,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Albstadt So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Regionaltag mit verkaufsoffenem Sonntag",
@@ -3692,7 +3360,14 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/regionaltag-mit-verkaufsoffenem-sonntag/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
-      "page": 22
+      "page": 22,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4907909,
+      "lng": 9.77317,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Bad Mergentheim So,, Baden-Württemberg, Germany"
     },
     {
       "title": "FamilienSonntag „Holzwerkstatt“",
@@ -3703,7 +3378,21 @@
       "time": "10:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/familiensonntag-holzwerkstatt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
-      "page": 22
+      "page": 22,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "geoCompoundCityChecked": true,
+      "geoCompoundCityQueries": [
+        "Kürnbach So,, Bad Schussenried, Baden-Württemberg, Germany",
+        "Kürnbach So,, Baden-Württemberg, Germany",
+        "Bad Schussenried, Baden-Württemberg, Germany"
+      ],
+      "lat": 47.99208,
+      "lng": 9.6710084,
+      "geoEstimated": true,
+      "geoSource": "derived-compound-city",
+      "geoQuery": "Kürnbach So,, Bad Schussenried, Baden-Württemberg, Germany",
+      "geoCompoundCityFound": true
     },
     {
       "title": "Evangelischer Gottesdienst zum Pfingstfest",
@@ -3714,7 +3403,14 @@
       "time": "10:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/evangelischer-gottesdienst-zum-pfingstfest-noch-ungewiss/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
-      "page": 23
+      "page": 23,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.4937953,
+      "lng": 9.3978845,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Bad Urach So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Maltag in der Glashütte",
@@ -3725,7 +3421,14 @@
       "time": "13:30 - 16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/maltag-in-der-glashutte/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
-      "page": 23
+      "page": 23,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.5069519,
+      "lng": 8.3720124,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Baiersbronn So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Pfarrfest Bernau im Schwarzwald",
@@ -3736,7 +3439,17 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/pfarrfest-bernau-im-schwarzwald/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
-      "page": 22
+      "page": 22,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Pfarrkirche St. Johann, Bernau im Schwarzwald",
+      "lat": 48.0089717,
+      "lng": 10.0357982,
+      "geoEstimated": true,
+      "geoSource": "derived-detail",
+      "geoQuery": "Pfarrkirche St. Johann, Baden-Württemberg, Germany"
     },
     {
       "title": "Linsen von der Alb, Kaffee aus Kolumbien: Faire Ernte lokal und global?",
@@ -3747,7 +3460,14 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/linsen-von-der-alb-kaffee-aus-kolumbien-faire-ernte-lokal-und-global/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
-      "page": 22
+      "page": 22,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.5805031,
+      "lng": 9.4044658,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Beuren So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Linedance in der Insel",
@@ -3758,7 +3478,14 @@
       "time": "18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/linedance-in-der-insel/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/24/",
-      "page": 24
+      "page": 24,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4635303,
+      "lng": 8.9855203,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Urmel-Scheunengrillfest",
@@ -3769,7 +3496,14 @@
       "time": "11:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/urmel-scheunenfest/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
-      "page": 22
+      "page": 22,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4635303,
+      "lng": 8.9855203,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Kirche im Grünen",
@@ -3780,7 +3514,14 @@
       "time": "18:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kirche-im-grunen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/24/",
-      "page": 24
+      "page": 24,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.6681061,
+      "lng": 8.4713414,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Enzklösterle So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Schreinerdorflauf",
@@ -3791,7 +3532,14 @@
       "time": "08:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schreinerdorflauf/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
-      "page": 22
+      "page": 22,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.3216701,
+      "lng": 8.8628361,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Eschelbronn So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Summer Spirit Flow - Wasser in Wort und Klang",
@@ -3802,7 +3550,14 @@
       "time": "17:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/summer-spirit-flow-wasser-in-wort-und-klang/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
-      "page": 21
+      "page": 21,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.6500279,
+      "lng": 9.4800858,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Friedrichshafen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Sommer Mättle Fäscht Oberwihl",
@@ -3813,7 +3568,14 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommer-mattle-fascht-oberwihl/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
-      "page": 23
+      "page": 23,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.6411618,
+      "lng": 8.0784862,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Görwihl So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Naturpark-Markt Herrischried am Freilichtmuseum Klausenhof",
@@ -3824,7 +3586,14 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturpark-markt-herrischried-am-freilichtmuseum-klausenhof/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
-      "page": 21
+      "page": 21,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.6665531,
+      "lng": 8.0006455,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Herrischried So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Regionaltag 2026",
@@ -3835,7 +3604,14 @@
       "time": "13:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/regionaltag-2026/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
-      "page": 21
+      "page": 21,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.8176042,
+      "lng": 10.2883434,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Hohenlohe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Feuerwehrfest in Illmensee",
@@ -3846,7 +3622,14 @@
       "time": "11:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/feuerwehrfest-in-illmensee/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
-      "page": 23
+      "page": 23,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.864499,
+      "lng": 9.3766192,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Illmensee So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Romeo und Julia (Einführung mit Verdolmetschung in Deutsche Gebärdensprache)",
@@ -3857,7 +3640,14 @@
       "time": "18:30 - 21:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/romeo-und-julia-14/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
-      "page": 23
+      "page": 23,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Südstadt Hofflohmarkt 2026",
@@ -3868,7 +3658,14 @@
       "time": "10:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sudstadt-hofflohmarkt-2026/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
-      "page": 23
+      "page": 23,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Trinkbrunnen-Spaziergang (Und jetzt! Wochen der Nachhaltigkeit)",
@@ -3879,7 +3676,14 @@
       "time": "15:00 - 17:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/trinkbrunnen-spaziergang-und-jetzt-wochen-der-nachhaltigkeit/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
-      "page": 23
+      "page": 23,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0068705,
+      "lng": 8.4034195,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Karlsruhe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Oldtimer-Treffen 2026",
@@ -3890,7 +3694,14 @@
       "time": "10:00 - 16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oldtimer-treffen-2026/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/24/",
-      "page": 24
+      "page": 24,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.8007177,
+      "lng": 7.7420221,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Müllheim So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Mit dem Knecht in den Schwarzwald",
@@ -3901,7 +3712,14 @@
       "time": "10:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mit-dem-knecht-in-den-schwarzwald/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
-      "page": 21
+      "page": 21,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.9713529,
+      "lng": 8.9283473,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Neuhausen ob Eck So,, Baden-Württemberg, Germany"
     },
     {
       "title": "28. HMC Classic Oldtimerausfahrt",
@@ -3912,7 +3730,14 @@
       "time": "08:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/28-hmc-classic-oldtimerausfahrt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
-      "page": 23
+      "page": 23,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.2005034,
+      "lng": 9.5024397,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Öhringen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Bike+Bühne - Die Event-Perle im Hohenloher Sommer",
@@ -3923,7 +3748,14 @@
       "time": "11:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bikebuhne-die-event-perle-im-hohenloher-sommer/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
-      "page": 21
+      "page": 21,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.2005034,
+      "lng": 9.5024397,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Öhringen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Bezirksposaunentag",
@@ -3934,7 +3766,14 @@
       "time": "10:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bezirksposaunentag/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/24/",
-      "page": 24
+      "page": 24,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0641578,
+      "lng": 8.9753958,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Pfaffenhofen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Festsonntag mit Umzug und Gesamtchor",
@@ -3945,7 +3784,14 @@
       "time": "09:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/festsonntag-mit-umzug-und-gesamtchor/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
-      "page": 23
+      "page": 23,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.3789351,
+      "lng": 8.8877867,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Rangendingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Rottweil Musikfestival Sommersprossen feiert 30 Jahre Kunststiftung Erich Hauser",
@@ -3956,7 +3802,14 @@
       "time": "10:00 - 22:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/rottweil-musikfestival-sommersprossen-feiert-30-jahre-kunststiftung-erich-hauser/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
-      "page": 22
+      "page": 22,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.1678244,
+      "lng": 8.626979,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Rottweil So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Musikalischer Sonntagstreff mit der Tanzrunde Ortenau",
@@ -3967,7 +3820,14 @@
       "time": "18:00 - 20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/musikalischer-sonntagstreff-mit-der-volkstanz-und-trachtengruppe-sasbachwalden/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
-      "page": 22
+      "page": 22,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.6186096,
+      "lng": 8.1280222,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Sasbachwalden So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Pilates & Brunch",
@@ -3978,7 +3838,14 @@
       "time": "09:00 - 12:45 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/pilates-brunch-3/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
-      "page": 23
+      "page": 23,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.7609654,
+      "lng": 8.8466819,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Singen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "50 Jahre DLRG Ortsgruppe Sipplingen: Feiern, Erleben, Mitmachen",
@@ -3989,7 +3856,14 @@
       "time": "10:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/50-jahre-dlrg-ortsgruppe-sipplingen-feiern-erleben-mitmachen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
-      "page": 22
+      "page": 22,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.7966525,
+      "lng": 9.0967997,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Sipplingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Echt nachhaltig Markt | Überlingen",
@@ -4000,7 +3874,19 @@
       "time": "11:00 - 16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/echt-nachhaltig-markt-uberlingen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
-      "page": 23
+      "page": 23,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "geoDetailChecked": true,
+      "geoDetailFound": true,
+      "geoDetailLocation": "Villengärten mit Pflanzenhaus, Überlingen am Bodensee",
+      "lat": 47.65,
+      "lng": 9.35,
+      "geoEstimated": true,
+      "geoSource": "derived-region-bodensee",
+      "geoQuery": "Bodensee, Baden-Württemberg, Germany",
+      "geoRegionFallback": "Bodensee",
+      "geoRegionFallbackNote": "Kein genauer Ort gefunden; Position grob auf Bodensee gesetzt."
     },
     {
       "title": "Kinderinsel - großes deutsch-französisches Kinderfest",
@@ -4011,7 +3897,9 @@
       "time": "11:00 - 18:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kinderinsel-groses-deutsch-franzosisches-kinderfest/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
-      "page": 22
+      "page": 22,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false
     },
     {
       "title": "Begegnungen: Der Schwarzwald wie er im Buche steht",
@@ -4022,7 +3910,14 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/begegnungen-der-schwarzwald-wie-er-im-buche-steht/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
-      "page": 22
+      "page": 22,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Bühne frei für Carola Horstmann und Elena Seeger",
@@ -4033,7 +3928,14 @@
       "time": "11:00 - 12:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/buhne-frei-fur-stefan-pflaum-und-elena-seeger/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
-      "page": 22
+      "page": 22,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Offene Werkstatt für Familien: Kuckuck ruft's aus dem Wald",
@@ -4044,7 +3946,14 @@
       "time": "11:00 - 16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/offene-werkstatt-fur-familien-kuckuck-rufts-aus-dem-wald/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
-      "page": 22
+      "page": 22,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Stillezeit zum Tagesausklang",
@@ -4055,7 +3964,14 @@
       "time": "17:00 - 17:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stillezeit-zum-tagesausklang-5/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/22/",
-      "page": 22
+      "page": 22,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Familien- & Sporttag",
@@ -4066,7 +3982,14 @@
       "time": "10:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/familien-sporttag/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
-      "page": 23
+      "page": 23,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.9376474,
+      "lng": 9.1716226,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Wald / Hohenzollern So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Familientag Sommersause im Museum der Alltagskultur",
@@ -4077,7 +4000,14 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/familientag-sommersause-im-museum-der-alltagskultur/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/21/",
-      "page": 21
+      "page": 21,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.6374291,
+      "lng": 9.1312415,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Waldenbuch So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Eva Marlin & Bernd Grußendorf - Temperamento Español",
@@ -4088,7 +4018,14 @@
       "time": "11:00 - 12:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/eva-marlin-bernd-grusendorf-temperamento-espanol/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/23/",
-      "page": 23
+      "page": 23,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.0939396,
+      "lng": 7.9610142,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Waldkirch So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Spiel und Spaß in Murgels Spielhaus",
@@ -31016,14 +30953,7 @@
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturparkmarkt-17/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
-      "page": 1,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.9414188,
-      "lng": 8.4076347,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Ettlingen So,, Baden-Württemberg, Germany"
+      "page": 1
     },
     {
       "title": "Naturparkmarkt Plüderhausen",
@@ -31034,14 +30964,7 @@
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturparkmarkt-pluderhausen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
-      "page": 1,
-      "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false,
-      "lat": 48.7937467,
-      "lng": 9.6025045,
-      "geoEstimated": true,
-      "geoSource": "derived",
-      "geoQuery": "Plüderhausen So,, Baden-Württemberg, Germany"
+      "page": 1
     },
     {
       "title": "Radolfzeller Abendmarkt",
@@ -31074,7 +30997,14 @@
       "time": "13:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/verkaufsoffener-sonntag-mit-oldtimertreffen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
-      "page": 1
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.6230397,
+      "lng": 9.8356703,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Geislingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "635. Zunftmarkt",

@@ -10,45 +10,45 @@ Filter:
 - Geo: für alle Zieldatum-Events
 - km/Radius: live im Browser
 
-Zieldatum: 2026-06-21
+Zieldatum: 2026-06-28
 
 Counts:
 {
   "pages": 210,
   "rawCollectedIncludingDuplicates": 2898,
   "rawUnique": 2898,
-  "targetDateMatches": 50,
-  "targetDateWithGeo": 47,
-  "targetDateWithoutGeo": 3,
-  "targetDateGeoEstimated": 47,
-  "targetDateGeoEstimatedFromCity": 42,
+  "targetDateMatches": 41,
+  "targetDateWithGeo": 39,
+  "targetDateWithoutGeo": 2,
+  "targetDateGeoEstimated": 39,
+  "targetDateGeoEstimatedFromCity": 35,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
-  "targetDateGeoEstimatedFromDetail": 3,
+  "targetDateGeoEstimatedFromDetail": 2,
   "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 1,
-  "targetDateDetailCoordinateGeoChecked": 50,
+  "targetDateDetailCoordinateGeoChecked": 41,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
-  "targetDateDetailGoogleMapsQueries": 7,
-  "targetDateDetailGeoChecked": 7,
-  "targetDateDetailGeoRecovered": 3,
+  "targetDateDetailGoogleMapsQueries": 3,
+  "targetDateDetailGeoChecked": 3,
+  "targetDateDetailGeoRecovered": 2,
   "targetDateCompoundCityGeoChecked": 1,
   "targetDateCompoundCityGeoRecovered": 1,
   "targetDateTitleGeoChecked": 0,
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 1,
   "targetDateBodenseeRegionGeoRecovered": 1,
-  "nonRegionalTargetDateMatches": 48,
+  "nonRegionalTargetDateMatches": 39,
   "rawMaerkte": 123,
   "rawFeste": 2775,
-  "targetDateMaerkte": 2,
-  "targetDateFeste": 48,
-  "targetDateWithGeoMaerkte": 2,
-  "targetDateWithGeoFeste": 45,
+  "targetDateMaerkte": 1,
+  "targetDateFeste": 40,
+  "targetDateWithGeoMaerkte": 1,
+  "targetDateWithGeoFeste": 38,
   "targetDateWithoutGeoMaerkte": 0,
-  "targetDateWithoutGeoFeste": 3
+  "targetDateWithoutGeoFeste": 2
 }
 
 Regionale Ortsliste:
@@ -141,111 +141,103 @@ Regionale Ortsliste:
 Ortsstatistik vor Ortsfilter:
 [
   {
-    "city": "Baiersbronn So,",
+    "city": "Vogtsbauernhof So,",
     "count": 4
-  },
-  {
-    "city": "unbekannt",
-    "count": 4
-  },
-  {
-    "city": "Breisach So,",
-    "count": 3
   },
   {
     "city": "Karlsruhe So,",
     "count": 3
   },
   {
-    "city": "Brackenheim So,",
+    "city": "Eberbach So,",
     "count": 2
   },
   {
-    "city": "Ettlingen So,",
+    "city": "Öhringen So,",
     "count": 2
   },
   {
-    "city": "Sigmaringen So,",
-    "count": 2
+    "city": "88605 Meßkirch So,",
+    "count": 1
   },
   {
-    "city": "Sinsheimer Erlebnisregion So,",
-    "count": 2
+    "city": "Albstadt So,",
+    "count": 1
   },
   {
-    "city": "Vogtsbauernhof So,",
-    "count": 2
-  },
-  {
-    "city": "Waldkirch So,",
-    "count": 2
-  },
-  {
-    "city": "Winden im Elztal So,",
-    "count": 2
+    "city": "Bad Mergentheim So,",
+    "count": 1
   },
   {
     "city": "Bad Schussenried-Kürnbach So,",
     "count": 1
   },
   {
-    "city": "Burladingen-Stetten So,",
+    "city": "Bad Urach So,",
     "count": 1
   },
   {
-    "city": "Eberbach So,",
+    "city": "Baiersbronn So,",
     "count": 1
   },
   {
-    "city": "Gaienhofen So,",
+    "city": "Bernau im Schwarzwald So,",
     "count": 1
   },
   {
-    "city": "Hülben So,",
+    "city": "Beuren So,",
     "count": 1
   },
   {
-    "city": "Kandern So,",
+    "city": "Enzklösterle So,",
     "count": 1
   },
   {
-    "city": "Külsheim So,",
+    "city": "Eschelbronn So,",
     "count": 1
   },
   {
-    "city": "Lauf So,",
+    "city": "Friedrichshafen So,",
     "count": 1
   },
   {
-    "city": "Mössingen So,",
+    "city": "Geislingen So,",
     "count": 1
   },
   {
-    "city": "Naturpark Neckartal-Odenwald So,",
+    "city": "Görwihl So,",
     "count": 1
   },
   {
-    "city": "Neubulach So,",
+    "city": "Herrischried So,",
     "count": 1
   },
   {
-    "city": "Neuhausen Ob Eck So,",
+    "city": "Hohenlohe So,",
     "count": 1
   },
   {
-    "city": "Öhningen So,",
+    "city": "Illmensee So,",
     "count": 1
   },
   {
-    "city": "Öhningen-Schienen So,",
+    "city": "Müllheim So,",
     "count": 1
   },
   {
-    "city": "Pfullendorf So,",
+    "city": "Neuhausen ob Eck So,",
     "count": 1
   },
   {
-    "city": "Plüderhausen So,",
+    "city": "Pfaffenhofen So,",
+    "count": 1
+  },
+  {
+    "city": "Rangendingen So,",
+    "count": 1
+  },
+  {
+    "city": "Rottweil So,",
     "count": 1
   },
   {
@@ -253,23 +245,35 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Seebach So,",
-    "count": 1
-  },
-  {
-    "city": "Seewald So,",
-    "count": 1
-  },
-  {
     "city": "Singen So,",
     "count": 1
   },
   {
-    "city": "Tauberbischofsheim So,",
+    "city": "Sipplingen So,",
     "count": 1
   },
   {
-    "city": "Wolfach So,",
+    "city": "Überlingen am Bodensee So,",
+    "count": 1
+  },
+  {
+    "city": "unbekannt",
+    "count": 1
+  },
+  {
+    "city": "Vogelgrun Frankreich So,",
+    "count": 1
+  },
+  {
+    "city": "Wald / Hohenzollern So,",
+    "count": 1
+  },
+  {
+    "city": "Waldenbuch So,",
+    "count": 1
+  },
+  {
+    "city": "Waldkirch So,",
     "count": 1
   }
 ]
