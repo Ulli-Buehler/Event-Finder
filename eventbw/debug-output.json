@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-21",
-    "startedAt": "2026-06-21T02:00:41.925Z",
-    "finishedAt": "2026-06-21T02:04:41.386Z",
+    "startedAt": "2026-06-21T03:00:47.473Z",
+    "finishedAt": "2026-06-21T03:04:36.275Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 209,
-      "rawCollectedIncludingDuplicates": 2892,
-      "rawUnique": 2892,
+      "rawCollectedIncludingDuplicates": 2893,
+      "rawUnique": 2893,
       "targetDateMatches": 49,
       "targetDateWithGeo": 46,
       "targetDateWithoutGeo": 3,
@@ -120,7 +120,7 @@
       "targetDateBodenseeRegionGeoChecked": 1,
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 47,
-      "rawMaerkte": 122,
+      "rawMaerkte": 123,
       "rawFeste": 2770,
       "targetDateMaerkte": 2,
       "targetDateFeste": 47,
@@ -136,7 +136,7 @@
       "page": 1,
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "ok": true,
-      "reportedCount": 122,
+      "reportedCount": 123,
       "parsedCount": 14
     },
     {
@@ -201,7 +201,7 @@
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/9/",
       "ok": true,
       "reportedCount": null,
-      "parsedCount": 10
+      "parsedCount": 11
     },
     {
       "category": "maerkte",
@@ -34228,6 +34228,17 @@
       "endDate": "2027-06-19",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/ursulamarkt-mit-flohmarkt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/9/",
+      "page": 9
+    },
+    {
+      "title": "Büchermarkt",
+      "category": "maerkte",
+      "city": "Kirchberg an der Jagst Sa,",
+      "startDate": "2027-06-26",
+      "endDate": "2027-06-26",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/buechermarkt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/9/",
       "page": 9
     }
