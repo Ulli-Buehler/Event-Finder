@@ -16,39 +16,39 @@ Counts:
 {
   "pages": 209,
   "rawCollectedIncludingDuplicates": 2892,
-  "rawUnique": 2864,
-  "targetDateMatches": 21,
-  "targetDateWithGeo": 20,
-  "targetDateWithoutGeo": 1,
-  "targetDateGeoEstimated": 20,
-  "targetDateGeoEstimatedFromCity": 17,
+  "rawUnique": 2892,
+  "targetDateMatches": 49,
+  "targetDateWithGeo": 46,
+  "targetDateWithoutGeo": 3,
+  "targetDateGeoEstimated": 46,
+  "targetDateGeoEstimatedFromCity": 41,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
-  "targetDateGeoEstimatedFromDetail": 2,
-  "targetDateGeoEstimatedFromCompoundCity": 0,
+  "targetDateGeoEstimatedFromDetail": 3,
+  "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 1,
-  "targetDateDetailCoordinateGeoChecked": 21,
+  "targetDateDetailCoordinateGeoChecked": 49,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
-  "targetDateDetailGoogleMapsQueries": 4,
-  "targetDateDetailGeoChecked": 4,
-  "targetDateDetailGeoRecovered": 2,
-  "targetDateCompoundCityGeoChecked": 0,
-  "targetDateCompoundCityGeoRecovered": 0,
+  "targetDateDetailGoogleMapsQueries": 7,
+  "targetDateDetailGeoChecked": 7,
+  "targetDateDetailGeoRecovered": 3,
+  "targetDateCompoundCityGeoChecked": 1,
+  "targetDateCompoundCityGeoRecovered": 1,
   "targetDateTitleGeoChecked": 0,
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 1,
   "targetDateBodenseeRegionGeoRecovered": 1,
-  "nonRegionalTargetDateMatches": 20,
+  "nonRegionalTargetDateMatches": 47,
   "rawMaerkte": 122,
-  "rawFeste": 2742,
+  "rawFeste": 2770,
   "targetDateMaerkte": 2,
-  "targetDateFeste": 19,
+  "targetDateFeste": 47,
   "targetDateWithGeoMaerkte": 2,
-  "targetDateWithGeoFeste": 18,
+  "targetDateWithGeoFeste": 44,
   "targetDateWithoutGeoMaerkte": 0,
-  "targetDateWithoutGeoFeste": 1
+  "targetDateWithoutGeoFeste": 3
 }
 
 Regionale Ortsliste:
@@ -141,6 +141,30 @@ Regionale Ortsliste:
 Ortsstatistik vor Ortsfilter:
 [
   {
+    "city": "unbekannt",
+    "count": 4
+  },
+  {
+    "city": "Baiersbronn So,",
+    "count": 3
+  },
+  {
+    "city": "Breisach So,",
+    "count": 3
+  },
+  {
+    "city": "Karlsruhe So,",
+    "count": 3
+  },
+  {
+    "city": "Brackenheim So,",
+    "count": 2
+  },
+  {
+    "city": "Ettlingen So,",
+    "count": 2
+  },
+  {
     "city": "Sigmaringen So,",
     "count": 2
   },
@@ -149,7 +173,7 @@ Ortsstatistik vor Ortsfilter:
     "count": 2
   },
   {
-    "city": "unbekannt",
+    "city": "Vogtsbauernhof So,",
     "count": 2
   },
   {
@@ -161,11 +185,7 @@ Ortsstatistik vor Ortsfilter:
     "count": 2
   },
   {
-    "city": "Brackenheim So,",
-    "count": 1
-  },
-  {
-    "city": "Breisach So,",
+    "city": "Bad Schussenried-Kürnbach So,",
     "count": 1
   },
   {
@@ -177,7 +197,7 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Ettlingen So,",
+    "city": "Gaienhofen So,",
     "count": 1
   },
   {
@@ -185,7 +205,7 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Karlsruhe So,",
+    "city": "Kandern So,",
     "count": 1
   },
   {
@@ -193,7 +213,35 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Lauf So,",
+    "count": 1
+  },
+  {
+    "city": "Mössingen So,",
+    "count": 1
+  },
+  {
+    "city": "Naturpark Neckartal-Odenwald So,",
+    "count": 1
+  },
+  {
+    "city": "Neubulach So,",
+    "count": 1
+  },
+  {
+    "city": "Neuhausen Ob Eck So,",
+    "count": 1
+  },
+  {
+    "city": "Öhningen So,",
+    "count": 1
+  },
+  {
     "city": "Öhningen-Schienen So,",
+    "count": 1
+  },
+  {
+    "city": "Pfullendorf So,",
     "count": 1
   },
   {
@@ -201,7 +249,27 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Sasbachwalden So,",
+    "count": 1
+  },
+  {
+    "city": "Seebach So,",
+    "count": 1
+  },
+  {
+    "city": "Seewald So,",
+    "count": 1
+  },
+  {
     "city": "Singen So,",
+    "count": 1
+  },
+  {
+    "city": "Tauberbischofsheim So,",
+    "count": 1
+  },
+  {
+    "city": "Wolfach So,",
     "count": 1
   }
 ]
@@ -213,7 +281,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
     "ok": true,
-    "reportedCount": 124,
+    "reportedCount": 122,
     "parsedCount": 14
   },
   {
@@ -292,7 +360,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 2833,
+    "reportedCount": 2770,
     "parsedCount": 14
   },
   {
