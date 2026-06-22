@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-28",
-    "startedAt": "2026-06-22T02:00:43.088Z",
-    "finishedAt": "2026-06-22T02:04:16.384Z",
+    "startedAt": "2026-06-22T03:00:42.182Z",
+    "finishedAt": "2026-06-22T03:04:02.775Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 206,
-      "rawCollectedIncludingDuplicates": 2848,
-      "rawUnique": 2848,
+      "rawCollectedIncludingDuplicates": 2849,
+      "rawUnique": 2849,
       "targetDateMatches": 41,
       "targetDateWithGeo": 39,
       "targetDateWithoutGeo": 2,
@@ -120,7 +120,7 @@
       "targetDateBodenseeRegionGeoChecked": 1,
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 39,
-      "rawMaerkte": 121,
+      "rawMaerkte": 122,
       "rawFeste": 2727,
       "targetDateMaerkte": 1,
       "targetDateFeste": 40,
@@ -31751,6 +31751,17 @@
       "endDate": "2027-06-26",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/buechermarkt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/9/",
+      "page": 9
+    },
+    {
+      "title": "Naturparkmarkt",
+      "category": "maerkte",
+      "city": "Ettlingen So,",
+      "startDate": "2027-06-27",
+      "endDate": "2027-06-27",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturparkmarkt-17/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/9/",
       "page": 9
     }
