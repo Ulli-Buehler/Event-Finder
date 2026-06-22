@@ -14,39 +14,39 @@ Zieldatum: 2026-06-28
 
 Counts:
 {
-  "pages": 206,
-  "rawCollectedIncludingDuplicates": 2851,
-  "rawUnique": 2851,
-  "targetDateMatches": 41,
-  "targetDateWithGeo": 39,
+  "pages": 207,
+  "rawCollectedIncludingDuplicates": 2860,
+  "rawUnique": 2860,
+  "targetDateMatches": 42,
+  "targetDateWithGeo": 40,
   "targetDateWithoutGeo": 2,
-  "targetDateGeoEstimated": 39,
+  "targetDateGeoEstimated": 40,
   "targetDateGeoEstimatedFromCity": 35,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
-  "targetDateGeoEstimatedFromDetail": 2,
+  "targetDateGeoEstimatedFromDetail": 3,
   "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 1,
-  "targetDateDetailCoordinateGeoChecked": 41,
+  "targetDateDetailCoordinateGeoChecked": 42,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
-  "targetDateDetailGoogleMapsQueries": 3,
-  "targetDateDetailGeoChecked": 3,
-  "targetDateDetailGeoRecovered": 2,
+  "targetDateDetailGoogleMapsQueries": 4,
+  "targetDateDetailGeoChecked": 4,
+  "targetDateDetailGeoRecovered": 3,
   "targetDateCompoundCityGeoChecked": 1,
   "targetDateCompoundCityGeoRecovered": 1,
   "targetDateTitleGeoChecked": 0,
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 1,
   "targetDateBodenseeRegionGeoRecovered": 1,
-  "nonRegionalTargetDateMatches": 39,
+  "nonRegionalTargetDateMatches": 40,
   "rawMaerkte": 122,
-  "rawFeste": 2729,
+  "rawFeste": 2738,
   "targetDateMaerkte": 1,
-  "targetDateFeste": 40,
+  "targetDateFeste": 41,
   "targetDateWithGeoMaerkte": 1,
-  "targetDateWithGeoFeste": 38,
+  "targetDateWithGeoFeste": 39,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 2
 }
@@ -157,6 +157,10 @@ Ortsstatistik vor Ortsfilter:
     "count": 2
   },
   {
+    "city": "unbekannt",
+    "count": 2
+  },
+  {
     "city": "88605 Meßkirch So,",
     "count": 1
   },
@@ -254,10 +258,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Überlingen am Bodensee So,",
-    "count": 1
-  },
-  {
-    "city": "unbekannt",
     "count": 1
   },
   {
@@ -364,7 +364,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 2729,
+    "reportedCount": 2738,
     "parsedCount": 14
   },
   {
@@ -1917,12 +1917,20 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/195/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 13
+    "parsedCount": 14
   },
   {
     "category": "feste",
     "page": 196,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/196/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 8
+  },
+  {
+    "category": "feste",
+    "page": 197,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/197/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
