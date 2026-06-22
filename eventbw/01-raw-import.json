@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-28",
-    "startedAt": "2026-06-22T00:00:48.286Z",
-    "finishedAt": "2026-06-22T00:04:23.223Z",
+    "startedAt": "2026-06-22T01:00:40.515Z",
+    "finishedAt": "2026-06-22T01:03:59.862Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 206,
       "rawCollectedIncludingDuplicates": 2848,
-      "rawUnique": 2838,
+      "rawUnique": 2848,
       "targetDateMatches": 41,
       "targetDateWithGeo": 39,
       "targetDateWithoutGeo": 2,
@@ -120,8 +120,8 @@
       "targetDateBodenseeRegionGeoChecked": 1,
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 39,
-      "rawMaerkte": 119,
-      "rawFeste": 2719,
+      "rawMaerkte": 121,
+      "rawFeste": 2727,
       "targetDateMaerkte": 1,
       "targetDateFeste": 40,
       "targetDateWithGeoMaerkte": 1,
@@ -131,72 +131,6 @@
     }
   },
   "events": [
-    {
-      "title": "Der Roßberg spielt",
-      "category": "feste",
-      "city": "",
-      "startDate": "2026-06-21",
-      "endDate": "2026-06-21",
-      "time": "11:00 - 14:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/der-rosberg-spielt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
-      "page": 4
-    },
-    {
-      "title": "Hockete ums Feuerwehrhaus",
-      "category": "feste",
-      "city": "Burladingen-Stetten So,",
-      "startDate": "2026-06-21",
-      "endDate": "2026-06-21",
-      "time": "11:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/hockete-ums-feuerwehrhaus/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
-      "page": 4
-    },
-    {
-      "title": "Sommernachtskonzert mit dem Chor Right Now!",
-      "category": "feste",
-      "city": "Eberbach So,",
-      "startDate": "2026-06-21",
-      "endDate": "2026-06-21",
-      "time": "19:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommernachtskonzert-mit-dem-chor-right-now/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
-      "page": 4
-    },
-    {
-      "title": "Kreativsonntag 2026",
-      "category": "feste",
-      "city": "Külsheim So,",
-      "startDate": "2026-06-21",
-      "endDate": "2026-06-21",
-      "time": "11:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kreativsonntag-2026/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
-      "page": 4
-    },
-    {
-      "title": "Der Andere Abend",
-      "category": "feste",
-      "city": "Sigmaringen So,",
-      "startDate": "2026-06-21",
-      "endDate": "2026-06-21",
-      "time": "19:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/der-andere-abend/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
-      "page": 4
-    },
-    {
-      "title": "Café Wunderfitz im Elztalmuseum",
-      "category": "feste",
-      "city": "Waldkirch So,",
-      "startDate": "2026-06-21",
-      "endDate": "2026-06-21",
-      "time": "14:30 - 16:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/cafe-wunderfitz-im-elztalmuseum/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
-      "page": 4
-    },
     {
       "title": "Bits & Bargeld - Wie bezahlen wir morgen?",
       "category": "feste",
@@ -638,6 +572,17 @@
       "page": 3
     },
     {
+      "title": "Lesen im Grünen - Themenspielplatz \"Wilder Westen\"",
+      "category": "feste",
+      "city": "",
+      "startDate": "2026-06-25",
+      "endDate": "2026-06-25",
+      "time": "15:30 - 16:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/lesen-im-grunen-themenspielplatz-wilder-westen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
       "title": "Public Viewing 2026 - FIFA Fußball-WM",
       "category": "feste",
       "city": "Bad Säckingen Do,",
@@ -647,6 +592,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/public-viewing-2026-fifa-fusball-wm-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5
+    },
+    {
+      "title": "Beim Spezialitätenmarkt köstliche Gaumenfreuden entspannt genießen",
+      "category": "feste",
+      "city": "Bad Schussenried Do,",
+      "startDate": "2026-06-25",
+      "endDate": "2026-06-25",
+      "time": "16:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/spezialitatenmarkt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
     },
     {
       "title": "Moosland",
@@ -693,6 +649,28 @@
       "page": 5
     },
     {
+      "title": "Baiersbronner Schätze: Buhlbachforelle",
+      "category": "feste",
+      "city": "Baiersbronn Do,",
+      "startDate": "2026-06-25",
+      "endDate": "2026-06-25",
+      "time": "09:45 - 14:45 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/baiersbronner-schatze-buhlbachforelle/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
+      "title": "Busausfahrt - Alpirsbacher Klosterbräu",
+      "category": "feste",
+      "city": "Baiersbronn Do,",
+      "startDate": "2026-06-25",
+      "endDate": "2026-06-25",
+      "time": "13:45 - 17:45 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/busausfahrt-alpirsbacher-klosterbrau/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
       "title": "Public Viewing: Fußball-WM 2026",
       "category": "feste",
       "city": "Baiersbronn Do,",
@@ -715,6 +693,17 @@
       "page": 6
     },
     {
+      "title": "Rangerstation Tonbachtal",
+      "category": "feste",
+      "city": "Baiersbronn-Tonbach Do,",
+      "startDate": "2026-06-25",
+      "endDate": "2026-06-25",
+      "time": "11:00 - 15:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/rangerstation-tonbachtal/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
       "title": "Deutsch - französische Seniorenschifffahrt",
       "category": "feste",
       "city": "Breisach am Rhein Do,",
@@ -724,6 +713,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/deutsch-franzosische-seniorenschifffahrt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5
+    },
+    {
+      "title": "Was Verschwörungstheorien anrichten – Erkenntnisse der Forschung",
+      "category": "feste",
+      "city": "Calw Do,",
+      "startDate": "2026-06-25",
+      "endDate": "2026-06-25",
+      "time": "12:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/was-verschworungstheorien-anrichten-erkenntnisse-der-forschung/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
     },
     {
       "title": "DEUTSCHLAND vs. ECUADOR - Afterwork mit DJ",
@@ -759,6 +759,28 @@
       "page": 5
     },
     {
+      "title": "Oberlindenhock",
+      "category": "feste",
+      "city": "Freiburg im Breisgau Do,",
+      "startDate": "2026-06-25",
+      "endDate": "2026-06-25",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oberlindenhock/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
+      "title": "Fischbacher Genuss-Spaziergang",
+      "category": "feste",
+      "city": "Friedrichshafen Do,",
+      "startDate": "2026-06-25",
+      "endDate": "2026-06-25",
+      "time": "15:00 - 17:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fischbacher-genuss-spaziergang/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
       "title": "OPEN HOUSE! | Mord verjährt nicht. Verfolgung von NS-Tätern und die Entwicklung einer angemessenen Erinnerungskultur",
       "category": "feste",
       "city": "Friedrichshafen Do,",
@@ -790,6 +812,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fiirobedhock-stadtmusik/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5
+    },
+    {
+      "title": "Musik auf dem See",
+      "category": "feste",
+      "city": "Immenstaad Do,",
+      "startDate": "2026-06-25",
+      "endDate": "2026-06-25",
+      "time": "18:00 - 21:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/musik-auf-dem-see/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
     },
     {
       "title": "Afterwork-Party am Rheinhafen mit DJ Michael Spleth",
@@ -847,6 +880,17 @@
       "page": 5
     },
     {
+      "title": "After Work Event im Burgfeld",
+      "category": "feste",
+      "city": "Lauffen Do,",
+      "startDate": "2026-06-25",
+      "endDate": "2026-06-25",
+      "time": "17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/after-work-event-im-burgfeld/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
       "title": "Kultur-Open-Air 2026 und mehr im Pausa-Quartier",
       "category": "feste",
       "city": "Mössingen Do,",
@@ -856,6 +900,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kultur-open-air-2026-und-mehr-im-pausa-quartier/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
       "page": 3
+    },
+    {
+      "title": "5. Klezmer-Festival Münsingen",
+      "category": "feste",
+      "city": "Münsingen Do,",
+      "startDate": "2026-06-25",
+      "endDate": "2026-06-25",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/5-klezmer-festival-munsingen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
     },
     {
       "title": "Mitmachlesung mit Autor Heiko Volz",
@@ -869,6 +924,17 @@
       "page": 6
     },
     {
+      "title": "Welttag der Schulfreunde - Schulstunde für Senioren",
+      "category": "feste",
+      "city": "Neuhausen ob Eck Do,",
+      "startDate": "2026-06-25",
+      "endDate": "2026-06-25",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/welttag-der-schulfreunde-schulstunde-fur-senioren/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
+    },
+    {
       "title": "Autorennetzwerk Ortenau-Elsass - „Wort trifft Ton“ im Holzwurm",
       "category": "feste",
       "city": "Sasbachwalden Do,",
@@ -878,6 +944,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/autorennetzwerk-ortenau-elsass-wort-trifft-ton-im-holzwurm/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6
+    },
+    {
+      "title": "Frauentreff im Bauerngarten",
+      "category": "feste",
+      "city": "Sasbachwalden Do,",
+      "startDate": "2026-06-25",
+      "endDate": "2026-06-25",
+      "time": "19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/frauentreff-im-bauerngarten/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
     },
     {
       "title": "Stadtstrand OPEN - WM-Warm-Up-Party",
@@ -911,6 +988,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kosmetikseminar-wohlfuhlseminar-fur-die-haut/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5
+    },
+    {
+      "title": "Blick hinter die Kulissen: die Tuttlinger Hackschnitzelanlage",
+      "category": "feste",
+      "city": "Tuttlingen Do,",
+      "startDate": "2026-06-25",
+      "endDate": "2026-06-25",
+      "time": "16:00 - 17:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/blick-hinter-die-kulissen-die-tuttlinger-hackschnitzelanlage/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
+      "page": 4
     },
     {
       "title": "Montagspodium-Schülervorspiel der Musikschule Tuttlingen",
@@ -31388,6 +31476,28 @@
       "endDate": "2026-11-14",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/martinimarkt-5/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/7/",
+      "page": 7
+    },
+    {
+      "title": "Wintermarkt",
+      "category": "maerkte",
+      "city": "Wehingen Sa,",
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-14",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wintermarkt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/7/",
+      "page": 7
+    },
+    {
+      "title": "Esslinger Herbst",
+      "category": "maerkte",
+      "city": "Esslingen am Neckar So,",
+      "startDate": "2026-11-15",
+      "endDate": "2026-11-15",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/esslinger-herbst-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/7/",
       "page": 7
     },
