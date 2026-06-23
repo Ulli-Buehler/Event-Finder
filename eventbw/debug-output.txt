@@ -14,21 +14,21 @@ Zieldatum: 2026-06-28
 
 Counts:
 {
-  "pages": 207,
-  "rawCollectedIncludingDuplicates": 2857,
-  "rawUnique": 2857,
-  "targetDateMatches": 42,
-  "targetDateWithGeo": 40,
+  "pages": 225,
+  "rawCollectedIncludingDuplicates": 3116,
+  "rawUnique": 3116,
+  "targetDateMatches": 47,
+  "targetDateWithGeo": 45,
   "targetDateWithoutGeo": 2,
-  "targetDateGeoEstimated": 40,
-  "targetDateGeoEstimatedFromCity": 35,
+  "targetDateGeoEstimated": 45,
+  "targetDateGeoEstimatedFromCity": 40,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 3,
   "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 1,
-  "targetDateDetailCoordinateGeoChecked": 42,
+  "targetDateDetailCoordinateGeoChecked": 47,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 4,
@@ -40,13 +40,13 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 1,
   "targetDateBodenseeRegionGeoRecovered": 1,
-  "nonRegionalTargetDateMatches": 40,
+  "nonRegionalTargetDateMatches": 44,
   "rawMaerkte": 122,
-  "rawFeste": 2735,
+  "rawFeste": 2994,
   "targetDateMaerkte": 1,
-  "targetDateFeste": 41,
+  "targetDateFeste": 46,
   "targetDateWithGeoMaerkte": 1,
-  "targetDateWithGeoFeste": 39,
+  "targetDateWithGeoFeste": 44,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 2
 }
@@ -153,6 +153,10 @@ Ortsstatistik vor Ortsfilter:
     "count": 2
   },
   {
+    "city": "Nordrach So,",
+    "count": 2
+  },
+  {
     "city": "Öhringen So,",
     "count": 2
   },
@@ -209,6 +213,10 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Gengenbach So,",
+    "count": 1
+  },
+  {
     "city": "Görwihl So,",
     "count": 1
   },
@@ -229,7 +237,15 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Münsingen So,",
+    "count": 1
+  },
+  {
     "city": "Neuhausen ob Eck So,",
+    "count": 1
+  },
+  {
+    "city": "Oberharmersbach So,",
     "count": 1
   },
   {
@@ -364,7 +380,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 2735,
+    "reportedCount": 2994,
     "parsedCount": 14
   },
   {
@@ -1925,12 +1941,156 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/196/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 5
+    "parsedCount": 14
   },
   {
     "category": "feste",
     "page": 197,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/197/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 198,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/198/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 199,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/199/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 200,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/200/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 201,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/201/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 202,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/202/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 203,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/203/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 204,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 205,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/205/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 206,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 207,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/207/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 208,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/208/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 209,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/209/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 210,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/210/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 211,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/211/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 212,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/212/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 213,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/213/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 214,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/214/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 12
+  },
+  {
+    "category": "feste",
+    "page": 215,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
