@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-28",
-    "startedAt": "2026-06-24T01:00:47.350Z",
-    "finishedAt": "2026-06-24T01:04:50.824Z",
+    "startedAt": "2026-06-24T02:00:42.764Z",
+    "finishedAt": "2026-06-24T02:04:27.727Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 225,
       "rawCollectedIncludingDuplicates": 3109,
-      "rawUnique": 3108,
+      "rawUnique": 3109,
       "targetDateMatches": 47,
       "targetDateWithGeo": 45,
       "targetDateWithoutGeo": 2,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 1,
       "nonRegionalTargetDateMatches": 44,
       "rawMaerkte": 122,
-      "rawFeste": 2986,
+      "rawFeste": 2987,
       "targetDateMaerkte": 1,
       "targetDateFeste": 46,
       "targetDateWithGeoMaerkte": 1,
@@ -30501,8 +30501,8 @@
       "endDate": "2026-11-07",
       "time": "20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/martinitanz/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/182/",
-      "page": 182
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/183/",
+      "page": 183
     },
     {
       "title": "Herbstluft und Glühwein",
@@ -30591,6 +30591,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kreativer-kunst-und-kramermarkt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/183/",
       "page": 183
+    },
+    {
+      "title": "Snowflake Festival",
+      "category": "feste",
+      "city": "Offenburg Sa,",
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-07",
+      "time": "16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/snowflake-festival/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/182/",
+      "page": 182
     },
     {
       "title": "Rothenburger \"Märchenwald\"",
