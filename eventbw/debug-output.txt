@@ -14,9 +14,9 @@ Zieldatum: 2026-06-28
 
 Counts:
 {
-  "pages": 228,
-  "rawCollectedIncludingDuplicates": 3153,
-  "rawUnique": 3153,
+  "pages": 217,
+  "rawCollectedIncludingDuplicates": 3002,
+  "rawUnique": 3002,
   "targetDateMatches": 49,
   "targetDateWithGeo": 47,
   "targetDateWithoutGeo": 2,
@@ -41,8 +41,8 @@ Counts:
   "targetDateBodenseeRegionGeoChecked": 2,
   "targetDateBodenseeRegionGeoRecovered": 2,
   "nonRegionalTargetDateMatches": 46,
-  "rawMaerkte": 122,
-  "rawFeste": 3031,
+  "rawMaerkte": 80,
+  "rawFeste": 2922,
   "targetDateMaerkte": 1,
   "targetDateFeste": 48,
   "targetDateWithGeoMaerkte": 1,
@@ -301,7 +301,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
     "ok": true,
-    "reportedCount": 122,
+    "reportedCount": 80,
     "parsedCount": 14
   },
   {
@@ -342,36 +342,12 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/6/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 14
+    "parsedCount": 10
   },
   {
     "category": "maerkte",
     "page": 7,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/7/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "maerkte",
-    "page": 8,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/8/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "maerkte",
-    "page": 9,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/9/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 10
-  },
-  {
-    "category": "maerkte",
-    "page": 10,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/10/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   },
@@ -380,7 +356,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 3031,
+    "reportedCount": 2922,
     "parsedCount": 14
   },
   {
@@ -2045,76 +2021,12 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/209/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 14
+    "parsedCount": 10
   },
   {
     "category": "feste",
     "page": 210,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/210/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 211,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/211/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 212,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/212/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 213,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/213/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 214,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/214/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 215,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/215/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 216,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/216/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 217,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/217/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 7
-  },
-  {
-    "category": "feste",
-    "page": 218,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/218/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
