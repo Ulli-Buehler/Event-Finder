@@ -14,39 +14,39 @@ Zieldatum: 2026-06-28
 
 Counts:
 {
-  "pages": 227,
-  "rawCollectedIncludingDuplicates": 3146,
-  "rawUnique": 3146,
-  "targetDateMatches": 48,
-  "targetDateWithGeo": 46,
+  "pages": 228,
+  "rawCollectedIncludingDuplicates": 3153,
+  "rawUnique": 3153,
+  "targetDateMatches": 49,
+  "targetDateWithGeo": 47,
   "targetDateWithoutGeo": 2,
-  "targetDateGeoEstimated": 46,
+  "targetDateGeoEstimated": 47,
   "targetDateGeoEstimatedFromCity": 41,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 3,
   "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
-  "targetDateGeoEstimatedFromBodenseeRegion": 1,
-  "targetDateDetailCoordinateGeoChecked": 48,
+  "targetDateGeoEstimatedFromBodenseeRegion": 2,
+  "targetDateDetailCoordinateGeoChecked": 49,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
-  "targetDateDetailGoogleMapsQueries": 4,
-  "targetDateDetailGeoChecked": 4,
+  "targetDateDetailGoogleMapsQueries": 5,
+  "targetDateDetailGeoChecked": 5,
   "targetDateDetailGeoRecovered": 3,
   "targetDateCompoundCityGeoChecked": 1,
   "targetDateCompoundCityGeoRecovered": 1,
   "targetDateTitleGeoChecked": 0,
   "targetDateTitleGeoRecovered": 0,
-  "targetDateBodenseeRegionGeoChecked": 1,
-  "targetDateBodenseeRegionGeoRecovered": 1,
-  "nonRegionalTargetDateMatches": 45,
+  "targetDateBodenseeRegionGeoChecked": 2,
+  "targetDateBodenseeRegionGeoRecovered": 2,
+  "nonRegionalTargetDateMatches": 46,
   "rawMaerkte": 122,
-  "rawFeste": 3024,
+  "rawFeste": 3031,
   "targetDateMaerkte": 1,
-  "targetDateFeste": 47,
+  "targetDateFeste": 48,
   "targetDateWithGeoMaerkte": 1,
-  "targetDateWithGeoFeste": 45,
+  "targetDateWithGeoFeste": 46,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 2
 }
@@ -153,15 +153,15 @@ Ortsstatistik vor Ortsfilter:
     "count": 3
   },
   {
+    "city": "unbekannt",
+    "count": 3
+  },
+  {
     "city": "Nordrach So,",
     "count": 2
   },
   {
     "city": "Öhringen So,",
-    "count": 2
-  },
-  {
-    "city": "unbekannt",
     "count": 2
   },
   {
@@ -380,7 +380,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 3024,
+    "reportedCount": 3031,
     "parsedCount": 14
   },
   {
@@ -2107,6 +2107,14 @@ Pages:
     "category": "feste",
     "page": 217,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/217/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 7
+  },
+  {
+    "category": "feste",
+    "page": 218,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/218/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
