@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-28",
-    "startedAt": "2026-06-26T05:00:41.782Z",
-    "finishedAt": "2026-06-26T05:04:11.886Z",
+    "startedAt": "2026-06-26T06:00:44.380Z",
+    "finishedAt": "2026-06-26T06:04:22.874Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 216,
       "rawCollectedIncludingDuplicates": 2984,
-      "rawUnique": 2977,
+      "rawUnique": 2984,
       "targetDateMatches": 49,
       "targetDateWithGeo": 47,
       "targetDateWithoutGeo": 2,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 2,
       "nonRegionalTargetDateMatches": 46,
       "rawMaerkte": 80,
-      "rawFeste": 2897,
+      "rawFeste": 2904,
       "targetDateMaerkte": 1,
       "targetDateFeste": 48,
       "targetDateWithGeoMaerkte": 1,
@@ -2917,6 +2917,83 @@
       "page": 205
     },
     {
+      "title": "Vortrag „Gesunde Ernährung“ mit Frau Klein-Unverzagt",
+      "category": "feste",
+      "city": "Bad Urach Mo,",
+      "startDate": "2026-06-01",
+      "endDate": "2026-06-01",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vortrag-gesunde-ernahrung-mit-frau-klein-unverzagt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
+      "page": 206
+    },
+    {
+      "title": "Zeltfestival Rhein-Neckar",
+      "category": "feste",
+      "city": "Mannheim Mo,",
+      "startDate": "2026-06-01",
+      "endDate": "2026-06-01",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/zeltfestival-rhein-neckar/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
+      "page": 206
+    },
+    {
+      "title": "Abendrundfahrt auf dem See",
+      "category": "feste",
+      "city": "Allensbach Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/abendrundfahrt-auf-dem-see/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
+      "page": 206
+    },
+    {
+      "title": "Pflanzenmarkt: Rosen 2026",
+      "category": "feste",
+      "city": "Insel Mainau Mi,",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/pflanzenmarkt-rosen-2026/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
+      "page": 206
+    },
+    {
+      "title": "Ohrn Beach After-Work",
+      "category": "feste",
+      "city": "Öhringen Do,",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-04",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/ohrn-beach-after-work/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
+      "page": 206
+    },
+    {
+      "title": "Sommerabendkonzerte an der Eselmühle",
+      "category": "feste",
+      "city": "Wangen im Allgäu Do,",
+      "startDate": "2026-06-04",
+      "endDate": "2026-06-04",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommerabendkonzerte-an-der-eselmuhle/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
+      "page": 206
+    },
+    {
+      "title": "The Magic Table",
+      "category": "feste",
+      "city": "",
+      "startDate": "2026-06-05",
+      "endDate": "2026-06-05",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/the-magic-table/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
+      "page": 206
+    },
+    {
       "title": "Geführte Rheintouren von Wangen bis Schaffhausen",
       "category": "feste",
       "city": "Öhningen Sa,",
@@ -2990,8 +3067,8 @@
       "endDate": "2026-06-10",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/yoga-flow/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
-      "page": 206
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/207/",
+      "page": 207
     },
     {
       "title": "WEIN AHOI - Weinausfahrt mit Weingut FG & Lädine",
@@ -3012,8 +3089,8 @@
       "endDate": "2026-06-11",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kletterkurs-fur-junggebliebene-ab-50-jahren/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
-      "page": 206
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/207/",
+      "page": 207
     },
     {
       "title": "Yin Yoga",
@@ -3023,8 +3100,8 @@
       "endDate": "2026-06-12",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/yin-yoga/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
-      "page": 206
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/207/",
+      "page": 207
     },
     {
       "title": "Yoga für Schwangere",
@@ -3034,8 +3111,8 @@
       "endDate": "2026-06-12",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/yoga-fur-schwangere/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
-      "page": 206
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/207/",
+      "page": 207
     },
     {
       "title": "STADTRADELN: Höchenschwand",
@@ -3045,8 +3122,8 @@
       "endDate": "2026-06-13",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtradeln-hochenschwand/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
-      "page": 206
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/207/",
+      "page": 207
     },
     {
       "title": "Stadtradeln 2026",
@@ -3056,8 +3133,8 @@
       "endDate": "2026-06-13",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtradeln-2026/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
-      "page": 206
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/207/",
+      "page": 207
     },
     {
       "title": "Sail & Wine - Weinprobe auf der Lädine",
@@ -3067,8 +3144,8 @@
       "endDate": "2026-06-16",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sail-wine-weinprobe-auf-der-ladine/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
-      "page": 206
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/207/",
+      "page": 207
     },
     {
       "title": "Opernplatzfest",
