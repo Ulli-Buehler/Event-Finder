@@ -14,9 +14,9 @@ Zieldatum: 2026-06-28
 
 Counts:
 {
-  "pages": 216,
-  "rawCollectedIncludingDuplicates": 2984,
-  "rawUnique": 2984,
+  "pages": 212,
+  "rawCollectedIncludingDuplicates": 2927,
+  "rawUnique": 2925,
   "targetDateMatches": 49,
   "targetDateWithGeo": 47,
   "targetDateWithoutGeo": 2,
@@ -42,7 +42,7 @@ Counts:
   "targetDateBodenseeRegionGeoRecovered": 2,
   "nonRegionalTargetDateMatches": 46,
   "rawMaerkte": 80,
-  "rawFeste": 2904,
+  "rawFeste": 2845,
   "targetDateMaerkte": 1,
   "targetDateFeste": 48,
   "targetDateWithGeoMaerkte": 1,
@@ -356,7 +356,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 2904,
+    "reportedCount": 2847,
     "parsedCount": 14
   },
   {
@@ -1981,44 +1981,12 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 14
+    "parsedCount": 5
   },
   {
     "category": "feste",
     "page": 205,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/205/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 206,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 207,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/207/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 208,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/208/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 6
-  },
-  {
-    "category": "feste",
-    "page": 209,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/209/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
