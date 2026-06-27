@@ -15,20 +15,20 @@ Zieldatum: 2026-06-28
 Counts:
 {
   "pages": 212,
-  "rawCollectedIncludingDuplicates": 2927,
-  "rawUnique": 2927,
-  "targetDateMatches": 49,
-  "targetDateWithGeo": 47,
+  "rawCollectedIncludingDuplicates": 2934,
+  "rawUnique": 2934,
+  "targetDateMatches": 50,
+  "targetDateWithGeo": 48,
   "targetDateWithoutGeo": 2,
-  "targetDateGeoEstimated": 47,
-  "targetDateGeoEstimatedFromCity": 41,
+  "targetDateGeoEstimated": 48,
+  "targetDateGeoEstimatedFromCity": 42,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 3,
   "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 2,
-  "targetDateDetailCoordinateGeoChecked": 49,
+  "targetDateDetailCoordinateGeoChecked": 50,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 5,
@@ -40,13 +40,13 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 2,
   "targetDateBodenseeRegionGeoRecovered": 2,
-  "nonRegionalTargetDateMatches": 46,
+  "nonRegionalTargetDateMatches": 47,
   "rawMaerkte": 80,
-  "rawFeste": 2847,
+  "rawFeste": 2854,
   "targetDateMaerkte": 1,
-  "targetDateFeste": 48,
+  "targetDateFeste": 49,
   "targetDateWithGeoMaerkte": 1,
-  "targetDateWithGeoFeste": 46,
+  "targetDateWithGeoFeste": 47,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 2
 }
@@ -233,6 +233,10 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Meßkirch So,",
+    "count": 1
+  },
+  {
     "city": "Müllheim So,",
     "count": 1
   },
@@ -356,7 +360,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 2847,
+    "reportedCount": 2851,
     "parsedCount": 14
   },
   {
@@ -1981,7 +1985,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 5
+    "parsedCount": 12
   },
   {
     "category": "feste",
