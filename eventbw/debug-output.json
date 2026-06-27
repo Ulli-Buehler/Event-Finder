@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-28",
-    "startedAt": "2026-06-27T00:00:45.947Z",
-    "finishedAt": "2026-06-27T00:04:11.501Z",
+    "startedAt": "2026-06-27T01:00:40.083Z",
+    "finishedAt": "2026-06-27T01:04:04.432Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 212,
       "rawCollectedIncludingDuplicates": 2927,
-      "rawUnique": 2925,
+      "rawUnique": 2927,
       "targetDateMatches": 49,
       "targetDateWithGeo": 47,
       "targetDateWithoutGeo": 2,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 2,
       "nonRegionalTargetDateMatches": 46,
       "rawMaerkte": 80,
-      "rawFeste": 2845,
+      "rawFeste": 2847,
       "targetDateMaerkte": 1,
       "targetDateFeste": 48,
       "targetDateWithGeoMaerkte": 1,
@@ -3226,17 +3226,6 @@
       "page": 202
     },
     {
-      "title": "Einführung Online-Angebote und Online-Katalog mit anschließender Fragerunde",
-      "category": "feste",
-      "city": "",
-      "startDate": "2026-06-26",
-      "endDate": "2026-06-26",
-      "time": "16:00 - 17:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/einfuhrung-online-angebote-und-online-katalog-mit-anschliesender-fragerunde/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
-      "page": 5
-    },
-    {
       "title": "Gartenfest in Langenrain",
       "category": "feste",
       "city": "Allensbach Fr,",
@@ -3270,28 +3259,6 @@
       "page": 203
     },
     {
-      "title": "4. Bad Rappenauer Ausbildungsmesse",
-      "category": "feste",
-      "city": "Bad Rappenau Fr,",
-      "startDate": "2026-06-26",
-      "endDate": "2026-06-26",
-      "time": "10:30 - 14:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/4-bad-rappenauer-ausbildungsmesse/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
-      "page": 5
-    },
-    {
-      "title": "NABU - Vortrag: Sind Wespen mehr als nur nervige Grillgäste?",
-      "category": "feste",
-      "city": "Breisach Fr,",
-      "startDate": "2026-06-26",
-      "endDate": "2026-06-26",
-      "time": "19:00 - 21:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/nabu-vortrag-sind-wespen-mehr-als-nur-nervige-grillgaste/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
-      "page": 5
-    },
-    {
       "title": "Schwimmende Seminare",
       "category": "feste",
       "city": "Echt Bodensee Fr,",
@@ -3314,17 +3281,6 @@
       "page": 203
     },
     {
-      "title": "Hafenfest Friedrichshafen im hinteren Hafen",
-      "category": "feste",
-      "city": "Friedrichshafen Fr,",
-      "startDate": "2026-06-26",
-      "endDate": "2026-06-26",
-      "time": "18:00 - 23:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/hafenfest-friedrichshafen-im-hinteren-hafen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
-      "page": 5
-    },
-    {
       "title": "HAM RADIO 2026 meets Astro",
       "category": "feste",
       "city": "Friedrichshafen Fr,",
@@ -3336,17 +3292,6 @@
       "page": 204
     },
     {
-      "title": "Junikäfer",
-      "category": "feste",
-      "city": "Friedrichshafen Fr,",
-      "startDate": "2026-06-26",
-      "endDate": "2026-06-26",
-      "time": "16:00 - 23:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/junikafer/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
-      "page": 5
-    },
-    {
       "title": "Sommerfest: Musikverein Ettenkirch",
       "category": "feste",
       "city": "Friedrichshafen Fr,",
@@ -3354,8 +3299,8 @@
       "endDate": "2026-06-26",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommerfest-musikverein-ettenkirch/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
-      "page": 5
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
+      "page": 204
     },
     {
       "title": "Promenadenkonzert",
@@ -3369,17 +3314,6 @@
       "page": 203
     },
     {
-      "title": "Kurkonzert der Stadtkapelle Gengenbach",
-      "category": "feste",
-      "city": "Gengenbach Fr,",
-      "startDate": "2026-06-26",
-      "endDate": "2026-06-26",
-      "time": "19:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kurkonzert-der-stadtkapelle-gengenbach/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
-      "page": 5
-    },
-    {
       "title": "Steiff Sommer Familienfest",
       "category": "feste",
       "city": "Giengen an der Brenz Fr,",
@@ -3389,17 +3323,6 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/steiff-sommer-familienfest/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/203/",
       "page": 203
-    },
-    {
-      "title": "Heilungsgottesdienst",
-      "category": "feste",
-      "city": "Gutach im Breisgau Fr,",
-      "startDate": "2026-06-26",
-      "endDate": "2026-06-26",
-      "time": "19:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/heilungsgottesdienst/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
-      "page": 5
     },
     {
       "title": "Vinovum - Weinfestival im Römerpark",
@@ -3453,8 +3376,8 @@
       "endDate": "2026-06-26",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/circus-rudolf-renz/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
-      "page": 5
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
+      "page": 204
     },
     {
       "title": "100 Jahre Sportfreunde Dottingen",
@@ -3466,39 +3389,6 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/100-jahre-sportfreunde-dottingen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
       "page": 204
-    },
-    {
-      "title": "Circus Bely in Nordrach",
-      "category": "feste",
-      "city": "Nordrach Fr,",
-      "startDate": "2026-06-26",
-      "endDate": "2026-06-26",
-      "time": "16:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/circus-bely-in-nordrach-13/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
-      "page": 5
-    },
-    {
-      "title": "Goschehobel auf dem Mühlstein",
-      "category": "feste",
-      "city": "Nordrach Fr,",
-      "startDate": "2026-06-26",
-      "endDate": "2026-06-26",
-      "time": "19:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/goschehobel-auf-dem-muhlstein/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
-      "page": 5
-    },
-    {
-      "title": "Wanderbussle ins Dorf",
-      "category": "feste",
-      "city": "Oberharmersbach Fr,",
-      "startDate": "2026-06-26",
-      "endDate": "2026-06-26",
-      "time": "17:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wanderbussle-ins-dorf-7/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
-      "page": 5
     },
     {
       "title": "Gutsfest mit Livemusik",
@@ -3545,28 +3435,6 @@
       "page": 203
     },
     {
-      "title": "Politisches Nachtgebet",
-      "category": "feste",
-      "city": "Sigmaringen Fr,",
-      "startDate": "2026-06-26",
-      "endDate": "2026-06-26",
-      "time": "19:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/politisches-nachtgebet/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
-      "page": 5
-    },
-    {
-      "title": "Fest am See",
-      "category": "feste",
-      "city": "Waldkirch Fr,",
-      "startDate": "2026-06-26",
-      "endDate": "2026-06-26",
-      "time": "17:00 - 01:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fest-am-see/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
-      "page": 5
-    },
-    {
       "title": "Ballett-Gala 2026",
       "category": "feste",
       "city": "",
@@ -3609,6 +3477,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/slichtenbolfescht/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2
+    },
+    {
+      "title": "2. blacksheep Sommerfest",
+      "category": "feste",
+      "city": "Bad Rappenau Sa,",
+      "startDate": "2026-06-27",
+      "endDate": "2026-06-27",
+      "time": "15:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/2-blacksheep-sommerfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Scheffel 200: Das Stadtfest",
@@ -3732,6 +3611,17 @@
       "page": 2
     },
     {
+      "title": "Von Telemann bis Abba",
+      "category": "feste",
+      "city": "Eberbach Sa,",
+      "startDate": "2026-06-27",
+      "endDate": "2026-06-27",
+      "time": "18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/von-telemann-bis-abba/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "Hafenfest",
       "category": "feste",
       "city": "Elzach Sa,",
@@ -3741,6 +3631,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/hafenfest/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/6/",
       "page": 6
+    },
+    {
+      "title": "Dorffest des Musikverein Gausbach",
+      "category": "feste",
+      "city": "Forbach Sa,",
+      "startDate": "2026-06-27",
+      "endDate": "2026-06-27",
+      "time": "18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/dorffest-des-musikverein-gausbach/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Alles Lavendel - Sommerworkshop zur Lavendelblüte",
@@ -3798,6 +3699,39 @@
       "page": 3
     },
     {
+      "title": "Yoga & Wein | Weingärtner Stromberg-Zabergäu eG",
+      "category": "feste",
+      "city": "HeilbronnerLand Sa,",
+      "startDate": "2026-06-27",
+      "endDate": "2026-06-27",
+      "time": "16:00 - 17:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/yoga-wein-weingartner-stromberg-zabergau-eg/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Flohmarkt",
+      "category": "feste",
+      "city": "Heitersheim Sa,",
+      "startDate": "2026-06-27",
+      "endDate": "2026-06-27",
+      "time": "09:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/flohmarkt-37/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "50. Dorf-und Kelterfest",
+      "category": "feste",
+      "city": "Illingen Sa,",
+      "startDate": "2026-06-27",
+      "endDate": "2026-06-27",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/50-dorf-und-kelterfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "Mondscheinfahrt auf dem Bodensee",
       "category": "feste",
       "city": "Immenstaad Sa,",
@@ -3840,6 +3774,28 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/der-satanarchaolugenialkohollische-wunschpunsch/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
       "page": 3
+    },
+    {
+      "title": "DRAGSHOW | QueerKAstle",
+      "category": "feste",
+      "city": "Karlsruhe Sa,",
+      "startDate": "2026-06-27",
+      "endDate": "2026-06-27",
+      "time": "19:00 - 21:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/dragshow-queerkastle/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Hof- & Garagenflohmarkt Stupferich",
+      "category": "feste",
+      "city": "Karlsruhe Sa,",
+      "startDate": "2026-06-27",
+      "endDate": "2026-06-27",
+      "time": "10:00 - 16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/hof-garagenflohmarkt-stupferich/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Karlsruhe klingt – music to go",
@@ -3886,6 +3842,17 @@
       "page": 4
     },
     {
+      "title": "Das Lauterbacher Mühlenfest (zu Gunsten des DRK)",
+      "category": "feste",
+      "city": "Lauterbach Sa,",
+      "startDate": "2026-06-27",
+      "endDate": "2026-06-27",
+      "time": "16:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/das-lauterbacher-muhlenfest-zu-gunsten-des-drk/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "3D Bogenturnier",
       "category": "feste",
       "city": "Moos-Weiler Sa,",
@@ -3895,6 +3862,28 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/3d-bogenturnier/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
       "page": 3
+    },
+    {
+      "title": "Mössinger Kultur-Open-Air 2026: Comedy-Abend",
+      "category": "feste",
+      "city": "Mössingen Sa,",
+      "startDate": "2026-06-27",
+      "endDate": "2026-06-27",
+      "time": "20:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mossinger-kultur-open-air-2026-comedy-abend/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Straßenfest Berndshofen",
+      "category": "feste",
+      "city": "Mulfingen-Berndshofen Sa,",
+      "startDate": "2026-06-27",
+      "endDate": "2026-06-27",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/strasenfest-berndshofen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Kinderprogramm am Müllheimer Stadtfest",
@@ -4005,6 +3994,28 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/traditionelles-stadtseefest/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2
+    },
+    {
+      "title": "Open Wandelhallen",
+      "category": "feste",
+      "city": "Reutlingen Sa,",
+      "startDate": "2026-06-27",
+      "endDate": "2026-06-27",
+      "time": "14:00 - 19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/open-wandelhallen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "2. Festival Mauchen klingt - Pinot Presto",
+      "category": "feste",
+      "city": "Schliengen Sa,",
+      "startDate": "2026-06-27",
+      "endDate": "2026-06-27",
+      "time": "14:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/2-festival-mauchen-klingt-pinot-presto/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "„Hämmerle eskaliert“",
@@ -4126,6 +4137,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/lets-ally-offentliche-probe-wellenbrecherclub/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
       "page": 4
+    },
+    {
+      "title": "LET’S ALLY | Platz nehmen - Ein Gespräch über Dritte Orte",
+      "category": "feste",
+      "city": "Stadt Konstanz Sa,",
+      "startDate": "2026-06-27",
+      "endDate": "2026-06-27",
+      "time": "17:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/lets-ally-platz-nehmen-ein-gesprach-uber-dritte-orte/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "LET'S ALLY. | Eröffnung & Frühstück",
