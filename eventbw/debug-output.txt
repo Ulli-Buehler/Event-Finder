@@ -14,26 +14,26 @@ Zieldatum: 2026-06-28
 
 Counts:
 {
-  "pages": 131,
-  "rawCollectedIncludingDuplicates": 1801,
-  "rawUnique": 1801,
+  "pages": 207,
+  "rawCollectedIncludingDuplicates": 2860,
+  "rawUnique": 2860,
   "targetDateMatches": 50,
-  "targetDateWithGeo": 47,
-  "targetDateWithoutGeo": 3,
-  "targetDateGeoEstimated": 47,
+  "targetDateWithGeo": 48,
+  "targetDateWithoutGeo": 2,
+  "targetDateGeoEstimated": 48,
   "targetDateGeoEstimatedFromCity": 42,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
-  "targetDateGeoEstimatedFromDetail": 2,
+  "targetDateGeoEstimatedFromDetail": 3,
   "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 2,
   "targetDateDetailCoordinateGeoChecked": 50,
   "targetDateDetailCoordinateGeoRecovered": 0,
-  "targetDateDetailCoordinateGeoFailed": 41,
-  "targetDateDetailGoogleMapsQueries": 4,
+  "targetDateDetailCoordinateGeoFailed": 0,
+  "targetDateDetailGoogleMapsQueries": 5,
   "targetDateDetailGeoChecked": 5,
-  "targetDateDetailGeoRecovered": 2,
+  "targetDateDetailGeoRecovered": 3,
   "targetDateCompoundCityGeoChecked": 1,
   "targetDateCompoundCityGeoRecovered": 1,
   "targetDateTitleGeoChecked": 0,
@@ -42,13 +42,13 @@ Counts:
   "targetDateBodenseeRegionGeoRecovered": 2,
   "nonRegionalTargetDateMatches": 47,
   "rawMaerkte": 79,
-  "rawFeste": 1722,
+  "rawFeste": 2781,
   "targetDateMaerkte": 1,
   "targetDateFeste": 49,
   "targetDateWithGeoMaerkte": 1,
-  "targetDateWithGeoFeste": 46,
+  "targetDateWithGeoFeste": 47,
   "targetDateWithoutGeoMaerkte": 0,
-  "targetDateWithoutGeoFeste": 3
+  "targetDateWithoutGeoFeste": 2
 }
 
 Regionale Ortsliste:
@@ -1343,7 +1343,615 @@ Pages:
     "category": "feste",
     "page": 124,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/124/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 125,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/125/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 126,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/126/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 127,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/127/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 128,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/128/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 129,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/129/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 130,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/130/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 131,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/131/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 132,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/132/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 133,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/133/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 134,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/134/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 135,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/135/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 136,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/136/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 137,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/137/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 138,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/138/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 139,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/139/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 140,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/140/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 141,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/141/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 142,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/142/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 143,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/143/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 144,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/144/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 145,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/145/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 146,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/146/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 147,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/147/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 148,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/148/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 149,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/149/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 150,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/150/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 151,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/151/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 152,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/152/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 153,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/153/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 154,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/154/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 155,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/155/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 156,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/156/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 157,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/157/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 158,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/158/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 159,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/159/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 160,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/160/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 161,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/161/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 162,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/162/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 163,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/163/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 164,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/164/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 165,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/165/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 166,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/166/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 167,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/167/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 168,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/168/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 169,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/169/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 170,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/170/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 171,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/171/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 172,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/172/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 173,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/173/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 174,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/174/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 175,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/175/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 176,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/176/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 177,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/177/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 178,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/178/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 179,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/179/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 180,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/180/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 181,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/181/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 182,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/182/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 183,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/183/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 184,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/184/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 185,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/185/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 186,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/186/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 187,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/187/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 188,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/188/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 189,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/189/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 190,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/190/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 191,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/191/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 192,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/192/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 193,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/193/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 194,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/194/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 195,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/195/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 196,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/196/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 197,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/197/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 198,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/198/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 14
+  },
+  {
+    "category": "feste",
+    "page": 199,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/199/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 9
+  },
+  {
+    "category": "feste",
+    "page": 200,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/200/",
     "ok": false,
-    "error": "This operation was aborted"
+    "error": "HTTP 404 Not Found"
   }
 ]
