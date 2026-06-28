@@ -14,21 +14,21 @@ Zieldatum: 2026-06-28
 
 Counts:
 {
-  "pages": 213,
-  "rawCollectedIncludingDuplicates": 2941,
-  "rawUnique": 2941,
-  "targetDateMatches": 50,
-  "targetDateWithGeo": 48,
+  "pages": 207,
+  "rawCollectedIncludingDuplicates": 2857,
+  "rawUnique": 2855,
+  "targetDateMatches": 36,
+  "targetDateWithGeo": 34,
   "targetDateWithoutGeo": 2,
-  "targetDateGeoEstimated": 48,
-  "targetDateGeoEstimatedFromCity": 42,
+  "targetDateGeoEstimated": 34,
+  "targetDateGeoEstimatedFromCity": 28,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 3,
   "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 2,
-  "targetDateDetailCoordinateGeoChecked": 50,
+  "targetDateDetailCoordinateGeoChecked": 36,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 5,
@@ -40,13 +40,13 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 2,
   "targetDateBodenseeRegionGeoRecovered": 2,
-  "nonRegionalTargetDateMatches": 47,
-  "rawMaerkte": 80,
-  "rawFeste": 2861,
+  "nonRegionalTargetDateMatches": 34,
+  "rawMaerkte": 79,
+  "rawFeste": 2776,
   "targetDateMaerkte": 1,
-  "targetDateFeste": 49,
+  "targetDateFeste": 35,
   "targetDateWithGeoMaerkte": 1,
-  "targetDateWithGeoFeste": 47,
+  "targetDateWithGeoFeste": 33,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 2
 }
@@ -141,14 +141,6 @@ Regionale Ortsliste:
 Ortsstatistik vor Ortsfilter:
 [
   {
-    "city": "Vogtsbauernhof So,",
-    "count": 4
-  },
-  {
-    "city": "Eberbach So,",
-    "count": 3
-  },
-  {
     "city": "Karlsruhe So,",
     "count": 3
   },
@@ -157,11 +149,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 3
   },
   {
-    "city": "Nordrach So,",
+    "city": "Eberbach So,",
     "count": 2
   },
   {
-    "city": "Öhringen So,",
+    "city": "Nordrach So,",
     "count": 2
   },
   {
@@ -170,10 +162,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Albstadt So,",
-    "count": 1
-  },
-  {
-    "city": "Bad Mergentheim So,",
     "count": 1
   },
   {
@@ -193,19 +181,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Beuren So,",
-    "count": 1
-  },
-  {
     "city": "Enzklösterle So,",
     "count": 1
   },
   {
     "city": "Eschelbronn So,",
-    "count": 1
-  },
-  {
-    "city": "Friedrichshafen So,",
     "count": 1
   },
   {
@@ -218,14 +198,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Görwihl So,",
-    "count": 1
-  },
-  {
-    "city": "Herrischried So,",
-    "count": 1
-  },
-  {
-    "city": "Hohenlohe So,",
     "count": 1
   },
   {
@@ -245,11 +217,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Neuhausen ob Eck So,",
+    "city": "Oberharmersbach So,",
     "count": 1
   },
   {
-    "city": "Oberharmersbach So,",
+    "city": "Öhringen So,",
     "count": 1
   },
   {
@@ -262,10 +234,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Rottweil So,",
-    "count": 1
-  },
-  {
-    "city": "Sasbachwalden So,",
     "count": 1
   },
   {
@@ -286,10 +254,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Wald / Hohenzollern So,",
-    "count": 1
-  },
-  {
-    "city": "Waldenbuch So,",
     "count": 1
   },
   {
@@ -346,7 +310,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/6/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 10
+    "parsedCount": 9
   },
   {
     "category": "maerkte",
@@ -1945,60 +1909,12 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/199/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 14
+    "parsedCount": 6
   },
   {
     "category": "feste",
     "page": 200,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/200/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 201,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/201/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 202,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/202/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 203,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/203/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 204,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 14
-  },
-  {
-    "category": "feste",
-    "page": 205,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/205/",
-    "ok": true,
-    "reportedCount": null,
-    "parsedCount": 5
-  },
-  {
-    "category": "feste",
-    "page": 206,
-    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
