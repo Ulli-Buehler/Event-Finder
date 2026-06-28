@@ -15,8 +15,8 @@ Zieldatum: 2026-06-28
 Counts:
 {
   "pages": 207,
-  "rawCollectedIncludingDuplicates": 2857,
-  "rawUnique": 2857,
+  "rawCollectedIncludingDuplicates": 2856,
+  "rawUnique": 2856,
   "targetDateMatches": 50,
   "targetDateWithGeo": 48,
   "targetDateWithoutGeo": 2,
@@ -42,7 +42,7 @@ Counts:
   "targetDateBodenseeRegionGeoRecovered": 2,
   "nonRegionalTargetDateMatches": 47,
   "rawMaerkte": 79,
-  "rawFeste": 2778,
+  "rawFeste": 2777,
   "targetDateMaerkte": 1,
   "targetDateFeste": 49,
   "targetDateWithGeoMaerkte": 1,
@@ -1945,7 +1945,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/199/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 6
+    "parsedCount": 5
   },
   {
     "category": "feste",

@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-28",
-    "startedAt": "2026-06-28T01:00:41.649Z",
-    "finishedAt": "2026-06-28T01:04:00.129Z",
+    "startedAt": "2026-06-28T02:00:40.912Z",
+    "finishedAt": "2026-06-28T02:03:59.088Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 207,
-      "rawCollectedIncludingDuplicates": 2857,
-      "rawUnique": 2857,
+      "rawCollectedIncludingDuplicates": 2856,
+      "rawUnique": 2856,
       "targetDateMatches": 50,
       "targetDateWithGeo": 48,
       "targetDateWithoutGeo": 2,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 2,
       "nonRegionalTargetDateMatches": 47,
       "rawMaerkte": 79,
-      "rawFeste": 2778,
+      "rawFeste": 2777,
       "targetDateMaerkte": 1,
       "targetDateFeste": 49,
       "targetDateWithGeoMaerkte": 1,
@@ -1448,8 +1448,8 @@
       "endDate": "2026-06-27",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtfest-10/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/199/",
-      "page": 199
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/198/",
+      "page": 198
     },
     {
       "title": "Fußball-Ortsturnier",
@@ -1472,17 +1472,6 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommerfest-der-bergmannskapelle/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/199/",
       "page": 199
-    },
-    {
-      "title": "Stadtfest",
-      "category": "feste",
-      "city": "Sigmaringen Sa,",
-      "startDate": "2026-06-27",
-      "endDate": "2026-06-27",
-      "time": "",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtfest-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/198/",
-      "page": 198
     },
     {
       "title": "Fotokurs Architektur UNESCO Welterbe",
