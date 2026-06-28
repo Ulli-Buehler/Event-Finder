@@ -16,19 +16,19 @@ Counts:
 {
   "pages": 207,
   "rawCollectedIncludingDuplicates": 2857,
-  "rawUnique": 2855,
-  "targetDateMatches": 36,
-  "targetDateWithGeo": 34,
+  "rawUnique": 2857,
+  "targetDateMatches": 50,
+  "targetDateWithGeo": 48,
   "targetDateWithoutGeo": 2,
-  "targetDateGeoEstimated": 34,
-  "targetDateGeoEstimatedFromCity": 28,
+  "targetDateGeoEstimated": 48,
+  "targetDateGeoEstimatedFromCity": 42,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 3,
   "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 2,
-  "targetDateDetailCoordinateGeoChecked": 36,
+  "targetDateDetailCoordinateGeoChecked": 50,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 5,
@@ -40,13 +40,13 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 2,
   "targetDateBodenseeRegionGeoRecovered": 2,
-  "nonRegionalTargetDateMatches": 34,
+  "nonRegionalTargetDateMatches": 47,
   "rawMaerkte": 79,
-  "rawFeste": 2776,
+  "rawFeste": 2778,
   "targetDateMaerkte": 1,
-  "targetDateFeste": 35,
+  "targetDateFeste": 49,
   "targetDateWithGeoMaerkte": 1,
-  "targetDateWithGeoFeste": 33,
+  "targetDateWithGeoFeste": 47,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 2
 }
@@ -141,6 +141,14 @@ Regionale Ortsliste:
 Ortsstatistik vor Ortsfilter:
 [
   {
+    "city": "Vogtsbauernhof So,",
+    "count": 4
+  },
+  {
+    "city": "Eberbach So,",
+    "count": 3
+  },
+  {
     "city": "Karlsruhe So,",
     "count": 3
   },
@@ -149,11 +157,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 3
   },
   {
-    "city": "Eberbach So,",
+    "city": "Nordrach So,",
     "count": 2
   },
   {
-    "city": "Nordrach So,",
+    "city": "Öhringen So,",
     "count": 2
   },
   {
@@ -162,6 +170,10 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Albstadt So,",
+    "count": 1
+  },
+  {
+    "city": "Bad Mergentheim So,",
     "count": 1
   },
   {
@@ -181,11 +193,19 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Beuren So,",
+    "count": 1
+  },
+  {
     "city": "Enzklösterle So,",
     "count": 1
   },
   {
     "city": "Eschelbronn So,",
+    "count": 1
+  },
+  {
+    "city": "Friedrichshafen So,",
     "count": 1
   },
   {
@@ -198,6 +218,14 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Görwihl So,",
+    "count": 1
+  },
+  {
+    "city": "Herrischried So,",
+    "count": 1
+  },
+  {
+    "city": "Hohenlohe So,",
     "count": 1
   },
   {
@@ -217,11 +245,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Oberharmersbach So,",
+    "city": "Neuhausen ob Eck So,",
     "count": 1
   },
   {
-    "city": "Öhringen So,",
+    "city": "Oberharmersbach So,",
     "count": 1
   },
   {
@@ -234,6 +262,10 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Rottweil So,",
+    "count": 1
+  },
+  {
+    "city": "Sasbachwalden So,",
     "count": 1
   },
   {
@@ -257,6 +289,10 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Waldenbuch So,",
+    "count": 1
+  },
+  {
     "city": "Waldkirch So,",
     "count": 1
   }
@@ -269,7 +305,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
     "ok": true,
-    "reportedCount": 80,
+    "reportedCount": 79,
     "parsedCount": 14
   },
   {
@@ -324,7 +360,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 2861,
+    "reportedCount": 2778,
     "parsedCount": 14
   },
   {

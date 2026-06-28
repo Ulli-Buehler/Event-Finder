@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-06-28",
-    "startedAt": "2026-06-28T00:00:48.148Z",
-    "finishedAt": "2026-06-28T00:03:44.079Z",
+    "startedAt": "2026-06-28T01:00:41.649Z",
+    "finishedAt": "2026-06-28T01:04:00.129Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,19 +95,19 @@
     "counts": {
       "pages": 207,
       "rawCollectedIncludingDuplicates": 2857,
-      "rawUnique": 2855,
-      "targetDateMatches": 36,
-      "targetDateWithGeo": 34,
+      "rawUnique": 2857,
+      "targetDateMatches": 50,
+      "targetDateWithGeo": 48,
       "targetDateWithoutGeo": 2,
-      "targetDateGeoEstimated": 34,
-      "targetDateGeoEstimatedFromCity": 28,
+      "targetDateGeoEstimated": 48,
+      "targetDateGeoEstimatedFromCity": 42,
       "targetDateGeoManualLocality": 0,
       "targetDateGeoFromEventBwDetailCoordinates": 0,
       "targetDateGeoEstimatedFromDetail": 3,
       "targetDateGeoEstimatedFromCompoundCity": 1,
       "targetDateGeoEstimatedFromTitle": 0,
       "targetDateGeoEstimatedFromBodenseeRegion": 2,
-      "targetDateDetailCoordinateGeoChecked": 36,
+      "targetDateDetailCoordinateGeoChecked": 50,
       "targetDateDetailCoordinateGeoRecovered": 0,
       "targetDateDetailCoordinateGeoFailed": 0,
       "targetDateDetailGoogleMapsQueries": 5,
@@ -119,13 +119,13 @@
       "targetDateTitleGeoRecovered": 0,
       "targetDateBodenseeRegionGeoChecked": 2,
       "targetDateBodenseeRegionGeoRecovered": 2,
-      "nonRegionalTargetDateMatches": 34,
+      "nonRegionalTargetDateMatches": 47,
       "rawMaerkte": 79,
-      "rawFeste": 2776,
+      "rawFeste": 2778,
       "targetDateMaerkte": 1,
-      "targetDateFeste": 35,
+      "targetDateFeste": 49,
       "targetDateWithGeoMaerkte": 1,
-      "targetDateWithGeoFeste": 33,
+      "targetDateWithGeoFeste": 47,
       "targetDateWithoutGeoMaerkte": 0,
       "targetDateWithoutGeoFeste": 2
     }
@@ -136,7 +136,7 @@
       "page": 1,
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "ok": true,
-      "reportedCount": 80,
+      "reportedCount": 79,
       "parsedCount": 14
     },
     {
@@ -191,7 +191,7 @@
       "page": 1,
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "ok": true,
-      "reportedCount": 2861,
+      "reportedCount": 2778,
       "parsedCount": 14
     },
     {
@@ -1788,6 +1788,14 @@
   ],
   "cityStatsForTargetDate": [
     {
+      "city": "Vogtsbauernhof So,",
+      "count": 4
+    },
+    {
+      "city": "Eberbach So,",
+      "count": 3
+    },
+    {
       "city": "Karlsruhe So,",
       "count": 3
     },
@@ -1796,11 +1804,11 @@
       "count": 3
     },
     {
-      "city": "Eberbach So,",
+      "city": "Nordrach So,",
       "count": 2
     },
     {
-      "city": "Nordrach So,",
+      "city": "Öhringen So,",
       "count": 2
     },
     {
@@ -1809,6 +1817,10 @@
     },
     {
       "city": "Albstadt So,",
+      "count": 1
+    },
+    {
+      "city": "Bad Mergentheim So,",
       "count": 1
     },
     {
@@ -1828,11 +1840,19 @@
       "count": 1
     },
     {
+      "city": "Beuren So,",
+      "count": 1
+    },
+    {
       "city": "Enzklösterle So,",
       "count": 1
     },
     {
       "city": "Eschelbronn So,",
+      "count": 1
+    },
+    {
+      "city": "Friedrichshafen So,",
       "count": 1
     },
     {
@@ -1845,6 +1865,14 @@
     },
     {
       "city": "Görwihl So,",
+      "count": 1
+    },
+    {
+      "city": "Herrischried So,",
+      "count": 1
+    },
+    {
+      "city": "Hohenlohe So,",
       "count": 1
     },
     {
@@ -1864,11 +1892,11 @@
       "count": 1
     },
     {
-      "city": "Oberharmersbach So,",
+      "city": "Neuhausen ob Eck So,",
       "count": 1
     },
     {
-      "city": "Öhringen So,",
+      "city": "Oberharmersbach So,",
       "count": 1
     },
     {
@@ -1881,6 +1909,10 @@
     },
     {
       "city": "Rottweil So,",
+      "count": 1
+    },
+    {
+      "city": "Sasbachwalden So,",
       "count": 1
     },
     {
@@ -1904,6 +1936,10 @@
       "count": 1
     },
     {
+      "city": "Waldenbuch So,",
+      "count": 1
+    },
+    {
       "city": "Waldkirch So,",
       "count": 1
     }
@@ -1919,7 +1955,7 @@
     "overrides": []
   },
   "detailCoordinateGeo": {
-    "checked": 36,
+    "checked": 50,
     "recovered": 0,
     "failed": 0,
     "recoveredEvents": [],
@@ -3286,72 +3322,6 @@
       "page": 198
     },
     {
-      "title": "Scheffel 200: Das Stadtfest",
-      "category": "feste",
-      "city": "Bad Säckingen Sa,",
-      "startDate": "2026-06-27",
-      "endDate": "2026-06-27",
-      "time": "",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/scheffel-200-eine-zeitreise-das-stadtfest/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Waldbaden für Einsteiger - Wellness für die Sinne",
-      "category": "feste",
-      "city": "Baiersbronn Sa,",
-      "startDate": "2026-06-27",
-      "endDate": "2026-06-27",
-      "time": "14:00 - 18:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/waldbaden-fur-einsteiger-wellness-fur-die-sinne/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Sommerkonzert des Chors TonArt",
-      "category": "feste",
-      "city": "Baiersbronn-Klosterreichenbach Sa,",
-      "startDate": "2026-06-27",
-      "endDate": "2026-06-27",
-      "time": "19:00 - 21:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommerkonzert-des-chors-tonart/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "12-Stunden-Schwimmen",
-      "category": "feste",
-      "city": "Baiersbronn-Mitteltal Sa,",
-      "startDate": "2026-06-27",
-      "endDate": "2026-06-27",
-      "time": "10:00 - 22:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/12-stunden-schwimmen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Sommerfest \"Peter & Paul\"",
-      "category": "feste",
-      "city": "Dachsberg Sa,",
-      "startDate": "2026-06-27",
-      "endDate": "2026-06-27",
-      "time": "19:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommerfest-peter-paul/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Summer Spirit - Das etwas andere Johannifest",
-      "category": "feste",
-      "city": "Friedrichshafen Sa,",
-      "startDate": "2026-06-27",
-      "endDate": "2026-06-27",
-      "time": "17:00 - 18:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/summer-spirit-das-etwas-andere-johannifest/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
       "title": "50. Dorf-und Kelterfest",
       "category": "feste",
       "city": "Illingen Sa,",
@@ -3361,28 +3331,6 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/50-dorf-und-kelterfest/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/199/",
       "page": 199
-    },
-    {
-      "title": "Mondscheinfahrt auf dem Bodensee",
-      "category": "feste",
-      "city": "Immenstaad Sa,",
-      "startDate": "2026-06-27",
-      "endDate": "2026-06-27",
-      "time": "21:00 - 22:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/nachtfahrt-auf-dem-bodensee/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Moonlight Cinema im Aquastaad - Dirty Dancing",
-      "category": "feste",
-      "city": "Immenstaad Sa,",
-      "startDate": "2026-06-27",
-      "endDate": "2026-06-27",
-      "time": "21:45 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/moonlight-cinema-im-aquastaad-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
     },
     {
       "title": "3D Bogenturnier",
@@ -3414,8 +3362,8 @@
       "endDate": "2026-06-27",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtfest-10/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/199/",
+      "page": 199
     },
     {
       "title": "Fußball-Ortsturnier",
@@ -3447,52 +3395,8 @@
       "endDate": "2026-06-27",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtfest-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Weinsüden Pop-Up in Talheim",
-      "category": "feste",
-      "city": "Talheim Sa,",
-      "startDate": "2026-06-27",
-      "endDate": "2026-06-27",
-      "time": "17:00 - 22:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinsuden-pop-up-in-talheim/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Gassenfest in Distelhausen",
-      "category": "feste",
-      "city": "Tauberbischofsheim Sa,",
-      "startDate": "2026-06-27",
-      "endDate": "2026-06-27",
-      "time": "16:00 - 22:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gassenfest-in-distelhausen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Weingenussweg Buchholz - geführte Weinwanderung",
-      "category": "feste",
-      "city": "Waldkirch-Buchholz Sa,",
-      "startDate": "2026-06-27",
-      "endDate": "2026-06-27",
-      "time": "14:00 - 18:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/genuss-weinprobe-in-den-reben-von-mundingen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Brodwurschd(musik)-Hock des Musikvereins Trachtenkapelle Kirnbach",
-      "category": "feste",
-      "city": "Wolfach Sa,",
-      "startDate": "2026-06-27",
-      "endDate": "2026-06-27",
-      "time": "17:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/brodwurschdmusik-hock-des-musikvereins-trachtenkapelle-kirnbach/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/198/",
+      "page": 198
     },
     {
       "title": "Fotokurs Architektur UNESCO Welterbe",
@@ -3591,6 +3495,24 @@
       "geoQuery": "Albstadt So,, Baden-Württemberg, Germany"
     },
     {
+      "title": "Regionaltag mit verkaufsoffenem Sonntag",
+      "category": "feste",
+      "city": "Bad Mergentheim So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/regionaltag-mit-verkaufsoffenem-sonntag/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4907909,
+      "lng": 9.77317,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Bad Mergentheim So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "FamilienSonntag „Holzwerkstatt“",
       "category": "feste",
       "city": "Bad Schussenried-Kürnbach So,",
@@ -3673,6 +3595,24 @@
       "geoQuery": "Pfarrkirche St. Johann, Baden-Württemberg, Germany"
     },
     {
+      "title": "Linsen von der Alb, Kaffee aus Kolumbien: Faire Ernte lokal und global?",
+      "category": "feste",
+      "city": "Beuren So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/linsen-von-der-alb-kaffee-aus-kolumbien-faire-ernte-lokal-und-global/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.5805031,
+      "lng": 9.4044658,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Beuren So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Tag des offenen Hangars",
       "category": "feste",
       "city": "Eberbach So,",
@@ -3682,6 +3622,24 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-des-offenen-hangars/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
       "page": 4,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4635303,
+      "lng": 8.9855203,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Urmel-Scheunengrillfest",
+      "category": "feste",
+      "city": "Eberbach So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/urmel-scheunenfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
       "lat": 49.4635303,
@@ -3745,6 +3703,24 @@
       "geoQuery": "Eschelbronn So,, Baden-Württemberg, Germany"
     },
     {
+      "title": "Summer Spirit Flow - Wasser in Wort und Klang",
+      "category": "feste",
+      "city": "Friedrichshafen So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "17:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/summer-spirit-flow-wasser-in-wort-und-klang/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.6500279,
+      "lng": 9.4800858,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Friedrichshafen So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Der etwas andere Sonntagskaffee",
       "category": "feste",
       "city": "Gengenbach So,",
@@ -3779,6 +3755,42 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Görwihl So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Naturpark-Markt Herrischried am Freilichtmuseum Klausenhof",
+      "category": "feste",
+      "city": "Herrischried So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturpark-markt-herrischried-am-freilichtmuseum-klausenhof/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.6665531,
+      "lng": 8.0006455,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Herrischried So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Regionaltag 2026",
+      "category": "feste",
+      "city": "Hohenlohe So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "13:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/regionaltag-2026/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.8176042,
+      "lng": 10.2883434,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Hohenlohe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Feuerwehrfest in Illmensee",
@@ -3907,6 +3919,24 @@
       "geoQuery": "Münsingen So,, Baden-Württemberg, Germany"
     },
     {
+      "title": "Mit dem Knecht in den Schwarzwald",
+      "category": "feste",
+      "city": "Neuhausen ob Eck So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "10:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mit-dem-knecht-in-den-schwarzwald/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.9713529,
+      "lng": 8.9283473,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Neuhausen ob Eck So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Circus Bely in Nordrach",
       "category": "feste",
       "city": "Nordrach So,",
@@ -3979,6 +4009,24 @@
       "geoQuery": "Öhringen So,, Baden-Württemberg, Germany"
     },
     {
+      "title": "Bike+Bühne - Die Event-Perle im Hohenloher Sommer",
+      "category": "feste",
+      "city": "Öhringen So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bikebuhne-die-event-perle-im-hohenloher-sommer/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.2005034,
+      "lng": 9.5024397,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Öhringen So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Bezirksposaunentag",
       "category": "feste",
       "city": "Pfaffenhofen So,",
@@ -4031,6 +4079,24 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Rottweil So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Musikalischer Sonntagstreff mit der Tanzrunde Ortenau",
+      "category": "feste",
+      "city": "Sasbachwalden So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "18:00 - 20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/musikalischer-sonntagstreff-mit-der-volkstanz-und-trachtengruppe-sasbachwalden/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.6186096,
+      "lng": 8.1280222,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Sasbachwalden So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Pilates & Brunch",
@@ -4105,6 +4171,78 @@
       "geoDetailCoordinateFound": false
     },
     {
+      "title": "Begegnungen: Der Schwarzwald wie er im Buche steht",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/begegnungen-der-schwarzwald-wie-er-im-buche-steht/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Bühne frei für Carola Horstmann und Elena Seeger",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 12:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/buhne-frei-fur-stefan-pflaum-und-elena-seeger/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Offene Werkstatt für Familien: Kuckuck ruft's aus dem Wald",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/offene-werkstatt-fur-familien-kuckuck-rufts-aus-dem-wald/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Stillezeit zum Tagesausklang",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "17:00 - 17:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stillezeit-zum-tagesausklang-5/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Familien- & Sporttag",
       "category": "feste",
       "city": "Wald / Hohenzollern So,",
@@ -4121,6 +4259,24 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Wald / Hohenzollern So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Familientag Sommersause im Museum der Alltagskultur",
+      "category": "feste",
+      "city": "Waldenbuch So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/familientag-sommersause-im-museum-der-alltagskultur/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.6374291,
+      "lng": 9.1312415,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Waldenbuch So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Eva Marlin & Bernd Grußendorf - Temperamento Español",
@@ -32818,17 +32974,6 @@
       "page": 6
     },
     {
-      "title": "Garten - Kunst - Handwerk Markt im Botanischen Obstgarten",
-      "category": "maerkte",
-      "city": "Heilbronn Sa,",
-      "startDate": "2026-06-27",
-      "endDate": "2026-06-27",
-      "time": "11:00 - 17:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/garten-kunst-handwerk-markt-im-botanischen-obstgarten/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
-      "page": 1
-    },
-    {
       "title": "Verkaufsoffener Sonntag mit Oldtimertreffen",
       "category": "maerkte",
       "city": "Geislingen So,",
@@ -32975,6 +33120,17 @@
       "endDate": "2026-07-18",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommerfrische-im-fuerstlichen-hofgarten/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
+      "page": 1
+    },
+    {
+      "title": "Naturparkmarkt",
+      "category": "maerkte",
+      "city": "Fichtenberg So,",
+      "startDate": "2026-07-19",
+      "endDate": "2026-07-19",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturparkmarkt-5/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "page": 1
     },
@@ -33781,6 +33937,24 @@
       "geoQuery": "Albstadt So,, Baden-Württemberg, Germany"
     },
     {
+      "title": "Regionaltag mit verkaufsoffenem Sonntag",
+      "category": "feste",
+      "city": "Bad Mergentheim So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/regionaltag-mit-verkaufsoffenem-sonntag/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4907909,
+      "lng": 9.77317,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Bad Mergentheim So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "FamilienSonntag „Holzwerkstatt“",
       "category": "feste",
       "city": "Bad Schussenried-Kürnbach So,",
@@ -33863,6 +34037,24 @@
       "geoQuery": "Pfarrkirche St. Johann, Baden-Württemberg, Germany"
     },
     {
+      "title": "Linsen von der Alb, Kaffee aus Kolumbien: Faire Ernte lokal und global?",
+      "category": "feste",
+      "city": "Beuren So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/linsen-von-der-alb-kaffee-aus-kolumbien-faire-ernte-lokal-und-global/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.5805031,
+      "lng": 9.4044658,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Beuren So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Tag des offenen Hangars",
       "category": "feste",
       "city": "Eberbach So,",
@@ -33872,6 +34064,24 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-des-offenen-hangars/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
       "page": 4,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4635303,
+      "lng": 8.9855203,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Urmel-Scheunengrillfest",
+      "category": "feste",
+      "city": "Eberbach So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/urmel-scheunenfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
       "lat": 49.4635303,
@@ -33935,6 +34145,24 @@
       "geoQuery": "Eschelbronn So,, Baden-Württemberg, Germany"
     },
     {
+      "title": "Summer Spirit Flow - Wasser in Wort und Klang",
+      "category": "feste",
+      "city": "Friedrichshafen So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "17:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/summer-spirit-flow-wasser-in-wort-und-klang/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.6500279,
+      "lng": 9.4800858,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Friedrichshafen So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Der etwas andere Sonntagskaffee",
       "category": "feste",
       "city": "Gengenbach So,",
@@ -33969,6 +34197,42 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Görwihl So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Naturpark-Markt Herrischried am Freilichtmuseum Klausenhof",
+      "category": "feste",
+      "city": "Herrischried So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturpark-markt-herrischried-am-freilichtmuseum-klausenhof/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.6665531,
+      "lng": 8.0006455,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Herrischried So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Regionaltag 2026",
+      "category": "feste",
+      "city": "Hohenlohe So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "13:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/regionaltag-2026/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.8176042,
+      "lng": 10.2883434,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Hohenlohe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Feuerwehrfest in Illmensee",
@@ -34097,6 +34361,24 @@
       "geoQuery": "Münsingen So,, Baden-Württemberg, Germany"
     },
     {
+      "title": "Mit dem Knecht in den Schwarzwald",
+      "category": "feste",
+      "city": "Neuhausen ob Eck So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "10:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mit-dem-knecht-in-den-schwarzwald/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.9713529,
+      "lng": 8.9283473,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Neuhausen ob Eck So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Circus Bely in Nordrach",
       "category": "feste",
       "city": "Nordrach So,",
@@ -34169,6 +34451,24 @@
       "geoQuery": "Öhringen So,, Baden-Württemberg, Germany"
     },
     {
+      "title": "Bike+Bühne - Die Event-Perle im Hohenloher Sommer",
+      "category": "feste",
+      "city": "Öhringen So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bikebuhne-die-event-perle-im-hohenloher-sommer/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.2005034,
+      "lng": 9.5024397,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Öhringen So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Bezirksposaunentag",
       "category": "feste",
       "city": "Pfaffenhofen So,",
@@ -34221,6 +34521,24 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Rottweil So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Musikalischer Sonntagstreff mit der Tanzrunde Ortenau",
+      "category": "feste",
+      "city": "Sasbachwalden So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "18:00 - 20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/musikalischer-sonntagstreff-mit-der-volkstanz-und-trachtengruppe-sasbachwalden/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.6186096,
+      "lng": 8.1280222,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Sasbachwalden So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Pilates & Brunch",
@@ -34295,6 +34613,78 @@
       "geoDetailCoordinateFound": false
     },
     {
+      "title": "Begegnungen: Der Schwarzwald wie er im Buche steht",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/begegnungen-der-schwarzwald-wie-er-im-buche-steht/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Bühne frei für Carola Horstmann und Elena Seeger",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 12:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/buhne-frei-fur-stefan-pflaum-und-elena-seeger/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Offene Werkstatt für Familien: Kuckuck ruft's aus dem Wald",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/offene-werkstatt-fur-familien-kuckuck-rufts-aus-dem-wald/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Stillezeit zum Tagesausklang",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "17:00 - 17:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stillezeit-zum-tagesausklang-5/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Familien- & Sporttag",
       "category": "feste",
       "city": "Wald / Hohenzollern So,",
@@ -34311,6 +34701,24 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Wald / Hohenzollern So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Familientag Sommersause im Museum der Alltagskultur",
+      "category": "feste",
+      "city": "Waldenbuch So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/familientag-sommersause-im-museum-der-alltagskultur/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.6374291,
+      "lng": 9.1312415,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Waldenbuch So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Eva Marlin & Bernd Grußendorf - Temperamento Español",
@@ -34447,6 +34855,24 @@
       "geoQuery": "Albstadt So,, Baden-Württemberg, Germany"
     },
     {
+      "title": "Regionaltag mit verkaufsoffenem Sonntag",
+      "category": "feste",
+      "city": "Bad Mergentheim So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/regionaltag-mit-verkaufsoffenem-sonntag/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4907909,
+      "lng": 9.77317,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Bad Mergentheim So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "FamilienSonntag „Holzwerkstatt“",
       "category": "feste",
       "city": "Bad Schussenried-Kürnbach So,",
@@ -34529,6 +34955,24 @@
       "geoQuery": "Pfarrkirche St. Johann, Baden-Württemberg, Germany"
     },
     {
+      "title": "Linsen von der Alb, Kaffee aus Kolumbien: Faire Ernte lokal und global?",
+      "category": "feste",
+      "city": "Beuren So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/linsen-von-der-alb-kaffee-aus-kolumbien-faire-ernte-lokal-und-global/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.5805031,
+      "lng": 9.4044658,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Beuren So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Tag des offenen Hangars",
       "category": "feste",
       "city": "Eberbach So,",
@@ -34538,6 +34982,24 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-des-offenen-hangars/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
       "page": 4,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4635303,
+      "lng": 8.9855203,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Urmel-Scheunengrillfest",
+      "category": "feste",
+      "city": "Eberbach So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/urmel-scheunenfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
       "lat": 49.4635303,
@@ -34601,6 +35063,24 @@
       "geoQuery": "Eschelbronn So,, Baden-Württemberg, Germany"
     },
     {
+      "title": "Summer Spirit Flow - Wasser in Wort und Klang",
+      "category": "feste",
+      "city": "Friedrichshafen So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "17:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/summer-spirit-flow-wasser-in-wort-und-klang/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.6500279,
+      "lng": 9.4800858,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Friedrichshafen So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Der etwas andere Sonntagskaffee",
       "category": "feste",
       "city": "Gengenbach So,",
@@ -34635,6 +35115,42 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Görwihl So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Naturpark-Markt Herrischried am Freilichtmuseum Klausenhof",
+      "category": "feste",
+      "city": "Herrischried So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturpark-markt-herrischried-am-freilichtmuseum-klausenhof/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.6665531,
+      "lng": 8.0006455,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Herrischried So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Regionaltag 2026",
+      "category": "feste",
+      "city": "Hohenlohe So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "13:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/regionaltag-2026/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.8176042,
+      "lng": 10.2883434,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Hohenlohe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Feuerwehrfest in Illmensee",
@@ -34763,6 +35279,24 @@
       "geoQuery": "Münsingen So,, Baden-Württemberg, Germany"
     },
     {
+      "title": "Mit dem Knecht in den Schwarzwald",
+      "category": "feste",
+      "city": "Neuhausen ob Eck So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "10:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mit-dem-knecht-in-den-schwarzwald/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.9713529,
+      "lng": 8.9283473,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Neuhausen ob Eck So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Circus Bely in Nordrach",
       "category": "feste",
       "city": "Nordrach So,",
@@ -34835,6 +35369,24 @@
       "geoQuery": "Öhringen So,, Baden-Württemberg, Germany"
     },
     {
+      "title": "Bike+Bühne - Die Event-Perle im Hohenloher Sommer",
+      "category": "feste",
+      "city": "Öhringen So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bikebuhne-die-event-perle-im-hohenloher-sommer/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.2005034,
+      "lng": 9.5024397,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Öhringen So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Bezirksposaunentag",
       "category": "feste",
       "city": "Pfaffenhofen So,",
@@ -34887,6 +35439,24 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Rottweil So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Musikalischer Sonntagstreff mit der Tanzrunde Ortenau",
+      "category": "feste",
+      "city": "Sasbachwalden So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "18:00 - 20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/musikalischer-sonntagstreff-mit-der-volkstanz-und-trachtengruppe-sasbachwalden/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.6186096,
+      "lng": 8.1280222,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Sasbachwalden So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Pilates & Brunch",
@@ -34961,6 +35531,78 @@
       "geoDetailCoordinateFound": false
     },
     {
+      "title": "Begegnungen: Der Schwarzwald wie er im Buche steht",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/begegnungen-der-schwarzwald-wie-er-im-buche-steht/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Bühne frei für Carola Horstmann und Elena Seeger",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 12:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/buhne-frei-fur-stefan-pflaum-und-elena-seeger/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Offene Werkstatt für Familien: Kuckuck ruft's aus dem Wald",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/offene-werkstatt-fur-familien-kuckuck-rufts-aus-dem-wald/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Stillezeit zum Tagesausklang",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "17:00 - 17:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stillezeit-zum-tagesausklang-5/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Familien- & Sporttag",
       "category": "feste",
       "city": "Wald / Hohenzollern So,",
@@ -34977,6 +35619,24 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Wald / Hohenzollern So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Familientag Sommersause im Museum der Alltagskultur",
+      "category": "feste",
+      "city": "Waldenbuch So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/familientag-sommersause-im-museum-der-alltagskultur/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.6374291,
+      "lng": 9.1312415,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Waldenbuch So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Eva Marlin & Bernd Grußendorf - Temperamento Español",
@@ -35113,6 +35773,24 @@
       "geoQuery": "Albstadt So,, Baden-Württemberg, Germany"
     },
     {
+      "title": "Regionaltag mit verkaufsoffenem Sonntag",
+      "category": "feste",
+      "city": "Bad Mergentheim So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/regionaltag-mit-verkaufsoffenem-sonntag/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4907909,
+      "lng": 9.77317,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Bad Mergentheim So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "FamilienSonntag „Holzwerkstatt“",
       "category": "feste",
       "city": "Bad Schussenried-Kürnbach So,",
@@ -35195,6 +35873,24 @@
       "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
     },
     {
+      "title": "Urmel-Scheunengrillfest",
+      "category": "feste",
+      "city": "Eberbach So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/urmel-scheunenfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.4635303,
+      "lng": 8.9855203,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Eberbach So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "WIRD VERSCHOBEN: Linedance in der Insel",
       "category": "feste",
       "city": "Eberbach So,",
@@ -35249,6 +35945,24 @@
       "geoQuery": "Eschelbronn So,, Baden-Württemberg, Germany"
     },
     {
+      "title": "Summer Spirit Flow - Wasser in Wort und Klang",
+      "category": "feste",
+      "city": "Friedrichshafen So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "17:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/summer-spirit-flow-wasser-in-wort-und-klang/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.6500279,
+      "lng": 9.4800858,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Friedrichshafen So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Der etwas andere Sonntagskaffee",
       "category": "feste",
       "city": "Gengenbach So,",
@@ -35283,6 +35997,42 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Görwihl So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Naturpark-Markt Herrischried am Freilichtmuseum Klausenhof",
+      "category": "feste",
+      "city": "Herrischried So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturpark-markt-herrischried-am-freilichtmuseum-klausenhof/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.6665531,
+      "lng": 8.0006455,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Herrischried So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Regionaltag 2026",
+      "category": "feste",
+      "city": "Hohenlohe So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "13:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/regionaltag-2026/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.8176042,
+      "lng": 10.2883434,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Hohenlohe So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Feuerwehrfest in Illmensee",
@@ -35393,6 +36143,24 @@
       "geoQuery": "Müllheim So,, Baden-Württemberg, Germany"
     },
     {
+      "title": "Mit dem Knecht in den Schwarzwald",
+      "category": "feste",
+      "city": "Neuhausen ob Eck So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "10:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mit-dem-knecht-in-den-schwarzwald/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 47.9713529,
+      "lng": 8.9283473,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Neuhausen ob Eck So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Circus Bely in Nordrach",
       "category": "feste",
       "city": "Nordrach So,",
@@ -35465,6 +36233,24 @@
       "geoQuery": "Öhringen So,, Baden-Württemberg, Germany"
     },
     {
+      "title": "Bike+Bühne - Die Event-Perle im Hohenloher Sommer",
+      "category": "feste",
+      "city": "Öhringen So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bikebuhne-die-event-perle-im-hohenloher-sommer/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 49.2005034,
+      "lng": 9.5024397,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Öhringen So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Bezirksposaunentag",
       "category": "feste",
       "city": "Pfaffenhofen So,",
@@ -35517,6 +36303,24 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Rottweil So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Musikalischer Sonntagstreff mit der Tanzrunde Ortenau",
+      "category": "feste",
+      "city": "Sasbachwalden So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "18:00 - 20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/musikalischer-sonntagstreff-mit-der-volkstanz-und-trachtengruppe-sasbachwalden/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.6186096,
+      "lng": 8.1280222,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Sasbachwalden So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Pilates & Brunch",
@@ -35591,6 +36395,78 @@
       "geoDetailCoordinateFound": false
     },
     {
+      "title": "Begegnungen: Der Schwarzwald wie er im Buche steht",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/begegnungen-der-schwarzwald-wie-er-im-buche-steht/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Bühne frei für Carola Horstmann und Elena Seeger",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 12:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/buhne-frei-fur-stefan-pflaum-und-elena-seeger/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Offene Werkstatt für Familien: Kuckuck ruft's aus dem Wald",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "11:00 - 16:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/offene-werkstatt-fur-familien-kuckuck-rufts-aus-dem-wald/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Stillezeit zum Tagesausklang",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "17:00 - 17:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stillezeit-zum-tagesausklang-5/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.198851,
+      "lng": 8.2856229,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Vogtsbauernhof So,, Baden-Württemberg, Germany"
+    },
+    {
       "title": "Familien- & Sporttag",
       "category": "feste",
       "city": "Wald / Hohenzollern So,",
@@ -35607,6 +36483,24 @@
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Wald / Hohenzollern So,, Baden-Württemberg, Germany"
+    },
+    {
+      "title": "Familientag Sommersause im Museum der Alltagskultur",
+      "category": "feste",
+      "city": "Waldenbuch So,",
+      "startDate": "2026-06-28",
+      "endDate": "2026-06-28",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/familientag-sommersause-im-museum-der-alltagskultur/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1,
+      "geoDetailCoordinateChecked": true,
+      "geoDetailCoordinateFound": false,
+      "lat": 48.6374291,
+      "lng": 9.1312415,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Waldenbuch So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Eva Marlin & Bernd Grußendorf - Temperamento Español",
