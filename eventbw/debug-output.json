@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-07-05",
-    "startedAt": "2026-06-30T00:00:46.623Z",
-    "finishedAt": "2026-06-30T00:04:08.931Z",
+    "startedAt": "2026-06-30T01:00:43.111Z",
+    "finishedAt": "2026-06-30T01:04:09.947Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 202,
       "rawCollectedIncludingDuplicates": 2785,
-      "rawUnique": 2781,
+      "rawUnique": 2785,
       "targetDateMatches": 55,
       "targetDateWithGeo": 54,
       "targetDateWithoutGeo": 1,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 53,
       "rawMaerkte": 77,
-      "rawFeste": 2704,
+      "rawFeste": 2708,
       "targetDateMaerkte": 0,
       "targetDateFeste": 55,
       "targetDateWithGeoMaerkte": 0,
@@ -191,7 +191,7 @@
       "page": 1,
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "ok": true,
-      "reportedCount": 2724,
+      "reportedCount": 2708,
       "parsedCount": 14
     },
     {
@@ -3143,17 +3143,6 @@
       "page": 194
     },
     {
-      "title": "Public Viewing: Fußball-WM 2026",
-      "category": "feste",
-      "city": "Baiersbronn Mo,",
-      "startDate": "2026-06-29",
-      "endDate": "2026-06-29",
-      "time": "22:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/public-viewing-fusball-wm-2026-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
       "title": "Spiel und Spaß in Murgels Spielhaus",
       "category": "feste",
       "city": "Baiersbronn Mo,",
@@ -3161,8 +3150,8 @@
       "endDate": "2026-06-29",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/spiel-und-spas-in-murgels-spielhaus/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/194/",
+      "page": 194
     },
     {
       "title": "Spiel und Spaß in Murgels Spielhaus",
@@ -3172,19 +3161,8 @@
       "endDate": "2026-06-29",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/spiel-und-spas-in-murgels-spielhaus-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "GregoriFest 2026",
-      "category": "feste",
-      "city": "Donaueschingen Mo,",
-      "startDate": "2026-06-29",
-      "endDate": "2026-06-29",
-      "time": "13:45 - 22:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gregorifest-2026/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/194/",
+      "page": 194
     },
     {
       "title": "KEK on tour Nordweststadt – Heizungstausch, Photovoltaik und Gebäudesanierung",
@@ -3194,8 +3172,8 @@
       "endDate": "2026-06-29",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kek-on-tour-nordweststadt-heizungstausch-photovoltaik-und-gebaudesanierung/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/194/",
+      "page": 194
     },
     {
       "title": "ZELTIVAL 2026",
@@ -3205,94 +3183,72 @@
       "endDate": "2026-06-29",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/zeltival-2026/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/194/",
+      "page": 194
+    },
+    {
+      "title": "\"Mein Handy kann mehr\" aus der Themenreihe: Handy im Alltag.",
+      "category": "feste",
+      "city": "",
+      "startDate": "2026-06-30",
+      "endDate": "2026-06-30",
+      "time": "10:30 - 11:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mein-handy-kann-mehr-aus-der-themenreihe-handy-im-alltag/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1
     },
     {
-      "title": "Fortbildung des Schwäb. Albvereins zur Menschheitsgeschichte",
+      "title": "Lernnächte",
       "category": "feste",
-      "city": "Meßstetten Mo,",
-      "startDate": "2026-06-29",
-      "endDate": "2026-06-29",
-      "time": "10:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fortbildung-des-schwab-albvereins-zur-menschheitsgeschichte/",
+      "city": "",
+      "startDate": "2026-06-30",
+      "endDate": "2026-06-30",
+      "time": "18:30 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/lernnachte/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1
     },
     {
-      "title": "Handwerkervesper",
+      "title": "MS Teams - Alles im Griff: Aufgabenmanagement mit Planner und To Do",
       "category": "feste",
-      "city": "Rangendingen Mo,",
-      "startDate": "2026-06-29",
-      "endDate": "2026-06-29",
-      "time": "16:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/handwerkervesper/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Peter- und Paul-Markt",
-      "category": "feste",
-      "city": "Schönau Mo,",
-      "startDate": "2026-06-29",
-      "endDate": "2026-06-29",
-      "time": "09:00 - 18:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/peter-und-paul-markt-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Wilde grüne Walnüsse",
-      "category": "feste",
-      "city": "Schwäbisches Streuobstparadies Mo,",
-      "startDate": "2026-06-29",
-      "endDate": "2026-06-29",
-      "time": "17:00 - 20:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wilde-grune-walnusse/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
-    },
-    {
-      "title": "Microsoft Copilot mit Lizenz: Erleichterung und Effizienz im Alltag",
-      "category": "feste",
-      "city": "Sigmaringen Mo,",
-      "startDate": "2026-06-29",
-      "endDate": "2026-06-29",
+      "city": "Sigmaringen Di,",
+      "startDate": "2026-06-30",
+      "endDate": "2026-06-30",
       "time": "09:00 - 12:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/microsoft-copilot-mit-lizenz-erleichterung-und-effizienz-im-alltag/",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/ms-teams-alles-im-griff-aufgabenmanagement-mit-planner-und-to-do/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1
     },
     {
-      "title": "Mit einer Genossenschaft gegen den Klimawandel?",
+      "title": "Kinofilm: Tomorrow - Die Welt ist voller Lösungen",
       "category": "feste",
-      "city": "Tuttlingen Mo,",
-      "startDate": "2026-06-29",
-      "endDate": "2026-06-29",
-      "time": "19:00 - 21:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mit-einer-genossenschaft-gegen-den-klimawandel/",
+      "city": "Tuttlingen Di,",
+      "startDate": "2026-06-30",
+      "endDate": "2026-06-30",
+      "time": "19:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kinofilm-tomorrow-die-welt-ist-voller-losungen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1
     },
     {
-      "title": "Mit einer Genossenschaft gegen den Klimawandel? Vortrag und Gespräch",
+      "title": "Herz Chakra Meditation (Karunesh Meditation): Für Anfänger und Fortgeschrittene",
       "category": "feste",
-      "city": "Tuttlingen Mo,",
-      "startDate": "2026-06-29",
-      "endDate": "2026-06-29",
+      "city": "Wertheim Di,",
+      "startDate": "2026-06-30",
+      "endDate": "2026-06-30",
       "time": "19:00 - 20:30 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mit-einer-genossenschaft-gegen-den-klimawandel-vortrag-und-gesprach/",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/herz-chakra-meditation-karunesh-meditation-fur-anfanger-und-fortgeschrittene/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1
     },
     {
-      "title": "Sommerbrise am Wengerthäusle",
+      "title": "Afterwork Baden-Baden @ RIZZI | Juli",
       "category": "feste",
-      "city": "Weinstadt Mo,",
-      "startDate": "2026-06-29",
-      "endDate": "2026-06-29",
-      "time": "16:00 - 21:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommerbrise-am-wengerthausle/",
+      "city": "",
+      "startDate": "2026-07-01",
+      "endDate": "2026-07-01",
+      "time": "17:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/afterwork-baden-baden-rizzi-juli/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "page": 1
     },
@@ -3319,6 +3275,39 @@
       "page": 2
     },
     {
+      "title": "Busausfahrt - Waldulmer Winzergenossenschaft Kappelrodeck",
+      "category": "feste",
+      "city": "Baiersbronn Mi,",
+      "startDate": "2026-07-01",
+      "endDate": "2026-07-01",
+      "time": "13:45 - 17:45 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/busausfahrt-waldulmer-winzergenossenschaft-kappelrodeck/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Idyllisches Tonbachtal",
+      "category": "feste",
+      "city": "Baiersbronn Mi,",
+      "startDate": "2026-07-01",
+      "endDate": "2026-07-01",
+      "time": "13:45 - 16:45 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/idyllisches-tonbachtal/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Märchen erleben für Jung und Alt",
+      "category": "feste",
+      "city": "Baiersbronn Mi,",
+      "startDate": "2026-07-01",
+      "endDate": "2026-07-01",
+      "time": "15:30 - 16:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/marchen-erleben-fur-jung-und-alt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
       "title": "Seniorencafè im alten Engel",
       "category": "feste",
       "city": "Dachsberg Mi,",
@@ -3328,6 +3317,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/seniorencafe-im-alten-engel/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2
+    },
+    {
+      "title": "Sommer in der Stadt, Ellwangen",
+      "category": "feste",
+      "city": "Ellwangen Mi,",
+      "startDate": "2026-07-01",
+      "endDate": "2026-07-01",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommer-in-der-stadt-ellwangen/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
     },
     {
       "title": "Festivalsommer 2026 - SUNDOWNER - Laura Ritter & Band auf der Weiherterrasse",
@@ -3363,6 +3363,17 @@
       "page": 2
     },
     {
+      "title": "Abendsportfest",
+      "category": "feste",
+      "city": "Moos Mi,",
+      "startDate": "2026-07-01",
+      "endDate": "2026-07-01",
+      "time": "17:00 - 21:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/abendsportfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
       "title": "Mössinger Kultur-Open-Air 2026: Feierabend-Open-Air",
       "category": "feste",
       "city": "Mössingen Mi,",
@@ -3396,6 +3407,17 @@
       "page": 2
     },
     {
+      "title": "vhs Wiederbelebungsschulung \"Herzsicher\"",
+      "category": "feste",
+      "city": "Schramberg Mi,",
+      "startDate": "2026-07-01",
+      "endDate": "2026-07-01",
+      "time": "19:00 - 20:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vhs-wiederbelebungsschulung-herzsicher/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
       "title": "Beurteilung von Mitarbeitenden und Auszubildenden: Mitarbeitergespräche",
       "category": "feste",
       "city": "Sigmaringen Mi,",
@@ -3416,6 +3438,28 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/thema-des-monats-juli-independence-day-vor-250-jahren-die-anfange-der-supermacht-usa/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
       "page": 2
+    },
+    {
+      "title": "Wildbienen helfen, aber richtig - Tipps und Tricks für den eigenen Garten",
+      "category": "feste",
+      "city": "Zaberfeld Mi,",
+      "startDate": "2026-07-01",
+      "endDate": "2026-07-01",
+      "time": "18:00 - 19:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wildbienen-helfen-aber-richtig-tipps-und-tricks-fur-den-eigenen-garten/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
+      "title": "Menschen von hier - erzählen von ihrem Glauben",
+      "category": "feste",
+      "city": "Zollernalb Mi,",
+      "startDate": "2026-07-01",
+      "endDate": "2026-07-01",
+      "time": "20:00 - 21:15 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/menschen-von-hier-erzahlen-von-ihrem-glauben/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
     },
     {
       "title": "Baden-Badener Sommernächte",
@@ -5760,8 +5804,8 @@
       "page": 14,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.9232677,
-      "lng": 9.2500203,
+      "lat": 47.924349,
+      "lng": 9.2559822,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Pfullendorf So,, Baden-Württemberg, Germany"
@@ -33736,8 +33780,8 @@
       "page": 14,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.9232677,
-      "lng": 9.2500203,
+      "lat": 47.924349,
+      "lng": 9.2559822,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Pfullendorf So,, Baden-Württemberg, Germany"
@@ -34751,8 +34795,8 @@
       "page": 14,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.9232677,
-      "lng": 9.2500203,
+      "lat": 47.924349,
+      "lng": 9.2559822,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Pfullendorf So,, Baden-Württemberg, Germany"
@@ -35730,8 +35774,8 @@
       "page": 14,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.9232677,
-      "lng": 9.2500203,
+      "lat": 47.924349,
+      "lng": 9.2559822,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Pfullendorf So,, Baden-Württemberg, Germany"
