@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-07-05",
-    "startedAt": "2026-07-01T00:00:48.992Z",
-    "finishedAt": "2026-07-01T00:04:17.852Z",
+    "startedAt": "2026-07-01T01:00:44.122Z",
+    "finishedAt": "2026-07-01T01:04:20.881Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 203,
       "rawCollectedIncludingDuplicates": 2799,
-      "rawUnique": 2789,
+      "rawUnique": 2799,
       "targetDateMatches": 55,
       "targetDateWithGeo": 54,
       "targetDateWithoutGeo": 1,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 53,
       "rawMaerkte": 78,
-      "rawFeste": 2711,
+      "rawFeste": 2721,
       "targetDateMaerkte": 0,
       "targetDateFeste": 55,
       "targetDateWithGeoMaerkte": 0,
@@ -3415,6 +3415,17 @@
       "page": 4
     },
     {
+      "title": "Gesprächs- und Vortragsabend: Geh aus mein Herz und suche Freud",
+      "category": "feste",
+      "city": "Bad Urach Do,",
+      "startDate": "2026-07-02",
+      "endDate": "2026-07-02",
+      "time": "18:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gesprachs-und-vortragsabend-geh-aus-mein-herz-und-suche-freud/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
+      "page": 3
+    },
+    {
       "title": "Busausfahrt - Alpirsbacher Klosterbräu",
       "category": "feste",
       "city": "Baiersbronn Do,",
@@ -3503,6 +3514,28 @@
       "page": 3
     },
     {
+      "title": "Podiumsdiskussion: Meinungsfreiheit und Wissenschaftsfreiheit – über ein spannungsreiches Verhältnis",
+      "category": "feste",
+      "city": "Karlsruhe Do,",
+      "startDate": "2026-07-02",
+      "endDate": "2026-07-02",
+      "time": "18:00 - 19:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/podiumsdiskussion-meinungsfreiheit-und-wissenschaftsfreiheit-uber-ein-spannungsreiches-verhaltnis/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
+      "page": 3
+    },
+    {
+      "title": "Mössinger Kultur-Open-Air 2026: Initiative Livemusik",
+      "category": "feste",
+      "city": "Mössingen Do,",
+      "startDate": "2026-07-02",
+      "endDate": "2026-07-02",
+      "time": "18:30 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mossinger-kultur-open-air-2026-initiative-livemusik/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
+      "page": 3
+    },
+    {
       "title": "Vortrag: Katharina die Große - Mit Zepter und Feder",
       "category": "feste",
       "city": "Münsingen Do,",
@@ -3510,6 +3543,17 @@
       "endDate": "2026-07-02",
       "time": "19:00 - 21:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vortrag-katharina-die-grose-mit-zepter-und-feder/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
+      "page": 3
+    },
+    {
+      "title": "Online-Vortragsabend „Das Miteinander von Biodiversität & Landwirtschaft –Weinberge außer Betrieb: Kulturlandschaft im Wandel“",
+      "category": "feste",
+      "city": "Naturpark Stromberg Heuchelberg Do,",
+      "startDate": "2026-07-02",
+      "endDate": "2026-07-02",
+      "time": "18:00 - 20:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/online-vortragsabend-das-miteinander-von-biodiversitat-landwirtschaft-weinberge-auser-betrieb-kulturlandschaft-im-wandel/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
       "page": 3
     },
@@ -3587,6 +3631,17 @@
       "endDate": "2026-07-02",
       "time": "16:00 - 16:40 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bilderbuchkino-henri-und-henriette-fahren-in-die-ferien/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
+      "page": 3
+    },
+    {
+      "title": "Weinfest Singen",
+      "category": "feste",
+      "city": "Singen (Hohentwiel) Do,",
+      "startDate": "2026-07-02",
+      "endDate": "2026-07-02",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinfest-singen/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/3/",
       "page": 3
     },
@@ -3743,6 +3798,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/traditionelles-ulrichsfest/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/4/",
       "page": 4
+    },
+    {
+      "title": "Garden Futures: Designing with nature",
+      "category": "feste",
+      "city": "Ellwangen Fr,",
+      "startDate": "2026-07-03",
+      "endDate": "2026-07-03",
+      "time": "11:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/garden-futures-designing-with-nature/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Poetry Slam Open Air Special",
@@ -4009,6 +4075,17 @@
       "page": 6
     },
     {
+      "title": "Sommerfest mit Wahl der neuen Weinhoheiten",
+      "category": "feste",
+      "city": "Sasbachwalden Fr,",
+      "startDate": "2026-07-03",
+      "endDate": "2026-07-03",
+      "time": "17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sommerfest-mit-wahl-der-neuen-weinhoheiten/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "Heigeißfest",
       "category": "feste",
       "city": "Schwarzwaldregion Belchen Fr,",
@@ -4020,6 +4097,17 @@
       "page": 7
     },
     {
+      "title": "Jahreshauptversammlung Sportfreunde Obersimonswald",
+      "category": "feste",
+      "city": "Simonswald Fr,",
+      "startDate": "2026-07-03",
+      "endDate": "2026-07-03",
+      "time": "20:00 - 23:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/jahreshauptversammlung-sportfreunde-obersimonswald/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
       "title": "Öffnung Römer-Kastell",
       "category": "feste",
       "city": "Stadt Konstanz Fr,",
@@ -4029,6 +4117,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/offnung-romer-kastell-4/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/7/",
       "page": 7
+    },
+    {
+      "title": "50. Tauberbischofsheimer Altstadtfest",
+      "category": "feste",
+      "city": "Tauberbischofsheim Fr,",
+      "startDate": "2026-07-03",
+      "endDate": "2026-07-03",
+      "time": "19:00 - 01:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/50-tauberbischofsheimer-altstadtfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
     },
     {
       "title": "Altstadtfest Tauberbischofsheim",
@@ -4060,6 +4159,17 @@
       "endDate": "2026-07-03",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tubinger-sommerfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
+      "page": 5
+    },
+    {
+      "title": "Internationales Donaufest",
+      "category": "feste",
+      "city": "Ulm Fr,",
+      "startDate": "2026-07-03",
+      "endDate": "2026-07-03",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationales-donaufest-2/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/5/",
       "page": 5
     },
@@ -5496,8 +5606,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Naturpark-Zentrum Eberbach, Naturpark Neckartal-Odenwald",
-      "lat": 48.8108669,
-      "lng": 9.4540731,
+      "lat": 48.8108507,
+      "lng": 9.4547864,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Odenwald So,, Baden-Württemberg, Germany"
@@ -33703,8 +33813,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Naturpark-Zentrum Eberbach, Naturpark Neckartal-Odenwald",
-      "lat": 48.8108669,
-      "lng": 9.4540731,
+      "lat": 48.8108507,
+      "lng": 9.4547864,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Odenwald So,, Baden-Württemberg, Germany"
@@ -34718,8 +34828,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Naturpark-Zentrum Eberbach, Naturpark Neckartal-Odenwald",
-      "lat": 48.8108669,
-      "lng": 9.4540731,
+      "lat": 48.8108507,
+      "lng": 9.4547864,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Odenwald So,, Baden-Württemberg, Germany"
@@ -35697,8 +35807,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Naturpark-Zentrum Eberbach, Naturpark Neckartal-Odenwald",
-      "lat": 48.8108669,
-      "lng": 9.4540731,
+      "lat": 48.8108507,
+      "lng": 9.4547864,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Odenwald So,, Baden-Württemberg, Germany"
