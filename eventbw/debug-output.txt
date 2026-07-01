@@ -15,20 +15,20 @@ Zieldatum: 2026-07-05
 Counts:
 {
   "pages": 203,
-  "rawCollectedIncludingDuplicates": 2799,
-  "rawUnique": 2799,
-  "targetDateMatches": 55,
-  "targetDateWithGeo": 54,
+  "rawCollectedIncludingDuplicates": 2803,
+  "rawUnique": 2803,
+  "targetDateMatches": 56,
+  "targetDateWithGeo": 55,
   "targetDateWithoutGeo": 1,
-  "targetDateGeoEstimated": 54,
-  "targetDateGeoEstimatedFromCity": 47,
+  "targetDateGeoEstimated": 55,
+  "targetDateGeoEstimatedFromCity": 48,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 6,
   "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 0,
-  "targetDateDetailCoordinateGeoChecked": 55,
+  "targetDateDetailCoordinateGeoChecked": 56,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 7,
@@ -40,13 +40,13 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 0,
   "targetDateBodenseeRegionGeoRecovered": 0,
-  "nonRegionalTargetDateMatches": 53,
+  "nonRegionalTargetDateMatches": 54,
   "rawMaerkte": 78,
-  "rawFeste": 2721,
+  "rawFeste": 2725,
   "targetDateMaerkte": 0,
-  "targetDateFeste": 55,
+  "targetDateFeste": 56,
   "targetDateWithGeoMaerkte": 0,
-  "targetDateWithGeoFeste": 54,
+  "targetDateWithGeoFeste": 55,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 1
 }
@@ -221,6 +221,10 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Höchenschwand So,",
+    "count": 1
+  },
+  {
     "city": "Kandern So,",
     "count": 1
   },
@@ -380,7 +384,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 2721,
+    "reportedCount": 2725,
     "parsedCount": 14
   },
   {
@@ -1933,7 +1937,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/195/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 5
+    "parsedCount": 9
   },
   {
     "category": "feste",
