@@ -14,39 +14,39 @@ Zieldatum: 2026-07-05
 
 Counts:
 {
-  "pages": 203,
-  "rawCollectedIncludingDuplicates": 2803,
-  "rawUnique": 2803,
-  "targetDateMatches": 56,
-  "targetDateWithGeo": 55,
+  "pages": 204,
+  "rawCollectedIncludingDuplicates": 2815,
+  "rawUnique": 2815,
+  "targetDateMatches": 58,
+  "targetDateWithGeo": 57,
   "targetDateWithoutGeo": 1,
-  "targetDateGeoEstimated": 55,
-  "targetDateGeoEstimatedFromCity": 48,
+  "targetDateGeoEstimated": 57,
+  "targetDateGeoEstimatedFromCity": 49,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 6,
-  "targetDateGeoEstimatedFromCompoundCity": 1,
+  "targetDateGeoEstimatedFromCompoundCity": 2,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 0,
-  "targetDateDetailCoordinateGeoChecked": 56,
+  "targetDateDetailCoordinateGeoChecked": 58,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 7,
   "targetDateDetailGeoChecked": 7,
   "targetDateDetailGeoRecovered": 6,
-  "targetDateCompoundCityGeoChecked": 1,
-  "targetDateCompoundCityGeoRecovered": 1,
+  "targetDateCompoundCityGeoChecked": 2,
+  "targetDateCompoundCityGeoRecovered": 2,
   "targetDateTitleGeoChecked": 0,
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 0,
   "targetDateBodenseeRegionGeoRecovered": 0,
-  "nonRegionalTargetDateMatches": 54,
+  "nonRegionalTargetDateMatches": 56,
   "rawMaerkte": 78,
-  "rawFeste": 2725,
+  "rawFeste": 2737,
   "targetDateMaerkte": 0,
-  "targetDateFeste": 56,
+  "targetDateFeste": 58,
   "targetDateWithGeoMaerkte": 0,
-  "targetDateWithGeoFeste": 55,
+  "targetDateWithGeoFeste": 57,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 1
 }
@@ -265,6 +265,14 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Ostrach So,",
+    "count": 1
+  },
+  {
+    "city": "Ostrach-Jettkofen So,",
+    "count": 1
+  },
+  {
     "city": "Ottenhöfen im Schwarzwald So,",
     "count": 1
   },
@@ -384,7 +392,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 2725,
+    "reportedCount": 2737,
     "parsedCount": 14
   },
   {
@@ -1937,12 +1945,20 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/195/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 9
+    "parsedCount": 14
   },
   {
     "category": "feste",
     "page": 196,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/196/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 7
+  },
+  {
+    "category": "feste",
+    "page": 197,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/197/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
