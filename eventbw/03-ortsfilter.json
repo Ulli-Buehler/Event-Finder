@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-07-05",
-    "startedAt": "2026-07-02T00:00:50.792Z",
-    "finishedAt": "2026-07-02T00:04:54.085Z",
+    "startedAt": "2026-07-02T01:00:50.602Z",
+    "finishedAt": "2026-07-02T01:05:09.073Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 214,
-      "rawCollectedIncludingDuplicates": 2955,
-      "rawUnique": 2955,
+      "rawCollectedIncludingDuplicates": 2958,
+      "rawUnique": 2956,
       "targetDateMatches": 58,
       "targetDateWithGeo": 57,
       "targetDateWithoutGeo": 1,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 56,
       "rawMaerkte": 118,
-      "rawFeste": 2837,
+      "rawFeste": 2838,
       "targetDateMaerkte": 0,
       "targetDateFeste": 58,
       "targetDateWithGeoMaerkte": 0,
@@ -702,8 +702,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Naturpark-Zentrum Eberbach, Naturpark Neckartal-Odenwald",
-      "lat": 48.8108507,
-      "lng": 9.4547864,
+      "lat": 48.8108669,
+      "lng": 9.4540731,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Odenwald So,, Baden-Württemberg, Germany"
@@ -1742,8 +1742,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Naturpark-Zentrum Eberbach, Naturpark Neckartal-Odenwald",
-      "lat": 48.8108507,
-      "lng": 9.4547864,
+      "lat": 48.8108669,
+      "lng": 9.4540731,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Odenwald So,, Baden-Württemberg, Germany"
