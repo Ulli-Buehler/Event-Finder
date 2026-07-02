@@ -16,7 +16,7 @@ Counts:
 {
   "pages": 214,
   "rawCollectedIncludingDuplicates": 2958,
-  "rawUnique": 2956,
+  "rawUnique": 2958,
   "targetDateMatches": 58,
   "targetDateWithGeo": 57,
   "targetDateWithoutGeo": 1,
@@ -42,7 +42,7 @@ Counts:
   "targetDateBodenseeRegionGeoRecovered": 0,
   "nonRegionalTargetDateMatches": 56,
   "rawMaerkte": 118,
-  "rawFeste": 2838,
+  "rawFeste": 2840,
   "targetDateMaerkte": 0,
   "targetDateFeste": 58,
   "targetDateWithGeoMaerkte": 0,
@@ -416,7 +416,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 2837,
+    "reportedCount": 2840,
     "parsedCount": 14
   },
   {
