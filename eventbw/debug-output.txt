@@ -18,10 +18,10 @@ Counts:
   "rawCollectedIncludingDuplicates": 3002,
   "rawUnique": 3002,
   "targetDateMatches": 59,
-  "targetDateWithGeo": 56,
-  "targetDateWithoutGeo": 3,
-  "targetDateGeoEstimated": 56,
-  "targetDateGeoEstimatedFromCity": 48,
+  "targetDateWithGeo": 58,
+  "targetDateWithoutGeo": 1,
+  "targetDateGeoEstimated": 58,
+  "targetDateGeoEstimatedFromCity": 50,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 6,
@@ -46,9 +46,9 @@ Counts:
   "targetDateMaerkte": 0,
   "targetDateFeste": 59,
   "targetDateWithGeoMaerkte": 0,
-  "targetDateWithGeoFeste": 56,
+  "targetDateWithGeoFeste": 58,
   "targetDateWithoutGeoMaerkte": 0,
-  "targetDateWithoutGeoFeste": 3
+  "targetDateWithoutGeoFeste": 1
 }
 
 Regionale Ortsliste:

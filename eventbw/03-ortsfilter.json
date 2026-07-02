@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-07-05",
-    "startedAt": "2026-07-02T08:00:52.241Z",
-    "finishedAt": "2026-07-02T08:05:35.929Z",
+    "startedAt": "2026-07-02T08:10:36.014Z",
+    "finishedAt": "2026-07-02T08:12:54.163Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -97,10 +97,10 @@
       "rawCollectedIncludingDuplicates": 3002,
       "rawUnique": 3002,
       "targetDateMatches": 59,
-      "targetDateWithGeo": 56,
-      "targetDateWithoutGeo": 3,
-      "targetDateGeoEstimated": 56,
-      "targetDateGeoEstimatedFromCity": 48,
+      "targetDateWithGeo": 58,
+      "targetDateWithoutGeo": 1,
+      "targetDateGeoEstimated": 58,
+      "targetDateGeoEstimatedFromCity": 50,
       "targetDateGeoManualLocality": 0,
       "targetDateGeoFromEventBwDetailCoordinates": 0,
       "targetDateGeoEstimatedFromDetail": 6,
@@ -125,9 +125,9 @@
       "targetDateMaerkte": 0,
       "targetDateFeste": 59,
       "targetDateWithGeoMaerkte": 0,
-      "targetDateWithGeoFeste": 56,
+      "targetDateWithGeoFeste": 58,
       "targetDateWithoutGeoMaerkte": 0,
-      "targetDateWithoutGeoFeste": 3
+      "targetDateWithoutGeoFeste": 1
     }
   },
   "events": [
@@ -338,7 +338,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
       "page": 14,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0784228,
+      "lng": 9.067437,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Brackenheim So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Herrentag mit Kräuterpädagogin Antje Mieves: Abenteuer im Wald",
@@ -675,7 +680,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/15/",
       "page": 15,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 48.4069119,
+      "lng": 9.0602912,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Mössingen So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Chormusik im Gottesdienst der Müllheimer Stadtkirche",
@@ -1422,7 +1432,12 @@
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/14/",
       "page": 14,
       "geoDetailCoordinateChecked": true,
-      "geoDetailCoordinateFound": false
+      "geoDetailCoordinateFound": false,
+      "lat": 49.0784228,
+      "lng": 9.067437,
+      "geoEstimated": true,
+      "geoSource": "derived",
+      "geoQuery": "Brackenheim So,, Baden-Württemberg, Germany"
     },
     {
       "title": "Herrentag mit Kräuterpädagogin Antje Mieves: Abenteuer im Wald",
