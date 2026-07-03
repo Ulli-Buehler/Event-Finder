@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-07-05",
-    "startedAt": "2026-07-03T00:00:49.323Z",
-    "finishedAt": "2026-07-03T00:04:34.022Z",
+    "startedAt": "2026-07-03T01:00:47.511Z",
+    "finishedAt": "2026-07-03T01:04:39.940Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 215,
-      "rawCollectedIncludingDuplicates": 2971,
-      "rawUnique": 2970,
+      "rawCollectedIncludingDuplicates": 2972,
+      "rawUnique": 2971,
       "targetDateMatches": 59,
       "targetDateWithGeo": 58,
       "targetDateWithoutGeo": 1,
@@ -120,7 +120,7 @@
       "targetDateBodenseeRegionGeoChecked": 0,
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 57,
-      "rawMaerkte": 116,
+      "rawMaerkte": 117,
       "rawFeste": 2854,
       "targetDateMaerkte": 0,
       "targetDateFeste": 59,
@@ -1840,7 +1840,7 @@
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
       "ok": true,
       "reportedCount": null,
-      "parsedCount": 12
+      "parsedCount": 13
     },
     {
       "category": "feste",
@@ -4232,8 +4232,8 @@
       "page": 11,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.9939504,
-      "lng": 9.1121478,
+      "lat": 47.9939249,
+      "lng": 9.1122006,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Meßkirch So,, Baden-Württemberg, Germany"
@@ -4289,8 +4289,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Naturpark-Zentrum Eberbach, Naturpark Neckartal-Odenwald",
-      "lat": 48.8108669,
-      "lng": 9.4540731,
+      "lat": 48.8108507,
+      "lng": 9.4547864,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Odenwald So,, Baden-Württemberg, Germany"
@@ -19071,6 +19071,17 @@
       "page": 108
     },
     {
+      "title": "Eat & Beat 2026",
+      "category": "feste",
+      "city": "Esenhausen Sa,",
+      "startDate": "2026-09-05",
+      "endDate": "2026-09-05",
+      "time": "11:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/eat-beat-2026/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/108/",
+      "page": 108
+    },
+    {
       "title": "Dîner en blanc",
       "category": "feste",
       "city": "Karlsruhe Sa,",
@@ -19210,8 +19221,8 @@
       "endDate": "2026-09-06",
       "time": "05:45 - 08:45 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/rutschenfelsen-mal-ganz-anders/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/109/",
-      "page": 109
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/110/",
+      "page": 110
     },
     {
       "title": "Konzert der Murgtalmusikanten",
@@ -19232,8 +19243,8 @@
       "endDate": "2026-09-06",
       "time": "10:30 - 14:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturerlebnis-wald/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/108/",
-      "page": 108
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/109/",
+      "page": 109
     },
     {
       "title": "Ökumenischer Gottesdienst zum Tag der Schöpfung",
@@ -19551,8 +19562,8 @@
       "endDate": "2026-09-07",
       "time": "18:00 - 20:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/zum-teufel-mit-der-kuhhaut-geschichtsfahrt-auf-dem-untersee/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/110/",
-      "page": 110
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/111/",
+      "page": 111
     },
     {
       "title": "5 Tage Naturparkforscher unterwegs",
@@ -19661,8 +19672,8 @@
       "endDate": "2026-09-10",
       "time": "16:45 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/eroffnung-des-heilbronner-weindorfs/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/111/",
-      "page": 111
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/112/",
+      "page": 112
     },
     {
       "title": "Heilbronner Weindorf",
@@ -19859,8 +19870,8 @@
       "endDate": "2026-09-11",
       "time": "18:00 - 23:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinfest-11/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/112/",
-      "page": 112
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/113/",
+      "page": 113
     },
     {
       "title": "ESCAPE to the DINNER - Knack den Geschmack",
@@ -19969,8 +19980,8 @@
       "endDate": "2026-09-11",
       "time": "18:06 - 22:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/dritte-halbzeit-im-park-der-zeiten/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/113/",
-      "page": 113
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/114/",
+      "page": 114
     },
     {
       "title": "Donaubadfest",
@@ -20156,8 +20167,8 @@
       "endDate": "2026-09-12",
       "time": "10:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/flohmarkt-auf-dem-klausenhof-gelande/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/115/",
-      "page": 115
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/116/",
+      "page": 116
     },
     {
       "title": "34. Int. Keramikwochen mit Int. Töpfermarkt",
@@ -20178,8 +20189,8 @@
       "endDate": "2026-09-12",
       "time": "15:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinfest-in-illmensee/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/114/",
-      "page": 114
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/115/",
+      "page": 115
     },
     {
       "title": "WORKSHOP: Tierfreundliche Sträucher und Hecken im Garten",
@@ -20629,8 +20640,8 @@
       "endDate": "2026-09-13",
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-des-offenen-denkmals-palais-vischer/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/119/",
-      "page": 119
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/120/",
+      "page": 120
     },
     {
       "title": "Schlagerträume auf dem Bodensee",
@@ -20761,8 +20772,8 @@
       "endDate": "2026-09-13",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schleppertreffen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/116/",
-      "page": 116
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/117/",
+      "page": 117
     },
     {
       "title": "Städtlesherbst mit Flohmarkt",
@@ -20827,8 +20838,8 @@
       "endDate": "2026-09-13",
       "time": "14:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/machen-sie-der-symbolfrucht-des-elsass-und-dem-beruhmtesten-aller-elsassischen-obstkuchen-alle-ehre/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/118/",
-      "page": 118
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/119/",
+      "page": 119
     },
     {
       "title": "Einführung in die Welt der Pilze. Einsteigerseminar mit der Pilzsachverständigen Stefanie Breig",
@@ -20871,8 +20882,8 @@
       "endDate": "2026-09-13",
       "time": "10:00 - 16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tag-des-denkmals/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/117/",
-      "page": 117
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/118/",
+      "page": 118
     },
     {
       "title": "Offene Kelter Grunbach",
@@ -21080,8 +21091,8 @@
       "endDate": "2026-09-15",
       "time": "19:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tauschtag-der-briefmarkenfreunde-gengenbach-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/120/",
-      "page": 120
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/121/",
+      "page": 121
     },
     {
       "title": "EFFEKTE-Reihe im September: Interaktive Körperreise – was das Recht mit Gesundheit zu tun hat",
@@ -21245,8 +21256,8 @@
       "endDate": "2026-09-17",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schulstartwoche-geislingen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/121/",
-      "page": 121
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/122/",
+      "page": 122
     },
     {
       "title": "Einschulungsfeier an der Grundschule Gütenbach - Ein besonderer Start ins Schulleben",
@@ -21355,8 +21366,8 @@
       "endDate": "2026-09-18",
       "time": "20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kulturmomente-frl-wommy-wonder-aber-hallo/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/123/",
-      "page": 123
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/124/",
+      "page": 124
     },
     {
       "title": "Natur als Krisencoach",
@@ -21410,8 +21421,8 @@
       "endDate": "2026-09-18",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/frankisches-volksfest-mit-verkaufsoffenem-sonntag/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/122/",
-      "page": 122
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/123/",
+      "page": 123
     },
     {
       "title": "Sonneninsel Steetfood Sommer | 3. Septemberwochenende mit Crazy Foods",
@@ -21696,8 +21707,8 @@
       "endDate": "2026-09-19",
       "time": "10:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wilder-herbst/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/124/",
-      "page": 124
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/125/",
+      "page": 125
     },
     {
       "title": "Höfisch und heldenhaft",
@@ -21806,8 +21817,8 @@
       "endDate": "2026-09-19",
       "time": "10:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/herbstmarkt-und-tag-der-offenen-tur-der-ortsbucherei/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/125/",
-      "page": 125
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/126/",
+      "page": 126
     },
     {
       "title": "Alarmübung der freiwilligen Feuerwehr Gütenbach",
@@ -22037,8 +22048,8 @@
       "endDate": "2026-09-19",
       "time": "19:30 - 22:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/thomas-schreckenberger-irre-sind-menschlich-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/126/",
-      "page": 126
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/127/",
+      "page": 127
     },
     {
       "title": "Stadtfest Tuttlingen 2026",
@@ -22125,8 +22136,8 @@
       "endDate": "2026-09-20",
       "time": "10:10 - 14:10 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oechsles-genussrunde-weingenuss-am-oechslebrunnen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/127/",
-      "page": 127
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/128/",
+      "page": 128
     },
     {
       "title": "30 Jahre Budaörser Heimatmuseum - Museumsfest",
@@ -22158,8 +22169,8 @@
       "endDate": "2026-09-20",
       "time": "11:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/freudenberger-herbstmarkt-mit-flohmarkt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/128/",
-      "page": 128
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/129/",
+      "page": 129
     },
     {
       "title": "Kreativ-Markt Friesenheim",
@@ -22466,8 +22477,8 @@
       "endDate": "2026-09-22",
       "time": "20:00 - 22:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/wortgewandt-poetry-slam/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/129/",
-      "page": 129
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/130/",
+      "page": 130
     },
     {
       "title": "Klimawandel: Geht den Meeren der Sauerstoff aus?",
@@ -22609,8 +22620,8 @@
       "endDate": "2026-09-24",
       "time": "19:30 - 21:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kastner-gebrauchsgedichte/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/130/",
-      "page": 130
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/131/",
+      "page": 131
     },
     {
       "title": "SWR - Talk im Park",
@@ -22840,8 +22851,8 @@
       "endDate": "2026-09-25",
       "time": "19:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/hauptkommissar-schroder-ermittelt-kriminal-comedy-dinner/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/131/",
-      "page": 131
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/132/",
+      "page": 132
     },
     {
       "title": "179. Cannstatter Volksfest",
@@ -22895,8 +22906,8 @@
       "endDate": "2026-09-26",
       "time": "17:00 - 21:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tapas-wine-local-die-aufregende/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/133/",
-      "page": 133
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/134/",
+      "page": 134
     },
     {
       "title": "Edelwäscher Oktoberfest - 100 Jahre SVF",
@@ -23269,8 +23280,8 @@
       "endDate": "2026-09-26",
       "time": "20:00 - 22:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/goslowstrike-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/134/",
-      "page": 134
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/135/",
+      "page": 135
     },
     {
       "title": "Manga Day 2026",
@@ -23291,8 +23302,8 @@
       "endDate": "2026-09-26",
       "time": "18:00 - 00:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/lange-nacht-der-sauna-herbstzauber/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/132/",
-      "page": 132
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/133/",
+      "page": 133
     },
     {
       "title": "63. Erntedankfest Berau",
@@ -23467,8 +23478,8 @@
       "endDate": "2026-09-27",
       "time": "12:00 - 20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/heilbronner-weinlesefest-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/136/",
-      "page": 136
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/137/",
+      "page": 137
     },
     {
       "title": "Wald im Klimawandel",
@@ -23687,8 +23698,8 @@
       "endDate": "2026-09-27",
       "time": "11:00 - 12:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/heuboden-akademie-unser-wald-kann-mehr/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/135/",
-      "page": 135
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/136/",
+      "page": 136
     },
     {
       "title": "Stillezeit zum Tagesausklang",
@@ -23742,8 +23753,8 @@
       "endDate": "2026-09-27",
       "time": "10:30 - 15:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/zell-tanzt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/137/",
-      "page": 137
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/138/",
+      "page": 138
     },
     {
       "title": "Vesper trifft Apfel: Genusswochen im Herbst",
@@ -23830,8 +23841,8 @@
       "endDate": "2026-10-01",
       "time": "19:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/ballett-werkstatt-the-world-of-john-neumeier-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/138/",
-      "page": 138
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/139/",
+      "page": 139
     },
     {
       "title": "THE WORLD OF JOHN NEUMEIER",
@@ -23962,8 +23973,8 @@
       "endDate": "2026-10-02",
       "time": "20:00 - 21:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/aenne-burda-theater-baden-alsace/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/139/",
-      "page": 139
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/140/",
+      "page": 140
     },
     {
       "title": "Herbstschlemmerei im Überlinger See",
@@ -24182,8 +24193,8 @@
       "endDate": "2026-10-02",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oktoberfest-8/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/140/",
-      "page": 140
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/141/",
+      "page": 141
     },
     {
       "title": "\"Deutschland, mon amour\" - Peter Prange und Mark Scheibe",
@@ -24369,8 +24380,8 @@
       "endDate": "2026-10-03",
       "time": "10:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gefuhrte-wanderung-der-wanderfreunde-5/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/143/",
-      "page": 143
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/144/",
+      "page": 144
     },
     {
       "title": "Herbsthock mit verkaufsoffenem Feiertag",
@@ -24567,8 +24578,8 @@
       "endDate": "2026-10-03",
       "time": "19:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/ipartypeople-disney-party-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/142/",
-      "page": 142
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/143/",
+      "page": 143
     },
     {
       "title": "Mamma Mia Party/Konzert",
@@ -24600,8 +24611,8 @@
       "endDate": "2026-10-03",
       "time": "11:00 - 12:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/heuboden-akademie-historische-kriminalfalle-in-der-ortenau/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/141/",
-      "page": 141
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/142/",
+      "page": 142
     },
     {
       "title": "Offene Werkstatt für Familien: Alles hält sich die Waage",
@@ -24809,8 +24820,8 @@
       "endDate": "2026-10-04",
       "time": "11:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/langenauer-herbstmarkt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/144/",
-      "page": 144
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/145/",
+      "page": 145
     },
     {
       "title": "Herbstmarkt mit Radrennen Rund um'd Kirch und verkaufsoffenem Sonntag",
@@ -24963,8 +24974,8 @@
       "endDate": "2026-10-04",
       "time": "14:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kostenfreie-fuhrung-durch-den-historischen-rundofen-in-zell-am-harmersbach-5/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/145/",
-      "page": 145
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/146/",
+      "page": 146
     },
     {
       "title": "Absprung | The world of John Neumeier",
@@ -25106,8 +25117,8 @@
       "endDate": "2026-10-08",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/philosophisches-cafe-wer-ist-ein-gebildeter-mensch/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/146/",
-      "page": 146
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/147/",
+      "page": 147
     },
     {
       "title": "Das Kriminal Dinner \"Eine Leiche im Louvre\"",
@@ -25249,8 +25260,8 @@
       "endDate": "2026-10-09",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/hermann-hesse-tage/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/147/",
-      "page": 147
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/148/",
+      "page": 148
     },
     {
       "title": "Talkshow mit Hermann Hesse",
@@ -25436,8 +25447,8 @@
       "endDate": "2026-10-10",
       "time": "10:30 - 11:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/hermann-hesses-zukunftsweisende-darstellung-von-behinderten-menschen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/149/",
-      "page": 149
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/150/",
+      "page": 150
     },
     {
       "title": "Literarische Pause mit Kurzlesungen",
@@ -25689,8 +25700,8 @@
       "endDate": "2026-10-10",
       "time": "10:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/workshop-schmieden-mit-voranmeldung-3/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/148/",
-      "page": 148
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/149/",
+      "page": 149
     },
     {
       "title": "Genießer Weinprobe - mit Voranmeldung",
@@ -25722,8 +25733,8 @@
       "endDate": "2026-10-10",
       "time": "07:00 - 13:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mostfest-mit-markt-und-musik/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/150/",
-      "page": 150
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/151/",
+      "page": 151
     },
     {
       "title": "Apfel- und Kartoffeltag",
@@ -25810,8 +25821,8 @@
       "endDate": "2026-10-11",
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/apfelfest-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/151/",
-      "page": 151
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/152/",
+      "page": 152
     },
     {
       "title": "Rockenauer Kerwe: Frühschoppen",
@@ -26041,8 +26052,8 @@
       "endDate": "2026-10-12",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/erntewoche-solidarische-landwirtschaft-schloss-tempelhof/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/152/",
-      "page": 152
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/153/",
+      "page": 153
     },
     {
       "title": "Kinder- & Jugendtheaterfestival - Der Buchstabendieb",
@@ -26184,8 +26195,8 @@
       "endDate": "2026-10-16",
       "time": "20:00 - 22:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/okan-seese-tomaten-auf-den-ohren-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/154/",
-      "page": 154
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/155/",
+      "page": 155
     },
     {
       "title": "Seminar: Die Kunst der Obstsortenbestimmung",
@@ -26404,8 +26415,8 @@
       "endDate": "2026-10-16",
       "time": "18:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/topfgucker-party-10/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/153/",
-      "page": 153
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/154/",
+      "page": 154
     },
     {
       "title": "Berta, das Ei ist hart.",
@@ -26690,8 +26701,8 @@
       "endDate": "2026-10-17",
       "time": "09:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kurz-und-knackig-1-tagiges-einsteigerseminar-obstsorten-bestimmen-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/156/",
-      "page": 156
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/157/",
+      "page": 157
     },
     {
       "title": "Von Apfelsorten und Apfelsaft - Familienaktion",
@@ -26756,8 +26767,8 @@
       "endDate": "2026-10-17",
       "time": "13:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weinsberger-weinwanderung-weinwanderevent/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/155/",
-      "page": 155
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/156/",
+      "page": 156
     },
     {
       "title": "Generalversammlung - Clube Portuguès de Wolfach",
@@ -26822,8 +26833,8 @@
       "endDate": "2026-10-18",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/37-eberbacher-apfeltag/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/157/",
-      "page": 157
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/158/",
+      "page": 158
     },
     {
       "title": "Eberbacher Apfeltag",
@@ -26932,8 +26943,8 @@
       "endDate": "2026-10-18",
       "time": "11:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturpark-markt-schefflenz/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/158/",
-      "page": 158
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/159/",
+      "page": 159
     },
     {
       "title": "Firmenschießen",
@@ -27108,8 +27119,8 @@
       "endDate": "2026-10-20",
       "time": "10:30 - 11:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kinder-jugendtheaterfestival-die-schneefrau-gespielt-von-sybille-denker/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/159/",
-      "page": 159
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/160/",
+      "page": 160
     },
     {
       "title": "Wir stellen Seifenbällchen her",
@@ -27229,8 +27240,8 @@
       "endDate": "2026-10-23",
       "time": "19:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/swr1-hitparadenparty/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/160/",
-      "page": 160
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/161/",
+      "page": 161
     },
     {
       "title": "Wir basteln ein Geistertürschild aus Tonkarton",
@@ -27449,8 +27460,8 @@
       "endDate": "2026-10-24",
       "time": "15:00 - 16:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/drei-frauen-drei-wege-eine-region/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/162/",
-      "page": 162
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/163/",
+      "page": 163
     },
     {
       "title": "Kerwe in Brombach",
@@ -27537,8 +27548,8 @@
       "endDate": "2026-10-24",
       "time": "15:30 - 18:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/goldener-herbst-konstanz-tour-mit-schiff-nachtwachter/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/161/",
-      "page": 161
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/162/",
+      "page": 162
     },
     {
       "title": "MAMMA MIA - The Ultimative ABBA Night",
@@ -27812,8 +27823,8 @@
       "endDate": "2026-10-25",
       "time": "12:00 - 16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kurbis-schnitzen-fur-kinder/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/164/",
-      "page": 164
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/165/",
+      "page": 165
     },
     {
       "title": "Naturparkmarkt Kürnbach mit verkaufsoffenem Sonntag, Schwarzriesling-Kerwe und Kunsthandwerkermarkt",
@@ -27823,8 +27834,8 @@
       "endDate": "2026-10-25",
       "time": "11:00 - 18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/naturparkmarkt-kurnbach-mit-verkaufsoffenem-sonntag-schwarzriesling-kerwe-und-kunsthandwerkermarkt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/163/",
-      "page": 163
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/164/",
+      "page": 164
     },
     {
       "title": "Raue Kost",
@@ -28021,8 +28032,8 @@
       "endDate": "2026-10-29",
       "time": "20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/lina-bo/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/165/",
-      "page": 165
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/166/",
+      "page": 166
     },
     {
       "title": "Messe schön & gut",
@@ -28164,8 +28175,8 @@
       "endDate": "2026-10-31",
       "time": "20:00 - 01:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/silent-disco-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/166/",
-      "page": 166
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/167/",
+      "page": 167
     },
     {
       "title": "Silent Disco | Halloween Special",
@@ -28340,8 +28351,8 @@
       "endDate": "2026-11-03",
       "time": "19:00 - 21:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vom-herdfeuer-zum-thermomix/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/167/",
-      "page": 167
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/168/",
+      "page": 168
     },
     {
       "title": "Panoramawanderung rund um den Rinkenberg",
@@ -28472,8 +28483,8 @@
       "endDate": "2026-11-06",
       "time": "14:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/hobbytag-herbst-und-winterbasteln/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/168/",
-      "page": 168
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/169/",
+      "page": 169
     },
     {
       "title": "HOBBYTAGE Cego-Kurs",
@@ -28758,8 +28769,8 @@
       "endDate": "2026-11-07",
       "time": "20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/martinitanz/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/170/",
-      "page": 170
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/171/",
+      "page": 171
     },
     {
       "title": "Herbstluft und Glühwein",
@@ -28857,8 +28868,8 @@
       "endDate": "2026-11-07",
       "time": "16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/snowflake-festival/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/169/",
-      "page": 169
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/170/",
+      "page": 170
     },
     {
       "title": "Rothenburger \"Märchenwald\"",
@@ -29033,8 +29044,8 @@
       "endDate": "2026-11-08",
       "time": "10:00 - 11:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/heilige-messe-und-kirchenpatrozinium/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/171/",
-      "page": 171
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/172/",
+      "page": 172
     },
     {
       "title": "Martini-Café",
@@ -29121,8 +29132,8 @@
       "endDate": "2026-11-10",
       "time": "18:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/st-martinsumzug-igelsbach-mit-abschluss-in-der-sangerhalle/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/172/",
-      "page": 172
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/173/",
+      "page": 173
     },
     {
       "title": "Tauschtag der Briefmarkenfreunde Gengenbach",
@@ -29308,8 +29319,8 @@
       "endDate": "2026-11-11",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gluh-wein-scheuer/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/173/",
-      "page": 173
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/174/",
+      "page": 174
     },
     {
       "title": "Schutzgebiete und Geschützte Biotope - unverzichtbar für den Artenerhalt",
@@ -29497,17 +29508,6 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gluhweinfest-im-historischen-innenhof-des-weinguts/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/175/",
       "page": 175
-    },
-    {
-      "title": "Radolfzeller Lichterzauber",
-      "category": "feste",
-      "city": "Radolfzell am Bodensee Fr,",
-      "startDate": "2026-11-13",
-      "endDate": "2026-11-13",
-      "time": "16:00 - 21:00 Uhr",
-      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/radolfzeller-lichterzauber/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/174/",
-      "page": 174
     },
     {
       "title": "MAMMA MIA - The Ultimative ABBA Night",
@@ -29737,8 +29737,8 @@
       "endDate": "2026-11-14",
       "time": "14:00 - 20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/winter-wein-tage-weingut-zipf/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/176/",
-      "page": 176
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/177/",
+      "page": 177
     },
     {
       "title": "Jahreskonzert des \"Chor der Klänge\".",
@@ -29825,8 +29825,8 @@
       "endDate": "2026-11-15",
       "time": "14:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/volkstrauertag/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/177/",
-      "page": 177
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/178/",
+      "page": 178
     },
     {
       "title": "Volkstrauertag in Igelsbach",
@@ -30023,8 +30023,8 @@
       "endDate": "2026-11-18",
       "time": "20:00 - 21:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/sven-ploger-schoog-im-dialog/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/178/",
-      "page": 178
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/179/",
+      "page": 179
     },
     {
       "title": "Wanderung im Winterwald Reichenbachtal",
@@ -30155,8 +30155,8 @@
       "endDate": "2026-11-20",
       "time": "14:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/literaturcafe/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/179/",
-      "page": 179
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/180/",
+      "page": 180
     },
     {
       "title": "Käse und Wein",
@@ -30199,8 +30199,8 @@
       "endDate": "2026-11-21",
       "time": "16:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/adventsausstellung-weingut-maier/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/180/",
-      "page": 180
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/181/",
+      "page": 181
     },
     {
       "title": "Tierische Kinderdisco mit Volker Rosin",
@@ -30496,8 +30496,8 @@
       "endDate": "2026-11-25",
       "time": "14:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/seniorennachmittag-in-nordrach/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/181/",
-      "page": 181
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/182/",
+      "page": 182
     },
     {
       "title": "Jahrgangspräsentation Weingut Huck-Wagner",
@@ -30683,8 +30683,8 @@
       "endDate": "2026-11-27",
       "time": "20:00 - 22:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/danceperados-of-ireland-3/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/182/",
-      "page": 182
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/183/",
+      "page": 183
     },
     {
       "title": "Offene Weinprobe im Bio-Weingut Idler",
@@ -30771,8 +30771,8 @@
       "endDate": "2026-11-28",
       "time": "19:00 - 21:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/besinnliches-zum-advent-mit-carmen-jonas/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/183/",
-      "page": 183
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/184/",
+      "page": 184
     },
     {
       "title": "Krippenfiguren schnitzen in der Holzwerkstatt",
@@ -30980,8 +30980,8 @@
       "endDate": "2026-11-29",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/entspannter-advent-im-pflanzenhaus/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/184/",
-      "page": 184
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/185/",
+      "page": 185
     },
     {
       "title": "Andreasmarkt im Eppinger Stadtteil Richen",
@@ -31123,8 +31123,8 @@
       "endDate": "2026-12-04",
       "time": "14:30 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/adventsnachmittag/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/185/",
-      "page": 185
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/186/",
+      "page": 186
     },
     {
       "title": "Winter Shopping Night",
@@ -31277,8 +31277,8 @@
       "endDate": "2026-12-05",
       "time": "19:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kirchenkonzert-musikverein-oberwihl/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/186/",
-      "page": 186
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/187/",
+      "page": 187
     },
     {
       "title": "Katrin Iskam \"Gärtnerei ohne viel Geschiss\"",
@@ -31420,8 +31420,8 @@
       "endDate": "2026-12-07",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/silvesterhocketse/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/187/",
-      "page": 187
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/188/",
+      "page": 188
     },
     {
       "title": "EFFEKTE-Reihe im Dezember: Mentale Stärke in turbulenten Zeiten",
@@ -31530,8 +31530,8 @@
       "endDate": "2026-12-11",
       "time": "17:00 - 21:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/uffwarmer-treff-weingut-winkler/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/188/",
-      "page": 188
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/189/",
+      "page": 189
     },
     {
       "title": "Christmas Shopping 2026",
@@ -31706,8 +31706,8 @@
       "endDate": "2026-12-12",
       "time": "13:00 - 20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/winter-weinterrasse/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/189/",
-      "page": 189
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/190/",
+      "page": 190
     },
     {
       "title": "90er-Party",
@@ -31904,8 +31904,8 @@
       "endDate": "2026-12-18",
       "time": "20:00 - 22:20 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/the-magical-music-of-hans-zimmer-others/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/190/",
-      "page": 190
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/191/",
+      "page": 191
     },
     {
       "title": "7. Main-Tauber Weihnachtscircus",
@@ -32058,8 +32058,8 @@
       "endDate": "2026-12-20",
       "time": "17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/christbaumsingen-auf-dem-marktplatz/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/191/",
-      "page": 191
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/192/",
+      "page": 192
     },
     {
       "title": "Trachtenkapelle Nordrach: Einstimmung auf Weihnachten im Pflegeheim.",
@@ -32190,8 +32190,8 @@
       "endDate": "2026-12-26",
       "time": "15:00 - 17:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weihnachtskonzert-des-trachtenblasorchesters/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/192/",
-      "page": 192
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/193/",
+      "page": 193
     },
     {
       "title": "Musik zur Weihnacht",
@@ -32410,8 +32410,8 @@
       "endDate": "2026-12-31",
       "time": "14:00 - 04:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/simisvester-silvester-im-dal/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/193/",
-      "page": 193
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/194/",
+      "page": 194
     },
     {
       "title": "Festliches Neujahrskonzert - Im Glanz von Trompete und Orgel",
@@ -32487,8 +32487,8 @@
       "endDate": "2027-01-06",
       "time": "18:00 - 20:20 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/chinesischer-nationalcircus-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/194/",
-      "page": 194
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/195/",
+      "page": 195
     },
     {
       "title": "Dampftag",
@@ -32652,8 +32652,8 @@
       "endDate": "2027-01-23",
       "time": "20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oliver-wnuk-wnuk-denkt-laut-und-liest-was-vor/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/195/",
-      "page": 195
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/196/",
+      "page": 196
     },
     {
       "title": "Umzug Burladingen",
@@ -32828,8 +32828,8 @@
       "endDate": "2027-02-05",
       "time": "20:11 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/faschingstreiben-in-igelsbach/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/196/",
-      "page": 196
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/197/",
+      "page": 197
     },
     {
       "title": "Straßenfasnet",
@@ -32949,8 +32949,8 @@
       "endDate": "2027-02-19",
       "time": "19:30 - 20:45 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/handel-galakonzert-2027-internationale-handel-festspiele-2027/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/197/",
-      "page": 197
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/198/",
+      "page": 198
     },
     {
       "title": "Das Kriminal Dinner \"Und raus bist du\"",
@@ -33114,8 +33114,8 @@
       "endDate": "2027-03-20",
       "time": "18:00 - 21:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/osterfestspiele-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/198/",
-      "page": 198
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/199/",
+      "page": 199
     },
     {
       "title": "Osterweg von der historischen Dorfmitte bis zum Krippenmuseum",
@@ -33268,8 +33268,8 @@
       "endDate": "2027-04-18",
       "time": "19:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tina-the-rock-ledgend/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/199/",
-      "page": 199
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/200/",
+      "page": 200
     },
     {
       "title": "Hillu´s - Herzdropfa",
@@ -33433,8 +33433,8 @@
       "endDate": "2027-05-06",
       "time": "09:00 - 20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oldtimer-vatertagsfest-der-hako-freunde-weiher-auf-dem-vereinsgelande-der-hako-freunde/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/200/",
-      "page": 200
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/201/",
+      "page": 201
     },
     {
       "title": "Heavydays Festival 2027",
@@ -33565,8 +33565,8 @@
       "endDate": "2027-05-27",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/150-jahriges-jubilaum-des-musikverein-stammheim-e-v/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/201/",
-      "page": 201
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/202/",
+      "page": 202
     },
     {
       "title": "Tübinger Stocherkahnrennen",
@@ -33730,8 +33730,8 @@
       "endDate": "2027-06-19",
       "time": "17:00 - 23:59 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/frosch-und-schneckenfest/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/202/",
-      "page": 202
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/203/",
+      "page": 203
     },
     {
       "title": "Brückenfest in der Altstadt",
@@ -33884,8 +33884,8 @@
       "endDate": "2027-09-03",
       "time": "14:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/hakorennen-der-hako-freunde-weiher-auf-dem-vereinsgelande-des-reitervereins-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/203/",
-      "page": 203
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
+      "page": 204
     },
     {
       "title": "WDC Weltmeisterschaft 2027 Kür Standard der Professionals",
@@ -34313,6 +34313,17 @@
       "endDate": "2026-09-04",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/fuerstliche-gartentage/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/2/",
+      "page": 2
+    },
+    {
+      "title": "Töpfermarkt Neu-Ulm",
+      "category": "maerkte",
+      "city": "Ulm/Neu-Ulm Sa,",
+      "startDate": "2026-09-05",
+      "endDate": "2026-09-05",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/toepfermarkt-neu-ulm/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/2/",
       "page": 2
     },
@@ -35829,8 +35840,8 @@
       "page": 11,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.9939504,
-      "lng": 9.1121478,
+      "lat": 47.9939249,
+      "lng": 9.1122006,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Meßkirch So,, Baden-Württemberg, Germany"
@@ -35886,8 +35897,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Naturpark-Zentrum Eberbach, Naturpark Neckartal-Odenwald",
-      "lat": 48.8108669,
-      "lng": 9.4540731,
+      "lat": 48.8108507,
+      "lng": 9.4547864,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Odenwald So,, Baden-Württemberg, Germany"
@@ -36923,8 +36934,8 @@
       "page": 11,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.9939504,
-      "lng": 9.1121478,
+      "lat": 47.9939249,
+      "lng": 9.1122006,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Meßkirch So,, Baden-Württemberg, Germany"
@@ -36980,8 +36991,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Naturpark-Zentrum Eberbach, Naturpark Neckartal-Odenwald",
-      "lat": 48.8108669,
-      "lng": 9.4540731,
+      "lat": 48.8108507,
+      "lng": 9.4547864,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Odenwald So,, Baden-Württemberg, Germany"
@@ -37999,8 +38010,8 @@
       "page": 11,
       "geoDetailCoordinateChecked": true,
       "geoDetailCoordinateFound": false,
-      "lat": 47.9939504,
-      "lng": 9.1121478,
+      "lat": 47.9939249,
+      "lng": 9.1122006,
       "geoEstimated": true,
       "geoSource": "derived",
       "geoQuery": "Meßkirch So,, Baden-Württemberg, Germany"
@@ -38038,8 +38049,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Naturpark-Zentrum Eberbach, Naturpark Neckartal-Odenwald",
-      "lat": 48.8108669,
-      "lng": 9.4540731,
+      "lat": 48.8108507,
+      "lng": 9.4547864,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Odenwald So,, Baden-Württemberg, Germany"
