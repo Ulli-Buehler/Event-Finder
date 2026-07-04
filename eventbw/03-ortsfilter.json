@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-07-05",
-    "startedAt": "2026-07-04T06:00:51.474Z",
-    "finishedAt": "2026-07-04T06:05:05.746Z",
+    "startedAt": "2026-07-04T07:00:50.571Z",
+    "finishedAt": "2026-07-04T07:05:42.357Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -93,9 +93,9 @@
       "Heroldstatt"
     ],
     "counts": {
-      "pages": 215,
-      "rawCollectedIncludingDuplicates": 2962,
-      "rawUnique": 2962,
+      "pages": 223,
+      "rawCollectedIncludingDuplicates": 3077,
+      "rawUnique": 3077,
       "targetDateMatches": 59,
       "targetDateWithGeo": 58,
       "targetDateWithoutGeo": 1,
@@ -120,8 +120,8 @@
       "targetDateBodenseeRegionGeoChecked": 0,
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 57,
-      "rawMaerkte": 117,
-      "rawFeste": 2845,
+      "rawMaerkte": 120,
+      "rawFeste": 2957,
       "targetDateMaerkte": 0,
       "targetDateFeste": 59,
       "targetDateWithGeoMaerkte": 0,
@@ -720,8 +720,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Naturpark-Zentrum Eberbach, Naturpark Neckartal-Odenwald",
-      "lat": 48.8108669,
-      "lng": 9.4540731,
+      "lat": 48.8108507,
+      "lng": 9.4547864,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Odenwald So,, Baden-Württemberg, Germany"
@@ -1778,8 +1778,8 @@
       "geoDetailChecked": true,
       "geoDetailFound": true,
       "geoDetailLocation": "Naturpark-Zentrum Eberbach, Naturpark Neckartal-Odenwald",
-      "lat": 48.8108669,
-      "lng": 9.4540731,
+      "lat": 48.8108507,
+      "lng": 9.4547864,
       "geoEstimated": true,
       "geoSource": "derived-detail",
       "geoQuery": "Odenwald So,, Baden-Württemberg, Germany"
