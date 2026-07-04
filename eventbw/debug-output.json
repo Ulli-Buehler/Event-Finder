@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-07-05",
-    "startedAt": "2026-07-04T01:00:49.108Z",
-    "finishedAt": "2026-07-04T01:04:44.768Z",
+    "startedAt": "2026-07-04T02:00:49.339Z",
+    "finishedAt": "2026-07-04T02:04:57.701Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 214,
-      "rawCollectedIncludingDuplicates": 2951,
-      "rawUnique": 2945,
+      "rawCollectedIncludingDuplicates": 2952,
+      "rawUnique": 2952,
       "targetDateMatches": 59,
       "targetDateWithGeo": 58,
       "targetDateWithoutGeo": 1,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 57,
       "rawMaerkte": 117,
-      "rawFeste": 2828,
+      "rawFeste": 2835,
       "targetDateMaerkte": 0,
       "targetDateFeste": 59,
       "targetDateWithGeoMaerkte": 0,
@@ -1832,7 +1832,7 @@
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/203/",
       "ok": true,
       "reportedCount": null,
-      "parsedCount": 6
+      "parsedCount": 7
     },
     {
       "category": "feste",
@@ -27995,6 +27995,17 @@
       "page": 165
     },
     {
+      "title": "Geführte Wanderung der Wanderfreunde",
+      "category": "feste",
+      "city": "Gengenbach-Reichenbach So,",
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-01",
+      "time": "10:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gefuhrte-wanderung-der-wanderfreunde-6/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/166/",
+      "page": 166
+    },
+    {
       "title": "Brägelfest",
       "category": "feste",
       "city": "Herrischried So,",
@@ -28028,6 +28039,17 @@
       "page": 165
     },
     {
+      "title": "Saisonabschluss: Ausklang",
+      "category": "feste",
+      "city": "Vogtsbauernhof So,",
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-01",
+      "time": "17:00 - 18:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/saisonabschluss-ausklang/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/166/",
+      "page": 166
+    },
+    {
       "title": "Kostenfreie Führung durch den historischen Rundofen in Zell am Harmersbach",
       "category": "feste",
       "city": "Zell am Harmersbach So,",
@@ -28035,6 +28057,17 @@
       "endDate": "2026-11-01",
       "time": "14:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kostenfreie-fuhrung-durch-den-historischen-rundofen-in-zell-am-harmersbach-4/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/166/",
+      "page": 166
+    },
+    {
+      "title": "Hubertusjagd",
+      "category": "feste",
+      "city": "Zweiflingen So,",
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-01",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/hubertusjagd/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/166/",
       "page": 166
     },
@@ -28123,8 +28156,8 @@
       "endDate": "2026-11-06",
       "time": "19:00 - 22:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/kase-weinverkostung/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/166/",
-      "page": 166
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/167/",
+      "page": 167
     },
     {
       "title": "Wir basteln eine Laterne",
@@ -28244,8 +28277,8 @@
       "endDate": "2026-11-06",
       "time": "20:00 - 23:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/objektkaraoke-das-ding-aus-dem-depot/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/166/",
-      "page": 166
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/167/",
+      "page": 167
     },
     {
       "title": "MAMMA MIA - The Ultimative ABBA Night",
@@ -28343,8 +28376,8 @@
       "endDate": "2026-11-06",
       "time": "18:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/comedy-mit-hillus-herzdropfa/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/166/",
-      "page": 166
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/167/",
+      "page": 167
     },
     {
       "title": "31. Welttanz-Gala | Rendezvous der Weltmeister",
@@ -30151,6 +30184,39 @@
       "page": 179
     },
     {
+      "title": "Stadtwerke Karlsruhe WINTERZEIT 2026/2027",
+      "category": "feste",
+      "city": "Karlsruhe Mo,",
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-23",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/stadtwerke-karlsruhe-winterzeit-2026-2027/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/180/",
+      "page": 180
+    },
+    {
+      "title": "Seniorenkino, \"Ach; diese lücke; diese entsetzliche Lücke\"",
+      "category": "feste",
+      "city": "Tuttlingen Mo,",
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-23",
+      "time": "13:45 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/seniorenkino-ach-diese-lucke-diese-entsetzliche-lucke/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/180/",
+      "page": 180
+    },
+    {
+      "title": "European Outdoor Film Tour",
+      "category": "feste",
+      "city": "",
+      "startDate": "2026-11-24",
+      "endDate": "2026-11-24",
+      "time": "19:30 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/european-outdoor-film-tour/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/180/",
+      "page": 180
+    },
+    {
       "title": "Wanderung im Winterwald Tonbachtal",
       "category": "feste",
       "city": "Baiersbronn Mi,",
@@ -30323,8 +30389,8 @@
       "endDate": "2026-11-27",
       "time": "18:00 - 21:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/weihnachtssterne-aus-naturmaterialien/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/180/",
-      "page": 180
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/181/",
+      "page": 181
     },
     {
       "title": "MAMMA MIA - The Ultimative ABBA Night",
@@ -30345,8 +30411,8 @@
       "endDate": "2026-11-27",
       "time": "15:30 - 20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/nikolaus-hock-und-kinotag-in-tengen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/180/",
-      "page": 180
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/181/",
+      "page": 181
     },
     {
       "title": "Danceperados of Ireland",
@@ -30367,8 +30433,8 @@
       "endDate": "2026-11-27",
       "time": "19:00 - 21:30 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/offene-weinprobe-im-bio-weingut-idler/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/180/",
-      "page": 180
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/181/",
+      "page": 181
     },
     {
       "title": "Club40 Partys - Die größte Ü40 Party Tour",
@@ -33517,6 +33583,17 @@
       "page": 202
     },
     {
+      "title": "Bockbierfest",
+      "category": "feste",
+      "city": "Kippenheim Fr,",
+      "startDate": "2027-07-09",
+      "endDate": "2027-07-09",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/bockbierfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/202/",
+      "page": 202
+    },
+    {
       "title": "11. Historisches Marktplatzfest Waldkirch Mittelalterliches Spectaculum im historischen Stiftsbezirk",
       "category": "feste",
       "city": "Waldkirch Fr,",
@@ -33656,8 +33733,8 @@
       "endDate": "2027-10-23",
       "time": "20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mamma-mia-the-ultimative-abba-night-45/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/202/",
-      "page": 202
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/203/",
+      "page": 203
     },
     {
       "title": "Comedy mit Doris Reichenauer",
