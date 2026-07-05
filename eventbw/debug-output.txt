@@ -10,45 +10,45 @@ Filter:
 - Geo: für alle Zieldatum-Events
 - km/Radius: live im Browser
 
-Zieldatum: 2026-07-05
+Zieldatum: 2026-07-12
 
 Counts:
 {
   "pages": 218,
   "rawCollectedIncludingDuplicates": 3005,
   "rawUnique": 3005,
-  "targetDateMatches": 60,
-  "targetDateWithGeo": 59,
-  "targetDateWithoutGeo": 1,
-  "targetDateGeoEstimated": 59,
-  "targetDateGeoEstimatedFromCity": 51,
+  "targetDateMatches": 34,
+  "targetDateWithGeo": 34,
+  "targetDateWithoutGeo": 0,
+  "targetDateGeoEstimated": 34,
+  "targetDateGeoEstimatedFromCity": 29,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
-  "targetDateGeoEstimatedFromDetail": 6,
-  "targetDateGeoEstimatedFromCompoundCity": 2,
+  "targetDateGeoEstimatedFromDetail": 2,
+  "targetDateGeoEstimatedFromCompoundCity": 3,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 0,
-  "targetDateDetailCoordinateGeoChecked": 60,
+  "targetDateDetailCoordinateGeoChecked": 34,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
-  "targetDateDetailGoogleMapsQueries": 7,
-  "targetDateDetailGeoChecked": 7,
-  "targetDateDetailGeoRecovered": 6,
-  "targetDateCompoundCityGeoChecked": 2,
-  "targetDateCompoundCityGeoRecovered": 2,
+  "targetDateDetailGoogleMapsQueries": 2,
+  "targetDateDetailGeoChecked": 2,
+  "targetDateDetailGeoRecovered": 2,
+  "targetDateCompoundCityGeoChecked": 3,
+  "targetDateCompoundCityGeoRecovered": 3,
   "targetDateTitleGeoChecked": 0,
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 0,
   "targetDateBodenseeRegionGeoRecovered": 0,
-  "nonRegionalTargetDateMatches": 58,
+  "nonRegionalTargetDateMatches": 30,
   "rawMaerkte": 119,
   "rawFeste": 2886,
   "targetDateMaerkte": 0,
-  "targetDateFeste": 60,
+  "targetDateFeste": 34,
   "targetDateWithGeoMaerkte": 0,
-  "targetDateWithGeoFeste": 59,
+  "targetDateWithGeoFeste": 34,
   "targetDateWithoutGeoMaerkte": 0,
-  "targetDateWithoutGeoFeste": 1
+  "targetDateWithoutGeoFeste": 0
 }
 
 Regionale Ortsliste:
@@ -141,39 +141,23 @@ Regionale Ortsliste:
 Ortsstatistik vor Ortsfilter:
 [
   {
-    "city": "Baiersbronn So,",
-    "count": 4
-  },
-  {
     "city": "Karlsruhe So,",
     "count": 3
   },
   {
-    "city": "unbekannt",
+    "city": "Vogtsbauernhof So,",
     "count": 3
   },
   {
-    "city": "Zell am Harmersbach So,",
-    "count": 3
-  },
-  {
-    "city": "Nordrach So,",
+    "city": "Baiersbronn So,",
     "count": 2
   },
   {
-    "city": "Schramberg So,",
+    "city": "Beilstein So,",
     "count": 2
   },
   {
-    "city": "Simonswald So,",
-    "count": 2
-  },
-  {
-    "city": "Albstadt So,",
-    "count": 1
-  },
-  {
-    "city": "Bad Krozingen So,",
+    "city": "Aitern So,",
     "count": 1
   },
   {
@@ -181,27 +165,27 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Bad Teinach-Zavelstein So,",
+    "city": "Baiersbronn-Huzenbach So,",
     "count": 1
   },
   {
-    "city": "Brackenheim So,",
+    "city": "Beuren So,",
     "count": 1
   },
   {
-    "city": "Dobel So,",
+    "city": "Breisach So,",
     "count": 1
   },
   {
-    "city": "Emmendingen So,",
+    "city": "Eberbach So,",
     "count": 1
   },
   {
-    "city": "Freiburg So,",
+    "city": "Friedrichshafen So,",
     "count": 1
   },
   {
-    "city": "Gammertingen So,",
+    "city": "Gaildorf So,",
     "count": 1
   },
   {
@@ -209,43 +193,15 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Gengenbach-Reichenbach So,",
-    "count": 1
-  },
-  {
-    "city": "Heilbronn-Böckingen So,",
-    "count": 1
-  },
-  {
     "city": "Herrischried So,",
     "count": 1
   },
   {
-    "city": "Höchenschwand So,",
+    "city": "Illmensee-Ruschweiler So,",
     "count": 1
   },
   {
-    "city": "Kandern So,",
-    "count": 1
-  },
-  {
-    "city": "Karlsbad So,",
-    "count": 1
-  },
-  {
-    "city": "Kernen So,",
-    "count": 1
-  },
-  {
-    "city": "Lenningen So,",
-    "count": 1
-  },
-  {
-    "city": "Malsch - Völkersbach So,",
-    "count": 1
-  },
-  {
-    "city": "Meßkirch So,",
+    "city": "Metzingen So,",
     "count": 1
   },
   {
@@ -253,47 +209,31 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Müllheim So,",
+    "city": "Münsingen So,",
     "count": 1
   },
   {
-    "city": "Naturpark Neckartal-Odenwald So,",
+    "city": "Neuhausen ob Eck So,",
     "count": 1
   },
   {
-    "city": "Oberharmersbach So,",
+    "city": "Nordrach So,",
     "count": 1
   },
   {
-    "city": "Öhningen So,",
+    "city": "Ostrach-Levertsweiler So,",
     "count": 1
   },
   {
-    "city": "Ostrach So,",
+    "city": "Ostrach-Magenbuch So,",
     "count": 1
   },
   {
-    "city": "Ostrach-Jettkofen So,",
+    "city": "Radolfzell am Bodensee So,",
     "count": 1
   },
   {
-    "city": "Ottenhöfen im Schwarzwald So,",
-    "count": 1
-  },
-  {
-    "city": "Pfullendorf / Aach-Linz So,",
-    "count": 1
-  },
-  {
-    "city": "Pfullendorf So,",
-    "count": 1
-  },
-  {
-    "city": "Quellregion Donau So,",
-    "count": 1
-  },
-  {
-    "city": "Sachsenheim So,",
+    "city": "Sigmaringen So,",
     "count": 1
   },
   {
@@ -301,35 +241,15 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Sulzfeld So,",
+    "city": "Walldürn So,",
     "count": 1
   },
   {
-    "city": "Tuttlingen So,",
+    "city": "Zell am Harmersbach So,",
     "count": 1
   },
   {
-    "city": "Vogtsbauernhof So,",
-    "count": 1
-  },
-  {
-    "city": "Waldenburg So,",
-    "count": 1
-  },
-  {
-    "city": "Waldkirch So,",
-    "count": 1
-  },
-  {
-    "city": "Wilhelmsdorf So,",
-    "count": 1
-  },
-  {
-    "city": "Winden im Elztal So,",
-    "count": 1
-  },
-  {
-    "city": "Wolfach So,",
+    "city": "Zollernalb So,",
     "count": 1
   }
 ]
