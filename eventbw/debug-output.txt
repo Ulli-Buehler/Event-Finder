@@ -15,20 +15,20 @@ Zieldatum: 2026-07-05
 Counts:
 {
   "pages": 217,
-  "rawCollectedIncludingDuplicates": 3003,
-  "rawUnique": 2970,
-  "targetDateMatches": 45,
-  "targetDateWithGeo": 44,
+  "rawCollectedIncludingDuplicates": 2998,
+  "rawUnique": 2998,
+  "targetDateMatches": 59,
+  "targetDateWithGeo": 58,
   "targetDateWithoutGeo": 1,
-  "targetDateGeoEstimated": 44,
-  "targetDateGeoEstimatedFromCity": 36,
+  "targetDateGeoEstimated": 58,
+  "targetDateGeoEstimatedFromCity": 50,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 6,
   "targetDateGeoEstimatedFromCompoundCity": 2,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 0,
-  "targetDateDetailCoordinateGeoChecked": 45,
+  "targetDateDetailCoordinateGeoChecked": 59,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 7,
@@ -40,13 +40,13 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 0,
   "targetDateBodenseeRegionGeoRecovered": 0,
-  "nonRegionalTargetDateMatches": 43,
+  "nonRegionalTargetDateMatches": 57,
   "rawMaerkte": 119,
-  "rawFeste": 2851,
+  "rawFeste": 2879,
   "targetDateMaerkte": 0,
-  "targetDateFeste": 45,
+  "targetDateFeste": 59,
   "targetDateWithGeoMaerkte": 0,
-  "targetDateWithGeoFeste": 44,
+  "targetDateWithGeoFeste": 58,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 1
 }
@@ -141,6 +141,10 @@ Regionale Ortsliste:
 Ortsstatistik vor Ortsfilter:
 [
   {
+    "city": "Baiersbronn So,",
+    "count": 3
+  },
+  {
     "city": "Karlsruhe So,",
     "count": 3
   },
@@ -154,6 +158,14 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Nordrach So,",
+    "count": 2
+  },
+  {
+    "city": "Schramberg So,",
+    "count": 2
+  },
+  {
+    "city": "Simonswald So,",
     "count": 2
   },
   {
@@ -177,6 +189,22 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Dobel So,",
+    "count": 1
+  },
+  {
+    "city": "Emmendingen So,",
+    "count": 1
+  },
+  {
+    "city": "Freiburg So,",
+    "count": 1
+  },
+  {
+    "city": "Gammertingen So,",
+    "count": 1
+  },
+  {
     "city": "Gengenbach So,",
     "count": 1
   },
@@ -186,6 +214,10 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Heilbronn-Böckingen So,",
+    "count": 1
+  },
+  {
+    "city": "Herrischried So,",
     "count": 1
   },
   {
@@ -210,6 +242,10 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Malsch - Völkersbach So,",
+    "count": 1
+  },
+  {
+    "city": "Meßkirch So,",
     "count": 1
   },
   {
@@ -245,19 +281,19 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Pfullendorf / Aach-Linz So,",
+    "count": 1
+  },
+  {
+    "city": "Pfullendorf So,",
+    "count": 1
+  },
+  {
     "city": "Quellregion Donau So,",
     "count": 1
   },
   {
     "city": "Sachsenheim So,",
-    "count": 1
-  },
-  {
-    "city": "Schramberg So,",
-    "count": 1
-  },
-  {
-    "city": "Simonswald So,",
     "count": 1
   },
   {
@@ -270,6 +306,10 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Tuttlingen So,",
+    "count": 1
+  },
+  {
+    "city": "Vogtsbauernhof So,",
     "count": 1
   },
   {
@@ -380,7 +420,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 2957,
+    "reportedCount": 2879,
     "parsedCount": 14
   },
   {
@@ -2021,7 +2061,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 14
+    "parsedCount": 9
   },
   {
     "category": "feste",
