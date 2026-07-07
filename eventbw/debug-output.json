@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-07-12",
-    "startedAt": "2026-07-07T00:01:00.422Z",
-    "finishedAt": "2026-07-07T00:04:49.142Z",
+    "startedAt": "2026-07-07T01:00:54.957Z",
+    "finishedAt": "2026-07-07T01:04:36.224Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 211,
       "rawCollectedIncludingDuplicates": 2919,
-      "rawUnique": 2909,
+      "rawUnique": 2919,
       "targetDateMatches": 34,
       "targetDateWithGeo": 34,
       "targetDateWithoutGeo": 0,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 30,
       "rawMaerkte": 119,
-      "rawFeste": 2790,
+      "rawFeste": 2800,
       "targetDateMaerkte": 0,
       "targetDateFeste": 34,
       "targetDateWithGeoMaerkte": 0,
@@ -32385,6 +32385,39 @@
       "page": 189
     },
     {
+      "title": "Kräuter- und Blümlesmarkt",
+      "category": "feste",
+      "city": "",
+      "startDate": "2027-05-01",
+      "endDate": "2027-05-01",
+      "time": "10:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/krauter-und-blumlesmarkt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/189/",
+      "page": 189
+    },
+    {
+      "title": "Kräuter- und Blümlesmarkt",
+      "category": "feste",
+      "city": "",
+      "startDate": "2027-05-01",
+      "endDate": "2027-05-01",
+      "time": "10:00 - 17:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/krauter-und-blumlesmarkt-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/189/",
+      "page": 189
+    },
+    {
+      "title": "Maifest GV Liederkranz Lampenhain",
+      "category": "feste",
+      "city": "Heiligkreuzsteinach Sa,",
+      "startDate": "2027-05-01",
+      "endDate": "2027-05-01",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/maifest-gv-liederkranz-lampenhain/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/189/",
+      "page": 189
+    },
+    {
       "title": "Internationale Flottensternfahrt",
       "category": "feste",
       "city": "Konstanz Sa,",
@@ -32392,6 +32425,72 @@
       "endDate": "2027-05-01",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationale-flottensternfahrt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/189/",
+      "page": 189
+    },
+    {
+      "title": "Burgkurzweyl zu Cullesheym",
+      "category": "feste",
+      "city": "Külsheim Sa,",
+      "startDate": "2027-05-01",
+      "endDate": "2027-05-01",
+      "time": "15:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/burgkurzweyl-zu-cullesheym/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/189/",
+      "page": 189
+    },
+    {
+      "title": "Geißenfest",
+      "category": "feste",
+      "city": "Schönenberg Sa,",
+      "startDate": "2027-05-01",
+      "endDate": "2027-05-01",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/geissenfest/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/189/",
+      "page": 189
+    },
+    {
+      "title": "Günther Jauch bei Schoog im Dialog",
+      "category": "feste",
+      "city": "",
+      "startDate": "2027-05-05",
+      "endDate": "2027-05-05",
+      "time": "20:00 - 22:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/gunther-jauch-bei-schoog-im-dialog/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/189/",
+      "page": 189
+    },
+    {
+      "title": "Internationales Jugendkapellentreffen - IJKT",
+      "category": "feste",
+      "city": "Donaueschingen Do,",
+      "startDate": "2027-05-06",
+      "endDate": "2027-05-06",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/internationales-jugendkapellentreffen-ijkt/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/189/",
+      "page": 189
+    },
+    {
+      "title": "TUNING WORLD BODENSEE",
+      "category": "feste",
+      "city": "Friedrichshafen Do,",
+      "startDate": "2027-05-06",
+      "endDate": "2027-05-06",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/tuning-world-bodensee-2/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/189/",
+      "page": 189
+    },
+    {
+      "title": "Oldtimer-Vatertagsfest der Hako-Freunde Weiher auf dem Vereinsgelände der Hako-Freunde",
+      "category": "feste",
+      "city": "Ubstadt-Weiher Do,",
+      "startDate": "2027-05-06",
+      "endDate": "2027-05-06",
+      "time": "09:00 - 20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/oldtimer-vatertagsfest-der-hako-freunde-weiher-auf-dem-vereinsgelande-der-hako-freunde/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/189/",
       "page": 189
     },
@@ -32405,6 +32504,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/heavydays-festival-2027/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/190/",
       "page": 190
+    },
+    {
+      "title": "ADAC Hockenheim Historic 2027",
+      "category": "feste",
+      "city": "Hockenheim Fr,",
+      "startDate": "2027-05-07",
+      "endDate": "2027-05-07",
+      "time": "09:00 - 19:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/adac-hockenheim-historic-2026/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/189/",
+      "page": 189
     },
     {
       "title": "\"Mengelser Markt\" - Jahrmarkt in Mingolsheim",
