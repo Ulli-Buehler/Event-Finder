@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-07-12",
-    "startedAt": "2026-07-07T15:01:09.684Z",
-    "finishedAt": "2026-07-07T15:05:23.556Z",
+    "startedAt": "2026-07-07T16:01:11.632Z",
+    "finishedAt": "2026-07-07T16:02:42.113Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 225,
       "rawCollectedIncludingDuplicates": 3112,
-      "rawUnique": 3111,
+      "rawUnique": 3112,
       "targetDateMatches": 37,
       "targetDateWithGeo": 37,
       "targetDateWithoutGeo": 0,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 33,
       "rawMaerkte": 120,
-      "rawFeste": 2991,
+      "rawFeste": 2992,
       "targetDateMaerkte": 0,
       "targetDateFeste": 37,
       "targetDateWithGeoMaerkte": 0,
@@ -215,7 +215,7 @@
       "page": 1,
       "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
       "ok": true,
-      "reportedCount": 2969,
+      "reportedCount": 2992,
       "parsedCount": 14
     },
     {
@@ -3306,6 +3306,17 @@
       "page": 1
     },
     {
+      "title": "Das neue Staatstheater – Baustellenführung durch Modul 1",
+      "category": "feste",
+      "city": "Karlsruhe Di,",
+      "startDate": "2026-07-07",
+      "endDate": "2026-07-07",
+      "time": "16:00 - 17:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/das-neue-staatstheater-baustellenfuhrung-durch-modul-1/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
+      "page": 1
+    },
+    {
       "title": "Blumen und Insekten in unserer Naturlandschaft",
       "category": "feste",
       "city": "Landkreis Waldshut Di,",
@@ -3401,8 +3412,8 @@
       "endDate": "2026-07-08",
       "time": "10:10 - 13:10 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/heilklimawanderung/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
-      "page": 1
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/2/",
+      "page": 2
     },
     {
       "title": "Menschen von hier - lesen aus ihrem Lieblingsbuch",
