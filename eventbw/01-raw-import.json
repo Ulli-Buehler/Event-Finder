@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-07-12",
-    "startedAt": "2026-07-08T01:01:01.238Z",
-    "finishedAt": "2026-07-08T01:04:44.557Z",
+    "startedAt": "2026-07-08T02:01:03.538Z",
+    "finishedAt": "2026-07-08T02:02:50.000Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 225,
       "rawCollectedIncludingDuplicates": 3104,
-      "rawUnique": 3102,
+      "rawUnique": 3104,
       "targetDateMatches": 37,
       "targetDateWithGeo": 37,
       "targetDateWithoutGeo": 0,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 33,
       "rawMaerkte": 120,
-      "rawFeste": 2982,
+      "rawFeste": 2984,
       "targetDateMaerkte": 0,
       "targetDateFeste": 37,
       "targetDateWithGeoMaerkte": 0,
@@ -924,6 +924,28 @@
       "page": 211
     },
     {
+      "title": "Jeden Sonntag „Willkommen zum „Chill and Talk“ Jugendrteff",
+      "category": "feste",
+      "city": "Münsingen So,",
+      "startDate": "2026-06-07",
+      "endDate": "2026-06-07",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/jeden-sonntag-willkommen-zum-chill-and-talk-jugendrteff/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/212/",
+      "page": 212
+    },
+    {
+      "title": "Schmiedemuseum Königshammer",
+      "category": "feste",
+      "city": "Baiersbronn Mo,",
+      "startDate": "2026-06-08",
+      "endDate": "2026-06-08",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/schmiedemuseum-konigshammer/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/212/",
+      "page": 212
+    },
+    {
       "title": "Yoga für Frauen",
       "category": "feste",
       "city": "Bad Krozingen Di,",
@@ -1052,8 +1074,8 @@
       "endDate": "2026-06-26",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/promenadenkonzert-2/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/212/",
-      "page": 212
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/213/",
+      "page": 213
     },
     {
       "title": "Marktplatzsommer: Offene Bühne für Radolfzell und seine Ortsteile",
@@ -1085,8 +1107,8 @@
       "endDate": "2026-06-28",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/immer-sonntags-cafe-mitte-willkommen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/212/",
-      "page": 212
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/213/",
+      "page": 213
     },
     {
       "title": "Spiel und Spaß in Murgels Spielhaus",
