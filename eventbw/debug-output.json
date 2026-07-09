@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-07-12",
-    "startedAt": "2026-07-09T01:01:00.624Z",
-    "finishedAt": "2026-07-09T01:04:51.582Z",
+    "startedAt": "2026-07-09T02:01:02.166Z",
+    "finishedAt": "2026-07-09T02:02:31.704Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 224,
       "rawCollectedIncludingDuplicates": 3098,
-      "rawUnique": 3095,
+      "rawUnique": 3098,
       "targetDateMatches": 37,
       "targetDateWithGeo": 37,
       "targetDateWithoutGeo": 0,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 33,
       "rawMaerkte": 120,
-      "rawFeste": 2975,
+      "rawFeste": 2978,
       "targetDateMaerkte": 0,
       "targetDateFeste": 37,
       "targetDateWithGeoMaerkte": 0,
@@ -34813,6 +34813,28 @@
       "page": 203
     },
     {
+      "title": "SOUTHSIDE FESTIVAL 2027 | Campingticket",
+      "category": "feste",
+      "city": "Neuhausen Ob Eck Do,",
+      "startDate": "2027-06-17",
+      "endDate": "2027-06-17",
+      "time": "11:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/southside-festival-2027-campingticket/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
+      "page": 204
+    },
+    {
+      "title": "SOUTHSIDE FESTIVAL 2027 | Caravan",
+      "category": "feste",
+      "city": "Neuhausen Ob Eck Do,",
+      "startDate": "2027-06-17",
+      "endDate": "2027-06-17",
+      "time": "11:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/southside-festival-2027-caravan/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
+      "page": 204
+    },
+    {
       "title": "SOUTHSIDE FESTIVAL 2027 | Parking",
       "category": "feste",
       "city": "Neuhausen Ob Eck Do,",
@@ -34822,6 +34844,17 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/southside-festival-2027-parking/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/203/",
       "page": 203
+    },
+    {
+      "title": "SOUTHSIDE FESTIVAL 2027 | Festivalticket",
+      "category": "feste",
+      "city": "Neuhausen Ob Eck Fr,",
+      "startDate": "2027-06-18",
+      "endDate": "2027-06-18",
+      "time": "12:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/southside-festival-2027-festivalticket/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
+      "page": 204
     },
     {
       "title": "Frosch- und Schneckenfest",
@@ -34952,8 +34985,8 @@
       "endDate": "2027-07-16",
       "time": "10:00 - 20:00 Uhr",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/aalener-tag-auf-der-lgs-ellwangen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
-      "page": 204
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/205/",
+      "page": 205
     },
     {
       "title": "12. Internationales Unimog & MB trac Treffen",
@@ -34963,8 +34996,8 @@
       "endDate": "2027-07-24",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/12-internationales-unimog-mb-trac-treffen/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
-      "page": 204
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/205/",
+      "page": 205
     },
     {
       "title": "Seefest",
@@ -34974,8 +35007,8 @@
       "endDate": "2027-08-07",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/seefest/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
-      "page": 204
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/205/",
+      "page": 205
     },
     {
       "title": "Mamma Mia - The Ultimative Abba Night",
