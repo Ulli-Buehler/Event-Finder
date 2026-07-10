@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-07-12",
-    "startedAt": "2026-07-10T03:01:04.083Z",
-    "finishedAt": "2026-07-10T03:05:05.614Z",
+    "startedAt": "2026-07-10T04:00:58.870Z",
+    "finishedAt": "2026-07-10T04:05:15.391Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -93,9 +93,9 @@
       "Heroldstatt"
     ],
     "counts": {
-      "pages": 225,
-      "rawCollectedIncludingDuplicates": 3104,
-      "rawUnique": 3104,
+      "pages": 226,
+      "rawCollectedIncludingDuplicates": 3120,
+      "rawUnique": 3117,
       "targetDateMatches": 37,
       "targetDateWithGeo": 37,
       "targetDateWithoutGeo": 0,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 33,
       "rawMaerkte": 120,
-      "rawFeste": 2984,
+      "rawFeste": 2997,
       "targetDateMaerkte": 0,
       "targetDateFeste": 37,
       "targetDateWithGeoMaerkte": 0,
