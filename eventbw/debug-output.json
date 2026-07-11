@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-07-12",
-    "startedAt": "2026-07-11T02:01:00.647Z",
-    "finishedAt": "2026-07-11T02:04:38.671Z",
+    "startedAt": "2026-07-11T03:01:00.816Z",
+    "finishedAt": "2026-07-11T03:05:11.007Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 224,
       "rawCollectedIncludingDuplicates": 3091,
-      "rawUnique": 3089,
+      "rawUnique": 3091,
       "targetDateMatches": 37,
       "targetDateWithGeo": 37,
       "targetDateWithoutGeo": 0,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 33,
       "rawMaerkte": 120,
-      "rawFeste": 2969,
+      "rawFeste": 2971,
       "targetDateMaerkte": 0,
       "targetDateFeste": 37,
       "targetDateWithGeoMaerkte": 0,
@@ -2205,8 +2205,8 @@
       "endDate": "2026-04-03",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/rundtour-ab-radolfzell-iznang-reichenau/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
-      "page": 204
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/205/",
+      "page": 205
     },
     {
       "title": "Seeufer-Wanderung",
@@ -2216,8 +2216,8 @@
       "endDate": "2026-04-03",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/seeufer-wanderung/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
-      "page": 204
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/205/",
+      "page": 205
     },
     {
       "title": "Überlinger See Wanderung",
@@ -34998,6 +34998,28 @@
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mamma-mia-the-ultimative-abba-night-49/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/203/",
       "page": 203
+    },
+    {
+      "title": "Edelwäscher Oktoberfest T2 - 100 Jahre SVF",
+      "category": "feste",
+      "city": "Achern-Fautenbach So,",
+      "startDate": "2027-09-26",
+      "endDate": "2027-09-26",
+      "time": "20:30 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/edelwascher-oktoberfest-t2-100-jahre-svf/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
+      "page": 204
+    },
+    {
+      "title": "Mamma Mia - The Ultimative Abba Night",
+      "category": "feste",
+      "city": "Heilbronn Fr,",
+      "startDate": "2027-10-01",
+      "endDate": "2027-10-01",
+      "time": "20:00 Uhr",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/mamma-mia-the-ultimative-abba-night-44/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/204/",
+      "page": 204
     },
     {
       "title": "Mamma Mia - The Ultimative Abba Night",
