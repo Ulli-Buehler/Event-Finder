@@ -10,43 +10,43 @@ Filter:
 - Geo: für alle Zieldatum-Events
 - km/Radius: live im Browser
 
-Zieldatum: 2026-07-12
+Zieldatum: 2026-07-19
 
 Counts:
 {
   "pages": 218,
   "rawCollectedIncludingDuplicates": 3019,
   "rawUnique": 3019,
-  "targetDateMatches": 38,
-  "targetDateWithGeo": 38,
+  "targetDateMatches": 44,
+  "targetDateWithGeo": 44,
   "targetDateWithoutGeo": 0,
-  "targetDateGeoEstimated": 38,
-  "targetDateGeoEstimatedFromCity": 33,
+  "targetDateGeoEstimated": 44,
+  "targetDateGeoEstimatedFromCity": 40,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
-  "targetDateGeoEstimatedFromDetail": 2,
-  "targetDateGeoEstimatedFromCompoundCity": 3,
+  "targetDateGeoEstimatedFromDetail": 3,
+  "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 0,
-  "targetDateDetailCoordinateGeoChecked": 38,
+  "targetDateDetailCoordinateGeoChecked": 44,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
-  "targetDateDetailGoogleMapsQueries": 2,
-  "targetDateDetailGeoChecked": 2,
-  "targetDateDetailGeoRecovered": 2,
-  "targetDateCompoundCityGeoChecked": 3,
-  "targetDateCompoundCityGeoRecovered": 3,
+  "targetDateDetailGoogleMapsQueries": 3,
+  "targetDateDetailGeoChecked": 3,
+  "targetDateDetailGeoRecovered": 3,
+  "targetDateCompoundCityGeoChecked": 1,
+  "targetDateCompoundCityGeoRecovered": 1,
   "targetDateTitleGeoChecked": 0,
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 0,
   "targetDateBodenseeRegionGeoRecovered": 0,
-  "nonRegionalTargetDateMatches": 34,
+  "nonRegionalTargetDateMatches": 43,
   "rawMaerkte": 121,
   "rawFeste": 2898,
-  "targetDateMaerkte": 0,
-  "targetDateFeste": 38,
-  "targetDateWithGeoMaerkte": 0,
-  "targetDateWithGeoFeste": 38,
+  "targetDateMaerkte": 3,
+  "targetDateFeste": 41,
+  "targetDateWithGeoMaerkte": 3,
+  "targetDateWithGeoFeste": 41,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 0
 }
@@ -145,27 +145,27 @@ Ortsstatistik vor Ortsfilter:
     "count": 4
   },
   {
-    "city": "Vogtsbauernhof So,",
+    "city": "Echt Bodensee So,",
     "count": 3
   },
   {
-    "city": "Baiersbronn So,",
+    "city": "Neuhausen ob Eck So,",
+    "count": 3
+  },
+  {
+    "city": "Fichtenberg So,",
     "count": 2
   },
   {
-    "city": "Baiersbronn-Huzenbach So,",
+    "city": "Vogtsbauernhof So,",
     "count": 2
   },
   {
-    "city": "Beilstein So,",
-    "count": 2
+    "city": "Bad Krozingen So,",
+    "count": 1
   },
   {
-    "city": "Sigmaringen So,",
-    "count": 2
-  },
-  {
-    "city": "Aitern So,",
+    "city": "Bad Rappenau So,",
     "count": 1
   },
   {
@@ -173,7 +173,19 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Beuren So,",
+    "city": "Baden-Baden So,",
+    "count": 1
+  },
+  {
+    "city": "Baiersbronn So,",
+    "count": 1
+  },
+  {
+    "city": "Biberach So,",
+    "count": 1
+  },
+  {
+    "city": "Blaufelden So,",
     "count": 1
   },
   {
@@ -181,15 +193,11 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
+    "city": "Dobel So,",
+    "count": 1
+  },
+  {
     "city": "Eberbach So,",
-    "count": 1
-  },
-  {
-    "city": "Friedrichshafen So,",
-    "count": 1
-  },
-  {
-    "city": "Gaildorf So,",
     "count": 1
   },
   {
@@ -197,27 +205,27 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Herrischried So,",
+    "city": "Gengenbach-Reichenbach So,",
     "count": 1
   },
   {
-    "city": "Illmensee-Ruschweiler So,",
+    "city": "Heilbronn So,",
     "count": 1
   },
   {
-    "city": "Metzingen So,",
+    "city": "Kandern So,",
     "count": 1
   },
   {
-    "city": "Mössingen So,",
+    "city": "Konstanz So,",
     "count": 1
   },
   {
-    "city": "Münsingen So,",
+    "city": "Lauffen am Neckar So,",
     "count": 1
   },
   {
-    "city": "Neuhausen ob Eck So,",
+    "city": "Malsch So,",
     "count": 1
   },
   {
@@ -225,27 +233,43 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Ostrach-Levertsweiler So,",
+    "city": "Oberharmersbach So,",
     "count": 1
   },
   {
-    "city": "Ostrach-Magenbuch So,",
+    "city": "Öhningen So,",
     "count": 1
   },
   {
-    "city": "Radolfzell am Bodensee So,",
+    "city": "Pfeffingen So,",
     "count": 1
   },
   {
-    "city": "Schwetzingen So,",
+    "city": "Pfullendorf So,",
     "count": 1
   },
   {
-    "city": "Sinsheimer Erlebnisregion So,",
+    "city": "Sasbachwalden So,",
     "count": 1
   },
   {
-    "city": "Walldürn So,",
+    "city": "Schramberg So,",
+    "count": 1
+  },
+  {
+    "city": "Sipplingen So,",
+    "count": 1
+  },
+  {
+    "city": "Tübingen So,",
+    "count": 1
+  },
+  {
+    "city": "Waldkirch So,",
+    "count": 1
+  },
+  {
+    "city": "Wolfach So,",
     "count": 1
   },
   {
