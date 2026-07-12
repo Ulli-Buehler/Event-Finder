@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-07-12",
-    "startedAt": "2026-07-12T00:01:30.127Z",
-    "finishedAt": "2026-07-12T00:05:13.439Z",
+    "startedAt": "2026-07-12T01:01:04.483Z",
+    "finishedAt": "2026-07-12T01:05:07.758Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -95,7 +95,7 @@
     "counts": {
       "pages": 218,
       "rawCollectedIncludingDuplicates": 3014,
-      "rawUnique": 3013,
+      "rawUnique": 3014,
       "targetDateMatches": 37,
       "targetDateWithGeo": 37,
       "targetDateWithoutGeo": 0,
@@ -120,7 +120,7 @@
       "targetDateBodenseeRegionGeoChecked": 0,
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 33,
-      "rawMaerkte": 120,
+      "rawMaerkte": 121,
       "rawFeste": 2893,
       "targetDateMaerkte": 0,
       "targetDateFeste": 37,
@@ -32292,8 +32292,8 @@
       "endDate": "2026-07-11",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/jaamarkt/",
-      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
-      "page": 1
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/9/",
+      "page": 9
     },
     {
       "title": "Altstadt-Antikmarkt",
@@ -32446,6 +32446,17 @@
       "endDate": "2026-08-08",
       "time": "",
       "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/16-gartenmarkt-sommer-blueten-traeume/",
+      "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
+      "page": 1
+    },
+    {
+      "title": "Vespermarkt",
+      "category": "maerkte",
+      "city": "Zwiefalten Sa,",
+      "startDate": "2026-08-08",
+      "endDate": "2026-08-08",
+      "time": "",
+      "detailUrl": "https://www.veranstaltung-baden-wuerttemberg.de/veranstaltung/vespermarkt/",
       "sourceUrl": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
       "page": 1
     },
