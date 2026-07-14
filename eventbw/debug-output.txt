@@ -14,21 +14,21 @@ Zieldatum: 2026-07-19
 
 Counts:
 {
-  "pages": 217,
-  "rawCollectedIncludingDuplicates": 2990,
-  "rawUnique": 2989,
-  "targetDateMatches": 44,
-  "targetDateWithGeo": 44,
+  "pages": 218,
+  "rawCollectedIncludingDuplicates": 3012,
+  "rawUnique": 3012,
+  "targetDateMatches": 45,
+  "targetDateWithGeo": 45,
   "targetDateWithoutGeo": 0,
-  "targetDateGeoEstimated": 44,
-  "targetDateGeoEstimatedFromCity": 40,
+  "targetDateGeoEstimated": 45,
+  "targetDateGeoEstimatedFromCity": 41,
   "targetDateGeoManualLocality": 0,
   "targetDateGeoFromEventBwDetailCoordinates": 0,
   "targetDateGeoEstimatedFromDetail": 3,
   "targetDateGeoEstimatedFromCompoundCity": 1,
   "targetDateGeoEstimatedFromTitle": 0,
   "targetDateGeoEstimatedFromBodenseeRegion": 0,
-  "targetDateDetailCoordinateGeoChecked": 44,
+  "targetDateDetailCoordinateGeoChecked": 45,
   "targetDateDetailCoordinateGeoRecovered": 0,
   "targetDateDetailCoordinateGeoFailed": 0,
   "targetDateDetailGoogleMapsQueries": 3,
@@ -40,12 +40,12 @@ Counts:
   "targetDateTitleGeoRecovered": 0,
   "targetDateBodenseeRegionGeoChecked": 0,
   "targetDateBodenseeRegionGeoRecovered": 0,
-  "nonRegionalTargetDateMatches": 43,
-  "rawMaerkte": 118,
-  "rawFeste": 2871,
-  "targetDateMaerkte": 3,
+  "nonRegionalTargetDateMatches": 44,
+  "rawMaerkte": 119,
+  "rawFeste": 2893,
+  "targetDateMaerkte": 4,
   "targetDateFeste": 41,
-  "targetDateWithGeoMaerkte": 3,
+  "targetDateWithGeoMaerkte": 4,
   "targetDateWithGeoFeste": 41,
   "targetDateWithoutGeoMaerkte": 0,
   "targetDateWithoutGeoFeste": 0
@@ -149,11 +149,15 @@ Ortsstatistik vor Ortsfilter:
     "count": 3
   },
   {
+    "city": "Fichtenberg So,",
+    "count": 3
+  },
+  {
     "city": "Neuhausen ob Eck So,",
     "count": 3
   },
   {
-    "city": "Fichtenberg So,",
+    "city": "Schramberg So,",
     "count": 2
   },
   {
@@ -186,10 +190,6 @@ Ortsstatistik vor Ortsfilter:
   },
   {
     "city": "Blaufelden So,",
-    "count": 1
-  },
-  {
-    "city": "Breisach So,",
     "count": 1
   },
   {
@@ -253,10 +253,6 @@ Ortsstatistik vor Ortsfilter:
     "count": 1
   },
   {
-    "city": "Schramberg So,",
-    "count": 1
-  },
-  {
     "city": "Sipplingen So,",
     "count": 1
   },
@@ -289,7 +285,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/",
     "ok": true,
-    "reportedCount": 118,
+    "reportedCount": 119,
     "parsedCount": 14
   },
   {
@@ -354,7 +350,7 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/maerkte/page/9/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 6
+    "parsedCount": 7
   },
   {
     "category": "maerkte",
@@ -368,7 +364,7 @@ Pages:
     "page": 1,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/",
     "ok": true,
-    "reportedCount": 2871,
+    "reportedCount": 2893,
     "parsedCount": 14
   },
   {
@@ -2009,12 +2005,20 @@ Pages:
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/206/",
     "ok": true,
     "reportedCount": null,
-    "parsedCount": 2
+    "parsedCount": 14
   },
   {
     "category": "feste",
     "page": 207,
     "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/207/",
+    "ok": true,
+    "reportedCount": null,
+    "parsedCount": 9
+  },
+  {
+    "category": "feste",
+    "page": 208,
+    "url": "https://www.veranstaltung-baden-wuerttemberg.de/kategorie/feste/page/208/",
     "ok": false,
     "error": "HTTP 404 Not Found"
   }
