@@ -2,8 +2,8 @@
   "meta": {
     "source": "https://www.veranstaltung-baden-wuerttemberg.de",
     "targetDate": "2026-07-19",
-    "startedAt": "2026-07-15T04:01:06.988Z",
-    "finishedAt": "2026-07-15T04:05:30.731Z",
+    "startedAt": "2026-07-15T05:01:05.931Z",
+    "finishedAt": "2026-07-15T05:04:51.713Z",
     "maxPagesPerCategory": 300,
     "regionalCities": [
       "Dettingen unter Teck",
@@ -94,8 +94,8 @@
     ],
     "counts": {
       "pages": 218,
-      "rawCollectedIncludingDuplicates": 3005,
-      "rawUnique": 3005,
+      "rawCollectedIncludingDuplicates": 3012,
+      "rawUnique": 3012,
       "targetDateMatches": 45,
       "targetDateWithGeo": 45,
       "targetDateWithoutGeo": 0,
@@ -121,7 +121,7 @@
       "targetDateBodenseeRegionGeoRecovered": 0,
       "nonRegionalTargetDateMatches": 44,
       "rawMaerkte": 118,
-      "rawFeste": 2887,
+      "rawFeste": 2894,
       "targetDateMaerkte": 4,
       "targetDateFeste": 41,
       "targetDateWithGeoMaerkte": 4,
@@ -132,7 +132,7 @@
   },
   "events": [
     {
-      "title": "Großes Lichterfest im Kurpark",
+      "title": "Großes Lichterfest im Kurpark - Familientag und Flohmarkt",
       "category": "feste",
       "city": "Bad Krozingen So,",
       "startDate": "2026-07-19",
